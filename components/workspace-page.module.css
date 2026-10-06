@@ -1,0 +1,32 @@
+.page {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding: 24px 28px 36px;
+  color: var(--vemo-text);
+}
+.page :where(h1, h2, h3) { color: var(--vemo-text); overflow-wrap: anywhere; }
+.page :where(h1) { font-size: 28px; font-weight: 700; line-height: 1.25; }
+.page :where(h2) { font-size: 18px; font-weight: 650; line-height: 1.4; }
+.page :where(h3) { font-size: 16px; font-weight: 650; line-height: 1.4; }
+.page :global(.text-xs) { font-size: 13px; line-height: 1.5; }
+.page :global(.text-gray-400),
+.page :global(.text-gray-500),
+.page :global(.text-gray-600) { color: var(--vemo-muted); }
+.page :where(input, textarea, select, [data-slot="select-trigger"]) { min-width: 0; border-color: var(--vemo-control-border); border-radius: var(--vemo-radius); background: white; color: var(--vemo-text); color-scheme: light; }
+.page :where(input, textarea)::placeholder { color: var(--vemo-muted); opacity: 1; }
+.page :where([data-slot="button"]) { min-height: 40px; max-width: 100%; border-radius: var(--vemo-radius); font-size: 14px; font-weight: 600; white-space: normal; }
+.page :where([data-slot="button"][data-variant="default"]) { border: 1px solid var(--vemo-brand); background: var(--vemo-brand); color: white; box-shadow: none; }
+.page :where([data-slot="button"][data-variant="default"]:hover) { background: var(--vemo-brand-hover); }
+.page :where([data-slot="button"][data-variant="outline"]) { border-color: var(--vemo-control-border); background: white; color: var(--vemo-text); box-shadow: none; }
+.page :where([data-slot="button"][data-variant="outline"]:hover) { background: var(--vemo-subtle); }
+.page :where([data-slot="button"][data-variant="ghost"]:hover) { background: var(--vemo-subtle); }
+.page :where([role="alert"]) { border-color: #f2bdc9; background: var(--vemo-danger-soft); color: var(--vemo-danger); }
+.page :where(a, button, input, select, textarea):focus-visible { outline: 2px solid var(--vemo-focus); outline-offset: 3px; }
+.page :where([data-slot="badge"]) { max-width: 100%; border-radius: 5px; white-space: normal; }
+@media (max-width: 640px) {
+  .page { padding: 24px 16px 36px; }
+  .page :where(h1) { font-size: 26px; }
+  .page :where(input, select, textarea) { font-size: 16px; }
+  .page :where([data-slot="button"]) { min-height: 44px; }
+}

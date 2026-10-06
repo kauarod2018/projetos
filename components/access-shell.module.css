@@ -1,0 +1,14 @@
+.page { background: var(--background); color: var(--vemo-text); }
+.page :is(input, textarea) { border-color: var(--vemo-control-border); background: white; color: var(--vemo-text); }
+.page :is(input, textarea)::placeholder { color: var(--vemo-muted); opacity: 1; }
+.page [data-slot="checkbox"] { border-color: var(--vemo-control-border); }
+.page form [data-slot="button"][data-variant="default"] { background: var(--vemo-brand); box-shadow: none; }
+.page form [data-slot="button"][data-variant="default"]:hover { background: var(--vemo-brand-hover); }
+.page :is(a, button, input):focus-visible { outline: 2px solid var(--vemo-focus); outline-offset: 3px; }
+.page h1 { color: var(--vemo-text); font-size: 28px; line-height: 1.25; }
+.page > div > div > p:last-child { color: var(--vemo-muted); }
+@media (max-width: 640px) {
+  .page h1 { font-size: 26px; }
+  .page input { font-size: 16px; }
+  .page [data-slot="button"] { height: auto; min-height: 48px; white-space: normal; }
+}

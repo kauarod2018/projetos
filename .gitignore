@@ -1,0 +1,13 @@
+node_modules/
+.next/
+entregas/
+
+# Keep production credentials out of source control and deployment archives.
+.env
+.env.*
+!.env.example
+
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db

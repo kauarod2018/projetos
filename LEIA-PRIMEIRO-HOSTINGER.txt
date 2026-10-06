@@ -1,0 +1,86 @@
+ATENCAO: ESTE GUIA E HISTORICO, NAO O ROTEIRO ATUAL DE PUBLICACAO.
+Leia INSTRUCOES-ENTREGA-HOSTINGER.md e COMECE-AQUI-CLAUDE-CODE.md primeiro.
+Em 06/10/2026 o usuario informou que publicou apenas o tar.gz, sem importar SQL.
+Nao presuma que 012 ou qualquer outra migracao foi aplicada no banco remoto.
+Nao siga a recomendacao historica de pular SQL sem conferir o esquema real.
+
+VEMO - ENTREGA CUMULATIVA PARA HOSTINGER
+==========================================
+
+Esta entrega inclui as melhorias pedidas para Assistente, historico/desfazer,
+Financeiro, vencimentos no Hoje, recorrencia da Agenda e cancelamento de parcelas.
+Foi preparada para atualizar a aplicacao
+Node.js/Next.js ja publicada, preservando os dados que estao no MySQL.
+
+ARQUIVOS IMPORTANTES
+--------------------
+1. O arquivo .tar.gz entregue junto: codigo atualizado para upload na Hostinger.
+2. database/012-assistente-financeiro-agenda-historico.sql: migracao anterior,
+   nao necessaria para esta atualizacao de codigo.
+3. .env.example: nomes das variaveis usadas; nao contem chaves reais.
+
+ANTES DE ATUALIZAR
+------------------
+1. No phpMyAdmin, selecione o banco que o Vemo usa e exporte um backup completo.
+2. Confirme que as migracoes anteriores ate a 011 estao aplicadas.
+3. O SQL 012 ja foi aplicado nesta instalacao. Nao importe SQL nesta entrega:
+   o cancelamento de parcelas usa a coluna de status e o historico existentes.
+4. Nunca importe schema.sql sobre a base existente; serve apenas para criar um
+   banco novo e vazio.
+
+PUBLICAR O CODIGO
+-----------------
+1. Envie o .tar.gz pelo aplicativo Node.js do painel da Hostinger, no mesmo site.
+2. Mantenha o framework Next.js e a versao Node compativel com o projeto.
+3. Use as configuracoes de compilacao padrao para Next.js do painel. Aguarde a
+   compilacao e a implantacao terminarem antes de abrir o dominio.
+4. Nao envie um arquivo .env com senhas. Configure os valores diretamente nas
+   variaveis de ambiente do painel, mantendo as variaveis atuais do site.
+
+ASSISTENTE COM INTERPRETACAO DE LINGUAGEM NATURAL
+-------------------------------------------------
+OPENAI_API_KEY e opcional. Para ativar interpretacao de frases livres, crie uma
+chave na plataforma de API da OpenAI e salve-a somente no servidor, no painel da
+Hostinger, com o nome OPENAI_API_KEY. Nao use prefixo NEXT_PUBLIC e nao compartilhe
+a chave em capturas de tela ou mensagens. A API tem limite de 40 interpretacoes
+por usuario por dia. O custo da API e separado de uma assinatura do ChatGPT.
+
+OPENAI_MODEL pode ser configurada como gpt-6-luna. Se nao configurar chave,
+opcoes guiadas e comandos que o Vemo ja reconhece continuam disponiveis; a
+interpretacao ampliada informa que esta desativada. O modelo apenas prepara uma
+consulta ou rascunho: nao recebe acesso ao banco e nao grava nada sozinho.
+
+O QUE ESTA INCLUIDO
+-------------------
+- Historico de criacoes, alteracoes e registros importantes por conta.
+- Desfazer lancamentos financeiros por estorno rastreavel e cancelamento de
+  agendamentos ainda inalterados; recebimentos de orcamentos nao sao apagados.
+- Contas previstas a receber/pagar, vencimentos, vinculo opcional com cliente,
+  ate 24 parcelas e pagamentos parciais. Apenas valores efetivamente pagos
+  entram no caixa realizado.
+- Cancelamento individual de parcela em aberto, mantendo pagamentos e historico;
+  as demais parcelas do mesmo grupo nao sao alteradas.
+- A Assistente consulta parcelas vencidas e com vencimento nos proximos 7 dias,
+  separando a receber e a pagar e descontando pagamentos parciais. Nao soma
+  orcamentos a contas previstas.
+- A tela Hoje destaca contas vencidas e vencimentos em ate 7 dias, descontando
+  pagamentos parciais e separando valores a receber dos valores a pagar.
+- Agendamentos semanais, quinzenais ou mensais, ate 24 ocorrencias, criados em
+  conjunto e recusados por completo se qualquer horario conflitar.
+- Interpretacao ampliada opcional no servidor, com limite diario e confirmacao
+  humana nos fluxos de gravacao.
+
+LEMBRETES
+---------
+O lembrete da Agenda continua sendo preparado e enviado manualmente pelo
+WhatsApp do prestador. Esta entrega nao agenda envio automatico por WhatsApp,
+SMS ou e-mail: isso exige um provedor e um agendador configurados separadamente.
+
+DEPOIS DA PUBLICACAO
+--------------------
+Entre na conta e confira: Financeiro > contas previstas, criacao de uma conta
+com parcelas, pagamento parcial e cancelamento de uma parcela; confira tambem
+Configuracoes > Historico de acoes; Agenda > repeticao semanal/quinzenal/mensal;
+Assistente > Vencimentos proximos; e Assistente com/sem OPENAI_API_KEY.
+Faça primeiro esses testes com registros pequenos. A funcao de desfazer preserva
+os rastros e nao apaga dados financeiros.

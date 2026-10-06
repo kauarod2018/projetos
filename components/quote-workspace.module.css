@@ -1,0 +1,34 @@
+.quotesPage { composes: page from "./workspace-page.module.css"; }
+.quoteDetail { composes: page from "./workspace-page.module.css"; }
+.formPage { composes: page from "./workspace-page.module.css"; }
+.publicPage { composes: page from "./workspace-page.module.css"; max-width: none; min-height: 100svh; background: var(--background); }
+.publicPage > article { border-color: var(--vemo-line); border-radius: var(--vemo-radius); box-shadow: var(--vemo-shadow); }
+.publicPage :global([data-slot="button"][data-variant="default"]) { background: var(--vemo-success); border-color: var(--vemo-success); }
+.publicPage :global([data-slot="button"][data-variant="default"]:hover) { background: #065c4e; }
+.formPage > div { border-color: var(--vemo-line); border-radius: var(--vemo-radius); box-shadow: var(--vemo-shadow); }
+.quotesPage :global([data-slot="card"]) { min-width: 0; gap: 16px; border-color: var(--vemo-line); border-radius: var(--vemo-radius); background: white; color: var(--vemo-text); box-shadow: var(--vemo-shadow); }
+.quotesPage :global([data-slot="card"]:hover) { border-color: #8eafd6; }
+.quotesPage :global([data-slot="card-title"]) { color: var(--vemo-text); font-size: 16px; line-height: 1.5; }
+.quotesPage :global([data-slot="card-content"] > p:last-child) { color: var(--vemo-text); font-size: 24px; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.quotesPage :global([data-slot="card"] button[aria-label^="Excluir"]) { border-color: #e0a8b4; background: white; color: var(--vemo-danger); }
+.quotesPage :global([data-slot="card"] button[aria-label^="Excluir"]:hover) { background: var(--vemo-danger-soft); }
+.quotesPage select { min-height: 44px; }
+.quotesPage :global(.border-amber-200.bg-amber-50) { border-color: #e5ce99; background: var(--vemo-warning-soft); color: var(--vemo-warning); }
+.quotesPage :global(.text-amber-950),
+.quotesPage :global(.text-amber-900),
+.quotesPage :global(.text-amber-800),
+.quotesPage :global(.text-amber-700) { color: var(--vemo-warning); }
+.quotesPage :global(.border-amber-300) { border-color: #c2a76e; }
+.quotesPage :global(.border-dashed) { border-color: var(--vemo-control-border); background: white; }
+.quotesPage :global(.border-t.border-gray-200) { border-color: var(--vemo-line); }
+.quoteDetail :global(.print-hidden.rounded-2xl) { border-color: var(--vemo-line); border-radius: var(--vemo-radius); background: white; color: var(--vemo-text); box-shadow: var(--vemo-shadow); }
+.quoteDetail :global([data-slot="badge"]) { border-color: #b8cdec; background: var(--vemo-brand-soft); color: var(--vemo-brand); }
+.quoteDetail :global(a[data-slot="button"][href*="wa.me"]) { border-color: var(--vemo-success); background: var(--vemo-success); color: white; }
+.quoteDetail :global(a[data-slot="button"][href*="wa.me"]:hover) { background: #065c4e; }
+.quoteDetail :global(.print-document) { border-color: var(--vemo-line); border-radius: var(--vemo-radius); background: white; color: var(--vemo-text); box-shadow: var(--vemo-shadow); }
+.quoteDetail :global(.print-document .border-gray-200),
+.quoteDetail :global(.print-document .border-gray-100) { border-color: var(--vemo-line); }
+.quoteDetail :global(.print-document footer) { background: var(--vemo-subtle); }
+.quoteDetail :global(.print-document footer strong) { color: var(--vemo-text); }
+.quoteDetail :global(.print-document p) { overflow-wrap: anywhere; }
+@media print { .quoteDetail :global(.print-document) { box-shadow: none; } }

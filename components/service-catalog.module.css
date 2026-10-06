@@ -1,0 +1,19 @@
+.servicesPage { composes: page from "./workspace-page.module.css"; }
+.servicesPage > header { gap: 20px; }
+.servicesPage > header p { color: var(--vemo-muted); font-size: 14px; }
+.servicesPage > header :global(button[data-slot="button"]) { min-height: 44px; }
+.servicesPage [role="group"] { border-color: var(--vemo-line); background: var(--vemo-subtle); }
+.servicesPage [role="group"] button[aria-pressed="true"] { border: 1px solid #b8cce5; background: white; color: var(--vemo-brand); box-shadow: var(--vemo-shadow); }
+.servicesPage [role="group"] button[aria-pressed="false"] { color: var(--vemo-muted); }
+.servicesPage [role="group"] button[aria-pressed="false"]:hover { background: #e5ebf3; color: var(--vemo-text); }
+.servicesPage :global(li.rounded-lg.border) { border-color: var(--vemo-line); border-radius: var(--vemo-radius); background: white; box-shadow: var(--vemo-shadow); }
+.servicesPage :global(li.rounded-lg.border:hover) { border-color: #8eafd6; }
+.servicesPage :global(li.rounded-lg.border h2) { color: var(--vemo-text); font-size: 16px; }
+.servicesPage :global(.text-teal-700),
+.servicesPage :global(.text-emerald-800) { color: var(--vemo-success); }
+.servicesPage :global(.border-t.border-gray-200) { border-color: var(--vemo-line); }
+@media (max-width: 640px) {
+  .servicesPage > header :global([data-slot="button"]) { width: 100%; }
+  .servicesPage [role="group"] { width: 100%; }
+  .servicesPage [role="group"] button { flex: 1; }
+}

@@ -1,0 +1,21 @@
+.settingsPage { composes: page from "./workspace-page.module.css"; }
+.pageHeader p { margin-top: 8px; color: var(--vemo-muted); font-size: 14px; }
+.sectionCard { border: 0; border-block: 1px solid var(--vemo-line); border-radius: 0; background: white; padding: 24px; box-shadow: none; }
+.sectionCard h2,
+.sectionCard h3 { margin: 0; color: var(--vemo-text); }
+.sectionCard dl > div { min-width: 0; padding: 8px 0; }
+.sectionCard dt { color: var(--vemo-muted); font-size: 13px; }
+.sectionCard dd { color: var(--vemo-text); }
+.sectionCard label { color: var(--vemo-text); }
+.sectionCard p[role="status"] { color: var(--vemo-success); }
+.sectionCard :global(.text-amber-800) { border-left: 3px solid #a9690c; background: var(--vemo-warning-soft); padding: 12px; color: var(--vemo-warning); }
+.sectionCard :global(input) { border-color: var(--vemo-control-border); background: white; color: var(--vemo-text); }
+.sectionCard :global(input::placeholder) { color: var(--vemo-muted); }
+.businessIntro h2 svg { color: var(--vemo-brand); }
+.businessIntro p { color: var(--vemo-muted); }
+.settingsPage :global(.text-red-700) { color: var(--vemo-danger); }
+.settingsPage :global(section[aria-labelledby="business-activity-title"]) { border: 0; border-block: 1px solid var(--vemo-line); border-radius: 0; box-shadow: none; }
+@media (max-width: 640px) {
+  .sectionCard { padding: 20px 16px; }
+  .sectionCard :global(button[data-slot="button"]) { width: 100%; }
+}

@@ -1,0 +1,51 @@
+.page { composes: page from "./workspace-page.module.css"; }
+.history { composes: page from "./workspace-page.module.css"; }
+.page > header > div > p:first-child { color: var(--vemo-brand); font-size: 13px; font-weight: 650; }
+.page > header > div > p:last-child { color: var(--vemo-muted); }
+.primaryAction { min-height: 44px; background: var(--vemo-brand); color: white; box-shadow: none; }
+.primaryAction:hover { background: var(--vemo-brand-hover); }
+.searchInput { border-color: var(--vemo-control-border); background: white; color: var(--vemo-text); }
+.searchInput::placeholder { color: var(--vemo-muted); opacity: 1; }
+.search:focus-within svg { color: var(--vemo-brand); }
+.error { border-color: #f2bdc9; background: var(--vemo-danger-soft); color: var(--vemo-danger); }
+.clientCard { min-width: 0; border-color: var(--vemo-line); border-radius: var(--vemo-radius); background: white; box-shadow: var(--vemo-shadow); transition: border-color 150ms ease; }
+.clientCard:hover { border-color: #8eafd6; }
+.avatar { background: var(--vemo-brand-soft); color: var(--vemo-brand); }
+.clientCard h2 { color: var(--vemo-text); font-size: 16px; }
+.clientCard > div:first-child p { color: var(--vemo-muted); }
+.contact { color: var(--vemo-muted); }
+.contact p { min-width: 0; overflow-wrap: anywhere; }
+.contact svg { flex-shrink: 0; color: var(--vemo-muted); }
+.cardFooter { flex-wrap: wrap; gap: 8px; border-color: var(--vemo-line); }
+.cardFooter p:first-child { color: var(--vemo-muted); }
+.cardFooter p:last-child { color: var(--vemo-success); font-size: 18px; font-variant-numeric: tabular-nums; }
+.historyAction { color: var(--vemo-brand); }
+.historyAction:hover { background: var(--vemo-brand-soft); color: var(--vemo-brand-hover); }
+.empty { border-color: var(--vemo-control-border); background: white; }
+.empty > span { background: var(--vemo-brand-soft); color: var(--vemo-brand); }
+.empty h2 { color: var(--vemo-text); }
+.empty p { color: var(--vemo-muted); }
+.dialog { border-color: var(--vemo-line); border-radius: var(--vemo-radius); box-shadow: 0 24px 80px rgb(16 34 56 / 18%); }
+.dialogTitle { color: var(--vemo-text); }
+.history > a:first-child { color: var(--vemo-brand); }
+.history > header > div:first-child > p { color: var(--vemo-muted); }
+.history [role="group"] { flex-wrap: wrap; border-color: var(--vemo-line); }
+.history [role="group"] button { min-height: 40px; border: 1px solid transparent; color: var(--vemo-muted); }
+.history [role="group"] button[aria-pressed="true"] { border-color: #a7c3eb; background: var(--vemo-brand-soft); color: var(--vemo-brand); }
+.history [role="group"] button:hover:not([aria-pressed="true"]) { background: var(--vemo-subtle); color: var(--vemo-text); }
+.history [role="group"] > :last-child { color: var(--vemo-muted); }
+.history :global(#history-result) { border-block: 1px solid var(--vemo-line); background: white; padding: 24px; }
+.history :global(#history-result ul),
+.history :global(#history-result ul > li),
+.history :global(#history-result aside) { border-color: var(--vemo-line); }
+.history :global(#history-result ul strong) { color: var(--vemo-success); }
+.history :global(#history-result ul a) { color: var(--vemo-brand); }
+.history :global(#history-result ul a:hover) { color: var(--vemo-brand-hover); }
+.history :global(#history-result ul span.rounded-md) { background: var(--vemo-brand-soft); color: var(--vemo-brand); }
+.history :global(#history-result aside dd) { color: var(--vemo-text); }
+@media (max-width: 640px) {
+  .clientCard { padding: 16px; }
+  .history :global(#history-result) { padding: 16px; }
+  .contact :global([data-slot="button"]) { flex: 1 1 150px; }
+}
+@media (prefers-reduced-motion: reduce) { .clientCard { transition: none; } }
