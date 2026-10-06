@@ -12,7 +12,7 @@ export function AccessShell({ children }: { children: ReactNode }) {
       <div className="mx-auto grid min-h-svh w-full max-w-6xl items-center gap-8 px-4 py-8 sm:px-8 lg:grid-cols-[minmax(0,1fr)_440px] lg:gap-16 lg:py-12">
         <aside className="hidden max-w-xl lg:block" aria-label="Sobre a Vemo">
           <VemoWordmark className="h-16 w-64" />
-          <p className="mt-12 text-xs font-semibold uppercase text-[#1765dc]">
+          <p className="mt-12 text-xs font-semibold uppercase text-[#2f62f5]">
             Sua rotina profissional, em ordem
           </p>
           <p className="mt-4 max-w-lg text-[2.6rem] font-semibold leading-[1.15]">

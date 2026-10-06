@@ -34,7 +34,7 @@
 }
 
 .titleGroup h2 {
-  color: #071427;
+  color: #1f1e1c;
   font-size: 20px;
   font-weight: 740;
   line-height: 1.4;
@@ -42,7 +42,7 @@
 
 .titleGroup p {
   margin-top: 2px;
-  color: #607089;
+  color: #6f6d68;
   font-size: 14px;
   line-height: 1.5;
 }
@@ -50,20 +50,20 @@
 .headerActions button:first-child {
   border-color: #bfd1e6;
   background: #fff;
-  color: #0f62e6;
+  color: #2f62f5;
   font-weight: 650;
 }
 
 .headerActions button:first-child:hover {
   border-color: #8eb2da;
-  background: #f3f8fe;
+  background: #f6f5f2;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 12px;
-  border-top: 1px solid #e7eef5;
+  border-top: 1px solid #ebe9e4;
   padding: 14px;
 }
 
@@ -95,7 +95,7 @@
 .appointment h3 { color: #1d4ed8; }
 .receivable h3 { color: var(--vemo-success); }
 .followup h3 { color: var(--vemo-warning); }
-.dueDates h3 { color: #c92a43; }
+.dueDates h3 { color: #c8322f; }
 
 .appointment { background: var(--vemo-brand-soft); }
 .receivable { background: var(--vemo-success-soft); }
@@ -115,9 +115,9 @@
 
 .note {
   margin: 0 24px;
-  border-top: 1px solid #e7eef5;
+  border-top: 1px solid #ebe9e4;
   padding: 12px 0 14px;
-  color: #607089;
+  color: #6f6d68;
   font-size: 12px;
   line-height: 1.5;
 }

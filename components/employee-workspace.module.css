@@ -1,50 +1,50 @@
 .page { width: 100%; max-width: 1120px; margin: 0 auto; padding: 28px 32px 48px; color: #19344b; }
-.schedule { margin: 16px 0; border-block: 1px solid #dce5ed; padding: 12px 0; }
+.schedule { margin: 16px 0; border-block: 1px solid #ebe9e4; padding: 12px 0; }
 .schedule legend { font-weight: 600; font-size: 16px; }
 .days { display: flex; flex-wrap: wrap; gap: 12px; margin: 12px 0; }
 .days label { display: flex; min-height: 44px; align-items: center; gap: 8px; font-size: 14px; }
-.days input { width: 18px; height: 18px; accent-color: #1765dc; }
-.contact { display: inline-block; color: #1454b3; text-decoration: underline; min-height: 44px; padding-block: 10px; overflow-wrap: anywhere; }
-.absences { margin-top: 28px; border-top: 1px solid #dce5ed; padding-top: 22px; }
+.days input { width: 18px; height: 18px; accent-color: #2f62f5; }
+.contact { display: inline-block; color: #2350d8; text-decoration: underline; min-height: 44px; padding-block: 10px; overflow-wrap: anywhere; }
+.absences { margin-top: 28px; border-top: 1px solid #ebe9e4; padding-top: 22px; }
 .heading, .toolbar, .jobHeading { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
 .heading h1 { font-size: 28px; font-weight: 650; line-height: 1.25; overflow-wrap: anywhere; }
 .heading h2, .invite h2 { font-size: 18px; font-weight: 600; }
-.eyebrow { color: #607486; font-size: 13px; margin-bottom: 8px; overflow-wrap: anywhere; }
-.tabs { display: flex; gap: 24px; flex-wrap: wrap; border-bottom: 1px solid #dce5ed; margin: 28px 0 20px; }
-.tabs button { min-height: 48px; padding: 8px 0; font-size: 14px; color: #526879; border-bottom: 3px solid transparent; cursor: pointer; }
-.tabs button[aria-selected="true"] { color: #1454b3; border-color: #1765dc; font-weight: 600; }
+.eyebrow { color: #6f6d68; font-size: 13px; margin-bottom: 8px; overflow-wrap: anywhere; }
+.tabs { display: flex; gap: 24px; flex-wrap: wrap; border-bottom: 1px solid #ebe9e4; margin: 28px 0 20px; }
+.tabs button { min-height: 48px; padding: 8px 0; font-size: 14px; color: #6f6d68; border-bottom: 3px solid transparent; cursor: pointer; }
+.tabs button[aria-selected="true"] { color: #2350d8; border-color: #2f62f5; font-weight: 600; }
 .toolbar { margin: 24px 0; }
 .toggle { display: flex; align-items: center; gap: 10px; min-height: 44px; font-size: 14px; }
-.toggle input { width: 18px; height: 18px; accent-color: #1765dc; }
+.toggle input { width: 18px; height: 18px; accent-color: #2f62f5; }
 .fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 18px 0; }
 .fields label, .field, .date, .invite label { display: grid; gap: 8px; font-size: 14px; font-weight: 500; min-width: 0; }
 .fields input, .fields select, .fields textarea, .date input, .invite input { width: 100%; min-height: 44px; border: 1px solid #798c9f; border-radius: 6px; padding: 10px 12px; color: #19344b; background: #fff; font-size: 14px; font-weight: 400; }
 .fields textarea { resize: vertical; }
-.fields input[readonly] { background: #f0f4f7; color: #526879; }
+.fields input[readonly] { background: #f0f4f7; color: #6f6d68; }
 .fields :disabled { background: #f0f4f7; }
 .page button { min-height: 44px; white-space: normal; }
 .page button svg { flex-shrink: 0; }
-.page :focus-visible { outline: 2px solid #1765dc; outline-offset: 3px; }
+.page :focus-visible { outline: 2px solid #2f62f5; outline-offset: 3px; }
 .editor, .invite { border-block: 1px solid #cbd9e4; padding: 24px 0; margin-bottom: 24px; }
 .invite { display: grid; gap: 14px; }
 .invite button { justify-self: start; }
 .directory, .jobs { list-style: none; padding: 0; }
-.directory li { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 20px 0; border-bottom: 1px solid #dce5ed; }
+.directory li { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 20px 0; border-bottom: 1px solid #ebe9e4; }
 .person { min-width: 0; }
 .person h2, .jobs h2 { font-size: 16px; font-weight: 600; overflow-wrap: anywhere; }
-.person p, .customer { color: #526879; font-size: 14px; margin-top: 5px; overflow-wrap: anywhere; }
+.person p, .customer { color: #6f6d68; font-size: 14px; margin-top: 5px; overflow-wrap: anywhere; }
 .email { word-break: break-all; }
 .badge { display: inline-block; background: #edf2f6; color: #435d70; font-size: 12px; border-radius: 4px; padding: 5px 8px; margin-top: 9px; flex-shrink: 0; }
 .badge[data-complete="true"] { background: #e4f4ed; color: #196c4a; }
 .actions { display: flex; gap: 8px; flex-shrink: 0; flex-wrap: wrap; }
-.jobs li { border-bottom: 1px solid #dce5ed; padding: 24px 0; }
-.time { font-size: 13px; color: #1454b3; font-weight: 600; margin-bottom: 9px; }
+.jobs li { border-bottom: 1px solid #ebe9e4; padding: 24px 0; }
+.time { font-size: 13px; color: #2350d8; font-weight: 600; margin-bottom: 9px; }
 .instructions { white-space: pre-wrap; overflow-wrap: anywhere; border-left: 3px solid #42a798; padding: 8px 14px; font-size: 14px; line-height: 1.7; margin: 20px 0; }
 .jobs li > button { margin-top: 18px; }
 .assignment { margin-top: 18px; }
 .date { width: 210px; max-width: 100%; }
-.count { font-size: 13px; color: #607486; }
-.empty { color: #607486; font-size: 14px; padding: 36px 0; }
+.count { font-size: 13px; color: #6f6d68; }
+.empty { color: #6f6d68; font-size: 14px; padding: 36px 0; }
 .error { color: #a0223e; background: #fff1f3; padding: 16px; margin-top: 18px; font-size: 14px; border-radius: 6px; display: grid; gap: 12px; overflow-wrap: anywhere; }
 .error button { justify-self: start; }
 .notice { color: #196c4a; font-size: 14px; margin: 20px 0; overflow-wrap: anywhere; }

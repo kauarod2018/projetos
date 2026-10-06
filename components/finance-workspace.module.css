@@ -4,10 +4,10 @@
 .subtitle { color: var(--vemo-muted); }
 .primaryAction { min-height: 44px; border: 1px solid var(--vemo-brand); border-radius: var(--vemo-radius); background: var(--vemo-brand); color: white; font-weight: 600; box-shadow: none; }
 .primaryAction:hover { background: var(--vemo-brand-hover); }
-.error { border: 1px solid #f2bdc9; border-left: 3px solid var(--vemo-danger); border-radius: var(--vemo-radius); background: var(--vemo-danger-soft); padding: 16px; color: var(--vemo-danger); font-size: 14px; }
-.unlinked { border: 1px solid #e5ce99; border-left: 3px solid #a9690c; border-radius: var(--vemo-radius); background: var(--vemo-warning-soft); padding: 16px; color: var(--vemo-warning); font-size: 14px; }
+.error { border: 1px solid #f3c5c3; border-left: 3px solid var(--vemo-danger); border-radius: var(--vemo-radius); background: var(--vemo-danger-soft); padding: 16px; color: var(--vemo-danger); font-size: 14px; }
+.unlinked { border: 1px solid #ecd3a6; border-left: 3px solid #a9690c; border-radius: var(--vemo-radius); background: var(--vemo-warning-soft); padding: 16px; color: var(--vemo-warning); font-size: 14px; }
 .unlinked h2 { color: var(--vemo-warning); font-size: 16px; }
-.unlinked a { color: #174c9c; text-underline-offset: 3px; }
+.unlinked a { color: #2350d8; text-underline-offset: 3px; }
 .monthControls { display: flex; align-items: end; justify-content: space-between; gap: 14px; border-bottom: 1px solid var(--vemo-line); padding-bottom: 20px; }
 .monthField { width: min(100%, 320px); display: flex; flex-direction: column; gap: 8px; }
 .monthField label { color: var(--vemo-muted); font-size: 13px; font-weight: 600; }
@@ -86,13 +86,13 @@
 .receivableList { border-block: 1px solid var(--vemo-line); background: white; padding: 24px; }
 .receivableList h2 { color: var(--vemo-warning); }
 .receivableList > div { margin-top: 12px; display: flex; flex-direction: column; gap: 8px; }
-.receivableItem { display: flex; min-height: 46px; align-items: center; justify-content: space-between; gap: 14px; border-bottom: 1px solid #e5ce99; padding: 10px 0; color: var(--vemo-text); font-size: 14px; }
+.receivableItem { display: flex; min-height: 46px; align-items: center; justify-content: space-between; gap: 14px; border-bottom: 1px solid #ecd3a6; padding: 10px 0; color: var(--vemo-text); font-size: 14px; }
 .receivableItem:hover { color: var(--vemo-brand); }
 .receivableItem span { min-width: 0; overflow-wrap: anywhere; }
 .receivableItem strong { flex-shrink: 0; color: var(--vemo-warning); font-variant-numeric: tabular-nums; }
 .dialog { border-color: var(--vemo-line); border-radius: var(--vemo-radius); background: white; color: var(--vemo-text); box-shadow: 0 24px 80px rgb(16 34 56 / 18%); }
 .dialogTitle { color: var(--vemo-text); }
-.dialog [role="alert"] { border-color: #f2bdc9; background: var(--vemo-danger-soft); color: var(--vemo-danger); }
+.dialog [role="alert"] { border-color: #f3c5c3; background: var(--vemo-danger-soft); color: var(--vemo-danger); }
 @media (max-width: 640px) {
   .header { align-items: stretch; flex-direction: column; gap: 16px; }
   .primaryAction { width: 100%; }

@@ -7,7 +7,7 @@
 .searchInput { border-color: var(--vemo-control-border); background: white; color: var(--vemo-text); }
 .searchInput::placeholder { color: var(--vemo-muted); opacity: 1; }
 .search:focus-within svg { color: var(--vemo-brand); }
-.error { border-color: #f2bdc9; background: var(--vemo-danger-soft); color: var(--vemo-danger); }
+.error { border-color: #f3c5c3; background: var(--vemo-danger-soft); color: var(--vemo-danger); }
 .clientCard { min-width: 0; border-color: var(--vemo-line); border-radius: var(--vemo-radius); background: white; box-shadow: var(--vemo-shadow); transition: border-color 150ms ease; }
 .clientCard:hover { border-color: #8eafd6; }
 .avatar { background: var(--vemo-brand-soft); color: var(--vemo-brand); }

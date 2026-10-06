@@ -1,39 +1,28 @@
-.lightShell {
-  --sidebar: #07182b;
-  --sidebar-foreground: #edf6ff;
-  --sidebar-border: #17324e;
-  --sidebar-accent: #102d49;
-  --sidebar-accent-foreground: #f7fbff;
-  background: var(--background);
-}
-.navigation { background: #07182b; color: #edf6ff; }
-.lightShell :global([data-slot="sidebar-container"]) { border-color: #17324e; }
-.lightShell :global([data-slot="sidebar-inner"]) { background: #07182b; }
-.lightShell :global([data-slot="sidebar-header"]),
-.lightShell :global([data-slot="sidebar-footer"]),
+/* Menu lateral claro, estilo Notion. Cores em app/globals.css (ver DESIGN.md). */
+.lightShell { background: var(--background); }
+.navigation { background: var(--sidebar); color: var(--sidebar-foreground); }
+.lightShell :global([data-slot="sidebar-container"]) { border-color: var(--sidebar-border); }
+.lightShell :global([data-slot="sidebar-inner"]) { background: var(--sidebar); }
 .navigation :global([data-slot="sidebar-header"]),
-.navigation :global([data-slot="sidebar-footer"]) { border-color: #17324e; }
-.lightShell :global([data-slot="sidebar-header"] > a),
-.navigation :global([data-slot="sidebar-header"] > a) { width: fit-content; border-radius: 8px; background: white; padding: 5px 8px; }
-.lightShell :global([data-slot="sidebar-content"] nav > p),
-.navigation :global([data-slot="sidebar-content"] nav > p) { color: #9fb6d1; }
-.lightShell :global([data-slot="sidebar-menu-button"]),
-.navigation :global([data-slot="sidebar-menu-button"]) { color: #c5d8ec; transition: background-color 140ms ease; }
-.lightShell :global([data-slot="sidebar-menu-button"]:hover),
-.navigation :global([data-slot="sidebar-menu-button"]:hover) { background: #102d49; color: white; }
-.lightShell :global([data-slot="sidebar-menu-button"][data-active="true"]),
-.navigation :global([data-slot="sidebar-menu-button"][data-active="true"]) { border-color: #0f62e6; background: #0f62e6; color: white; }
-.lightShell :global([data-slot="sidebar-footer"] > div),
-.navigation :global([data-slot="sidebar-footer"] > div) { background: #0f2a44; }
-.lightTopbar { border-color: var(--vemo-line); background: rgb(255 255 255 / 96%); color: var(--vemo-text); }
-.lightTopbar :global([data-slot="sidebar-trigger"]) { border-color: var(--vemo-control-border); background: white; color: var(--vemo-muted); }
+.navigation :global([data-slot="sidebar-footer"]) { border-color: var(--sidebar-border); }
+.navigation :global([data-slot="sidebar-content"] nav > p) { color: var(--vemo-faint); letter-spacing: 0.04em; }
+.navigation :global([data-slot="sidebar-menu-button"]) { color: #4a4844; transition: background-color 140ms ease, color 140ms ease; }
+.navigation :global([data-slot="sidebar-menu-button"] svg) { color: var(--vemo-faint); transition: color 140ms ease; }
+.navigation :global([data-slot="sidebar-menu-button"]:hover) { background: var(--sidebar-accent); color: var(--vemo-text); }
+.navigation :global([data-slot="sidebar-menu-button"][data-active="true"]) { background: #ffffff; color: var(--vemo-text); box-shadow: var(--vemo-shadow); font-weight: 600; }
+.navigation :global([data-slot="sidebar-menu-button"][data-active="true"] svg) { color: var(--vemo-brand); }
+.workspaceBadge { display: flex; align-items: center; gap: 10px; min-width: 0; border-radius: 10px; padding: 8px; }
+.workspaceBadge > span:first-child { display: grid; place-items: center; flex: none; width: 30px; height: 30px; border-radius: 8px; background: var(--vemo-aurora); color: white; font-size: 13px; font-weight: 700; }
+.workspaceBadge strong { display: block; overflow: hidden; color: var(--vemo-text); font-size: 14px; font-weight: 600; text-overflow: ellipsis; white-space: nowrap; }
+.workspaceBadge small { display: block; color: var(--vemo-muted); font-size: 12px; }
+.lightTopbar { border-color: var(--vemo-line); background: rgb(251 250 248 / 88%); color: var(--vemo-text); }
+.lightTopbar :global([data-slot="sidebar-trigger"]) { border-color: var(--vemo-line); background: white; color: var(--vemo-muted); }
 .lightTopbar :global([data-slot="sidebar-trigger"]:hover) { background: var(--vemo-subtle); color: var(--vemo-brand); }
 .lightTopbar nav li:first-child { color: var(--vemo-muted); }
 .lightTopbar nav li:last-child { color: var(--vemo-text); }
-.lightTopbar :global([data-slot="sheet-trigger"]) { min-height: 44px; border-color: #a7c3eb; border-radius: 8px; background: var(--vemo-brand-soft); color: #174c9c; }
-.lightTopbar :global([data-slot="sheet-trigger"]:hover) { background: #ddeaff; }
+.lightTopbar :global([data-slot="sheet-trigger"]) { min-height: 40px; border: 0; border-radius: 999px; background: var(--vemo-aurora); color: white; box-shadow: 0 6px 18px -8px rgb(124 92 255 / 70%); }
+.lightTopbar :global([data-slot="sheet-trigger"]:hover) { filter: brightness(1.06); }
 .lightShell :global([data-slot="sidebar-inset"]:focus) { outline: none; }
 @media (prefers-reduced-motion: reduce) {
-  .lightShell :global([data-slot="sidebar-menu-button"]),
   .navigation :global([data-slot="sidebar-menu-button"]) { transition: none; }
 }

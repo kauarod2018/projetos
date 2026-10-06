@@ -21,7 +21,7 @@
 .page :where([data-slot="button"][data-variant="outline"]) { border-color: var(--vemo-control-border); background: white; color: var(--vemo-text); box-shadow: none; }
 .page :where([data-slot="button"][data-variant="outline"]:hover) { background: var(--vemo-subtle); }
 .page :where([data-slot="button"][data-variant="ghost"]:hover) { background: var(--vemo-subtle); }
-.page :where([role="alert"]) { border-color: #f2bdc9; background: var(--vemo-danger-soft); color: var(--vemo-danger); }
+.page :where([role="alert"]) { border-color: #f3c5c3; background: var(--vemo-danger-soft); color: var(--vemo-danger); }
 .page :where(a, button, input, select, textarea):focus-visible { outline: 2px solid var(--vemo-focus); outline-offset: 3px; }
 .page :where([data-slot="badge"]) { max-width: 100%; border-radius: 5px; white-space: normal; }
 @media (max-width: 640px) {

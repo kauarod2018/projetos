@@ -5,9 +5,9 @@
   justify-content: space-between;
   gap: 16px;
   padding: 10px 32px;
-  border-bottom: 1px solid #dbe6f0;
+  border-bottom: 1px solid #ebe9e4;
   background: rgb(255 255 255 / 72%);
-  color: #102238;
+  color: #1f1e1c;
   font-weight: 650;
   backdrop-filter: blur(12px);
 }
@@ -18,7 +18,7 @@
   gap: 8px;
   min-height: 40px;
   border-radius: 7px;
-  color: #0f62e6;
+  color: #2f62f5;
   font-weight: 650;
 }
 
@@ -28,7 +28,7 @@
   max-width: 1280px;
   margin-inline: auto;
   padding: 30px 32px 44px;
-  color: #102238;
+  color: #1f1e1c;
 }
 
 .heading {
@@ -40,7 +40,7 @@
 }
 
 .heading h1 {
-  color: #071427;
+  color: #1f1e1c;
   font-size: 28px;
   font-weight: 760;
   line-height: 1.12;
@@ -49,7 +49,7 @@
 
 .date {
   margin-top: 9px;
-  color: #607089;
+  color: #6f6d68;
   font-size: 15px;
   min-height: 24px;
 }
@@ -57,17 +57,17 @@
 .date::first-letter { text-transform: uppercase; }
 
 .heading :global([data-slot="button"]) {
-  border: 1px solid #0f62e6;
+  border: 1px solid #2f62f5;
   border-radius: 8px;
-  background: #0f62e6;
+  background: #2f62f5;
   color: white;
   font-weight: 720;
   box-shadow: none;
 }
 
 .heading :global([data-slot="button"]:hover) {
-  border-color: #0b52c4;
-  background: #0b52c4;
+  border-color: #2350d8;
+  background: #2350d8;
 }
 
 .metrics {
@@ -79,7 +79,7 @@
 
 .metrics > div {
   min-width: 0;
-  border: 1px solid #dbe6f0;
+  border: 1px solid #ebe9e4;
   border-radius: 8px;
   padding: 18px;
   background: #ffffff;
@@ -95,7 +95,7 @@
   align-items: center;
   gap: 10px;
   min-height: 34px;
-  color: #51637b;
+  color: #6f6d68;
   font-size: 13px;
   font-weight: 700;
 }
@@ -104,7 +104,7 @@
   width: 19px;
   height: 19px;
   flex-shrink: 0;
-  color: #0f62e6;
+  color: #2f62f5;
 }
 
 .metrics > div:nth-child(2) dt svg { color: #0aa987; }
@@ -113,7 +113,7 @@
 
 .metrics dd {
   margin-top: 9px;
-  color: #071427;
+  color: #1f1e1c;
   font-size: 29px;
   font-weight: 760;
   line-height: 1.15;
@@ -123,15 +123,15 @@
 
 .metrics p {
   margin-top: 8px;
-  color: #607089;
+  color: #6f6d68;
   font-size: 13px;
   line-height: 1.45;
 }
 
 .teal { color: var(--vemo-success); }
 .amber { color: var(--vemo-warning); }
-.blue { color: #0f62e6; }
-.rose { color: #c92a43; }
+.blue { color: #2f62f5; }
+.rose { color: #c8322f; }
 .metrics dd.teal { color: var(--vemo-success); }
 .metrics dd.amber { color: var(--vemo-warning); }
 .metrics dd.blue { color: var(--vemo-brand); }
@@ -144,7 +144,7 @@
 }
 
 .page h2 {
-  color: #071427;
+  color: #1f1e1c;
   font-size: 18px;
   font-weight: 740;
   line-height: 1.4;
@@ -161,7 +161,7 @@
   border: 1px solid #bcd2ea;
   border-radius: 7px;
   background: #edf5ff;
-  color: #0f62e6;
+  color: #2f62f5;
   font-size: 13px;
   font-weight: 720;
   vertical-align: middle;
@@ -192,7 +192,7 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
-  border-top: 1px solid #e7eef5;
+  border-top: 1px solid #ebe9e4;
   padding: 14px 0;
 }
 
@@ -206,7 +206,7 @@
   border-radius: 8px;
   padding: 8px;
   background: #edf5ff;
-  color: #0f62e6;
+  color: #2f62f5;
 }
 
 .taskText {
@@ -215,7 +215,7 @@
 }
 
 .taskText h3 {
-  color: #102238;
+  color: #1f1e1c;
   font-size: 14px;
   font-weight: 700;
   line-height: 1.45;
@@ -224,7 +224,7 @@
 
 .taskText p {
   margin-top: 3px;
-  color: #607089;
+  color: #6f6d68;
   font-size: 13px;
   line-height: 1.45;
 }
@@ -244,7 +244,7 @@
   border: 1px solid #bfd1e6;
   border-radius: 7px;
   background: #ffffff;
-  color: #0f62e6;
+  color: #2f62f5;
   font-size: 13px;
   font-weight: 650;
   text-align: center;
@@ -253,7 +253,7 @@
 
 .actionLink:hover {
   border-color: #8eb2da;
-  background: #f3f8fe;
+  background: #f6f5f2;
 }
 
 .textLink {
@@ -262,21 +262,21 @@
   gap: 7px;
   min-height: 40px;
   border-radius: 7px;
-  color: #0f62e6;
+  color: #2f62f5;
   font-size: 13px;
   font-weight: 700;
 }
 
 .textLink:hover,
 .toolbar a:hover {
-  color: #0b52c4;
+  color: #2350d8;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
 
 .muted {
   margin-top: 4px;
-  color: #607089;
+  color: #6f6d68;
   font-size: 13px;
 }
 
@@ -290,15 +290,15 @@
   flex-wrap: wrap;
   gap: 8px;
   padding-block: 11px;
-  border-top: 1px solid #e7eef5;
-  color: #51637b;
+  border-top: 1px solid #ebe9e4;
+  color: #6f6d68;
   font-size: 13px;
 }
 
 .moneyList > div:first-child { border-top: 0; }
 
 .moneyList dd {
-  color: #102238;
+  color: #1f1e1c;
   font-size: 16px;
   font-weight: 720;
   font-variant-numeric: tabular-nums;
@@ -309,7 +309,7 @@
   margin-top: 5px;
   border-top: 1px solid #ccd9e6;
   padding-top: 15px;
-  color: #071427;
+  color: #1f1e1c;
   font-weight: 700;
 }
 
@@ -338,19 +338,19 @@
   border: 1px solid #d6e6f5;
   border-radius: 8px;
   padding: 8px;
-  background: #f3f8fe;
-  color: #0f62e6;
+  background: #f6f5f2;
+  color: #2f62f5;
 }
 
 .empty h3 {
-  color: #102238;
+  color: #1f1e1c;
   font-size: 14px;
   font-weight: 700;
 }
 
 .empty p {
   max-width: 360px;
-  color: #607089;
+  color: #6f6d68;
   font-size: 13px;
   line-height: 1.55;
 }
@@ -366,7 +366,7 @@
   flex-wrap: wrap;
   align-items: flex-start;
   gap: 10px;
-  border-top: 1px solid #e7eef5;
+  border-top: 1px solid #ebe9e4;
   padding: 13px 0;
 }
 
@@ -377,7 +377,7 @@
 
 .appointmentTime {
   min-width: 58px;
-  color: #0f62e6;
+  color: #2f62f5;
   font-weight: 760;
   font-variant-numeric: tabular-nums;
 }
@@ -388,7 +388,7 @@
 }
 
 .appointmentDetails h3 {
-  color: #102238;
+  color: #1f1e1c;
   font-size: 13px;
   font-weight: 700;
   overflow-wrap: anywhere;
@@ -396,7 +396,7 @@
 
 .appointmentDetails p {
   margin-top: 3px;
-  color: #607089;
+  color: #6f6d68;
   font-size: 12px;
   overflow-wrap: anywhere;
 }
@@ -404,21 +404,21 @@
 .appointmentStatus {
   border: 1px solid #d3e1ef;
   border-radius: 6px;
-  background: #f3f8fe;
+  background: #f6f5f2;
   padding: 4px 7px;
-  color: #51637b;
+  color: #6f6d68;
   font-size: 11px;
   font-weight: 650;
 }
 
 .loading {
   padding-block: 24px;
-  color: #607089;
+  color: #6f6d68;
 }
 
 .failure {
   margin-top: 14px;
-  border-left: 3px solid #c92a43;
+  border-left: 3px solid #c8322f;
   border-radius: 0 7px 7px 0;
   background: #fff1f4;
   padding: 14px;

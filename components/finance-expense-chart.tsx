@@ -6,7 +6,7 @@ import { ChartContainer } from "@/components/ui/chart";
 import { formatMoney, type FinanceTransaction } from "@/lib/models";
 import { expenseCategories } from "@/lib/transaction-categories";
 
-const categoryColors = ["#2563eb", "#0f9f91", "#e79513", "#8457d9", "#d94f70", "#679b25", "#0796b2", "#64748b"];
+const categoryColors = ["#2563eb", "#0f9f91", "#e79513", "#8457d9", "#d94f70", "#679b25", "#0796b2", "#6f6d68"];
 
 export function FinanceExpenseChart({ transactions, month }: { transactions: FinanceTransaction[]; month: string }) {
   const categories = useMemo(() => {

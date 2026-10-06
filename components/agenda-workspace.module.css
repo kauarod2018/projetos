@@ -33,7 +33,7 @@
 .notice:empty { display: none; }
 .loading { padding-block: 28px; color: var(--vemo-muted); }
 .error,
-.dialogError { border: 1px solid #f2bdc9; border-left: 3px solid var(--vemo-danger); border-radius: var(--vemo-radius); background: var(--vemo-danger-soft); padding: 16px; color: var(--vemo-danger); }
+.dialogError { border: 1px solid #f3c5c3; border-left: 3px solid var(--vemo-danger); border-radius: var(--vemo-radius); background: var(--vemo-danger-soft); padding: 16px; color: var(--vemo-danger); }
 .empty { display: flex; min-height: 270px; flex-direction: column; align-items: center; justify-content: center; gap: 10px; border-block: 1px solid var(--vemo-line); padding: 28px 20px; background: white; text-align: center; }
 .empty > span { display: grid; width: 48px; height: 48px; place-items: center; border-radius: var(--vemo-radius); background: var(--vemo-brand-soft); color: var(--vemo-brand); }
 .empty h2 { color: var(--vemo-text); font-size: 18px; }
@@ -57,10 +57,10 @@
 .customer { margin-top: 4px; color: var(--vemo-text); font-size: 14px; overflow-wrap: anywhere; }
 .notes { margin-top: 7px; color: var(--vemo-muted); font-size: 13px; line-height: 1.5; white-space: pre-line; overflow-wrap: anywhere; }
 .status { display: inline-flex; align-items: center; min-height: 26px; margin-top: 10px; border: 1px solid; border-radius: 5px; padding: 3px 8px; font-size: 12px; font-weight: 600; }
-.scheduled { border-color: #b8cdec; background: var(--vemo-brand-soft); color: #174c9c; }
+.scheduled { border-color: #b8cdec; background: var(--vemo-brand-soft); color: #2350d8; }
 .confirmed,
 .completed { border-color: #acd7c7; background: var(--vemo-success-soft); color: var(--vemo-success); }
-.inProgress { border-color: #e5ce99; background: var(--vemo-warning-soft); color: var(--vemo-warning); }
+.inProgress { border-color: #ecd3a6; background: var(--vemo-warning-soft); color: var(--vemo-warning); }
 .cancelled { border-color: #c8d3df; background: var(--vemo-subtle); color: var(--vemo-muted); }
 .actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: end; gap: 8px; max-width: 360px; }
 .statusSelect { width: auto; min-width: 145px; }

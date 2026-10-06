@@ -13,7 +13,7 @@
 .quotesPage :global([data-slot="card"] button[aria-label^="Excluir"]) { border-color: #e0a8b4; background: white; color: var(--vemo-danger); }
 .quotesPage :global([data-slot="card"] button[aria-label^="Excluir"]:hover) { background: var(--vemo-danger-soft); }
 .quotesPage select { min-height: 44px; }
-.quotesPage :global(.border-amber-200.bg-amber-50) { border-color: #e5ce99; background: var(--vemo-warning-soft); color: var(--vemo-warning); }
+.quotesPage :global(.border-amber-200.bg-amber-50) { border-color: #ecd3a6; background: var(--vemo-warning-soft); color: var(--vemo-warning); }
 .quotesPage :global(.text-amber-950),
 .quotesPage :global(.text-amber-900),
 .quotesPage :global(.text-amber-800),

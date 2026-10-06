@@ -75,36 +75,35 @@ function WorkspaceNavigation({ user, workspace }: { user: CurrentUser; workspace
   return (
     <Sidebar
       collapsible="offcanvas"
-      className={`border-r border-[#17324e] ${styles.navigation}`}
+      className={`border-r border-[var(--sidebar-border)] ${styles.navigation}`}
     >
-      <SidebarHeader className="relative border-b border-[#edf1f6] px-5 py-5">
+      <SidebarHeader className="relative gap-3 px-3 pb-2 pt-4">
         <Link
           href={workspace?.role === "employee" ? "/meu-trabalho" : workspace?.role === "reception" ? "/agenda" : "/hoje"}
           aria-label="Vemo, ir para início"
-          className="block max-w-[calc(100%-2.75rem)] rounded-md focus-visible:outline-2 focus-visible:outline-[#1765dc]"
+          className="block w-fit rounded-md px-2 focus-visible:outline-2 focus-visible:outline-[var(--vemo-focus)]"
           onClick={() => setOpenMobile(false)}
         >
-          <span className="block min-w-0">
-            <VemoWordmark className="h-11 w-40 max-w-full" />
-          </span>
+          <VemoWordmark className="h-9 w-28" />
         </Link>
-        <p title={workspace?.name} className="mt-3 line-clamp-2 max-w-[11rem] break-words text-sm leading-5 text-[#9fb6d1]">
-          {workspace?.name ?? "Seu negócio em dia, sem perder o ritmo."}
-        </p>
+        <div className={styles.workspaceBadge} title={workspace?.name}>
+          <span aria-hidden="true">{(workspace?.name ?? user?.name ?? "V").trim().charAt(0).toUpperCase()}</span>
+          <span className="min-w-0"><strong>{workspace?.name ?? user?.name ?? "Seu negócio"}</strong><small>{workspace?.kind === "company" ? "Empresa" : "Individual"}</small></span>
+        </div>
         <button
           type="button"
           onClick={() => setOpenMobile(false)}
           aria-label="Fechar menu"
           title="Fechar menu"
-          className="absolute right-3 top-5 flex size-10 items-center justify-center rounded-md border border-[#24445f] text-[#c5d8ec] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#48cdd8] md:hidden"
+          className="absolute right-3 top-4 flex size-10 items-center justify-center rounded-md border border-[var(--vemo-line)] bg-white text-[var(--vemo-muted)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--vemo-focus)] md:hidden"
         >
           <X className="size-5" aria-hidden="true" />
         </button>
       </SidebarHeader>
 
-      <SidebarContent className="px-3 py-4">
+      <SidebarContent className="px-3 py-2">
         <nav aria-label="Menu principal" className="h-full">
-        <p className="px-3 pb-2 pt-1 text-[0.68rem] font-semibold uppercase text-[#7f98b7]">Seu negócio</p>
+        <p className="px-3 pb-2 pt-1 text-[0.68rem] font-semibold uppercase">Seu negócio</p>
         <SidebarGroup className="p-0">
           <SidebarGroupContent>
             <SidebarMenu className="gap-1">
@@ -117,7 +116,7 @@ function WorkspaceNavigation({ user, workspace }: { user: CurrentUser; workspace
                     <SidebarMenuButton
                       asChild
                       isActive={isActive}
-                      className="h-11 rounded-md border border-transparent px-3 text-[0.925rem] text-[#c5d8ec] hover:bg-[#102d49] hover:text-white data-[active=true]:border-[#1f7ae8] data-[active=true]:bg-[#0f62e6] data-[active=true]:font-semibold data-[active=true]:text-white focus-visible:ring-[#48cdd8]"
+                      className="h-10 rounded-lg px-3 text-[0.925rem] focus-visible:ring-[var(--vemo-focus)]"
                     >
                       <Link
                         href={item.href}
@@ -126,7 +125,7 @@ function WorkspaceNavigation({ user, workspace }: { user: CurrentUser; workspace
                       >
                         <Icon className="size-[1.125rem]" aria-hidden="true" />
                         <span>{item.label}</span>
-                        {"upcoming" in item && <span className="ml-auto text-xs font-normal text-[#64748b]">Em breve</span>}
+                        {"upcoming" in item && <span className="ml-auto text-xs font-normal text-[var(--vemo-faint)]">Em breve</span>}
                       </Link>
                     </SidebarMenuButton>
                   </SidebarMenuItem>
@@ -138,21 +137,21 @@ function WorkspaceNavigation({ user, workspace }: { user: CurrentUser; workspace
         </nav>
       </SidebarContent>
 
-      <SidebarFooter className="border-t border-[#edf1f6] p-3">
-        {user && !user.emailVerifiedAt && <Link href="/verificar-email" className="px-2 text-sm font-medium text-[#9dc5ff] underline-offset-4 hover:underline">Confirmar meu e-mail</Link>}
-        {logoutError && <p role="alert" className="text-sm text-[#ffb8c8]">{logoutError}</p>}
-        <div className="flex items-center gap-3 rounded-md bg-[#0f2a44] p-3">
-          <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[#4ad5da] text-sm font-semibold text-[#061421]">
+      <SidebarFooter className="border-t border-[var(--sidebar-border)] p-3">
+        {user && !user.emailVerifiedAt && <Link href="/verificar-email" className="px-2 text-sm font-medium text-[var(--vemo-brand)] underline-offset-4 hover:underline">Confirmar meu e-mail</Link>}
+        {logoutError && <p role="alert" className="text-sm text-[var(--vemo-danger)]">{logoutError}</p>}
+        <div className="flex items-center gap-3 rounded-lg p-2">
+          <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-[var(--vemo-violet-soft)] text-sm font-semibold text-[var(--vemo-violet)]">
             {initials}
           </span>
           <span className="min-w-0">
-            <span className="block truncate text-sm font-medium text-[#f4f9ff]">{user?.name ?? "Minha conta"}</span>
-            <span className="block truncate text-xs text-[#9fb6d1]">{user?.email ?? "Profissional autônomo"}</span>
+            <span className="block truncate text-sm font-medium text-[var(--vemo-text)]">{user?.name ?? "Minha conta"}</span>
+            <span className="block truncate text-xs text-[var(--vemo-muted)]">{user?.email ?? "Profissional autônomo"}</span>
           </span>
           <button
             type="button"
             onClick={logout}
-            className="ml-auto flex size-10 shrink-0 items-center justify-center rounded-md text-[#9fb6d1] hover:bg-[#173b5e] hover:text-[#ff9cae] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#48cdd8] focus-visible:ring-offset-2 focus-visible:ring-offset-[#07182b]"
+            className="ml-auto flex size-10 shrink-0 items-center justify-center rounded-md text-[var(--vemo-muted)] hover:bg-[var(--sidebar-accent)] hover:text-[var(--vemo-danger)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--vemo-focus)]"
             aria-label="Sair"
             title="Sair"
           >
@@ -184,9 +183,9 @@ export function WorkspaceShell({ children }: { children: React.ReactNode }) {
 
   if (loading || !user) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-white">
+      <div className="flex min-h-screen items-center justify-center bg-[var(--background)]">
         <span role="status" className="flex items-center gap-3 text-sm text-gray-600">
-          <span className="size-8 animate-spin rounded-full border-2 border-blue-200 border-t-blue-600" aria-hidden="true" />
+          <span className="size-8 animate-spin rounded-full border-2 border-[var(--vemo-brand-soft)] border-t-[var(--vemo-brand)]" aria-hidden="true" />
           <span className="sr-only">Carregando…</span>
         </span>
       </div>
@@ -196,12 +195,12 @@ export function WorkspaceShell({ children }: { children: React.ReactNode }) {
   return (
     <AssistantProvider><SidebarProvider className={lightTheme ? styles.lightShell : undefined} style={{ "--sidebar-width": "15rem" } as React.CSSProperties}>
       <WorkspaceNavigation user={user} workspace={workspace} />
-      <SidebarInset id="main-content" tabIndex={-1} className="min-h-screen min-w-0 bg-[#f5f8fc] text-[#102238]">
-        <div className={`print-hidden sticky top-0 z-20 flex h-16 items-center gap-3 border-b border-[#dbe6f0] bg-white/90 px-3 backdrop-blur sm:px-5 ${lightTheme ? styles.lightTopbar : ""}`}>
+      <SidebarInset id="main-content" tabIndex={-1} className="min-h-screen min-w-0 bg-[var(--background)] text-[var(--vemo-text)]">
+        <div className={`print-hidden sticky top-0 z-20 flex h-16 items-center gap-3 border-b border-[var(--vemo-line)] px-3 backdrop-blur sm:px-5 ${lightTheme ? styles.lightTopbar : ""}`}>
           <SidebarTrigger
             aria-label="Abrir ou recolher menu"
             title="Abrir ou recolher menu"
-            className="size-10 rounded-md border border-[#dce5f0]"
+            className="size-10 rounded-md border border-[#ebe9e4]"
           />
           <div className="flex min-w-0 items-center gap-2 md:hidden">
             <VemoMark className="size-8" decorative />
@@ -209,9 +208,9 @@ export function WorkspaceShell({ children }: { children: React.ReactNode }) {
           </div>
           <nav aria-label="Localização atual" className="hidden min-w-0 md:block">
             <ol className="flex items-center gap-2 text-sm">
-              <li className="max-w-72 truncate text-[#718198]" title={workspace?.name}>{workspace?.name ?? "Vemo"}</li>
-              <li aria-hidden="true"><ChevronRight className="size-4 text-[#94a3b8]" /></li>
-          <li aria-current="page" className="truncate font-semibold text-[#263a58]">{currentPage?.label ?? (pathname === "/noticias" ? "Notícias" : "Seu negócio")}</li>
+              <li className="max-w-72 truncate text-[var(--vemo-muted)]" title={workspace?.name}>{workspace?.name ?? "Vemo"}</li>
+              <li aria-hidden="true"><ChevronRight className="size-4 text-[var(--vemo-faint)]" /></li>
+          <li aria-current="page" className="truncate font-semibold text-[var(--vemo-text)]">{currentPage?.label ?? (pathname === "/noticias" ? "Notícias" : "Seu negócio")}</li>
             </ol>
           </nav>
           {!blocked && !employee && !reception && workspace?.role !== "viewer" && <WorkspaceAssistant />}
