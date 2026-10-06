@@ -1,33 +1,36 @@
-.wrap { min-width: 0; width: 100%; }
+.wrap { min-width: 0; width: 100%; overflow: hidden; border: 1px solid var(--vemo-line); border-radius: 16px; background: white; }
+.table tbody tr:last-child td { border-bottom: 0; }
 .table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 14px; color: var(--vemo-text, #1f1e1c); }
-.table th { padding: 12px 14px; background: #f3f6fa; border-block: 1px solid #ebe9e4; font-size: 12px; font-weight: 650; text-align: left; color: #4e5d71; }
+.table th { padding: 12px 14px; background: var(--vemo-subtle); border-block: 1px solid var(--vemo-line); font-size: 12px; font-weight: 650; text-align: left; color: var(--vemo-muted); }
 .table td { padding: 16px 14px; border-bottom: 1px solid #ebe9e4; vertical-align: top; overflow-wrap: anywhere; }
-.table tbody tr:nth-child(even) { background: #fafbfd; }
-.table tbody tr:hover { background: #f1f6fc; }
+.table tbody tr:nth-child(even) { background: transparent; }
+.table tbody tr:hover { background: #fdfcfb; }
 .table .amount { text-align: right; font-variant-numeric: tabular-nums; font-weight: 650; }
 .table .date { width: 14%; }
 .table .description { width: 31%; }
 .table .actions { width: 20%; }
 .table .muted { display: block; color: #6f6d68; font-size: 12px; line-height: 1.7; margin-top: 4px; }
 .table a { color: #2350d8; text-underline-offset: 3px; }
-.badge { display: inline-flex; align-items: center; gap: 5px; padding: 3px 7px; border: 1px solid #ccd7e4; border-radius: 4px; font-size: 12px; font-weight: 600; line-height: 1.6; max-width: 100%; overflow-wrap: anywhere; }
+.badge { display: inline-flex; align-items: center; gap: 5px; padding: 3px 7px; border: 0; border-radius: 999px; padding: 3px 9px; font-size: 12px; font-weight: 600; line-height: 1.6; max-width: 100%; overflow-wrap: anywhere; }
 .income { background: #e9f7f0; color: #166446; border-color: #b7decb; }
 .expense { background: #fdeceb; color: #a52b46; border-color: #ecc1cd; }
 .pending { background: #fff6e3; color: #845608; border-color: #e4ce9d; }
-.neutral { background: #f6f5f2; color: #23558e; border-color: #c4d6ed; }
+.neutral { background: var(--vemo-subtle); color: var(--vemo-muted); }
 .rowActions { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
-.rowActions button { min-height: 40px; border-radius: 6px; max-width: 100%; }
+.rowActions button { min-height: 40px; border-radius: 999px; max-width: 100%; }
 .paymentRow td { background: #f6f5f2; }
 .filterBar { display: grid; grid-template-columns: minmax(0,1fr) 220px; gap: 14px; padding-block: 16px; }
 .filterBar label { display: grid; gap: 8px; font-size: 13px; color: #6f6d68; }
-.filterBar select { height: 44px; width: 100%; min-width: 0; padding: 0 12px; border: 1px solid #d6d4ce; border-radius: 6px; background: white; font-size: 14px; color: #1f1e1c; }
+.filterBar select { height: 44px; width: 100%; min-width: 0; padding: 0 12px; border: 1px solid #d6d4ce; border-radius: 10px; background: white; font-size: 14px; color: var(--vemo-text); }
 .filterBar select:focus-visible { outline: 2px solid #2350d8; outline-offset: 2px; }
 .groupHeading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 20px 0 12px; }
 .groupHeading h3 { display: flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 650; }
 .groupHeading p { font-size: 13px; color: #6f6d68; font-variant-numeric: tabular-nums; }
 .groupHeading strong { color: #1f1e1c; }
-.plannedForm { border-block: 1px solid #ebe9e4; padding: 12px 0; }
-.plannedForm summary { cursor: pointer; font-weight: 600; color: #2350d8; min-height: 40px; padding-block: 8px; }
+.plannedForm { border: 1px solid var(--vemo-line); border-radius: 16px; padding: 6px 16px; background: white; }
+.plannedForm[open] { padding-bottom: 16px; }
+.plannedForm summary { display: flex; align-items: center; gap: 6px; cursor: pointer; font-weight: 600; color: var(--vemo-brand); min-height: 40px; padding-block: 8px; list-style: none; }
+.plannedForm summary::-webkit-details-marker { display: none; }
 .plannedForm summary:focus-visible { outline: 2px solid #2350d8; outline-offset: 3px; }
 .plannedForm form { padding-top: 12px; }
 @media (max-width: 760px) {

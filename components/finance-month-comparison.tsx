@@ -49,25 +49,25 @@ export function FinanceMonthComparison({ transactions, month }: { transactions: 
   const previous = totalsForMonth(transactions, previousMonth);
   const metrics = [
     { label: "Entradas", value: current.income, oldValue: previous.income, kind: "spend" as const, favorableWhen: 1 },
-    { label: "Despesas", value: current.expenses, oldValue: previous.expenses, kind: "spend" as const, favorableWhen: -1 },
+    { label: "Saídas", value: current.expenses, oldValue: previous.expenses, kind: "spend" as const, favorableWhen: -1 },
     { label: "O que sobrou", value: current.balance, oldValue: previous.balance, kind: "money" as const, favorableWhen: 1 },
   ];
 
   return (
-    <section className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm" aria-labelledby="finance-comparison-title">
-      <div className="border-b border-gray-100 pb-4">
-        <h2 id="finance-comparison-title" className="text-lg font-semibold">Comparação mensal</h2>
-        <p className="mt-1 text-sm text-gray-500">Movimentações registradas em relação a {monthName(previousMonth)}.</p>
+    <section className="rounded-[18px] border border-[var(--vemo-line)] bg-white p-5" aria-labelledby="finance-comparison-title">
+      <div className="border-b border-[var(--vemo-line)] pb-4">
+        <h2 id="finance-comparison-title" className="text-lg font-semibold">Comparado ao mês anterior</h2>
+        <p className="mt-1 text-sm text-[var(--vemo-muted)]">Movimentações registradas em relação a {monthName(previousMonth)}.</p>
       </div>
       <dl className="grid divide-y divide-gray-100 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
         {metrics.map((metric) => {
           const delta = metric.value - metric.oldValue;
           const favorable = Math.sign(delta) === metric.favorableWhen;
           const Icon = delta === 0 ? Minus : delta > 0 ? TrendingUp : TrendingDown;
-          const tone = delta === 0 ? "text-gray-500" : favorable ? "text-emerald-700" : "text-rose-700";
+          const tone = delta === 0 ? "text-[var(--vemo-muted)]" : favorable ? "text-emerald-700" : "text-rose-700";
           return (
             <div key={metric.label} className="py-4 first:sm:pr-4 sm:px-4 sm:first:pl-0 sm:last:pr-0">
-              <dt className="text-sm text-gray-500">{metric.label}</dt>
+              <dt className="text-sm text-[var(--vemo-muted)]">{metric.label}</dt>
               <dd className="mt-1 text-xl font-semibold tabular-nums">{formatMoney(metric.value)}</dd>
               <p className={`mt-2 flex items-start gap-1.5 text-sm ${tone}`}>
                 <Icon aria-hidden="true" className="mt-0.5 size-4 shrink-0" />

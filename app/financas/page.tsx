@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { FormEvent, useCallback, useEffect, useMemo, useState } from "react";
-import { ArrowDownLeft, ArrowUpRight, Clock3, Download, Plus, ReceiptText, RefreshCw, Search, WalletCards } from "lucide-react";
+import { ArrowDownLeft, ArrowUpRight, Car, ChevronLeft, ChevronRight, CircleDot, Download, FileText, Hammer, Megaphone, Package, PiggyBank, Plus, ReceiptText, RefreshCw, Search, Users, UtensilsCrossed, Wallet, Zap, type LucideIcon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -15,16 +15,9 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { Skeleton } from "@/components/ui/skeleton";
 import { WorkspaceShell } from "@/components/workspace-shell";
-import { formatDate, formatMoney, type FinanceTransaction, type Quote } from "@/lib/models";
+import { formatMoney, type FinanceTransaction, type Quote } from "@/lib/models";
 import { financeSummary } from "@/lib/finance-summary";
 import { expenseCategories, type ExpenseCategory } from "@/lib/transaction-categories";
 import { FinanceExpenseChart } from "@/components/finance-expense-chart";
@@ -33,7 +26,23 @@ import { FinanceMonthComparison } from "@/components/finance-month-comparison";
 import { FinanceCashflowChart } from "@/components/finance-cashflow-chart";
 import { FinancialObligations } from "@/components/financial-obligations";
 import styles from "@/components/finance-workspace.module.css";
-import tableStyles from "@/components/finance-table.module.css";
+
+type Tab = "extrato" | "contas" | "relatorios";
+const tabs: { value: Tab; label: string }[] = [
+  { value: "extrato", label: "Extrato" },
+  { value: "contas", label: "Contas a pagar e receber" },
+  { value: "relatorios", label: "Relatórios" },
+];
+const categoryIcons: Record<ExpenseCategory, LucideIcon> = {
+  "Materiais": Package,
+  "Transporte": Car,
+  "Ferramentas": Hammer,
+  "Contas do negócio": Zap,
+  "Alimentação": UtensilsCrossed,
+  "Serviços terceirizados": Users,
+  "Marketing": Megaphone,
+  "Outros": CircleDot,
+};
 
 function parseMoney(value: string) {
   const clean = value.replace(/R\$/g, "").replace(/\s/g, "");
@@ -43,8 +52,39 @@ function parseMoney(value: string) {
 }
 
 function today() {
-  const date = new Date();
-  return [date.getFullYear(), String(date.getMonth() + 1).padStart(2, "0"), String(date.getDate()).padStart(2, "0")].join("-");
+  return new Intl.DateTimeFormat("en-CA", { timeZone: "America/Sao_Paulo", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
+}
+
+function shiftMonth(month: string, offset: number) {
+  const [year, number] = month.split("-").map(Number);
+  const date = new Date(Date.UTC(year, number - 1 + offset, 1, 12));
+  return `${date.getUTCFullYear()}-${String(date.getUTCMonth() + 1).padStart(2, "0")}`;
+}
+
+function monthLabel(month: string, style: "long" | "short" = "long") {
+  const [year, number] = month.split("-").map(Number);
+  const text = new Intl.DateTimeFormat("pt-BR", { month: style, year: style === "long" ? "numeric" : undefined, timeZone: "UTC" }).format(new Date(Date.UTC(year, number - 1, 1, 12)));
+  return text.charAt(0).toUpperCase() + text.slice(1).replace(".", "");
+}
+
+function dayLabel(day: string, todayKey: string) {
+  if (day === todayKey) return "Hoje";
+  if (day === shiftDay(todayKey, -1)) return "Ontem";
+  const text = new Intl.DateTimeFormat("pt-BR", { weekday: "long", day: "numeric", month: "long", timeZone: "UTC" }).format(new Date(`${day}T12:00:00Z`));
+  return text.charAt(0).toUpperCase() + text.slice(1);
+}
+
+function shiftDay(day: string, offset: number) {
+  return new Date(Date.parse(`${day}T12:00:00Z`) + offset * 86_400_000).toISOString().slice(0, 10);
+}
+
+function totalsFor(transactions: FinanceTransaction[], month: string) {
+  let income = 0, expenses = 0;
+  for (const item of transactions) {
+    if (item.transactionDate.slice(0, 7) !== month) continue;
+    if (item.type === "income") income += item.amountCents; else expenses += item.amountCents;
+  }
+  return { income, expenses, balance: income - expenses };
 }
 
 export default function FinancesPage() {
@@ -60,11 +100,13 @@ function FinancesContent() {
   const [error, setError] = useState("");
   const [formError, setFormError] = useState("");
   const [month, setMonth] = useState(today().slice(0, 7));
-  const [visibleCount, setVisibleCount] = useState(8);
+  const [tab, setTab] = useState<Tab>("extrato");
+  const [visibleCount, setVisibleCount] = useState(20);
   const [search, setSearch] = useState("");
   const [typeFilter, setTypeFilter] = useState<"all" | "income" | "expense">("all");
   const [categoryFilter, setCategoryFilter] = useState("all");
-  const [form, setForm] = useState({ type: "expense", category: "Outros" as ExpenseCategory, description: "", amount: "", transactionDate: today() });
+  const [form, setForm] = useState({ type: "expense" as "income" | "expense", category: "Outros" as ExpenseCategory, description: "", amount: "", transactionDate: today() });
+  const todayKey = today();
 
   const loadData = useCallback(async () => {
     setLoading(true);
@@ -89,34 +131,88 @@ function FinancesContent() {
 
   useEffect(() => { void loadData(); }, [loadData]);
 
-  const summary = useMemo(() => financeSummary(quotes, transactions, month), [quotes, transactions, month]);
+  // Atalhos vindos de outras telas: /financas?novo=entrada|saida e /financas#contas.
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const novo = params.get("novo");
+    if (novo === "entrada" || novo === "saida") openForm(novo === "entrada" ? "income" : "expense");
+    const syncHash = () => { const hash = window.location.hash.slice(1); if (tabs.some(item => item.value === hash)) setTab(hash as Tab); };
+    syncHash();
+    window.addEventListener("hashchange", syncHash);
+    return () => window.removeEventListener("hashchange", syncHash);
+  }, []);
 
-  const filteredTransactions = useMemo(() => transactions
+  const summary = useMemo(() => financeSummary(quotes, transactions, month), [quotes, transactions, month]);
+  const previous = useMemo(() => totalsFor(transactions, shiftMonth(month, -1)), [transactions, month]);
+  const history = useMemo(() => Array.from({ length: 6 }, (_, index) => {
+    const key = shiftMonth(month, index - 5);
+    return { key, label: monthLabel(key, "short"), ...totalsFor(transactions, key) };
+  }), [transactions, month]);
+  const historyMax = Math.max(1, ...history.map(item => Math.max(item.income, item.expenses)));
+
+  const monthTransactions = useMemo(() => transactions
     .filter((item) => item.transactionDate.slice(0, 7) === month)
     .sort((a, b) => b.transactionDate.localeCompare(a.transactionDate) || b.id - a.id),
   [transactions, month]);
 
+  const topCategory = useMemo(() => {
+    const totals = new Map<string, number>();
+    for (const item of monthTransactions) if (item.type === "expense") totals.set(item.category ?? "Outros", (totals.get(item.category ?? "Outros") ?? 0) + item.amountCents);
+    const [name, amount] = [...totals].sort((a, b) => b[1] - a[1])[0] ?? [];
+    return name ? { name, amount: amount!, share: summary.expenses ? Math.round((amount! / summary.expenses) * 100) : 0 } : null;
+  }, [monthTransactions, summary.expenses]);
+  const savedShare = summary.income > 0 ? Math.round((summary.balance / summary.income) * 100) : null;
+  const balanceChange = previous.balance !== 0 ? Math.round(((summary.balance - previous.balance) / Math.abs(previous.balance)) * 100) : null;
+
   const visibleTransactions = useMemo(() => {
-    const query = search.trim().normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("pt-BR");
-    return filteredTransactions.filter((transaction) => {
+    const query = search.trim().normalize("NFD").replace(/[̀-ͯ]/g, "").toLocaleLowerCase("pt-BR");
+    return monthTransactions.filter((transaction) => {
       if (typeFilter !== "all" && transaction.type !== typeFilter) return false;
       if (categoryFilter !== "all" && (transaction.type !== "expense" || (transaction.category ?? "Outros") !== categoryFilter)) return false;
       if (!query) return true;
       const searchable = [transaction.description, transaction.category ?? "", transaction.transactionDate, transaction.quoteId ? `orcamento ${transaction.quoteId}` : ""]
-        .join(" ").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("pt-BR");
+        .join(" ").normalize("NFD").replace(/[̀-ͯ]/g, "").toLocaleLowerCase("pt-BR");
       return searchable.includes(query);
     });
-  }, [filteredTransactions, search, typeFilter, categoryFilter]);
+  }, [monthTransactions, search, typeFilter, categoryFilter]);
+
+  const groupedDays = useMemo(() => {
+    const groups: { day: string; items: FinanceTransaction[]; total: number }[] = [];
+    for (const item of visibleTransactions.slice(0, visibleCount)) {
+      const day = item.transactionDate.slice(0, 10);
+      let group = groups.at(-1);
+      if (!group || group.day !== day) { group = { day, items: [], total: 0 }; groups.push(group); }
+      group.items.push(item);
+      group.total += item.type === "income" ? item.amountCents : -item.amountCents;
+    }
+    return groups;
+  }, [visibleTransactions, visibleCount]);
+
+  function selectTab(value: Tab) {
+    setTab(value);
+    window.history.replaceState(null, "", `${window.location.pathname}${value === "extrato" ? "" : `#${value}`}`);
+  }
+
+  function changeMonth(offset: number) {
+    setMonth(current => shiftMonth(current, offset));
+    setVisibleCount(20);
+  }
 
   function clearMovementFilters() {
     setSearch("");
     setTypeFilter("all");
     setCategoryFilter("all");
-    setVisibleCount(8);
+    setVisibleCount(20);
+  }
+
+  function openForm(type: "income" | "expense") {
+    setFormError("");
+    setForm({ type, category: "Outros", description: "", amount: "", transactionDate: today() });
+    setOpen(true);
   }
 
   function exportCsv() {
-    const csv = `\uFEFF${buildFinanceCsv(filteredTransactions)}`;
+    const csv = `﻿${buildFinanceCsv(monthTransactions)}`;
     const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
     const link = document.createElement("a");
     link.href = url;
@@ -149,8 +245,7 @@ function FinancesContent() {
       if (!response.ok || !data.transaction) throw new Error(data.error);
       setTransactions((current) => [data.transaction!, ...current]);
       setMonth(form.transactionDate.slice(0, 7));
-      setVisibleCount(8);
-      setForm({ type: "expense", category: "Outros", description: "", amount: "", transactionDate: today() });
+      setVisibleCount(20);
       setOpen(false);
     } catch (saveError) {
       setFormError(saveError instanceof Error ? saveError.message : "Não foi possível salvar.");
@@ -161,136 +256,183 @@ function FinancesContent() {
 
   return (
     <>
-      <section className={`${styles.page} mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 py-6 sm:px-6 lg:px-8`}>
+      <section className={styles.page}>
         <header className={styles.header}>
           <div>
-            <p className={styles.eyebrow}>Finanças</p>
-            <h1 className="mt-1 text-2xl font-semibold sm:text-3xl">Financeiro</h1>
-            <p className={`${styles.subtitle} mt-2 text-base`}>Caixa do mês, contas em aberto e orçamentos.</p>
+            <h1>Financeiro</h1>
+            <p>Seu dinheiro organizado: o que entrou, o que saiu e o que ainda vai entrar.</p>
           </div>
-          <Button onClick={() => { setFormError(""); setOpen(true); }} className={styles.primaryAction}><Plus className="size-4" /> Registrar movimentação</Button>
+          <div className={styles.headerActions}>
+            <button type="button" className={styles.incomeButton} onClick={() => openForm("income")}><ArrowDownLeft aria-hidden="true" />Entrada</button>
+            <button type="button" className={styles.expenseButton} onClick={() => openForm("expense")}><ArrowUpRight aria-hidden="true" />Saída</button>
+          </div>
         </header>
 
-        {error && <div role="alert" className={styles.error}><p>{error}</p><Button variant="outline" className="mt-3 min-h-11" onClick={() => void loadData()}><RefreshCw className="size-4" aria-hidden="true" />Tentar novamente</Button></div>}
-        {!loading && !error && summary.unlinkedPaid.length > 0 && <section aria-label="Recebimentos a conferir" className={styles.unlinked}>
-          <h2 className="font-semibold">{summary.unlinkedPaid.length} orçamento(s) pago(s) sem entrada vinculada</h2>
-          <p className="mt-1">O resumo soma apenas movimentações com data. Confira estes pagamentos e vincule uma entrada existente antes de criar outra.</p>
-          <div className="mt-2 flex flex-wrap gap-3">{summary.unlinkedPaid.map(quote => <Link className="underline underline-offset-4" key={quote.id} href={`/orcamentos/${quote.id}`}>#{quote.id} · {quote.client.name}</Link>)}</div>
-        </section>}
-        <div className={styles.monthControls}>
-          <div className={styles.monthField}>
-            <Label htmlFor="finance-month">Mês de referência</Label>
-            <Input id="finance-month" name="financeMonth" autoComplete="off" type="month" value={month} onChange={(event) => {
-              if (event.target.value) { setMonth(event.target.value); setVisibleCount(8); }
-            }} className={styles.monthInput} />
-          </div>
-          <Button type="button" variant="outline" onClick={exportCsv} disabled={loading || !!error || filteredTransactions.length === 0} className={styles.exportButton}>
-            <Download aria-hidden="true" className="size-4" /> Exportar CSV
-          </Button>
+        <div className={styles.monthBar}>
+          <button type="button" onClick={() => changeMonth(-1)} aria-label="Mês anterior" title="Mês anterior"><ChevronLeft aria-hidden="true" /></button>
+          <strong aria-live="polite">{monthLabel(month)}</strong>
+          <button type="button" onClick={() => changeMonth(1)} aria-label="Próximo mês" title="Próximo mês"><ChevronRight aria-hidden="true" /></button>
+          {month !== todayKey.slice(0, 7) && <button type="button" className={styles.backToday} onClick={() => setMonth(todayKey.slice(0, 7))}>Voltar para este mês</button>}
         </div>
 
-        {loading ? (
-          <div className={`${styles.metrics} grid gap-4 sm:grid-cols-2 lg:grid-cols-4`}>{[0, 1, 2, 3].map((item) => <Skeleton key={item} className="h-36 rounded-2xl" />)}</div>
-        ) : error ? <p className="py-4 text-sm text-gray-600">Resumo indisponível. Os saldos não puderam ser conferidos.</p> : (
-          <div className={`${styles.metrics} grid gap-4 sm:grid-cols-2 lg:grid-cols-4`}>
-            <div className={styles.metric}><ArrowDownLeft className={styles.incomeIcon} /><p className="mt-4 text-sm text-gray-500">Entrou no mês</p><p className="mt-1 text-2xl font-semibold">{formatMoney(summary.income)}</p></div>
-            <div className={styles.metric}><ArrowUpRight className={styles.expenseIcon} /><p className="mt-4 text-sm text-gray-500">Saiu no mês</p><p className="mt-1 text-2xl font-semibold">{formatMoney(summary.expenses)}</p></div>
-            <div className={styles.metric}><Clock3 className={styles.receivableIcon} /><p className="mt-4 text-sm text-gray-500">Projeção dos orçamentos</p><p className="mt-1 text-2xl font-semibold">{formatMoney(summary.receivable)}</p></div>
-            <div className={styles.metric}><WalletCards className={styles.balanceIcon} /><p className="mt-4 text-sm text-gray-500">O que sobrou</p><p className={`mt-1 text-2xl font-semibold ${summary.balance < 0 ? "text-red-600" : ""}`}>{formatMoney(summary.balance)}</p></div>
-          </div>
-        )}
+        {error && <div role="alert" className={styles.error}><p>{error}</p><Button variant="outline" className="mt-3 min-h-11" onClick={() => void loadData()}><RefreshCw className="size-4" aria-hidden="true" />Tentar novamente</Button></div>}
 
-        <div className={styles.movements}>
-          <div className={styles.movementHeader}><h2 className="text-lg font-semibold">Movimentações do mês</h2><p className="mt-1 text-sm text-gray-500">Valores já registrados no caixa.</p></div>
-          {loading ? <Skeleton className="m-5 h-32" /> : error ? <p className="p-5 text-sm text-red-800">Movimentações indisponíveis. Atualize a página para tentar novamente.</p> : filteredTransactions.length ? (
-            <>
-              <div className={styles.movementFilters}>
-                <div className={`grid gap-3 ${typeFilter === "income" ? "sm:grid-cols-1" : "sm:grid-cols-[minmax(0,1fr)_220px]"}`}>
-                  <div className="space-y-2">
-                    <Label htmlFor="movement-search">Buscar movimentação</Label>
-                    <div className="relative">
-                      <Search aria-hidden="true" className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-gray-400" />
-                      <Input id="movement-search" type="search" value={search} onChange={(event) => { setSearch(event.target.value); setVisibleCount(8); }} placeholder="Descrição, data ou orçamento" className="h-11 rounded-xl pl-9" />
-                    </div>
-                  </div>
-                  {typeFilter !== "income" ? <div className="space-y-2">
-                    <Label htmlFor="movement-category">Categoria de saída</Label>
-                    <Select value={categoryFilter} onValueChange={(value) => { setCategoryFilter(value); setVisibleCount(8); }}>
-                      <SelectTrigger id="movement-category" className="h-11 w-full rounded-xl"><SelectValue /></SelectTrigger>
-                      <SelectContent className={styles.selectContent}><SelectItem value="all">Todas as categorias</SelectItem>{expenseCategories.map(category => <SelectItem key={category} value={category}>{category}</SelectItem>)}</SelectContent>
-                    </Select>
-                  </div> : null}
-                </div>
-                <div className="flex flex-wrap items-center justify-between gap-3">
-                  <div className="flex flex-wrap gap-2" role="group" aria-label="Filtrar por tipo de movimentação">
-                    {[{ value: "all", label: "Todas" }, { value: "income", label: "Entradas" }, { value: "expense", label: "Saídas" }].map(option => (
-                      <Button key={option.value} type="button" size="sm" variant={typeFilter === option.value ? "default" : "outline"} aria-pressed={typeFilter === option.value} onClick={() => { setTypeFilter(option.value as typeof typeFilter); if (option.value === "income") setCategoryFilter("all"); setVisibleCount(8); }} className="min-h-10 rounded-lg">
-                        {option.label}
-                      </Button>
-                    ))}
-                  </div>
-                  <p className="text-sm text-gray-500" aria-live="polite">{visibleTransactions.length} {visibleTransactions.length === 1 ? "movimentação" : "movimentações"}</p>
-                </div>
+        {loading ? <div className={styles.overview}><Skeleton className="h-64 rounded-3xl" /><Skeleton className="h-64 rounded-3xl" /></div> : !error && <>
+          <div className={styles.overview}>
+            <section className={styles.balanceCard} aria-labelledby="balance-title">
+              <div className={styles.cardPattern} aria-hidden="true" />
+              <p id="balance-title" className={styles.cardLabel}><Wallet aria-hidden="true" />Sobrou em {monthLabel(month, "short").toLowerCase()}</p>
+              <strong className={styles.cardValue} data-negative={summary.balance < 0 || undefined}>{formatMoney(summary.balance)}</strong>
+              {balanceChange !== null && <span className={styles.change} data-down={balanceChange < 0 || undefined}>{balanceChange >= 0 ? "▲" : "▼"} {Math.abs(balanceChange)}% em relação ao mês anterior</span>}
+              <div className={styles.split}>
+                <div><span><ArrowDownLeft aria-hidden="true" />Entrou</span><b>{formatMoney(summary.income)}</b></div>
+                <div><span><ArrowUpRight aria-hidden="true" />Saiu</span><b>{formatMoney(summary.expenses)}</b></div>
               </div>
-              {visibleTransactions.length ? (
-            <div className={`${tableStyles.wrap} ${styles.tableInset}`}>
-              <table className={tableStyles.table} aria-label="Movimentações do mês">
-                <thead><tr><th scope="col" className={tableStyles.date}>Data</th><th scope="col" className={tableStyles.description}>Descrição / origem</th><th scope="col">Tipo</th><th scope="col">Categoria</th><th scope="col" className={tableStyles.amount}>Valor</th></tr></thead><tbody>
-              {visibleTransactions.slice(0, visibleCount).map((transaction) => (
-                <tr key={transaction.id}>
-                  <td data-label="Data" className={tableStyles.date}>{formatDate(transaction.transactionDate)}</td>
-                  <td data-label="Descrição / origem" className={tableStyles.description}><p className="font-medium">{transaction.description}</p>{transaction.quoteId ? <Link className={tableStyles.muted} href={`/orcamentos/${transaction.quoteId}`}>Orçamento #{transaction.quoteId}</Link> : <span className={tableStyles.muted}>Registro de caixa</span>}</td>
-                  <td data-label="Tipo"><span className={`${tableStyles.badge} ${transaction.type === "income" ? tableStyles.income : tableStyles.expense}`}>{transaction.type === "income" ? <ArrowDownLeft aria-hidden="true" className="size-3" /> : <ArrowUpRight aria-hidden="true" className="size-3" />}{transaction.type === "income" ? "Entrada" : "Saída"}</span></td>
-                  <td data-label="Categoria">{transaction.type === "expense" ? transaction.category ?? "Outros" : "Recebimento"}</td>
-                  <td data-label="Valor" className={`${tableStyles.amount} ${transaction.type === "income" ? styles.incomeAmount : styles.expenseAmount}`}>{transaction.type === "income" ? "+ " : "- "}{formatMoney(transaction.amountCents)}</td>
-                </tr>
-              ))}
-                </tbody>
-              </table>
+              <div className={styles.ratio} role="img" aria-label={`Entrou ${formatMoney(summary.income)} e saiu ${formatMoney(summary.expenses)}`}>
+                <span style={{ flexGrow: Math.max(summary.income, 1) }} /><span style={{ flexGrow: summary.expenses }} />
+              </div>
+            </section>
+
+            <section className={styles.historyCard} aria-labelledby="history-title">
+              <div className={styles.cardHead}><h2 id="history-title">Últimos 6 meses</h2><span className={styles.legend}><i data-kind="in" />Entrou<i data-kind="out" />Saiu</span></div>
+              <ol className={styles.bars}>
+                {history.map(item => <li key={item.key} data-current={item.key === month || undefined}>
+                  <div className={styles.barPair} title={`${item.label}: entrou ${formatMoney(item.income)}, saiu ${formatMoney(item.expenses)}`}>
+                    <span data-kind="in" style={{ height: `${Math.max(2, (item.income / historyMax) * 100)}%` }} />
+                    <span data-kind="out" style={{ height: `${Math.max(2, (item.expenses / historyMax) * 100)}%` }} />
+                  </div>
+                  <button type="button" onClick={() => setMonth(item.key)}>{item.label}</button>
+                </li>)}
+              </ol>
+            </section>
+          </div>
+
+          <div className={styles.insights}>
+            <div className={styles.insight}>
+              <span className={styles.insightIcon} data-tone="violet"><FileText aria-hidden="true" /></span>
+              <p>Para receber de orçamentos</p>
+              <strong>{formatMoney(summary.receivable)}</strong>
+              <small>Orçamentos aprovados ainda não pagos</small>
             </div>
-              ) : (
-                <div className="px-5 py-10 text-center">
-                  <p className="font-medium">Nenhum resultado para os filtros escolhidos</p>
-                  <Button type="button" variant="link" onClick={clearMovementFilters} className="mt-1">Limpar filtros</Button>
-                </div>
-              )}
-              {visibleTransactions.length > visibleCount && <div className="border-t border-gray-100 p-4 text-center"><Button variant="outline" onClick={() => setVisibleCount((count) => count + 8)}>Carregar mais</Button></div>}
-            </>
-          ) : (
-          <div className={styles.empty}><ReceiptText className="size-8" /><p className="mt-3 font-medium">Nenhuma movimentação neste mês</p></div>
+            <div className={styles.insight}>
+              <span className={styles.insightIcon} data-tone="red"><ReceiptText aria-hidden="true" /></span>
+              <p>Onde você mais gastou</p>
+              <strong>{topCategory ? topCategory.name : "Nenhum gasto"}</strong>
+              <small>{topCategory ? `${formatMoney(topCategory.amount)} · ${topCategory.share}% do que saiu` : "Nenhuma saída registrada neste mês"}</small>
+            </div>
+            <div className={styles.insight}>
+              <span className={styles.insightIcon} data-tone="green"><PiggyBank aria-hidden="true" /></span>
+              <p>Quanto sobrou do que entrou</p>
+              <strong>{savedShare === null ? "—" : `${savedShare}%`}</strong>
+              <small>{savedShare === null ? "Registre suas entradas para acompanhar" : savedShare >= 0 ? "Parte do que entrou ficou com você" : "Saiu mais do que entrou neste mês"}</small>
+            </div>
+          </div>
+
+          {summary.unlinkedPaid.length > 0 && <section aria-label="Recebimentos a conferir" className={styles.unlinked}>
+            <h2>{summary.unlinkedPaid.length === 1 ? "1 orçamento pago ainda não aparece no extrato" : `${summary.unlinkedPaid.length} orçamentos pagos ainda não aparecem no extrato`}</h2>
+            <p>Registre o recebimento no orçamento para que o valor entre nas contas.</p>
+            <div>{summary.unlinkedPaid.map(quote => <Link key={quote.id} href={`/orcamentos/${quote.id}`}>#{quote.id} · {quote.client.name}</Link>)}</div>
+          </section>}
+        </>}
+
+        <div className={styles.tabs} role="tablist" aria-label="Seções do financeiro">
+          {tabs.map(item => <button key={item.value} type="button" role="tab" id={`tab-${item.value}`} aria-controls={`panel-${item.value}`} aria-selected={tab === item.value} onClick={() => selectTab(item.value)}>{item.label}</button>)}
+        </div>
+
+        <div role="tabpanel" id="panel-extrato" aria-labelledby="tab-extrato" hidden={tab !== "extrato"} className={styles.statement}>
+          <div className={styles.filters}>
+            <div className={styles.search}>
+              <Search aria-hidden="true" />
+              <Label htmlFor="movement-search" className="sr-only">Buscar no extrato</Label>
+              <Input id="movement-search" type="search" value={search} onChange={(event) => { setSearch(event.target.value); setVisibleCount(20); }} placeholder="Buscar no extrato" />
+            </div>
+            <div className={styles.pills} role="group" aria-label="Filtrar por tipo">
+              {[{ value: "all", label: "Tudo" }, { value: "income", label: "Entradas" }, { value: "expense", label: "Saídas" }].map(option => (
+                <button key={option.value} type="button" aria-pressed={typeFilter === option.value} onClick={() => { setTypeFilter(option.value as typeof typeFilter); if (option.value === "income") setCategoryFilter("all"); setVisibleCount(20); }}>{option.label}</button>
+              ))}
+            </div>
+            {typeFilter !== "income" && <select aria-label="Categoria de saída" value={categoryFilter} onChange={(event) => { setCategoryFilter(event.target.value); setVisibleCount(20); }} className={styles.categorySelect}>
+              <option value="all">Todas as categorias</option>
+              {expenseCategories.map(category => <option key={category} value={category}>{category}</option>)}
+            </select>}
+            <button type="button" className={styles.exportButton} onClick={exportCsv} disabled={loading || !!error || monthTransactions.length === 0}><Download aria-hidden="true" />Baixar planilha</button>
+          </div>
+
+          {loading ? <Skeleton className="h-48 rounded-2xl" /> : error ? null : !monthTransactions.length ? <div className={styles.empty}>
+            <ReceiptText aria-hidden="true" />
+            <h3>Nada registrado em {monthLabel(month).toLowerCase()}</h3>
+            <p>Registre o que entrou e o que saiu para acompanhar seu dinheiro.</p>
+            <div><button type="button" className={styles.incomeButton} onClick={() => openForm("income")}><Plus aria-hidden="true" />Registrar entrada</button></div>
+          </div> : !visibleTransactions.length ? <div className={styles.empty}>
+            <Search aria-hidden="true" /><h3>Nenhum resultado</h3><button type="button" className={styles.linkButton} onClick={clearMovementFilters}>Limpar filtros</button>
+          </div> : <>
+            {groupedDays.map(group => <section key={group.day} className={styles.dayGroup} aria-label={dayLabel(group.day, todayKey)}>
+              <header><h3>{dayLabel(group.day, todayKey)}</h3><span data-negative={group.total < 0 || undefined}>{group.total >= 0 ? "+" : "−"} {formatMoney(Math.abs(group.total))}</span></header>
+              <ul>
+                {group.items.map(transaction => {
+                  const income = transaction.type === "income";
+                  const Icon = income ? (transaction.quoteId ? FileText : ArrowDownLeft) : categoryIcons[(transaction.category ?? "Outros") as ExpenseCategory] ?? CircleDot;
+                  return <li key={transaction.id}>
+                    <span className={styles.txIcon} data-kind={income ? "in" : "out"}><Icon aria-hidden="true" /></span>
+                    <div className={styles.txText}>
+                      <strong>{transaction.description}</strong>
+                      <span>{income ? (transaction.quoteId ? <Link href={`/orcamentos/${transaction.quoteId}`}>Recebimento · Orçamento #{transaction.quoteId}</Link> : "Entrada") : transaction.category ?? "Outros"}</span>
+                    </div>
+                    <b className={styles.txAmount} data-kind={income ? "in" : "out"}>{income ? "+" : "−"} {formatMoney(transaction.amountCents)}</b>
+                  </li>;
+                })}
+              </ul>
+            </section>)}
+            <p className={styles.count} aria-live="polite">{visibleTransactions.length} {visibleTransactions.length === 1 ? "movimentação" : "movimentações"} em {monthLabel(month).toLowerCase()}</p>
+            {visibleTransactions.length > visibleCount && <div className="text-center"><button type="button" className={styles.linkButton} onClick={() => setVisibleCount((count) => count + 20)}>Mostrar mais</button></div>}
+          </>}
+        </div>
+
+        <div role="tabpanel" id="panel-contas" aria-labelledby="tab-contas" hidden={tab !== "contas"} className={styles.panelStack}>
+          <FinancialObligations onChanged={loadData} />
+          {!loading && !error && quotes.some((quote) => ["Aprovado", "Em andamento", "Finalizado"].includes(quote.status)) && (
+            <section className={styles.receivableList} aria-labelledby="quote-receivable-title">
+              <h2 id="quote-receivable-title">Orçamentos aprovados para receber</h2>
+              <p>Valores combinados com clientes que ainda não foram pagos.</p>
+              <ul>
+                {quotes.filter((quote) => ["Aprovado", "Em andamento", "Finalizado"].includes(quote.status)).map((quote) => (
+                  <li key={quote.id}>
+                    <span className={styles.txIcon} data-kind="wait"><FileText aria-hidden="true" /></span>
+                    <div className={styles.txText}><Link href={`/orcamentos/${quote.id}`}><strong>{quote.client.name}</strong></Link><span>Orçamento #{quote.id} · {quote.status}{quote.archivedAt ? " · Arquivado" : ""}</span></div>
+                    <b className={styles.txAmount}>{formatMoney(quote.totalCents)}</b>
+                  </li>
+                ))}
+              </ul>
+            </section>
           )}
         </div>
 
-        <FinancialObligations onChanged={loadData} />
-        {!loading && !error && quotes.some((quote) => ["Aprovado", "Em andamento", "Finalizado"].includes(quote.status)) && (
-          <div className={styles.receivableList}>
-            <h2 className="font-semibold">Projeção dos orçamentos</h2>
-            <p className="mt-1 mb-4 text-sm text-gray-600">Sem data de recebimento. Pode incluir serviços já listados em contas a receber.</p>
-            <div className={tableStyles.wrap}><table className={tableStyles.table} aria-label="Projeção dos orçamentos"><thead><tr><th scope="col" className={tableStyles.description}>Cliente / orçamento</th><th scope="col">Etapa</th><th scope="col" className={tableStyles.amount}>Valor do orçamento</th></tr></thead><tbody>
-              {quotes.filter((quote) => ["Aprovado", "Em andamento", "Finalizado"].includes(quote.status)).map((quote) => (
-                <tr key={quote.id}><td data-label="Cliente / orçamento" className={tableStyles.description}><Link href={`/orcamentos/${quote.id}`} className="font-medium">{quote.client.name}</Link><span className={tableStyles.muted}>#{quote.id}{quote.archivedAt ? " · Arquivado" : ""}</span></td><td data-label="Etapa"><span className={`${tableStyles.badge} ${tableStyles.neutral}`}>{quote.status}</span></td><td data-label="Valor do orçamento" className={tableStyles.amount}>{formatMoney(quote.totalCents)}</td></tr>
-              ))}
-            </tbody></table></div>
-          </div>
-        )}
-        {!loading && !error ? <FinanceCashflowChart transactions={transactions} month={month} /> : null}
-        {!loading && !error ? <FinanceExpenseChart transactions={transactions} month={month} /> : null}
-        {!loading && !error ? <FinanceMonthComparison transactions={transactions} month={month} /> : null}
+        <div role="tabpanel" id="panel-relatorios" aria-labelledby="tab-relatorios" hidden={tab !== "relatorios"} className={styles.panelStack}>
+          {!loading && !error ? <>
+            <FinanceMonthComparison transactions={transactions} month={month} />
+            <FinanceExpenseChart transactions={transactions} month={month} />
+            <FinanceCashflowChart transactions={transactions} month={month} />
+          </> : null}
+        </div>
       </section>
 
       <Dialog open={open} onOpenChange={(value) => { if (!saving) setOpen(value); }}>
-        <DialogContent className={`${styles.dialog} rounded-lg sm:max-w-md`}>
-          <DialogHeader><DialogTitle className={styles.dialogTitle}>Registrar movimentação</DialogTitle><DialogDescription>Adicione uma entrada ou um gasto.</DialogDescription></DialogHeader>
+        <DialogContent className={`${styles.dialog} sm:max-w-md`}>
+          <DialogHeader><DialogTitle>{form.type === "income" ? "Registrar entrada" : "Registrar saída"}</DialogTitle><DialogDescription>{form.type === "income" ? "Dinheiro que chegou para você." : "Dinheiro que você gastou ou pagou."}</DialogDescription></DialogHeader>
           <form className="space-y-4" onSubmit={submitTransaction}>
-            <div className="space-y-2"><Label htmlFor="transaction-type">Tipo</Label><Select value={form.type} onValueChange={(value) => setForm({ ...form, type: value })}><SelectTrigger id="transaction-type" className="h-11 w-full rounded-xl"><SelectValue /></SelectTrigger><SelectContent className={styles.selectContent}><SelectItem value="income">Entrada</SelectItem><SelectItem value="expense">Saída</SelectItem></SelectContent></Select></div>
-            <div className="space-y-2"><Label htmlFor="transaction-description">Descrição</Label><Input id="transaction-description" name="description" autoComplete="off" required value={form.description} onChange={(event) => setForm({ ...form, description: event.target.value })} className="h-11 rounded-xl" placeholder="Ex.: Compra de materiais" /></div>
-            {form.type === "expense" ? <div className="space-y-2"><Label htmlFor="transaction-category">Categoria</Label><Select value={form.category} onValueChange={(value) => setForm({ ...form, category: value as ExpenseCategory })}><SelectTrigger id="transaction-category" className="h-11 w-full rounded-xl"><SelectValue /></SelectTrigger><SelectContent className={styles.selectContent}>{expenseCategories.map(category => <SelectItem key={category} value={category}>{category}</SelectItem>)}</SelectContent></Select></div> : null}
-            <div className="grid gap-4 sm:grid-cols-2">
-              <div className="space-y-2"><Label htmlFor="transaction-amount">Valor (R$)</Label><Input id="transaction-amount" name="amount" autoComplete="off" required inputMode="decimal" value={form.amount} onChange={(event) => setForm({ ...form, amount: event.target.value })} className="h-11 rounded-xl" placeholder="0,00" /></div>
-              <div className="space-y-2"><Label htmlFor="transaction-date">Data</Label><Input id="transaction-date" name="transactionDate" autoComplete="off" required type="date" value={form.transactionDate} onChange={(event) => setForm({ ...form, transactionDate: event.target.value })} className="h-11 rounded-xl" /></div>
+            <div className={styles.typeSwitch} role="radiogroup" aria-label="Tipo">
+              <button type="button" role="radio" aria-checked={form.type === "income"} data-kind="in" onClick={() => setForm({ ...form, type: "income" })}><ArrowDownLeft aria-hidden="true" />Entrada</button>
+              <button type="button" role="radio" aria-checked={form.type === "expense"} data-kind="out" onClick={() => setForm({ ...form, type: "expense" })}><ArrowUpRight aria-hidden="true" />Saída</button>
             </div>
-            {formError && <p role="alert" className="rounded-md border border-red-200 bg-red-50 p-3 text-sm text-red-700">{formError}</p>}
-            <DialogFooter><Button type="button" disabled={saving} variant="outline" onClick={() => setOpen(false)} className={styles.secondaryButton}>Cancelar</Button><Button type="submit" disabled={saving} aria-live="polite" className={styles.primaryAction}>{saving ? "Salvando…" : "Salvar movimentação"}</Button></DialogFooter>
+            <div className={styles.amountField}>
+              <Label htmlFor="transaction-amount">Valor</Label>
+              <div><span>R$</span><input id="transaction-amount" name="amount" autoComplete="off" required inputMode="decimal" value={form.amount} onChange={(event) => setForm({ ...form, amount: event.target.value })} placeholder="0,00" /></div>
+            </div>
+            <div className="space-y-2"><Label htmlFor="transaction-description">Descrição</Label><Input id="transaction-description" name="description" autoComplete="off" required value={form.description} onChange={(event) => setForm({ ...form, description: event.target.value })} className="h-11" placeholder={form.type === "income" ? "Ex.: Pagamento da instalação" : "Ex.: Compra de materiais"} /></div>
+            {form.type === "expense" ? <fieldset className="space-y-2"><legend className="text-sm font-medium">Categoria</legend><div className={styles.categoryChips}>{expenseCategories.map(category => { const Icon = categoryIcons[category]; return <button key={category} type="button" aria-pressed={form.category === category} onClick={() => setForm({ ...form, category })}><Icon aria-hidden="true" />{category}</button>; })}</div></fieldset> : null}
+            <div className="space-y-2"><Label htmlFor="transaction-date">Data</Label><Input id="transaction-date" name="transactionDate" autoComplete="off" required type="date" value={form.transactionDate} onChange={(event) => setForm({ ...form, transactionDate: event.target.value })} className="h-11" /></div>
+            {formError && <p role="alert" className={styles.formError}>{formError}</p>}
+            <DialogFooter><Button type="button" disabled={saving} variant="outline" onClick={() => setOpen(false)} className="h-11">Cancelar</Button><Button type="submit" disabled={saving} aria-live="polite" className="h-11">{saving ? "Salvando…" : "Salvar"}</Button></DialogFooter>
           </form>
         </DialogContent>
       </Dialog>
