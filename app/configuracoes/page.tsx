@@ -1,9 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import { ShieldCheck, Building2 } from "lucide-react";
+import { Building2, History, ImagePlus, KeyRound, ShieldCheck, UserRound } from "lucide-react";
 import { WorkspaceShell } from "@/components/workspace-shell";
 import { BusinessProfileSettings } from "@/components/business-profile-settings";
+import { BusinessLogoSettings } from "@/components/business-logo-settings";
 import { BusinessActivity } from "@/components/business-activity";
 import { useCurrentUser } from "@/hooks/use-current-user";
 import { Button } from "@/components/ui/button";
@@ -14,29 +15,44 @@ import { canManageTeam } from "@/lib/saas-policy";
 export default function SettingsPage() {
   const { user, loading, workspace, workspaceError } = useCurrentUser();
   const businessAllowed = !loading && !workspaceError && !["employee", "reception"].includes(workspace?.role ?? "") && (!workspace || workspace.entitlement.allowed);
+  const manageBusiness = businessAllowed && (!workspace || canManageTeam(workspace.role));
+  const initials = (user?.name ?? "").split(" ").filter(Boolean).slice(0, 2).map(part => part[0]).join("").toUpperCase() || "V";
+  const sections = [
+    ...(manageBusiness ? [{ href: "#logo", label: "Logo da empresa", icon: ImagePlus }, { href: "#pix", label: "Recebimento por Pix", icon: KeyRound }] : []),
+    { href: "#empresa", label: "Empresa e assinatura", icon: Building2 },
+    { href: "#conta", label: "Minha conta", icon: UserRound },
+    ...(businessAllowed && workspace?.role !== "viewer" ? [{ href: "#historico", label: "Histórico de ações", icon: History }] : []),
+  ];
   return <WorkspaceShell>
-    <section className={`mx-auto w-full max-w-6xl space-y-7 px-5 py-8 sm:px-8 ${styles.settingsPage}`}>
-      <header className={styles.pageHeader}><h1 className="text-3xl font-semibold">Configurações</h1><p>Conta, negócio e recebimentos em um só lugar.</p></header>
-      <section className={`max-w-3xl ${styles.sectionCard}`} aria-labelledby="account-heading">
-        <h2 id="account-heading" className="text-xl font-semibold">Minha conta</h2>
-        <dl className="mt-5 grid gap-5 sm:grid-cols-2">
-          <div><dt className="text-sm text-gray-600">Nome</dt><dd className="mt-1 break-words font-medium">{user?.name}</dd></div>
-          <div><dt className="text-sm text-gray-600">E-mail</dt><dd className="mt-1 break-all font-medium">{user?.email}</dd></div>
-          <div><dt className="text-sm text-gray-600">Telefone</dt><dd className="mt-1 font-medium">{user?.phone || "Não informado"}</dd></div>
-        </dl>
-        <p className="mt-6 flex items-center gap-2 text-sm text-gray-600"><ShieldCheck className="size-5 shrink-0" aria-hidden="true" />{user?.emailVerifiedAt ? "E-mail confirmado" : "E-mail ainda não confirmado"}</p>
-        <div className="mt-4 flex flex-wrap gap-3">
-          {!user?.emailVerifiedAt && <Button asChild variant="outline" className="h-11"><Link href="/verificar-email">Confirmar e-mail</Link></Button>}
-          <Button asChild variant="outline" className="h-11"><Link href="/esqueci-senha">Redefinir senha</Link></Button>
+    <section className={styles.settingsPage}>
+      <header className={styles.pageHeader}><h1>Configurações</h1><p>Sua conta, sua empresa e como você recebe dos clientes.</p></header>
+      <div className={styles.layout}>
+        <nav className={styles.sideNav} aria-label="Seções das configurações">
+          {sections.map(({ href, label, icon: Icon }) => <a key={href} href={href}><Icon aria-hidden="true" />{label}</a>)}
+        </nav>
+        <div className={styles.stack}>
+          {manageBusiness && <BusinessLogoSettings businessName={workspace?.name} />}
+          {manageBusiness && <div id="pix"><BusinessProfileSettings /></div>}
+          <div id="empresa" className={styles.saasArea}><SaasWorkspaceSettings /></div>
+          <section id="conta" className={styles.card} aria-labelledby="account-heading">
+            <div className={styles.cardHead}>
+              <span className={styles.avatar} aria-hidden="true">{initials}</span>
+              <div><h2 id="account-heading">Minha conta</h2><p>Seus dados de acesso ao Vemo.</p></div>
+            </div>
+            <dl className={styles.details}>
+              <div><dt>Nome</dt><dd>{user?.name}</dd></div>
+              <div><dt>E-mail</dt><dd className="break-all">{user?.email}</dd></div>
+              <div><dt>Telefone</dt><dd>{user?.phone || "Não informado"}</dd></div>
+              <div><dt>Segurança</dt><dd className={styles.verified} data-ok={Boolean(user?.emailVerifiedAt) || undefined}><ShieldCheck aria-hidden="true" />{user?.emailVerifiedAt ? "E-mail confirmado" : "E-mail não confirmado"}</dd></div>
+            </dl>
+            <div className={styles.actionsRow}>
+              {!user?.emailVerifiedAt && <Button asChild variant="outline" className="h-11 rounded-full px-5"><Link href="/verificar-email">Confirmar e-mail</Link></Button>}
+              <Button asChild variant="outline" className="h-11 rounded-full px-5"><Link href="/esqueci-senha">Trocar senha</Link></Button>
+            </div>
+          </section>
+          {businessAllowed && workspace?.role !== "viewer" && <div id="historico"><BusinessActivity /></div>}
         </div>
-      </section>
-      <SaasWorkspaceSettings />
-      {businessAllowed && <section className={`max-w-3xl ${styles.businessIntro}`} aria-labelledby="business-heading">
-        <h2 id="business-heading" className="flex items-center gap-2 text-xl font-semibold"><Building2 className="size-5" aria-hidden="true" />Meu negócio</h2>
-        <p className="mt-3 leading-7 text-gray-600">Configure os dados que aparecem para o cliente no pagamento.</p>
-      </section>}
-      {businessAllowed && (!workspace || canManageTeam(workspace.role)) && <BusinessProfileSettings />}
-      {businessAllowed && workspace?.role !== "viewer" && <BusinessActivity />}
+      </div>
     </section>
   </WorkspaceShell>;
 }

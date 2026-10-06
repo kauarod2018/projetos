@@ -53,13 +53,13 @@ export function BusinessProfileSettings() {
 
   return (
     <section className={`max-w-3xl ${styles.sectionCard} ${styles.pixSettings}`} aria-labelledby="pix-profile-heading">
-      <h3 id="pix-profile-heading" className="flex items-center gap-2 text-lg font-semibold"><KeyRound className="size-5 text-blue-700" aria-hidden="true" /> Recebimento por Pix</h3>
-      <p className="mt-2 text-sm leading-6 text-gray-600">Depois que o cliente aprovar um orçamento com pagamento por Pix, o Vemo mostra o QR Code e o código com o valor total.</p>
+      <h3 id="pix-profile-heading" className="flex items-center gap-3 text-lg font-semibold"><span className="grid size-10 place-items-center rounded-xl bg-[var(--vemo-success-soft)] text-[var(--vemo-success)]"><KeyRound className="size-5" aria-hidden="true" /></span>Recebimento por Pix</h3>
+      <p className="mt-2 text-sm leading-6 text-[var(--vemo-muted)]">Depois que o cliente aprovar um orçamento com pagamento por Pix, o Vemo mostra o QR Code e o código com o valor total.</p>
       <form onSubmit={save} className="mt-5 space-y-4">
         <div className="space-y-2">
           <Label htmlFor="business-pix-key">Chave Pix aleatória</Label>
           <Input id="business-pix-key" name="pixKey" value={profile.pixKey} onChange={event => setProfile(current => ({ ...current, pixKey: event.target.value }))} disabled={loading || saving} autoComplete="off" autoCapitalize="none" spellCheck={false} maxLength={36} className="h-11 rounded-xl" placeholder="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx" aria-describedby="business-pix-key-hint" />
-          <p id="business-pix-key-hint" className="text-sm text-gray-500">Use a chave aleatória UUID fornecida pelo seu banco. Não informe senha nem dados de acesso.</p>
+          <p id="business-pix-key-hint" className="text-sm text-[var(--vemo-muted)]">Use a chave aleatória UUID fornecida pelo seu banco. Não informe senha nem dados de acesso.</p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2">
           <div className="space-y-2">

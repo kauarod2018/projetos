@@ -1,13 +1,13 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import { QuoteBrand } from "@/components/quote-brand";
 import { CheckCircle2, XCircle } from "lucide-react";
 import QRCode from "qrcode";
 
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { formatDate, formatMoney, type Quote, type QuoteStatus } from "@/lib/models";
-import { VemoWordmark } from "@/components/vemo-brand";
 import styles from "@/components/quote-workspace.module.css";
 
 export function ApprovalPage({ token }: { token: string }) {
@@ -85,8 +85,8 @@ export function ApprovalPage({ token }: { token: string }) {
     <main id="main-content" tabIndex={-1} className={`${styles.publicPage} min-h-screen bg-gray-50 px-4 py-6 sm:py-10`}>
       <article className="mx-auto max-w-3xl rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:p-9">
         <header className="border-b border-gray-200 pb-6">
-          <VemoWordmark className="h-11 w-44" />
-          <p className="mt-1 text-sm text-gray-500">Orçamento de {quote.ownerName}</p>
+          <QuoteBrand src={`/api/public/quotes/${token}/logo`} ownerName={quote.ownerName} />
+          <p className="mt-2 text-sm text-gray-500">Orçamento de {quote.ownerName}</p>
         </header>
 
         <div className="py-6">

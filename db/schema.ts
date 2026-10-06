@@ -231,3 +231,10 @@ export const receiptDateCorrections = mysqlTable("receipt_date_corrections", {
   correctedDate: varchar("corrected_date", { length: 10 }).notNull(),
   reason: varchar("reason", { length: 500 }).notNull(), createdAt: created(),
 }, table => [uniqueIndex("uq_receipt_correction_version").on(table.transactionId, table.version), index("idx_receipt_correction_owner").on(table.userId, table.transactionId)]);
+
+// Logo do negócio, guardada à parte para não pesar nas consultas de usuários e orçamentos.
+export const businessLogos = mysqlTable("business_logos", {
+  userId: reference("user_id").primaryKey().references(() => users.id, { onDelete: "cascade" }),
+  dataUrl: mediumtext("data_url").notNull(),
+  updatedAt: timestamp("updated_at").notNull(),
+});

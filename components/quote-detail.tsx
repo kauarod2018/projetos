@@ -7,6 +7,7 @@ import { QuoteActions } from "./quote-actions";
 import { whatsappLink } from "@/lib/whatsapp";
 import { canEditQuote } from "@/lib/quote-editing";
 import { useCallback, useEffect, useMemo, useState } from "react";
+import { QuoteBrand } from "@/components/quote-brand";
 import { ArrowLeft, Check, Copy, Download, MessageCircle, RotateCw } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
@@ -21,7 +22,6 @@ import {
 } from "@/components/ui/select";
 import { Skeleton } from "@/components/ui/skeleton";
 import { WorkspaceShell } from "@/components/workspace-shell";
-import { VemoWordmark } from "@/components/vemo-brand";
 import { QuoteReceipt } from "@/components/quote-receipt";
 import { QuoteWorkflow } from "@/components/quote-workflow";
 import { formatDate, formatMoney, quoteStatuses, type Quote, type QuoteStatus } from "@/lib/models";
@@ -38,6 +38,12 @@ function QuoteDetailContent({ id }: { id: number }) {
   const { workspace } = useCurrentUser();
   const readonly = workspace?.role === "viewer";
   const [quote, setQuote] = useState<Quote | null>(null);
+  const [logo, setLogo] = useState<string | null>(null);
+  useEffect(() => {
+    let active = true;
+    void fetch("/api/business-logo", { cache: "no-store" }).then(response => response.ok ? response.json() : null).then((data: { logo?: string | null } | null) => { if (active) setLogo(data?.logo ?? null); }).catch(() => {});
+    return () => { active = false; };
+  }, []);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [copied, setCopied] = useState(false);
@@ -195,8 +201,8 @@ function QuoteDetailContent({ id }: { id: number }) {
         <article className="print-document rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:p-10">
           <header className="flex flex-col gap-6 border-b border-gray-200 pb-7 sm:flex-row sm:items-start sm:justify-between">
             <div>
-              <VemoWordmark className="h-11 w-44" />
-              <p className="mt-1 text-sm text-gray-500">{quote.ownerName} · Profissional autônomo</p>
+              <QuoteBrand src={logo} ownerName={quote.ownerName} />
+              <p className="mt-2 text-sm text-gray-500">{quote.ownerName}</p>
             </div>
             <div className="sm:text-right">
               <h1 className="text-2xl font-semibold">ORÇAMENTO</h1>
