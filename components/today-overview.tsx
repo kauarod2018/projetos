@@ -1,24 +1,33 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
-import { ArrowRight, CalendarDays, Check, CircleDollarSign, Copy, FileText, Plus, RefreshCw, TriangleAlert, UserRoundPlus, X } from "lucide-react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { AlarmClock, ArrowRight, ArrowDownLeft, ArrowUpRight, CalendarDays, CalendarPlus, Check, Copy, FileText, MessageCircle, Plus, RefreshCw, Sparkles, TriangleAlert, UserRoundPlus, Wallet, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogClose, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useCurrentUser } from "@/hooks/use-current-user";
-import { formatMoney, type FinanceTransaction, type Quote } from "@/lib/models";
+import { formatMoney, type FinanceTransaction, type Quote, type QuoteStatus } from "@/lib/models";
 import { followUpMessage, greeting, summarizeMovement, summarizeQuotes } from "@/lib/today-summary";
-import styles from "./today-overview.module.css";
 import { useAppointments } from "@/hooks/use-appointments";
-import { appointmentStartLabel, brasiliaDay } from "@/lib/appointments";
-import { DailyBrief } from "@/components/daily-brief";
+import { brasiliaDay, whatsappReminderUrl, type Appointment } from "@/lib/appointments";
 import type { ObligationSummary } from "@/lib/obligations-summary";
+import { useAssistant } from "@/components/assistant-context";
 import { OperationsQueue } from "./operations-queue";
+import styles from "./today-overview.module.css";
 
 type LoadState<T> = { status: "loading" } | { status: "error" } | { status: "ready"; data: T[] };
 type ValueState<T> = { status: "loading" } | { status: "error" } | { status: "ready"; data: T };
+const TZ = "America/Sao_Paulo";
+const pipeline: { status: QuoteStatus; label: string; tone: string }[] = [
+  { status: "Rascunho", label: "Rascunho", tone: "gray" },
+  { status: "Enviado", label: "Enviado", tone: "blue" },
+  { status: "Aprovado", label: "Aprovado", tone: "violet" },
+  { status: "Em andamento", label: "Em andamento", tone: "amber" },
+  { status: "Finalizado", label: "Finalizado", tone: "cyan" },
+  { status: "Pago", label: "Pago", tone: "green" },
+];
 
 function useTodayData<T>(url: string, field: string, enabled: boolean, revision: number) {
   const [state, setState] = useState<LoadState<T>>({ status: "loading" });
@@ -39,12 +48,35 @@ function useTodayData<T>(url: string, field: string, enabled: boolean, revision:
   return state;
 }
 
-function LoadFailure({ children, retry }: { children: React.ReactNode; retry: () => void }) {
-  return <div className={styles.failure} role="alert"><p>{children}</p><Button variant="outline" onClick={retry} className="mt-3 h-11 rounded-lg"><RefreshCw className="size-4" aria-hidden="true" />Tentar novamente</Button></div>;
+function plural(count: number, one: string, many: string) {
+  return `${count} ${count === 1 ? one : many}`;
+}
+
+/* Digita o texto aos poucos, como uma resposta de IA. Respeita quem prefere menos movimento. */
+function useTyping(text: string) {
+  const [shown, setShown] = useState("");
+  useEffect(() => {
+    if (!text) { setShown(""); return; }
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { setShown(text); return; }
+    let index = 0;
+    setShown("");
+    const timer = window.setInterval(() => {
+      index += 2;
+      setShown(text.slice(0, index));
+      if (index >= text.length) window.clearInterval(timer);
+    }, 18);
+    return () => window.clearInterval(timer);
+  }, [text]);
+  return shown;
+}
+
+function timeOf(appointment: Appointment) {
+  return appointment.startsAt.slice(11, 16);
 }
 
 export function TodayOverview() {
-  const { user } = useCurrentUser();
+  const { user, workspace } = useCurrentUser();
+  const { launch } = useAssistant();
   const [now, setNow] = useState<Date | null>(null);
   const [revision, setRevision] = useState(0);
   const [selected, setSelected] = useState<Quote | null>(null);
@@ -53,29 +85,30 @@ export function TodayOverview() {
   const messageTrigger = useRef<HTMLElement | null>(null);
   const quotes = useTodayData<Quote>("/api/quotes", "quotes", Boolean(user), revision);
   const transactions = useTodayData<FinanceTransaction>("/api/transactions", "transactions", Boolean(user), revision);
-  const [obligationState, setObligationState] = useState<ValueState<ObligationSummary>>({ status: "loading" });
+  const [obligations, setObligations] = useState<ValueState<ObligationSummary>>({ status: "loading" });
   const today = now ? brasiliaDay(now) : "";
   const agenda = useAppointments(today, today, revision);
-  const appointments = agenda.items.filter(a => a.status !== "Cancelado");
+  const appointments = useMemo(() => agenda.items.filter(a => a.status !== "Cancelado").sort((a, b) => a.startsAt.localeCompare(b.startsAt)), [agenda.items]);
+  const canAsk = Boolean(workspace ? !["employee", "reception", "viewer"].includes(workspace.role) : true);
 
   useEffect(() => {
-    if (!user) { setObligationState({ status: "loading" }); return; }
+    if (!user) { setObligations({ status: "loading" }); return; }
     const controller = new AbortController();
-    setObligationState({ status: "loading" });
+    setObligations({ status: "loading" });
     void fetch("/api/obligations/summary", { cache: "no-store", signal: controller.signal }).then(async response => {
       if (!response.ok) throw new Error("REQUEST_FAILED");
       const data = await response.json() as { summary?: ObligationSummary };
       if (!data.summary?.overdue || !data.summary?.upcoming) throw new Error("INVALID_RESPONSE");
-      if (!controller.signal.aborted) setObligationState({ status: "ready", data: data.summary });
+      if (!controller.signal.aborted) setObligations({ status: "ready", data: data.summary });
     }).catch(() => {
-      if (!controller.signal.aborted) setObligationState({ status: "error" });
+      if (!controller.signal.aborted) setObligations({ status: "error" });
     });
     return () => controller.abort();
   }, [user, revision]);
 
   useEffect(() => {
     setNow(new Date());
-    const timer = window.setInterval(() => setNow(new Date()), 60_000);
+    const timer = window.setInterval(() => setNow(new Date()), 30_000);
     const refresh = () => {
       if (document.visibilityState === "visible") { setNow(new Date()); setRevision((value) => value + 1); }
     };
@@ -83,10 +116,46 @@ export function TodayOverview() {
     return () => { window.clearInterval(timer); document.removeEventListener("visibilitychange", refresh); };
   }, []);
 
-  const summary = quotes.status === "ready" && now ? summarizeQuotes(quotes.data, now, "America/Sao_Paulo") : null;
-  const movement = transactions.status === "ready" && now ? summarizeMovement(transactions.data, now, "America/Sao_Paulo") : null;
+  const summary = quotes.status === "ready" && now ? summarizeQuotes(quotes.data, now, TZ) : null;
+  const movement = transactions.status === "ready" && now ? summarizeMovement(transactions.data, now, TZ) : null;
+  const obligation = obligations.status === "ready" ? obligations.data : null;
+  const clock = now ? new Intl.DateTimeFormat("pt-BR", { timeZone: TZ, hour: "2-digit", minute: "2-digit" }).format(now) : "";
+  const nowKey = now ? `${today}T${clock}` : "";
+  const nextVisit = appointments.find(a => a.startsAt >= nowKey && !["Concluído"].includes(a.status));
+  const firstName = user?.name.trim().split(/\s+/)[0] ?? "";
+  const rawDate = now ? new Intl.DateTimeFormat("pt-BR", { timeZone: TZ, weekday: "long", day: "numeric", month: "long" }).format(now) : "";
+  const dateLabel = rawDate.charAt(0).toUpperCase() + rawDate.slice(1);
+  const overdueCount = (obligation?.overdue.receivable.count ?? 0) + (obligation?.overdue.payable.count ?? 0) + (summary?.expired.length ?? 0);
+  const ready = !agenda.loading && summary && movement && obligations.status !== "loading";
+
+  const brief = useMemo(() => {
+    if (!ready || !summary || !movement) return "";
+    const parts: string[] = [];
+    if (!appointments.length) parts.push("Sua agenda de hoje está livre.");
+    else if (nextVisit) parts.push(`Hoje você tem ${plural(appointments.length, "atendimento", "atendimentos")}. O próximo é às ${timeOf(nextVisit)}, com ${nextVisit.customerName}.`);
+    else parts.push(`Você já passou por ${plural(appointments.length, "atendimento", "atendimentos")} hoje.`);
+    if (movement.income > 0) parts.push(`Entraram ${formatMoney(movement.income)} hoje.`);
+    if (summary.receivable > 0) parts.push(`Há ${formatMoney(summary.receivable)} para receber de orçamentos aprovados.`);
+    if (obligation && obligation.overdue.receivable.count + obligation.overdue.payable.count > 0) parts.push(`Atenção: ${plural(obligation.overdue.receivable.count + obligation.overdue.payable.count, "conta está atrasada", "contas estão atrasadas")}.`);
+    if (summary.pending > 0) parts.push(`${plural(summary.pending, "orçamento precisa", "orçamentos precisam")} da sua atenção.`);
+    if (parts.length === 1 && !appointments.length) parts.push("Que tal aproveitar para enviar orçamentos ou cadastrar novos clientes?");
+    return parts.join(" ");
+  }, [ready, summary, movement, obligation, appointments, nextVisit]);
+  const typed = useTyping(brief);
+
+  const quoteStats = useMemo(() => {
+    const stats = new Map<QuoteStatus, { count: number; total: number }>();
+    if (quotes.status === "ready") for (const quote of quotes.data) {
+      if (quote.archivedAt) continue;
+      const entry = stats.get(quote.status) ?? { count: 0, total: 0 };
+      entry.count += 1; entry.total += quote.totalCents;
+      stats.set(quote.status, entry);
+    }
+    return stats;
+  }, [quotes]);
+  const pipelineTotal = pipeline.reduce((sum, step) => sum + (quoteStats.get(step.status)?.count ?? 0), 0);
+
   const retry = () => setRevision((value) => value + 1);
-  const dateLabel = now ? new Intl.DateTimeFormat("pt-BR", { timeZone: "America/Sao_Paulo", weekday: "long", day: "numeric", month: "long" }).format(now) : "";
 
   function prepareMessage(quote: Quote) {
     messageTrigger.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
@@ -99,63 +168,158 @@ export function TodayOverview() {
   }
 
   return <>
-    <div className={styles.toolbar}><span>Hoje</span><Link href="/clientes?novo=1"><UserRoundPlus size={19} aria-hidden="true" />Novo cliente</Link></div>
     <div className={styles.page}>
-      <header className={styles.heading}>
-        <div><h1>{now ? greeting(now, "America/Sao_Paulo") : "Olá"}{user ? `, ${user.name.trim().split(/\s+/)[0]}` : ""}</h1><p className={styles.date}>{dateLabel}</p></div>
-        <Button asChild className="h-12 rounded-lg px-5 text-base"><Link href="/novo-orcamento"><Plus className="size-5" aria-hidden="true" />Novo orçamento</Link></Button>
-      </header>
-      <OperationsQueue revision={revision} />
-      <DailyBrief now={now} agenda={agenda} summary={summary} quotesError={quotes.status === "error"} obligationSummary={obligationState.status === "ready" ? obligationState.data : null} obligationsError={obligationState.status === "error"} retry={retry} prepareMessage={prepareMessage} />
-      <dl className={styles.metrics} aria-label="Resumo do trabalho" aria-busy={quotes.status === "loading"}>
-        <div><dt><CalendarDays aria-hidden="true" />Atendimentos hoje</dt><dd>{agenda.loading || agenda.error ? "—" : appointments.length}</dd><p>{agenda.error ? "Agenda indisponível" : "Agenda · horário de Brasília"}</p></div>
-        <div><dt><CircleDollarSign className={styles.teal} aria-hidden="true" />A receber</dt><dd className={styles.teal}>{summary ? formatMoney(summary.receivable) : "—"}</dd><p>{quotes.status === "error" ? "Não foi possível carregar" : "Orçamentos aprovados"}</p></div>
-        <div><dt><TriangleAlert className={styles.amber} aria-hidden="true" />Pendências</dt><dd className={styles.amber}>{summary?.pending ?? "—"}</dd><p>Precisam da sua atenção</p></div>
-        <div><dt><FileText aria-hidden="true" />Orçamentos aguardando</dt><dd className={styles.blue}>{summary?.awaiting ?? "—"}</dd><p>Dentro da validade</p></div>
-      </dl>
-      <div className={styles.columns}>
-        <section aria-labelledby="attention-title" className={styles.attention}>
-          <h2 id="attention-title">Para acompanhar{summary && <span className={styles.count}>{summary.pending}<span className="sr-only"> pendências</span></span>}</h2>
-          {quotes.status === "error" ? <LoadFailure retry={retry}>Não foi possível carregar seus orçamentos. Os valores estão indisponíveis.</LoadFailure> : !summary ? <p className={styles.loading} role="status">Carregando orçamentos…</p> : summary.pending === 0 ? <div className={styles.empty}>
-            <Check size={28} className={styles.teal} aria-hidden="true" />
-            <h3>{quotes.status === "ready" && quotes.data.length ? "Tudo em dia por aqui" : "Seu próximo trabalho começa aqui"}</h3>
-            <p>{quotes.status === "ready" && quotes.data.length ? "Nenhum rascunho, validade encerrada ou retorno pendente há 3 dias ou mais." : "Você ainda não tem orçamentos. Comece pelo primeiro cliente."}</p>
-            <Link href={quotes.status === "ready" && quotes.data.length ? "/orcamentos" : "/clientes?novo=1"} className={styles.textLink}>{quotes.status === "ready" && quotes.data.length ? "Ver orçamentos" : "Cadastrar cliente"}<ArrowRight size={17} aria-hidden="true" /></Link>
-          </div> : <ul className={styles.tasks}>
-            {summary.followUps.slice(0, 3).map(({ quote, days }) => <li key={quote.id}>
-              <FileText className={styles.taskIcon} aria-hidden="true" />
-              <div className={styles.taskText}><h3>Orçamento para {quote.client.name}</h3><p>Sem resposta há {days} dias</p></div>
-              <div className={styles.actions}><Link href={`/orcamentos/${quote.id}`} className={styles.actionLink}>Ver orçamento</Link><button type="button" onClick={() => prepareMessage(quote)} className={styles.actionLink}>Preparar mensagem</button></div>
-            </li>)}
-            {summary.drafts.length > 0 && <li>
-              <FileText className={styles.taskIcon} aria-hidden="true" /><div className={styles.taskText}><h3>{summary.drafts.length} orçamento{summary.drafts.length === 1 ? "" : "s"} para revisar</h3><p>{summary.drafts.length === 1 ? "Rascunho ainda não enviado" : "Rascunhos ainda não enviados"}</p></div><Link href="/orcamentos?filtro=rascunhos" className={styles.actionLink}>Ver orçamentos</Link>
-            </li>}
-            {summary.expired.length > 0 && <li>
-              <TriangleAlert className={`${styles.taskIcon} ${styles.amber}`} aria-hidden="true" /><div className={styles.taskText}><h3>{summary.expired.length} orçamento{summary.expired.length === 1 ? "" : "s"} com validade encerrada</h3><p>Confira antes de compartilhar novamente</p></div><Link href="/orcamentos?filtro=expirados" className={styles.actionLink}>Ver orçamentos</Link>
-            </li>}
-            {summary.followUps.length > 3 && <li><Link href="/orcamentos?filtro=retornos" className={styles.textLink}>Ver os {summary.followUps.length} orçamentos sem resposta<ArrowRight size={17} aria-hidden="true" /></Link></li>}
+      <section className={styles.hero} aria-labelledby="today-greeting">
+        <div className={styles.heroGlow} aria-hidden="true" />
+        <div className={styles.heroGrid} aria-hidden="true" />
+        <div className={styles.heroTop}>
+          <div className={styles.orb} aria-hidden="true"><span /><span /><span /></div>
+          <div className={styles.heroClock}><span className={styles.live} aria-hidden="true" />{clock || "--:--"}<span>{dateLabel}</span></div>
+        </div>
+        <h1 id="today-greeting" className={styles.greeting}>
+          <span>{now ? greeting(now, TZ) : "Olá"}{firstName ? `, ${firstName}` : ""}.</span>
+        </h1>
+        <p className={styles.brief} aria-live="polite" aria-busy={!brief}>
+          {brief ? <>{typed}<span className={styles.caret} aria-hidden="true" /></> : <span className={styles.thinking}>Analisando o seu dia<span aria-hidden="true">...</span></span>}
+        </p>
+        <div className={styles.chips}>
+          <Link href="/novo-orcamento" className={styles.chipPrimary}><Plus aria-hidden="true" />Novo orçamento</Link>
+          <Link href="/agenda" className={styles.chip}><CalendarPlus aria-hidden="true" />Agendar</Link>
+          <Link href="/clientes?novo=1" className={styles.chip}><UserRoundPlus aria-hidden="true" />Novo cliente</Link>
+          <Link href="/financas?novo=entrada" className={styles.chip}><ArrowDownLeft aria-hidden="true" />Registrar entrada</Link>
+          {canAsk && <button type="button" onClick={() => launch("today")} className={styles.chip}><Sparkles aria-hidden="true" />Perguntar à Vemo</button>}
+        </div>
+        <dl className={styles.pulse}>
+          <div><dt><CalendarDays aria-hidden="true" />Atendimentos hoje</dt><dd>{agenda.loading ? "·" : agenda.error ? "—" : appointments.length}</dd></div>
+          <div><dt><ArrowDownLeft aria-hidden="true" />Entrou hoje</dt><dd>{movement ? formatMoney(movement.income) : transactions.status === "error" ? "—" : "·"}</dd></div>
+          <div><dt><Wallet aria-hidden="true" />A receber</dt><dd>{summary ? formatMoney(summary.receivable) : quotes.status === "error" ? "—" : "·"}</dd></div>
+          <div data-alert={overdueCount > 0 || undefined}><dt><AlarmClock aria-hidden="true" />Atrasos</dt><dd>{ready ? overdueCount : "·"}</dd></div>
+        </dl>
+      </section>
+
+      <div className={styles.grid}>
+        <section className={`${styles.panel} ${styles.agenda}`} aria-labelledby="agenda-title">
+          <header className={styles.panelHead}>
+            <span className={`${styles.icon} ${styles.toneBlue}`}><CalendarDays aria-hidden="true" /></span>
+            <div><h2 id="agenda-title">Agenda de hoje</h2><p>{agenda.loading ? "Carregando..." : appointments.length ? plural(appointments.length, "compromisso", "compromissos") : "Nenhum compromisso"}</p></div>
+            <Link href="/agenda" className={styles.more}>Abrir agenda<ArrowRight aria-hidden="true" /></Link>
+          </header>
+          {agenda.error ? <Failure retry={retry}>{agenda.error}</Failure> : agenda.loading ? <Skeleton rows={3} /> : !appointments.length ? <div className={styles.empty}><CalendarDays aria-hidden="true" /><p>Dia livre. Um bom momento para organizar a semana.</p><Link href="/agenda" className={styles.more}>Agendar atendimento<ArrowRight aria-hidden="true" /></Link></div> : <ol className={styles.timeline}>
+            {appointments.map(a => {
+              const done = a.status === "Concluído";
+              const current = !done && nextVisit?.id === a.id;
+              const whatsapp = whatsappReminderUrl(a.customerPhone, a.customerName, a.title, a.startsAt);
+              return <li key={a.id} data-state={done ? "done" : current ? "next" : "later"}>
+                <time dateTime={a.startsAt}>{timeOf(a)}</time>
+                <span className={styles.dot} aria-hidden="true" />
+                <div className={styles.visit}>
+                  <strong>{a.title}</strong>
+                  <span>{a.customerName}{a.employeeName ? ` · ${a.employeeName}` : ""}</span>
+                </div>
+                {current && <span className={styles.nextTag}>Próximo</span>}
+                {!current && <span className={styles.statusTag}>{a.status}</span>}
+                {whatsapp && !done && <a href={whatsapp} target="_blank" rel="noopener noreferrer" className={styles.whats} aria-label={`Enviar lembrete pelo WhatsApp para ${a.customerName}`} title="Lembrete pelo WhatsApp"><MessageCircle aria-hidden="true" /></a>}
+              </li>;
+            })}
+          </ol>}
+        </section>
+
+        <section className={`${styles.panel} ${styles.money}`} aria-labelledby="money-title">
+          <header className={styles.panelHead}>
+            <span className={`${styles.icon} ${styles.toneGreen}`}><Wallet aria-hidden="true" /></span>
+            <div><h2 id="money-title">Dinheiro</h2><p>Movimento de hoje</p></div>
+            <Link href="/financas" className={styles.more}>Financeiro<ArrowRight aria-hidden="true" /></Link>
+          </header>
+          {transactions.status === "error" ? <Failure retry={retry}>Não foi possível carregar as movimentações.</Failure> : !movement ? <Skeleton rows={3} /> : <>
+            <div className={styles.balance}><span>Sobrou hoje</span><strong data-negative={movement.balance < 0 || undefined}>{formatMoney(movement.balance)}</strong></div>
+            <ul className={styles.flow}>
+              <li><ArrowDownLeft className={styles.in} aria-hidden="true" />Entrou<b>{formatMoney(movement.income)}</b></li>
+              <li><ArrowUpRight className={styles.out} aria-hidden="true" />Saiu<b>{formatMoney(movement.expenses)}</b></li>
+              <li><Wallet className={styles.wait} aria-hidden="true" />A receber<b>{summary ? formatMoney(summary.receivable) : "—"}</b></li>
+            </ul>
+          </>}
+        </section>
+
+        <section className={`${styles.panel} ${styles.alerts}`} aria-labelledby="alerts-title">
+          <header className={styles.panelHead}>
+            <span className={`${styles.icon} ${overdueCount ? styles.toneRed : styles.toneGreen}`}>{overdueCount ? <TriangleAlert aria-hidden="true" /> : <Check aria-hidden="true" />}</span>
+            <div><h2 id="alerts-title">Atrasos e vencimentos</h2><p>{!ready ? "Verificando..." : overdueCount ? "Precisam da sua atenção" : "Tudo em dia"}</p></div>
+          </header>
+          {obligations.status === "error" ? <Failure retry={retry}>Não foi possível consultar os vencimentos.</Failure> : !obligation || !summary ? <Skeleton rows={3} /> : <ul className={styles.alertList}>
+            <AlertRow tone={obligation.overdue.receivable.count ? "red" : "ok"} label="Clientes com pagamento atrasado" count={obligation.overdue.receivable.count} value={obligation.overdue.receivable.remainingCents} href="/financas#contas" />
+            <AlertRow tone={obligation.overdue.payable.count ? "red" : "ok"} label="Contas suas atrasadas" count={obligation.overdue.payable.count} value={obligation.overdue.payable.remainingCents} href="/financas#contas" />
+            <AlertRow tone={obligation.upcoming.payable.count + obligation.upcoming.receivable.count ? "amber" : "ok"} label="Vencem nos próximos 7 dias" count={obligation.upcoming.payable.count + obligation.upcoming.receivable.count} value={obligation.upcoming.payable.remainingCents + obligation.upcoming.receivable.remainingCents} href="/financas#contas" />
+            <AlertRow tone={summary.expired.length ? "amber" : "ok"} label="Orçamentos com validade vencida" count={summary.expired.length} href="/orcamentos?filtro=expirados" />
           </ul>}
         </section>
-        <section aria-labelledby="movement-title" className={styles.movement}>
-          <h2 id="movement-title">Movimento de hoje</h2><p className={styles.muted}>Lançamentos manuais</p>
-          {transactions.status === "error" ? <LoadFailure retry={retry}>Não foi possível carregar as movimentações.</LoadFailure> : !movement ? <p className={styles.loading} role="status">Carregando movimentações…</p> : <dl className={styles.moneyList}>
-            <div><dt>Entradas</dt><dd className={styles.teal}>{formatMoney(movement.income)}</dd></div><div><dt>Saídas</dt><dd className={styles.rose}>{formatMoney(movement.expenses)}</dd></div><div className={styles.balance}><dt>O que sobrou</dt><dd className={movement.balance < 0 ? styles.rose : styles.teal}>{formatMoney(movement.balance)}</dd></div>
-          </dl>}
-          <Link href="/financas" className={styles.textLink}>Abrir financeiro<ArrowRight size={18} aria-hidden="true" /></Link>
+
+        <section className={`${styles.panel} ${styles.quotes}`} aria-labelledby="quotes-title">
+          <header className={styles.panelHead}>
+            <span className={`${styles.icon} ${styles.toneViolet}`}><FileText aria-hidden="true" /></span>
+            <div><h2 id="quotes-title">Orçamentos</h2><p>{summary ? `${plural(summary.awaiting, "aguardando resposta", "aguardando resposta")}` : "Carregando..."}</p></div>
+            <Link href="/orcamentos" className={styles.more}>Ver todos<ArrowRight aria-hidden="true" /></Link>
+          </header>
+          {quotes.status === "error" ? <Failure retry={retry}>Não foi possível carregar seus orçamentos.</Failure> : quotes.status === "loading" ? <Skeleton rows={3} /> : <>
+            {pipelineTotal > 0 && <div className={styles.funnelBar} role="img" aria-label="Distribuição dos orçamentos por etapa">
+              {pipeline.map(step => { const count = quoteStats.get(step.status)?.count ?? 0; return count ? <span key={step.status} data-tone={step.tone} style={{ flexGrow: count }} /> : null; })}
+            </div>}
+            <ul className={styles.funnel}>
+              {pipeline.map(step => { const stat = quoteStats.get(step.status); return <li key={step.status} data-tone={step.tone}><span className={styles.swatch} aria-hidden="true" />{step.label}<b>{stat?.count ?? 0}</b><small>{stat ? formatMoney(stat.total) : "—"}</small></li>; })}
+            </ul>
+            {summary && (summary.followUps.length > 0 || summary.drafts.length > 0) && <ul className={styles.followList}>
+              {summary.followUps.slice(0, 2).map(({ quote, days }) => <li key={quote.id}>
+                <div><strong>{quote.client.name}</strong><span>Sem resposta há {days} dias</span></div>
+                <button type="button" onClick={() => prepareMessage(quote)}><MessageCircle aria-hidden="true" />Cobrar resposta</button>
+              </li>)}
+              {summary.drafts.length > 0 && <li><div><strong>{plural(summary.drafts.length, "rascunho", "rascunhos")}</strong><span>Ainda não enviados ao cliente</span></div><Link href="/orcamentos?filtro=rascunhos">Revisar</Link></li>}
+            </ul>}
+            {quotes.data.length === 0 && <div className={styles.empty}><FileText aria-hidden="true" /><p>Nenhum orçamento ainda.</p><Link href="/novo-orcamento" className={styles.more}>Criar o primeiro<ArrowRight aria-hidden="true" /></Link></div>}
+          </>}
         </section>
-        <section className={styles.agenda} aria-labelledby="agenda-title"><div className={styles.sectionHeading}><h2 id="agenda-title">Agenda de hoje</h2><Link href="/agenda" className={styles.textLink}>Abrir agenda<ArrowRight size={18} aria-hidden="true" /></Link></div>
-          {agenda.loading ? <p role="status" className={styles.loading}>Carregando agenda…</p> : agenda.error ? <LoadFailure retry={retry}>{agenda.error}</LoadFailure> : !appointments.length ? <div className={styles.empty}><CalendarDays size={36} aria-hidden="true" /><h3>Nenhum compromisso para hoje.</h3><Link href="/agenda" className={styles.textLink}>Organizar agenda<ArrowRight size={17} aria-hidden="true" /></Link></div> : <ul className={styles.appointmentList}>{appointments.map(a => <li key={a.id}><span className={styles.appointmentTime}>{appointmentStartLabel(a, today)}</span><div className={styles.appointmentDetails}><h3>{a.title}</h3><p>{a.customerName}</p></div><span className={styles.appointmentStatus}>{a.status}</span></li>)}</ul>}
+
+        <section className={`${styles.panel} ${styles.suggestions}`} aria-label="Sugestões da Vemo">
+          <OperationsQueue revision={revision} />
         </section>
       </div>
     </div>
+
     <Dialog open={Boolean(selected)} onOpenChange={(open) => { if (!open) setSelected(null); }}>
-      <DialogContent showCloseButton={false} onCloseAutoFocus={(event) => { event.preventDefault(); messageTrigger.current?.focus(); }} className="max-h-[90dvh] overflow-y-auto rounded-lg bg-white sm:max-w-lg">
-        <DialogHeader><DialogTitle className="pr-8">Preparar mensagem</DialogTitle><DialogDescription>Revise o texto antes de copiar. Nenhuma mensagem será enviada automaticamente.</DialogDescription></DialogHeader>
-        <DialogClose aria-label="Fechar" title="Fechar" className="absolute right-3 top-3 flex size-10 items-center justify-center rounded-lg focus-visible:ring-2 focus-visible:ring-blue-600"><X className="size-5" aria-hidden="true" /></DialogClose>
+      <DialogContent showCloseButton={false} onCloseAutoFocus={(event) => { event.preventDefault(); messageTrigger.current?.focus(); }} className="max-h-[90dvh] overflow-y-auto rounded-xl bg-white sm:max-w-lg">
+        <DialogHeader><DialogTitle className="pr-8">Mensagem para o cliente</DialogTitle><DialogDescription>Revise o texto, copie e envie pelo WhatsApp.</DialogDescription></DialogHeader>
+        <DialogClose aria-label="Fechar" title="Fechar" className="absolute right-3 top-3 flex size-10 items-center justify-center rounded-lg focus-visible:ring-2 focus-visible:ring-[var(--vemo-focus)]"><X className="size-5" aria-hidden="true" /></DialogClose>
         <Label htmlFor="follow-up-message">Mensagem para {selected?.client.name}</Label><Textarea id="follow-up-message" rows={6} value={message} onChange={(event) => { setMessage(event.target.value); setCopyState("idle"); }} className="min-h-40 text-base" />
-        <p role="status" className="text-sm text-gray-600">{copyState === "copied" ? "Mensagem copiada. Você pode enviá-la quando quiser." : copyState === "error" ? "Não foi possível copiar. Selecione o texto e copie manualmente." : "O orçamento permanece sem alterações."}</p>
-        <DialogFooter><DialogClose asChild><Button variant="outline" className="h-11">Fechar</Button></DialogClose><Button onClick={() => void copyMessage()} disabled={!message.trim()} className="h-11"><Copy className="size-4" aria-hidden="true" />Copiar mensagem</Button></DialogFooter>
+        <p role="status" className="text-sm text-[var(--vemo-muted)]">{copyState === "copied" ? "Mensagem copiada." : copyState === "error" ? "Não foi possível copiar. Selecione o texto e copie manualmente." : ""}</p>
+        <DialogFooter>
+          <DialogClose asChild><Button variant="outline" className="h-11">Fechar</Button></DialogClose>
+          {selected && whatsappLinkFor(selected, message) && <Button asChild variant="outline" className="h-11"><a href={whatsappLinkFor(selected, message)!} target="_blank" rel="noopener noreferrer"><MessageCircle className="size-4" aria-hidden="true" />Abrir no WhatsApp</a></Button>}
+          <Button onClick={() => void copyMessage()} disabled={!message.trim()} className="h-11"><Copy className="size-4" aria-hidden="true" />Copiar</Button>
+        </DialogFooter>
       </DialogContent>
     </Dialog>
   </>;
+}
+
+function whatsappLinkFor(quote: Quote, message: string) {
+  const digits = (quote.client.phone ?? "").replace(/\D/g, "");
+  if (!(digits.length === 10 || digits.length === 11 || ((digits.length === 12 || digits.length === 13) && digits.startsWith("55")))) return null;
+  return `https://wa.me/${digits.length <= 11 ? `55${digits}` : digits}?text=${encodeURIComponent(message)}`;
+}
+
+function AlertRow({ tone, label, count, value, href }: { tone: "red" | "amber" | "ok"; label: string; count: number; value?: number; href: string }) {
+  return <li data-tone={tone}>
+    <Link href={href}>
+      <span className={styles.alertDot} aria-hidden="true" />
+      <span className={styles.alertLabel}>{label}</span>
+      <b>{count}</b>
+      {value !== undefined && count > 0 && <small>{formatMoney(value)}</small>}
+    </Link>
+  </li>;
+}
+
+function Failure({ children, retry }: { children: React.ReactNode; retry: () => void }) {
+  return <div className={styles.failure} role="alert"><p>{children}</p><button type="button" onClick={retry}><RefreshCw aria-hidden="true" />Tentar novamente</button></div>;
+}
+
+function Skeleton({ rows }: { rows: number }) {
+  return <div className={styles.skeleton} role="status" aria-label="Carregando">{Array.from({ length: rows }, (_, index) => <span key={index} />)}</div>;
 }
