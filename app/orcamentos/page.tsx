@@ -2,13 +2,14 @@
 
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { BellRing, FileX2, Plus, RefreshCw } from "lucide-react";
+import { BadgeCheck, BellRing, FileX2, Plus, RefreshCw, Search, Send, TrendingUp, Wallet } from "lucide-react";
 
 import { QuoteCard } from "@/components/quote-card";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { WorkspaceShell } from "@/components/workspace-shell";
-import type { Quote } from "@/lib/models";
+import { formatMoney, type Quote } from "@/lib/models";
+import { Input } from "@/components/ui/input";
 import { useCurrentUser } from "@/hooks/use-current-user";
 import { summarizeQuotes } from "@/lib/today-summary";
 import { Label } from "@/components/ui/label";
@@ -24,6 +25,7 @@ function QuotesContent() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [filter, setFilter] = useState("todos");
+  const [search, setSearch] = useState("");
 
   const loadData = useCallback(async () => {
     setLoading(true);
@@ -64,86 +66,83 @@ function QuotesContent() {
     });
   }, [quotes]);
 
+  const stats = useMemo(() => {
+    const active = quotes.filter(quote => !quote.archivedAt);
+    const sum = (list: Quote[]) => list.reduce((total, quote) => total + quote.totalCents, 0);
+    const waiting = active.filter(quote => quote.status === "Enviado");
+    const approved = active.filter(quote => ["Aprovado", "Em andamento", "Finalizado"].includes(quote.status));
+    const paid = quotes.filter(quote => quote.status === "Pago");
+    const decided = quotes.filter(quote => ["Aprovado", "Em andamento", "Finalizado", "Pago", "Recusado"].includes(quote.status));
+    const won = decided.filter(quote => quote.status !== "Recusado");
+    return { waiting: { count: waiting.length, total: sum(waiting) }, approved: { count: approved.length, total: sum(approved) }, paid: { count: paid.length, total: sum(paid) }, rate: decided.length ? Math.round((won.length / decided.length) * 100) : null, decided: decided.length };
+  }, [quotes]);
+
+  const searched = useMemo(() => {
+    const query = search.trim().normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("pt-BR").replace(/^#/, "");
+    if (!query) return visibleQuotes;
+    return visibleQuotes.filter(quote => [quote.client.name, String(quote.id), quote.description, quote.status].join(" ").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLocaleLowerCase("pt-BR").includes(query));
+  }, [visibleQuotes, search]);
+
+  function chooseFilter(value: string) {
+    setFilter(value);
+    const url = new URL(window.location.href);
+    if (value === "todos") url.searchParams.delete("filtro"); else url.searchParams.set("filtro", value);
+    window.history.replaceState(null, "", url);
+  }
+
   return (
-    <>
-      <div>
-        <section className={`mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 py-6 sm:px-6 lg:px-8 ${styles.quotesPage}`}>
-          <header className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <h1 className="text-3xl font-semibold">Orçamentos</h1>
-            <Button asChild className="h-12 rounded-xl bg-blue-600 px-5 text-base text-white hover:bg-blue-700">
-              <Link href="/novo-orcamento"><Plus className="size-4" /> Novo Orçamento</Link>
-            </Button>
-          </header>
+    <section className={styles.quotesPage}>
+      <header className={styles.header}>
+        <div><h1>Orçamentos</h1><p>Do envio até o pagamento, acompanhe cada proposta.</p></div>
+        <Button asChild className={styles.newButton}><Link href="/novo-orcamento"><Plus className="size-4" />Novo orçamento</Link></Button>
+      </header>
 
-          {reminders.length > 0 && (
-            <div className="flex flex-col gap-3 rounded-2xl border border-amber-200 bg-amber-50 p-4 sm:flex-row sm:items-center sm:justify-between">
-              <div className="flex items-start gap-3">
-                <BellRing className="mt-0.5 size-5 shrink-0 text-amber-700" aria-hidden="true" />
-                <div>
-                  <p className="font-semibold text-amber-950">
-                    {reminders.length === 1 ? "1 cliente espera um retorno" : `${reminders.length} clientes esperam um retorno`}
-                  </p>
-                  <p className="mt-1 text-sm text-amber-800">Orçamentos enviados há mais de 3 dias.</p>
-                </div>
-              </div>
-              <Button asChild variant="outline" className="rounded-xl border-amber-300 bg-white text-amber-900">
-                <Link href={`/orcamentos/${reminders[0].id}`}>Ver lembrete</Link>
-              </Button>
-            </div>
-          )}
+      {!loading && !error && <dl className={styles.stats}>
+        <div data-tone="blue"><dt><Send aria-hidden="true" />Aguardando resposta</dt><dd>{formatMoney(stats.waiting.total)}</dd><small>{stats.waiting.count} {stats.waiting.count === 1 ? "orçamento" : "orçamentos"}</small></div>
+        <div data-tone="violet"><dt><BadgeCheck aria-hidden="true" />Aprovados para receber</dt><dd>{formatMoney(stats.approved.total)}</dd><small>{stats.approved.count} {stats.approved.count === 1 ? "orçamento" : "orçamentos"}</small></div>
+        <div data-tone="green"><dt><Wallet aria-hidden="true" />Já recebidos</dt><dd>{formatMoney(stats.paid.total)}</dd><small>{stats.paid.count} {stats.paid.count === 1 ? "orçamento pago" : "orçamentos pagos"}</small></div>
+        <div data-tone="amber"><dt><TrendingUp aria-hidden="true" />Taxa de aprovação</dt><dd>{stats.rate === null ? "—" : `${stats.rate}%`}</dd><small>{stats.decided ? `de ${stats.decided} com resposta` : "Ainda sem respostas"}</small></div>
+      </dl>}
 
-          <div className="space-y-4">
-            <div>
-              <h2 className="text-xl font-semibold">Seus orçamentos</h2>
-              <p className="mt-1 text-sm text-gray-500">Acompanhe cada etapa até o pagamento.</p>
-            </div>
-            <div className="max-w-xs space-y-2">
-              <Label htmlFor="quote-filter">Mostrar</Label>
-              <select id="quote-filter" value={filter} onChange={(event) => {
-                const value = event.target.value;
-                setFilter(value);
-                const url = new URL(window.location.href);
-                if (value === "todos") url.searchParams.delete("filtro"); else url.searchParams.set("filtro", value);
-                window.history.replaceState(null, "", url);
-              }} className="h-11 w-full rounded-lg border border-gray-300 bg-white px-3 text-base focus-visible:outline-blue-600">
-                <option value="todos">Ativos</option><option value="rascunhos">Rascunhos</option><option value="retornos">Aguardando retorno há 3 dias</option><option value="expirados">Validade encerrada</option><option value="arquivados">Arquivados</option>
-              </select>
-            </div>
+      {reminders.length > 0 && filter !== "retornos" && (
+        <div className={styles.reminder}>
+          <BellRing aria-hidden="true" />
+          <div><strong>{reminders.length === 1 ? "1 cliente ainda não respondeu" : `${reminders.length} clientes ainda não responderam`}</strong><p>Orçamentos enviados há mais de 3 dias. Um lembrete pelo WhatsApp costuma ajudar.</p></div>
+          <button type="button" onClick={() => chooseFilter("retornos")}>Ver quais</button>
+        </div>
+      )}
 
-            {loading ? (
-              <div className="grid gap-4 md:grid-cols-2">
-                {[0, 1, 2, 3].map((item) => <Skeleton key={item} className="h-64 rounded-2xl" />)}
-              </div>
-            ) : error ? (
-              <div className="rounded-2xl border border-red-200 bg-white p-6 text-center">
-                <p className="text-sm text-red-700">{error}</p>
-                <Button onClick={() => void loadData()} variant="outline" className="mt-4 rounded-xl">
-                  <RefreshCw className="size-4" /> Tentar novamente
-                </Button>
-              </div>
-            ) : visibleQuotes.length > 0 ? (
-              <div className="grid gap-4 md:grid-cols-2">
-                {visibleQuotes.map((quote) => (
-                  <QuoteCard key={quote.id} quote={quote} readonly={workspace?.role === "viewer"} onDelete={() => setQuotes(current => current.filter(item => item.id !== quote.id))} onChanged={changed => setQuotes(current => current.map(item => item.id === changed.id ? changed : item))} />
-                ))}
-              </div>
-            ) : filter !== "todos" ? (
-              <div className="border-t border-gray-200 py-10 text-center"><p>Nenhum orçamento neste filtro.</p><Button variant="outline" className="mt-4 h-11" onClick={() => { setFilter("todos"); window.history.replaceState(null, "", "/orcamentos"); }}>Ver todos</Button></div>
-            ) : (
-              <div className="flex min-h-64 flex-col items-center justify-center rounded-2xl border border-dashed border-gray-300 bg-white px-5 py-10 text-center">
-                <span className="flex size-12 items-center justify-center rounded-xl bg-gray-100 text-gray-500">
-                  <FileX2 className="size-6" aria-hidden="true" />
-                </span>
-                <h3 className="mt-4 text-lg font-semibold">Seu primeiro orçamento começa aqui</h3>
-                <p className="mt-2 max-w-sm text-sm leading-6 text-gray-500">Crie um orçamento profissional e acompanhe até receber.</p>
-                <Button asChild className="mt-5 rounded-xl">
-                  <Link href="/novo-orcamento"><Plus className="size-4" /> Novo orçamento</Link>
-                </Button>
-              </div>
-            )}
-          </div>
-        </section>
+      <div className={styles.toolbar}>
+        <div className={styles.pills} role="group" aria-label="Filtrar orçamentos">
+          {[["todos", "Ativos"], ["rascunhos", "Rascunhos"], ["retornos", "Sem resposta"], ["expirados", "Vencidos"], ["arquivados", "Arquivados"]].map(([value, label]) => <button key={value} type="button" aria-pressed={filter === value} onClick={() => chooseFilter(value)}>{label}</button>)}
+        </div>
+        <div className={styles.search}>
+          <Search aria-hidden="true" />
+          <Label htmlFor="quote-search" className="sr-only">Buscar orçamento</Label>
+          <Input id="quote-search" type="search" value={search} onChange={event => setSearch(event.target.value)} placeholder="Buscar cliente ou número" />
+        </div>
       </div>
-    </>
+
+      {loading ? (
+        <div className={styles.grid}>{[0, 1, 2, 3].map((item) => <Skeleton key={item} className="h-56 rounded-2xl" />)}</div>
+      ) : error ? (
+        <div className={styles.errorBox}><p>{error}</p><Button onClick={() => void loadData()} variant="outline" className="mt-4 rounded-full"><RefreshCw className="size-4" /> Tentar novamente</Button></div>
+      ) : searched.length > 0 ? (
+        <div className={styles.grid}>
+          {searched.map((quote) => (
+            <QuoteCard key={quote.id} quote={quote} readonly={workspace?.role === "viewer"} onDelete={() => setQuotes(current => current.filter(item => item.id !== quote.id))} onChanged={changed => setQuotes(current => current.map(item => item.id === changed.id ? changed : item))} />
+          ))}
+        </div>
+      ) : filter !== "todos" || search ? (
+        <div className={styles.empty}><FileX2 aria-hidden="true" /><h3>Nenhum orçamento encontrado</h3><Button variant="outline" className="mt-2 h-11 rounded-full" onClick={() => { setSearch(""); chooseFilter("todos"); }}>Ver todos</Button></div>
+      ) : (
+        <div className={styles.empty}>
+          <FileX2 aria-hidden="true" />
+          <h3>Seu primeiro orçamento começa aqui</h3>
+          <p>Crie um orçamento profissional, envie pelo WhatsApp e acompanhe até receber.</p>
+          <Button asChild className={`${styles.newButton} mt-3`}><Link href="/novo-orcamento"><Plus className="size-4" /> Novo orçamento</Link></Button>
+        </div>
+      )}
+    </section>
   );
 }

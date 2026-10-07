@@ -128,11 +128,10 @@ function CustomersContent() {
       <section className={`${styles.page} mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 py-6 sm:px-6 lg:px-8`}>
         <header className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
-            <p className="text-sm font-medium text-blue-700">Clientes</p>
-            <h1 className="mt-1 text-2xl font-semibold sm:text-3xl">Sua lista de clientes</h1>
-            <p className="mt-2 text-base text-gray-500">{reception ? "Contatos para organizar seus atendimentos." : "Contatos e histórico reunidos em um só lugar."}</p>
+            <h1 className="text-[26px] font-bold sm:text-[30px]">Clientes</h1>
+            <p className="mt-1 text-base text-gray-500">{reception ? "Contatos para organizar seus atendimentos." : "Contatos e histórico reunidos em um só lugar."}</p>
           </div>
-          <Button onClick={openNewCustomer} className={`${styles.primaryAction} h-11 rounded-lg`}>
+          <Button onClick={openNewCustomer} className={`${styles.primaryAction} h-11 rounded-full px-5`}>
             <Plus className="size-4" /> Novo cliente
           </Button>
         </header>
@@ -164,11 +163,11 @@ function CustomersContent() {
               const quoteSummary = quoteSummaryByCustomer.get(customer.id) ?? { count: 0, approvedTotal: 0 };
 
               return (
-                <article key={customer.id} className={`${styles.clientCard} rounded-lg border border-gray-200 bg-white p-5 shadow-sm`}>
+                <article key={customer.id} className={`${styles.clientCard} border p-5`}>
                   <div className="flex items-start justify-between gap-4">
                     <div className="flex min-w-0 items-center gap-3">
-                      <span className={`${styles.avatar} flex size-11 shrink-0 items-center justify-center rounded-lg bg-blue-100 font-semibold text-blue-700`}>
-                        {customer.name.slice(0, 2).toUpperCase()}
+                      <span className={`${styles.avatar} flex size-11 shrink-0 items-center justify-center rounded-full font-semibold`} data-tone={customer.id % 6}>
+                        {customer.name.split(/\s+/).filter(Boolean).slice(0, 2).map(part => part[0]).join("").toUpperCase()}
                       </span>
                       <div className="min-w-0">
                         <h2 className="break-words text-lg font-semibold">{customer.name}</h2>

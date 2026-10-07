@@ -1,4 +1,3 @@
-.quotesPage { composes: page from "./workspace-page.module.css"; }
 .quoteDetail { composes: page from "./workspace-page.module.css"; }
 .formPage { composes: page from "./workspace-page.module.css"; }
 .publicPage { composes: page from "./workspace-page.module.css"; max-width: none; min-height: 100svh; background: var(--background); }
@@ -6,21 +5,6 @@
 .publicPage :global([data-slot="button"][data-variant="default"]) { background: var(--vemo-success); border-color: var(--vemo-success); }
 .publicPage :global([data-slot="button"][data-variant="default"]:hover) { background: #065c4e; }
 .formPage > div { border-color: var(--vemo-line); border-radius: var(--vemo-radius); box-shadow: var(--vemo-shadow); }
-.quotesPage :global([data-slot="card"]) { min-width: 0; gap: 16px; border-color: var(--vemo-line); border-radius: var(--vemo-radius); background: white; color: var(--vemo-text); box-shadow: var(--vemo-shadow); }
-.quotesPage :global([data-slot="card"]:hover) { border-color: #8eafd6; }
-.quotesPage :global([data-slot="card-title"]) { color: var(--vemo-text); font-size: 16px; line-height: 1.5; }
-.quotesPage :global([data-slot="card-content"] > p:last-child) { color: var(--vemo-text); font-size: 24px; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
-.quotesPage :global([data-slot="card"] button[aria-label^="Excluir"]) { border-color: #e0a8b4; background: white; color: var(--vemo-danger); }
-.quotesPage :global([data-slot="card"] button[aria-label^="Excluir"]:hover) { background: var(--vemo-danger-soft); }
-.quotesPage select { min-height: 44px; }
-.quotesPage :global(.border-amber-200.bg-amber-50) { border-color: #ecd3a6; background: var(--vemo-warning-soft); color: var(--vemo-warning); }
-.quotesPage :global(.text-amber-950),
-.quotesPage :global(.text-amber-900),
-.quotesPage :global(.text-amber-800),
-.quotesPage :global(.text-amber-700) { color: var(--vemo-warning); }
-.quotesPage :global(.border-amber-300) { border-color: #c2a76e; }
-.quotesPage :global(.border-dashed) { border-color: var(--vemo-control-border); background: white; }
-.quotesPage :global(.border-t.border-gray-200) { border-color: var(--vemo-line); }
 .quoteDetail :global(.print-hidden.rounded-2xl) { border-color: var(--vemo-line); border-radius: var(--vemo-radius); background: white; color: var(--vemo-text); box-shadow: var(--vemo-shadow); }
 .quoteDetail :global([data-slot="badge"]) { border-color: #b8cdec; background: var(--vemo-brand-soft); color: var(--vemo-brand); }
 .quoteDetail :global(a[data-slot="button"][href*="wa.me"]) { border-color: var(--vemo-success); background: var(--vemo-success); color: white; }
@@ -32,3 +16,82 @@
 .quoteDetail :global(.print-document footer strong) { color: var(--vemo-text); }
 .quoteDetail :global(.print-document p) { overflow-wrap: anywhere; }
 @media print { .quoteDetail :global(.print-document) { box-shadow: none; } }
+
+/* Lista de orçamentos */
+.quotesPage { width: 100%; max-width: 1180px; margin: 0 auto; padding: 28px 24px 56px; color: var(--vemo-text); }
+.header { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.header h1 { font-size: 30px; font-weight: 700; }
+.header p { margin-top: 4px; color: var(--vemo-muted); }
+.newButton { min-height: 44px; border-radius: 999px; padding-inline: 18px; background: var(--vemo-brand); color: white; font-weight: 600; }
+.newButton:hover { background: var(--vemo-brand-hover); }
+.stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 22px; }
+.stats > div { --tone: var(--vemo-brand); --tone-soft: var(--vemo-brand-soft); position: relative; min-width: 0; overflow: hidden; border: 1px solid var(--vemo-line); border-radius: 18px; padding: 16px 18px; background: white; }
+.stats > div::after { content: ""; position: absolute; right: -24px; top: -24px; width: 80px; height: 80px; border-radius: 999px; background: var(--tone-soft); }
+.stats > div[data-tone="violet"] { --tone: var(--vemo-violet); --tone-soft: var(--vemo-violet-soft); }
+.stats > div[data-tone="green"] { --tone: var(--vemo-success); --tone-soft: var(--vemo-success-soft); }
+.stats > div[data-tone="amber"] { --tone: #d97706; --tone-soft: var(--vemo-warning-soft); }
+.stats dt { position: relative; z-index: 1; display: flex; align-items: center; gap: 6px; color: var(--vemo-muted); font-size: 13px; }
+.stats dt svg { width: 16px; height: 16px; color: var(--tone); }
+.stats dd { position: relative; z-index: 1; margin-top: 6px; overflow: hidden; font-size: 22px; font-weight: 700; font-variant-numeric: tabular-nums; text-overflow: ellipsis; white-space: nowrap; }
+.stats small { color: var(--vemo-faint); font-size: 12.5px; }
+.reminder { display: flex; align-items: center; gap: 14px; margin-top: 16px; border-radius: 16px; padding: 14px 16px; background: var(--vemo-warning-soft); color: var(--vemo-warning); }
+.reminder > svg { width: 22px; height: 22px; flex: none; }
+.reminder div { flex: 1; min-width: 0; }
+.reminder p { font-size: 13.5px; }
+.reminder button { flex: none; min-height: 38px; border-radius: 999px; padding: 0 14px; background: white; color: var(--vemo-warning); font-weight: 600; box-shadow: inset 0 0 0 1px #ecd3a6; }
+.toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-top: 22px; }
+.pills { display: flex; gap: 4px; max-width: 100%; overflow-x: auto; border-radius: 999px; padding: 4px; background: var(--vemo-subtle); scrollbar-width: none; }
+.pills button { flex: none; min-height: 34px; border-radius: 999px; padding: 0 14px; color: var(--vemo-muted); font-size: 13.5px; font-weight: 600; }
+.pills button[aria-pressed="true"] { background: white; color: var(--vemo-text); box-shadow: var(--vemo-shadow); }
+.search { position: relative; flex: 0 1 300px; }
+.search > svg { position: absolute; left: 12px; top: 50%; width: 16px; height: 16px; color: var(--vemo-faint); transform: translateY(-50%); }
+.search input { height: 42px; border-radius: 999px; padding-left: 36px; background: white; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 14px; margin-top: 16px; }
+.errorBox { margin-top: 16px; border-radius: 16px; padding: 24px; background: var(--vemo-danger-soft); color: var(--vemo-danger); text-align: center; }
+.empty { display: grid; justify-items: center; gap: 6px; margin-top: 16px; border: 1px dashed var(--vemo-control-border); border-radius: 20px; padding: 44px 16px; color: var(--vemo-muted); text-align: center; }
+.empty > svg { width: 32px; height: 32px; color: var(--vemo-faint); }
+.empty h3 { color: var(--vemo-text); font-size: 17px; }
+.empty p { max-width: 380px; font-size: 14px; }
+
+/* Cartão de orçamento */
+.card { --tone: #b9b6ae; --tone-soft: var(--vemo-subtle); position: relative; display: flex; flex-direction: column; min-width: 0; overflow: hidden; border: 1px solid var(--vemo-line); border-radius: 18px; padding: 18px 18px 16px; background: white; box-shadow: var(--vemo-shadow); transition: box-shadow 150ms ease, transform 150ms ease; }
+.card:hover { box-shadow: var(--vemo-shadow-lg); transform: translateY(-1px); }
+.card::before { content: ""; position: absolute; inset: 0 0 auto; height: 4px; background: var(--tone); }
+.card[data-status="Enviado"] { --tone: var(--vemo-brand); --tone-soft: var(--vemo-brand-soft); }
+.card[data-status="Aprovado"] { --tone: var(--vemo-violet); --tone-soft: var(--vemo-violet-soft); }
+.card[data-status="Em andamento"] { --tone: #f59e0b; --tone-soft: var(--vemo-warning-soft); }
+.card[data-status="Finalizado"] { --tone: var(--vemo-cyan); --tone-soft: #e6f8fa; }
+.card[data-status="Pago"] { --tone: var(--vemo-success); --tone-soft: var(--vemo-success-soft); }
+.card[data-status="Recusado"] { --tone: var(--vemo-danger); --tone-soft: var(--vemo-danger-soft); }
+.cardTop { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+.cardTop h3 { min-width: 0; font-family: var(--font-sans); font-size: 16px; font-weight: 650; letter-spacing: 0; overflow-wrap: anywhere; }
+.cardTop small { display: block; margin-top: 2px; color: var(--vemo-faint); font-size: 12.5px; }
+.statusPill { flex: none; border-radius: 999px; padding: 3px 10px; background: var(--tone-soft); color: var(--tone); font-size: 12px; font-weight: 650; }
+.card[data-status="Em andamento"] .statusPill { color: var(--vemo-warning); }
+.card[data-status="Rascunho"] .statusPill { color: var(--vemo-muted); }
+.cardDescription { margin-top: 10px; color: var(--vemo-muted); font-size: 14px; line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.cardValue { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 14px; }
+.cardValue strong { font-family: var(--font-display); font-size: 24px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.validity { border-radius: 999px; padding: 2px 9px; background: var(--vemo-subtle); color: var(--vemo-muted); font-size: 12px; font-weight: 600; white-space: nowrap; }
+.validity[data-state="soon"] { background: var(--vemo-warning-soft); color: var(--vemo-warning); }
+.validity[data-state="expired"] { background: var(--vemo-danger-soft); color: var(--vemo-danger); }
+.cardActions { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 14px; border-top: 1px solid var(--vemo-line); padding-top: 12px; }
+.cardActions :global([data-slot="button"]) { border-radius: 999px; }
+.viewButton { flex: 1; }
+.whatsLink { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 999px; background: #e8f8ee; color: #128c4a; }
+.whatsLink svg { width: 17px; height: 17px; }
+.whatsLink:hover { background: #d3f3df; }
+.cardActions :global(button[aria-label^="Excluir"]) { color: var(--vemo-danger); }
+
+@media (max-width: 900px) { .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) {
+  .quotesPage { padding: 18px 12px 40px; }
+  .header h1 { font-size: 26px; }
+  .header > a { width: 100%; }
+  .stats { gap: 8px; }
+  .stats > div { padding: 12px 14px; }
+  .stats dd { font-size: 18px; }
+  .search { flex-basis: 100%; }
+  .reminder { flex-wrap: wrap; }
+}
+.cardActions :global([data-slot="button"][data-variant="outline"]) { border-color: var(--vemo-line); }

@@ -4,17 +4,9 @@ import Link from "next/link";
 import { whatsappLink } from "@/lib/whatsapp";
 import { Eye, MessageCircle } from "lucide-react";
 import { QuoteActions } from "./quote-actions";
-
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { formatDate, formatMoney, type Quote, type QuoteStatus } from "@/lib/models";
+import { formatDate, formatMoney, type Quote } from "@/lib/models";
+import styles from "./quote-workspace.module.css";
 
 type QuoteCardProps = {
   quote: Quote;
@@ -23,67 +15,39 @@ type QuoteCardProps = {
   readonly?: boolean;
 };
 
-const statusStyles: Record<QuoteStatus, string> = {
-  Rascunho: "border-gray-200 bg-gray-100 text-gray-700",
-  Enviado: "border-blue-200 bg-blue-100 text-blue-800",
-  Aprovado: "border-emerald-200 bg-emerald-100 text-emerald-800",
-  "Em andamento": "border-violet-200 bg-violet-100 text-violet-800",
-  Finalizado: "border-cyan-200 bg-cyan-100 text-cyan-800",
-  Pago: "border-green-200 bg-green-100 text-green-800",
-  Recusado: "border-red-200 bg-red-100 text-red-800",
-};
+function validity(quote: Quote) {
+  if (!["Rascunho", "Enviado"].includes(quote.status)) return null;
+  const today = new Intl.DateTimeFormat("en-CA", { timeZone: "America/Sao_Paulo" }).format(new Date());
+  const days = Math.round((Date.parse(`${quote.validUntil.slice(0, 10)}T12:00:00Z`) - Date.parse(`${today}T12:00:00Z`)) / 86_400_000);
+  if (days < 0) return { state: "expired", label: "Vencido" };
+  if (days === 0) return { state: "soon", label: "Vence hoje" };
+  if (days <= 3) return { state: "soon", label: `Vence em ${days} dia${days === 1 ? "" : "s"}` };
+  return { state: "ok", label: `Válido até ${formatDate(quote.validUntil).slice(0, 5)}` };
+}
 
 export function QuoteCard({ quote, onDelete, onChanged, readonly }: QuoteCardProps) {
   const whatsappMessage = `Olá, ${quote.client.name}! Estou entrando em contato sobre o orçamento #${quote.id}.`;
   const whatsappHref = whatsappLink(quote.client.phone, whatsappMessage);
+  const valid = validity(quote);
 
   return (
-    <Card className="gap-4 border-gray-200 bg-white py-5 shadow-sm">
-      <CardHeader className="gap-3 px-5">
-        <div className="flex items-start justify-between gap-3">
-          <div className="min-w-0">
-            <CardTitle className="break-words text-lg font-semibold text-gray-950">
-              {quote.client.name}
-            </CardTitle>
-            <p className="mt-1 text-xs text-gray-500">
-              Orçamento #{quote.id} · válido até {formatDate(quote.validUntil)}
-            </p>
-          </div>
-          <Badge className={statusStyles[quote.status]} variant="outline">
-            {quote.status}
-          </Badge>
-        </div>
-      </CardHeader>
-
-      <CardContent className="space-y-4 px-5">
-        <p className="line-clamp-2 text-sm leading-6 text-gray-500">
-          {quote.description || quote.items[0]?.description || "Serviço sem descrição"}
-        </p>
-        <p className="text-2xl font-semibold text-gray-950">
-          {formatMoney(quote.totalCents)}
-        </p>
-      </CardContent>
-
-      <CardFooter className="flex flex-wrap gap-2 px-5">
-        <Button asChild className="h-10 flex-1 rounded-xl sm:flex-none" variant="outline">
-          <Link href={`/orcamentos/${quote.id}`}>
-            <Eye className="size-4" aria-hidden="true" />
-            Ver orçamento
-          </Link>
+    <article className={styles.card} data-status={quote.status} data-slot="card">
+      <div className={styles.cardTop}>
+        <div className="min-w-0"><h3>{quote.client.name}</h3><small>Orçamento #{quote.id} · criado em {formatDate(quote.createdAt).slice(0, 5)}</small></div>
+        <span className={styles.statusPill}>{quote.status}</span>
+      </div>
+      <p className={styles.cardDescription}>{quote.description || quote.items[0]?.description || "Serviço sem descrição"}</p>
+      <div className={styles.cardValue}>
+        <strong>{formatMoney(quote.totalCents)}</strong>
+        {valid && <span className={styles.validity} data-state={valid.state}>{valid.label}</span>}
+      </div>
+      <div className={styles.cardActions}>
+        <Button asChild className={`${styles.viewButton} h-10`} variant="outline">
+          <Link href={`/orcamentos/${quote.id}`}><Eye className="size-4" aria-hidden="true" />Abrir</Link>
         </Button>
-        <Button
-          asChild
-          className="size-10 rounded-xl border-gray-200 bg-white text-gray-700 hover:bg-gray-50"
-          variant="outline"
-          size="icon"
-        >
-          <a href={whatsappHref} rel="noreferrer" target="_blank" aria-label="Enviar pelo WhatsApp" title="Enviar pelo WhatsApp">
-            <MessageCircle className="size-4 text-emerald-600" />
-          </a>
-        </Button>
-
+        <a href={whatsappHref} rel="noreferrer" target="_blank" aria-label="Enviar pelo WhatsApp" title="Enviar pelo WhatsApp" className={styles.whatsLink}><MessageCircle aria-hidden="true" /></a>
         {!readonly && <QuoteActions quote={quote} onRemoved={() => void onDelete()} onChanged={onChanged} />}
-      </CardFooter>
-    </Card>
+      </div>
+    </article>
   );
 }
