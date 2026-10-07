@@ -71,7 +71,9 @@
 .audience p { color: var(--vemo-faint); font-size: 13px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; }
 .audience ul { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 10px; max-width: 1000px; margin: 14px auto 0; padding: 0; list-style: none; }
 .audience li { display: inline-flex; align-items: center; gap: 6px; border-radius: 999px; padding: 7px 14px; background: var(--vemo-subtle); color: #4a4844; font-size: 14px; font-weight: 500; }
-.audience li svg { width: 14px; height: 14px; color: var(--vemo-faint); }
+.audience li svg { width: 15px; height: 15px; color: var(--vemo-brand); }
+.audience li:nth-child(3n+2) svg { color: var(--vemo-violet); }
+.audience li:nth-child(3n) svg { color: var(--vemo-success); }
 
 /* Cabeçalho de seção */
 .sectionHead { max-width: 680px; margin: 0 auto 40px; text-align: center; }

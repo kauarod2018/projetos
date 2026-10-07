@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowDownLeft, ArrowRight, BellRing, CalendarDays, Check, CircleDollarSign, ClipboardCheck, FileText, MessageCircle, ShieldCheck, Smartphone, Sparkles, Users, Wallet, Wrench, Zap } from "lucide-react";
+import { ArrowDownLeft, ArrowRight, BellRing, CalendarDays, Check, CircleDollarSign, ClipboardCheck, FileText, MessageCircle, ShieldCheck, Smartphone, Sparkles, Users, Wallet, Zap, Snowflake, Droplets, PaintRoller, HardHat, Hammer, SprayCan, Trees, Bug, Laptop, Cctv, KeyRound, Car, Camera } from "lucide-react";
 import { VemoWordmark } from "@/components/vemo-brand";
 import styles from "@/components/landing.module.css";
 
@@ -15,7 +15,23 @@ export const metadata: Metadata = {
   },
 };
 
-const audiences = ["Eletricistas", "Técnicos de refrigeração", "Instaladores", "Assistência técnica", "Manutenção predial", "Encanadores", "Pequenas equipes"];
+const audiences = [
+  { label: "Eletricistas", icon: Zap },
+  { label: "Ar-condicionado e refrigeração", icon: Snowflake },
+  { label: "Encanadores", icon: Droplets },
+  { label: "Pintores", icon: PaintRoller },
+  { label: "Reformas e construção", icon: HardHat },
+  { label: "Marceneiros e montadores", icon: Hammer },
+  { label: "Limpeza e diaristas", icon: SprayCan },
+  { label: "Jardinagem e paisagismo", icon: Trees },
+  { label: "Dedetização", icon: Bug },
+  { label: "Conserto de celulares e eletrônicos", icon: Smartphone },
+  { label: "Técnicos de informática", icon: Laptop },
+  { label: "Câmeras e segurança", icon: Cctv },
+  { label: "Chaveiros", icon: KeyRound },
+  { label: "Mecânica e autoelétrica", icon: Car },
+  { label: "Fotografia e eventos", icon: Camera },
+];
 
 const benefits = [
   { icon: FileText, tone: "blue", title: "Orçamentos profissionais", text: "Monte em minutos, com sua logo, e envie um link para o cliente aprovar pelo celular." },
@@ -84,9 +100,9 @@ export default function LandingPage() {
                 <div className={styles.mockPulse}><span><small>Atendimentos</small>3</span><span><small>Entrou hoje</small>R$ 520</span><span><small>A receber</small>R$ 1.250</span></div>
               </div>
               <div className={styles.mockRows}>
-                <div><b>09:00</b><span>Instalação de ar-condicionado<small>Ana Paula Lima</small></span><em>Próximo</em></div>
-                <div><b>14:00</b><span>Limpeza e higienização<small>Roberto Mendes</small></span></div>
-                <div><b>16:30</b><span>Manutenção preventiva<small>Padaria Pão Quente</small></span></div>
+                <div><b>09:00</b><span>Instalação de tomadas e luminárias<small>Ana Paula Lima</small></span><em>Próximo</em></div>
+                <div><b>14:00</b><span>Pintura de sala<small>Roberto Mendes</small></span></div>
+                <div><b>16:30</b><span>Conserto de notebook<small>Studio Bella</small></span></div>
               </div>
             </div>
             <div className={styles.phone}>
@@ -99,8 +115,8 @@ export default function LandingPage() {
         </section>
 
         <section className={styles.audience} aria-label="Para quem é o Vemo">
-          <p>Feito para quem trabalha com atendimento e orçamento</p>
-          <ul>{audiences.map(item => <li key={item}><Wrench aria-hidden="true" />{item}</li>)}</ul>
+          <p>Para quem atende clientes, faz orçamento e trabalha com horário marcado</p>
+          <ul>{audiences.map(({ label, icon: Icon }) => <li key={label}><Icon aria-hidden="true" />{label}</li>)}</ul>
         </section>
 
         <section className={styles.problem}>
@@ -191,8 +207,8 @@ export default function LandingPage() {
             </div>
             <div className={styles.demoCard} data-variant="agenda" aria-hidden="true">
               <div className={styles.week}>{["Seg", "Ter", "Qua", "Qui", "Sex"].map((day, index) => <span key={day} data-active={index === 1 || undefined}><small>{day}</small>{12 + index}</span>)}</div>
-              <div className={styles.reminderMock}><b>09:00</b><span>Ana Paula Lima<small>Instalação</small></span><em><MessageCircle />Enviar</em></div>
-              <div className={styles.reminderMock}><b>14:00</b><span>Roberto Mendes<small>Limpeza</small></span><em data-done="true"><Check />Enviado</em></div>
+              <div className={styles.reminderMock}><b>09:00</b><span>Ana Paula Lima<small>Instalação elétrica</small></span><em><MessageCircle />Enviar</em></div>
+              <div className={styles.reminderMock}><b>14:00</b><span>Roberto Mendes<small>Jardinagem</small></span><em data-done="true"><Check />Enviado</em></div>
             </div>
           </div>
         </section>

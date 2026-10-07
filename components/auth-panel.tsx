@@ -41,7 +41,7 @@ export function AuthPanel({ mode, freeMonth = false, legal }: AuthPanelProps) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ name: form.get("name"), phone: form.get("phone"), email: form.get("email"), password, ...(isRegister && freeMonth ? { accountKind, companyName: form.get("companyName") ?? "" } : {}) }),
       });
-      const data = (await response.json()) as { error?: string; code?: string; requiresVerification?: boolean };
+      const data = (await response.json().catch(() => ({ error: response.status >= 500 ? "O servidor não respondeu corretamente. Tente novamente em instantes ou confira a configuração da aplicação." : "Resposta inesperada do servidor." }))) as { error?: string; code?: string; requiresVerification?: boolean };
       if (data.code === "EMAIL_NOT_VERIFIED") setNeedsVerification(true);
       if (!response.ok) throw new Error(data.error ?? "Não foi possível continuar.");
       // Reset in-memory views when the authenticated identity changes.

@@ -85,7 +85,13 @@ export function requestError(error: unknown, fallback: string) {
 }
 
 export function forbiddenMutationResponse(request: Request) {
-  return acceptsMutation(request)
-    ? null
-    : jsonResponse({ error: "Requisição não autorizada." }, { status: 403 });
+  try {
+    return acceptsMutation(request)
+      ? null
+      : jsonResponse({ error: "Requisição não autorizada." }, { status: 403 });
+  } catch {
+    // APP_URL ausente ou sem https em produção: responde em JSON em vez de uma página vazia.
+    console.error("VEMO_CONFIG_APP_URL_INVALID");
+    return jsonResponse({ error: "O servidor está sem a configuração APP_URL. Confira as variáveis da aplicação na Hostinger.", code: "config_app_url" }, { status: 503 });
+  }
 }
