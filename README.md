@@ -1,5 +1,9 @@
 # Vemo
 
+## Atualização mais recente: novo visual (07/10/2026)
+
+Leia `ATUALIZAR-NOVO-VISUAL.md` e `DESIGN.md`. Única migração nova: `database/018-business-logo.sql`.
+
 ## Pasta completa para Claude Code
 
 Comece por `COMECE-AQUI-CLAUDE-CODE.md`, `CLAUDE.md` e

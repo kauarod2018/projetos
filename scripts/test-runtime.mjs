@@ -55,6 +55,12 @@ try {
   assert.equal((await fetch(base + "/api/quotes/1/receipt", { method: "POST", headers, body: "{}" })).status, 401);
   assert.equal((await fetch(base + "/api/quotes/1/receipt", { method: "POST", headers: { ...headers, Origin: "https://evil.invalid" }, body: "{}" })).status, 403);
   assert.equal((await fetch(base + "/api/services")).status, 401);
+  assert.equal((await fetch(base + "/api/business-logo")).status, 401);
+  for (const method of ["PUT", "DELETE"]) {
+    assert.equal((await fetch(base + "/api/business-logo", { method, headers, ...(method === "DELETE" ? {} : { body: "{}" }) })).status, 401);
+    assert.equal((await fetch(base + "/api/business-logo", { method, headers: { ...headers, Origin: "https://evil.invalid" }, ...(method === "DELETE" ? {} : { body: "{}" }) })).status, 403);
+  }
+  assert.equal((await fetch(base + "/api/public/quotes/invalido/logo")).status, 404);
   for (const route of ["/api/appointments/1/report", "/api/quotes/1/workflow", "/api/operations/queue", "/api/workspaces/availability"]) assert.equal((await fetch(base + route)).status, 401);
   assert.equal((await fetch(base + "/api/public/service-report")).status, 404);
   for (const [route, method] of [["/api/appointments/1/report", "PUT"], ["/api/appointments/1/report/share", "POST"], ["/api/assistant/capture", "POST"], ["/api/quotes/1/workflow", "POST"], ["/api/workspaces/availability", "POST"]]) {
