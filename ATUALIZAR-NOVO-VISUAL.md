@@ -20,7 +20,11 @@ Apenas UMA atualização nova: `database/018-business-logo.sql`.
 - Não depende de outras tabelas (sem chave estrangeira).
 - Se ainda não importar, o site funciona normalmente; apenas o envio de logo mostra erro.
 
-As migrações antigas (013 a 017) continuam com o mesmo alerta de antes: confira o banco com `database/VERIFICAR-SaaS-Somente-Leitura.sql` antes de aplicar qualquer uma.
+### Banco da Hostinger sem as migrações 013 a 017 (conferido em 07/10/2026)
+O diagnóstico (`database/DIAGNOSTICO-COMPLETO-somente-leitura.sql`) mostrou que faltavam as migrações 013 a 017.
+Use **`database/ATUALIZAR-BANCO-013-a-017.sql`**: aplica tudo de uma vez, pode ser rodado de novo sem duplicar
+e não usa chave estrangeira para as tabelas antigas. Depois, rode o diagnóstico de novo: só devem aparecer as linhas 1-INFO.
+Não importe os arquivos 013 a 017 separados nem o `schema.sql`.
 
 ## Variáveis de ambiente (painel da Hostinger)
 Nada obrigatório mudou. Quando os termos estiverem revisados, para liberar cadastro público no modo SaaS:
