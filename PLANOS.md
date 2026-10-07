@@ -25,3 +25,12 @@ Implementar somente depois que o site estiver validado em produção.
 - Orçamentos já criados nunca são bloqueados ou apagados por causa do limite.
 - Ao trocar de Empresa para Individual, a logo deixa de aparecer nos orçamentos novos, mas não é apagada.
 - Atualizar a página de preços, os termos de uso e o texto do teste grátis.
+
+## Futuro: WhatsApp automático no plano Empresa (ideia aprovada para avaliar depois)
+- Usar somente a **API oficial do WhatsApp Business (Meta, Cloud API)**. Nada de bibliotecas não oficiais, que podem fazer o número ser banido.
+- Cada empresa conecta o próprio número pelo "cadastro incorporado" da Meta, sem copiar tokens à mão. Para oferecer isso, o Vemo precisa se tornar parceiro técnico da Meta, ou usar um provedor oficial (BSP) como intermediário.
+- Mensagens enviadas pela empresa (lembrete, confirmação) precisam de **modelos aprovados pela Meta** e de autorização do cliente para receber mensagens.
+- A Meta cobra por mensagem enviada com modelo. Opções: cota mensal incluída no Empresa, pacote extra ou repasse do custo. Conferir os preços atuais da Meta antes de definir.
+- O que implementar no Vemo: tela de conexão, modelos (confirmar, lembrete, a caminho, agradecimento), envio agendado (ex.: lembrete na véspera às 18h), registro do que foi enviado e leitura das respostas (cliente responde "SIM" e o atendimento muda para Confirmado).
+- Requer tarefa agendada no servidor e um endereço para receber as respostas da Meta (webhook). Conferir se a hospedagem da Hostinger mantém isso funcionando.
+- Manter o envio manual atual para o plano Individual e como alternativa quando a API não estiver conectada.
