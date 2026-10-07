@@ -74,7 +74,7 @@ export function AccountAccessPanel({ mode }: { mode: Mode }) {
           <div role="status" className="mt-5 space-y-5">
             {needsToken ? <CheckCircle2 aria-hidden="true" className="size-8 text-emerald-700" /> : <Mail aria-hidden="true" className="size-8 text-[#2f62f5]" />}
             <p className="text-sm leading-6 text-[#6f6d68]">{message}</p>
-            <Button asChild className="min-h-12 w-full rounded-lg bg-[#174fce] text-white hover:bg-[#103fae]"><Link href="/">Voltar para entrar</Link></Button>
+            <Button asChild className="min-h-12 w-full rounded-lg bg-[#174fce] text-white hover:bg-[#103fae]"><Link href="/entrar">Voltar para entrar</Link></Button>
           </div>
         ) : (
           <>
@@ -89,7 +89,7 @@ export function AccountAccessPanel({ mode }: { mode: Mode }) {
               <Button disabled={!ready || loading || (needsToken && !token)} aria-live="polite" className="min-h-12 w-full whitespace-normal rounded-lg bg-[#174fce] px-3 text-white hover:bg-[#103fae]" type="submit">{loading ? <><LoaderCircle className="size-4 shrink-0 animate-spin" aria-hidden="true" /> Aguarde…</> : details.action}</Button>
               {needsToken && <Link href={retryPath} className="block text-center text-sm font-medium text-[#2f62f5] underline-offset-4 hover:underline">Solicitar um novo link</Link>}
             </form>
-            <Link href="/" className="mt-7 inline-flex items-center gap-2 text-sm text-[#6f6d68] hover:text-[#2f62f5]"><ArrowLeft className="size-4" aria-hidden="true" /> Voltar para entrar</Link>
+            <Link href="/entrar" className="mt-7 inline-flex items-center gap-2 text-sm text-[#6f6d68] hover:text-[#2f62f5]"><ArrowLeft className="size-4" aria-hidden="true" /> Voltar para entrar</Link>
           </>
         )}
       </section>

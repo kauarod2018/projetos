@@ -30,7 +30,7 @@ export default function InvitePage() {
     <h1 className="mt-4 text-2xl font-semibold">Convite para uma empresa</h1>
     {loading ? <p role="status" className="mt-4 text-sm">Carregando sua conta…</p> : !/^[A-Za-z0-9_-]{32}$/.test(token) ? <p role="alert" className="mt-4 text-sm text-[#c8322f]">Este link está incompleto. Peça um novo convite.</p> : !user ? <>
       <p className="mt-4 text-sm leading-6 text-[#6f6d68]">Entre com o e-mail convidado. Depois, abra este mesmo link para confirmar o acesso.</p>
-      <div className="mt-5 flex flex-wrap gap-3"><Button asChild className="min-h-11"><Link href="/"><LogIn aria-hidden="true" />Entrar</Link></Button><Button asChild variant="outline" className="min-h-11"><Link href="/cadastro">Criar conta</Link></Button></div>
+      <div className="mt-5 flex flex-wrap gap-3"><Button asChild className="min-h-11"><Link href="/entrar"><LogIn aria-hidden="true" />Entrar</Link></Button><Button asChild variant="outline" className="min-h-11"><Link href="/cadastro">Criar conta</Link></Button></div>
     </> : <>
       <p className="mt-4 break-all text-sm leading-6 text-[#6f6d68]">Conta: {user.email}</p>
       <p className="mt-3 text-sm leading-6 text-[#6f6d68]">Ao aceitar, você entra na empresa com a permissão do convite. O teste gratuito da empresa não é reiniciado.</p>

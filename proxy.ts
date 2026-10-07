@@ -1,5 +1,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 
+const publicPages = new Set(["/", "/termos", "/privacidade", "/robots.txt", "/sitemap.xml"]);
+
 export function proxy(request: NextRequest) {
   const response = NextResponse.next();
   const development = process.env.NODE_ENV === "development";
@@ -18,11 +20,12 @@ export function proxy(request: NextRequest) {
     ...(https ? ["upgrade-insecure-requests"] : []),
   ].join("; ");
   response.headers.set("Content-Security-Policy", policy);
-  response.headers.set("Cache-Control", "private, no-store, max-age=0");
+  response.headers.set("Cache-Control", publicPages.has(request.nextUrl.pathname) ? "public, max-age=0, must-revalidate" : "private, no-store, max-age=0");
   response.headers.set("Referrer-Policy", "no-referrer");
   response.headers.set("X-Content-Type-Options", "nosniff");
   response.headers.set("X-Frame-Options", "DENY");
-  response.headers.set("X-Robots-Tag", "noindex, nofollow");
+  // Só as páginas públicas aparecem no Google; o sistema continua fora das buscas.
+  if (!publicPages.has(request.nextUrl.pathname)) response.headers.set("X-Robots-Tag", "noindex, nofollow");
   response.headers.set("Permissions-Policy", "camera=(), microphone=(), geolocation=(), payment=()");
   response.headers.set("Cross-Origin-Opener-Policy", "same-origin");
   if (https) response.headers.set("Strict-Transport-Security", "max-age=31536000");

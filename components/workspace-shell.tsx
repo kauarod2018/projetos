@@ -175,7 +175,7 @@ export function WorkspaceShell({ children }: { children: React.ReactNode }) {
   const lightTheme = true;
 
   useEffect(() => {
-    if (!loading && !user) router.replace("/");
+    if (!loading && !user) router.replace("/entrar");
   }, [loading, router, user]);
   useEffect(() => {
     if (!loading && user && pathname === "/hoje" && (employee || reception)) router.replace(employee ? "/meu-trabalho" : "/agenda");

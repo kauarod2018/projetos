@@ -83,7 +83,7 @@ export function AuthPanel({ mode, freeMonth = false, legal }: AuthPanelProps) {
             <Button type="submit" disabled={loading} aria-live="polite" className="h-12 w-full rounded-lg bg-[#174fce] text-base text-white shadow-sm hover:bg-[#103fae]">{loading ? <><LoaderCircle className="size-4 animate-spin" aria-hidden="true" /> Aguarde…</> : <>{isRegister ? "Criar minha conta" : "Entrar"}<ArrowRight className="size-4" aria-hidden="true" /></>}</Button>
           </form>
 
-          <p className="mt-7 text-center text-sm text-[#6f6d68]">{isRegister ? "Já tem uma conta?" : "Ainda não tem uma conta?"} <Link href={isRegister ? "/" : "/cadastro"} className="font-semibold text-[#2f62f5] underline-offset-4 hover:underline">{isRegister ? "Entrar" : "Criar conta grátis"}</Link></p>
+          <p className="mt-7 text-center text-sm text-[#6f6d68]">{isRegister ? "Já tem uma conta?" : "Ainda não tem uma conta?"} <Link href={isRegister ? "/entrar" : "/cadastro"} className="font-semibold text-[#2f62f5] underline-offset-4 hover:underline">{isRegister ? "Entrar" : "Criar conta grátis"}</Link></p>
         </section>
     </AccessShell>
   );
