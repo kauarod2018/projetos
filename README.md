@@ -1,5 +1,9 @@
 # Vemo
 
+## Planos futuros
+
+Decisão dos dois planos (Individual e Empresa) registrada em `PLANOS.md`. Ainda não implementado.
+
 ## Atualização mais recente: novo visual (07/10/2026)
 
 Leia `ATUALIZAR-NOVO-VISUAL.md` e `DESIGN.md`. Única migração nova: `database/018-business-logo.sql`.
