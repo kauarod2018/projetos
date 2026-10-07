@@ -234,7 +234,7 @@ export const receiptDateCorrections = mysqlTable("receipt_date_corrections", {
 
 // Logo do negócio, guardada à parte para não pesar nas consultas de usuários e orçamentos.
 export const businessLogos = mysqlTable("business_logos", {
-  userId: reference("user_id").primaryKey().references(() => users.id, { onDelete: "cascade" }),
+  userId: reference("user_id").primaryKey(),
   dataUrl: mediumtext("data_url").notNull(),
   updatedAt: timestamp("updated_at").notNull(),
 });

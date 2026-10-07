@@ -369,8 +369,7 @@ CREATE TABLE service_reports (
   FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 CREATE TABLE business_logos (
-  user_id INT UNSIGNED PRIMARY KEY,
+  user_id INT UNSIGNED NOT NULL PRIMARY KEY,
   data_url MEDIUMTEXT NOT NULL,
-  updated_at VARCHAR(24) NOT NULL,
-  FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+  updated_at VARCHAR(24) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;

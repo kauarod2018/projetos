@@ -17,7 +17,7 @@ Apenas UMA atualização nova: `database/018-business-logo.sql`.
 - Cria a tabela `business_logos`. Não altera nem apaga nenhum dado existente.
 - Faça backup no phpMyAdmin (Exportar) antes.
 - Importe o arquivo uma única vez (aba Importar ou cole o conteúdo na aba SQL).
-- Requer que a tabela `users` exista (já existe na sua instalação).
+- Não depende de outras tabelas (sem chave estrangeira).
 - Se ainda não importar, o site funciona normalmente; apenas o envio de logo mostra erro.
 
 As migrações antigas (013 a 017) continuam com o mesmo alerta de antes: confira o banco com `database/VERIFICAR-SaaS-Somente-Leitura.sql` antes de aplicar qualquer uma.
