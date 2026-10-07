@@ -3,494 +3,430 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Moldes para Festa de 1 Ano | Monte em casa gastando menos</title>
+<title>Kit Festa de 1 Aninho | Moldes para imprimir e montar</title>
 <meta name="description" content="Moldes prontos para imprimir, recortar e montar a decoração e as lembrancinhas da festa de 1 ano. Acesso imediato, a partir de R$ 17,90.">
-<meta property="og:title" content="Monte uma festa de 1 ano linda gastando muito menos">
-<meta property="og:description" content="Moldes prontos para imprimir, recortar e montar. A partir de R$ 17,90.">
+<meta property="og:title" content="Kit Festa de 1 Aninho - monte em casa gastando muito menos">
 <meta property="og:image" content="img/sacola-borboletas.jpg">
-<meta name="theme-color" content="#FFF7F9">
+<meta name="theme-color" content="#F2789F">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <!--
-  ANTES DE PUBLICAR, TROQUE (use Ctrl+F):
+  ANTES DE PUBLICAR (use Ctrl+F):
   - LINK_CHECKOUT_BASICO   -> link de pagamento do Kit Básico
   - LINK_CHECKOUT_COMPLETO -> link de pagamento do Kit Completo
-  - DEPOIMENTOS            -> coloque só prints reais (ou apague a seção)
-  As fotos do carrossel ficam na pasta img/. Envie a pasta junto com este arquivo.
+  - DEPOIMENTOS            -> troque pelos prints reais (ou apague a seção)
+  Envie a pasta img/ junto com este arquivo.
 -->
 
 <style>
 :root{
-  --bg:#FFF7F9;
-  --white:#fff;
-  --text:#2E2433;
-  --muted:#6B5F70;
-  --pink:#E07A9B;
-  --pink-dark:#C85F82;
-  --pink-light:#FBE3EB;
-  --lilac:#9C86C9;
-  --lilac-light:#EEE8F8;
-  --green:#1FA35B;
-  --green-dark:#178048;
-  --border:#F1DCE4;
+  --rosa:#F2789F;
+  --rosa-esc:#D9577F;
+  --rosa-claro:#FFE4EE;
+  --rosa-bg:#FFF4F8;
+  --lilas:#A98BD9;
+  --lilas-claro:#F1EAFB;
+  --amarelo:#FFD45C;
+  --verde:#24B358;
+  --verde-esc:#1A8A43;
+  --texto:#3D2B3D;
+  --cinza:#75657A;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--text);font-family:"Nunito",system-ui,sans-serif;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--rosa-bg);color:var(--texto);font-family:"Poppins",sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
-h1,h2,h3{font-family:"Montserrat",sans-serif;margin:0;line-height:1.15;letter-spacing:-.02em}
+h1,h2,h3{font-family:"Fredoka",sans-serif;font-weight:700;line-height:1.15;margin:0}
 p{margin:0}
-.container{max-width:1040px;margin:0 auto;padding:0 18px}
-.slim{max-width:680px}
-section{padding:56px 0}
-@media (min-width:860px){section{padding:84px 0}}
-.white{background:var(--white)}
-.center{text-align:center}
+.box{max-width:600px;margin:0 auto;padding:0 18px}
+.sec{padding:48px 0}
+.sec h2{font-size:30px;text-align:center;margin-bottom:10px}
+.sec .sub{text-align:center;color:var(--cinza);margin-bottom:26px}
+.rosa{color:var(--rosa-esc)}
+.branco{background:#fff}
+.lilas{background:var(--lilas-claro)}
 
-.hl{background:linear-gradient(transparent 58%,#F9C9D8 58%);padding:0 2px}
-
-h2{font-size:clamp(26px,5.4vw,38px);font-weight:800;margin-bottom:14px}
-.lead{color:var(--muted);font-size:18px}
-.center .lead{max-width:34em;margin:0 auto}
-
-/* aviso no topo */
-.topbar{background:var(--pink);color:#fff;text-align:center;font-weight:700;font-size:14px;padding:9px 14px}
+/* faixa topo */
+.faixa{background:var(--texto);color:#fff;text-align:center;font-size:13px;font-weight:600;padding:8px 12px;letter-spacing:.02em}
+.faixa b{color:var(--amarelo)}
 
 /* botão */
-.btn{
-  display:flex;align-items:center;justify-content:center;flex-direction:column;
-  background:var(--green);color:#fff;text-decoration:none;text-transform:uppercase;
-  font-family:"Montserrat",sans-serif;font-weight:800;font-size:16px;letter-spacing:.01em;line-height:1.25;
-  padding:18px 24px;border-radius:12px;text-align:center;width:100%;max-width:460px;margin:0 auto;
-  box-shadow:0 5px 0 var(--green-dark),0 12px 24px -10px rgba(31,163,91,.6);
-  transition:transform .12s,box-shadow .12s,filter .12s;
+.cta{
+  display:block;width:100%;background:var(--verde);color:#fff;text-decoration:none;text-align:center;
+  font-family:"Fredoka",sans-serif;font-weight:700;font-size:20px;line-height:1.2;text-transform:uppercase;
+  padding:18px 16px;border-radius:14px;border-bottom:5px solid var(--verde-esc);
+  animation:pulsar 1.8s ease-in-out infinite;
 }
-.btn:hover{filter:brightness(1.06)}
-.btn:active{transform:translateY(4px);box-shadow:0 1px 0 var(--green-dark)}
-.btn:focus-visible{outline:3px solid var(--lilac);outline-offset:3px}
-.btn small{text-transform:none;font-family:"Nunito",sans-serif;font-weight:600;font-size:13px;opacity:.92;margin-top:3px}
-.btn--outline{background:#fff;color:var(--green-dark);box-shadow:inset 0 0 0 2px var(--green),0 4px 0 var(--green-dark)}
-.btn--outline:active{box-shadow:inset 0 0 0 2px var(--green)}
-
-.trust{display:flex;justify-content:center;flex-wrap:wrap;gap:6px 16px;margin-top:16px;font-size:14px;color:var(--muted);font-weight:600}
-.trust span{display:inline-flex;align-items:center;gap:5px}
-.trust svg{width:16px;height:16px;color:var(--green)}
+.cta:hover{background:#29C262}
+.cta:active{transform:translateY(3px);border-bottom-width:2px}
+.cta span{display:block;font-family:"Poppins";font-weight:500;font-size:13px;text-transform:none;margin-top:4px;opacity:.95}
+@keyframes pulsar{0%,100%{transform:scale(1)}50%{transform:scale(1.035)}}
+.seguro{display:flex;justify-content:center;flex-wrap:wrap;gap:4px 14px;font-size:12.5px;color:var(--cinza);margin-top:12px;font-weight:500}
 
 /* topo */
-.hero{padding:34px 0 48px;text-align:center}
-.pill{display:inline-block;background:var(--lilac-light);color:#6A55A0;font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:.06em;padding:6px 14px;border-radius:999px;margin-bottom:16px}
-.hero h1{font-size:clamp(30px,7.4vw,52px);font-weight:900;max-width:15em;margin:0 auto 16px}
-.hero .lead{max-width:32em;margin:0 auto}
+.topo{background:linear-gradient(180deg,#FFD9E6 0%,var(--rosa-bg) 100%);padding:28px 0 40px;text-align:center}
+.selo-topo{display:inline-block;background:#fff;color:var(--rosa-esc);font-family:"Fredoka";font-weight:600;font-size:14px;padding:6px 16px;border-radius:30px;margin-bottom:16px;box-shadow:0 3px 10px rgba(217,87,127,.18)}
+.topo h1{font-size:34px;margin-bottom:12px}
+.topo h1 .destaque{background:var(--rosa);color:#fff;padding:0 8px;border-radius:8px;box-decoration-break:clone;-webkit-box-decoration-break:clone;line-height:1.35}
+.topo p.chamada{font-size:16.5px;color:var(--cinza);margin-bottom:22px}
+@media (min-width:600px){.topo h1{font-size:42px}}
 
 /* carrossel */
-.carousel{position:relative;margin:30px 0 30px}
-.track{
-  display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;
-  padding:4px 18px 8px;scrollbar-width:none;-webkit-overflow-scrolling:touch;
-}
-.track::-webkit-scrollbar{display:none}
-.slide{flex:0 0 78%;scroll-snap-align:center;margin:0;border-radius:18px;overflow:hidden;background:var(--pink-light);aspect-ratio:4/5;box-shadow:0 10px 26px -14px rgba(46,36,51,.45)}
-.slide img{width:100%;height:100%;object-fit:cover}
-@media (min-width:700px){.slide{flex-basis:44%}}
-@media (min-width:1000px){.track{padding:4px max(18px,calc((100vw - 1040px)/2 + 18px)) 8px}.slide{flex-basis:31.5%}}
-.arrow{
-  position:absolute;top:50%;transform:translateY(-60%);width:44px;height:44px;border-radius:50%;border:0;
-  background:#fff;color:var(--text);box-shadow:0 4px 14px rgba(46,36,51,.2);cursor:pointer;display:none;place-items:center;
-}
-.arrow svg{width:20px;height:20px}
-.arrow:hover{background:var(--pink-light)}
-.arrow--prev{left:16px}.arrow--next{right:16px}
-@media (min-width:700px){.arrow{display:grid}}
-.dots{display:flex;justify-content:center;gap:8px;margin-top:14px}
-.dots button{width:9px;height:9px;border-radius:999px;border:0;padding:0;background:#E8CBD6;cursor:pointer;transition:width .2s,background .2s}
-.dots button[aria-current="true"]{width:26px;background:var(--pink)}
-.photo-note{font-size:13px;color:#9A8E9E;text-align:center;margin-top:10px}
+.carrossel{position:relative;border-radius:20px;overflow:hidden;background:#fff;border:4px solid #fff;box-shadow:0 12px 30px -12px rgba(217,87,127,.45);margin-bottom:12px}
+.trilho{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth}
+.trilho::-webkit-scrollbar{display:none}
+.trilho img{flex:0 0 100%;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;scroll-snap-align:start;border-radius:16px}
+.seta{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:var(--rosa-esc);font-size:22px;font-weight:700;line-height:1;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.seta.esq{left:10px}.seta.dir{right:10px}
+.bolinhas{display:flex;justify-content:center;gap:7px;margin-bottom:24px}
+.bolinhas button{width:9px;height:9px;padding:0;border:0;border-radius:9px;background:#F3BFD0;cursor:pointer;transition:width .2s}
+.bolinhas button.on{width:24px;background:var(--rosa)}
 
-/* lista do que vem */
-.box{background:#fff;border:1px solid var(--border);border-radius:20px;padding:26px 22px;margin-top:28px}
-@media (min-width:700px){.box{padding:34px 36px}}
-.list{list-style:none;margin:0;padding:0;display:grid;gap:14px}
-.list li{display:flex;gap:12px;align-items:flex-start;font-size:17px}
-.list .ic{flex:none;width:26px;height:26px;border-radius:50%;background:#E3F5EA;color:var(--green);display:grid;place-items:center;margin-top:1px}
-.list .ic svg{width:15px;height:15px}
-.list b{font-weight:800}
-@media (min-width:760px){.list--2{grid-template-columns:1fr 1fr;column-gap:32px}}
-.note{margin-top:22px;background:var(--lilac-light);border-radius:14px;padding:16px 18px;font-size:16px;color:#4F4365}
-.note b{color:var(--text)}
+/* comparação */
+.compara{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.compara div{border-radius:16px;padding:18px 14px}
+.compara h3{font-size:17px;margin-bottom:10px;text-align:center}
+.compara ul{list-style:none;margin:0;padding:0;font-size:14px;display:grid;gap:8px}
+.ruim{background:#fff;border:2px solid #F1D5DF}
+.ruim h3{color:#B05470}
+.bom{background:#E9F8EE;border:2px solid #A9E2BD}
+.bom h3{color:var(--verde-esc)}
+
+/* listas */
+.card{background:#fff;border-radius:20px;padding:24px 20px;box-shadow:0 6px 20px -10px rgba(61,43,61,.18)}
+.checks{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.checks li{display:flex;gap:10px;align-items:flex-start;font-size:15.5px}
+.checks li::before{content:"";flex:none;width:22px;height:22px;margin-top:1px;border-radius:50%;background:var(--verde) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 6 9 17l-5-5'/%3E%3C/svg%3E") center/13px no-repeat}
+.aviso{margin-top:18px;background:var(--rosa-claro);border-radius:14px;padding:14px 16px;font-size:14.5px;text-align:center}
+
+/* galeria */
+.galeria{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
+.galeria img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:14px;border:3px solid #fff;box-shadow:0 4px 14px -6px rgba(61,43,61,.25)}
+.galeria img:first-child{grid-column:span 2;aspect-ratio:16/10}
+.legenda{text-align:center;font-size:12px;color:var(--cinza);margin-top:8px}
 
 /* passos */
-.steps{display:grid;gap:14px;margin-top:30px}
-@media (min-width:800px){.steps{grid-template-columns:repeat(3,1fr);gap:18px}}
-.step{background:var(--bg);border-radius:18px;padding:22px 20px;display:flex;gap:16px;align-items:flex-start}
-@media (min-width:800px){.step{flex-direction:column;padding:26px 22px}}
-.step__n{flex:none;width:42px;height:42px;border-radius:50%;background:var(--pink);color:#fff;font-family:"Montserrat";font-weight:900;font-size:18px;display:grid;place-items:center}
-.step h3{font-size:17px;font-weight:800;margin-bottom:4px}
-.step p{color:var(--muted);font-size:15.5px}
-
-/* pra quem */
-.honest{margin-top:18px;border:2px solid var(--border);border-radius:16px;padding:18px 20px;font-size:16px;color:var(--muted)}
-.honest b{color:var(--text)}
+.passos{display:grid;gap:14px}
+.passo{display:flex;gap:14px;align-items:center;background:#fff;border-radius:18px;padding:16px 18px}
+.passo .num{flex:none;width:52px;height:52px;border-radius:50%;background:var(--rosa-claro);display:grid;place-items:center;font-size:24px}
+.passo h3{font-size:18px}
+.passo p{font-size:14.5px;color:var(--cinza)}
 
 /* bônus */
-.bonus{background:var(--lilac-light)}
-.bonus-card{background:#fff;border-radius:22px;padding:30px 22px;max-width:760px;margin:0 auto;text-align:center;border:2px solid #DCD1F0}
-@media (min-width:700px){.bonus-card{padding:40px 44px}}
-.bonus-tag{display:inline-block;background:var(--lilac);color:#fff;font-family:"Montserrat";font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.08em;padding:6px 14px;border-radius:999px;margin-bottom:14px}
-.chips{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:22px 0 18px}
-.chips span{background:var(--bg);border:1px solid var(--border);border-radius:999px;padding:7px 14px;font-size:15px;font-weight:700}
-.fine{font-size:13.5px;color:#9A8E9E}
+.bonus{position:relative;background:#fff;border:3px dashed var(--amarelo);border-radius:22px;padding:30px 20px 24px;text-align:center}
+.bonus .fita{position:absolute;top:-16px;left:50%;transform:translateX(-50%);background:var(--amarelo);color:var(--texto);font-family:"Fredoka";font-weight:700;font-size:14px;padding:6px 18px;border-radius:30px;white-space:nowrap}
+.bonus h3{font-size:24px;margin-bottom:8px}
+.bonus p{color:var(--cinza);font-size:15px}
+.tags{display:flex;flex-wrap:wrap;justify-content:center;gap:7px;margin:18px 0}
+.tags span{background:var(--lilas-claro);color:#5E4791;font-size:13px;font-weight:600;padding:6px 12px;border-radius:30px}
+.mini{font-size:12px;color:#9C8DA0}
 
 /* depoimentos */
-.proofs{display:grid;gap:14px;margin-top:28px}
-@media (min-width:760px){.proofs{grid-template-columns:repeat(3,1fr)}}
-.proof{background:#fff;border:2px dashed var(--border);border-radius:16px;min-height:260px;display:grid;place-items:center;color:#B3A6B8;font-size:14px;padding:20px;text-align:center}
-.proof img{border-radius:12px}
+.depo{display:grid;gap:12px}
+.depo .print{background:#E5DDD5;border-radius:16px;min-height:200px;display:grid;place-items:center;color:#8A7F78;font-size:13px;text-align:center;padding:16px;border:3px solid #fff}
+.depo .print img{border-radius:10px}
 
-/* kits */
-.plans{display:grid;gap:22px;margin-top:34px;align-items:start}
-@media (min-width:820px){.plans{grid-template-columns:1fr 1fr;max-width:900px;margin-left:auto;margin-right:auto}}
-.plan{background:#fff;border:1px solid var(--border);border-radius:22px;padding:28px 22px;position:relative}
-.plan--best{border:3px solid var(--pink);box-shadow:0 18px 40px -22px rgba(200,95,130,.55)}
-@media (max-width:819px){.plan--best{order:-1}}
-.plan__flag{position:absolute;top:-15px;left:50%;transform:translateX(-50%);background:var(--pink);color:#fff;font-family:"Montserrat";font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.06em;padding:6px 16px;border-radius:999px;white-space:nowrap}
-.plan h3{font-size:22px;font-weight:800;text-align:center}
-.plan__for{text-align:center;color:var(--muted);font-size:15.5px;margin:6px 0 18px}
-.price{text-align:center;margin-bottom:20px}
-.price__val{font-family:"Montserrat";font-weight:900;font-size:50px;line-height:1;letter-spacing:-.03em;color:var(--text)}
-.price__val small{font-size:20px;font-weight:800;vertical-align:top;margin-right:4px;position:relative;top:6px}
-.plan--best .price__val{color:var(--pink-dark)}
-.price__once{font-size:14px;color:var(--muted);margin-top:6px}
-.plan .list{margin-bottom:24px}
-.plan .list li{font-size:16px}
-.plan .list li.extra .ic{background:var(--pink-light);color:var(--pink-dark)}
-.plan__diff{text-align:center;font-size:14px;color:var(--muted);margin-top:14px}
+/* ofertas */
+.oferta{background:#fff;border-radius:24px;padding:28px 20px 24px;text-align:center;border:2px solid #F1D5DF;position:relative}
+.oferta + .oferta{margin-top:30px}
+.oferta.top{border:4px solid var(--rosa);box-shadow:0 16px 36px -16px rgba(217,87,127,.6)}
+.oferta .fita{position:absolute;top:-17px;left:50%;transform:translateX(-50%);background:var(--rosa);color:#fff;font-family:"Fredoka";font-weight:700;font-size:15px;padding:6px 20px;border-radius:30px;white-space:nowrap}
+.oferta h3{font-size:26px}
+.oferta .pra{color:var(--cinza);font-size:14.5px;margin:4px 0 18px}
+.oferta .checks{text-align:left;margin:0 auto 22px;max-width:380px}
+.oferta .checks li.extra{font-weight:600}
+.oferta .checks li.extra::before{background-color:var(--rosa)}
+.preco{margin-bottom:6px}
+.preco small{display:block;font-size:14px;color:var(--cinza)}
+.preco strong{font-family:"Fredoka";font-size:56px;line-height:1;color:var(--texto)}
+.oferta.top .preco strong{color:var(--rosa-esc)}
+.preco sup{font-size:22px;font-family:"Fredoka";font-weight:700;vertical-align:28px;margin-right:2px}
+.oferta .cta.lite{background:#fff;color:var(--verde-esc);border:2px solid var(--verde);border-bottom-width:5px;animation:none}
+.dif{font-size:13px;color:var(--cinza);margin-top:12px}
 
 /* garantia */
-.guarantee{display:flex;flex-direction:column;align-items:center;gap:18px;text-align:center;max-width:720px;margin:0 auto}
-@media (min-width:720px){.guarantee{flex-direction:row;text-align:left;gap:28px}}
-.seal{flex:none;width:112px;height:112px;border-radius:50%;background:#E3F5EA;color:var(--green-dark);display:grid;place-items:center;text-align:center;font-family:"Montserrat";font-weight:900;line-height:1}
-.seal b{display:block;font-size:42px}
-.seal span{font-size:12px;letter-spacing:.08em;text-transform:uppercase}
-.guarantee h2{font-size:26px;margin-bottom:8px}
-.guarantee p{color:var(--muted)}
+.garantia{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px}
+.selo{width:120px;height:120px;border-radius:50%;background:var(--amarelo);display:grid;place-items:center;font-family:"Fredoka";font-weight:700;line-height:1;color:var(--texto);border:6px solid #fff;box-shadow:0 0 0 3px var(--amarelo)}
+.selo b{display:block;font-size:46px}
+.selo span{font-size:12px;text-transform:uppercase}
+.garantia h2{margin-bottom:6px}
+.garantia p{color:var(--cinza);font-size:15px}
 
 /* faq */
-.faq{display:grid;gap:10px;margin-top:28px}
-.faq details{background:#fff;border:1px solid var(--border);border-radius:14px}
-.faq summary{list-style:none;cursor:pointer;padding:18px 52px 18px 18px;font-weight:800;font-size:16.5px;position:relative}
+.faq details{background:#fff;border-radius:14px;margin-bottom:10px;overflow:hidden}
+.faq summary{list-style:none;cursor:pointer;padding:16px 46px 16px 16px;font-weight:600;font-size:15px;position:relative}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";position:absolute;right:18px;top:50%;transform:translateY(-52%);width:26px;height:26px;border-radius:50%;background:var(--pink-light);color:var(--pink-dark);font-size:20px;line-height:26px;text-align:center;font-weight:800;transition:transform .2s}
-.faq details[open] summary::after{transform:translateY(-52%) rotate(45deg)}
-.faq summary:focus-visible{outline:3px solid var(--lilac);outline-offset:-3px;border-radius:14px}
-.faq .ans{padding:0 18px 18px;color:var(--muted);font-size:16px}
-.faq .ans p+p{margin-top:8px}
+.faq summary::after{content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);font-family:"Fredoka";font-size:24px;color:var(--rosa-esc);transition:transform .2s}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+.faq .r{padding:0 16px 16px;font-size:14.5px;color:var(--cinza)}
 
 /* final */
-.final{background:var(--pink-light);text-align:center}
-.final h2{font-size:clamp(26px,5.6vw,40px)}
-.final .lead{margin-bottom:28px}
+.final{background:linear-gradient(180deg,var(--rosa-bg),#FFD9E6);text-align:center}
+.final h2{font-size:30px;margin-bottom:12px}
+.final p{color:var(--cinza);margin-bottom:24px}
 
-footer{background:var(--text);color:#CFC3D3;text-align:center;font-size:13.5px;padding:30px 0 110px}
-footer p+p{margin-top:6px}
-@media (min-width:860px){footer{padding-bottom:30px}}
+footer{background:var(--texto);color:#D8C9D8;text-align:center;font-size:12.5px;padding:26px 0 30px}
+footer p+p{margin-top:5px}
 
-/* barra fixa no celular */
-.sticky{position:fixed;left:0;right:0;bottom:0;z-index:20;background:#fff;border-top:1px solid var(--border);padding:10px 14px calc(10px + env(safe-area-inset-bottom));display:flex;align-items:center;gap:12px;transform:translateY(110%);transition:transform .25s}
-.sticky.show{transform:none}
-.sticky__t{font-size:13px;color:var(--muted);line-height:1.25}
-.sticky__t b{display:block;font-size:16px;color:var(--text);font-family:"Montserrat";font-weight:800}
-.sticky .btn{width:auto;margin:0 0 0 auto;padding:13px 18px;font-size:14px;box-shadow:0 4px 0 var(--green-dark)}
-@media (min-width:860px){.sticky{display:none}}
-
-@media (prefers-reduced-motion:reduce){html,.track{scroll-behavior:auto}.btn,.sticky,.dots button{transition:none}}
+@media (prefers-reduced-motion:reduce){.cta{animation:none}.trilho,html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
 
-<div class="topbar">Produto digital · acesso na hora pelo e-mail</div>
+<div class="faixa">🎉 PRODUTO DIGITAL · <b>ACESSO IMEDIATO</b></div>
 
 <!-- TOPO -->
-<header class="hero">
-  <div class="container">
-    <span class="pill">Festa de 1 ano</span>
-    <h1>Monte uma festa de 1 ano linda e personalizada <span class="hl">gastando muito menos</span></h1>
-    <p class="lead">Moldes prontos pra imprimir, recortar e montar a decoração e as lembrancinhas do primeiro aniversário do seu filho, sem pagar caro em personalizado.</p>
-  </div>
+<header class="topo">
+  <div class="box">
+    <span class="selo-topo">🎀 Kit Festa de 1 Aninho</span>
+    <h1>Monte uma festa de 1 ano linda e personalizada <span class="destaque">gastando muito menos</span></h1>
+    <p class="chamada">Moldes prontos pra você imprimir, recortar e montar a decoração e as lembrancinhas do primeiro aniversário do seu bebê, sem pagar caro em personalizado.</p>
 
-  <div class="carousel" aria-roledescription="carrossel" aria-label="Exemplos de personalizados">
-    <div class="track" id="track" tabindex="0">
-      <figure class="slide"><img src="img/sacola-borboletas.jpg" alt="Sacolinha personalizada com borboletas e laço rosa" width="736" height="1104"></figure>
-      <figure class="slide"><img src="img/topo-numero-1.jpg" alt="Topo de bolo em formato de número 1 com flores e borboletas lilás" width="360" height="640" loading="lazy"></figure>
-      <figure class="slide"><img src="img/caixinha-ursinha.jpg" alt="Caixinhas de lembrancinha com ursinha e laço rosê" width="736" height="920" loading="lazy"></figure>
-      <figure class="slide"><img src="img/sacolinhas-azuis.jpg" alt="Sacolinhas azuis personalizadas com tema ursinho" width="736" height="981" loading="lazy"></figure>
-      <figure class="slide"><img src="img/porta-retrato-1-ano.jpg" alt="Lembrancinha em formato de número 1 com foto do bebê" width="736" height="552" loading="lazy" style="object-position:30% center"></figure>
+    <div class="carrossel">
+      <div class="trilho" id="trilho">
+        <img src="img/sacola-borboletas.jpg" alt="Sacolinha personalizada com borboletas" width="736" height="1104">
+        <img src="img/topo-numero-1.jpg" alt="Topo de bolo número 1 com flores e borboletas" width="360" height="640" loading="lazy">
+        <img src="img/caixinha-ursinha.jpg" alt="Caixinhas de lembrancinha com ursinha e laço" width="736" height="920" loading="lazy">
+        <img src="img/sacolinhas-azuis.jpg" alt="Sacolinhas azuis personalizadas" width="736" height="981" loading="lazy">
+        <img src="img/porta-retrato-1-ano.jpg" alt="Lembrancinha número 1 com foto do bebê" width="736" height="552" loading="lazy">
+      </div>
+      <button class="seta esq" type="button" aria-label="Foto anterior">‹</button>
+      <button class="seta dir" type="button" aria-label="Próxima foto">›</button>
     </div>
-    <button class="arrow arrow--prev" type="button" aria-label="Foto anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
-    <button class="arrow arrow--next" type="button" aria-label="Próxima foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg></button>
-    <div class="dots" id="dots"></div>
-    <p class="photo-note">Imagens ilustrativas</p>
-  </div>
+    <div class="bolinhas" id="bolinhas"></div>
 
-  <div class="container">
-    <a class="btn" href="#kits">Quero montar minha festa gastando menos</a>
-    <div class="trust">
-      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>A partir de R$ 17,90</span>
-      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Acesso imediato</span>
-      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>7 dias de garantia</span>
-    </div>
+    <a class="cta" href="#kits">Quero montar minha festa<span>a partir de R$ 17,90</span></a>
+    <div class="seguro"><span>🔒 Compra segura</span><span>⚡ Acesso na hora</span><span>✅ 7 dias de garantia</span></div>
   </div>
 </header>
 
-<!-- O QUE VOCÊ RECEBE -->
-<section class="white">
-  <div class="container slim">
-    <div class="center">
-      <h2>O que você vai receber</h2>
-      <p class="lead">Um pack feito pra facilitar a montagem da festa, mesmo que você nunca tenha feito um personalizado na vida.</p>
-    </div>
-    <div class="box">
-      <ul class="list">
-        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>Moldes digitais</b> para festa infantil de 1 ano</span></li>
-        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>Arquivos prontos</b> pra mandar imprimir</span></li>
-        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>Modelos de lembrancinhas</b> e personalizados</span></li>
-        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Tudo <b>separado e organizado</b>, fácil de achar</span></li>
-        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>Acesso imediato</b> depois da compra</span></li>
-        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span><span>Pode <b>imprimir de novo</b> sempre que precisar</span></li>
-      </ul>
-      <p class="note"><b>Não precisa ser designer nem artesã.</b> Se você sabe usar tesoura e cola, você consegue. É imprimir, recortar e montar no seu ritmo.</p>
+<!-- COMPARAÇÃO -->
+<section class="sec branco">
+  <div class="box">
+    <h2>Personalizado pronto <span class="rosa">custa caro</span></h2>
+    <p class="sub">Topo de bolo, caixinha, tag, sacolinha... cada item tem seu preço, e no final a conta assusta.</p>
+    <div class="compara">
+      <div class="ruim">
+        <h3>❌ Comprando pronto</h3>
+        <ul>
+          <li>Paga por cada item</li>
+          <li>Depende do prazo da loja</li>
+          <li>Paga frete</li>
+          <li>Se faltar, tem que encomendar de novo</li>
+        </ul>
+      </div>
+      <div class="bom">
+        <h3>✅ Com os moldes</h3>
+        <ul>
+          <li>Paga uma vez só</li>
+          <li>Monta no seu tempo</li>
+          <li>Acesso na hora, sem frete</li>
+          <li>Faltou? É só imprimir de novo</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- COMO FUNCIONA -->
-<section>
-  <div class="container">
-    <div class="center">
-      <h2>Como funciona</h2>
-      <p class="lead">Simples assim:</p>
+<!-- O QUE VEM -->
+<section class="sec">
+  <div class="box">
+    <h2>O que você <span class="rosa">vai receber</span> 🎁</h2>
+    <p class="sub">Tudo pensado pra facilitar, mesmo que você nunca tenha feito um personalizado.</p>
+    <div class="card">
+      <ul class="checks">
+        <li>Moldes digitais para festa infantil de 1 ano</li>
+        <li>Arquivos prontos para impressão</li>
+        <li>Modelos de lembrancinhas e personalizados</li>
+        <li>Materiais organizados pra facilitar o uso</li>
+        <li>Acesso digital imediato após a compra</li>
+        <li>Arquivos que você pode reutilizar sempre que precisar</li>
+      </ul>
+      <p class="aviso">✂️ <b>Não precisa ser designer nem artesã.</b> É só imprimir, recortar e montar.</p>
     </div>
-    <div class="steps">
-      <div class="step white"><span class="step__n">1</span><div><h3>Você compra</h3><p>Escolhe o kit e o acesso chega no seu e-mail assim que o pagamento é confirmado.</p></div></div>
-      <div class="step white"><span class="step__n">2</span><div><h3>Imprime</h3><p>Em casa ou numa gráfica ou papelaria perto de você. É só levar o arquivo.</p></div></div>
-      <div class="step white"><span class="step__n">3</span><div><h3>Recorta e monta</h3><p>Com calma, aos poucos, do jeitinho que você quiser.</p></div></div>
+
+    <div class="galeria">
+      <img src="img/caixinha-ursinha.jpg" alt="Caixinhas de lembrancinha com laço rosê" loading="lazy" style="object-position:center 60%">
+      <img src="img/topo-numero-1.jpg" alt="Topo de bolo número 1" loading="lazy">
+      <img src="img/sacolinhas-azuis.jpg" alt="Sacolinhas azuis personalizadas" loading="lazy">
+    </div>
+    <p class="legenda">Imagens ilustrativas</p>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="sec lilas">
+  <div class="box">
+    <h2>Como funciona?</h2>
+    <p class="sub">Simples, rápido e do seu jeito.</p>
+    <div class="passos">
+      <div class="passo"><span class="num">🛒</span><div><h3>1. Escolha seu kit</h3><p>Depois do pagamento, o acesso chega no seu e-mail.</p></div></div>
+      <div class="passo"><span class="num">🖨️</span><div><h3>2. Imprima</h3><p>Em casa ou numa gráfica ou papelaria perto de você.</p></div></div>
+      <div class="passo"><span class="num">✂️</span><div><h3>3. Recorte e monte</h3><p>No seu ritmo, com as suas mãos e muito carinho.</p></div></div>
     </div>
   </div>
 </section>
 
 <!-- PRA QUEM É -->
-<section class="white">
-  <div class="container slim">
-    <div class="center">
-      <h2>Esse pack é pra você que...</h2>
-    </div>
-    <div class="box">
-      <ul class="list">
-        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Está preparando a festa de 1 ano do seu filho ou filha</li>
-        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Fez orçamento de personalizado e achou caro demais</li>
-        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Não quer gastar centenas de reais com lembrancinha pronta</li>
-        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Gosta da ideia de montar parte da festa em casa</li>
-        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Quer uma festa bonita mesmo com orçamento menor</li>
-        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Não sabe quais materiais comprar nem onde achar barato</li>
-      </ul>
-    </div>
-    <p class="honest"><b>Só pra deixar claro:</b> você recebe os moldes e monta em casa. Se você quer receber tudo pronto na sua porta, o melhor é contratar uma loja de personalizados.</p>
+<section class="sec branco">
+  <div class="box">
+    <h2>Esse kit é <span class="rosa">pra você</span> que:</h2>
+    <p class="sub">&nbsp;</p>
+    <ul class="checks">
+      <li>Está preparando a festa de 1 ano do seu filho ou filha</li>
+      <li>Quer economizar com personalizados</li>
+      <li>Gosta da ideia de montar parte da festa em casa</li>
+      <li>Não quer gastar centenas de reais com lembrancinhas prontas</li>
+      <li>Quer uma festa bonita mesmo com orçamento menor</li>
+      <li>Procura ideias modernas e fáceis de fazer</li>
+      <li>Não sabe quais materiais comprar</li>
+    </ul>
+    <p class="aviso" style="margin-top:24px">💕 O primeiro aniversário acontece uma vez só. E você não precisa gastar uma fortuna pra ele ficar lindo.</p>
   </div>
 </section>
 
 <!-- BÔNUS -->
-<section class="bonus">
-  <div class="container">
-    <div class="bonus-card">
-      <span class="bonus-tag">Bônus do Kit Completo</span>
-      <h2>Lista de materiais baratos pra montar sua festa</h2>
-      <p class="lead">Depois de imprimir, vem a dúvida: onde compro a sacolinha, a fita, o adesivo? Já deixei separado pra você uma lista com links de materiais com preço bom na Shopee. Em vez de procurar item por item, você já começa sabendo onde comprar.</p>
-      <div class="chips">
-        <span>Sacolinhas transparentes</span><span>Papéis pra impressão</span><span>Fitas e laços</span><span>Adesivos</span><span>Embalagens</span><span>Itens pra lembrancinhas</span><span>Acabamento</span><span>Acessórios de decoração</span>
+<section class="sec">
+  <div class="box">
+    <div class="bonus">
+      <span class="fita">🎁 BÔNUS DO KIT COMPLETO</span>
+      <h3>Lista de materiais baratos pra montar sua festa</h3>
+      <p>Uma seleção de links da Shopee com os materiais pra montar os personalizados e as lembrancinhas. Nada de passar horas procurando item por item.</p>
+      <div class="tags">
+        <span>Sacolinhas transparentes</span><span>Papéis</span><span>Fitas e laços</span><span>Adesivos</span><span>Embalagens</span><span>Itens pra lembrancinhas</span><span>Acabamento</span><span>Decoração</span>
       </div>
-      <p class="fine">Preços e estoque podem mudar conforme os vendedores e as promoções da Shopee. Os produtos são comprados à parte.</p>
+      <p class="mini">Preços e disponibilidade podem variar conforme os vendedores e promoções da Shopee.</p>
     </div>
   </div>
 </section>
 
-<!-- DEPOIMENTOS
-     Use SOMENTE prints reais de quem comprou. Troque cada [ ... ] por:
-     <img src="img/print-1.jpg" alt="Depoimento de cliente">
-     Se ainda não tiver, apague esta <section> inteira. -->
-<section class="white">
-  <div class="container">
-    <div class="center">
-      <h2>O que as mães estão dizendo</h2>
-    </div>
-    <div class="proofs">
-      <div class="proof">[ print de depoimento real 1 ]</div>
-      <div class="proof">[ print de depoimento real 2 ]</div>
-      <div class="proof">[ print de depoimento real 3 ]</div>
+<!-- DEPOIMENTOS: use só prints reais. Troque cada .print por <img src="img/print-1.jpg" alt="Depoimento">.
+     Se ainda não tiver, apague esta section. -->
+<section class="sec branco">
+  <div class="box">
+    <h2>Veja o que as <span class="rosa">mamães</span> estão dizendo 💬</h2>
+    <p class="sub">&nbsp;</p>
+    <div class="depo">
+      <div class="print">[ print real do WhatsApp 1 ]</div>
+      <div class="print">[ print real do WhatsApp 2 ]</div>
+      <div class="print">[ print real do WhatsApp 3 ]</div>
     </div>
   </div>
 </section>
 
 <!-- KITS -->
-<section id="kits">
-  <div class="container">
-    <div class="center">
-      <h2>Escolha o seu kit</h2>
-      <p class="lead">Pagamento único. Sem mensalidade.</p>
+<section class="sec" id="kits">
+  <div class="box">
+    <h2>Escolha o <span class="rosa">seu kit</span> 👇</h2>
+    <p class="sub">Pagamento único, sem mensalidade.</p>
+
+    <div class="oferta">
+      <h3>Kit Básico</h3>
+      <p class="pra">Ideal pra quem quer só os moldes e já sabe quais materiais vai usar.</p>
+      <ul class="checks">
+        <li>Pack de moldes digitais</li>
+        <li>Arquivos prontos para impressão</li>
+        <li>Modelos de personalizados e lembrancinhas</li>
+        <li>Acesso imediato</li>
+      </ul>
+      <div class="preco"><small>por apenas</small><strong><sup>R$</sup>17,90</strong></div>
+      <a class="cta lite" href="LINK_CHECKOUT_BASICO">Quero o Kit Básico</a>
     </div>
 
-    <div class="plans">
-      <div class="plan plan--best">
-        <span class="plan__flag">Mais escolhido</span>
-        <h3>Kit Completo</h3>
-        <p class="plan__for">Moldes + lista de materiais com links. Pra quem quer praticidade.</p>
-        <div class="price">
-          <div class="price__val"><small>R$</small>37,00</div>
-          <div class="price__once">pagamento único</div>
-        </div>
-        <ul class="list">
-          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Tudo do Kit Básico</li>
-          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Pack completo de moldes</li>
-          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Modelos de personalizados e lembrancinhas</li>
-          <li class="extra"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span><b>Lista especial de materiais</b></li>
-          <li class="extra"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span><b>Links de produtos baratos na Shopee</b></li>
-          <li class="extra"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg></span><b>Sugestões de itens pra montagem</b></li>
-        </ul>
-        <a class="btn" href="LINK_CHECKOUT_COMPLETO">Quero o Kit Completo<small>por R$ 37,00</small></a>
-        <p class="plan__diff">Só R$ 19,10 a mais que o Básico</p>
-      </div>
-
-      <div class="plan">
-        <h3>Kit Básico</h3>
-        <p class="plan__for">Só os moldes. Pra quem já sabe onde comprar o material.</p>
-        <div class="price">
-          <div class="price__val"><small>R$</small>17,90</div>
-          <div class="price__once">pagamento único</div>
-        </div>
-        <ul class="list">
-          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Pack de moldes digitais</li>
-          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Arquivos prontos pra imprimir</li>
-          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Modelos de personalizados e lembrancinhas</li>
-          <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Acesso imediato</li>
-        </ul>
-        <a class="btn btn--outline" href="LINK_CHECKOUT_BASICO">Quero o Kit Básico<small>por R$ 17,90</small></a>
-      </div>
+    <div class="oferta top">
+      <span class="fita">⭐ MAIS ESCOLHIDO</span>
+      <h3>Kit Completo</h3>
+      <p class="pra">Moldes + lista de materiais com links. Pra quem quer praticidade.</p>
+      <ul class="checks">
+        <li>Tudo do Kit Básico</li>
+        <li>Pack completo de moldes</li>
+        <li>Modelos de personalizados e lembrancinhas</li>
+        <li class="extra">Lista especial de materiais</li>
+        <li class="extra">Links de produtos baratos na Shopee</li>
+        <li class="extra">Sugestões de itens pra montagem</li>
+      </ul>
+      <div class="preco"><small>por apenas</small><strong><sup>R$</sup>37,00</strong></div>
+      <a class="cta" href="LINK_CHECKOUT_COMPLETO">Quero o Kit Completo<span>acesso imediato</span></a>
+      <p class="dif">Economize tempo procurando materiais e tenha tudo num lugar só.</p>
     </div>
+    <div class="seguro" style="margin-top:18px"><span>💳 Pix ou cartão</span><span>🔒 Pagamento seguro</span></div>
   </div>
 </section>
 
 <!-- GARANTIA -->
-<section class="white">
-  <div class="container">
-    <div class="guarantee">
-      <div class="seal"><div><b>7</b><span>dias de<br>garantia</span></div></div>
-      <div>
-        <h2>Sua compra é protegida</h2>
-        <p>Acesse o material e confira se ele é o que mostramos aqui. Se não for, você pede o reembolso em até 7 dias, pelas condições da plataforma de pagamento.</p>
-      </div>
+<section class="sec branco">
+  <div class="box">
+    <div class="garantia">
+      <div class="selo"><div><b>7</b><span>dias de<br>garantia</span></div></div>
+      <h2>Sua compra é protegida</h2>
+      <p>Acesse o material e confira se ele é o que foi apresentado nesta página. Se não for, você pode pedir o reembolso em até 7 dias, conforme as condições da plataforma de pagamento.</p>
     </div>
   </div>
 </section>
 
 <!-- FAQ -->
-<section>
-  <div class="container slim">
-    <div class="center"><h2>Perguntas frequentes</h2></div>
-    <div class="faq">
-      <details><summary>O produto é físico?</summary><div class="ans"><p>Não. É 100% digital. Depois que o pagamento é confirmado, você recebe o acesso aos arquivos.</p></div></details>
-      <details><summary>Vou receber alguma coisa em casa?</summary><div class="ans"><p>Não. Tudo é enviado online. Os itens físicos das fotos (papel, sacolinha, fita etc.) são comprados à parte.</p></div></details>
-      <details><summary>Preciso saber mexer em programa de design?</summary><div class="ans"><p>Não. O material foi pensado pra quem nunca fez personalizado.</p></div></details>
-      <details><summary>Preciso ter impressora?</summary><div class="ans"><p>Não. Você pode imprimir em casa ou levar os arquivos numa gráfica ou papelaria.</p></div></details>
-      <details><summary>Como recebo o material?</summary><div class="ans"><p>Assim que a compra é confirmada, você recebe as instruções pra acessar e baixar os arquivos.</p></div></details>
-      <details><summary>Posso usar os moldes mais de uma vez?</summary><div class="ans"><p>Pode. Depois de baixar, você imprime de novo sempre que precisar, seguindo os termos de uso que vêm junto com o produto.</p></div></details>
-      <details><summary>Os materiais da Shopee estão incluídos no preço?</summary><div class="ans"><p>Não. O Kit Completo traz a lista com os links e as sugestões. Os produtos são comprados direto na Shopee.</p></div></details>
-      <details><summary>Os preços da Shopee serão sempre os mesmos?</summary><div class="ans"><p>Não. Preço, estoque, frete e disponibilidade mudam conforme cada vendedor e promoção.</p></div></details>
-      <details><summary>Qual kit vale mais a pena?</summary><div class="ans"><p>Se você só quer os moldes, o Básico resolve.</p><p>Se quer os moldes e também saber onde achar o material barato sem perder tempo pesquisando, vai de Completo.</p></div></details>
-    </div>
+<section class="sec faq">
+  <div class="box">
+    <h2>Perguntas frequentes</h2>
+    <p class="sub">&nbsp;</p>
+    <details><summary>O produto é físico?</summary><div class="r">Não. O produto é 100% digital. Após a confirmação do pagamento, você recebe o acesso aos arquivos.</div></details>
+    <details><summary>Vou receber alguma coisa em casa?</summary><div class="r">Não. Tudo é enviado online. Os produtos físicos mostrados como exemplo são comprados separadamente.</div></details>
+    <details><summary>Preciso saber mexer em programas de design?</summary><div class="r">Não. O material foi pensado pra quem não tem experiência.</div></details>
+    <details><summary>Preciso ter impressora?</summary><div class="r">Não. Você pode imprimir em casa ou mandar os arquivos pra uma gráfica ou papelaria.</div></details>
+    <details><summary>Os materiais da Shopee estão incluídos no preço?</summary><div class="r">Não. O Kit Completo inclui os links e sugestões. Os produtos são comprados separadamente na Shopee.</div></details>
+    <details><summary>Os preços da Shopee serão sempre os mesmos?</summary><div class="r">Não. Valores, estoque, frete e disponibilidade podem mudar conforme cada vendedor e promoção.</div></details>
+    <details><summary>Posso usar os moldes mais de uma vez?</summary><div class="r">Sim. Depois de baixar, você pode usar de novo, de acordo com os termos de uso que vêm com o produto.</div></details>
+    <details><summary>Como recebo o material?</summary><div class="r">Após a confirmação da compra, você recebe as instruções pra acessar e baixar os arquivos.</div></details>
+    <details><summary>Qual kit vale mais a pena?</summary><div class="r">Se você quer só os moldes, o Kit Básico resolve. Se quer os moldes e também saber onde achar os materiais gastando menos, o Kit Completo é o mais prático.</div></details>
   </div>
 </section>
 
 <!-- FINAL -->
-<section class="final">
-  <div class="container slim">
-    <h2>A festa de 1 ano não precisa ser a mais cara. Precisa ser especial.</h2>
-    <p class="lead">Com os moldes certos e um pouco de carinho, você mesma faz os detalhes que vão ficar nas fotos dessa festa pra sempre.</p>
-    <a class="btn" href="#kits">Escolher meu kit agora</a>
+<section class="sec final">
+  <div class="box">
+    <h2>O primeiro aniversário não precisa ser o mais caro. <span class="rosa">Precisa ser especial.</span> 💕</h2>
+    <p>Com os moldes certos e um pouco de carinho, você mesma cria os detalhes de uma das lembranças mais importantes da sua família.</p>
+    <a class="cta" href="#kits">Escolher meu kit agora</a>
   </div>
 </section>
 
 <footer>
-  <div class="container">
-    <p>Produto digital. Nenhum item físico é enviado. Imagens meramente ilustrativas.</p>
+  <div class="box">
+    <p>Produto digital. Nenhum item físico é enviado. Imagens ilustrativas.</p>
     <p>Este site não tem vínculo com a Shopee.</p>
-    <p>© <span id="ano">2026</span> Moldes Festa de 1 Ano</p>
+    <p>© <span id="ano">2026</span> Kit Festa de 1 Aninho · Todos os direitos reservados</p>
   </div>
 </footer>
-
-<div class="sticky" id="sticky">
-  <div class="sticky__t"><b>A partir de R$ 17,90</b>acesso na hora</div>
-  <a class="btn" href="#kits">Ver os kits</a>
-</div>
 
 <script>
 (function(){
   document.getElementById('ano').textContent = new Date().getFullYear();
-
-  // carrossel
-  var track = document.getElementById('track');
-  var slides = track.querySelectorAll('.slide');
-  var dotsBox = document.getElementById('dots');
-  var current = 0, timer;
-
-  slides.forEach(function(_, i){
+  var trilho = document.getElementById('trilho');
+  var fotos = trilho.querySelectorAll('img');
+  var box = document.getElementById('bolinhas');
+  var atual = 0, timer;
+  fotos.forEach(function(_, i){
     var b = document.createElement('button');
     b.type = 'button';
-    b.setAttribute('aria-label', 'Ir para a foto ' + (i + 1));
-    b.addEventListener('click', function(){ go(i); stop(); });
-    dotsBox.appendChild(b);
+    b.setAttribute('aria-label', 'Foto ' + (i + 1));
+    b.onclick = function(){ ir(i); parar(); };
+    box.appendChild(b);
   });
-  var dots = dotsBox.querySelectorAll('button');
-
-  function go(i){
-    current = (i + slides.length) % slides.length;
-    var s = slides[current];
-    track.scrollTo({left: s.offsetLeft - (track.clientWidth - s.clientWidth) / 2});
+  var bol = box.querySelectorAll('button');
+  function ir(i){ atual = (i + fotos.length) % fotos.length; trilho.scrollTo({left: atual * trilho.clientWidth}); }
+  function marcar(){
+    atual = Math.round(trilho.scrollLeft / trilho.clientWidth);
+    bol.forEach(function(b, i){ b.classList.toggle('on', i === atual); });
   }
-  function mark(){
-    var mid = track.scrollLeft + track.clientWidth / 2, best = 0, dist = Infinity;
-    slides.forEach(function(s, i){
-      var d = Math.abs(s.offsetLeft + s.clientWidth / 2 - mid);
-      if (d < dist){ dist = d; best = i; }
-    });
-    current = best;
-    dots.forEach(function(d, i){ d.setAttribute('aria-current', i === best ? 'true' : 'false'); });
-  }
-  function stop(){ clearInterval(timer); }
-
-  track.addEventListener('scroll', function(){ window.requestAnimationFrame(mark); }, {passive:true});
-  ['pointerdown','touchstart','wheel','keydown'].forEach(function(ev){ track.addEventListener(ev, stop, {passive:true}); });
-  document.querySelector('.arrow--prev').addEventListener('click', function(){ go(current - 1); stop(); });
-  document.querySelector('.arrow--next').addEventListener('click', function(){ go(current + 1); stop(); });
-  track.addEventListener('keydown', function(e){
-    if (e.key === 'ArrowRight'){ e.preventDefault(); go(current + 1); }
-    if (e.key === 'ArrowLeft'){ e.preventDefault(); go(current - 1); }
-  });
-  mark();
-  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
-    timer = setInterval(function(){ go(current + 1); }, 3500);
-  }
-
-  // barra fixa no celular
-  var sticky = document.getElementById('sticky');
-  var hero = document.querySelector('.hero');
-  var kits = document.getElementById('kits');
-  function onScroll(){
-    var k = kits.getBoundingClientRect();
-    var onKits = k.top < window.innerHeight && k.bottom > 0;
-    sticky.classList.toggle('show', hero.getBoundingClientRect().bottom < 0 && !onKits);
-  }
-  window.addEventListener('scroll', onScroll, {passive:true});
-  onScroll();
+  function parar(){ clearInterval(timer); }
+  trilho.addEventListener('scroll', marcar, {passive:true});
+  trilho.addEventListener('touchstart', parar, {passive:true});
+  document.querySelector('.seta.esq').onclick = function(){ ir(atual - 1); parar(); };
+  document.querySelector('.seta.dir').onclick = function(){ ir(atual + 1); parar(); };
+  marcar();
+  timer = setInterval(function(){ ir(atual + 1); }, 3000);
 })();
 </script>
 </body>
