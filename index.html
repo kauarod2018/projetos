@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kit 365 Atividades | Pequenos Gênios</title>
+<meta name="description" content="365 atividades imprimíveis para trocar o tempo de tela por aprendizado de verdade.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  /* ========= CORES E FONTES — troque aqui para mudar o site inteiro ========= */
+  :root{
+    --creme:#fdf3e1;
+    --creme-2:#fbe9c9;
+    --branco:#ffffff;
+    --azul:#123a6b;
+    --azul-escuro:#0c2a4f;
+    --laranja:#f39324;
+    --laranja-escuro:#d97a0c;
+    --verde:#3f9d5a;
+    --verde-claro:#e3f3e6;
+    --vermelho:#e0533d;
+    --texto:#1f2a3a;
+    --texto-suave:#5b6574;
+    --borda:#f0dfbf;
+    --raio:18px;
+    --sombra:0 8px 24px rgba(18,58,107,.08);
+    --fonte-titulo:'Fraunces', Georgia, serif;
+    --fonte-texto:'Inter', system-ui, -apple-system, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--creme);color:var(--texto);font-family:var(--fonte-texto);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .container{width:100%;max-width:560px;margin:0 auto;padding:0 16px}
+  section{padding:56px 0}
+  h1,h2,h3{font-family:var(--fonte-titulo);color:var(--azul);line-height:1.15;font-weight:500}
+  h1{font-size:clamp(28px,7.5vw,38px)}
+  h2{font-size:clamp(26px,6.8vw,34px);text-align:center}
+  h3{font-size:20px}
+  .destaque{color:var(--laranja);font-style:italic}
+  .centro{text-align:center}
+  .suave{color:var(--texto-suave)}
+  .pequeno{font-size:13px}
+
+  /* ===== Barra do topo ===== */
+  .barra-topo{background:var(--azul);color:#fff;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;text-align:center;padding:10px 16px}
+
+  /* ===== Cabeçalho ===== */
+  .cabecalho{padding:18px 0 6px}
+  .logo{display:flex;align-items:center;gap:10px;justify-content:center;text-decoration:none}
+  .logo-icone{width:44px;height:44px;border-radius:50%;background:var(--azul);color:var(--laranja);display:grid;place-items:center;font-family:var(--fonte-titulo);font-weight:700;font-size:20px}
+  .logo-texto{font-family:var(--fonte-titulo);color:var(--azul);font-weight:700;font-size:18px;line-height:1;letter-spacing:.04em;text-transform:uppercase}
+  .logo-texto small{display:block;font-family:var(--fonte-texto);font-size:10px;letter-spacing:.2em;color:var(--texto-suave);font-weight:600;margin-top:4px}
+
+  /* ===== Selos / pílulas ===== */
+  .pilula{display:inline-block;border-radius:999px;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:7px 16px}
+  .pilula-laranja{background:var(--vermelho);color:#fff}
+  .pilula-verde{background:var(--verde-claro);color:var(--verde)}
+  .pilula-contorno{border:1px solid rgba(255,255,255,.5);color:#fff}
+  .pilula-branca{background:#fff;color:var(--azul);border:1px solid var(--borda);text-transform:none;letter-spacing:0;font-weight:600;font-size:13px;padding:10px 18px;line-height:1.4}
+
+  /* ===== Botão principal ===== */
+  .botao{display:block;width:100%;text-align:center;background:var(--laranja);color:#fff;text-decoration:none;font-weight:800;font-size:17px;letter-spacing:.02em;text-transform:uppercase;padding:18px 20px;border-radius:999px;border:0;cursor:pointer;box-shadow:0 8px 20px rgba(243,147,36,.35);transition:transform .15s, background .15s}
+  .botao:hover{background:var(--laranja-escuro);transform:translateY(-2px)}
+  .botao:active{transform:translateY(0)}
+  .botao span{display:block;font-size:12px;font-weight:600;text-transform:none;opacity:.95;margin-top:2px}
+  .pulsar{animation:pulsar 2.2s infinite}
+  @keyframes pulsar{0%,100%{box-shadow:0 8px 20px rgba(243,147,36,.35),0 0 0 0 rgba(243,147,36,.45)}50%{box-shadow:0 8px 20px rgba(243,147,36,.35),0 0 0 12px rgba(243,147,36,0)}}
+
+  /* ===== Imagens (placeholders) ===== */
+  .imagem{position:relative;border-radius:var(--raio);overflow:hidden;background:linear-gradient(135deg,#f6c37a,#e98a3a 55%,#7b4a2a);aspect-ratio:1/1;box-shadow:var(--sombra)}
+  .imagem img{width:100%;height:100%;object-fit:cover}
+  .imagem .selo{position:absolute;top:14px;right:14px;z-index:2}
+  .placeholder{position:absolute;inset:0;display:grid;place-items:center;text-align:center;color:#fff;font-weight:600;font-size:13px;padding:16px}
+  .placeholder b{display:block;font-size:42px;line-height:1;margin-bottom:6px}
+
+  /* Capa do produto feita em CSS — substitua por uma imagem real */
+  .capa{position:absolute;inset:12% 18%;background:var(--azul);border-radius:8px;box-shadow:12px 14px 0 rgba(0,0,0,.18);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#fff;padding:12px;transform:rotate(-4deg)}
+  .capa .num{font-family:var(--fonte-titulo);font-size:clamp(46px,15vw,72px);color:var(--laranja);font-weight:700;line-height:1}
+  .capa .t1{font-weight:800;font-size:clamp(11px,3.2vw,15px);letter-spacing:.08em;text-transform:uppercase;margin-top:4px}
+  .capa .t2{font-family:var(--fonte-titulo);font-style:italic;font-size:clamp(12px,3.4vw,16px);margin-top:6px;opacity:.9}
+  .capa .faixa{margin-top:12px;background:var(--laranja);color:#fff;font-size:10px;font-weight:800;padding:4px 10px;border-radius:999px;letter-spacing:.06em}
+
+  /* ===== Lista com ícones ===== */
+  .lista{list-style:none;display:grid;gap:18px}
+  .lista li{display:grid;grid-template-columns:28px 1fr;gap:12px;align-items:start}
+  .lista .ic{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:14px;font-weight:800;margin-top:1px}
+  .ic-ok{background:var(--verde-claro);color:var(--verde)}
+  .ic-x{background:#fde6e1;color:var(--vermelho)}
+  .lista b{color:var(--azul)}
+
+  /* ===== Hero ===== */
+  .hero{padding:16px 0 40px}
+  .hero .pilula{margin:18px 0 14px}
+  .hero h1{margin-bottom:22px}
+  .hero .imagem{margin-bottom:26px}
+  .avaliacao{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--texto-suave);margin:22px 0 16px}
+  .estrelas{color:var(--laranja);letter-spacing:2px;font-size:15px}
+  .preco-linha{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+  .preco{font-size:clamp(36px,11vw,48px);font-weight:800;color:var(--azul);letter-spacing:-.02em;line-height:1}
+  .preco small{font-size:.45em;font-weight:700}
+  .preco-antigo{color:var(--texto-suave);text-decoration:line-through;font-size:15px}
+  .economia{background:var(--vermelho);color:#fff;font-weight:800;font-size:12px;padding:5px 10px;border-radius:6px;text-transform:uppercase}
+  .hero .botao{margin:20px 0 14px}
+  .garantia-mini{text-align:center;font-size:13px;color:var(--texto-suave)}
+  .pagamentos{display:flex;justify-content:center;gap:8px;margin:14px 0 26px;flex-wrap:wrap}
+  .pagamentos span{background:#fff;border:1px solid var(--borda);border-radius:6px;font-size:11px;font-weight:800;color:var(--azul);padding:5px 9px}
+
+  /* ===== Sanfona (perguntas) ===== */
+  .sanfona{display:grid;gap:12px}
+  .sanfona details{background:#fff;border:1px solid var(--borda);border-radius:14px;overflow:hidden}
+  .sanfona summary{list-style:none;cursor:pointer;padding:18px 48px 18px 18px;position:relative;font-weight:600;color:var(--azul);font-size:15px}
+  .sanfona summary::-webkit-details-marker{display:none}
+  .sanfona summary::after{content:"+";position:absolute;right:18px;top:50%;transform:translateY(-50%);width:24px;height:24px;border-radius:50%;background:var(--creme);color:var(--laranja);display:grid;place-items:center;font-size:18px;font-weight:700;transition:transform .2s}
+  .sanfona details[open] summary::after{content:"–"}
+  .sanfona details p{padding:0 18px 18px;color:var(--texto-suave);font-size:15px}
+  .sanfona.simples details{border-radius:0;border:0;border-bottom:1px solid var(--borda);background:transparent}
+  .sanfona.simples{gap:0}
+  .sanfona.simples summary{padding-left:0}
+  .sanfona.simples details p{padding-left:0}
+
+  /* ===== Galeria ===== */
+  .galeria{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:30px}
+  .galeria .imagem{aspect-ratio:4/5}
+  .g1{background:linear-gradient(135deg,#3d6aa5,#123a6b)}
+  .g2{background:linear-gradient(135deg,#8fbf7f,#3f7d52)}
+  .g3{background:linear-gradient(135deg,#f2b37a,#c9652d)}
+  .g4{background:linear-gradient(135deg,#c9a7e3,#7b5aa6)}
+
+  /* ===== Cartão branco ===== */
+  .cartao{background:#fff;border-radius:24px;padding:32px 22px;box-shadow:var(--sombra)}
+  .cartao h2{margin-bottom:12px}
+  .cartao>p{text-align:center;color:var(--texto-suave);margin-bottom:26px}
+  .divisor{border:0;border-top:1px dashed var(--borda);margin:4px 0}
+  .virada{font-weight:700;color:var(--laranja);text-align:center;text-transform:uppercase;font-size:13px;letter-spacing:.04em;margin:26px 0 20px}
+
+  /* ===== Passos ===== */
+  .fundo-branco{background:#fff}
+  .passos{display:grid;gap:36px;margin-top:40px}
+  .passo{background:var(--creme);border-radius:var(--raio);padding:38px 22px 26px;text-align:center;position:relative}
+  .passo .n{position:absolute;top:-20px;left:50%;transform:translateX(-50%);width:42px;height:42px;border-radius:50%;background:var(--azul);color:#fff;font-weight:800;display:grid;place-items:center;border:4px solid #fff}
+  .passo h3{font-family:var(--fonte-texto);font-weight:800;font-size:15px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
+  .passo p{color:var(--texto-suave);font-size:15px}
+
+  /* ===== Carrossel ===== */
+  .carrossel{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 16px 18px;margin:0 -16px;scrollbar-width:none}
+  .carrossel::-webkit-scrollbar{display:none}
+  .carrossel>*{flex:0 0 84%;scroll-snap-align:center}
+  .pontos{display:flex;justify-content:center;gap:6px;margin-top:4px}
+  .pontos i{width:7px;height:7px;border-radius:999px;background:var(--borda);transition:all .2s}
+  .pontos i.ativo{width:22px;background:var(--laranja)}
+
+  /* ===== Seção azul ===== */
+  .azul{background:var(--azul);color:#fff}
+  .azul h2{color:#fff}
+  .azul .destaque{color:var(--laranja)}
+  .abas{display:flex;gap:8px;justify-content:center;margin:24px 0;flex-wrap:wrap}
+  .abas button{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:9px 16px;font:600 13px var(--fonte-texto);cursor:pointer}
+  .abas button.ativo{background:var(--laranja);border-color:var(--laranja)}
+  .bonus{background:#fff;color:var(--texto);border-radius:var(--raio);overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,.2)}
+  .bonus .imagem{border-radius:0;aspect-ratio:16/10;box-shadow:none}
+  .bonus .corpo{padding:20px}
+  .bonus h3{font-family:var(--fonte-texto);font-weight:800;color:var(--laranja);font-size:14px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+  .bonus p{color:var(--texto-suave);font-size:15px}
+  .bonus .valor{display:flex;justify-content:space-between;align-items:center;margin-top:16px;padding-top:14px;border-top:1px solid var(--borda);font-size:14px}
+  .bonus .valor s{color:var(--texto-suave)}
+  .bonus .valor b{color:var(--verde);font-weight:800;text-transform:uppercase}
+  .bonus[hidden]{display:none}
+
+  /* ===== Depoimentos ===== */
+  .depo{background:#fff;border-radius:var(--raio);padding:22px;box-shadow:var(--sombra)}
+  .depo p{font-size:15px;color:var(--texto)}
+  .depo .autor{margin-top:16px;font-size:13px;color:var(--laranja);font-weight:700}
+  .depo .autor span{display:block;color:var(--texto-suave);font-weight:500}
+  .review-topo{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+  .avatar{width:44px;height:44px;border-radius:50%;background:var(--azul);color:#fff;display:grid;place-items:center;font-weight:800;flex-shrink:0}
+  .review-topo .nome{font-weight:700;color:var(--azul);font-size:15px;line-height:1.2}
+  .review-topo .nome small{display:block;color:var(--texto-suave);font-weight:500;font-size:12px}
+  .review-topo .estrelas{margin-left:auto;font-size:13px}
+  .verificado{display:flex;justify-content:space-between;font-size:12px;margin-bottom:12px}
+  .verificado b{color:var(--verde);background:var(--verde-claro);padding:3px 8px;border-radius:999px}
+  .verificado span{color:var(--texto-suave)}
+  .depo .imagem{aspect-ratio:4/3;margin-top:16px}
+  .nota-geral{display:flex;justify-content:center;align-items:center;gap:8px;margin:14px 0 28px;font-size:14px;color:var(--texto-suave)}
+  .nota-geral .estrelas{font-size:22px}
+
+  /* ===== Oferta final ===== */
+  .oferta{background:var(--azul-escuro);border:1px solid rgba(255,255,255,.15);border-radius:24px;padding:24px 20px;margin-top:28px;text-align:center}
+  .oferta .imagem{margin-bottom:20px}
+  .oferta h3{font-family:var(--fonte-texto);color:#fff;font-weight:800;text-transform:uppercase;font-size:18px;letter-spacing:.03em;margin-bottom:8px}
+  .oferta .desc{color:var(--laranja);font-size:14px;margin-bottom:18px}
+  .oferta .preco{color:#fff;display:block}
+  .oferta .preco-antigo{color:rgba(255,255,255,.65);display:block;margin-top:6px}
+  .oferta .economia{display:inline-block;margin-top:8px}
+  .cronometro-texto{font-size:13px;color:rgba(255,255,255,.8);margin:20px 0 10px}
+  .cronometro{display:flex;justify-content:center;gap:12px;margin-bottom:22px}
+  .cronometro div{background:rgba(255,255,255,.08);border-radius:12px;padding:10px 0;width:72px}
+  .cronometro b{display:block;font-size:28px;font-weight:800;line-height:1}
+  .cronometro small{font-size:11px;text-transform:uppercase;letter-spacing:.08em;opacity:.7}
+  .seguro{font-size:12px;color:rgba(255,255,255,.75);margin:14px 0 20px}
+  .caixa-garantia{display:grid;grid-template-columns:36px 1fr;gap:12px;text-align:left;border:1px solid rgba(243,147,36,.5);border-radius:16px;padding:18px;background:rgba(243,147,36,.06)}
+  .caixa-garantia .sel{font-size:28px;line-height:1}
+  .caixa-garantia b{display:block;color:var(--laranja);margin-bottom:4px}
+  .caixa-garantia p{font-size:14px;color:rgba(255,255,255,.85)}
+
+  /* ===== Final ===== */
+  .final p{text-align:center;color:var(--texto-suave);margin-bottom:14px}
+  .final h2{margin-bottom:22px}
+  .final .forte{color:var(--azul);font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:14px;margin:22px 0}
+  .rodape{background:var(--azul-escuro);color:rgba(255,255,255,.7);text-align:center;font-size:13px;padding:30px 16px}
+  .rodape a{color:#fff;margin:0 8px}
+
+  /* ===== Botão fixo no celular ===== */
+  .fixo{position:fixed;left:0;right:0;bottom:0;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(253,243,225,.96);backdrop-filter:blur(6px);border-top:1px solid var(--borda);z-index:50;transform:translateY(110%);transition:transform .3s}
+  .fixo.visivel{transform:translateY(0)}
+  .fixo .botao{max-width:528px;margin:0 auto;padding:14px;font-size:15px}
+
+  /* ===== Animação ao rolar ===== */
+  .revelar{opacity:0;transform:translateY(18px);transition:opacity .6s ease, transform .6s ease}
+  .revelar.visto{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.revelar{opacity:1;transform:none}.pulsar{animation:none}}
+
+  @media (min-width:900px){
+    .galeria{grid-template-columns:repeat(4,1fr)}
+    .container.largo{max-width:960px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ BARRA DO TOPO ============ -->
+<div class="barra-topo">🎁 Oferta de lançamento + 3 bônus grátis hoje</div>
+
+<!-- ============ CABEÇALHO ============ -->
+<header class="cabecalho">
+  <div class="container">
+    <a href="#" class="logo" aria-label="Pequenos Gênios">
+      <span class="logo-icone">PG</span>
+      <span class="logo-texto">Pequenos Gênios<small>Academia Criativa</small></span>
+    </a>
+  </div>
+</header>
+
+<!-- ============ HERO / PRODUTO ============ -->
+<section class="hero">
+  <div class="container">
+    <div class="centro"><span class="pilula pilula-laranja">🔥 Mais vendido do mês — estoque digital limitado</span></div>
+
+    <h1>Transforme o tempo de tela do seu filho em aprendizado de verdade — com <span class="destaque">365 atividades para imprimir</span></h1>
+
+    <div class="imagem">
+      <span class="pilula pilula-laranja selo">-60% hoje</span>
+      <!-- TROQUE: coloque a foto/mockup do seu produto. Ex.: <img src="img/produto.jpg" alt="Kit 365 Atividades"> -->
+      <div class="capa">
+        <div class="num">365</div>
+        <div class="t1">Atividades Incríveis</div>
+        <div class="t2">Kit Diversão Sem Telas</div>
+        <div class="faixa">3 A 10 ANOS</div>
+      </div>
+    </div>
+
+    <ul class="lista">
+      <li><span class="ic ic-ok">✓</span><div><b>365 atividades prontas para imprimir:</b> uma para cada dia do ano, misturando lógica, coordenação motora, leitura e criatividade.</div></li>
+      <li><span class="ic ic-ok">✓</span><div><b>Separadas por idade e nível:</b> do maternal ao fundamental. É só escolher a página e imprimir, sem planejar nada.</div></li>
+      <li><span class="ic ic-ok">✓</span><div><b>Desenvolve habilidades reais:</b> foco, paciência, raciocínio e autonomia, longe das telas e do celular.</div></li>
+      <li><span class="ic ic-ok">✓</span><div><b>Acesso imediato e vitalício:</b> receba o arquivo no seu e-mail logo após a compra e imprima quantas vezes quiser.</div></li>
+    </ul>
+
+    <div class="avaliacao"><span class="estrelas">★★★★★</span> 4,8 de 5 · mais de 2.300 famílias</div>
+
+    <div class="preco-linha">
+      <div class="preco">R$&nbsp;120,49 <small>BRL</small></div>
+    </div>
+    <div class="preco-linha">
+      <span class="preco-antigo">R$&nbsp;297,00</span>
+      <span class="economia">Economize 60%</span>
+    </div>
+
+    <a href="#oferta" class="botao pulsar">Quero o kit agora<span>+ 3 bônus grátis por tempo limitado</span></a>
+
+    <p class="garantia-mini">🔒 Compra 100% segura · Garantia incondicional de 7 dias · Acesso imediato por e-mail</p>
+    <div class="pagamentos"><span>PIX</span><span>VISA</span><span>MASTER</span><span>ELO</span><span>BOLETO</span></div>
+
+    <div class="sanfona simples">
+      <details><summary>Como recebo o kit depois de comprar?</summary><p>Logo após a confirmação do pagamento você recebe um e-mail com o link para baixar todos os arquivos em PDF. No PIX e no cartão, a liberação é imediata.</p></details>
+      <details><summary>Para qual idade as atividades são indicadas?</summary><p>Para crianças de 3 a 10 anos. Cada atividade tem a faixa etária indicada, então você escolhe as mais adequadas para o seu filho.</p></details>
+      <details><summary>Preciso de materiais especiais?</summary><p>Não. Basta uma impressora comum, lápis de cor, tesoura sem ponta e cola. A maior parte das atividades usa só papel e lápis.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DESCOBERTA + GALERIA ============ -->
+<section class="fundo-branco revelar">
+  <div class="container largo">
+    <h2>Descubra o jeito mais divertido e educativo de afastar seus pequenos das telas, <span class="destaque">despertando a curiosidade com atividades que eles pedem para fazer.</span></h2>
+    <div class="galeria">
+      <!-- TROQUE: fotos de crianças usando o material -->
+      <div class="imagem g1"><div class="placeholder"><div><b>✂️</b>Foto 1</div></div></div>
+      <div class="imagem g2"><div class="placeholder"><div><b>🎨</b>Foto 2</div></div></div>
+      <div class="imagem g3"><div class="placeholder"><div><b>🧩</b>Foto 3</div></div></div>
+      <div class="imagem g4"><div class="placeholder"><div><b>📚</b>Foto 4</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DOR ============ -->
+<section class="revelar">
+  <div class="container">
+    <div class="cartao">
+      <h2>Você sente que seu filho passa <span class="destaque">tempo demais</span> na frente de uma tela?</h2>
+      <p>Tablet, celular, TV, videogame... e quando você tira, vem o choro, o tédio e a birra. Você não está sozinho(a).</p>
+      <ul class="lista">
+        <li><span class="ic ic-x">✕</span><div><b>Irritação e falta de foco</b> depois de horas de vídeos curtos e jogos que viciam.</div></li>
+        <li><span class="ic ic-x">✕</span><div><b>"Mãe, tô entediado!"</b> toda vez que a tela é desligada, porque ele não sabe brincar sozinho.</div></li>
+        <li><span class="ic ic-x">✕</span><div><b>Culpa e cansaço</b> de não ter tempo nem ideias para criar atividades todos os dias.</div></li>
+      </ul>
+      <p class="virada">Mas imagine se, a partir de hoje, ele mesmo pedisse para fazer uma atividade...</p>
+      <ul class="lista">
+        <li><span class="ic ic-ok">✓</span><div><b>Atividades prontas para o dia todo:</b> no café da manhã, depois da escola ou no fim de semana chuvoso.</div></li>
+        <hr class="divisor">
+        <li><span class="ic ic-ok">✓</span><div><b>Uma criança mais calma e concentrada,</b> que sente orgulho de terminar o que começou.</div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMO FUNCIONA ============ -->
+<section class="fundo-branco revelar">
+  <div class="container">
+    <div class="centro"><span class="pilula pilula-verde">Como funciona</span></div>
+    <h2 style="margin-top:14px">O caminho até a criatividade em <span class="destaque">3 passos simples</span></h2>
+    <p class="centro suave" style="margin-top:10px">Sem preparação, sem bagunça, sem complicação.</p>
+    <div class="passos">
+      <div class="passo"><span class="n">1</span><h3>Imprima e comece</h3><p>Escolha a atividade do dia, imprima em casa ou na papelaria e entregue para a criança. Leva menos de 1 minuto.</p></div>
+      <div class="passo"><span class="n">2</span><h3>Pinte e crie</h3><p>Ela recorta, pinta, monta e resolve desafios, usando as mãos e a cabeça em vez de só deslizar o dedo.</p></div>
+      <div class="passo"><span class="n">3</span><h3>Aprender brincando</h3><p>A cada página ela ganha confiança, aprende algo novo e fica longe das telas sem nem perceber.</p></div>
+    </div>
+    <p class="centro suave pequeno" style="margin-top:22px">Funciona com qualquer impressora. Você também pode usar no tablet com caneta, se preferir.</p>
+  </div>
+</section>
+
+<!-- ============ MARCA + CARROSSEL ============ -->
+<section class="revelar">
+  <div class="container">
+    <div class="logo" style="margin-bottom:16px"><span class="logo-icone">PG</span><span class="logo-texto">Pequenos Gênios<small>Academia Criativa</small></span></div>
+    <p class="centro">Ajudamos famílias a criarem rotinas mais saudáveis com <b>365 atividades criadas por educadores</b> que transformam o tempo livre em uma jornada de descoberta, criatividade e diversão.</p>
+    <div class="centro" style="margin:20px 0 26px"><span class="pilula pilula-branca">📄 Mais de 1.200 páginas · 12 categorias · 3 a 10 anos</span></div>
+    <div class="carrossel" data-carrossel>
+      <div class="imagem g1" style="aspect-ratio:3/4"><div class="placeholder"><div><b>🔢</b>Matemática e lógica</div></div></div>
+      <div class="imagem g3" style="aspect-ratio:3/4"><div class="placeholder"><div><b>🔤</b>Alfabetização</div></div></div>
+      <div class="imagem g2" style="aspect-ratio:3/4"><div class="placeholder"><div><b>🌱</b>Natureza e ciências</div></div></div>
+      <div class="imagem g4" style="aspect-ratio:3/4"><div class="placeholder"><div><b>✂️</b>Recorte e colagem</div></div></div>
+    </div>
+    <div class="pontos" data-pontos></div>
+    <a href="#oferta" class="botao" style="margin-top:26px">Quero transformar a rotina do meu filho</a>
+  </div>
+</section>
+
+<!-- ============ RESULTADOS ============ -->
+<section class="fundo-branco revelar">
+  <div class="container">
+    <h2>O que seu filho vai conquistar <span class="destaque">com o kit</span></h2>
+    <p class="centro suave" style="margin:12px 0 28px">Cada atividade foi pensada para desenvolver uma habilidade específica, de forma leve e divertida.</p>
+    <div class="cartao" style="background:var(--creme);box-shadow:none">
+      <ul class="lista">
+        <li><span class="ic ic-ok">✓</span><div><b>Foco e concentração:</b> labirintos, jogos de atenção e sequências que treinam a mente a ficar em uma tarefa até o fim.</div></li>
+        <li><span class="ic ic-ok">✓</span><div><b>Coordenação motora fina:</b> recortar, traçar e pintar preparam a mão para a escrita.</div></li>
+        <li><span class="ic ic-ok">✓</span><div><b>Leitura e raciocínio lógico:</b> letras, números, padrões e quebra-cabeças que adiantam o que ele vai ver na escola.</div></li>
+        <li><span class="ic ic-ok">✓</span><div><b>Tempo em família:</b> atividades para fazer juntos e criar memórias, não só para "ocupar" a criança.</div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BÔNUS ============ -->
+<section class="azul revelar">
+  <div class="container">
+    <h2>Comprando hoje você também <span class="destaque">ganha estes bônus exclusivos...</span></h2>
+    <div class="abas" role="tablist">
+      <button class="ativo" data-aba="0">Bônus 1</button>
+      <button data-aba="1">Bônus 2</button>
+      <button data-aba="2">Bônus 3</button>
+    </div>
+    <div class="bonus" data-bonus="0">
+      <div class="imagem g3"><span class="pilula pilula-laranja selo">Bônus</span><div class="placeholder"><div><b>📅</b>Imagem do bônus</div></div></div>
+      <div class="corpo"><h3>Calendário de rotina sem telas</h3><p>Um quadro semanal ilustrado para a criança marcar as atividades e ganhar estrelinhas. Cria o hábito sem briga.</p><div class="valor"><s>De R$ 47,00</s><b>Grátis</b></div></div>
+    </div>
+    <div class="bonus" data-bonus="1" hidden>
+      <div class="imagem g2"><span class="pilula pilula-laranja selo">Bônus</span><div class="placeholder"><div><b>🏆</b>Imagem do bônus</div></div></div>
+      <div class="corpo"><h3>Certificados de conquista</h3><p>12 certificados coloridos para premiar cada etapa concluída e deixar seu pequeno orgulhoso do próprio esforço.</p><div class="valor"><s>De R$ 27,00</s><b>Grátis</b></div></div>
+    </div>
+    <div class="bonus" data-bonus="2" hidden>
+      <div class="imagem g4"><span class="pilula pilula-laranja selo">Bônus</span><div class="placeholder"><div><b>👨‍👩‍👧</b>Imagem do bônus</div></div></div>
+      <div class="corpo"><h3>Guia dos pais: desapegando das telas</h3><p>Um guia prático com estratégias simples para reduzir o tempo de tela sem birra, escrito em linguagem direta.</p><div class="valor"><s>De R$ 37,00</s><b>Grátis</b></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEPOIMENTOS DE EDUCADORES ============ -->
+<section class="revelar">
+  <div class="container">
+    <h2>O que professores e educadores da nossa comunidade <span class="destaque">estão dizendo</span></h2>
+    <!-- TROQUE: use apenas depoimentos reais dos seus clientes -->
+    <div class="carrossel" data-carrossel style="margin-top:28px">
+      <div class="depo"><p>"Uso as atividades com minha turma do infantil e a diferença na atenção das crianças foi visível em poucas semanas."</p><div class="autor">Nome do educador<span>Professora de educação infantil</span></div></div>
+      <div class="depo"><p>"Material muito bem organizado por idade. Economizo horas de planejamento toda semana."</p><div class="autor">Nome do educador<span>Pedagoga</span></div></div>
+      <div class="depo"><p>"As crianças pedem as folhinhas! É raro um material ser educativo e divertido ao mesmo tempo."</p><div class="autor">Nome do educador<span>Coordenadora escolar</span></div></div>
+    </div>
+    <div class="pontos" data-pontos></div>
+  </div>
+</section>
+
+<!-- ============ OFERTA ============ -->
+<section class="azul revelar" id="oferta">
+  <div class="container">
+    <div class="centro"><span class="pilula pilula-contorno">Oferta por tempo limitado</span></div>
+    <h2 style="margin-top:16px">O sistema completo para transformar <span class="destaque">a brincadeira do seu filho</span> a partir de hoje</h2>
+    <div class="oferta">
+      <div class="imagem">
+        <div class="capa"><div class="num">365</div><div class="t1">Atividades Incríveis</div><div class="t2">Kit Diversão Sem Telas</div><div class="faixa">3 A 10 ANOS</div></div>
+      </div>
+      <h3>Kit 365 Atividades Incríveis + 3 Bônus</h3>
+      <p class="desc">Acesso imediato · Arquivos em PDF · Imprima quantas vezes quiser</p>
+      <span class="preco">R$&nbsp;120,49 <small>BRL</small></span>
+      <span class="preco-antigo">De R$ 408,00 (kit + bônus)</span>
+      <span class="economia">Você economiza R$ 287,51</span>
+      <p class="cronometro-texto">⏳ Este preço especial expira em:</p>
+      <div class="cronometro" data-cronometro>
+        <div><b data-min>15</b><small>min</small></div>
+        <div><b data-seg>00</b><small>seg</small></div>
+      </div>
+      <!-- TROQUE: coloque aqui o link do seu checkout (Kiwify, Hotmart, Shopify, Yampi, Cakto...) -->
+      <a href="https://SEU-LINK-DE-CHECKOUT-AQUI" class="botao pulsar">Sim! Quero o kit com os bônus<span>Acesso imediato no seu e-mail</span></a>
+      <p class="seguro">🔒 Pagamento seguro · PIX, cartão em até 12x ou boleto</p>
+      <div class="caixa-garantia">
+        <span class="sel">🛡️</span>
+        <div><b>Garantia incondicional de 7 dias</b><p>Se por qualquer motivo você não gostar, é só mandar um e-mail dentro de 7 dias e devolvemos 100% do seu dinheiro. Sem perguntas.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PERGUNTAS FREQUENTES ============ -->
+<section class="revelar">
+  <div class="container">
+    <h2 style="margin-bottom:28px">Perguntas <span class="destaque">frequentes</span></h2>
+    <div class="sanfona">
+      <details><summary>O kit é físico ou digital?</summary><p>É 100% digital, em PDF. Você recebe no e-mail e imprime em casa ou em qualquer gráfica/papelaria, quantas vezes quiser.</p></details>
+      <details><summary>Quanto tempo leva para receber?</summary><p>No PIX e no cartão de crédito o acesso é liberado na hora. No boleto, em até 2 dias úteis após o pagamento.</p></details>
+      <details><summary>Serve para mais de um filho?</summary><p>Sim! Como você pode imprimir quantas vezes quiser, o kit serve para todos os irmãos, primos e amiguinhos.</p></details>
+      <details><summary>Posso usar em sala de aula?</summary><p>Pode. Muitos professores usam o material com as turmas. O uso é liberado para fins educativos, mas não é permitido revender os arquivos.</p></details>
+      <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia incondicional. Basta enviar um e-mail para o nosso suporte e devolvemos o valor integral.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ AVALIAÇÕES DE PAIS ============ -->
+<section class="fundo-branco revelar">
+  <div class="container">
+    <h2>Histórias reais da nossa <span class="destaque">comunidade de pais</span></h2>
+    <div class="nota-geral"><span class="estrelas">★★★★★</span><b>4,8</b> · baseado em avaliações de clientes</div>
+    <!-- TROQUE: use apenas avaliações reais dos seus clientes, com autorização -->
+    <div class="carrossel" data-carrossel>
+      <div class="depo">
+        <div class="review-topo"><span class="avatar">A</span><div class="nome">Nome do cliente<small>Mãe de 2</small></div><span class="estrelas">★★★★★</span></div>
+        <div class="verificado"><b>✓ Compra verificada</b><span>há 3 dias</span></div>
+        <p>"Escreva aqui o depoimento real de um cliente contando como foi a experiência com o kit e o que mudou na rotina da família."</p>
+        <div class="imagem g1"><div class="placeholder"><div><b>📷</b>Foto do cliente</div></div></div>
+      </div>
+      <div class="depo">
+        <div class="review-topo"><span class="avatar">B</span><div class="nome">Nome do cliente<small>Pai do Lucas, 5 anos</small></div><span class="estrelas">★★★★★</span></div>
+        <div class="verificado"><b>✓ Compra verificada</b><span>há 1 semana</span></div>
+        <p>"Outro depoimento real. Quanto mais específico (idade da criança, resultado, tempo de uso), mais confiança ele passa."</p>
+        <div class="imagem g2"><div class="placeholder"><div><b>📷</b>Foto do cliente</div></div></div>
+      </div>
+      <div class="depo">
+        <div class="review-topo"><span class="avatar">C</span><div class="nome">Nome do cliente<small>Mãe da Sofia, 7 anos</small></div><span class="estrelas">★★★★★</span></div>
+        <div class="verificado"><b>✓ Compra verificada</b><span>há 2 semanas</span></div>
+        <p>"Mais um depoimento real de cliente. Prints de WhatsApp com autorização também funcionam muito bem aqui."</p>
+        <div class="imagem g3"><div class="placeholder"><div><b>📷</b>Foto do cliente</div></div></div>
+      </div>
+    </div>
+    <div class="pontos" data-pontos></div>
+  </div>
+</section>
+
+<!-- ============ CHAMADA FINAL ============ -->
+<section class="final revelar">
+  <div class="container">
+    <h2>A mente deles está pronta. Só falta <span class="destaque">o estímulo certo</span> para despertar o gênio que existe aí dentro.</h2>
+    <p>Cada dia na frente da tela é um dia a menos explorando, criando e descobrindo do que são capazes.</p>
+    <p>Com o kit, você tem uma atividade nova para cada dia do ano, pronta para imprimir, sem precisar planejar nada.</p>
+    <p>Comece hoje e veja seu filho mais calmo, curioso e confiante já nas primeiras semanas.</p>
+    <p class="forte">Imprimir. Brincar. Aprender.</p>
+    <a href="#oferta" class="botao pulsar">Quero começar hoje mesmo</a>
+    <p class="pequeno" style="margin-top:16px">Garantia de 7 dias. Se não gostar, devolvemos 100% do seu dinheiro.</p>
+  </div>
+</section>
+
+<footer class="rodape">
+  <p>© <span data-ano></span> Pequenos Gênios · Todos os direitos reservados</p>
+  <p style="margin-top:10px"><a href="#">Política de Privacidade</a><a href="#">Termos de Uso</a><a href="#">Contato</a></p>
+</footer>
+
+<div class="fixo" data-fixo><a href="#oferta" class="botao">Quero o kit por R$ 120,49</a></div>
+
+<script>
+  // Cronômetro de 15 minutos (reinicia quando chega a zero)
+  (function(){
+    var box=document.querySelector('[data-cronometro]'); if(!box) return;
+    var m=box.querySelector('[data-min]'), s=box.querySelector('[data-seg]');
+    var total=15*60;
+    try{ var salvo=parseInt(sessionStorage.getItem('cronometro'),10); if(salvo>0) total=salvo; }catch(e){}
+    function tick(){
+      m.textContent=String(Math.floor(total/60)).padStart(2,'0');
+      s.textContent=String(total%60).padStart(2,'0');
+      total = total>0 ? total-1 : 15*60;
+      try{ sessionStorage.setItem('cronometro', total); }catch(e){}
+    }
+    tick(); setInterval(tick,1000);
+  })();
+
+  // Abas dos bônus
+  document.querySelectorAll('[data-aba]').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      document.querySelectorAll('[data-aba]').forEach(function(b){b.classList.toggle('ativo',b===btn)});
+      document.querySelectorAll('[data-bonus]').forEach(function(c){c.hidden = c.dataset.bonus!==btn.dataset.aba});
+    });
+  });
+
+  // Pontinhos dos carrosséis
+  document.querySelectorAll('[data-carrossel]').forEach(function(car){
+    var pontos=car.nextElementSibling; if(!pontos||!pontos.hasAttribute('data-pontos')) return;
+    var itens=car.children;
+    for(var i=0;i<itens.length;i++){ pontos.appendChild(document.createElement('i')); }
+    function atualizar(){
+      var idx=Math.round(car.scrollLeft/(itens[0].offsetWidth+14));
+      [].forEach.call(pontos.children,function(p,i){p.classList.toggle('ativo',i===idx)});
+    }
+    car.addEventListener('scroll',atualizar,{passive:true}); atualizar();
+  });
+
+  // Animação de entrada ao rolar
+  var obs='IntersectionObserver' in window ? new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('visto'); obs.unobserve(e.target); } });
+  },{threshold:.12}) : null;
+  document.querySelectorAll('.revelar').forEach(function(el){ obs ? obs.observe(el) : el.classList.add('visto'); });
+
+  // Botão fixo aparece depois do topo
+  var fixo=document.querySelector('[data-fixo]'), oferta=document.getElementById('oferta');
+  window.addEventListener('scroll',function(){
+    var r=oferta.getBoundingClientRect();
+    var naOferta = r.top < window.innerHeight && r.bottom > 0;
+    fixo.classList.toggle('visivel', window.scrollY>700 && !naOferta);
+  },{passive:true});
+
+  document.querySelector('[data-ano]').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
