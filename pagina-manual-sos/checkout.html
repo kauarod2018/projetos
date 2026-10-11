@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Finalizar compra · Manual S.O.S. Ansiedade</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#234E52">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23E07A5F'/%3E%3Cpath d='M12 36c6-8 10 8 16 0s10 8 16 0 8-4 8-4' stroke='%23fff' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
+
+<!-- Configuração (link do checkout, preço etc.) fica em config.js -->
+<script src="config.js"></script>
+
+<!-- Cole aqui o código do Pixel do Meta (Facebook), se for usar -->
+
+<style>
+:root{
+  --ink:#1E2D33; --ink2:#4A5A60; --deep:#234E52; --teal:#3E7C78; --sage:#A8C5B8;
+  --mist:#E6EFEA; --sand:#F7F2EA; --paper:#FFFDF9; --coral:#E07A5F; --coral-d:#C4583D;
+  --peach:#F8E1D6; --line:#E5DED2;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--sand);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3{font-family:Lora,Georgia,serif;color:var(--deep);line-height:1.2;font-weight:600}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+/* Header */
+header{background:var(--paper);border-bottom:1px solid var(--line)}
+header .wrap{gap:12px;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--deep);text-decoration:none;font-size:16px}
+.logo i{width:30px;height:30px;border-radius:50%;background:var(--coral);display:inline-flex;align-items:center;justify-content:center}
+.logo i svg{width:18px;height:18px}
+.secure{white-space:nowrap;display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:var(--teal)}
+.secure svg{width:16px;height:16px}
+.secure em{font-style:normal}
+
+/* Passos */
+.progress{display:flex;justify-content:center;gap:10px;align-items:center;padding:28px 0 8px;font-size:13.5px;color:var(--ink2)}
+.progress span{display:inline-flex;align-items:center;gap:8px}
+.progress b{width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:12.5px;background:var(--line);color:var(--ink2)}
+.progress .on{color:var(--deep);font-weight:700}
+.progress .on b{background:var(--deep);color:#fff}
+.progress .done b{background:var(--teal);color:#fff}
+.progress i{width:28px;height:2px;background:var(--line)}
+
+h1.title{text-align:center;font-size:clamp(28px,4vw,38px);margin:14px 0 30px}
+
+/* Layout */
+.grid{display:grid;grid-template-columns:1.25fr .95fr;gap:24px;align-items:start;padding-bottom:64px}
+.box{background:#fff;border:1px solid var(--line);border-radius:22px;padding:28px}
+.box h2{font-size:21px;margin-bottom:18px}
+
+/* Produto */
+.product{display:flex;gap:20px;align-items:center;padding-bottom:22px;border-bottom:1px solid var(--line)}
+.product img{width:96px;border-radius:4px 10px 10px 4px;box-shadow:0 14px 30px rgba(30,45,51,.22);flex:none}
+.product h3{font-size:20px;margin-bottom:4px}
+.product p{color:var(--ink2);font-size:14.5px}
+.fmt{display:inline-block;margin-top:8px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);background:var(--mist);padding:3px 10px;border-radius:999px}
+
+.items{list-style:none;padding-top:10px}
+.items li{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;padding:12px 0;border-bottom:1px dashed var(--line)}
+.items li:last-child{border-bottom:none}
+.items .l{display:flex;gap:12px;align-items:flex-start}
+.items svg{flex:none;width:20px;height:20px;color:var(--teal);margin-top:2px}
+.items .l small{display:block;color:var(--ink2);font-size:13.5px}
+.items .r{font-size:14px;color:var(--ink2);white-space:nowrap}
+.items .r.free{color:var(--teal);font-weight:700}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--peach);color:var(--coral-d);padding:2px 8px;border-radius:999px;margin-right:6px;vertical-align:1px}
+
+/* Total */
+.side{position:sticky;top:20px}
+.total-card{border:2px solid var(--deep);box-shadow:0 24px 60px rgba(30,45,51,.1)}
+.rows{list-style:none;margin-bottom:16px}
+.rows li{display:flex;justify-content:space-between;padding:6px 0;color:var(--ink2);font-size:15px}
+.rows .free{color:var(--teal);font-weight:600}
+.total{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:16px;margin-bottom:6px}
+.total span{font-weight:700;color:var(--deep)}
+.total strong{font-family:Lora,serif;font-size:40px;color:var(--deep);line-height:1}
+.once{font-size:13.5px;color:var(--ink2);text-align:right;margin-bottom:22px}
+
+.pay{display:flex;gap:8px;margin-bottom:20px}
+.pay span{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;border:1px solid var(--line);border-radius:12px;padding:10px 6px;font-size:13.5px;font-weight:600;color:var(--deep);background:var(--paper)}
+.pay svg{width:18px;height:18px;color:var(--teal)}
+
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;background:var(--coral);color:#fff;text-decoration:none;font-weight:700;font-size:18px;padding:18px 24px;border-radius:999px;box-shadow:0 12px 28px rgba(224,122,95,.35);transition:background .2s,transform .2s,box-shadow .2s;border:0;cursor:pointer;font-family:inherit}
+.btn:hover{background:var(--coral-d);transform:translateY(-2px);box-shadow:0 16px 34px rgba(224,122,95,.42)}
+.btn:focus-visible{outline:3px solid var(--deep);outline-offset:3px}
+.btn svg{width:18px;height:18px}
+.redirect{font-size:13px;color:var(--ink2);text-align:center;margin-top:12px}
+
+.guarantee{display:flex;gap:14px;align-items:center;background:var(--sand);border-radius:16px;padding:14px 16px;margin-top:20px}
+.seal{flex:none;width:50px;height:50px;border-radius:50%;background:var(--deep);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:800;line-height:1}
+.seal b{font-size:19px}.seal span{font-size:8.5px;letter-spacing:.06em}
+.guarantee p{font-size:13.5px;color:var(--ink2)}
+
+.trust{list-style:none;margin-top:16px;display:grid;gap:8px}
+.trust li{display:flex;gap:10px;align-items:center;font-size:14px;color:var(--ink2)}
+.trust svg{flex:none;width:18px;height:18px;color:var(--teal)}
+
+.back{display:inline-flex;align-items:center;gap:6px;color:var(--ink2);font-size:14px;text-decoration:none;margin-top:18px}
+.back:hover{color:var(--deep)}
+
+footer{text-align:center;font-size:13px;color:var(--ink2);padding:0 20px 110px}
+footer a{color:var(--ink2);margin:0 8px}
+
+/* Barra fixa no celular */
+.mbar{display:none;transition:transform .3s;position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(255,253,249,.97);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:12px 16px calc(12px + env(safe-area-inset-bottom))}
+.mbar.hide{transform:translateY(110%)}
+.mbar .row{display:flex;align-items:center;gap:14px}
+.mbar .p{font-size:12.5px;color:var(--ink2);line-height:1.2}
+.mbar .p b{display:block;font-size:20px;color:var(--deep);font-family:Lora,serif}
+.mbar .btn{flex:1;width:auto;padding:14px 16px;font-size:16px}
+
+@media (max-width:860px){
+  .grid{grid-template-columns:1fr}
+  .side{position:static}
+}
+@media (max-width:560px){
+  .box{padding:22px 18px;border-radius:18px}
+  .product img{width:78px}
+  .progress{gap:6px;font-size:12.5px}
+  .progress i{width:14px}
+  .secure em{display:none}
+  .mbar{display:block}
+  .logo{font-size:14.5px;white-space:nowrap;gap:8px}
+  .logo i{width:26px;height:26px}
+  .secure{font-size:13px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a href="index.html" class="logo"><i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><path d="M3 13c2.5-3 4 3 6.5 0s4 3 6.5 0 3-1.5 5-1.5"/></svg></i>Manual S.O.S. Ansiedade</a>
+    <span class="secure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Compra segura<em>&nbsp;e protegida</em></span>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="progress" aria-label="Etapas da compra">
+    <span class="on"><b>1</b>Seu pedido</span><i></i>
+    <span><b>2</b>Pagamento</span><i></i>
+    <span><b>3</b>Acesso</span>
+  </div>
+
+  <h1 class="title">Confira o seu pedido</h1>
+
+  <div class="grid">
+    <section class="box">
+      <h2>Resumo do pedido</h2>
+      <div class="product">
+        <img src="img/capa.webp" alt="Capa do Manual S.O.S. Ansiedade" width="800" height="1132">
+        <div>
+          <h3>Manual S.O.S. Ansiedade</h3>
+          <p>Técnicas da Terapia Cognitivo-Comportamental para acalmar a mente barulhenta.</p>
+          <span class="fmt">PDF · acesso imediato</span>
+        </div>
+      </div>
+
+      <ul class="items">
+        <li>
+          <div class="l"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><div>Manual completo em PDF<small>60 páginas com técnicas e exemplos preenchidos</small></div></div>
+          <span class="r">Incluso</span>
+        </li>
+        <li>
+          <div class="l"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><div>Plano guiado de 20 dias<small>10 a 20 minutos por dia, passo a passo</small></div></div>
+          <span class="r">Incluso</span>
+        </li>
+        <li>
+          <div class="l"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><div>7 fichas para imprimir<small>Registro de pensamentos, mapa do ciclo e mais</small></div></div>
+          <span class="r">Incluso</span>
+        </li>
+        <li>
+          <div class="l"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><div><span class="tag">Bônus</span>Diário S.O.S. de 20 dias<small>Uma página por dia para registrar o seu progresso</small></div></div>
+          <span class="r free">Grátis</span>
+        </li>
+        <li>
+          <div class="l"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><div><span class="tag">Bônus</span>4 cartões S.O.S. para o celular<small>Use como papel de parede na hora do aperto</small></div></div>
+          <span class="r free">Grátis</span>
+        </li>
+      </ul>
+    </section>
+
+    <aside class="side">
+      <div class="box total-card">
+        <h2>Total</h2>
+        <ul class="rows">
+          <li><span>Manual S.O.S. Ansiedade</span><span>R$ <span data-preco>27,90</span></span></li>
+          <li><span>2 bônus</span><span class="free">Grátis</span></li>
+        </ul>
+        <div class="total"><span>Você paga</span><strong>R$ <span data-preco>27,90</span></strong></div>
+        <p class="once">Pagamento único, sem mensalidade</p>
+
+        <div class="pay">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 21 12 12 21 3 12z"/><path d="M8 12h8"/></svg>Pix</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>Cartão</span>
+        </div>
+
+        <a href="#" class="btn" data-pagar>Ir para o pagamento <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <p class="redirect">Você será levado ao ambiente seguro da <strong data-plataforma>Kiwify</strong> para pagar.</p>
+
+        <div class="guarantee">
+          <div class="seal"><b>7</b><span>DIAS</span></div>
+          <p><strong style="color:var(--deep)">Garantia de 7 dias.</strong> Se não gostar, peça o reembolso e devolvemos 100% do valor.</p>
+        </div>
+
+        <ul class="trust">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="m4 7 8 6 8-6"/></svg>Acesso enviado por e-mail logo após o pagamento</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg>Leia no celular, tablet ou computador</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Seus dados de pagamento ficam só com a plataforma</li>
+        </ul>
+      </div>
+      <a href="index.html" class="back">← Voltar para a página do manual</a>
+    </aside>
+  </div>
+</main>
+
+<footer>
+  <a href="politica-de-privacidade.html">Política de Privacidade</a>·<a href="termos-de-uso.html">Termos de Uso</a>
+</footer>
+
+<!-- Barra fixa no celular -->
+<div class="mbar" id="mbar">
+  <div class="row">
+    <div class="p">Total<b>R$ <span data-preco>27,90</span></b></div>
+    <a href="#" class="btn" data-pagar>Pagar agora</a>
+  </div>
+</div>
+
+<script>
+(function(){
+  var c = window.CONFIG || {};
+  // Leva os parâmetros de campanha (utm_...) até o checkout da plataforma
+  var link = c.checkout || '#';
+  if (location.search && link.indexOf('http') === 0) {
+    link += (link.indexOf('?') < 0 ? '?' : '&') + location.search.slice(1);
+  }
+  document.querySelectorAll('[data-pagar]').forEach(function(a){ a.href = link; });
+  document.querySelectorAll('[data-preco]').forEach(function(s){ if(c.preco) s.textContent = c.preco; });
+  // Barra fixa some quando o cartão do total está na tela
+  var bar = document.getElementById('mbar'), card = document.querySelector('.total-card');
+  if ('IntersectionObserver' in window) {
+    new IntersectionObserver(function(e){ bar.classList.toggle('hide', e[0].isIntersecting); }, {threshold:.25}).observe(card);
+  }
+  document.querySelectorAll('[data-plataforma]').forEach(function(s){ if(c.plataforma) s.textContent = c.plataforma; });
+})();
+</script>
+</body>
+</html>

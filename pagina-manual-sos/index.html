@@ -15,15 +15,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet">
 
-<!-- =========================================================
-     CONFIGURAÇÃO: troque só estas duas linhas
-     ========================================================= -->
-<script>
-  window.CONFIG = {
-    checkout: "https://SEU-LINK-DE-CHECKOUT-AQUI",  // link da Kiwify / Hotmart / Eduzz etc.
-    preco: "27,90"                                  // preço que aparece na página (sem "R$")
-  };
-</script>
+<!-- Configuração (link do checkout, preço etc.) fica em config.js -->
+<script src="config.js"></script>
 
 <!-- Cole aqui o código do Pixel do Meta (Facebook), se for usar -->
 
@@ -369,7 +362,7 @@ footer a:hover{color:var(--deep)}
       </ul>
       <div class="price"><span class="cur">R$</span><span class="val" data-preco>27,90</span></div>
       <p class="price-note">Pagamento único. Pix ou cartão. Você recebe tudo por e-mail logo após a compra.</p>
-      <a href="#" class="btn lg block" data-checkout>Quero o meu manual agora</a>
+      <a href="checkout.html" class="btn lg block" data-checkout>Quero o meu manual agora</a>
       <div class="guarantee">
         <div class="seal"><b>7</b><span>DIAS</span></div>
         <p><strong style="color:var(--deep)">Garantia de 7 dias.</strong> Se não for o que você esperava, peça o reembolso dentro de 7 dias e devolvemos 100% do valor.</p>
@@ -422,14 +415,14 @@ footer a:hover{color:var(--deep)}
 <div class="mbar" id="mbar">
   <div class="row">
     <div class="p">Manual + bônus<b>R$ <span data-preco>27,90</span></b></div>
-    <a href="#" class="btn" data-checkout>Quero agora</a>
+    <a href="checkout.html" class="btn" data-checkout>Quero agora</a>
   </div>
 </div>
 
 <script>
 (function(){
   var c = window.CONFIG || {};
-  document.querySelectorAll('[data-checkout]').forEach(function(a){ a.href = c.checkout || '#oferta'; });
+  document.querySelectorAll('[data-checkout]').forEach(function(a){ a.href = 'checkout.html' + location.search; });
   document.querySelectorAll('[data-preco]').forEach(function(s){ if(c.preco) s.textContent = c.preco; });
   document.getElementById('ano').textContent = new Date().getFullYear();
 

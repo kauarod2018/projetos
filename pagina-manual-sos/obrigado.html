@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compra confirmada · Manual S.O.S. Ansiedade</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#234E52">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23E07A5F'/%3E%3Cpath d='M12 36c6-8 10 8 16 0s10 8 16 0 8-4 8-4' stroke='%23fff' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
+
+<!-- Configuração (e-mail de suporte etc.) fica em config.js -->
+<script src="config.js"></script>
+
+<!-- Cole aqui o código do Pixel do Meta (Facebook) com o evento Purchase, se for usar -->
+
+<style>
+:root{
+  --ink:#1E2D33; --ink2:#4A5A60; --deep:#234E52; --teal:#3E7C78; --sage:#A8C5B8;
+  --mist:#E6EFEA; --sand:#F7F2EA; --paper:#FFFDF9; --coral:#E07A5F; --coral-d:#C4583D;
+  --peach:#F8E1D6; --line:#E5DED2;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:radial-gradient(circle at 50% 0,var(--mist) 0,rgba(230,239,234,0) 55%),var(--paper);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;min-height:100vh}
+img{max-width:100%;height:auto;display:block}
+h1,h2,h3{font-family:Lora,Georgia,serif;color:var(--deep);line-height:1.2;font-weight:600}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+
+header .wrap{display:flex;align-items:center;justify-content:center;height:72px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--deep);text-decoration:none;font-size:16px}
+.logo i{width:30px;height:30px;border-radius:50%;background:var(--coral);display:inline-flex;align-items:center;justify-content:center}
+.logo i svg{width:18px;height:18px}
+
+.hero{text-align:center;padding:36px 0 32px}
+.ok{width:76px;height:76px;border-radius:50%;background:var(--teal);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 22px;box-shadow:0 0 0 10px var(--mist);animation:pop .5s cubic-bezier(.2,.9,.3,1.3) both}
+.ok svg{width:38px;height:38px}
+@keyframes pop{from{transform:scale(.4);opacity:0}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.ok{animation:none}}
+.hero h1{font-size:clamp(30px,5vw,44px);margin-bottom:12px}
+.hero p{color:var(--ink2);font-size:18px;max-width:540px;margin:0 auto}
+
+.box{background:#fff;border:1px solid var(--line);border-radius:22px;padding:30px 28px;margin-bottom:20px}
+.box h2{font-size:22px;margin-bottom:20px}
+
+.steps{list-style:none;display:grid;gap:22px}
+.steps li{display:flex;gap:16px;align-items:flex-start}
+.steps .n{flex:none;width:38px;height:38px;border-radius:50%;background:var(--deep);color:#fff;font-family:Lora,serif;font-weight:700;font-size:17px;display:flex;align-items:center;justify-content:center}
+.steps h3{font-size:18px;margin-bottom:2px}
+.steps p{color:var(--ink2);font-size:15.5px}
+
+.tip{display:flex;gap:12px;align-items:flex-start;background:var(--sand);border-radius:16px;padding:16px 18px;margin-top:24px;font-size:14.5px;color:var(--ink2)}
+.tip svg{flex:none;width:20px;height:20px;color:var(--coral-d);margin-top:2px}
+
+.help{display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.help p{color:var(--ink2);font-size:15px;max-width:400px}
+.help h2{margin-bottom:4px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--deep);color:#fff;text-decoration:none;font-weight:700;font-size:15.5px;padding:14px 24px;border-radius:999px;transition:background .2s,transform .2s}
+.btn:hover{background:var(--teal);transform:translateY(-2px)}
+.btn:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+.btn svg{width:18px;height:18px}
+
+.warn{background:#FFF6F2;border:1px solid #F1C9BB;border-radius:16px;padding:16px 20px;font-size:14px;color:var(--ink2);margin-bottom:20px}
+.warn strong{color:var(--coral-d)}
+
+footer{text-align:center;font-size:13px;color:var(--ink2);padding:20px 20px 48px}
+footer a{color:var(--ink2);margin:0 8px}
+
+@media (max-width:560px){
+  .box{padding:24px 18px;border-radius:18px}
+  .help .btn{width:100%}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a href="index.html" class="logo"><i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><path d="M3 13c2.5-3 4 3 6.5 0s4 3 6.5 0 3-1.5 5-1.5"/></svg></i>Manual S.O.S. Ansiedade</a>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="ok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div>
+    <h1>Compra confirmada!</h1>
+    <p>Obrigado por confiar no Manual S.O.S. Ansiedade. Você deu um passo importante para cuidar de você.</p>
+  </section>
+
+  <section class="box">
+    <h2>Como acessar o seu material</h2>
+    <ol class="steps">
+      <li><span class="n">1</span><div><h3>Abra o seu e-mail</h3><p>Enviamos o acesso para o e-mail que você usou na compra. Pode levar alguns minutos para chegar.</p></div></li>
+      <li><span class="n">2</span><div><h3>Baixe os arquivos</h3><p>Lá estão o manual em PDF, o Diário S.O.S. de 20 dias e os 4 cartões para o celular.</p></div></li>
+      <li><span class="n">3</span><div><h3>Comece pelo Método S.O.S.</h3><p>Leia as primeiras páginas e já salve um cartão como papel de parede. Amanhã, comece o Dia 1 do plano.</p></div></li>
+    </ol>
+    <div class="tip">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
+      <span><strong style="color:var(--deep)">Não chegou?</strong> Confira as pastas de spam, lixo eletrônico e “Promoções”. Se pagou com boleto, o acesso chega depois da compensação.</span>
+    </div>
+  </section>
+
+  <section class="box help">
+    <div>
+      <h2>Precisa de ajuda?</h2>
+      <p>Fale com a gente pelo e-mail <strong data-email>contato@seudominio.com.br</strong>. Respondemos em até 1 dia útil.</p>
+    </div>
+    <a href="mailto:contato@seudominio.com.br" class="btn" data-email-link><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v16H4z"/><path d="m4 7 8 6 8-6"/></svg>Enviar e-mail</a>
+  </section>
+
+  <div class="warn"><strong>Lembrete:</strong> este é um material educativo e não substitui acompanhamento psicológico ou médico. Se estiver em sofrimento intenso, ligue <strong>188</strong> (CVV, gratuito, 24 horas). Em emergência, ligue <strong>192</strong> (SAMU).</div>
+</main>
+
+<footer>
+  <a href="politica-de-privacidade.html">Política de Privacidade</a>·<a href="termos-de-uso.html">Termos de Uso</a>
+</footer>
+
+<script>
+(function(){
+  var c = window.CONFIG || {};
+  if (c.email) {
+    document.querySelectorAll('[data-email]').forEach(function(s){ s.textContent = c.email; });
+    document.querySelectorAll('[data-email-link]').forEach(function(a){ a.href = 'mailto:' + c.email; });
+  }
+})();
+</script>
+</body>
+</html>
