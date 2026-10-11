@@ -37,7 +37,7 @@ text, letters, words, typography, numbers, captions, logo, watermark, signature,
 ## 1. Fundo da oferta
 
 - **Nome do arquivo:** `img/fundo-kit.webp`
-- **Onde entra no site:** na seção da **oferta** (ao lado do preço), atrás da composição com a capa, a página do diário e o celular. Ele substitui o arco verde-claro que está lá hoje. A capa, o diário e o celular continuam sendo as imagens reais, colocadas por cima pelo site.
+- **Onde entra no site:** na seção da **oferta** ("Comece hoje por R$ 27,90"), ao lado do card de preço, atrás da composição com a capa, a página do diário e o celular. Ele substitui o arco verde-claro que está lá hoje. A capa, o diário e o celular continuam sendo as imagens reais, colocadas por cima pelo site. Essa composição aparece no computador e no tablet; no celular ela fica escondida, para o preço e o botão aparecerem primeiro.
 - **Proporção e tamanho:** **1:1 (quadrado)**, no mínimo 1200 × 1200 px.
 - **Estilo:** esta é a única que pode ser **foto suave**. É uma mesa vista de cima, como um cenário de produto.
 
@@ -55,14 +55,15 @@ text, letters, words, numbers, logo, watermark, books, notebooks, paper sheets, 
 
 **Dicas:**
 - O mais importante é o **centro vazio e bem iluminado**, porque é ali que os produtos entram. Descarte as variações com objetos no meio.
-- Os objetos devem ficar só nos cantos e nas bordas. No celular, o site recorta um pouco de cima e de baixo.
+- Os objetos devem ficar só nos cantos e nas bordas. O site mostra a imagem quase quadrada e corta só um pouquinho das laterais.
 
 ---
 
 ## 2. "Quando a cabeça não desliga" (noite)
 
 - **Nome do arquivo:** `img/ilustra-noite.webp`
-- **Onde entra no site:** na seção **"Você se reconhece? Quando a cabeça não desliga"**. No computador, fica na coluna da esquerda, abaixo do texto. No celular, fica entre o texto e a lista.
+- **Onde entra no site:** na seção **"Você se reconhece? Quando a cabeça não desliga"**. No computador, fica na coluna da esquerda, abaixo do texto. No celular, fica logo abaixo do título, antes da lista.
+- **Recorte:** aparece inteira, em 4:3, sem corte.
 - **Proporção e tamanho:** **4:3 (horizontal)**, ideal 1600 × 1200 px. Se o Flow não tiver 4:3, use **16:9** com a cena centralizada.
 
 **PROMPT** (cole o bloco de estilo comum antes):
@@ -90,13 +91,16 @@ Night scene, horizontal composition. The woman lies awake in bed, seen from the 
 **PROMPT** (cole o bloco de estilo comum antes):
 
 ```
-Vertical composition. The woman sits cross-legged on the floor near a large bright window, back straight and relaxed, eyes gently closed, one hand on her chest and the other resting on her knee, exhaling slowly with lips softly parted and a faint peaceful smile. Above her head a small knot of deep-teal scribble lines gradually untangles and transforms into smooth, evenly spaced parallel wavy lines in sage green that flow gently out through the window toward the right, a visual metaphor of a calming breath. Soft morning light, warm cream wall, a potted plant with sage leaves, a ceramic mug of tea on the floor. At the very bottom, a subtle band of layered waves in sage green and deep teal with one thin terracotta line and one thin cream line, echoing the book cover. The outer edges of the image softly fade into solid deep teal #173F43 so it blends into a dark panel. Subject centered with comfortable empty space above her head. Serene, hopeful, understated, not euphoric.
+Vertical composition. The woman sits cross-legged on the floor near a large bright window, back straight and relaxed, eyes gently closed, one hand on her chest and the other resting on her knee, exhaling slowly with lips softly parted and a faint peaceful smile. Above her head a small knot of deep-teal scribble lines gradually untangles and transforms into smooth, evenly spaced parallel wavy lines in sage green that flow gently out through the window toward the right, a visual metaphor of a calming breath. Soft morning light, warm cream wall, a potted plant with sage leaves, a ceramic mug of tea on the floor. At the very bottom, a subtle band of layered waves in sage green and deep teal with one thin terracotta line and one thin cream line, echoing the book cover. The outer edges of the image softly fade into solid deep teal #173F43 so it blends into a dark panel. Subject centered with comfortable empty space above her head; keep her head and the scribble lines inside the central 70% of the image height. Serene, hopeful, understated, not euphoric.
 ```
 
 **Prompt negativo:** use o prompt negativo comum.
 
 **Dicas:**
-- A personagem precisa ficar **bem no centro**. O site recorta essa imagem em formatos diferentes no computador e no celular.
+- A personagem precisa ficar **bem no centro**. O site recorta essa imagem em formatos diferentes:
+  - no computador, em 4:5 com o topo em arco (corta só um pouco de cima e de baixo)
+  - no celular e na página de obrigado, quadrada (corta cerca de 10% de cima e 15% de baixo)
+- Por isso a cabeça e os rabiscos não podem encostar no topo. A faixa de ondas lá embaixo pode ficar parcialmente cortada no celular, e tudo bem.
 - Ela deve passar **alívio, não euforia**. Evite variações com braços para cima ou pulando: a página não promete cura.
 
 ---
@@ -111,13 +115,13 @@ Vertical composition. The woman sits cross-legged on the floor near a large brig
 **PROMPT** (cole o bloco de estilo comum antes):
 
 ```
-Wide panoramic landscape. A gentle path made of three broad, low, flat stepping plateaus rises softly from left to right across rolling hills built from layered wave bands in sage green and deep teal, with one thin terracotta line and thin cream lines running through them like the waves on the book cover. The first plateau is tinted pale sage, the second teal, the third deep teal. On the far left, a small loose tangle of deep-teal scribble lines hangs in the air like a little storm cloud; toward the right the sky becomes clear and open, with a soft terracotta sun circle low on the horizon. The woman, small in scale and seen from the side, walks calmly on the middle plateau toward the right, wearing her sage-green t-shirt. Warm cream sky, lots of air. Keep all key elements inside the central horizontal band of the image (the middle 50% of the height), because the top and bottom will be cropped.
+Wide panoramic landscape. A gentle path made of three broad, low, flat stepping plateaus rises softly from left to right across rolling hills built from layered wave bands in sage green and deep teal, with one thin terracotta line and thin cream lines running through them like the waves on the book cover. The first plateau is tinted pale sage, the second teal, the third deep teal. On the far left, a small loose tangle of deep-teal scribble lines hangs in the air like a little storm cloud; toward the right the sky becomes clear and open, with a soft terracotta sun circle low on the horizon. The woman, small in scale and seen from the side, walks calmly on the middle plateau toward the right, wearing her sage-green t-shirt. Warm cream sky, lots of air. Keep all key elements inside the central horizontal band of the image (the middle 80% of the height), because a thin strip at the top and bottom will be cropped.
 ```
 
 **Prompt negativo:** use o prompt negativo comum.
 
 **Dicas:**
-- No computador, o site mostra só a **faixa do meio** da imagem, porque corta em cima e embaixo. Confira se a personagem, os degraus e o sol estão no meio da altura.
+- O site mostra a imagem em formato **2:1** (em qualquer tela) e corta uma faixa fina em cima e embaixo. Confira se a personagem, os degraus e o sol não encostam nas bordas de cima e de baixo.
 - Os três degraus representam as três fases do plano (Acalmar o corpo, Entender e questionar, Enfrentar e consolidar).
 
 ---
