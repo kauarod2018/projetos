@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Compra confirmada · Manual S.O.S. Ansiedade</title>
 <meta name="robots" content="noindex">
-<meta name="theme-color" content="#2E2566">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%236C5CE7'/%3E%3Cpath d='M12 36c6-8 10 8 16 0s10 8 16 0 8-4 8-4' stroke='%23fff' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#173F43">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23D4603A'/%3E%3Cpath d='M12 36c6-8 10 8 16 0s10 8 16 0 8-4 8-4' stroke='%23fff' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,500;1,8..60,600&display=swap" rel="stylesheet">
 
 <!-- Configuração (e-mail de suporte etc.) fica em config.js -->
 <script src="config.js"></script>
@@ -18,14 +18,14 @@
 
 <style>
 :root{
-  --ink:#1F1A3D; --ink2:#5D5878; --deep:#2E2566; --teal:#6C5CE7; --sage:#CFC6FF;
-  --mist:#EFEBFF; --sand:#F7F5FE; --paper:#FDFCFF; --coral:#6C5CE7; --coral-d:#C9562E;
-  --peach:#FFE3D3; --line:#ECE8F7;
+  --ink:#16262A; --ink2:#4E5D61; --deep:#173F43; --teal:#2F6F6A; --sage:#B9CFC6;
+  --mist:#EAF1EE; --sand:#F7F4EF; --paper:#FFFFFF; --coral:#D4603A; --coral-d:#B24E2B;
+  --peach:#FAE6DC; --line:#E7E3DC;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:var(--ink);background:radial-gradient(circle at 50% 0,var(--mist) 0,rgba(239,235,255,0) 55%),var(--paper);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;min-height:100vh}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:radial-gradient(circle at 50% 0,var(--mist) 0,rgba(230,239,234,0) 55%),var(--paper);font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;min-height:100vh}
 img{max-width:100%;height:auto;display:block}
-h1,h2,h3{font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:var(--deep);line-height:1.2;font-weight:600}
+h1,h2,h3{font-family:'Source Serif 4',Georgia,serif;color:var(--deep);line-height:1.2;font-weight:600}
 .wrap{max-width:720px;margin:0 auto;padding:0 20px}
 
 header .wrap{display:flex;align-items:center;justify-content:center;height:72px}
@@ -46,7 +46,7 @@ header .wrap{display:flex;align-items:center;justify-content:center;height:72px}
 
 .steps{list-style:none;display:grid;gap:22px}
 .steps li{display:flex;gap:16px;align-items:flex-start}
-.steps .n{flex:none;width:38px;height:38px;border-radius:50%;background:var(--deep);color:#fff;font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:700;font-size:17px;display:flex;align-items:center;justify-content:center}
+.steps .n{flex:none;width:38px;height:38px;border-radius:50%;background:var(--deep);color:#fff;font-family:'Source Serif 4',Georgia,serif;font-weight:700;font-size:17px;display:flex;align-items:center;justify-content:center}
 .steps h3{font-size:18px;margin-bottom:2px}
 .steps p{color:var(--ink2);font-size:15.5px}
 
@@ -61,7 +61,7 @@ header .wrap{display:flex;align-items:center;justify-content:center;height:72px}
 .btn:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
 .btn svg{width:18px;height:18px}
 
-.warn{background:#FFF4EE;border:1px solid #FFD2BC;border-radius:16px;padding:16px 20px;font-size:14px;color:var(--ink2);margin-bottom:20px}
+.warn{background:#FFF6F2;border:1px solid #F1C9BB;border-radius:16px;padding:16px 20px;font-size:14px;color:var(--ink2);margin-bottom:20px}
 .warn strong{color:var(--coral-d)}
 
 footer{text-align:center;font-size:13px;color:var(--ink2);padding:20px 20px 48px}
@@ -72,30 +72,31 @@ footer a{color:var(--ink2);margin:0 8px}
   .help .btn{width:100%}
 }
 
-/* ===== Estilo moderno e leve ===== */
-h1,h2,h3{font-weight:800;letter-spacing:-.025em}
-h3{font-weight:700;letter-spacing:-.015em}
-.btn{background:linear-gradient(135deg,#7D6DF4 0%,#5B48DB 100%);letter-spacing:-.005em}
-.btn:hover{background:linear-gradient(135deg,#6E5DEB 0%,#4B39C8 100%)}
-.kicker{display:inline-block;background:var(--peach);color:var(--coral-d);padding:6px 14px;border-radius:999px;font-size:12px;letter-spacing:.12em}
-.science .kicker{background:rgba(255,255,255,.12)}
-.card,.check,.get .item,.faq details,.box{border-color:var(--line);box-shadow:0 1px 2px rgba(46,37,102,.04),0 10px 30px rgba(46,37,102,.06)}
+/* ===== Estilo limpo e profissional ===== */
+h1,h2,h3{font-weight:600;letter-spacing:-.015em}
+.hero h1{letter-spacing:-.022em;line-height:1.08}
+.btn{border-radius:12px;box-shadow:0 1px 2px rgba(22,38,42,.08),0 8px 20px rgba(212,96,58,.22)}
+.btn:hover{box-shadow:0 1px 2px rgba(22,38,42,.08),0 12px 26px rgba(212,96,58,.28)}
+header .btn{border-radius:10px}
+.kicker{display:inline-flex;align-items:center;gap:12px;font-size:12.5px;letter-spacing:.16em}
+.kicker:before,.center .kicker:after{content:"";width:28px;height:1px;background:currentColor;opacity:.55}
+.badge{background:#fff;border:1px solid var(--line);font-weight:500}
+.card,.check,.get .item,.box{box-shadow:none}
+.card,.get .item,.box{border-radius:16px}
+.card:hover{box-shadow:0 12px 30px rgba(22,38,42,.07)}
+.check{border-radius:12px}
 .check i{background:var(--mist);color:var(--teal)}
-.note{font-weight:600;letter-spacing:-.01em}
-.step .n{background:linear-gradient(135deg,#7D6DF4,#5B48DB);box-shadow:0 0 0 8px var(--sand),0 10px 24px rgba(108,92,231,.35)}
-.science{background:linear-gradient(160deg,#2E2566 0%,#3E30A6 100%)}
-.fact{border-radius:24px}
-.fact .big{font-weight:800;letter-spacing:-.03em}
-.price-card,.total-card{border-color:var(--teal)}
-.price-card .ribbon{background:var(--peach);color:var(--coral-d)}
-.price .val{font-weight:800;letter-spacing:-.03em}
-.final{background:radial-gradient(60% 80% at 90% 0%,rgba(255,200,170,.35) 0,rgba(255,200,170,0) 60%),linear-gradient(150deg,#3A2E8C 0%,#5B48DB 100%)}
-.final .btn{background:#fff;color:var(--deep);box-shadow:0 14px 30px rgba(20,12,70,.3)}
-.final .btn:hover{background:var(--peach)}
-.logo i{background:linear-gradient(135deg,#7D6DF4,#5B48DB)}
-.ok{background:linear-gradient(135deg,#7D6DF4,#5B48DB)}
-.seal{background:linear-gradient(135deg,#7D6DF4,#5B48DB)}
-.guarantee .seal{background:linear-gradient(135deg,#7D6DF4,#5B48DB)}
+.card .ic{border-radius:12px}
+.faq details{border-radius:12px}
+.inside figure{border-radius:12px;box-shadow:0 1px 2px rgba(22,38,42,.05),0 10px 26px rgba(22,38,42,.08)}
+.fact{border-radius:16px}
+.get .pill,.step .tag,.tag,.fmt{border-radius:6px}
+.price-card,.total-card{border:1px solid var(--line);border-radius:20px;box-shadow:0 2px 4px rgba(22,38,42,.04),0 24px 60px rgba(22,38,42,.10)}
+.price-card .ribbon{border-radius:6px}
+.final{border-radius:24px}
+.note{font-style:italic;font-weight:500}
+.pay span{border-radius:10px}
+.help .btn{box-shadow:0 1px 2px rgba(22,38,42,.1),0 8px 20px rgba(22,38,42,.18)}
 </style>
 </head>
 <body>

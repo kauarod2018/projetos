@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Finalizar compra · Manual S.O.S. Ansiedade</title>
 <meta name="robots" content="noindex">
-<meta name="theme-color" content="#2E2566">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%236C5CE7'/%3E%3Cpath d='M12 36c6-8 10 8 16 0s10 8 16 0 8-4 8-4' stroke='%23fff' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<meta name="theme-color" content="#173F43">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23D4603A'/%3E%3Cpath d='M12 36c6-8 10 8 16 0s10 8 16 0 8-4 8-4' stroke='%23fff' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,500;1,8..60,600&display=swap" rel="stylesheet">
 
 <!-- Configuração (link do checkout, preço etc.) fica em config.js -->
 <script src="config.js"></script>
@@ -18,14 +18,14 @@
 
 <style>
 :root{
-  --ink:#1F1A3D; --ink2:#5D5878; --deep:#2E2566; --teal:#6C5CE7; --sage:#CFC6FF;
-  --mist:#EFEBFF; --sand:#F7F5FE; --paper:#FDFCFF; --coral:#6C5CE7; --coral-d:#C9562E;
-  --peach:#FFE3D3; --line:#ECE8F7;
+  --ink:#16262A; --ink2:#4E5D61; --deep:#173F43; --teal:#2F6F6A; --sage:#B9CFC6;
+  --mist:#EAF1EE; --sand:#F7F4EF; --paper:#FFFFFF; --coral:#D4603A; --coral-d:#B24E2B;
+  --peach:#FAE6DC; --line:#E7E3DC;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:var(--ink);background:var(--sand);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--sand);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
 img{max-width:100%;height:auto;display:block}
-h1,h2,h3{font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:var(--deep);line-height:1.2;font-weight:600}
+h1,h2,h3{font-family:'Source Serif 4',Georgia,serif;color:var(--deep);line-height:1.2;font-weight:600}
 .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
 
 /* Header */
@@ -56,7 +56,7 @@ h1.title{text-align:center;font-size:clamp(28px,4vw,38px);margin:14px 0 30px}
 
 /* Produto */
 .product{display:flex;gap:20px;align-items:center;padding-bottom:22px;border-bottom:1px solid var(--line)}
-.product img{width:96px;border-radius:4px 10px 10px 4px;box-shadow:0 14px 30px rgba(46,37,102,.22);flex:none}
+.product img{width:96px;border-radius:4px 10px 10px 4px;box-shadow:0 14px 30px rgba(22,38,42,.22);flex:none}
 .product h3{font-size:20px;margin-bottom:4px}
 .product p{color:var(--ink2);font-size:14.5px}
 .fmt{display:inline-block;margin-top:8px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);background:var(--mist);padding:3px 10px;border-radius:999px}
@@ -73,21 +73,21 @@ h1.title{text-align:center;font-size:clamp(28px,4vw,38px);margin:14px 0 30px}
 
 /* Total */
 .side{position:sticky;top:20px}
-.total-card{border:2px solid var(--deep);box-shadow:0 24px 60px rgba(46,37,102,.1)}
+.total-card{border:2px solid var(--deep);box-shadow:0 24px 60px rgba(22,38,42,.1)}
 .rows{list-style:none;margin-bottom:16px}
 .rows li{display:flex;justify-content:space-between;padding:6px 0;color:var(--ink2);font-size:15px}
 .rows .free{color:var(--teal);font-weight:600}
 .total{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);padding-top:16px;margin-bottom:6px}
 .total span{font-weight:700;color:var(--deep)}
-.total strong{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-size:40px;color:var(--deep);line-height:1}
+.total strong{font-family:'Source Serif 4',Georgia,serif;font-size:40px;color:var(--deep);line-height:1}
 .once{font-size:13.5px;color:var(--ink2);text-align:right;margin-bottom:22px}
 
 .pay{display:flex;gap:8px;margin-bottom:20px}
 .pay span{flex:1;display:flex;align-items:center;justify-content:center;gap:6px;border:1px solid var(--line);border-radius:12px;padding:10px 6px;font-size:13.5px;font-weight:600;color:var(--deep);background:var(--paper)}
 .pay svg{width:18px;height:18px;color:var(--teal)}
 
-.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;background:var(--coral);color:#fff;text-decoration:none;font-weight:700;font-size:18px;padding:18px 24px;border-radius:999px;box-shadow:0 12px 28px rgba(108,92,231,.35);transition:background .2s,transform .2s,box-shadow .2s;border:0;cursor:pointer;font-family:inherit}
-.btn:hover{background:var(--coral-d);transform:translateY(-2px);box-shadow:0 16px 34px rgba(108,92,231,.42)}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;background:var(--coral);color:#fff;text-decoration:none;font-weight:700;font-size:18px;padding:18px 24px;border-radius:999px;box-shadow:0 12px 28px rgba(212,96,58,.35);transition:background .2s,transform .2s,box-shadow .2s;border:0;cursor:pointer;font-family:inherit}
+.btn:hover{background:var(--coral-d);transform:translateY(-2px);box-shadow:0 16px 34px rgba(212,96,58,.42)}
 .btn:focus-visible{outline:3px solid var(--deep);outline-offset:3px}
 .btn svg{width:18px;height:18px}
 .redirect{font-size:13px;color:var(--ink2);text-align:center;margin-top:12px}
@@ -108,11 +108,11 @@ footer{text-align:center;font-size:13px;color:var(--ink2);padding:0 20px 110px}
 footer a{color:var(--ink2);margin:0 8px}
 
 /* Barra fixa no celular */
-.mbar{display:none;transition:transform .3s;position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(253,252,255,.97);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:12px 16px calc(12px + env(safe-area-inset-bottom))}
+.mbar{display:none;transition:transform .3s;position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(255,255,255,.97);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:12px 16px calc(12px + env(safe-area-inset-bottom))}
 .mbar.hide{transform:translateY(110%)}
 .mbar .row{display:flex;align-items:center;gap:14px}
 .mbar .p{font-size:12.5px;color:var(--ink2);line-height:1.2}
-.mbar .p b{display:block;font-size:20px;color:var(--deep);font-family:'Plus Jakarta Sans',system-ui,sans-serif}
+.mbar .p b{display:block;font-size:20px;color:var(--deep);font-family:'Source Serif 4',Georgia,serif}
 .mbar .btn{flex:1;width:auto;padding:14px 16px;font-size:16px}
 
 @media (max-width:860px){
@@ -131,32 +131,30 @@ footer a{color:var(--ink2);margin:0 8px}
   .secure{font-size:13px}
 }
 
-/* ===== Estilo moderno e leve ===== */
-h1,h2,h3{font-weight:800;letter-spacing:-.025em}
-h3{font-weight:700;letter-spacing:-.015em}
-.btn{background:linear-gradient(135deg,#7D6DF4 0%,#5B48DB 100%);letter-spacing:-.005em}
-.btn:hover{background:linear-gradient(135deg,#6E5DEB 0%,#4B39C8 100%)}
-.kicker{display:inline-block;background:var(--peach);color:var(--coral-d);padding:6px 14px;border-radius:999px;font-size:12px;letter-spacing:.12em}
-.science .kicker{background:rgba(255,255,255,.12)}
-.card,.check,.get .item,.faq details,.box{border-color:var(--line);box-shadow:0 1px 2px rgba(46,37,102,.04),0 10px 30px rgba(46,37,102,.06)}
-.hero{background:radial-gradient(55% 65% at 88% 18%,#EAE5FF 0,rgba(234,229,255,0) 70%),radial-gradient(40% 55% at 4% 95%,#FFEADF 0,rgba(255,234,223,0) 70%),var(--paper)}
-.hero-visual .blob{background:radial-gradient(circle,#D9D1FF 0,rgba(217,209,255,.45) 40%,rgba(255,227,211,.35) 58%,rgba(255,227,211,0) 72%)}
+/* ===== Estilo limpo e profissional ===== */
+h1,h2,h3{font-weight:600;letter-spacing:-.015em}
+.hero h1{letter-spacing:-.022em;line-height:1.08}
+.btn{border-radius:12px;box-shadow:0 1px 2px rgba(22,38,42,.08),0 8px 20px rgba(212,96,58,.22)}
+.btn:hover{box-shadow:0 1px 2px rgba(22,38,42,.08),0 12px 26px rgba(212,96,58,.28)}
+header .btn{border-radius:10px}
+.kicker{display:inline-flex;align-items:center;gap:12px;font-size:12.5px;letter-spacing:.16em}
+.kicker:before,.center .kicker:after{content:"";width:28px;height:1px;background:currentColor;opacity:.55}
+.badge{background:#fff;border:1px solid var(--line);font-weight:500}
+.card,.check,.get .item,.box{box-shadow:none}
+.card,.get .item,.box{border-radius:16px}
+.card:hover{box-shadow:0 12px 30px rgba(22,38,42,.07)}
+.check{border-radius:12px}
 .check i{background:var(--mist);color:var(--teal)}
-.note{font-weight:600;letter-spacing:-.01em}
-.step .n{background:linear-gradient(135deg,#7D6DF4,#5B48DB);box-shadow:0 0 0 8px var(--sand),0 10px 24px rgba(108,92,231,.35)}
-.science{background:linear-gradient(160deg,#2E2566 0%,#3E30A6 100%)}
-.fact{border-radius:24px}
-.fact .big{font-weight:800;letter-spacing:-.03em}
-.price-card,.total-card{border-color:var(--teal)}
-.price-card .ribbon{background:var(--peach);color:var(--coral-d)}
-.price .val{font-weight:800;letter-spacing:-.03em}
-.final{background:radial-gradient(60% 80% at 90% 0%,rgba(255,200,170,.35) 0,rgba(255,200,170,0) 60%),linear-gradient(150deg,#3A2E8C 0%,#5B48DB 100%)}
-.final .btn{background:#fff;color:var(--deep);box-shadow:0 14px 30px rgba(20,12,70,.3)}
-.final .btn:hover{background:var(--peach)}
-.logo i{background:linear-gradient(135deg,#7D6DF4,#5B48DB)}
-.ok{background:linear-gradient(135deg,#7D6DF4,#5B48DB)}
-.seal{background:linear-gradient(135deg,#7D6DF4,#5B48DB)}
-.guarantee .seal{background:linear-gradient(135deg,#7D6DF4,#5B48DB)}
+.card .ic{border-radius:12px}
+.faq details{border-radius:12px}
+.inside figure{border-radius:12px;box-shadow:0 1px 2px rgba(22,38,42,.05),0 10px 26px rgba(22,38,42,.08)}
+.fact{border-radius:16px}
+.get .pill,.step .tag,.tag,.fmt{border-radius:6px}
+.price-card,.total-card{border:1px solid var(--line);border-radius:20px;box-shadow:0 2px 4px rgba(22,38,42,.04),0 24px 60px rgba(22,38,42,.10)}
+.price-card .ribbon{border-radius:6px}
+.final{border-radius:24px}
+.note{font-style:italic;font-weight:500}
+.pay span{border-radius:10px}
 </style>
 </head>
 <body>
