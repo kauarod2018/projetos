@@ -388,7 +388,7 @@ h1,h2,h3{font-weight:600;letter-spacing:-.015em}
       </ul>
       <div class="price"><span class="cur">R$</span><span class="val" data-preco>27,90</span></div>
       <p class="price-note">Pagamento único. Pix ou cartão. Você recebe tudo por e-mail logo após a compra.</p>
-      <a href="checkout.html" class="btn lg block" data-checkout>Quero o meu manual agora</a>
+      <a href="#oferta" class="btn lg block" data-checkout>Quero o meu manual agora</a>
       <div class="guarantee">
         <div class="seal"><b>7</b><span>DIAS</span></div>
         <p><strong style="color:var(--deep)">Garantia de 7 dias.</strong> Se não for o que você esperava, peça o reembolso dentro de 7 dias e devolvemos 100% do valor.</p>
@@ -439,13 +439,18 @@ h1,h2,h3{font-weight:600;letter-spacing:-.015em}
 
 <!-- Barra fixa no celular -->
 <div class="mbar" id="mbar">
-  <a href="checkout.html" class="btn" data-checkout>Quero o manual</a>
+  <a href="#oferta" class="btn" data-checkout>Quero o manual</a>
 </div>
 
 <script>
 (function(){
   var c = window.CONFIG || {};
-  document.querySelectorAll('[data-checkout]').forEach(function(a){ a.href = 'checkout.html' + location.search; });
+  // Botões de compra levam direto ao checkout da Hotmart, repassando os parâmetros de campanha (utm_...)
+  var link = c.checkout || '';
+  if (link.indexOf('http') === 0 && link.indexOf('SEU-LINK') < 0) {
+    if (location.search) link += (link.indexOf('?') < 0 ? '?' : '&') + location.search.slice(1);
+    document.querySelectorAll('[data-checkout]').forEach(function(a){ a.href = link; });
+  }
   document.querySelectorAll('[data-preco]').forEach(function(s){ if(c.preco) s.textContent = c.preco; });
   document.getElementById('ano').textContent = new Date().getFullYear();
 
