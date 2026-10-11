@@ -52,13 +52,17 @@ section{padding:88px 0}
 .trust span{display:inline-flex;align-items:center;gap:6px}
 .trust svg{width:16px;height:16px;color:var(--teal)}
 
-/* Header */
-header{position:relative;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
-.logo{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--deep);text-decoration:none;font-size:16px}
-.logo i{width:30px;height:30px;border-radius:50%;background:var(--coral);display:inline-flex;align-items:center;justify-content:center}
-.logo i svg{width:18px;height:18px}
-header .btn{padding:10px 20px;font-size:15px;box-shadow:none}
+
+/* Faixa da garantia (texto correndo) */
+.aviso{background:var(--deep);color:#fff;overflow:hidden;font-size:13.5px;line-height:1;white-space:nowrap}
+.aviso-trilho{display:flex;width:max-content;animation:aviso-corre 32s linear infinite}
+.aviso:hover .aviso-trilho{animation-play-state:paused}
+.aviso-grupo{display:flex}
+.aviso span{display:inline-flex;align-items:center;gap:8px;padding:12px 32px;color:#DCE8E3}
+.aviso b{color:#fff;font-weight:600}
+.aviso svg{width:16px;height:16px;color:#F2A285;flex:none}
+@keyframes aviso-corre{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.aviso-trilho{animation:none;width:auto;justify-content:center}.aviso-grupo span:not(:first-child),.aviso-grupo[aria-hidden]{display:none}}
 
 /* Hero */
 .hero{padding:64px 0 88px;background:radial-gradient(circle at 85% 30%,var(--mist) 0,rgba(230,239,234,0) 45%),var(--paper);overflow:hidden}
@@ -196,8 +200,6 @@ footer a:hover{color:var(--deep)}
 }
 @media (max-width:640px){
   body{font-size:16px}
-  .logo{font-size:14.5px;white-space:nowrap;gap:8px}
-  .logo i{width:26px;height:26px}
   .checks,.grid3,.get,.facts{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr;gap:36px}
   .steps:before{display:none}
@@ -215,7 +217,6 @@ h1,h2,h3{font-weight:600;letter-spacing:-.015em}
 .hero h1{letter-spacing:-.022em;line-height:1.08}
 .btn{border-radius:12px;box-shadow:0 1px 2px rgba(22,38,42,.08),0 8px 20px rgba(212,96,58,.22)}
 .btn:hover{box-shadow:0 1px 2px rgba(22,38,42,.08),0 12px 26px rgba(212,96,58,.28)}
-header .btn{border-radius:10px}
 .kicker{display:inline-flex;align-items:center;gap:12px;font-size:12.5px;letter-spacing:.16em}
 .kicker:before,.center .kicker:after{content:"";width:28px;height:1px;background:currentColor;opacity:.55}
 .badge{background:#fff;border:1px solid var(--line);font-weight:500}
@@ -238,11 +239,10 @@ header .btn{border-radius:10px}
 </head>
 <body>
 
-<header>
-  <div class="wrap">
-    <a href="#topo" class="logo"><i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><path d="M3 13c2.5-3 4 3 6.5 0s4 3 6.5 0 3-1.5 5-1.5"/></svg></i>Manual S.O.S. Ansiedade</a>
-  </div>
-</header>
+<!-- Faixa da garantia -->
+<div class="aviso" role="note" aria-label="Garantia de 7 dias: se não gostar, devolvemos 100% do valor">
+  <div class="aviso-trilho"><div class="aviso-grupo"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><b>Garantia de 7 dias</b> · se não gostar, devolvemos 100% do valor</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><b>Garantia de 7 dias</b> · se não gostar, devolvemos 100% do valor</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><b>Garantia de 7 dias</b> · se não gostar, devolvemos 100% do valor</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><b>Garantia de 7 dias</b> · se não gostar, devolvemos 100% do valor</span></div><div class="aviso-grupo" aria-hidden="true"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><b>Garantia de 7 dias</b> · se não gostar, devolvemos 100% do valor</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><b>Garantia de 7 dias</b> · se não gostar, devolvemos 100% do valor</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><b>Garantia de 7 dias</b> · se não gostar, devolvemos 100% do valor</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><b>Garantia de 7 dias</b> · se não gostar, devolvemos 100% do valor</span></div></div>
+</div>
 
 <main id="topo">
 
