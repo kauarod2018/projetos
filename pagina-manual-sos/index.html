@@ -2,445 +2,1195 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Manual S.O.S. Ansiedade · Técnicas da TCC para acalmar a mente barulhenta</title>
-<meta name="description" content="Guia prático em PDF com técnicas da Terapia Cognitivo-Comportamental: exercícios de 1 a 5 minutos para a hora da crise, plano guiado de 20 dias, fichas, diário e cartões para o celular.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Manual S.O.S. Ansiedade · Técnicas da TCC para a hora do aperto</title>
+<meta name="description" content="Guia em PDF com técnicas da TCC: Método S.O.S. de 1 a 5 minutos, plano de 20 dias, 7 fichas, diário e cartões para o celular. Acesso imediato.">
 <meta name="theme-color" content="#173F43">
+<meta name="color-scheme" content="light">
+<!-- Quando o site tiver domínio, descomente e troque pelo endereço real:
+<link rel="canonical" href="https://SEU-DOMINIO.com.br/">
+<meta property="og:url" content="https://SEU-DOMINIO.com.br/">
+-->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Manual S.O.S. Ansiedade">
-<meta property="og:description" content="Técnicas da TCC para acalmar a mente barulhenta. PDF com plano de 20 dias, fichas e diário.">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Manual S.O.S. Ansiedade">
+<meta property="og:title" content="Manual S.O.S. Ansiedade · Técnicas da TCC para a hora do aperto">
+<meta property="og:description" content="Técnicas da TCC para acalmar a mente barulhenta. PDF com Método S.O.S., plano de 20 dias, fichas, diário e cartões para o celular.">
+<!-- ANTES DE PUBLICAR (ver lista no topo do config.js): troque "img/og.jpg" nas 2 linhas og:image e twitter:image
+     pelo endereço completo (https://SEU-DOMINIO.com.br/img/og.jpg). Sem isso, o WhatsApp e o Facebook não mostram a imagem. -->
 <meta property="og:image" content="img/og.jpg">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23D4603A'/%3E%3Cpath d='M12 36c6-8 10 8 16 0s10 8 16 0 8-4 8-4' stroke='%23fff' stroke-width='5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Capa do Manual S.O.S. Ansiedade: técnicas da TCC para acalmar a mente barulhenta">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Manual S.O.S. Ansiedade · Técnicas da TCC para a hora do aperto">
+<meta name="twitter:description" content="PDF com Método S.O.S. de 1 a 5 minutos, plano guiado de 20 dias, fichas, diário e cartões para o celular.">
+<meta name="twitter:image" content="img/og.jpg">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,500;1,8..60,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,500..700;1,8..60,500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/capa.webp" fetchpriority="high">
 
-<!-- Configuração (link do checkout, preço etc.) fica em config.js -->
+<script>document.documentElement.classList.add('js')</script>
+
+<!-- Configuração (link do checkout, preço, e-mail) fica em config.js -->
 <script src="config.js"></script>
 
 <!-- Cole aqui o código do Pixel do Meta (Facebook), se for usar -->
 
 <style>
+/* =========================================================
+   Manual S.O.S. Ansiedade · guia visual em DESIGN.md
+   ========================================================= */
 :root{
-  --ink:#16262A; --ink2:#4E5D61; --deep:#173F43; --teal:#2F6F6A; --sage:#B9CFC6;
-  --mist:#EAF1EE; --sand:#F7F4EF; --paper:#FFFFFF; --coral:#D4603A; --coral-d:#B24E2B;
-  --peach:#FAE6DC; --line:#E7E3DC; --radius:20px;
+  /* texto */
+  --ink:#16262A; --ink-2:#4E5D61; --ink-3:#5C6B6E;
+  /* marca */
+  --deep:#173F43; --deep-2:#12343A; --teal:#2F6F6A;
+  --sage:#9FBDB2; --sage-2:#C9DBD2; --mist:#EAF1EE;
+  /* neutros quentes */
+  --paper:#FFFFFF; --cream:#F5EFE6; --cream-2:#EDE4D6; --line:#E6DFD3; --line-2:#D8CEBF;
+  /* acento */
+  --coral:#D4603A;                 /* só decoração: pontos, ondas, letras grandes, selo */
+  --cta:#C4532F; --cta-h:#B24E2B;  /* botões (texto branco: AA) */
+  --coral-ink:#A8482A;             /* texto coral pequeno sobre branco, creme ou pêssego */
+  --peach:#FAE6DC; --peach-dk:#F2B49B;
+  --on-dark:#D5E3DD; --on-dark-2:#A9C3BA;
+  /* tipografia */
+  --serif:'Source Serif 4',Georgia,'Times New Roman',serif;
+  --sans:Inter,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --fs-h1:clamp(2.125rem,1.45rem + 3vw,3.75rem);
+  --fs-h2:clamp(1.875rem,1.45rem + 1.6vw,2.625rem);
+  --fs-h3:clamp(1.1875rem,1.1rem + .35vw,1.375rem);
+  --fs-lead:clamp(1.0625rem,1rem + .3vw,1.1875rem);
+  /* espaço */
+  --gutter:clamp(20px,4vw,32px);
+  --container:1160px;
+  --section-y:clamp(64px,4vw + 42px,96px);
+  --head-gap:clamp(32px,2.4vw + 22px,56px);
+  /* formas */
+  --r-xs:6px; --r-sm:10px; --r-md:12px; --r-lg:16px; --r-xl:20px; --r-2xl:28px;
+  --sh-1:0 1px 2px rgba(22,38,42,.06);
+  --sh-2:0 1px 2px rgba(22,38,42,.05),0 10px 28px -8px rgba(22,38,42,.16);
+  --sh-3:0 2px 4px rgba(22,38,42,.04),0 28px 64px -16px rgba(22,38,42,.22);
+  --sh-book:0 2px 3px rgba(22,38,42,.18),0 22px 40px -10px rgba(22,38,42,.35),0 50px 90px -30px rgba(22,38,42,.30);
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:var(--paper);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+
+/* ---------- Base ---------- */
+*,*::before,*::after{box-sizing:border-box}
+*{margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{font:400 16px/1.6 var(--sans);color:var(--ink);background:var(--paper);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+@media (min-width:768px){body{font-size:17px;line-height:1.65}}
+main{overflow-x:clip}
 img{max-width:100%;height:auto;display:block}
 a{color:inherit}
-h1,h2,h3{font-family:'Source Serif 4',Georgia,serif;color:var(--deep);line-height:1.15;font-weight:600}
-.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
-.narrow{max-width:760px;margin:0 auto}
-section{padding:88px 0}
-.alt{background:var(--sand)}
-.kicker{font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--coral-d);margin-bottom:12px}
-.center{text-align:center}
-.sec-title{font-size:clamp(30px,4.2vw,44px);margin-bottom:14px}
-.sec-sub{color:var(--ink2);font-size:18px;max-width:640px}
-.center .sec-sub{margin:0 auto}
+ul,ol{list-style:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;text-align:inherit}
+h1,h2,h3{font-family:var(--serif);color:var(--deep);font-weight:600;letter-spacing:-.015em;line-height:1.2;text-wrap:balance}
+p,li{text-wrap:pretty}
+strong,b{font-weight:600}
+[id]{scroll-margin-top:16px}
+:focus-visible{outline:3px solid var(--deep);outline-offset:3px}
+.nw{white-space:nowrap}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.i{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.wrap{width:100%;max-width:calc(var(--container) + 2*var(--gutter));margin-inline:auto;padding-inline:var(--gutter)}
+.sec{padding-block:var(--section-y)}
+.cream{background:var(--cream)}
+.mist{background:var(--mist)}
 
-/* Buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--coral);color:#fff;text-decoration:none;font-weight:700;font-size:18px;padding:18px 32px;border-radius:999px;box-shadow:0 12px 28px rgba(212,96,58,.35);transition:transform .2s,box-shadow .2s,background .2s}
-.btn:hover{background:var(--coral-d);transform:translateY(-2px);box-shadow:0 16px 34px rgba(212,96,58,.42)}
+/* ---------- Cabeçalho de seção ---------- */
+.head{max-width:720px;margin-bottom:var(--head-gap)}
+.head.center{margin-inline:auto;text-align:center}
+.kicker{display:flex;align-items:center;gap:12px;font:700 12px/1.2 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--coral-ink);margin-bottom:14px}
+.kicker::before{content:"";width:28px;height:1px;background:currentColor;opacity:.6;flex:none}
+.center .kicker{justify-content:center}
+.center .kicker::after{content:"";width:28px;height:1px;background:currentColor;opacity:.6;flex:none}
+.h2{font-size:var(--fs-h2);line-height:1.12;letter-spacing:-.018em}
+.sub{margin-top:16px;color:var(--ink-2);font-size:var(--fs-lead);line-height:1.6;max-width:62ch}
+.center .sub{margin-inline:auto;text-wrap:balance}
+/* cabeçalho dividido: título à esquerda, texto de apoio à direita */
+.head-split{max-width:none;display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:16px 64px;align-items:end}
+.head-split .sub{margin-top:0}
+#por-dentro .head-split{max-width:1040px;margin-inline:auto}
+
+/* ---------- Botões ---------- */
+.btn{--h:56px;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:var(--h);padding:0 28px;border-radius:var(--r-md);background:var(--cta);color:#fff;font:700 17px/1.2 var(--sans);letter-spacing:-.005em;text-decoration:none;text-align:center;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.16),0 1px 2px rgba(22,38,42,.12),0 10px 24px -8px rgba(196,83,47,.55);transition:background-color .2s,transform .2s,box-shadow .2s}
+.btn:hover{background:var(--cta-h);transform:translateY(-1px);box-shadow:inset 0 1px 0 rgba(255,255,255,.16),0 1px 2px rgba(22,38,42,.12),0 14px 28px -8px rgba(196,83,47,.6)}
+.btn:active{transform:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.1),0 1px 2px rgba(22,38,42,.12)}
 .btn:focus-visible{outline:3px solid var(--deep);outline-offset:3px}
-.btn.lg{font-size:19px;padding:20px 40px}
+.on-dark .btn:focus-visible{outline-color:var(--peach)}
+.btn .i{width:18px;height:18px;stroke-width:2.2;transition:transform .2s}
+.btn:hover .i{transform:translateX(3px)}
+.btn.lg{--h:60px;padding:0 34px;font-size:18px}
 .btn.block{width:100%}
-.trust{display:flex;flex-wrap:wrap;gap:8px 18px;color:var(--ink2);font-size:14.5px;margin-top:18px}
-.trust span{display:inline-flex;align-items:center;gap:6px}
-.trust svg{width:16px;height:16px;color:var(--teal)}
+.link-arrow{display:inline-block;padding-block:10px;font-weight:600;font-size:16px;color:var(--deep);text-decoration:underline;text-decoration-color:var(--sage);text-decoration-thickness:2px;text-underline-offset:6px;transition:text-decoration-color .2s}
+.link-arrow:hover{text-decoration-color:var(--deep)}
+.micro{font-size:14px;color:var(--ink-3);margin-top:12px;text-wrap:balance}
+.cta-row{margin-top:36px}
+.cta-center{text-align:center;margin-top:48px}
 
-
-/* Faixa da garantia (texto correndo) */
-.aviso{background:var(--deep);color:#fff;overflow:hidden;font-size:13.5px;line-height:1;white-space:nowrap}
-.aviso-trilho{display:flex;width:max-content;animation:aviso-corre 32s linear infinite}
-.aviso:hover .aviso-trilho{animation-play-state:paused}
-.aviso-grupo{display:flex}
-.aviso span{display:inline-flex;align-items:center;gap:8px;padding:12px 32px;color:#DCE8E3}
+/* ---------- Faixa da garantia (texto correndo) ---------- */
+.aviso{background:var(--deep-2);color:var(--on-dark);font:500 13px/1 var(--sans);overflow:hidden;white-space:nowrap;cursor:default}
+.aviso:focus-visible{outline:3px solid var(--peach-dk);outline-offset:-3px}
+.aviso-trilho{display:flex;width:max-content;animation:aviso-corre 40s linear infinite}
+.aviso:hover .aviso-trilho,.aviso:focus-within .aviso-trilho,.aviso:focus .aviso-trilho,.aviso.parado .aviso-trilho{animation-play-state:paused}
+.aviso-grupo{display:flex;min-width:100vw;justify-content:space-around}
+.aviso span{display:inline-flex;align-items:center;gap:8px;padding:12px 0}
+.aviso span::after{content:"";width:4px;height:4px;border-radius:50%;background:var(--coral);margin:0 28px}
 .aviso b{color:#fff;font-weight:600}
-.aviso svg{width:16px;height:16px;color:#F2A285;flex:none}
+.aviso .i{width:15px;height:15px;color:var(--peach-dk);stroke-width:2}
+.aviso i{font-style:normal}
+.aviso .av-c{display:none}
 @keyframes aviso-corre{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-@media (prefers-reduced-motion:reduce){.aviso-trilho{animation:none;width:auto;justify-content:center}.aviso-grupo span:not(:first-child),.aviso-grupo[aria-hidden]{display:none}}
 
-/* Hero */
-.hero{padding:64px 0 88px;background:radial-gradient(circle at 85% 30%,var(--mist) 0,rgba(230,239,234,0) 45%),var(--paper);overflow:hidden}
-.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
-.badge{display:inline-flex;align-items:center;gap:8px;background:var(--mist);color:var(--deep);font-weight:600;font-size:14px;padding:8px 14px;border-radius:999px;margin-bottom:22px}
-.badge b{width:8px;height:8px;border-radius:50%;background:var(--teal)}
-.hero h1{font-size:clamp(38px,5.6vw,62px);letter-spacing:-.01em;margin-bottom:20px}
-.hero h1 em{font-style:normal;color:var(--coral-d);background:linear-gradient(transparent 62%,var(--peach) 62%)}
-.hero p.lead{font-size:clamp(18px,2vw,20px);color:var(--ink2);max-width:540px;margin-bottom:30px}
-.hero-visual{position:relative;display:flex;justify-content:center}
-.hero-visual .blob{position:absolute;width:118%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,var(--sage) 0,rgba(168,197,184,.35) 45%,rgba(168,197,184,0) 70%);top:50%;left:50%;transform:translate(-50%,-50%)}
-.hero-visual .page{position:absolute;width:62%;border-radius:8px;box-shadow:0 24px 50px rgba(22,38,42,.18);background:#fff}
-.hero-visual .p1{left:-2%;top:12%;transform:rotate(-8deg)}
-.hero-visual .p2{right:-2%;top:16%;transform:rotate(7deg)}
-.hero-visual .cover{position:relative;width:min(380px,74%);border-radius:6px 14px 14px 6px;box-shadow:0 40px 80px rgba(22,38,42,.32),0 8px 20px rgba(22,38,42,.18)}
+/* ---------- Componentes visuais ---------- */
+.stage{position:relative;width:100%;container-type:inline-size}
+.stage::before{content:"";position:absolute;inset:4cqw 4cqw 0;background:var(--mist);border-radius:999px 999px var(--r-2xl) var(--r-2xl);border-radius:46cqw 46cqw var(--r-2xl) var(--r-2xl)}
+.waves{position:absolute;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;pointer-events:none}
+.book{position:absolute;border-radius:2px 6px 6px 2px;box-shadow:var(--sh-book);background:var(--cream)}
+.book img{width:100%;border-radius:inherit}
+.book::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(90deg,rgba(0,0,0,.20) 0,rgba(255,255,255,.18) 1.4%,rgba(0,0,0,.08) 2.8%,transparent 6%)}
+.stage .pg{position:absolute;border:1px solid var(--line);border-radius:3px;box-shadow:var(--sh-2);background:#fff}
+.phone{position:absolute;background:#1B2B2F;border-radius:15% / 8.2%;box-shadow:var(--sh-book)}
+.phone img{width:92%;margin:4%;border-radius:12% / 6.8%}
+.tag{display:inline-flex;align-items:center;font:700 12px/1 var(--sans);letter-spacing:.08em;text-transform:uppercase;padding:6px 9px;border-radius:var(--r-xs);background:var(--mist);color:var(--deep);white-space:nowrap}
+.tag-deep{background:var(--deep);color:#fff}
+.tag-b{background:var(--peach);color:var(--coral-ink)}
+.ic{width:44px;height:44px;border-radius:var(--r-md);display:inline-flex;align-items:center;justify-content:center;background:var(--mist);color:var(--teal);flex:none}
+.ic .i{width:22px;height:22px;stroke-width:1.75}
+.checks{display:grid;gap:10px}
+.checks li{display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.5}
+.checks .i{width:18px;height:18px;color:var(--teal);stroke-width:2.4;margin-top:2px}
+.ilustra{margin-top:32px}
+.ilustra img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--r-lg)}
 
-/* Identificação */
-.checks{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:36px auto 28px;max-width:860px}
-.check{display:flex;gap:14px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 20px;font-size:16.5px}
-.check i{flex:none;width:26px;height:26px;border-radius:50%;background:var(--peach);color:var(--coral-d);display:flex;align-items:center;justify-content:center;font-style:normal;font-weight:800;font-size:14px;margin-top:1px}
-.note{max-width:720px;margin:0 auto;text-align:center;font-family:'Source Serif 4',Georgia,serif;font-size:21px;color:var(--deep);line-height:1.5}
+/* ---------- 1. Hero ---------- */
+.hero{padding:clamp(40px,5vw,72px) 0 clamp(56px,6vw,96px);overflow:hidden;overflow:clip}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(32px,4vw,64px);align-items:center}
+.eyebrow{display:flex;align-items:center;gap:10px;font:700 12px/1.3 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--coral-ink);margin-bottom:20px}
+.eyebrow .i{width:24px;height:24px;color:var(--coral);stroke-width:2}
+.hero h1{font-size:var(--fs-h1);line-height:1.06;letter-spacing:-.022em;max-width:13.5em;margin-bottom:20px}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--coral-ink)}
+.lead{font-size:var(--fs-lead);color:var(--ink-2);line-height:1.6;max-width:34em;margin-bottom:32px}
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px 28px;margin-bottom:28px}
+.trust{display:grid;grid-template-columns:repeat(2,max-content);gap:10px 28px;font-size:14px;line-height:1.4;color:var(--ink-2)}
+.trust li{display:flex;align-items:center;gap:8px}
+.trust .i{width:16px;height:16px;color:var(--teal);stroke-width:2.4}
+.stage-hero{max-width:500px;aspect-ratio:100/104;margin-left:auto}
+.stage-hero .waves{left:14cqw;top:15cqw;width:72cqw;height:14cqw;color:var(--sage-2)}
+.stage-hero .pg-a{width:44cqw;left:4.5cqw;top:24cqw;rotate:-8deg}
+.stage-hero .pg-b{width:44cqw;right:4cqw;top:28cqw;rotate:7deg}
+.stage-hero .book{width:58cqw;left:21cqw;top:11cqw}
+.chip-float{position:absolute;left:50%;top:calc(93cqw - 18px);translate:-50% 0;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;background:#fff;border:1px solid var(--line);border-radius:var(--r-sm);padding:9px 14px;font:600 13px/1.2 var(--sans);color:var(--deep);box-shadow:var(--sh-2)}
+.chip-float .i{width:16px;height:16px;color:var(--teal)}
 
-/* Cards */
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
-.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;transition:transform .25s,box-shadow .25s}
-.card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(22,38,42,.08)}
-.card .ic{width:50px;height:50px;border-radius:14px;background:var(--mist);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
-.card .ic svg{width:26px;height:26px;color:var(--teal)}
-.card h3{font-size:21px;margin-bottom:8px}
-.card p{color:var(--ink2);font-size:16px}
+/* ---------- 2. Identificação ---------- */
+.split{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,6vw,96px);align-items:start}
+.split .head{margin-bottom:20px}
+.id-p{color:var(--ink-2);max-width:40ch}
+.id-link{margin-top:14px}
+.dores{border-top:1px solid var(--line-2)}
+.dores li{display:grid;grid-template-columns:24px 1fr;gap:14px;padding:18px 0;border-bottom:1px solid var(--line-2);font-size:17px;line-height:1.55}
+.dores li::before{content:"";width:14px;height:2px;background:var(--coral);margin-top:12px}
 
-/* Steps */
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:52px;position:relative}
-.steps:before{content:"";position:absolute;top:30px;left:16%;right:16%;height:2px;background:repeating-linear-gradient(90deg,var(--sage) 0 10px,transparent 10px 18px)}
-.step{text-align:center;position:relative}
-.step .n{width:60px;height:60px;border-radius:50%;background:var(--deep);color:#fff;font-family:'Source Serif 4',Georgia,serif;font-size:24px;font-weight:700;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;box-shadow:0 0 0 8px var(--sand)}
-.step .tag{display:inline-block;font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);background:var(--mist);padding:4px 10px;border-radius:999px;margin-bottom:10px}
-.step h3{font-size:22px;margin-bottom:8px}
-.step p{color:var(--ink2);font-size:16px;max-width:300px;margin:0 auto}
+/* ---------- 3. Mecanismo (ciclo) ---------- */
+.mech{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(32px,6vw,88px);align-items:center}
+.mech .head{margin-bottom:24px}
+.mech-txt > p{color:var(--ink-2);max-width:56ch}
+.mech-txt > p + p{margin-top:16px}
+.ciclo-fig{position:relative;width:100%;max-width:470px;aspect-ratio:1;margin-inline:auto}
+.ciclo-ring{position:absolute;inset:12%;width:76%;height:76%;overflow:visible}
+.ciclo-ring circle{fill:none;stroke:var(--sage);stroke-width:.5;stroke-dasharray:1.4 1.6}
+.ciclo-ring path{fill:none;stroke:var(--teal);stroke-width:.9;stroke-linecap:round;stroke-linejoin:round}
+.ciclo-ring path.volta{stroke:var(--coral)}
+.ciclo li{position:absolute;width:36%;background:#fff;border:1px solid var(--line-2);border-radius:14px;padding:14px 16px;text-align:center}
+.ciclo .n1,.ciclo .n3{width:46%}
+.ciclo .n1{top:0;left:27%}
+.ciclo .n2{right:0;top:50%;translate:0 -50%}
+.ciclo .n3{bottom:0;left:27%}
+.ciclo .n4{left:0;top:50%;translate:0 -50%}
+.ciclo small{display:block;font:700 12px/1.2 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--teal);margin-bottom:6px}
+.ciclo strong{display:block;font:600 17px/1.3 var(--serif);color:var(--deep)}
+.ciclo-centro{position:absolute;left:50%;top:50%;translate:-50% -50%;width:23%;text-align:center;font:italic 500 15px/1.4 var(--serif);color:var(--coral-ink)}
+.frentes{margin-top:clamp(48px,6vw,80px);background:var(--cream);border-radius:var(--r-xl);padding:clamp(24px,3vw,40px)}
+.frentes-intro{max-width:66ch;color:var(--ink-2);margin-bottom:28px}
+.frentes-intro strong{color:var(--deep)}
+.frentes ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0}
+.frentes li{padding:0 28px;border-left:1px solid var(--line-2)}
+.frentes li:first-child{padding-left:0;border-left:0}
+.frentes li:last-child{padding-right:0}
+.frentes .ic{background:#fff;border:1px solid var(--line)}
+.frentes h3{font-size:var(--fs-h3);margin:16px 0 6px}
+.frentes p{font-size:15px;color:var(--ink-2)}
+.fecho{margin:36px auto 0;max-width:46ch;text-align:center;font:italic 500 clamp(19px,1.2vw + 14px,23px)/1.45 var(--serif);color:var(--deep)}
 
-/* Por dentro */
-.inside{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:44px}
-.inside figure{background:#fff;border-radius:14px;padding:10px;box-shadow:0 14px 34px rgba(22,38,42,.1);transition:transform .25s}
-.inside figure:hover{transform:translateY(-6px) rotate(-.5deg)}
-.inside img{border-radius:6px;border:1px solid var(--line)}
-.inside figcaption{font-size:14.5px;font-weight:600;color:var(--deep);padding:10px 4px 2px;text-align:center}
+/* ---------- 4. Método S.O.S. ---------- */
+.sos{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-areas:"head art" "body art" "cta art";grid-template-rows:auto auto 1fr;column-gap:clamp(32px,6vw,88px)}
+.sos-head{grid-area:head;margin-bottom:28px}
+.sos-body{grid-area:body}
+.sos-cta{grid-area:cta}
+.sos-art{grid-area:art;align-self:center}
+.sos-list li{display:grid;grid-template-columns:88px 1fr;gap:24px;align-items:center;padding:20px 0;border-top:1px solid var(--line-2)}
+.sos-list li:last-child{border-bottom:1px solid var(--line-2)}
+.sos-L{font:700 88px/.9 var(--serif);text-align:center;letter-spacing:0}
+.L1{color:var(--coral)} .L2{color:var(--teal)} .L3{color:var(--deep)}
+.sos-list h3{font-size:var(--fs-h3);margin-bottom:4px}
+.sos-list p{font-size:16px;color:var(--ink-2)}
+.sos-note{margin-top:28px;font:italic 500 18px/1.5 var(--serif);color:var(--deep);border-left:2px solid var(--coral);padding-left:16px;max-width:46ch}
+.sos-art{max-width:380px;margin-inline:auto;width:100%}
+.stage-phone{aspect-ratio:100/108}
+.stage-phone::before{background:#E3ECE8}
+.stage-phone .waves{left:8cqw;top:18cqw;width:84cqw;height:18cqw;color:#fff}
+.stage-phone .phone{width:50cqw;left:25cqw;top:12cqw;rotate:3deg}
+.sos-art figcaption{margin-top:16px;text-align:center;font-size:14px;color:var(--ink-3);text-wrap:balance}
+.sos-art figcaption strong{color:var(--deep)}
 
-/* Recebe */
-.get{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
-.get .item{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;display:flex;flex-direction:column}
-.get .head{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px}
-.get .ic{width:48px;height:48px;border-radius:12px;background:var(--mist);display:flex;align-items:center;justify-content:center}
-.get .ic svg{width:24px;height:24px;color:var(--teal)}
-.get ul{list-style:none;margin-top:18px;padding-top:16px;border-top:1px solid var(--line);display:grid;gap:10px}
-.get li{display:flex;gap:10px;align-items:flex-start;font-size:15px;color:var(--ink)}
-.get li svg{flex:none;width:18px;height:18px;color:var(--teal);margin-top:3px}
-.get .pill{margin-bottom:0;display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:var(--peach);color:var(--coral-d)}
-.get .pill.main{background:var(--deep);color:#fff}
-.get h3{font-size:22px;margin-bottom:8px}
-.get p{color:var(--ink2);font-size:15.5px}
+/* ---------- 5. O que vai aprender ---------- */
+.topics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 40px}
+.topic{border-top:1px solid var(--line-2);padding-top:24px}
+.topic-n{display:block;font:italic 500 26px/1 var(--serif);color:var(--coral-ink);font-variant-numeric:lining-nums}
+.topic h3{font-size:var(--fs-h3);margin:14px 0 8px}
+.topic p{font-size:16px;color:var(--ink-2);max-width:36ch}
 
-/* Ciência */
-.science{background:var(--deep);color:#fff}
-.science h2{color:#fff}
-.science .sec-sub{color:#CFE0D9}
-.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:40px}
-.fact{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:26px}
-.fact .big{font-family:'Source Serif 4',Georgia,serif;font-size:36px;color:var(--peach);font-weight:600;line-height:1.1;margin-bottom:8px}
-.fact p{color:#D7E6E0;font-size:15.5px}
-.fact small{display:block;color:var(--sage);font-size:13px;margin-top:10px}
+/* ---------- 6. Ciência ---------- */
+.science{background:var(--deep);color:#fff;position:relative;overflow:hidden}
+.science .waves{right:-6%;top:12px;width:60%;height:84px;color:rgba(255,255,255,.08)}
+.sci-head{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:32px 64px;align-items:end;margin-bottom:var(--head-gap);position:relative}
+.science .kicker{color:var(--peach-dk)}
+.science .h2{color:#fff}
+.sci-head > p{color:var(--on-dark);font-size:var(--fs-lead)}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;position:relative}
+.fact{display:flex;flex-direction:column;border-top:1px solid rgba(255,255,255,.2);padding-top:28px}
+.fact-big{font:600 clamp(40px,2.4vw + 22px,52px)/1.05 var(--serif);color:var(--peach-dk);letter-spacing:-.015em}
+.fact p{color:var(--on-dark);font-size:16px;margin-top:12px;max-width:32ch}
+.fact cite{display:flex;align-items:center;gap:8px;margin-top:auto;padding-top:16px;font-style:normal;font-size:14px;color:var(--on-dark-2)}
+.fact cite .i{width:15px;height:15px}
+.sci-note{margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);font-size:14px;color:var(--on-dark-2);position:relative}
 
-/* Oferta */
-.offer{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
-.offer .cover{width:min(360px,80%);margin:0 auto;border-radius:6px 14px 14px 6px;box-shadow:0 40px 80px rgba(22,38,42,.3)}
-.price-card{background:#fff;border:2px solid var(--deep);border-radius:26px;padding:36px 34px;box-shadow:0 24px 60px rgba(22,38,42,.1);position:relative}
-.price-card .ribbon{position:absolute;top:-15px;left:34px;background:var(--coral);color:#fff;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:999px}
-.price-card ul{list-style:none;margin:18px 0 26px}
-.price-card li{display:flex;gap:12px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:16.5px}
-.price-card li:last-child{border-bottom:none}
-.price-card li svg{flex:none;width:22px;height:22px;color:var(--teal);margin-top:2px}
-.price{display:flex;align-items:baseline;gap:8px;margin:6px 0 4px}
-.price .cur{font-size:22px;font-weight:700;color:var(--deep)}
-.price .val{font-family:'Source Serif 4',Georgia,serif;font-size:58px;font-weight:700;color:var(--deep);line-height:1}
-.price-note{color:var(--ink2);font-size:14.5px;margin-bottom:22px}
-.guarantee{display:flex;gap:16px;align-items:center;background:var(--sand);border-radius:16px;padding:16px 18px;margin-top:20px}
-.guarantee .seal{flex:none;width:54px;height:54px;border-radius:50%;background:var(--deep);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:800;line-height:1}
-.guarantee .seal b{font-size:20px}.guarantee .seal span{font-size:9px;letter-spacing:.06em}
-.guarantee p{font-size:14.5px;color:var(--ink2)}
+/* ---------- 7. Plano de 20 dias ---------- */
+.barra{display:grid;grid-template-columns:repeat(20,minmax(0,1fr));gap:4px}
+.barra span{height:44px;border-radius:6px;display:flex;align-items:center;justify-content:center;font:600 13px/1 var(--sans);font-variant-numeric:tabular-nums}
+.barra .d1{background:var(--sage);color:var(--deep)}
+.barra .d2{background:var(--teal);color:#fff}
+.barra .d3{background:var(--deep);color:#fff}
+.barra-ends{display:none}
+.fases{display:grid;grid-template-columns:5fr 10fr 5fr;gap:4px;margin-top:20px}
+.fase{padding:20px 20px 0 0;border-top:3px solid var(--sage)}
+.fase.f2{border-color:var(--teal)}
+.fase.f3{border-color:var(--deep)}
+.fase .tag{background:#fff;border:1px solid var(--line)}
+.fase h3{font-size:var(--fs-h3);margin:12px 0 6px}
+.fase p{font-size:16px;color:var(--ink-2);max-width:34ch}
+.fase.f2 p{max-width:44ch}
+.plano-nota{display:flex;gap:12px;align-items:flex-start;margin-top:36px;padding-top:20px;border-top:1px solid var(--line-2);font-size:16px;color:var(--ink-2)}
+.plano-nota strong{color:var(--deep)}
+.plano-nota .i{color:var(--teal);margin-top:3px}
+.ilustra-wide{margin-bottom:40px}
+.ilustra-wide img{width:100%;aspect-ratio:2/1;object-fit:cover;object-position:50% 50%;border-radius:var(--r-xl)}
 
-/* FAQ */
-.faq{max-width:780px;margin:40px auto 0}
-.faq details{background:#fff;border:1px solid var(--line);border-radius:16px;margin-bottom:12px;overflow:hidden}
-.faq summary{list-style:none;cursor:pointer;padding:20px 24px;font-weight:600;font-size:17px;display:flex;justify-content:space-between;align-items:center;gap:16px}
+/* ---------- 8. Por dentro ---------- */
+.inside{display:grid;grid-template-columns:2.17fr 1fr 1fr;gap:24px;max-width:1040px;margin-inline:auto}
+.inside figure:first-child{grid-row:span 2}
+.inside button{display:block;width:100%;position:relative;border-radius:4px;transition:transform .25s,box-shadow .25s}
+.inside button img{width:100%;border:1px solid var(--line);border-radius:4px;box-shadow:var(--sh-2);background:#fff}
+.inside button:focus-visible{outline-offset:4px}
+.zoom-ic{position:absolute;right:10px;bottom:10px;width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.94);border:1px solid var(--line);color:var(--deep);display:flex;align-items:center;justify-content:center;box-shadow:var(--sh-1);opacity:.92;transition:opacity .2s}
+.zoom-ic .i{width:16px;height:16px;stroke-width:2}
+@media (hover:hover){
+  .inside button:hover{transform:translateY(-4px)}
+  .inside button:hover img{box-shadow:var(--sh-3)}
+  .inside button .zoom-ic{opacity:0}
+  .inside button:hover .zoom-ic,.inside button:focus-visible .zoom-ic{opacity:1}
+}
+.inside figcaption{display:flex;gap:8px;align-items:baseline;margin-top:12px;font-size:14px;font-weight:600;line-height:1.4;color:var(--deep)}
+.inside figcaption span{color:var(--coral-ink);font-variant-numeric:tabular-nums}
+.inside-hint{display:none}
+
+/* Lightbox */
+.zoom{border:0;padding:0;background:transparent;width:min(92vw,726px);max-width:none;max-height:none;margin:auto;overflow:visible}
+.zoom::backdrop{background:rgba(18,52,58,.82)}
+.zoom figure{background:#fff;border-radius:var(--r-md);padding:12px 12px 0;box-shadow:var(--sh-3);max-height:calc(100vh - 48px);overflow:auto;overscroll-behavior:contain}
+.zoom img{width:700px;max-width:100%;margin-inline:auto;border-radius:4px}
+.zoom figcaption{position:sticky;bottom:0;padding:12px 6px 14px;background:#fff;font-size:14px;font-weight:600;color:var(--deep);text-align:center}
+.zoom-x{position:absolute;top:-14px;right:-14px;width:44px;height:44px;border-radius:50%;background:var(--deep);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:var(--sh-2)}
+.zoom-x:focus-visible{outline-color:var(--peach-dk)}
+.zoom-x .i{width:20px;height:20px;stroke-width:2.2}
+.zoom-dica{display:none}
+
+/* ---------- 9. Para quem é ---------- */
+.quem{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0}
+.quem-col{padding-right:clamp(28px,4vw,56px)}
+.quem-col.nao{padding:0 0 0 clamp(28px,4vw,56px);border-left:1px solid var(--line-2)}
+.quem-col h3{font-size:var(--fs-h3);display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.quem-col h3 .badge{width:32px;height:32px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:var(--mist);color:var(--teal);flex:none}
+.quem-col.nao h3 .badge{background:var(--cream-2);color:var(--ink-2)}
+.quem-col h3 .i{width:16px;height:16px;stroke-width:2.6}
+.quem-col ul{display:grid;gap:0;border-bottom:1px solid var(--line-2)}
+.quem-col li{display:flex;gap:12px;align-items:flex-start;padding:13px 0;border-top:1px solid var(--line-2);font-size:16px;line-height:1.5}
+.quem-col li .i{width:18px;height:18px;margin-top:2px;color:var(--teal);stroke-width:2.4}
+.quem-col.nao li .i{color:var(--ink-3);stroke-width:2}
+.ajuda{margin-top:20px;background:#fff;border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:var(--r-sm);padding:12px 14px;font-size:15px;color:var(--ink-2)}
+.ajuda a{color:var(--deep);font-weight:700}
+
+/* ---------- 10. O que você recebe ---------- */
+.recebe{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.get{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:32px 28px}
+.get-main{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 48px;align-items:start;background:var(--cream);border-color:var(--cream-2)}
+.get-main .get-head{grid-column:1/-1}
+.get-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:20px}
+.get h3{font-size:clamp(22px,1vw + 16px,26px);margin-bottom:8px}
+.get p{font-size:16px;color:var(--ink-2)}
+.get > p{padding-bottom:20px}
+.get .checks{margin-top:auto;padding-top:18px;border-top:1px solid var(--line)}
+.get-main .checks{border-top:0;margin-top:0;padding-top:4px}
+.get-main .checks li{font-size:16px}
+.get-main .ic{background:#fff}
+.formato{display:flex;align-items:center;justify-content:center;gap:10px;text-align:center;margin-top:24px;font-size:15px;color:var(--ink-2)}
+.formato .i{color:var(--teal)}
+
+/* ---------- 11. Oferta ---------- */
+.oferta{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,5vw,72px);align-items:center}
+.oferta-lado{display:flex;flex-direction:column;gap:40px}
+.stage-kit{max-width:520px;aspect-ratio:100/104;margin-inline:auto}
+.stage-kit .kit-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:var(--r-2xl)}
+.stage-kit:has(.kit-bg)::before,.stage-kit:has(.kit-bg) .waves{display:none}
+.stage-kit::before{background:#E6EEEA}
+.stage-kit .waves{left:12cqw;top:14cqw;width:76cqw;height:14cqw;color:#fff}
+.stage-kit .kit-diario{width:46cqw;left:3cqw;top:22cqw;rotate:-7deg}
+.stage-kit .book{width:54cqw;left:23cqw;top:10cqw}
+.stage-kit .phone{width:26cqw;right:3cqw;top:50cqw;rotate:6deg}
+.price-card{position:relative;background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);padding:40px;box-shadow:var(--sh-3);scroll-margin-top:12px}
+.pc-title{font-size:clamp(26px,1vw + 20px,30px);line-height:1.15;margin:0 0 8px}
+.pc-desc{font-size:16px;color:var(--ink-2)}
+.pc-list{margin:20px 0 0}
+.pc-list li{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-top:1px solid var(--line);font-size:16px;line-height:1.45}
+.pc-list li .i{width:20px;height:20px;color:var(--teal);stroke-width:2.4;margin-top:20px}
+.pc-k{display:block;margin-bottom:3px;font:700 12px/1.3 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--coral-ink)}
+.pc-k.p{color:var(--teal)}
+.pc-price{padding-top:24px;border-top:1px solid var(--line)}
+.pc-label{font:700 12px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
+.price{display:flex;align-items:flex-start;gap:8px;margin:10px 0 8px;color:var(--deep)}
+.price .cur{font:600 22px/1 var(--sans);margin-top:10px}
+.price .val{font:700 clamp(56px,2vw + 44px,66px)/1 var(--serif);letter-spacing:-.02em;font-variant-numeric:lining-nums tabular-nums}
+.pc-note{font-size:15px;color:var(--ink-2);margin-bottom:22px}
+.pc-secure{margin-top:14px;font-size:14px;line-height:1.5;color:var(--ink-3);text-align:center}
+.pc-secure .i{width:14px;height:14px;display:inline-block;vertical-align:-2px;margin-right:6px}
+.pc-garantia{display:flex;align-items:center;gap:14px;margin-top:20px;padding:14px 16px;border-radius:var(--r-md);background:var(--mist);text-decoration:none;font-size:14px;line-height:1.45;color:var(--ink-2);transition:background-color .2s}
+.pc-garantia:hover{background:#E1ECE7}
+.pc-garantia strong{color:var(--deep)}
+.mini-selo{flex:none;width:48px;height:48px;border-radius:50%;background:var(--deep);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;box-shadow:0 0 0 3px var(--mist),0 0 0 4px rgba(23,63,67,.25)}
+.mini-selo b{font:700 19px/1 var(--serif)}
+.mini-selo small{font:700 8px/1 var(--sans);letter-spacing:.1em;margin-top:2px}
+.compra-t{font:700 12px/1.2 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);margin-bottom:14px}
+.compra{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;border-top:1px solid var(--line-2);padding-top:18px}
+.compra li{font-size:15px;line-height:1.45;color:var(--ink-2)}
+.compra li b{display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:#fff;border:1px solid var(--line-2);font:600 14px/1 var(--sans);color:var(--deep);margin-bottom:10px}
+
+/* ---------- 12. Garantia ---------- */
+.garantia{display:grid;grid-template-columns:210px minmax(0,1fr);gap:48px;align-items:center;max-width:940px;margin-inline:auto;background:#fff;border:1px solid var(--line);border-radius:var(--r-xl);padding:44px 52px 44px 40px;box-shadow:var(--sh-1)}
+.selo{width:210px;height:auto}
+.garantia h2{font-size:clamp(26px,1.4vw + 18px,34px);line-height:1.15;margin-bottom:12px}
+.garantia .g-p{color:var(--ink-2);font-size:16px}
+.garantia .g-p + .g-p{margin-top:10px}
+
+/* ---------- 13. FAQ ---------- */
+.faq-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(32px,6vw,88px);align-items:start}
+.faq-side{position:sticky;top:32px}
+.faq-side .head{margin-bottom:16px}
+.faq-side > p{font-size:15px;color:var(--ink-2)}
+.faq-side a{color:var(--deep);font-weight:600;word-break:break-word}
+.faq details{border-bottom:1px solid var(--line)}
+.faq details:first-child{border-top:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:22px 0;font:600 17px/1.4 var(--sans);color:var(--ink);display:flex;justify-content:space-between;align-items:center;gap:24px;border-radius:6px}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary:after{content:"+";font-size:26px;color:var(--teal);font-weight:400;transition:transform .2s}
-.faq details[open] summary:after{transform:rotate(45deg)}
-.faq details p{padding:0 24px 22px;color:var(--ink2);font-size:16px}
+.faq summary:focus-visible{outline:2px solid var(--deep);outline-offset:4px}
+.faq summary:hover{color:var(--deep)}
+.faq summary .q{text-wrap:balance}
+.faq-ic{flex:none;width:30px;height:30px;border-radius:50%;border:1px solid var(--line-2);display:flex;align-items:center;justify-content:center;color:var(--teal);transition:transform .2s,background-color .2s}
+.faq-ic .i{width:14px;height:14px;stroke-width:2.2}
+.faq details[open] .faq-ic{transform:rotate(45deg);background:var(--mist);border-color:var(--mist)}
+.faq details > div{padding:0 54px 22px 0;color:var(--ink-2);font-size:16px;max-width:66ch}
+.faq details > div p + p{margin-top:10px}
+.faq details a{color:var(--deep);font-weight:600}
 
-/* CTA final */
-.final{background:linear-gradient(160deg,var(--deep),#0F3135);color:#fff;text-align:center;border-radius:32px;padding:64px 28px;position:relative;overflow:hidden}
-.final h2{color:#fff;font-size:clamp(30px,4.4vw,46px);margin-bottom:14px}
-.final p{color:#CFE0D9;max-width:560px;margin:0 auto 30px;font-size:18px}
-.final .waves{position:absolute;left:0;right:0;bottom:-20px;opacity:.12;pointer-events:none}
+/* ---------- 14. CTA final + aviso ---------- */
+.fim{padding-top:0}
+.final{position:relative;overflow:hidden;display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:clamp(32px,5vw,64px);align-items:center;background:linear-gradient(160deg,var(--deep),var(--deep-2));border-radius:var(--r-2xl);padding:clamp(40px,5vw,64px) clamp(22px,5vw,72px);color:#fff}
+.final .waves{left:-2%;right:-2%;bottom:-6px;width:104%;height:110px;color:rgba(255,255,255,.09)}
+.final-art{position:relative;display:flex;justify-content:center}
+.final-art .book{position:relative;width:min(240px,100%);rotate:-3deg;box-shadow:0 30px 60px -20px rgba(0,0,0,.55),0 8px 20px rgba(0,0,0,.25)}
+.final-img{width:100%;max-width:360px;aspect-ratio:4/5;object-fit:cover;border-radius:180px 180px var(--r-lg) var(--r-lg);border:1px solid rgba(255,255,255,.15)}
+.final-txt{position:relative}
+.final .kicker{color:var(--peach-dk)}
+.final h2{color:#fff;font-size:clamp(30px,2.2vw + 20px,44px);line-height:1.1;letter-spacing:-.018em;max-width:18ch}
+.final .checks{margin:24px 0 32px;gap:12px}
+.final .checks li{font-size:16px;color:var(--on-dark)}
+.final .checks .i{color:var(--peach-dk)}
+.final .micro{color:var(--on-dark-2);position:relative;z-index:1;text-wrap:wrap}
+.disclaimer{display:flex;gap:14px;align-items:flex-start;max-width:860px;margin:40px auto 0;background:var(--cream);border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:var(--r-md);padding:18px 22px;font-size:14px;line-height:1.6;color:var(--ink-2)}
+.disclaimer .i{width:22px;height:22px;color:var(--teal);margin-top:1px}
+.disclaimer strong{color:var(--deep)}
+.disclaimer a{color:var(--deep);font-weight:700}
 
-/* Aviso + footer */
-.warn{max-width:860px;margin:44px auto 0;background:#FFF6F2;border:1px solid #F1C9BB;border-radius:16px;padding:18px 22px;font-size:14.5px;color:var(--ink2)}
-.warn strong{color:var(--coral-d)}
-footer{padding:40px 0 110px;border-top:1px solid var(--line);color:var(--ink2);font-size:14px}
-footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
-footer a{color:var(--ink2);text-decoration:none;margin-right:18px}
-footer a:hover{color:var(--deep)}
+/* ---------- 15. Rodapé ---------- */
+footer{background:var(--cream);border-top:1px solid var(--line);padding:48px 0 40px;font-size:14px;color:var(--ink-2)}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px}
+.foot-brand{font:600 18px/1.3 var(--serif);color:var(--deep);margin-bottom:6px}
+.foot nav{display:flex;flex-wrap:wrap;gap:0 24px;align-items:flex-start;margin-top:-6px}
+.foot a{display:inline-flex;align-items:center;min-height:32px;white-space:nowrap;color:var(--ink-2);text-decoration:none}
+.foot a:hover{color:var(--deep);text-decoration:underline;text-underline-offset:3px}
+.foot-base{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;margin-top:28px;padding-top:20px;border-top:1px solid var(--line-2);font-size:13px;color:var(--ink-3)}
 
+/* ---------- Barra fixa no celular (só o botão) ---------- */
+.mbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.94);-webkit-backdrop-filter:saturate(1.4) blur(12px);backdrop-filter:saturate(1.4) blur(12px);border-top:1px solid var(--line);box-shadow:0 -8px 24px rgba(22,38,42,.08);transform:translateY(110%);visibility:hidden;transition:transform .3s ease,visibility 0s linear .3s}
+.mbar.show{transform:none;visibility:visible;transition:transform .3s ease,visibility 0s}
+.mbar .btn{width:100%;min-height:52px;font-size:16px}
 
-/* Reveal */
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
-.reveal.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+/* ---------- Animação de entrada (só cabeçalhos) ---------- */
+.js .reveal{opacity:0;transform:translateY(16px);transition:opacity .7s ease,transform .7s ease}
+.js .reveal.in{opacity:1;transform:none}
 
-/* Barra fixa no celular: só o botão */
-.mbar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-top:1px solid var(--line);padding:12px 16px calc(12px + env(safe-area-inset-bottom));transform:translateY(110%);transition:transform .3s ease}
-.mbar.show{transform:none}
-.mbar .btn{width:100%;padding:15px 18px;font-size:17px}
-
-/* Responsivo */
-@media (max-width:960px){
-  section{padding:68px 0}
-  .hero{padding:36px 0 64px}
-  .hero .wrap{grid-template-columns:1fr;gap:36px;text-align:center}
-  .hero p.lead{margin-left:auto;margin-right:auto}
-  .trust{justify-content:center}
-  .hero-visual{max-width:440px;margin:0 auto}
-  .grid3,.get,.facts{grid-template-columns:1fr 1fr}
-  .inside{grid-template-columns:1fr 1fr}
-  .offer{grid-template-columns:1fr;gap:34px}
+/* =========================================================
+   Responsivo
+   ========================================================= */
+@media (min-width:1600px){
+  :root{--container:1240px}
+  .hero{padding-block:96px 120px}
+  .hero h1{font-size:4.25rem}
+  .stage-hero{max-width:580px}
+}
+@media (max-width:1099px){
+  .frentes li{padding:0 20px}
+  .price-card{padding:32px}
+}
+@media (max-width:899px){
+  .head.center{text-align:left;margin-inline:0}
+  .center .kicker{justify-content:flex-start}
+  .center .kicker::after{display:none}
+  .center .sub{margin-inline:0;text-wrap:pretty}
+  .head-split{grid-template-columns:1fr}
+  .cta-center{text-align:left}
+  .hero-grid{grid-template-columns:1fr;gap:28px}
+  .hero-art{order:-1}
+  .stage-hero{max-width:420px;margin-inline:auto}
+  .split,.mech,.faq-grid{grid-template-columns:1fr}
+  /* Você se reconhece: no celular, a lista vem logo depois do título */
+  #voce .split{display:flex;flex-direction:column}
+  #voce .split > div:first-child{display:contents}
+  #voce .head{order:1}
+  #voce .ilustra{order:2;margin:0 0 24px}
+  #voce .dores{order:3}
+  #voce .id-p{order:4;margin-top:24px;max-width:56ch}
+  #voce .id-link{order:5}
+  .sos{grid-template-columns:1fr;grid-template-areas:"head" "body" "art" "cta";grid-template-rows:auto}
+  .sos-art{margin-top:40px}
+  .ciclo-fig{max-width:460px}
+  .sos-art{max-width:340px}
+  .topics{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .sci-head{grid-template-columns:1fr}
+  .facts{grid-template-columns:1fr;gap:28px}
+  .fact{display:grid;grid-template-columns:minmax(150px,auto) 1fr;gap:4px 28px}
+  .fact p{margin-top:4px;max-width:none}
+  .fact cite{grid-column:2;margin-top:6px;padding-top:0}
+  .inside{display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:42%;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;margin-inline:calc(-1*var(--gutter));padding:6px var(--gutter) 14px;scroll-padding-inline:var(--gutter);scrollbar-width:none}
+  .inside::-webkit-scrollbar{display:none}
+  .inside figure{scroll-snap-align:start}
+  .inside figure:first-child{grid-row:auto}
+  .inside-hint{display:flex;align-items:center;gap:8px;margin-top:4px;font-size:14px;color:var(--ink-3)}
+  .inside{max-width:none}
+  .inside-hint .i{width:16px;height:16px}
+  .fases{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+  .fase{padding-right:0}
+  .fase.f2 p{max-width:34ch}
+  .quem-col{padding-right:28px}
+  .quem-col.nao{padding-left:28px}
+  /* Oferta: no tablet e no celular, o card de preço vem primeiro */
+  .oferta{grid-template-columns:1fr}
+  .oferta-lado{order:2}
+  .price-card{width:100%;max-width:580px;margin-inline:auto}
+  .stage-kit{max-width:400px}
+  .faq-side{position:static}
+  .final{grid-template-columns:1fr;text-align:left}
+  .final-art .book{width:170px}
 }
 @media (max-width:640px){
-  body{font-size:16px}
-  .checks,.grid3,.get,.facts{grid-template-columns:1fr}
-  .steps{grid-template-columns:1fr;gap:36px}
-  .steps:before{display:none}
-  .btn.lg{width:100%;padding:18px 24px}
-  .price-card{padding:30px 22px}
-  .final{border-radius:24px;padding:48px 20px}
-  .offer .cover{width:170px}
-  .badge{font-size:13px}
+  html{scroll-padding-bottom:96px} /* o foco do teclado não fica escondido atrás da barra fixa */
+  .btn.lg{width:100%;padding:0 16px;font-size:17px}
+  .actions{margin-bottom:22px}
+  .actions .link-arrow{display:none}
+  /* Topo compacto: o botão aparece na primeira tela do celular */
+  .hero{padding:12px 0 48px}
+  .hero-grid{gap:18px}
+  .eyebrow{margin-bottom:12px}
+  .hero h1{margin-bottom:14px}
+  .lead{margin-bottom:20px}
+  .lead-x,.d-only{display:none}
+  .stage-hero{max-width:360px;aspect-ratio:100/58}
+  .stage-hero::before{inset:5cqw 6cqw 0;border-radius:44cqw 44cqw var(--r-xl) var(--r-xl)}
+  .stage-hero .waves{left:16cqw;top:10cqw;width:68cqw;height:10cqw}
+  .stage-hero .book{width:36cqw;left:32cqw;top:2cqw}
+  .stage-hero .pg-a{width:27cqw;left:9cqw;top:11cqw}
+  .stage-hero .pg-b{width:27cqw;right:9cqw;top:13cqw}
+  .chip-float{top:calc(51.5cqw - 16px);font-size:12px;padding:7px 11px}
+  .trust{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 12px;font-size:14px}
+  .trust li{align-items:flex-start}
+  .trust .i{margin-top:2px}
+  .dores li{font-size:16px;padding:16px 0}
+  .ciclo-fig{aspect-ratio:auto;max-width:none;padding-left:34px}
+  .ciclo-ring{display:none}
+  .ciclo{display:grid;gap:26px}
+  .ciclo li{position:relative;width:auto;inset:auto;translate:none;text-align:left;padding:12px 16px;display:flex;flex-direction:column}
+  .ciclo .n1,.ciclo .n2,.ciclo .n3,.ciclo .n4{top:auto;left:auto;right:auto;bottom:auto;translate:none;width:auto}
+  .ciclo li:not(:last-child)::after{content:"";position:absolute;left:50%;bottom:-20px;width:10px;height:10px;border-right:1.5px solid var(--teal);border-bottom:1.5px solid var(--teal);rotate:45deg;translate:-50% 0}
+  .ciclo strong{font-size:17px}
+  .ciclo-centro{position:static;translate:none;width:auto;text-align:left;margin-top:16px;padding-left:16px}
+  .ciclo-fig::before{content:"";position:absolute;left:4px;top:28px;bottom:12px;width:20px;border:1.5px solid var(--coral);border-right:0;border-radius:14px 0 0 14px}
+  .ciclo-fig::after{content:"";position:absolute;left:20px;top:23px;border-left:9px solid var(--coral);border-top:5.5px solid transparent;border-bottom:5.5px solid transparent}
+  .frentes{padding:24px 20px}
+  .frentes ul{grid-template-columns:1fr;gap:0}
+  .frentes li{display:grid;grid-template-columns:44px 1fr;gap:4px 16px;padding:18px 0;border-left:0;border-top:1px solid var(--line-2)}
+  .frentes li:first-child{padding-top:0;border-top:0}
+  .frentes li:last-child{padding-bottom:0}
+  .frentes .ic{grid-row:span 2}
+  .frentes h3{margin:0}
+  .fecho{text-align:left;margin-left:0}
+  .sos-list li{grid-template-columns:52px 1fr;gap:16px;padding:16px 0}
+  .sos-L{font-size:64px}
+  .sos-art{max-width:260px;margin-top:32px}
+  .topics{grid-template-columns:1fr;gap:0}
+  .topic{display:grid;grid-template-columns:36px 1fr;gap:0 14px;padding:20px 0}
+  .topic:last-child{border-bottom:1px solid var(--line-2)}
+  .topic-n{font-size:22px;line-height:1.2}
+  .topic h3{margin:0 0 4px}
+  .fact{display:block}
+  .fact p{margin-top:8px}
+  .fact cite{margin-top:12px}
+  .barra{gap:3px}
+  .barra span{height:14px;border-radius:3px;font-size:0;color:transparent}
+  .barra-ends{display:flex;justify-content:space-between;margin-top:8px;font-size:12px;font-weight:600;color:var(--ink-3)}
+  .fases{grid-template-columns:1fr;gap:20px;margin-top:28px}
+  .fase{border-top:0;border-left:3px solid var(--sage);padding:2px 0 2px 18px}
+  .fase.f2{border-color:var(--teal)}
+  .fase.f3{border-color:var(--deep)}
+  .fase.f2 p{max-width:none}
+  .plano-nota{font-size:15px}
+  .inside{grid-auto-columns:78%}
+  .quem{grid-template-columns:1fr}
+  .quem-col{padding:0}
+  .quem-col.nao{padding:28px 0 0;margin-top:28px;border-left:0}
+  .recebe{grid-template-columns:1fr;gap:16px}
+  .get,.get-main{padding:24px 22px}
+  .get-main{grid-template-columns:1fr}
+  .get-main .checks{margin-top:4px;padding-top:18px;border-top:1px solid var(--cream-2)}
+  .formato{justify-content:flex-start;text-align:left;align-items:flex-start;font-size:15px}
+  .formato .i{margin-top:2px}
+  .oferta{gap:32px}
+  .oferta .kit{display:none}
+  .price-card{padding:28px 20px}
+  .pc-desc{display:none}
+  .pc-list li{font-size:15px}
+  .compra{grid-template-columns:1fr;gap:14px}
+  .compra li{display:flex;gap:12px;align-items:center}
+  .compra li b{margin:0;flex:none}
+  .garantia{grid-template-columns:1fr;gap:16px;padding:28px 22px;text-align:left}
+  .selo{width:150px;margin-left:-8px}
+  .faq summary{font-size:16px;padding:18px 0;gap:16px}
+  .faq details > div{padding:0 0 20px;font-size:15px}
+  .final{padding:36px 22px 48px;border-radius:24px;gap:24px}
+  .final .waves{height:64px}
+  .final-art .book{width:132px}
+  .final-img{max-width:300px;margin-inline:auto;aspect-ratio:1/1;object-position:50% 40%;border-radius:var(--r-lg)}
+  .disclaimer{padding:16px 18px}
   .mbar{display:block}
-  .inside{gap:12px}
+  footer{padding-bottom:calc(96px + env(safe-area-inset-bottom))}
+  .foot{flex-direction:column;gap:16px}
+  .foot nav{flex-direction:column;gap:0;margin-top:0}
+  .foot a{min-height:44px}
+  .foot-base{flex-direction:column}
+  /* Página ampliada: tela cheia, em tamanho real, arrastando para ler */
+  .zoom{width:100vw;height:100vh;height:100dvh;max-width:none;max-height:none;margin:0;background:#fff}
+  .zoom figure{height:100%;max-height:none;overflow:auto;overscroll-behavior:contain;border-radius:0;padding:0;box-shadow:none}
+  .zoom img{width:700px;max-width:none;max-height:none;margin:0;border-radius:0}
+  .zoom figcaption{position:sticky;left:0;bottom:0;width:100vw;padding:12px 72px 14px 16px;text-align:left;background:rgba(255,255,255,.96);border-top:1px solid var(--line)}
+  .zoom-dica{display:block;font-size:13px;font-weight:400;color:var(--ink-3);margin-top:2px}
+  .zoom figcaption{padding-right:16px}
+  .zoom-x{position:fixed;top:calc(12px + env(safe-area-inset-top));right:12px}
+}
+@media (max-width:640px) and (max-height:480px){
+  .mbar{display:none!important}
+}
+@media (max-width:380px){
+  .hero h1{font-size:33px}
+  .eyebrow{letter-spacing:.12em}
+  .eyebrow .i{display:none}
+  .btn.lg{font-size:16px;gap:8px}
+  .price-card{padding:24px 18px}
+  .trust{font-size:14px;gap:8px 10px}
 }
 
-/* ===== Estilo limpo e profissional ===== */
-h1,h2,h3{font-weight:600;letter-spacing:-.015em}
-.hero h1{letter-spacing:-.022em;line-height:1.08}
-.btn{border-radius:12px;box-shadow:0 1px 2px rgba(22,38,42,.08),0 8px 20px rgba(212,96,58,.22)}
-.btn:hover{box-shadow:0 1px 2px rgba(22,38,42,.08),0 12px 26px rgba(212,96,58,.28)}
-.kicker{display:inline-flex;align-items:center;gap:12px;font-size:12.5px;letter-spacing:.16em}
-.kicker:before,.center .kicker:after{content:"";width:28px;height:1px;background:currentColor;opacity:.55}
-.badge{background:#fff;border:1px solid var(--line);font-weight:500}
-.card,.check,.get .item,.box{box-shadow:none}
-.card,.get .item,.box{border-radius:16px}
-.card:hover{box-shadow:0 12px 30px rgba(22,38,42,.07)}
-.check{border-radius:12px}
-.check i{background:var(--mist);color:var(--teal)}
-.card .ic{border-radius:12px}
-.faq details{border-radius:12px}
-.inside figure{border-radius:12px;box-shadow:0 1px 2px rgba(22,38,42,.05),0 10px 26px rgba(22,38,42,.08)}
-.fact{border-radius:16px}
-.get .pill,.step .tag,.tag,.fmt{border-radius:6px}
-.price-card,.total-card{border:1px solid var(--line);border-radius:20px;box-shadow:0 2px 4px rgba(22,38,42,.04),0 24px 60px rgba(22,38,42,.10)}
-.price-card .ribbon{border-radius:6px}
-.final{border-radius:24px}
-.note{font-style:italic;font-weight:500}
-.pay span{border-radius:10px}
+/* Navegadores antigos sem unidades cqw (iOS 15, Chrome < 105): só a capa, centralizada */
+@supports not (width:1cqw){
+  .stage::before,.stage .waves,.stage .pg,.chip-float,.stage-kit .phone{display:none}
+  .stage{aspect-ratio:auto!important}
+  .stage .book{position:relative;width:min(60%,280px);margin:0 auto}
+  .stage-phone .phone{position:relative;width:min(50%,200px);margin:0 auto}
+}
+
+/* Impressão / salvar em PDF */
+@media print{
+  .js .reveal{opacity:1!important;transform:none!important}
+  .aviso,.mbar,.zoom{display:none!important}
+}
+
+/* Movimento reduzido: tudo estático */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .aviso{white-space:normal}
+  .aviso-trilho{animation:none;width:auto;justify-content:center}
+  .aviso-grupo{min-width:0}
+  .aviso-grupo[aria-hidden],.aviso-grupo span:not(:first-child){display:none}
+  .aviso span{padding:10px 16px;line-height:1.4;text-align:center;display:block;text-wrap:balance}
+  .aviso span::after{display:none}
+  .aviso span .i{display:inline-block;vertical-align:-3px;margin-right:6px}
+  .btn,.btn .i,.inside button,.faq-ic,.mbar,.mbar.show,.pc-garantia{transition:none}
+  .btn:hover,.inside button:hover{transform:none}
+}
+/* texto parado mais curto no celular, para caber em uma linha */
+@media (prefers-reduced-motion:reduce) and (max-width:520px){
+  .aviso .av-l{display:none}
+  .aviso .av-c{display:inline}
+}
 </style>
 </head>
 <body>
 
-<!-- Faixa da garantia -->
-<div class="aviso" role="note" aria-label="Garantia de 7 dias: se não gostar, devolvemos 100% do valor">
-  <div class="aviso-trilho"><div class="aviso-grupo"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><b>Garantia de 7 dias</b> · se não gostar, devolvemos 100% do valor</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><b>Garantia de 7 dias</b> · se não gostar, devolvemos 100% do valor</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><b>Garantia de 7 dias</b> · se não gostar, devolvemos 100% do valor</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><b>Garantia de 7 dias</b> · se não gostar, devolvemos 100% do valor</span></div><div class="aviso-grupo" aria-hidden="true"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><b>Garantia de 7 dias</b> · se não gostar, devolvemos 100% do valor</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><b>Garantia de 7 dias</b> · se não gostar, devolvemos 100% do valor</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><b>Garantia de 7 dias</b> · se não gostar, devolvemos 100% do valor</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg><b>Garantia de 7 dias</b> · se não gostar, devolvemos 100% do valor</span></div></div>
+<!-- Ícones (usados com <use href="#i-...">) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></symbol>
+  <symbol id="i-book-open" viewBox="0 0 24 24"><path d="M2 4h6a4 4 0 0 1 4 4v12a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v12a3 3 0 0 1 3-3h7z"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M8 15h2M12 15h2"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></symbol>
+  <symbol id="i-cycle" viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 1-15.5 6.2L3 16"/><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8"/><path d="M21 3v5h-5M3 21v-5h5"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24"><path d="M12 3v18M7 21h10M5 7h14M5 7l-3 7a3 3 0 0 0 6 0zM19 7l-3 7a3 3 0 0 0 6 0z"/></symbol>
+  <symbol id="i-stairs" viewBox="0 0 24 24"><path d="M3 20h5v-5h5v-5h5V5h3"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></symbol>
+  <symbol id="i-wind" viewBox="0 0 24 24"><path d="M3 8h10a3 3 0 1 0-3-3"/><path d="M3 12h15a3 3 0 1 1-3 3"/><path d="M3 16h7"/></symbol>
+  <symbol id="i-thought" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-3.8-.9L3 20l1.1-4.2A8.4 8.4 0 0 1 3 11.5 8.5 8.5 0 0 1 12 3a8.5 8.5 0 0 1 9 8.5z"/><path d="M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01"/></symbol>
+  <symbol id="i-life" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="m5.6 5.6 3.6 3.6M14.8 14.8l3.6 3.6M14.8 9.2l3.6-3.6M5.6 18.4l3.6-3.6"/></symbol>
+  <symbol id="i-zoom" viewBox="0 0 24 24"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></symbol>
+  <symbol id="i-swipe" viewBox="0 0 24 24"><path d="M5 12h14M15 8l4 4-4 4M9 8l-4 4 4 4"/></symbol>
+  <symbol id="i-wave" viewBox="0 0 24 24"><path d="M2 9c2.5-3 4.5 3 7 0s4.5 3 7 0 4 3 6 0"/><path d="M2 15c2.5-3 4.5 3 7 0s4.5 3 7 0 4 3 6 0"/></symbol>
+  <symbol id="i-devices" viewBox="0 0 24 24"><rect x="2" y="4" width="14" height="11" rx="1.5"/><path d="M6 19h6M9 15v4"/><rect x="17" y="9" width="5" height="11" rx="1.2"/></symbol>
+  <symbol id="w-ondas" viewBox="0 0 600 80" preserveAspectRatio="none"><path d="M0 14 C50 2,100 2,150 14 S250 26,300 14 S400 2,450 14 S550 26,600 14"/><path d="M0 34 C50 22,100 22,150 34 S250 46,300 34 S400 22,450 34 S550 46,600 34"/><path d="M0 54 C50 42,100 42,150 54 S250 66,300 54 S400 42,450 54 S550 66,600 54"/><path d="M0 74 C50 62,100 62,150 74 S250 86,300 74 S400 62,450 74 S550 86,600 74"/></symbol>
+</svg>
+
+<!-- 0. Faixa da garantia (texto correndo; pausa ao passar o mouse, ao focar, ao tocar ou com Enter/Espaço) -->
+<div class="aviso" id="aviso" role="region" aria-label="Garantia" tabindex="0">
+  <p class="sr-only">Garantia de 7 dias: se não gostar, devolvemos 100% do valor.</p>
+  <div class="aviso-trilho" aria-hidden="true">
+    <div class="aviso-grupo">
+      <span><svg class="i"><use href="#i-shield"/></svg><b>Garantia de 7 dias</b> · <i class="av-l">se não gostar, devolvemos </i>100% do valor<i class="av-c"> de volta</i></span>
+      <span><svg class="i"><use href="#i-shield"/></svg><b>Garantia de 7 dias</b> · se não gostar, devolvemos 100% do valor</span>
+      <span><svg class="i"><use href="#i-shield"/></svg><b>Garantia de 7 dias</b> · se não gostar, devolvemos 100% do valor</span>
+      <span><svg class="i"><use href="#i-shield"/></svg><b>Garantia de 7 dias</b> · se não gostar, devolvemos 100% do valor</span>
+    </div>
+    <div class="aviso-grupo" aria-hidden="true">
+      <span><svg class="i"><use href="#i-shield"/></svg><b>Garantia de 7 dias</b> · se não gostar, devolvemos 100% do valor</span>
+      <span><svg class="i"><use href="#i-shield"/></svg><b>Garantia de 7 dias</b> · se não gostar, devolvemos 100% do valor</span>
+      <span><svg class="i"><use href="#i-shield"/></svg><b>Garantia de 7 dias</b> · se não gostar, devolvemos 100% do valor</span>
+      <span><svg class="i"><use href="#i-shield"/></svg><b>Garantia de 7 dias</b> · se não gostar, devolvemos 100% do valor</span>
+    </div>
+  </div>
 </div>
 
 <main id="topo">
 
-<!-- HERO -->
+<!-- 1. HERO -->
 <section class="hero">
-  <div class="wrap">
-    <div class="reveal">
-      <div class="badge"><b></b>Guia prático baseado na TCC</div>
-      <h1>Mais controle quando a ansiedade <em>aperta</em>.</h1>
-      <p class="lead">Técnicas simples, que os psicólogos usam, para acalmar o corpo na hora da crise, entender seus pensamentos e voltar a fazer o que a ansiedade tirou de você, com um plano guiado de 20 dias.</p>
-      <a href="#oferta" class="btn lg">Quero acessar agora →</a>
-      <div class="trust">
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>PDF com acesso imediato</span>
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Leia no celular ou imprima</span>
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Garantia de 7 dias</span>
+  <div class="wrap hero-grid">
+    <div class="hero-txt">
+      <p class="eyebrow"><svg class="i" aria-hidden="true"><use href="#i-wave"/></svg>Material educativo baseado na TCC</p>
+      <h1>Quando a ansiedade apertar, você vai saber <em>o que fazer</em>.</h1>
+      <p class="lead">Técnicas da Terapia Cognitivo-Comportamental em um guia de 60 páginas: o Método S.O.S. para a hora da crise e um plano guiado de 20 dias<span class="lead-x">, com 10 a 20 minutos por dia</span>.</p>
+      <div class="actions">
+        <a href="#comprar" class="btn lg">Quero o Manual S.O.S.<svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <a href="#por-dentro" class="link-arrow">Ver por dentro</a>
+      </div>
+      <ul class="trust">
+        <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span>Acesso imediato<span class="d-only"> por&nbsp;<span class="nw">e-mail</span></span></span></li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Pix ou cartão</li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Garantia de 7 dias</li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span>Pagamento único<span class="d-only"> de R$&nbsp;<span data-preco>27,90</span></span></span></li>
+      </ul>
+    </div>
+    <div class="hero-art">
+      <div class="stage stage-hero">
+        <svg class="waves" aria-hidden="true"><use href="#w-ondas"/></svg>
+        <img class="pg pg-a" src="img/pg-metodo.webp" alt="" width="700" height="991" decoding="async" fetchpriority="low">
+        <img class="pg pg-b" src="img/pg-plano.webp" alt="" width="700" height="991" decoding="async" fetchpriority="low">
+        <div class="book"><img src="img/capa.webp" alt="Capa do Manual S.O.S. Ansiedade: técnicas da Terapia Cognitivo-Comportamental para acalmar a mente barulhenta" width="800" height="1132" fetchpriority="high"></div>
+        <span class="chip-float"><svg class="i" aria-hidden="true"><use href="#i-file"/></svg>PDF · 60 páginas · + 2 bônus</span>
       </div>
     </div>
-    <div class="hero-visual reveal">
-      <div class="blob"></div>
-      <img class="page p1" src="img/pg-metodo.webp" alt="Página do Método S.O.S. em 3 passos" width="700" height="990" loading="eager">
-      <img class="page p2" src="img/pg-plano.webp" alt="Página do plano de 20 dias" width="700" height="990" loading="eager">
-      <img class="cover" src="img/capa.webp" alt="Capa do Manual S.O.S. Ansiedade" width="800" height="1132" fetchpriority="high">
+  </div>
+</section>
+
+<!-- 2. IDENTIFICAÇÃO -->
+<section class="sec cream" id="voce">
+  <div class="wrap split">
+    <div>
+      <div class="head reveal">
+        <p class="kicker">Você se reconhece?</p>
+        <h2 class="h2">Quando a cabeça não desliga</h2>
+      </div>
+      <p class="id-p">Se você se reconhece em algum destes pontos, saiba: isso não é falta de força de vontade. A ansiedade tem um jeito de funcionar, e dá para aprender a lidar com ela.</p>
+      <p class="id-link"><a href="#ciclo" class="link-arrow">Entenda por que isso acontece</a></p>
+      <!-- IMAGEM FUTURA: img/ilustra-noite.webp (1600×1200, 4:3) · ver PROMPTS-GOOGLE-FLOW.md #2
+           Quando o arquivo existir, apague esta linha de comentário e deixe só a figura abaixo:
+      <figure class="ilustra"><img src="img/ilustra-noite.webp" alt="Ilustração: mulher deitada na cama, acordada à noite, com pensamentos embaraçados sobre a cabeça" width="1600" height="1200" loading="lazy" decoding="async"></figure>
+      -->
+    </div>
+    <ul class="dores">
+      <li>Sua mente vive no “e se…?”, ensaiando o pior cenário.</li>
+      <li>O coração dispara, o peito aperta e vem a sensação de que algo ruim vai acontecer.</li>
+      <li>Na hora de dormir, o corpo está exausto, mas a cabeça repassa o dia sem parar.</li>
+      <li>Começou a evitar lugares, conversas ou compromissos por medo do que vai sentir.</li>
+      <li>Já ouviu “é só não pensar nisso” e sabe que não funciona assim.</li>
+      <li>Você quer ferramentas práticas, não frases motivacionais.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 3. POR QUE ACONTECE (o ciclo) -->
+<section class="sec" id="ciclo">
+  <div class="wrap">
+    <div class="mech">
+      <div class="mech-txt">
+        <div class="head reveal">
+          <p class="kicker">Por que acontece</p>
+          <h2 class="h2">Não é frescura nem fraqueza. É um alarme que ficou sensível demais.</h2>
+        </div>
+        <p>Um pensamento de perigo (“e se der tudo errado?”) coloca o corpo em alerta. O coração acelera, a respiração encurta, e essas sensações parecem confirmar o perigo.</p>
+        <p>Para escapar, a gente evita, adia, foge. Isso alivia na hora, mas ensina ao cérebro que o perigo era real, e o ciclo continua girando. Por isso “é só não pensar nisso” não costuma resolver.</p>
+      </div>
+      <figure class="ciclo-fig">
+        <svg class="ciclo-ring" viewBox="0 0 100 100" aria-hidden="true">
+          <circle cx="50" cy="50" r="40"/>
+          <path d="M-2.2 -2.6 L1 0 L-2.2 2.6" transform="translate(78.28 21.72) rotate(45)"/>
+          <path d="M-2.2 -2.6 L1 0 L-2.2 2.6" transform="translate(78.28 78.28) rotate(135)"/>
+          <path d="M-2.2 -2.6 L1 0 L-2.2 2.6" transform="translate(21.72 78.28) rotate(225)"/>
+          <path class="volta" d="M-2.2 -2.6 L1 0 L-2.2 2.6" transform="translate(21.72 21.72) rotate(315)"/>
+        </svg>
+        <ol class="ciclo" aria-label="O ciclo da ansiedade, em 4 passos">
+          <li class="n1"><small>1 · Pensamento</small><strong>“E se…?”</strong></li>
+          <li class="n2"><small>2 · Corpo</small><strong>Coração dispara, peito aperta</strong></li>
+          <li class="n3"><small>3 · Atitude</small><strong>Evitar, adiar, fugir</strong></li>
+          <li class="n4"><small>4 · Resultado</small><strong>Alívio na hora…</strong></li>
+        </ol>
+        <figcaption class="ciclo-centro">…e o alarme fica mais sensível.</figcaption>
+      </figure>
+    </div>
+
+    <div class="frentes">
+      <p class="frentes-intro"><strong>Onde o manual atua.</strong> A Terapia Cognitivo-Comportamental, uma das abordagens usadas por psicólogos, trabalha esse ciclo em três frentes. O manual ensina cada uma, passo&nbsp;a&nbsp;passo:</p>
+      <ul>
+        <li><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-wind"/></svg></span><h3>Corpo</h3><p>Baixar o volume do alarme com respiração, aterramento, relaxamento, movimento e sono.</p></li>
+        <li><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-thought"/></svg></span><h3>Pensamentos</h3><p>Separar pensamento de fato e reconhecer as 10 armadilhas da mente ansiosa.</p></li>
+        <li><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-stairs"/></svg></span><h3>Atitudes</h3><p>Voltar aos poucos ao que você evita, com a escada da exposição e a hora da preocupação.</p></li>
+      </ul>
+    </div>
+    <p class="fecho">Não é sobre nunca mais sentir ansiedade. É sobre ter ferramentas para que ela não decida por você.</p>
+  </div>
+</section>
+
+<!-- 4. MÉTODO S.O.S. -->
+<section class="sec cream" id="metodo">
+  <div class="wrap sos">
+    <div class="head reveal sos-head">
+      <p class="kicker">Para a hora do aperto</p>
+      <h2 class="h2">Método S.O.S.: 3 passos, de 1 a 5 minutos</h2>
+      <p class="sub">Para atravessar o pico da ansiedade sem se afogar nele. Na crise, você não precisa lembrar de várias técnicas: só de três letras.</p>
+    </div>
+    <div class="sos-body">
+      <ol class="sos-list">
+        <li><span class="sos-L L1" aria-hidden="true">S</span><div><h3>Solte o ar</h3><p>Uma respiração simples que ajuda a desacelerar o corpo.</p></div></li>
+        <li><span class="sos-L L2" aria-hidden="true">O</span><div><h3>Observe ao redor</h3><p>Aterramento: trazer a atenção de volta para o aqui e agora.</p></div></li>
+        <li><span class="sos-L L3" aria-hidden="true">S</span><div><h3>Separe pensamento de fato</h3><p>Um pensamento é um evento da mente, não uma previsão confirmada.</p></div></li>
+      </ol>
+      <p class="sos-note">O S.O.S. não “desliga” a ansiedade na hora: ajuda você a atravessar a onda.</p>
+    </div>
+    <figure class="sos-art">
+      <div class="stage stage-phone">
+        <svg class="waves" aria-hidden="true"><use href="#w-ondas"/></svg>
+        <div class="phone"><img src="img/cartao.webp" alt="Cartão S.O.S. na tela do celular, com os 3 passos: Solte o ar, Observe ao redor, Separe pensamento de fato" width="500" height="888" loading="lazy" decoding="async"></div>
+      </div>
+      <figcaption><strong>Bônus:</strong> 4 cartões S.O.S. para o papel de parede do celular</figcaption>
+    </figure>
+    <div class="cta-row sos-cta">
+      <a href="#comprar" class="btn lg">Quero o Manual S.O.S.<svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <p class="micro">R$&nbsp;<span data-preco>27,90</span> · <span class="nw">pagamento único</span> · <span class="nw">acesso imediato</span></p>
     </div>
   </div>
 </section>
 
-<!-- IDENTIFICAÇÃO -->
-<section class="alt">
+<!-- 5. O QUE VOCÊ VAI APRENDER -->
+<section class="sec" id="aprender">
   <div class="wrap">
-    <div class="center reveal">
-      <div class="kicker">Você se reconhece?</div>
-      <h2 class="sec-title">Quando a cabeça não desliga</h2>
+    <div class="head center reveal">
+      <p class="kicker">O que você vai aprender</p>
+      <h2 class="h2">O que tem dentro das 60 páginas</h2>
+      <p class="sub">Tudo em linguagem simples, com passo&nbsp;a&nbsp;passo e exemplos do dia a dia.</p>
     </div>
-    <div class="checks reveal">
-      <div class="check"><i>✓</i><span>A mente fica no “e se…?” o dia inteiro, imaginando o pior cenário.</span></div>
-      <div class="check"><i>✓</i><span>O coração dispara, o peito aperta e parece que algo ruim vai acontecer.</span></div>
-      <div class="check"><i>✓</i><span>Você deita, mas a cabeça repassa o dia e não deixa dormir.</span></div>
-      <div class="check"><i>✓</i><span>Começou a evitar lugares, conversas ou situações por medo do que vai sentir.</span></div>
-      <div class="check"><i>✓</i><span>Já ouviu “é só não pensar nisso”, mas sabe que não é tão simples.</span></div>
-      <div class="check"><i>✓</i><span>Quer ferramentas práticas, não frases motivacionais.</span></div>
-    </div>
-    <p class="note reveal">A ansiedade não é frescura nem fraqueza. É um alarme do corpo que ficou sensível demais. <strong style="color:var(--coral-d)">E um alarme pode ser recalibrado.</strong></p>
+    <ol class="topics">
+      <li class="topic"><span class="topic-n" aria-hidden="true">01</span><div><h3>Entender o ciclo</h3><p>Por que o coração dispara, de onde vêm as sensações e o que mantém a ansiedade girando.</p></div></li>
+      <li class="topic"><span class="topic-n" aria-hidden="true">02</span><div><h3>Questionar pensamentos</h3><p>As 10 armadilhas da mente ansiosa e como questionar os pensamentos catastróficos.</p></div></li>
+      <li class="topic"><span class="topic-n" aria-hidden="true">03</span><div><h3>Enfrentar aos poucos</h3><p>A escada da exposição, para voltar ao que você vem evitando, um degrau por vez.</p></div></li>
+      <li class="topic"><span class="topic-n" aria-hidden="true">04</span><div><h3>Corpo, café e sono</h3><p>Relaxamento muscular progressivo, movimento e ajustes simples no café, no sono e na rotina, que ajudam o corpo a sair do modo alerta.</p></div></li>
+      <li class="topic"><span class="topic-n" aria-hidden="true">05</span><div><h3>Hora da preocupação</h3><p>Uma técnica para dar hora e lugar à preocupação, em vez de <span class="nw">deixá-la</span> ocupar o dia inteiro.</p></div></li>
+      <li class="topic"><span class="topic-n" aria-hidden="true">06</span><div><h3>Exemplos e fichas</h3><p>Exemplos preenchidos, como o Registro de Pensamentos do Rafael, e 7&nbsp;fichas para imprimir e praticar.</p></div></li>
+    </ol>
   </div>
 </section>
 
-<!-- O QUE VAI APRENDER -->
-<section>
+<!-- 6. CIÊNCIA -->
+<section class="sec science on-dark" id="ciencia">
+  <svg class="waves" aria-hidden="true"><use href="#w-ondas"/></svg>
   <div class="wrap">
-    <div class="center reveal">
-      <div class="kicker">O que você vai aprender</div>
-      <h2 class="sec-title">Ferramentas para o corpo, os pensamentos e as atitudes</h2>
-      <p class="sec-sub">Tudo explicado de um jeito simples, com passo a passo e exemplos do dia a dia.</p>
-    </div>
-    <div class="grid3">
-      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10a3 3 0 1 0-3-3"/><path d="M3 12h15a3 3 0 1 1-3 3"/><path d="M3 16h7"/></svg></div><h3>Método S.O.S.</h3><p>Três passos de 1 a 5 minutos para atravessar o pico da ansiedade sem se afogar nele.</p></div>
-      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3>Entender o ciclo</h3><p>Por que o coração dispara, de onde vêm as sensações e o que mantém a ansiedade girando.</p></div>
-      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 7h14M5 7l-3 7a3 3 0 0 0 6 0zM19 7l-3 7a3 3 0 0 0 6 0z"/></svg></div><h3>Questionar pensamentos</h3><p>As 10 armadilhas da mente ansiosa e como tirar a força dos pensamentos catastróficos.</p></div>
-      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M7 2v20M17 2v20M7 6h10M7 11h10M7 16h10"/></svg></div><h3>Enfrentar aos poucos</h3><p>A escada da exposição para voltar a fazer o que você vem evitando, um degrau por vez.</p></div>
-      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></div><h3>Corpo, café e sono</h3><p>Relaxamento muscular, movimento e ajustes na rotina que tiram combustível da ansiedade.</p></div>
-      <div class="card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div><h3>Hora da preocupação</h3><p>Uma técnica simples para a preocupação parar de invadir o dia inteiro.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- COMO FUNCIONA -->
-<section class="alt">
-  <div class="wrap">
-    <div class="center reveal">
-      <div class="kicker">Como funciona</div>
-      <h2 class="sec-title">Um plano de 20 dias, 10 a 20 minutos por dia</h2>
-      <p class="sec-sub">Você não precisa adivinhar por onde começar. O plano diz o que fazer em cada dia.</p>
-    </div>
-    <div class="steps">
-      <div class="step reveal"><div class="n">1</div><span class="tag">Dias 1 a 5</span><h3>Acalmar o corpo</h3><p>Aprender a baixar o volume do alarme com respiração, aterramento e relaxamento.</p></div>
-      <div class="step reveal"><div class="n">2</div><span class="tag">Dias 6 a 15</span><h3>Entender e questionar</h3><p>Enxergar o seu ciclo e tirar o poder dos pensamentos que exageram o perigo.</p></div>
-      <div class="step reveal"><div class="n">3</div><span class="tag">Dias 16 a 20</span><h3>Enfrentar e consolidar</h3><p>Voltar a fazer o que a ansiedade tirou de você e montar a sua rotina.</p></div>
-    </div>
-    <div class="center reveal" style="margin-top:48px"><a href="#oferta" class="btn lg">Quero começar o plano →</a></div>
-  </div>
-</section>
-
-<!-- POR DENTRO -->
-<section>
-  <div class="wrap">
-    <div class="center reveal">
-      <div class="kicker">Por dentro do manual</div>
-      <h2 class="sec-title">Bonito, organizado e fácil de seguir</h2>
-      <p class="sec-sub">60 páginas com passo a passo, exemplos preenchidos e espaço para você praticar.</p>
-    </div>
-    <div class="inside">
-      <figure class="reveal"><img src="img/pg-metodo.webp" alt="Página: O Método S.O.S. em 3 passos" width="700" height="990" loading="lazy"><figcaption>Método S.O.S.</figcaption></figure>
-      <figure class="reveal"><img src="img/pg-registro.webp" alt="Página: exemplo de registro de pensamentos" width="700" height="990" loading="lazy"><figcaption>Exemplos preenchidos</figcaption></figure>
-      <figure class="reveal"><img src="img/pg-plano.webp" alt="Página do plano de 20 dias" width="700" height="990" loading="lazy"><figcaption>Plano dia a dia</figcaption></figure>
-      <figure class="reveal"><img src="img/pg-ficha.webp" alt="Ficha para imprimir" width="700" height="990" loading="lazy"><figcaption>Fichas para imprimir</figcaption></figure>
-    </div>
-  </div>
-</section>
-
-<!-- O QUE RECEBE -->
-<section class="alt">
-  <div class="wrap">
-    <div class="center reveal">
-      <div class="kicker">O que você recebe</div>
-      <h2 class="sec-title">Tudo o que você precisa para começar hoje</h2>
-    </div>
-    <div class="get">
-      <div class="item reveal"><div class="head"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V3H6.5A2.5 2.5 0 0 0 4 5.5z"/><path d="M4 19.5A2.5 2.5 0 0 0 6.5 22H20v-5"/></svg></div><span class="pill main">Principal</span></div><h3>Manual S.O.S. Ansiedade</h3><p>O guia completo em PDF, com linguagem simples e exemplos do dia a dia.</p><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>60 páginas de técnicas da TCC</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Método S.O.S. para a hora da crise</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Plano guiado de 20 dias</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Exemplos preenchidos</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>7 fichas para imprimir</li></ul></div>
-      <div class="item reveal"><div class="head"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M8 15h2"/></svg></div><span class="pill">Bônus</span></div><h3>Diário S.O.S. de 20 dias</h3><p>O companheiro do plano: você sabe exatamente o que fazer em cada dia.</p><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Uma página para cada dia do plano</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>A tarefa do dia já explicada</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Espaço para registrar o seu progresso</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Para usar no celular ou imprimir</li></ul></div>
-      <div class="item reveal"><div class="head"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg></div><span class="pill">Bônus</span></div><h3>4 cartões S.O.S. para o celular</h3><p>Para ter as técnicas à mão na hora do aperto, sem precisar abrir o manual.</p><ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>4 cartões no tamanho da tela</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Os passos do Método S.O.S. resumidos</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Use como papel de parede</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Na crise, é só olhar e seguir</li></ul></div>
-    </div>
-  </div>
-</section>
-
-<!-- CIÊNCIA -->
-<section class="science">
-  <div class="wrap">
-    <div class="center reveal">
-      <div class="kicker" style="color:var(--peach)">Com base em estudos</div>
-      <h2 class="sec-title">Técnicas estudadas, não achismos</h2>
-      <p class="sec-sub">O manual reúne ferramentas da Terapia Cognitivo-Comportamental e de pesquisas científicas, citadas ao longo do material.</p>
+    <div class="sci-head reveal">
+      <div>
+        <p class="kicker">O que diz a ciência</p>
+        <h2 class="h2">Técnicas estudadas, não achismos</h2>
+      </div>
+      <p>O manual reúne ferramentas da Terapia Cognitivo-Comportamental e práticas para o corpo que vêm sendo estudadas pela ciência. Alguns exemplos:</p>
     </div>
     <div class="facts">
-      <div class="fact reveal"><div class="big">5 min</div><p>por dia de um exercício de respiração reduziram a ansiedade e melhoraram o humor em um estudo da Universidade Stanford.</p><small>Cell Reports Medicine, 2023</small></div>
-      <div class="fact reveal"><div class="big">46 estudos</div><p>com mais de 3.400 adultos mostraram que o relaxamento muscular progressivo ajuda a reduzir estresse e ansiedade.</p><small>Revisão sistemática, 2024</small></div>
-      <div class="fact reveal"><div class="big">97 revisões</div><p>científicas indicam que a atividade física reduz sintomas de ansiedade, depressão e estresse.</p><small>British Journal of Sports Medicine, 2023</small></div>
+      <div class="fact"><div class="fact-big">5 min</div><p>por dia de um exercício de respiração reduziram a ansiedade e melhoraram o humor em um estudo da Universidade Stanford.</p><cite><svg class="i" aria-hidden="true"><use href="#i-book-open"/></svg>Cell Reports Medicine, 2023</cite></div>
+      <div class="fact"><div class="fact-big">46 estudos</div><p>com mais de 3.400 adultos indicam que o relaxamento muscular progressivo ajuda a reduzir o estresse e a ansiedade.</p><cite><svg class="i" aria-hidden="true"><use href="#i-book-open"/></svg>Revisão sistemática, 2024</cite></div>
+      <div class="fact"><div class="fact-big">97 revisões</div><p>de estudos científicos indicam que a atividade física reduz sintomas de ansiedade, depressão e estresse.</p><cite><svg class="i" aria-hidden="true"><use href="#i-book-open"/></svg>British Journal of Sports Medicine, 2023</cite></div>
+    </div>
+    <p class="sci-note">Os estudos avaliaram as técnicas, não este manual. Cada pessoa responde de um jeito.</p>
+  </div>
+</section>
+
+<!-- 7. PLANO DE 20 DIAS -->
+<section class="sec cream" id="plano">
+  <div class="wrap">
+    <div class="head center reveal">
+      <p class="kicker">Como funciona</p>
+      <h2 class="h2">Um plano de 20&nbsp;dias, de&nbsp;10 a 20&nbsp;minutos por dia</h2>
+      <p class="sub">Você não precisa adivinhar por onde começar: o plano diz o que fazer em cada dia.</p>
+    </div>
+    <!-- IMAGEM FUTURA (opcional): img/ilustra-escada.webp (1920×1080, 16:9) · ver PROMPTS-GOOGLE-FLOW.md #4
+         Quando o arquivo existir, apague esta linha de comentário e deixe só a figura abaixo:
+    <figure class="ilustra-wide"><img src="img/ilustra-escada.webp" alt="Ilustração: mulher subindo com calma uma escada de três degraus largos, em direção a um céu limpo" width="1920" height="1080" loading="lazy" decoding="async"></figure>
+    -->
+    <div class="barra" role="img" aria-label="Linha do tempo de 20 dias: dias 1 a 5, Acalmar o corpo; dias 6 a 15, Entender e questionar; dias 16 a 20, Enfrentar e consolidar">
+      <span class="d1">1</span><span class="d1">2</span><span class="d1">3</span><span class="d1">4</span><span class="d1">5</span><span class="d2">6</span><span class="d2">7</span><span class="d2">8</span><span class="d2">9</span><span class="d2">10</span><span class="d2">11</span><span class="d2">12</span><span class="d2">13</span><span class="d2">14</span><span class="d2">15</span><span class="d3">16</span><span class="d3">17</span><span class="d3">18</span><span class="d3">19</span><span class="d3">20</span>
+    </div>
+    <div class="barra-ends" aria-hidden="true"><span>Dia 1</span><span>Dia 20</span></div>
+    <ol class="fases">
+      <li class="fase f1"><span class="tag">Dias 1 a 5</span><h3>Acalmar o corpo</h3><p>Treinar respiração, aterramento e relaxamento para baixar o volume do alarme.</p></li>
+      <li class="fase f2"><span class="tag">Dias 6 a 15</span><h3>Entender e questionar</h3><p>Mapear o seu ciclo e olhar com mais clareza para os pensamentos que exageram o perigo.</p></li>
+      <li class="fase f3"><span class="tag">Dias 16 a 20</span><h3>Enfrentar e consolidar</h3><p>Subir os primeiros degraus da escada da exposição e consolidar o que você praticou.</p></li>
+    </ol>
+    <p class="plano-nota"><svg class="i" aria-hidden="true"><use href="#i-cal"/></svg><span>O <strong>Diário S.O.S.</strong> (bônus) acompanha o plano: uma página por dia, com a tarefa do dia e espaço para registrar o seu progresso.</span></p>
+    <div class="cta-center">
+      <a href="#comprar" class="btn lg">Quero começar o plano<svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <p class="micro">Cabe numa pausa do almoço ou antes de dormir.</p>
     </div>
   </div>
 </section>
 
-<!-- OFERTA -->
-<section id="oferta">
-  <div class="wrap offer">
-    <div class="reveal"><img class="cover" src="img/capa.webp" alt="Capa do Manual S.O.S. Ansiedade" width="800" height="1132" loading="lazy"></div>
-    <div class="price-card reveal">
-      <span class="ribbon">Acesso imediato</span>
-      <h2 style="font-size:30px">Manual S.O.S. Ansiedade + bônus</h2>
-      <ul>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Manual completo em PDF (60 páginas)</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Plano guiado de 20 dias</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>7 fichas para imprimir</li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Bônus:</strong> Diário S.O.S. de 20 dias</span></li>
-        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Bônus:</strong> 4 cartões S.O.S. para o celular</span></li>
-      </ul>
-      <div class="price"><span class="cur">R$</span><span class="val" data-preco>27,90</span></div>
-      <p class="price-note">Pagamento único. Pix ou cartão. Você recebe tudo por e-mail logo após a compra.</p>
-      <a href="#oferta" class="btn lg block" data-checkout>Quero o meu manual agora</a>
-      <div class="guarantee">
-        <div class="seal"><b>7</b><span>DIAS</span></div>
-        <p><strong style="color:var(--deep)">Garantia de 7 dias.</strong> Se não for o que você esperava, peça o reembolso dentro de 7 dias e devolvemos 100% do valor.</p>
+<!-- 8. POR DENTRO DO MANUAL (páginas reais) -->
+<section class="sec" id="por-dentro">
+  <div class="wrap">
+    <div class="head head-split reveal">
+      <div>
+        <p class="kicker">Por dentro do manual</p>
+        <h2 class="h2">Páginas organizadas para você praticar</h2>
+      </div>
+      <p class="sub">60 páginas com passo&nbsp;a&nbsp;passo, exemplos preenchidos e espaço para você escrever.</p>
+    </div>
+    <div class="inside">
+      <figure><button type="button" data-zoom="img/pg-registro.webp" data-cap="Exemplo preenchido: Registro de Pensamentos do Rafael" aria-label="Ampliar página: Registro de Pensamentos do Rafael"><img src="img/pg-registro.webp" alt="Página do manual com o Registro de Pensamentos do Rafael preenchido" width="700" height="991" loading="lazy" decoding="async"><span class="zoom-ic" aria-hidden="true"><svg class="i"><use href="#i-zoom"/></svg></span></button><figcaption><span>01</span>Exemplo preenchido: Registro de Pensamentos do Rafael</figcaption></figure>
+      <figure><button type="button" data-zoom="img/pg-metodo.webp" data-cap="O Método S.O.S. em 3 passos" aria-label="Ampliar página: O Método S.O.S. em 3 passos"><img src="img/pg-metodo.webp" alt="Página do manual com o Método S.O.S. em 3 passos" width="700" height="991" loading="lazy" decoding="async"><span class="zoom-ic" aria-hidden="true"><svg class="i"><use href="#i-zoom"/></svg></span></button><figcaption><span>02</span>O Método S.O.S. em 3 passos</figcaption></figure>
+      <figure><button type="button" data-zoom="img/pg-plano.webp" data-cap="Plano dia a dia: fase Acalmar o corpo" aria-label="Ampliar página: Plano dia a dia"><img src="img/pg-plano.webp" alt="Página do plano de 20 dias, fase Acalmar o corpo" width="700" height="991" loading="lazy" decoding="async"><span class="zoom-ic" aria-hidden="true"><svg class="i"><use href="#i-zoom"/></svg></span></button><figcaption><span>03</span>Plano dia a dia</figcaption></figure>
+      <figure><button type="button" data-zoom="img/pg-ficha.webp" data-cap="Ficha para imprimir: Mapa do Ciclo" aria-label="Ampliar página: Ficha Mapa do Ciclo"><img src="img/pg-ficha.webp" alt="Ficha para imprimir: Mapa do Ciclo" width="700" height="991" loading="lazy" decoding="async"><span class="zoom-ic" aria-hidden="true"><svg class="i"><use href="#i-zoom"/></svg></span></button><figcaption><span>04</span>Ficha para imprimir</figcaption></figure>
+      <figure><button type="button" data-zoom="img/pg-diario.webp" data-cap="Bônus: Diário S.O.S., uma página por dia" aria-label="Ampliar página: Diário S.O.S."><img src="img/pg-diario.webp" alt="Página do Diário S.O.S., Dia 1" width="700" height="991" loading="lazy" decoding="async"><span class="zoom-ic" aria-hidden="true"><svg class="i"><use href="#i-zoom"/></svg></span></button><figcaption><span>05</span>Bônus: Diário S.O.S.</figcaption></figure>
+    </div>
+    <p class="inside-hint"><svg class="i" aria-hidden="true"><use href="#i-swipe"/></svg>Deslize para ver mais · toque para ampliar</p>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS REAIS (opcional)
+     Cole aqui SOMENTE depoimentos verdadeiros de compradores, com autorização por escrito.
+     Formato sugerido: frase curta + primeiro nome + cidade. Sem fotos de banco de imagens.
+     Não use depoimentos que prometam cura. Enquanto não houver depoimentos reais, deixe vazio. -->
+
+<!-- 9. PARA QUEM É / PARA QUEM NÃO É -->
+<section class="sec cream" id="para-quem">
+  <div class="wrap">
+    <div class="head center reveal">
+      <p class="kicker">Para quem é</p>
+      <h2 class="h2">Este manual é para você?</h2>
+      <p class="sub">Um material educativo e prático. Veja se ele combina com o que você&nbsp;procura.</p>
+    </div>
+    <div class="quem">
+      <div class="quem-col">
+        <h3><span class="badge"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg></span>É para você se…</h3>
+        <ul>
+          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>vive no “e se…?” e sente que a cabeça não desliga;</li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>tem crises e quer saber o que fazer na hora do aperto;</li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>vem evitando situações por medo do que vai sentir;</li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>prefere ferramentas práticas, com passo a passo e exemplos;</li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>quer um material de apoio para usar por conta própria ou junto com a terapia.</li>
+        </ul>
+      </div>
+      <div class="quem-col nao">
+        <h3><span class="badge"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></span>Não é para você se…</h3>
+        <ul>
+          <li><svg class="i" aria-hidden="true"><use href="#i-x"/></svg>procura uma solução mágica ou instantânea, sem prática;</li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-x"/></svg>espera que um PDF substitua psicólogo, psiquiatra ou médico;</li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-x"/></svg>não pode reservar de 10 a 20 minutos por dia;</li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-x"/></svg>prefere aulas em vídeo: o material é em PDF, para ler e praticar.</li>
+        </ul>
+        <p class="ajuda"><strong>Está em sofrimento intenso ou pensando em se machucar?</strong> Procure ajuda agora: <a href="tel:188">188</a> (CVV, gratuito, 24 horas) ou <a href="tel:192">192</a> (SAMU).</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FAQ -->
-<section class="alt">
+<!-- 10. O QUE VOCÊ RECEBE (só texto, sem prints) -->
+<section class="sec" id="recebe">
   <div class="wrap">
-    <div class="center reveal">
-      <div class="kicker">Dúvidas frequentes</div>
-      <h2 class="sec-title">Perguntas e respostas</h2>
+    <div class="head head-split reveal">
+      <div>
+        <p class="kicker">O que você recebe</p>
+        <h2 class="h2">Tudo o que você precisa para começar hoje</h2>
+      </div>
+      <p class="sub">O manual completo e dois bônus para levar a prática para o dia a dia.</p>
     </div>
-    <div class="faq reveal">
-      <details><summary>Para quem é este manual?</summary><p>Para quem convive com preocupação excessiva, crises de ansiedade, cabeça que não desliga ou medo que faz evitar situações, e quer ferramentas práticas para o dia a dia.</p></details>
-      <details><summary>O manual substitui terapia?</summary><p>Não. É um material educativo e de autocuidado. Ele pode ser usado sozinho ou como complemento da terapia. Se a ansiedade estiver muito intensa ou atrapalhando muito a sua vida, procure um psicólogo ou médico. O manual mostra onde encontrar ajuda, inclusive gratuita.</p></details>
-      <details><summary>Como eu recebo?</summary><p>Logo após a confirmação do pagamento, você recebe por e-mail o acesso aos arquivos em PDF. Com Pix ou cartão, a liberação costuma ser imediata.</p></details>
-      <details><summary>Consigo ler no celular?</summary><p>Sim. O PDF abre no celular, tablet ou computador. As fichas e o diário também podem ser impressos.</p></details>
-      <details><summary>Preciso ter algum diagnóstico?</summary><p>Não. As técnicas ajudam qualquer pessoa que sofre com ansiedade, preocupação e estresse no dia a dia.</p></details>
-      <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia. Se não for o que esperava, é só pedir o reembolso dentro desse prazo.</p></details>
+    <div class="recebe">
+      <article class="get get-main">
+        <div class="get-head"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-book"/></svg></span><span class="tag tag-deep">Principal</span></div>
+        <div>
+          <h3>Manual S.O.S. Ansiedade</h3>
+          <p>O guia completo em PDF, com técnicas da Terapia Cognitivo-Comportamental em linguagem simples e exemplos do dia a dia.</p>
+        </div>
+        <ul class="checks">
+          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>60 páginas baseadas na Terapia Cognitivo-Comportamental</li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Método S.O.S. para o pico da ansiedade, de 1 a 5 minutos</li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Plano guiado de 20 dias, em 3 fases</li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Exemplos preenchidos, como o Registro de Pensamentos do Rafael</li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>7 fichas para imprimir, como o Registro de Pensamentos e o Mapa do Ciclo</li>
+        </ul>
+      </article>
+      <article class="get">
+        <div class="get-head"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-cal"/></svg></span><span class="tag tag-b">Bônus 1</span></div>
+        <h3>Diário S.O.S. de 20 dias</h3>
+        <p>O companheiro do plano: você sabe o que fazer em cada dia e registra o seu caminho.</p>
+        <ul class="checks">
+          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Uma página para cada dia do plano</li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>A tarefa do dia já descrita</li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Espaço para registrar o seu progresso</li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Use no celular ou imprima</li>
+        </ul>
+      </article>
+      <article class="get">
+        <div class="get-head"><span class="ic"><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg></span><span class="tag tag-b">Bônus 2</span></div>
+        <h3>4 cartões S.O.S. para o celular</h3>
+        <p>Os passos do Método S.O.S. sempre à mão, na tela do seu celular.</p>
+        <ul class="checks">
+          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>4 cartões no formato de papel de parede</li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Os passos do Método S.O.S. resumidos</li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Na hora do aperto, é só olhar a tela</li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Sem precisar abrir o PDF</li>
+        </ul>
+      </article>
+    </div>
+    <p class="formato"><svg class="i" aria-hidden="true"><use href="#i-devices"/></svg><span>Tudo digital · leia no celular, tablet ou computador · imprima as fichas e o diário se quiser.</span></p>
+  </div>
+</section>
+
+<!-- 11. OFERTA (id="oferta": a barra fixa do celular some aqui; id="comprar": destino dos botões da página) -->
+<section class="sec cream" id="oferta">
+  <div class="wrap">
+    <div class="head center reveal">
+      <p class="kicker">Oferta</p>
+      <h2 class="h2">Comece hoje por R$&nbsp;<span data-preco>27,90</span></h2>
+    </div>
+    <div class="oferta">
+      <div class="oferta-lado">
+        <div class="kit">
+          <div class="stage stage-kit">
+            <!-- IMAGEM FUTURA: img/fundo-kit.webp (1200×1200, 1:1) · ver PROMPTS-GOOGLE-FLOW.md #1
+                 Quando o arquivo existir, apague esta linha de comentário e deixe só a imagem abaixo (ela substitui o arco verde):
+            <img class="kit-bg" src="img/fundo-kit.webp" alt="" width="1200" height="1200" loading="lazy" decoding="async">
+            -->
+            <svg class="waves" aria-hidden="true"><use href="#w-ondas"/></svg>
+            <img class="pg kit-diario" src="img/pg-diario.webp" alt="Página do Diário S.O.S., Dia 1" width="700" height="991" loading="lazy" decoding="async">
+            <div class="book"><img src="img/capa.webp" alt="Capa do Manual S.O.S. Ansiedade" width="800" height="1132" loading="lazy" decoding="async"></div>
+            <div class="phone"><img src="img/cartao.webp" alt="Cartão S.O.S. na tela do celular" width="500" height="888" loading="lazy" decoding="async"></div>
+          </div>
+        </div>
+        <div>
+          <p class="compra-t" id="compra-t">Como funciona a compra</p>
+          <ol class="compra" aria-labelledby="compra-t">
+            <li><b>1</b><span>Clique no botão e escolha Pix ou cartão na Hotmart.</span></li>
+            <li><b>2</b><span>Abra o e-mail da Hotmart com o seu&nbsp;acesso.</span></li>
+            <li><b>3</b><span>Comece pelo Método S.O.S. hoje&nbsp;mesmo.</span></li>
+          </ol>
+        </div>
+      </div>
+      <div class="price-card" id="comprar">
+        <h3 class="pc-title">Manual S.O.S. Ansiedade + 2 bônus</h3>
+        <p class="pc-desc">Um material para usar na crise e durante 20 dias, não para ler uma vez e esquecer.</p>
+        <ul class="pc-list">
+          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span><small class="pc-k p">Principal</small>Manual em PDF, 60 páginas: Método S.O.S., plano de 20 dias e 7 fichas</span></li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span><small class="pc-k">Bônus 1</small>Diário S.O.S. de 20 dias</span></li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span><small class="pc-k">Bônus 2</small>4 cartões S.O.S. para o celular</span></li>
+        </ul>
+        <div class="pc-price">
+          <span class="pc-label">Pagamento único</span>
+          <p class="price"><span class="cur">R$</span><span class="val" data-preco>27,90</span></p>
+          <p class="pc-note">Pix ou cartão · sem mensalidade · <span class="nw">acesso imediato</span> por e-mail</p>
+        </div>
+        <a href="#oferta" class="btn lg block" data-checkout>Quero o meu manual agora<svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <p class="pc-secure"><svg class="i" aria-hidden="true"><use href="#i-lock"/></svg>Compra processada pela Hotmart</p>
+        <a class="pc-garantia" href="#garantia"><span class="mini-selo" aria-hidden="true"><b>7</b><small>DIAS</small></span><span><strong>Garantia de 7 dias.</strong> Não gostou? Devolvemos 100% do valor.</span></a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- CTA FINAL -->
-<section>
+<!-- 12. GARANTIA -->
+<section class="sec mist" id="garantia">
   <div class="wrap">
-    <div class="final reveal">
-      <h2>Comece hoje a acalmar a mente barulhenta</h2>
-      <p>Técnicas para a hora do aperto, um plano de 20 dias e materiais para praticar. Tudo em PDF, com acesso imediato.</p>
-      <a href="#oferta" class="btn lg">Quero o Manual S.O.S. →</a>
-      <svg class="waves" viewBox="0 0 1200 200" preserveAspectRatio="none" fill="none" stroke="#fff" stroke-width="3"><path d="M0 60 C 200 10, 400 110, 600 60 S 1000 10, 1200 60"/><path d="M0 110 C 200 60, 400 160, 600 110 S 1000 60, 1200 110"/><path d="M0 160 C 200 110, 400 210, 600 160 S 1000 110, 1200 160"/></svg>
+    <div class="garantia">
+      <svg class="selo" viewBox="0 0 200 164" role="img" aria-label="Selo: garantia de 7 dias, 100% do valor de volta">
+        <defs><path id="arco" d="M100 82 m-55 0 a55 55 0 1 1 110 0 a55 55 0 1 1 -110 0"/></defs>
+        <g stroke="#D4603A" stroke-width="3.5" stroke-linecap="round"><path d="M6 60l13 6M2 82h15M6 104l13-6M194 60l-13 6M198 82h-15M194 104l-13-6"/></g>
+        <circle cx="100" cy="82" r="76" fill="#173F43"/>
+        <circle cx="100" cy="82" r="69" fill="none" stroke="rgba(255,255,255,.28)" stroke-dasharray="2 4"/>
+        <text font-family="Inter, sans-serif" font-size="11.5" font-weight="700" letter-spacing="1.4" fill="#F2B49B"><textPath href="#arco" textLength="338" lengthAdjust="spacing">GARANTIA • 7 DIAS • 100% DE VOLTA •</textPath></text>
+        <text x="100" y="97" text-anchor="middle" font-family="'Source Serif 4', Georgia, serif" font-weight="700" font-size="50" fill="#fff">7</text>
+        <text x="100" y="117" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="11" letter-spacing="3" fill="#fff">DIAS</text>
+      </svg>
+      <div>
+        <h2>Garantia de 7&nbsp;dias:<br> 100%&nbsp;do&nbsp;seu dinheiro de&nbsp;volta</h2>
+        <p class="g-p">Leia o manual, teste o Método S.O.S. e comece o plano. Se em até 7 dias você sentir que o material não é para você, peça o reembolso pela Hotmart e receba 100% do valor de volta.</p>
+        <p class="g-p">Você não precisa justificar: é o seu direito de arrependimento, previsto no art.&nbsp;49 do Código de Defesa do&nbsp;Consumidor.</p>
+      </div>
     </div>
-    <div class="warn"><strong>Aviso importante:</strong> este é um material educativo e não substitui acompanhamento psicológico ou médico. Se você estiver em sofrimento intenso ou pensando em se machucar, ligue <strong>188</strong> (CVV, gratuito, 24 horas) ou acesse cvv.org.br. Em emergência médica, ligue <strong>192</strong> (SAMU).</div>
+  </div>
+</section>
+
+<!-- 13. FAQ -->
+<section class="sec" id="duvidas">
+  <div class="wrap faq-grid">
+    <div class="faq-side">
+      <div class="head reveal">
+        <p class="kicker">Dúvidas frequentes</p>
+        <h2 class="h2">Perguntas e respostas</h2>
+      </div>
+      <p>Ainda com dúvida? Escreva para <a href="mailto:contato@seudominio.com.br" data-email-link><span data-email>contato@seudominio.com.br</span></a>.</p>
+      <!-- "Quem criou o manual?": preencha apenas com informações reais do autor (nome, formação, registro profissional). Não invente. -->
+    </div>
+    <div class="faq">
+      <details><summary><span class="q">O manual substitui terapia ou remédio?</span><span class="faq-ic" aria-hidden="true"><svg class="i"><use href="#i-plus"/></svg></span></summary><div><p>Não. É um material educativo e de autocuidado, que pode ser usado sozinho ou junto com a terapia. Se a ansiedade estiver muito intensa ou atrapalhando a sua vida, procure um psicólogo ou médico. Se você já faz terapia, vale mostrar o material ao seu psicólogo e combinar a melhor forma de usar.</p><p>Se você usa medicação, não interrompa nem mude a dose sem orientação do seu médico.</p></div></details>
+      <details><summary><span class="q">Preciso ter diagnóstico de ansiedade?</span><span class="faq-ic" aria-hidden="true"><svg class="i"><use href="#i-plus"/></svg></span></summary><div><p>Não. O material é para quem convive com preocupação excessiva, ansiedade e estresse no dia a dia, com ou sem diagnóstico.</p></div></details>
+      <details><summary><span class="q">Tenho crises fortes. Serve para mim?</span><span class="faq-ic" aria-hidden="true"><svg class="i"><use href="#i-plus"/></svg></span></summary><div><p>O Método S.O.S. foi feito para o pico da ansiedade e pode ajudar você a atravessar esses momentos. O manual não faz diagnóstico. Se as crises são frequentes, muito intensas ou atrapalham a sua rotina, o primeiro passo é buscar avaliação com um psicólogo ou médico; o manual pode ser um apoio junto com esse acompanhamento. Sintomas como dor no peito ou falta de ar também merecem avaliação médica.</p><p>Se você estiver em sofrimento intenso agora, ligue <a href="tel:188">188</a> (CVV, gratuito, 24 horas). Em emergência, ligue <a href="tel:192">192</a> (SAMU).</p></div></details>
+      <details><summary><span class="q">Quanto tempo preciso por dia?</span><span class="faq-ic" aria-hidden="true"><svg class="i"><use href="#i-plus"/></svg></span></summary><div><p>O plano pede de 10 a 20 minutos por dia, durante 20 dias. O Método S.O.S. leva de 1 a 5 minutos e é para a hora do aperto.</p></div></details>
+      <details><summary><span class="q">E se eu perder um dia do plano?</span><span class="faq-ic" aria-hidden="true"><svg class="i"><use href="#i-plus"/></svg></span></summary><div><p>Sem problema: o plano é um guia, não uma prova. Retome de onde parou. O que conta é a constância, não a perfeição.</p></div></details>
+      <details><summary><span class="q">Em quanto tempo vou sentir diferença?</span><span class="faq-ic" aria-hidden="true"><svg class="i"><use href="#i-plus"/></svg></span></summary><div><p>Cada pessoa responde de um jeito, e o manual não promete resultados nem prazos. O Método S.O.S. é para usar na hora do aperto; o plano de 20 dias ajuda a criar o hábito de praticar.</p></div></details>
+      <details><summary><span class="q">Como eu recebo? Em quanto tempo?</span><span class="faq-ic" aria-hidden="true"><svg class="i"><use href="#i-plus"/></svg></span></summary><div><p>Logo após a confirmação do pagamento, você recebe por e-mail, enviado pela Hotmart, o acesso aos arquivos. Com Pix ou cartão, a liberação costuma ser imediata.</p></div></details>
+      <details><summary><span class="q">Consigo usar no celular? Preciso imprimir?</span><span class="faq-ic" aria-hidden="true"><svg class="i"><use href="#i-plus"/></svg></span></summary><div><p>O PDF abre no celular, no tablet ou no computador. Imprimir é opcional: as 7 fichas e o Diário S.O.S. podem ser impressos, se você preferir escrever à mão.</p></div></details>
+      <details><summary><span class="q">É assinatura? Vou ser cobrado de novo?</span><span class="faq-ic" aria-hidden="true"><svg class="i"><use href="#i-plus"/></svg></span></summary><div><p>Não. É um pagamento único, sem mensalidade.</p></div></details>
+      <details><summary><span class="q">É seguro comprar?</span><span class="faq-ic" aria-hidden="true"><svg class="i"><use href="#i-plus"/></svg></span></summary><div><p>Sim. A compra é feita no checkout da própria Hotmart, uma plataforma de produtos digitais, por Pix ou cartão. E você ainda tem 7 dias de garantia.</p></div></details>
+      <details><summary><span class="q">Como peço o reembolso?</span><span class="faq-ic" aria-hidden="true"><svg class="i"><use href="#i-plus"/></svg></span></summary><div><p>Em até 7 dias após a compra, peça pela própria Hotmart ou pelo nosso e-mail. Você recebe 100% do valor de volta, sem precisar justificar.</p></div></details>
+      <details><summary><span class="q">Não recebi o e-mail. E agora?</span><span class="faq-ic" aria-hidden="true"><svg class="i"><use href="#i-plus"/></svg></span></summary><div><p>Confira as pastas de spam, lixo eletrônico e “Promoções”. Se não encontrar, escreva para <a href="mailto:contato@seudominio.com.br" data-email-link><span data-email>contato@seudominio.com.br</span></a> que a gente ajuda.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- 14. CTA FINAL + AVISO -->
+<section class="sec fim">
+  <div class="wrap">
+    <div class="final on-dark">
+      <svg class="waves" aria-hidden="true"><use href="#w-ondas"/></svg>
+      <div class="final-art">
+        <!-- IMAGEM FUTURA: img/ilustra-calma.webp (1200×1600, 3:4) · ver PROMPTS-GOOGLE-FLOW.md #3
+             Quando o arquivo existir, troque a <div class="book"> abaixo por:
+        <img class="final-img" src="img/ilustra-calma.webp" alt="Ilustração: mulher sentada de olhos fechados, respirando com calma; linhas embaraçadas viram ondas suaves" width="1200" height="1600" loading="lazy" decoding="async">
+        -->
+        <div class="book"><img src="img/capa.webp" alt="Capa do Manual S.O.S. Ansiedade" width="800" height="1132" loading="lazy" decoding="async"></div>
+      </div>
+      <div class="final-txt">
+        <p class="kicker">Hora de começar</p>
+        <h2>Na próxima vez que a ansiedade apertar, tenha um plano.</h2>
+        <ul class="checks">
+          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Método S.O.S. para a hora da crise</li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Plano guiado de 20 dias, de 10 a 20 minutos por dia</li>
+          <li><svg class="i" aria-hidden="true"><use href="#i-check"/></svg>Fichas, diário e cartões para o celular</li>
+        </ul>
+        <a href="#oferta" class="btn lg" data-checkout>Quero o Manual S.O.S.<svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+        <p class="micro">R$&nbsp;<span data-preco>27,90</span> · <span class="nw">pagamento único</span> · <span class="nw">garantia de 7 dias</span></p>
+      </div>
+    </div>
+    <p class="disclaimer"><svg class="i" aria-hidden="true"><use href="#i-life"/></svg><span><strong>Aviso importante:</strong> este é um material educativo e não substitui acompanhamento psicológico ou médico. Se você estiver em sofrimento intenso ou pensando em se machucar, ligue <a href="tel:188">188</a> (CVV, gratuito, 24 horas) ou acesse <a href="https://cvv.org.br" target="_blank" rel="noopener">cvv.org.br</a>. Em emergência médica, ligue <a href="tel:192">192</a> (SAMU).</span></p>
   </div>
 </section>
 
 </main>
 
+<!-- 15. RODAPÉ -->
 <footer>
   <div class="wrap">
-    <div>© <span id="ano"></span> Manual S.O.S. Ansiedade. Todos os direitos reservados.</div>
-    <div><a href="politica-de-privacidade.html">Política de Privacidade</a><a href="termos-de-uso.html">Termos de Uso</a><a href="mailto:contato@seudominio.com.br">Contato</a></div>
+    <div class="foot">
+      <div>
+        <p class="foot-brand">Manual S.O.S. Ansiedade</p>
+        <p>Material educativo baseado na Terapia Cognitivo-Comportamental.</p>
+      </div>
+      <nav aria-label="Links do rodapé">
+        <a href="politica-de-privacidade.html">Política de Privacidade</a>
+        <a href="termos-de-uso.html">Termos de Uso</a>
+        <a href="mailto:contato@seudominio.com.br" data-email-link>Contato</a>
+      </nav>
+    </div>
+    <div class="foot-base">
+      <span>© <span id="ano">2026</span> Manual S.O.S. Ansiedade. Todos os direitos reservados.</span>
+      <span>Pagamentos processados pela Hotmart.</span>
+      <!-- IDENTIFICAÇÃO DO VENDEDOR (importante antes de anunciar; Decreto 7.962/2013). Preencha só com dados reais e apague as marcas de comentário:
+      <span>Vendido por [NOME OU RAZÃO SOCIAL] · CPF/CNPJ [NÚMERO]</span>
+      -->
+    </div>
+    <!-- Se for anunciar no Meta, pode colar aqui o aviso: "Este site não faz parte do site do Facebook ou da Meta Platforms, Inc." -->
   </div>
 </footer>
 
-<!-- Barra fixa no celular -->
+<!-- Barra fixa no celular: só o botão -->
 <div class="mbar" id="mbar">
   <a href="#oferta" class="btn" data-checkout>Quero o manual</a>
 </div>
+
+<!-- Ampliar páginas do manual -->
+<dialog class="zoom" id="zoom" aria-label="Página do manual ampliada">
+  <figure><img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" width="700" height="991"><figcaption><span class="zoom-cap"></span><span class="zoom-dica">Arraste para ver a página inteira</span></figcaption></figure>
+  <button type="button" class="zoom-x" aria-label="Fechar"><svg class="i" aria-hidden="true"><use href="#i-x"/></svg></button>
+</dialog>
 
 <script>
 (function(){
@@ -452,9 +1202,20 @@ h1,h2,h3{font-weight:600;letter-spacing:-.015em}
     document.querySelectorAll('[data-checkout]').forEach(function(a){ a.href = link; });
   }
   document.querySelectorAll('[data-preco]').forEach(function(s){ if(c.preco) s.textContent = c.preco; });
+  if (c.email) {
+    document.querySelectorAll('[data-email]').forEach(function(s){ s.textContent = c.email; });
+    document.querySelectorAll('[data-email-link]').forEach(function(a){ a.href = 'mailto:' + c.email; });
+  }
   document.getElementById('ano').textContent = new Date().getFullYear();
 
-  // animação de entrada
+  // faixa da garantia: tocar (ou Enter/Espaço) pausa/retoma
+  var aviso = document.getElementById('aviso');
+  aviso.addEventListener('click', function(){ aviso.classList.toggle('parado'); });
+  aviso.addEventListener('keydown', function(e){
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); aviso.classList.toggle('parado'); }
+  });
+
+  // animação de entrada (só cabeçalhos de seção)
   var els = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function(entries){
@@ -462,14 +1223,38 @@ h1,h2,h3{font-weight:600;letter-spacing:-.015em}
     }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
     els.forEach(function(el){ io.observe(el); });
   } else { els.forEach(function(el){ el.classList.add('in'); }); }
-  // barra fixa no celular: aparece depois do topo, some na oferta
-  var bar = document.getElementById('mbar'), hero = document.querySelector('.hero'), offer = document.getElementById('oferta');
-  function onScroll(){
-    var y = window.scrollY, h = hero.offsetHeight, o = offer.getBoundingClientRect();
-    var inOffer = o.top < window.innerHeight && o.bottom > 0;
-    bar.classList.toggle('show', y > h * .8 && !inOffer);
+
+  // ampliar páginas do manual
+  var dlg = document.getElementById('zoom');
+  if (dlg) {
+    var zImg = dlg.querySelector('img'), zCap = dlg.querySelector('.zoom-cap'), zFig = dlg.querySelector('figure'), ultimo = null;
+    document.querySelectorAll('[data-zoom]').forEach(function(b){
+      b.addEventListener('click', function(){
+        var src = b.getAttribute('data-zoom');
+        if (typeof dlg.showModal !== 'function') { window.open(src, '_blank'); return; }
+        ultimo = b;
+        zImg.src = src; zImg.alt = b.querySelector('img').alt;
+        zCap.textContent = b.getAttribute('data-cap') || '';
+        dlg.showModal();
+        zFig.scrollTop = 0; zFig.scrollLeft = 0;
+      });
+    });
+    dlg.querySelector('.zoom-x').addEventListener('click', function(){ dlg.close(); });
+    dlg.addEventListener('click', function(e){ if (e.target === dlg) dlg.close(); });
+    dlg.addEventListener('close', function(){ if (ultimo) ultimo.focus(); });
   }
-  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  // barra fixa no celular: aparece depois do topo, some na oferta (e no CTA final)
+  var bar = document.getElementById('mbar'), hero = document.querySelector('.hero'),
+      offer = document.getElementById('oferta'), fim = document.querySelector('.final');
+  function visivel(el){ if(!el) return false; var r = el.getBoundingClientRect(); return r.top < window.innerHeight && r.bottom > 0; }
+  function onScroll(){
+    var y = window.scrollY, h = hero.offsetTop + hero.offsetHeight;
+    bar.classList.toggle('show', y > h * .8 && !visivel(offer) && !visivel(fim));
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll);
+  onScroll();
 })();
 </script>
 </body>
