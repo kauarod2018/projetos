@@ -17,7 +17,7 @@
           "items": [
             "Book only on GOV.UK. The official fee is £23.",
             "Check the date, time and address of your test centre.",
-            "Plan your journey so you arrive early.",
+            "Plan your journey: you must arrive 15 minutes before your test starts.",
             "Do one full practice run of both parts.",
             "Read the traps on your maps one last time."
           ]
@@ -33,7 +33,12 @@
             "Without the right documents the test is cancelled and you lose the fee."
           ]
         },
-        { "type": "callout", "tone": "tip", "title": "At the centre", "text": "Expect to leave your phone and personal belongings in a locker before the test. Switch your phone off." }
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "At the centre",
+          "text": "Switch your phone off before you go in. Your belongings go in a locker (or a clear box if there are no lockers)."
+        }
       ]
     },
     {
@@ -42,10 +47,22 @@
         {
           "type": "stat-row",
           "items": [
-            { "value": "50", "label": "questions" },
-            { "value": "57", "label": "minutes" },
-            { "value": "43", "label": "correct to pass" },
-            { "value": "44/75", "label": "hazard perception" }
+            {
+              "value": "50",
+              "label": "questions"
+            },
+            {
+              "value": "57",
+              "label": "minutes"
+            },
+            {
+              "value": "43",
+              "label": "correct to pass"
+            },
+            {
+              "value": "44/75",
+              "label": "hazard perception"
+            }
           ]
         },
         {
@@ -65,7 +82,7 @@
           "title": "Part 2: hazard perception",
           "items": [
             "14 clips: click when a hazard starts to develop.",
-            "Wrong clicks don't cost points; clicking in a pattern scores zero for that clip.",
+            "Wrong clicks don't cost points; clicking continuously or in a pattern scores nothing.",
             "One clip has two developing hazards."
           ]
         },
@@ -74,7 +91,7 @@
           "title": "After the test",
           "items": [
             "You must pass both parts in the same test.",
-            "Passed: your certificate is valid for 2 years. Book your practical test before it runs out.",
+            "Passed: your certificate lasts 2 years. You must pass your practical test before it runs out.",
             "Failed: you take both parts again and have to wait at least 3 working days."
           ]
         }
@@ -82,7 +99,14 @@
     }
   ],
   "sources": [
-    { "doc": "GOV.UK", "ref": "Theory test: cars (what to take, multiple-choice questions, hazard perception, pass mark and result)", "url": "https://www.gov.uk/theory-test" }
+    {
+      "doc": "GOV.UK",
+      "ref": "Theory test: cars (what to take, multiple-choice questions, hazard perception, pass mark and result)",
+      "url": "https://www.gov.uk/theory-test"
+    }
   ],
-  "review": { "status": "draft", "notes": "Confirm on gov.uk: lockers, the 3-working-day wait and the fee before verifying." }
+  "review": {
+    "status": "draft",
+    "notes": "Confirm on gov.uk: lockers, the 3-working-day wait and the fee before verifying."
+  }
 }

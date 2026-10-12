@@ -40,8 +40,28 @@
     },
     {
       "doc": "GOV.UK",
-      "ref": "Drink-drive limit, MOT, penalty points, mobile phones, child car seats",
-      "url": "https://www.gov.uk"
+      "ref": "The drink drive limit",
+      "url": "https://www.gov.uk/drink-drive-limit"
+    },
+    {
+      "doc": "GOV.UK",
+      "ref": "Getting an MOT",
+      "url": "https://www.gov.uk/getting-an-mot"
+    },
+    {
+      "doc": "GOV.UK",
+      "ref": "Penalty points: new drivers",
+      "url": "https://www.gov.uk/penalty-points-endorsements/new-drivers"
+    },
+    {
+      "doc": "GOV.UK",
+      "ref": "Using mobile phones when driving: the law",
+      "url": "https://www.gov.uk/using-mobile-phones-when-driving-the-law"
+    },
+    {
+      "doc": "GOV.UK",
+      "ref": "Child car seats: the rules",
+      "url": "https://www.gov.uk/child-car-seats-the-rules"
     }
   ],
   "review": {

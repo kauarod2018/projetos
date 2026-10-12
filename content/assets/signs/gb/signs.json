@@ -114,7 +114,7 @@
     },
     {
       "id": "mini-roundabout",
-      "meaning": "Mini-roundabout (give way to traffic from the right)",
+      "meaning": "Mini-roundabout (give way to traffic from immediate right)",
       "category": "regulatory",
       "shape": "circle",
       "officialNumber": "611.1",
@@ -195,7 +195,7 @@
     },
     {
       "id": "elderly-crossing",
-      "meaning": "Elderly people (or blind or disabled as shown) crossing road",
+      "meaning": "Frail (or blind or disabled) pedestrians likely to cross",
       "category": "warning",
       "shape": "triangle",
       "officialNumber": "544.2",

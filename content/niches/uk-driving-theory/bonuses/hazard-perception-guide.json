@@ -10,14 +10,29 @@
     {
       "heading": "How the hazard perception test works",
       "blocks": [
-        { "type": "lead", "text": "The second part of the theory test is a video test. You watch clips filmed from a driver's point of view and click when you see a hazard developing. The earlier you click once it starts to develop, the more points you score." },
+        {
+          "type": "lead",
+          "text": "The second part of the theory test is a video test. You watch clips filmed from a driver's point of view and click when you see a hazard developing. The earlier you click once it starts to develop, the more points you score."
+        },
         {
           "type": "stat-row",
           "items": [
-            { "value": "14", "label": "video clips" },
-            { "value": "15", "label": "developing hazards to score" },
-            { "value": "5", "label": "points maximum per hazard" },
-            { "value": "44/75", "label": "to pass" }
+            {
+              "value": "14",
+              "label": "video clips"
+            },
+            {
+              "value": "15",
+              "label": "developing hazards to score"
+            },
+            {
+              "value": "5",
+              "label": "points maximum per hazard"
+            },
+            {
+              "value": "44/75",
+              "label": "to pass"
+            }
           ]
         },
         {
@@ -28,36 +43,73 @@
             "A developing hazard is something that would make you take action, like changing speed or direction.",
             "You score up to 5 points for each developing hazard: the sooner you click as it develops, the higher the score.",
             "You don't lose points for a click that turns out to be wrong.",
-            "Click continuously or in a pattern and you score nothing for that clip.",
+            "Click continuously or in a pattern and you won't score anything.",
             "You have to pass both parts, multiple choice and hazard perception, to pass the theory test."
           ]
         },
         {
           "type": "scoring-window",
           "title": "The scoring window",
-          "labels": { "before": "Too early: no points (but no penalty)", "start": "The hazard starts to develop", "end": "The window closes", "after": "Too late: 0 points" }
+          "labels": {
+            "before": "Too early: no points (but no penalty)",
+            "start": "The hazard starts to develop",
+            "end": "The window closes",
+            "after": "Too late: 0 points"
+          }
         }
       ]
     },
     {
       "heading": "Spot it early: where developing hazards come from",
       "blocks": [
-        { "type": "lead", "text": "Most hazards give you a clue before they develop. Train yourself to notice the clue, then click when it turns into something you would have to react to." },
+        {
+          "type": "lead",
+          "text": "Most hazards give you a clue before they develop. Train yourself to notice the clue, then click when it turns into something you would have to react to."
+        },
         {
           "type": "steps",
           "title": "Clue → click",
           "items": [
-            { "title": "Parked cars", "text": "Clue: a car with someone inside, wheels turned or lights on. Click when it starts to pull out or a door opens." },
-            { "title": "Pedestrians near the kerb", "text": "Clue: someone looking to cross, a child near a ball, a bus stop. Click when they step towards the road." },
-            { "title": "Junctions and side roads", "text": "Clue: a vehicle waiting to emerge. Click when it starts to move out into your path." },
-            { "title": "Cyclists and motorcyclists", "text": "Clue: a rider looking over their shoulder or a parked car ahead of them. Click when they move out." },
-            { "title": "Traffic ahead", "text": "Clue: brake lights, a queue, a bus at a stop. Click when the vehicle ahead slows or pulls out." },
-            { "title": "Bends, hills and blind spots", "text": "Clue: you can't see far ahead. Click when something appears that makes you slow down." },
-            { "title": "Weather and darkness", "text": "Clue: rain, fog, low sun or night. Hazards appear later, so stay ready to click." },
-            { "title": "Horses and animals", "text": "Clue: a rider or animals near the road. Click when you need to slow down or give them room." }
+            {
+              "title": "Parked cars",
+              "text": "Clue: a car with someone inside, wheels turned or lights on. Click when it starts to pull out or a door opens."
+            },
+            {
+              "title": "Pedestrians near the kerb",
+              "text": "Clue: someone looking to cross, a child near a ball, a bus stop. Click when they step towards the road."
+            },
+            {
+              "title": "Junctions and side roads",
+              "text": "Clue: a vehicle waiting to emerge. Click when it starts to move out into your path."
+            },
+            {
+              "title": "Cyclists and motorcyclists",
+              "text": "Clue: a rider looking over their shoulder or a parked car ahead of them. Click when they move out."
+            },
+            {
+              "title": "Traffic ahead",
+              "text": "Clue: brake lights, a queue, a bus at a stop. Click when the vehicle ahead slows or pulls out."
+            },
+            {
+              "title": "Bends, hills and blind spots",
+              "text": "Clue: you can't see far ahead. Click when something appears that makes you slow down."
+            },
+            {
+              "title": "Weather and darkness",
+              "text": "Clue: rain, fog, low sun or night. Hazards appear later, so stay ready to click."
+            },
+            {
+              "title": "Horses and animals",
+              "text": "Clue: a rider or animals near the road. Click when you need to slow down or give them room."
+            }
           ]
         },
-        { "type": "callout", "tone": "tip", "title": "Potential vs developing", "text": "A parked car is a potential hazard: nothing to react to yet. It becomes a developing hazard when it starts to pull out. Clicking on the potential hazard won't cost you points, but make sure you click again as it develops." }
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Potential vs developing",
+          "text": "A parked car is a potential hazard: nothing to react to yet. It becomes a developing hazard when it starts to pull out. Clicking on the potential hazard won't cost you points, but make sure you click again as it develops."
+        }
       ]
     },
     {
@@ -79,7 +131,7 @@
           "span": 1,
           "title": "Don't",
           "items": [
-            "Don't click continuously or in a steady rhythm: that clip scores zero.",
+            "Don't click continuously or in a steady rhythm: you won't score anything.",
             "Don't wait until the hazard is right in front of you: late clicks score less or nothing.",
             "Don't panic after a wrong click: it doesn't cost you points.",
             "Don't rush in on the first clue: a potential hazard alone isn't the developing one."
@@ -95,12 +147,24 @@
             "Do one full practice run of both parts of the test in one sitting."
           ]
         },
-        { "type": "callout", "tone": "warning", "title": "Remember", "text": "Hazard perception is a skill you build by watching clips. This guide explains the scoring and what to look for; pair it with practice clips before your test." }
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "Remember",
+          "text": "Hazard perception is a skill you build by watching clips. This guide explains the scoring and what to look for; pair it with practice clips before your test."
+        }
       ]
     }
   ],
   "sources": [
-    { "doc": "GOV.UK", "ref": "Theory test: hazard perception test", "url": "https://www.gov.uk/theory-test/hazard-perception-test" }
+    {
+      "doc": "GOV.UK",
+      "ref": "Theory test: hazard perception test",
+      "url": "https://www.gov.uk/theory-test/hazard-perception-test"
+    }
   ],
-  "review": { "status": "draft", "notes": "14 clips, 15 hazards, 5 points, 44/75, no penalty for wrong clicks and zero for pattern clicking confirmed in search results of gov.uk; read the live page before verifying." }
+  "review": {
+    "status": "draft",
+    "notes": "14 clips, 15 hazards, 5 points, 44/75, no penalty for wrong clicks and zero for pattern clicking confirmed in search results of gov.uk; read the live page before verifying."
+  }
 }
