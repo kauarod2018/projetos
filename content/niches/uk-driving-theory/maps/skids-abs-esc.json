@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "skids-abs-esc",
+  "niche": "uk-driving-theory",
+  "area": "safety-margins",
+  "order": 8,
+  "tier": "complete",
+  "officialTopics": [
+    "vehicle-handling",
+    "safety-margins"
+  ],
+  "title": "Skids, ABS & ESC",
+  "whatItIs": "A skid happens when the tyres lose grip. ABS and ESC help you keep control, but they can't change the laws of physics.",
+  "keyFacts": [
+    "Skids are usually caused by harsh braking, accelerating or steering, or by going too fast for the conditions.",
+    "If the rear of the car skids to the right, steer smoothly to the right to recover.",
+    "In a skid, ease off the brake and accelerator. Braking hard makes it worse.",
+    "With ABS, brake firmly in an emergency and keep your foot down: you can still steer.",
+    "ABS may not shorten your stopping distance, especially on loose or wet surfaces."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Skids and safety systems",
+    "columns": 2,
+    "items": [
+      {
+        "title": "Rear skid",
+        "text": "Ease off the pedals and steer smoothly the same way as the skid.",
+        "icon": "rotate-cw"
+      },
+      {
+        "title": "ABS",
+        "text": "Stops the wheels locking when you brake hard, so you can still steer.",
+        "icon": "octagon-pause"
+      },
+      {
+        "title": "ESC",
+        "text": "Brakes single wheels to keep the car stable on bends and in swerves.",
+        "icon": "activity"
+      },
+      {
+        "title": "Speed still matters",
+        "text": "No system can stop a car that is going too fast for the road.",
+        "icon": "gauge"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "ABS",
+      "points": [
+        "Works when you brake hard",
+        "Lets you steer while braking"
+      ]
+    },
+    "b": {
+      "label": "ESC",
+      "points": [
+        "Works when the car starts to slide",
+        "Helps keep it pointing the right way"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "The rear of your car skids to the right. What should you do?",
+      "options": [
+        "Steer to the right",
+        "Steer to the left",
+        "Brake hard",
+        "Pull the handbrake"
+      ],
+      "answerIndex": 0,
+      "why": "Ease off the pedals and steer smoothly in the same direction as the skid: rear goes right, steer right."
+    }
+  ],
+  "traps": [
+    "ABS isn't a reason to drive closer or faster.",
+    "With ABS, keep pressing firmly even if the pedal judders.",
+    "Braking hard in a skid makes it worse."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 119 and 120 (Skids and ABS)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft",
+    "notes": "ESC is not covered by the Highway Code rules cited; the ESC lines are general vehicle-handling knowledge. Confirm wording against DVSA learning material."
+  }
+}

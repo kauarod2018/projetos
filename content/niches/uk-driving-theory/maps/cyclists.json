@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "id": "cyclists",
+  "niche": "uk-driving-theory",
+  "area": "hazards-and-vulnerable",
+  "order": 7,
+  "tier": "basic",
+  "officialTopics": [
+    "vulnerable-road-users"
+  ],
+  "title": "Cyclists: Passing, Lanes & the Dutch Reach",
+  "whatItIs": "Cyclists are easy to miss and badly hurt in a crash. Give them space, look for them, and open your door with care.",
+  "keyFacts": [
+    "When passing a cyclist, leave at least 1.5 metres at speeds up to 30 mph, and more at higher speeds.",
+    "If you can't leave that much space, wait behind until you can.",
+    "Don't cut across cyclists going straight ahead when you turn or change lane.",
+    "Cyclists may ride in the middle of the lane on quiet roads, in slow traffic and at junctions, so they can be seen.",
+    "Open your car door with the hand furthest from it (the \"Dutch reach\"), so you turn and look for cyclists."
+  ],
+  "visual": {
+    "type": "stats",
+    "caption": "Three things to remember",
+    "items": [
+      {
+        "value": "1.5 m",
+        "label": "Minimum gap at up to 30 mph",
+        "note": "Leave more space at higher speeds"
+      },
+      {
+        "value": "2 abreast",
+        "label": "Cyclists may ride side by side",
+        "note": "Often safer in groups; overtake when you can pass both"
+      },
+      {
+        "value": "Far hand",
+        "label": "The Dutch reach: open your door with it",
+        "note": "It makes you turn and look behind"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Cyclist in the middle of the lane",
+      "points": [
+        "Makes them easier to see",
+        "Normal on quiet roads and at junctions"
+      ]
+    },
+    "b": {
+      "label": "Cyclist near the kerb",
+      "points": [
+        "Common in faster traffic",
+        "Still leave at least 1.5 m"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You are passing a cyclist on a 30 mph road. What is the minimum space you should leave?",
+      "options": [
+        "1.5 metres",
+        "0.5 metres",
+        "1 metre",
+        "3 metres"
+      ],
+      "answerIndex": 0,
+      "why": "Leave at least 1.5 metres at speeds up to 30 mph, and more when you are going faster."
+    }
+  ],
+  "traps": [
+    "1.5 m is the minimum up to 30 mph, not the gap for every speed.",
+    "Riding two abreast is allowed: don't squeeze past.",
+    "At an advanced stop line, stop at the first white line and leave the cyclists' box clear."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 163, 212 and 213 (Overtaking cyclists)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 239 (Opening doors)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule H3",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

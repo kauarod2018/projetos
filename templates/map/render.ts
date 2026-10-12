@@ -8,6 +8,7 @@ import type { KeyFact } from '../../schemas/map.ts';
 import { fontFaceCss } from '../shared/fonts.ts';
 import { esc, fill, formatDate, pad2 } from '../shared/html.ts';
 import { renderBarScale, renderSignGrid, renderTable } from '../visuals/basic.ts';
+import { renderCards, renderLights, renderMarkings, renderStats, renderSteps } from '../visuals/extra.ts';
 import { renderRoundabout } from '../visuals/roundabout.ts';
 
 const HERE = import.meta.dirname;
@@ -55,8 +56,18 @@ export function renderMapPage(n: LoadedNiche, m: LoadedMap, site: Site): string 
     visualBody = renderBarScale(barData(n, m)!, t);
   } else if (v.type === 'road-diagram') {
     visualBody = renderRoundabout(v, n.niche.drivingSide, t, area.colour);
-  } else {
+  } else if (v.type === 'table') {
     visualBody = renderTable(tableDataOf(n, m)!);
+  } else if (v.type === 'cards') {
+    visualBody = renderCards(v, t.map.law);
+  } else if (v.type === 'steps') {
+    visualBody = renderSteps(v);
+  } else if (v.type === 'stats') {
+    visualBody = renderStats(v);
+  } else if (v.type === 'markings') {
+    visualBody = renderMarkings(v, t.map.law);
+  } else {
+    visualBody = renderLights(v);
   }
 
   const questions = d.onTheTest

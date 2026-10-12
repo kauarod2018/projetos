@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "id": "motorcyclists",
+  "niche": "uk-driving-theory",
+  "area": "hazards-and-vulnerable",
+  "order": 8,
+  "tier": "complete",
+  "officialTopics": [
+    "vulnerable-road-users"
+  ],
+  "title": "Motorcyclists",
+  "whatItIs": "Motorcyclists are small, fast and easy to miss, especially at junctions. Look twice and give them room.",
+  "keyFacts": [
+    "Motorcyclists are hard to see at junctions, at roundabouts and when filtering: look carefully.",
+    "They may filter between lanes of slow or stopped traffic: check your mirrors before you change lane.",
+    "A rider looking over their shoulder may be about to turn or change lane: give them time.",
+    "Riders may swerve suddenly to avoid potholes, drain covers or slippery patches.",
+    "In strong wind, keep well back from motorcyclists overtaking large vehicles."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Look out for motorcyclists",
+    "columns": 2,
+    "items": [
+      {
+        "title": "At junctions",
+        "text": "They may be closer and faster than you think. Look twice.",
+        "icon": "git-fork"
+      },
+      {
+        "title": "Filtering",
+        "text": "Bikes may pass between lanes of slow traffic. Check mirrors.",
+        "icon": "columns-2"
+      },
+      {
+        "title": "Shoulder checks",
+        "text": "A rider looking back may be about to move. Give them space.",
+        "icon": "eye"
+      },
+      {
+        "title": "Bad road surfaces",
+        "text": "Potholes and drain covers can make a rider swerve.",
+        "icon": "construction"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Rider looks over shoulder",
+      "points": [
+        "About to move or turn",
+        "Give them time and space"
+      ]
+    },
+    "b": {
+      "label": "Indicator flashing",
+      "points": [
+        "May have been left on",
+        "Wait to see what they do"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Why should you look carefully for motorcyclists at junctions?",
+      "options": [
+        "They are hard to see and may be faster than you think",
+        "They always have priority",
+        "They must stop at every junction",
+        "They are not allowed to filter"
+      ],
+      "answerIndex": 0,
+      "why": "Motorcycles are small and easy to miss. They may be closer and faster than you expect, so look carefully before you pull out."
+    }
+  ],
+  "traps": [
+    "A window pillar can hide a whole motorcycle: move your head and look again.",
+    "Filtering motorcyclists can pass on either side.",
+    "A rider may swerve for a drain cover or pothole: leave room."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 211 to 213 (Motorcyclists and cyclists)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

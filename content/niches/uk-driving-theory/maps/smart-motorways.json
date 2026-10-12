@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "smart-motorways",
+  "niche": "uk-driving-theory",
+  "area": "motorways",
+  "order": 5,
+  "tier": "complete",
+  "officialTopics": [
+    "motorway-rules"
+  ],
+  "title": "Smart Motorways & Emergency Areas",
+  "whatItIs": "Smart motorways use variable speed limits and may use the hard shoulder as a lane. Some have no hard shoulder at all.",
+  "keyFacts": [
+    "On some smart motorways there is no hard shoulder: in an emergency, go to an emergency area.",
+    "Emergency areas have an orange surface and a blue sign with an orange SOS phone.",
+    "A hard shoulder has a solid white line. Use it as a lane only when a speed limit shows above it.",
+    {
+      "text": "Never drive in a lane closed by a red X.",
+      "law": true
+    },
+    "If you stop in a live lane, put hazard lights on, stay belted in and call 999 if you can't get out safely."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "On a smart motorway",
+    "columns": 2,
+    "items": [
+      {
+        "title": "Emergency areas",
+        "text": "Orange surface, blue sign with an orange SOS phone. Use one if you have a problem.",
+        "swatch": "#F97316"
+      },
+      {
+        "title": "Solid white line",
+        "text": "A hard shoulder. Use it only when a speed limit shows above it.",
+        "icon": "minus"
+      },
+      {
+        "title": "Variable speed limits",
+        "text": "Speeds shown in a red ring over the lanes are the law.",
+        "icon": "gauge",
+        "law": true
+      },
+      {
+        "title": "Stuck in a live lane",
+        "text": "Hazard lights on, seat belt on, call 999 if it isn't safe to get out.",
+        "icon": "phone"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Solid white line",
+      "points": [
+        "A hard shoulder",
+        "Use it only if a limit shows above it"
+      ]
+    },
+    "b": {
+      "label": "Broken white line",
+      "points": [
+        "A normal running lane",
+        "Use it like any other lane"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You break down on a smart motorway with no hard shoulder. Where should you try to stop?",
+      "options": [
+        "In an emergency area",
+        "In the right-hand lane",
+        "Under the next overhead gantry",
+        "On the central reservation"
+      ],
+      "answerIndex": 0,
+      "why": "Try to reach an emergency area or leave at the next exit. If you can't, move as far left as you can and put your hazard lights on."
+    }
+  ],
+  "traps": [
+    "No speed limit over the hard shoulder means it isn't open as a lane.",
+    "Emergency areas are for emergencies, not for a rest.",
+    "Stuck in a live lane and can't get out safely? Stay belted in and call 999."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 253 to 274 (Motorways)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "GOV.UK",
+      "ref": "How to drive on a smart motorway",
+      "url": "https://www.gov.uk/guidance/how-to-drive-on-a-smart-motorway"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

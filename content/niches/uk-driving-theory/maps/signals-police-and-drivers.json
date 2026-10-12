@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "id": "signals-police-and-drivers",
+  "niche": "uk-driving-theory",
+  "area": "signs",
+  "order": 10,
+  "tier": "complete",
+  "officialTopics": [
+    "road-and-traffic-signs"
+  ],
+  "title": "Signals by Police, Officials & Other Drivers",
+  "whatItIs": "Signals from the police, other officials and other road users tell you what they are about to do, or what you must do.",
+  "keyFacts": [
+    {
+      "text": "You MUST obey signals from the police, traffic officers and school crossing patrols.",
+      "law": true
+    },
+    {
+      "text": "If the police signal you to stop (blue lights, headlights, left indicator), you MUST pull over and stop when safe.",
+      "law": true
+    },
+    "Flashing headlights should only mean 'I'm here'. Never treat it as a signal to go.",
+    {
+      "text": "You MUST NOT use your horn while stationary, or between 11.30 pm and 7 am in a built-up area, unless there is danger.",
+      "law": true
+    },
+    "Hazard lights: when stopped and blocking traffic, or briefly on a motorway or dual carriageway to warn of danger ahead."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Signals you need to know",
+    "columns": 2,
+    "items": [
+      {
+        "icon": "hand",
+        "title": "Arm signals (right arm)",
+        "text": "Straight out: turning right. Circling: turning left. Moving up and down: slowing down."
+      },
+      {
+        "icon": "siren",
+        "title": "Police asking you to stop",
+        "text": "Headlights flashing, indicator on and pointing left. Pull over safely.",
+        "law": true
+      },
+      {
+        "icon": "lightbulb",
+        "title": "Flashing headlights",
+        "text": "Only means 'I'm here'. Make your own decision."
+      },
+      {
+        "icon": "megaphone",
+        "title": "Horn",
+        "text": "Only to warn others you're there, and only while moving."
+      },
+      {
+        "icon": "triangle-alert",
+        "title": "Hazard warning lights",
+        "text": "When stopped and causing an obstruction. Never as an excuse to park."
+      },
+      {
+        "icon": "school",
+        "title": "School crossing patrol",
+        "text": "When the patrol shows the 'Stop' sign, you MUST stop.",
+        "law": true
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Flashing headlights",
+      "points": [
+        "Should only mean 'I'm here'",
+        "Never assume it means 'go'"
+      ]
+    },
+    "b": {
+      "label": "Police signal to stop",
+      "points": [
+        "Headlights, indicator, pointing left",
+        "Pull over as soon as it's safe"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Another driver flashes their headlights at you at a junction. What should you do?",
+      "options": [
+        "Pull out straight away",
+        "Make your own decision about when it is safe",
+        "Flash your headlights back",
+        "Sound your horn and go"
+      ],
+      "answerIndex": 1,
+      "why": "Flashing headlights should only mean 'I'm here'. Don't take it as an invitation: check for yourself that it's safe."
+    }
+  ],
+  "traps": [
+    "Flashing headlights is not a signal to go.",
+    "Arm signals are given with the right arm: circling it means you are turning left.",
+    "Hazard lights don't make it OK to park where you shouldn't."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 103 to 116 (Signals and lighting)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Signals by authorised persons",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

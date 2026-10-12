@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "id": "signs-prohibition",
+  "niche": "uk-driving-theory",
+  "area": "signs",
+  "order": 4,
+  "tier": "basic",
+  "officialTopics": [
+    "road-and-traffic-signs"
+  ],
+  "title": "Prohibition Signs (Red Circles)",
+  "whatItIs": "Signs with a red ring tell you what you must not do, such as entering, turning or driving faster than a limit.",
+  "keyFacts": [
+    "Red rings mostly prohibit: the vehicle or action shown is not allowed.",
+    "A number in a red ring is the maximum speed.",
+    "The white circle with a black diagonal stripe means the national speed limit applies.",
+    "'No entry' (red circle, white bar) usually marks the exit end of a one-way street.",
+    "A plate below can limit a sign to certain times or vehicles."
+  ],
+  "visual": {
+    "type": "sign-grid",
+    "caption": "Signs giving orders: red rings",
+    "signs": [
+      "no-entry",
+      "no-vehicles",
+      "no-motor-vehicles",
+      "no-right-turn",
+      "no-left-turn",
+      "no-u-turns",
+      "no-overtaking",
+      "no-cycling",
+      "maximum-speed",
+      "national-speed-limit"
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "No entry",
+      "points": [
+        "Red circle with a white bar",
+        "No vehicles may enter"
+      ]
+    },
+    "b": {
+      "label": "No vehicles",
+      "points": [
+        "White circle with a red ring",
+        "Except bicycles being pushed"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "What does a white circle with a black diagonal stripe mean?",
+      "options": [
+        "End of all restrictions",
+        "National speed limit applies",
+        "No stopping at any time",
+        "Minimum speed ends"
+      ],
+      "answerIndex": 1,
+      "why": "It's the national speed limit sign. The limit depends on the road and your vehicle: 60 mph for a car on a single carriageway, for example."
+    }
+  ],
+  "traps": [
+    "The national speed limit sign doesn't mean 70 mph everywhere: check the road and vehicle type.",
+    "No entry and no vehicles look alike: one has a white bar, the other is an empty red ring.",
+    "Some red-ring signs only apply at certain times: read the plate."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Traffic signs: signs giving orders",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "Know Your Traffic Signs (DfT)",
+      "ref": "Regulatory signs",
+      "url": "https://assets.publishing.service.gov.uk/media/655dca78046ed4000d8b9de7/know-your-traffic-signs-dft.pdf"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

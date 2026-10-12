@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "eco-safe-driving",
+  "niche": "uk-driving-theory",
+  "area": "vehicle-docs-incidents",
+  "order": 2,
+  "tier": "complete",
+  "officialTopics": [
+    "safety-and-your-vehicle"
+  ],
+  "title": "Eco-Safe Driving & the Environment",
+  "whatItIs": "Eco-safe driving means smooth, planned driving. It saves fuel, cuts pollution and is usually safer too.",
+  "keyFacts": [
+    "Plan ahead so you can avoid harsh braking and sudden acceleration.",
+    "Change up a gear early: lower engine speed uses less fuel.",
+    {
+      "text": "You MUST NOT leave your engine running unnecessarily while stopped on a public road.",
+      "law": true
+    },
+    "Take off roof racks and boxes when you don't need them: they add drag.",
+    "Under-inflated tyres and extra weight make the car use more fuel.",
+    "For short trips, think about walking, cycling or public transport."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Simple ways to save fuel",
+    "columns": 2,
+    "items": [
+      {
+        "title": "Look well ahead",
+        "text": "Ease off early instead of braking hard at the last moment.",
+        "icon": "eye"
+      },
+      {
+        "title": "Smooth and steady",
+        "text": "Gentle acceleration and a steady speed use the least fuel.",
+        "icon": "gauge"
+      },
+      {
+        "title": "Engine off when parked",
+        "text": "Don't leave it running unnecessarily while stationary on a public road.",
+        "icon": "power",
+        "law": true
+      },
+      {
+        "title": "Travel light",
+        "text": "Remove roof boxes and unneeded weight. Keep tyres inflated.",
+        "icon": "package"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Eco-safe driving",
+      "points": [
+        "Plan ahead, ease off early",
+        "Engine braking in gear"
+      ]
+    },
+    "b": {
+      "label": "Coasting",
+      "points": [
+        "Rolling in neutral",
+        "Less control, not eco-safe"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "How can you reduce your fuel consumption?",
+      "options": [
+        "Plan ahead and avoid harsh braking",
+        "Accelerate hard to reach your cruising speed",
+        "Keep the engine running when parked",
+        "Stay in lower gears for longer"
+      ],
+      "answerIndex": 0,
+      "why": "Planning ahead lets you ease off early instead of braking hard, which saves fuel and is safer."
+    }
+  ],
+  "traps": [
+    "Coasting in neutral isn't eco-safe: you lose control and engine braking.",
+    "Leaving the engine running while parked can be an offence, not just a waste.",
+    "A roof box left on when empty still costs you fuel."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 123 (The driver and the environment)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "id": "markings-along-the-road",
+  "niche": "uk-driving-theory",
+  "area": "signs",
+  "order": 7,
+  "tier": "basic",
+  "officialTopics": [
+    "road-and-traffic-signs"
+  ],
+  "title": "Road Markings Along the Road",
+  "whatItIs": "White lines along the road divide traffic and warn of hazards. When the lines get longer and the gaps shorter, there is a hazard ahead.",
+  "keyFacts": [
+    "A broken white line marks the centre of the road.",
+    "Longer lines with shorter gaps warn of a hazard: don't cross unless you can see the road is clear.",
+    {
+      "text": "Where the line nearest you is solid, you MUST NOT cross or straddle it, except in the cases allowed.",
+      "law": true
+    },
+    "You may cross it to pass a stationary vehicle, or to overtake a cyclist, horse or works vehicle at 10 mph or less.",
+    "Where the line nearest you is broken, you may cross to overtake if it's safe and you can finish in time."
+  ],
+  "visual": {
+    "type": "markings",
+    "caption": "You drive from left to right in the upper lane",
+    "items": [
+      {
+        "pattern": "centre-line",
+        "label": "Centre line",
+        "meaning": "Short lines, long gaps: marks the middle of the road."
+      },
+      {
+        "pattern": "hazard-line",
+        "label": "Hazard warning line",
+        "meaning": "Long lines, short gaps: hazard ahead."
+      },
+      {
+        "pattern": "double-solid-near",
+        "label": "Solid line nearest you",
+        "meaning": "You MUST NOT cross or straddle it, with a few exceptions.",
+        "law": true
+      },
+      {
+        "pattern": "double-broken-near",
+        "label": "Broken line nearest you",
+        "meaning": "You may cross to overtake if it's safe to do so."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Solid line nearest you",
+      "points": [
+        "You MUST NOT cross or straddle it",
+        "A few exceptions apply"
+      ]
+    },
+    "b": {
+      "label": "Broken line nearest you",
+      "points": [
+        "You may cross to overtake",
+        "Only if safe and you can finish in time"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "There are double white lines and the one nearest you is solid. When may you cross it?",
+      "options": [
+        "To overtake a slow lorry",
+        "To pass a stationary vehicle",
+        "When the road ahead looks clear",
+        "Never, in any situation"
+      ],
+      "answerIndex": 1,
+      "why": "The exceptions include passing a stationary vehicle, turning into a side road or property, and overtaking a cyclist, horse or works vehicle at 10 mph or less."
+    }
+  ],
+  "traps": [
+    "'Never' is wrong: the solid line has exceptions, such as passing a stationary vehicle.",
+    "The 10 mph exception is for cyclists, horses and road maintenance vehicles, not slow cars or lorries.",
+    "A hazard warning line isn't a ban, but don't overtake unless the road is clearly safe."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 127 to 132 (Lines and lane markings)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "Know Your Traffic Signs (DfT)",
+      "ref": "Road markings",
+      "url": "https://assets.publishing.service.gov.uk/media/655dca78046ed4000d8b9de7/know-your-traffic-signs-dft.pdf"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

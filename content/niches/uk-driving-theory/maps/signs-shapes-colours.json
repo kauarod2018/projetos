@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "id": "signs-shapes-colours",
+  "niche": "uk-driving-theory",
+  "area": "signs",
+  "order": 1,
+  "tier": "basic",
+  "officialTopics": [
+    "road-and-traffic-signs"
+  ],
+  "title": "How to Read Any Sign: Shapes & Colours",
+  "whatItIs": "UK road signs follow a simple system: the shape tells you what job the sign does, and the colour tells you more about it.",
+  "keyFacts": [
+    "Circles give orders, triangles warn and rectangles mostly give information.",
+    "Red circles mostly tell you what you must not do; blue circles mostly tell you what you must do.",
+    "STOP (octagon) and GIVE WAY (upside-down triangle) have their own shapes so they stand out.",
+    "Direction signs are colour-coded: blue for motorways, green for primary routes, white for other roads.",
+    "A plate below a sign adds to or limits its message, for example times or distances."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Read the shape first, then the colour",
+    "columns": 3,
+    "items": [
+      {
+        "icon": "circle",
+        "title": "Circle = order",
+        "text": "Tells you what you must or must not do."
+      },
+      {
+        "icon": "triangle",
+        "title": "Triangle = warning",
+        "text": "Tells you about a hazard ahead."
+      },
+      {
+        "icon": "rectangle-horizontal",
+        "title": "Rectangle = information",
+        "text": "Directions, places and facilities."
+      },
+      {
+        "swatch": "#DC2626",
+        "title": "Red ring = prohibition",
+        "text": "Mostly tells you what you must not do."
+      },
+      {
+        "swatch": "#1D4ED8",
+        "title": "Blue circle = positive order",
+        "text": "Mostly tells you what you must do, like 'turn left'."
+      },
+      {
+        "icon": "octagon",
+        "title": "STOP and GIVE WAY",
+        "text": "Unique shapes so you recognise them at once."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Blue circle",
+      "points": [
+        "An order: you must do it",
+        "For example: ahead only, turn left"
+      ]
+    },
+    "b": {
+      "label": "Blue rectangle",
+      "points": [
+        "Information, not an order",
+        "For example: one-way traffic, motorway signs"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "What does a circular sign with a red border usually tell you?",
+      "options": [
+        "Something you must not do",
+        "Something you must do",
+        "A hazard ahead",
+        "Directions to a place"
+      ],
+      "answerIndex": 0,
+      "why": "Red rings mostly prohibit. Blue circles give positive orders, triangles warn and rectangles inform."
+    }
+  ],
+  "traps": [
+    "A blue rectangle is information; a blue circle is an order.",
+    "The upside-down triangle is GIVE WAY: an order, not a warning.",
+    "Plates under a sign change or limit what it means, such as times or distances."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Traffic signs",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "Know Your Traffic Signs (DfT)",
+      "ref": "The signing system",
+      "url": "https://assets.publishing.service.gov.uk/media/655dca78046ed4000d8b9de7/know-your-traffic-signs-dft.pdf"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

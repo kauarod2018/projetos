@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "id": "traffic-lights",
+  "niche": "uk-driving-theory",
+  "area": "signs",
+  "order": 9,
+  "tier": "basic",
+  "officialTopics": [
+    "road-and-traffic-signs"
+  ],
+  "title": "Traffic Lights & Filter Arrows",
+  "whatItIs": "Traffic lights follow the same sequence everywhere: red, red and amber, green, amber, then red again.",
+  "keyFacts": [
+    {
+      "text": "Red: you MUST stop behind the white stop line.",
+      "law": true
+    },
+    "Red and amber: stop, and don't go until green shows.",
+    "Green: you may go if the way is clear and there is room for you to clear the junction.",
+    "Amber: stop, unless you've already crossed the line or stopping might cause a collision.",
+    "A green filter arrow lets you go in that direction, even if the main green light isn't showing.",
+    {
+      "text": "At an advanced stop line, you MUST stop at the first white line when the light is amber or red.",
+      "law": true
+    }
+  ],
+  "visual": {
+    "type": "light-sequence",
+    "caption": "The sequence, in order",
+    "items": [
+      {
+        "lamps": [
+          "red"
+        ],
+        "label": "Red",
+        "meaning": "Stop behind the white line."
+      },
+      {
+        "lamps": [
+          "red",
+          "amber"
+        ],
+        "label": "Red and amber",
+        "meaning": "Stop: don't go yet."
+      },
+      {
+        "lamps": [
+          "green"
+        ],
+        "label": "Green",
+        "meaning": "Go if the way is clear."
+      },
+      {
+        "lamps": [
+          "amber"
+        ],
+        "label": "Amber",
+        "meaning": "Stop, unless it is unsafe to do so."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Red and amber",
+      "points": [
+        "Comes after red",
+        "Still means stop: green is next"
+      ]
+    },
+    "b": {
+      "label": "Amber alone",
+      "points": [
+        "Comes after green",
+        "Means stop: red is next"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "The traffic lights show red and amber together. What should you do?",
+      "options": [
+        "Go if the junction is clear",
+        "Stop and wait for green",
+        "Speed up before it turns red",
+        "Go only if you are turning left"
+      ],
+      "answerIndex": 1,
+      "why": "Red and amber means stop. Don't move off until the green light shows."
+    }
+  ],
+  "traps": [
+    "Red and amber is not 'get ready to go': it still means stop.",
+    "A green light doesn't give you priority over people already crossing.",
+    "Don't move forward on green if you can't clear the junction."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 175 to 178 (Traffic lights)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "Know Your Traffic Signs (DfT)",
+      "ref": "Traffic signals",
+      "url": "https://assets.publishing.service.gov.uk/media/655dca78046ed4000d8b9de7/know-your-traffic-signs-dft.pdf"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

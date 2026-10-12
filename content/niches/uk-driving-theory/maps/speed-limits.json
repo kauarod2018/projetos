@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "id": "speed-limits",
+  "niche": "uk-driving-theory",
+  "area": "rules-of-the-road",
+  "order": 1,
+  "tier": "basic",
+  "officialTopics": [
+    "rules-of-the-road"
+  ],
+  "title": "Speed Limits",
+  "whatItIs": "The speed limit is the most you may drive on that road, not a target. The national limits depend on the type of road and your vehicle.",
+  "keyFacts": [
+    {
+      "text": "You MUST NOT drive faster than the speed limit for the road and for your vehicle.",
+      "law": true
+    },
+    "Roads with street lights are usually 30 mph, unless signs show a different limit.",
+    "A white circle with a black diagonal stripe means the national speed limit applies.",
+    "Drive slower when conditions call for it: rain, fog, ice, darkness or lots of pedestrians."
+  ],
+  "visual": {
+    "type": "table",
+    "caption": "National speed limits in mph (signs can set a lower limit)",
+    "numbersKey": "speed-limits"
+  },
+  "confused": {
+    "a": {
+      "label": "National speed limit sign",
+      "points": [
+        "Single carriageway: 60 mph for cars",
+        "Dual carriageway: 70 mph for cars"
+      ]
+    },
+    "b": {
+      "label": "A number in a red ring",
+      "points": [
+        "That exact limit applies",
+        "Until another sign changes it"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You see the national speed limit sign on a single carriageway. What is the limit for a car?",
+      "options": [
+        "60 mph",
+        "50 mph",
+        "70 mph",
+        "40 mph"
+      ],
+      "answerIndex": 0,
+      "why": "On a single carriageway the national limit for cars is 60 mph. It is 70 mph on dual carriageways and motorways."
+    }
+  ],
+  "traps": [
+    "The national speed limit sign doesn't mean 70 mph everywhere: it depends on the road and the vehicle.",
+    "A limit is a maximum. In bad weather the safe speed can be much lower."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 124 (Speed limits)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 125 (Speed limits are a maximum)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft",
+    "notes": "The Welsh 20 mph default is shown as a note under the table (from numbers.json), so it is not repeated as a jurisdiction note."
+  }
+}

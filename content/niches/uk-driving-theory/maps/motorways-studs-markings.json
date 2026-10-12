@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "id": "motorways-studs-markings",
+  "niche": "uk-driving-theory",
+  "area": "motorways",
+  "order": 6,
+  "tier": "complete",
+  "officialTopics": [
+    "motorway-rules",
+    "road-and-traffic-signs"
+  ],
+  "title": "Reflective Studs & Motorway Markings",
+  "whatItIs": "Reflective studs light up in your headlights and show where the lanes and edges are, even at night or in fog.",
+  "keyFacts": [
+    "Driving on the left: red studs are on your left, amber studs on your right.",
+    "Green studs mark where a slip road or lay-by joins or leaves the motorway.",
+    "Green and yellow studs show temporary layouts, such as roadworks.",
+    "The hard shoulder is marked with a solid white line.",
+    {
+      "text": "You MUST NOT enter chevrons bordered by a solid white line, except in an emergency.",
+      "law": true
+    }
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Reflective studs on a motorway",
+    "columns": 3,
+    "items": [
+      {
+        "title": "Red",
+        "text": "The left edge of the carriageway, next to the hard shoulder.",
+        "swatch": "#DC2626"
+      },
+      {
+        "title": "Amber",
+        "text": "The right edge, next to the central reservation.",
+        "swatch": "#F59E0B"
+      },
+      {
+        "title": "White",
+        "text": "Between the lanes (or the middle of an ordinary road).",
+        "swatch": "#F8FAFC"
+      },
+      {
+        "title": "Green",
+        "text": "Where a slip road or lay-by joins or leaves.",
+        "swatch": "#16A34A"
+      },
+      {
+        "title": "Green and yellow",
+        "text": "Temporary layouts, such as roadworks and contraflows.",
+        "swatch": "#A3E635"
+      },
+      {
+        "title": "Chevrons",
+        "text": "Hatched areas edged with a solid line: you MUST NOT enter unless it's an emergency.",
+        "icon": "chevron-down",
+        "law": true
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Red studs",
+      "points": [
+        "Left edge",
+        "Next to the hard shoulder"
+      ]
+    },
+    "b": {
+      "label": "Amber studs",
+      "points": [
+        "Right edge",
+        "Next to the central reservation"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "On a motorway, what colour are the studs between the left-hand lane and the hard shoulder?",
+      "options": [
+        "Red",
+        "Amber",
+        "Green",
+        "White"
+      ],
+      "answerIndex": 0,
+      "why": "Red studs mark the left edge of the carriageway. Amber studs mark the right edge, by the central reservation."
+    }
+  ],
+  "traps": [
+    "Amber is on the right, by the central reservation, not the left.",
+    "Green studs don't mean \"go\": they mark slip roads and lay-bys.",
+    "Green and yellow studs are temporary: expect roadworks."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 132 (Reflective road studs)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 253 to 274 (Motorways)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

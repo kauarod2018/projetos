@@ -671,3 +671,291 @@
   color: var(--ink-2);
   margin-top: 0.6mm;
 }
+
+/* a short table has room to breathe: larger text on a white card */
+.visual .tb.short {
+  font-size: 10.5pt;
+  background: #fff;
+  border-radius: 2.4mm;
+  overflow: hidden;
+}
+
+.visual .tb.short th {
+  font-size: 8.5pt;
+  padding: 3mm 3mm 2.4mm;
+}
+
+.visual .tb.short td {
+  padding: 3mm;
+}
+
+.visual .tb.short td:first-child {
+  font-weight: 700;
+}
+
+.visual .tb.short tr:last-child td {
+  border-bottom: 0;
+}
+
+/* cards, steps, stats, lights and markings fill the visual block: rows grow up to a cap, the rest is centred */
+.cds,
+.sts,
+.sx,
+.ls,
+.mk {
+  flex: 1 1 auto;
+  min-height: 0;
+  align-content: center;
+}
+
+/* cards */
+.cds {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 1fr);
+  grid-auto-rows: minmax(min-content, 44mm);
+  gap: 3mm 3.4mm;
+}
+
+.cd {
+  display: flex;
+  gap: 3mm;
+  align-items: center;
+  background: #fff;
+  border-radius: 2.4mm;
+  padding: 3.4mm 4mm;
+}
+
+.cd-icon {
+  flex: none;
+  width: 10mm;
+  height: 10mm;
+  border-radius: 2.4mm;
+  display: grid;
+  place-items: center;
+  background: var(--area-soft);
+  color: var(--area);
+  border: 1px solid color-mix(in srgb, var(--area) 20%, white);
+}
+
+.cd-icon svg {
+  width: 5.6mm;
+  height: 5.6mm;
+}
+
+.cd-swatch {
+  flex: none;
+  width: 10mm;
+  height: 10mm;
+  border-radius: 2.4mm;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+}
+
+.cd h3 {
+  font-size: 11.5pt;
+  font-weight: 700;
+  font-stretch: 94%;
+  line-height: 1.15;
+  margin-bottom: 1mm;
+}
+
+.cd h3 .law-badge,
+.mk-item h3 .law-badge {
+  font-size: 8pt;
+  vertical-align: 0.15em;
+  margin-left: 1mm;
+}
+
+.cd p {
+  font-size: 10pt;
+  line-height: 1.3;
+  color: var(--ink-2);
+}
+
+/* steps */
+.sts {
+  display: grid;
+  grid-template-columns: repeat(var(--cols), 1fr);
+  grid-auto-rows: minmax(min-content, 52mm);
+  gap: 3.4mm 5mm;
+}
+
+.st {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: #fff;
+  border-radius: 2.4mm;
+  padding: 3.4mm 4mm;
+}
+
+.st-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2mm;
+}
+
+.st-num {
+  width: 8mm;
+  height: 8mm;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: var(--area);
+  color: #fff;
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 12pt;
+}
+
+.st-arrow {
+  color: var(--area-mid);
+  margin-right: -7.4mm;
+}
+
+.st-arrow svg {
+  width: 5mm;
+  height: 5mm;
+}
+
+.st h3 {
+  font-size: 11.5pt;
+  font-weight: 700;
+  font-stretch: 94%;
+  line-height: 1.15;
+  margin-bottom: 1mm;
+}
+
+.st p {
+  font-size: 10pt;
+  line-height: 1.3;
+  color: var(--ink-2);
+}
+
+/* stats */
+.sx {
+  display: grid;
+  grid-template-columns: repeat(var(--n), 1fr);
+  grid-auto-rows: minmax(min-content, 50mm);
+  gap: 3.4mm;
+}
+
+.sx-item {
+  background: #fff;
+  border-radius: 2.4mm;
+  padding: 7mm 5mm 5mm;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1.2mm;
+}
+
+.sx-item b {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-stretch: 88%;
+  font-size: 34pt;
+  line-height: 1;
+  margin-bottom: 1.5mm;
+  color: var(--area-deep);
+}
+
+.sx.long .sx-item b {
+  font-size: 25pt;
+}
+
+.sx-item span {
+  font-size: 11pt;
+  font-weight: 700;
+}
+
+.sx-item small {
+  font-size: 9.5pt;
+  line-height: 1.3;
+  color: var(--ink-2);
+}
+
+/* traffic lights */
+.ls {
+  display: grid;
+  grid-template-columns: repeat(var(--n), 1fr);
+  grid-auto-rows: minmax(min-content, 76mm);
+  gap: 3.4mm;
+}
+
+.ls-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  gap: 3mm;
+  background: #fff;
+  border-radius: 2.4mm;
+  padding: 4mm 3mm;
+}
+
+.ls-item svg {
+  width: 15mm;
+  height: auto;
+}
+
+.ls-step {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 9pt;
+  color: var(--area-deep);
+}
+
+.ls-item h3 {
+  font-size: 12pt;
+  font-weight: 700;
+  margin: 0.6mm 0 1mm;
+}
+
+.ls-item p {
+  font-size: 10pt;
+  line-height: 1.3;
+  color: var(--ink-2);
+}
+
+/* road markings */
+.mk {
+  display: grid;
+  grid-template-columns: repeat(var(--cols, 2), 1fr);
+  grid-auto-rows: minmax(min-content, 40mm);
+  gap: 3mm 3.4mm;
+}
+
+.mk-item {
+  display: grid;
+  grid-template-columns: var(--mk-w, 44mm) 1fr;
+  gap: 3.4mm;
+  align-items: center;
+  background: #fff;
+  border-radius: 2.4mm;
+  padding: 3mm 3.4mm;
+}
+
+.mk[style*='--cols:1'] {
+  --mk-w: 62mm;
+}
+
+.mk-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.mk-item h3 {
+  font-size: 11pt;
+  font-weight: 700;
+  line-height: 1.15;
+  margin-bottom: 1mm;
+}
+
+.mk-item p {
+  font-size: 9.5pt;
+  line-height: 1.3;
+  color: var(--ink-2);
+}

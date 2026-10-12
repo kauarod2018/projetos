@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "id": "level-crossings-and-trams",
+  "niche": "uk-driving-theory",
+  "area": "rules-of-the-road",
+  "order": 13,
+  "tier": "complete",
+  "officialTopics": [
+    "rules-of-the-road",
+    "other-types-of-vehicle"
+  ],
+  "title": "Level Crossings & Tramways",
+  "whatItIs": "At level crossings trains always have priority. Trams run on fixed rails, so they can't steer round you.",
+  "keyFacts": [
+    {
+      "text": "You MUST obey the flashing red lights at a level crossing and stop.",
+      "law": true
+    },
+    {
+      "text": "If the lights keep flashing after a train has passed, you MUST wait: another train is coming.",
+      "law": true
+    },
+    "Never stop on a level crossing. In queues, keep the crossing clear.",
+    "Broken down on a crossing? Get everyone out and clear first, then phone the signal operator.",
+    {
+      "text": "You MUST NOT enter a road, lane or route reserved for trams.",
+      "law": true
+    },
+    "Trams can be quiet and can't steer round you: never stop on the tracks."
+  ],
+  "visual": {
+    "type": "steps",
+    "caption": "At a crossing with lights and barriers",
+    "items": [
+      {
+        "title": "Amber light and alarm",
+        "text": "Stop, unless you have already crossed the stop line."
+      },
+      {
+        "title": "Flashing red lights",
+        "text": "You MUST stop and wait behind the white line."
+      },
+      {
+        "title": "Barriers come down",
+        "text": "Never zigzag round them or move onto the crossing."
+      },
+      {
+        "title": "Train passes",
+        "text": "Lights still flashing? Another train is coming: keep waiting."
+      },
+      {
+        "title": "Lights off, barriers up",
+        "text": "Cross when the way is clear, without stopping on it."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Steady amber",
+      "points": [
+        "Comes first",
+        "Stop unless you've crossed the line"
+      ]
+    },
+    "b": {
+      "label": "Flashing red",
+      "points": [
+        "A train is coming",
+        "You MUST stop"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "At a level crossing, the red lights keep flashing after a train has passed. What should you do?",
+      "options": [
+        "Wait, because another train is coming",
+        "Drive across carefully",
+        "Go round the barriers",
+        "Phone the signal operator"
+      ],
+      "answerIndex": 0,
+      "why": "If the lights keep flashing after a train passes, another train is coming. Wait until the lights go off and the barriers rise."
+    }
+  ],
+  "traps": [
+    "Never zigzag round half-barriers.",
+    "Broken down on the crossing: people out first, then phone.",
+    "A tram can't swerve: keep off tram tracks when you stop."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 291 to 299 (Level crossings)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 300 to 307 (Tramways)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

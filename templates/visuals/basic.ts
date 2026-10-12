@@ -80,7 +80,8 @@ function shapeOutline(shape: Sign['shape']): string {
 
 export function renderTable(data: TableData): string {
   const notes = data.notes.length ? `<ul class="tb-notes">${data.notes.map((n) => `<li>${esc(n)}</li>`).join('')}</ul>` : '';
-  return `<table class="tb"><thead><tr>${data.columns.map((c) => `<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>${data.rows
+  // short tables get more room on a map page (see .visual .tb.short in map.css)
+  return `<table class="tb${data.rows.length <= 6 ? ' short' : ''}"><thead><tr>${data.columns.map((c) => `<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>${data.rows
     .map((r) => `<tr>${r.map((c) => `<td>${esc(c)}</td>`).join('')}</tr>`)
     .join('')}</tbody></table>${notes}`;
 }

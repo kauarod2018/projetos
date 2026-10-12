@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "id": "bus-tram-cycle-lanes",
+  "niche": "uk-driving-theory",
+  "area": "signs",
+  "order": 11,
+  "tier": "complete",
+  "officialTopics": [
+    "road-and-traffic-signs"
+  ],
+  "title": "Bus, Tram & Cycle Lanes",
+  "whatItIs": "Lanes kept for buses, trams or cycles, shown by signs and road markings. Some apply only at certain times.",
+  "keyFacts": [
+    "Bus lanes are marked by a thick white line and signs showing which vehicles may use them and when.",
+    "Don't drive in a bus lane during its times of operation unless the sign allows your vehicle.",
+    {
+      "text": "You MUST NOT drive or park in a cycle lane marked by a solid white line during its times of operation.",
+      "law": true
+    },
+    "Don't drive or park in a cycle lane marked by a broken white line unless it's unavoidable.",
+    {
+      "text": "You MUST NOT enter a road, lane or route reserved for trams.",
+      "law": true
+    }
+  ],
+  "visual": {
+    "type": "markings",
+    "caption": "Lanes reserved for some road users",
+    "items": [
+      {
+        "pattern": "bus-lane",
+        "label": "Bus lane",
+        "meaning": "Thick white line. Check the sign for times and who may use it."
+      },
+      {
+        "pattern": "cycle-lane-solid",
+        "label": "Mandatory cycle lane",
+        "meaning": "Solid line: you MUST NOT drive or park in it during its times.",
+        "law": true
+      },
+      {
+        "pattern": "cycle-lane-broken",
+        "label": "Advisory cycle lane",
+        "meaning": "Broken line: don't drive or park in it unless unavoidable."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Solid cycle lane line",
+      "points": [
+        "Mandatory cycle lane",
+        "MUST NOT drive or park in it"
+      ]
+    },
+    "b": {
+      "label": "Broken cycle lane line",
+      "points": [
+        "Advisory cycle lane",
+        "Avoid it unless unavoidable"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "A bus lane sign shows no times. When is the bus lane in operation?",
+      "options": [
+        "Only in the rush hours",
+        "24 hours a day",
+        "Only on weekdays",
+        "Only during school terms"
+      ],
+      "answerIndex": 1,
+      "why": "If no times are shown, the bus lane is in operation all day, every day."
+    }
+  ],
+  "traps": [
+    "No times on a bus lane sign means it operates 24 hours a day.",
+    "Some bus lanes also allow taxis or cycles: the sign shows which.",
+    "Don't stop on tram tracks: a tram can't steer around you."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 140 to 142 (Cycle and bus lanes)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 300 to 307 (Tramways)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "Know Your Traffic Signs (DfT)",
+      "ref": "Bus and cycle lanes",
+      "url": "https://assets.publishing.service.gov.uk/media/655dca78046ed4000d8b9de7/know-your-traffic-signs-dft.pdf"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft",
+    "notes": "Confirm the 24-hour rule for bus lanes without times in Know Your Traffic Signs."
+  }
+}

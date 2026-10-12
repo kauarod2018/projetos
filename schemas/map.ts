@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { jurisdiction, review, slug, sourceRef } from './common.ts';
+import { hexColour, jurisdiction, review, slug, sourceRef } from './common.ts';
 
 /** Text limits keep every map on one A4 page. The build also checks for overflow. */
 export const LIMITS = {
@@ -103,7 +103,76 @@ const table = z
     message: 'table needs exactly one of "data" or "numbersKey"',
   });
 
-export const visual = z.discriminatedUnion('type', [signGrid, barScale, roadDiagram, table]);
+const cards = z.object({
+  type: z.literal('cards'),
+  caption: z.string().min(1).max(LIMITS.caption),
+  columns: z.union([z.literal(2), z.literal(3), z.literal(4)]).default(2),
+  items: z
+    .array(
+      z.object({
+        /** lucide icon, or a colour swatch (e.g. the colour of a sign background or a road stud) */
+        icon: slug.optional(),
+        swatch: hexColour.optional(),
+        title: z.string().min(1).max(44),
+        text: z.string().min(1).max(120),
+        law: z.boolean().default(false),
+      }),
+    )
+    .min(2)
+    .max(9),
+});
+
+const steps = z.object({
+  type: z.literal('steps'),
+  caption: z.string().min(1).max(LIMITS.caption),
+  items: z.array(z.object({ title: z.string().min(1).max(40), text: z.string().min(1).max(110) })).min(2).max(6),
+});
+
+const stats = z.object({
+  type: z.literal('stats'),
+  caption: z.string().min(1).max(LIMITS.caption),
+  items: z.array(z.object({ value: z.string().min(1).max(14), label: z.string().min(1).max(50), note: z.string().max(90).optional() })).min(2).max(4),
+});
+
+/** schematic road markings: drawn line patterns, not sign images */
+export const MARKING_PATTERNS = [
+  'centre-line',
+  'hazard-line',
+  'double-solid',
+  'double-solid-near',
+  'double-broken-near',
+  'give-way',
+  'stop-line',
+  'single-yellow',
+  'double-yellow',
+  'kerb-single',
+  'kerb-double',
+  'zigzag',
+  'box-junction',
+  'cycle-lane-solid',
+  'cycle-lane-broken',
+  'bus-lane',
+] as const;
+
+const markings = z.object({
+  type: z.literal('markings'),
+  caption: z.string().min(1).max(LIMITS.caption),
+  items: z
+    .array(z.object({ pattern: z.enum(MARKING_PATTERNS), label: z.string().min(1).max(40), meaning: z.string().min(1).max(110), law: z.boolean().default(false) }))
+    .min(2)
+    .max(6),
+});
+
+const lightSequence = z.object({
+  type: z.literal('light-sequence'),
+  caption: z.string().min(1).max(LIMITS.caption),
+  items: z
+    .array(z.object({ lamps: z.array(z.enum(['red', 'amber', 'green'])).min(1).max(2), label: z.string().min(1).max(24), meaning: z.string().min(1).max(90) }))
+    .min(2)
+    .max(5),
+});
+
+export const visual = z.discriminatedUnion('type', [signGrid, barScale, roadDiagram, table, cards, steps, stats, markings, lightSequence]);
 export type Visual = z.infer<typeof visual>;
 
 const confusedSide = z.object({

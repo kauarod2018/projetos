@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "id": "signs-mandatory-vs-information",
+  "niche": "uk-driving-theory",
+  "area": "signs",
+  "order": 5,
+  "tier": "complete",
+  "officialTopics": [
+    "road-and-traffic-signs"
+  ],
+  "title": "Mandatory Signs vs Information Signs",
+  "whatItIs": "Blue circles give positive orders you must follow; blue rectangles give information, such as one-way streets.",
+  "keyFacts": [
+    "Blue circles with no red border mostly tell you what you must do.",
+    "Ahead only, turn left and keep left are orders, not suggestions.",
+    "A blue rectangle with an arrow means one-way traffic: it is information about the road.",
+    "The mini-roundabout sign is a blue circle: give way to traffic from your right.",
+    "Some blue circles show who may use a route, such as pedal cycles only."
+  ],
+  "visual": {
+    "type": "sign-grid",
+    "caption": "Blue circles (orders) and blue rectangles (information)",
+    "signs": [
+      "ahead-only",
+      "turn-left-ahead",
+      "keep-left",
+      "mini-roundabout",
+      "pedal-cycles-only",
+      "one-way-traffic",
+      "no-through-road"
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Ahead only (blue circle)",
+      "points": [
+        "An order for you",
+        "You must go straight on"
+      ]
+    },
+    "b": {
+      "label": "One-way traffic (rectangle)",
+      "points": [
+        "Information about the road",
+        "All traffic goes one way"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "What does a blue circle with a white arrow pointing left mean?",
+      "options": [
+        "Turn left ahead",
+        "No left turn",
+        "Left lane closes ahead",
+        "Cycle route on the left"
+      ],
+      "answerIndex": 0,
+      "why": "Blue circles give orders: the arrow is the direction you must take. 'No left turn' is a red ring."
+    }
+  ],
+  "traps": [
+    "Blue isn't always information: a blue circle is an order, a blue rectangle is information.",
+    "The mini-roundabout sign is a blue circle, not a warning triangle.",
+    "Keep left means pass on the left of the sign, usually at an island or bollard."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Traffic signs: signs giving orders",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "Know Your Traffic Signs (DfT)",
+      "ref": "Regulatory signs",
+      "url": "https://assets.publishing.service.gov.uk/media/655dca78046ed4000d8b9de7/know-your-traffic-signs-dft.pdf"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

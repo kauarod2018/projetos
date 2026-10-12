@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "id": "overtaking",
+  "niche": "uk-driving-theory",
+  "area": "rules-of-the-road",
+  "order": 8,
+  "tier": "complete",
+  "officialTopics": [
+    "rules-of-the-road",
+    "attitude"
+  ],
+  "title": "Overtaking: When and When Not",
+  "whatItIs": "Overtaking is one of the riskiest things you can do. Only do it when you can see it is safe and you don't need to.",
+  "keyFacts": [
+    "Before you overtake, make sure the road ahead is clear far enough and nobody is overtaking you.",
+    "Overtake on the right. Move back in when it is safe, without cutting in.",
+    "You may pass on the left when the vehicle in front is turning right and there is room.",
+    "When someone overtakes you, keep a steady speed or slow down. Never speed up.",
+    "If a queue builds up behind you, pull in where it is safe and let them pass."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Don't overtake here",
+    "columns": 3,
+    "items": [
+      {
+        "title": "Bends and hill brows",
+        "text": "Anywhere you can't see far enough ahead to be sure it is safe.",
+        "icon": "mountain"
+      },
+      {
+        "title": "At or near junctions",
+        "text": "A vehicle may pull out or turn across your path.",
+        "icon": "git-fork"
+      },
+      {
+        "title": "Near a pedestrian crossing",
+        "text": "You MUST NOT overtake the moving vehicle nearest the crossing, or one stopped for pedestrians.",
+        "icon": "footprints",
+        "law": true
+      },
+      {
+        "title": "Solid white line nearest you",
+        "text": "You MUST NOT cross or straddle it, except in a few cases.",
+        "icon": "minus",
+        "law": true
+      },
+      {
+        "title": "School crossing patrols",
+        "text": "Approaching a patrol, or where children may cross.",
+        "icon": "school"
+      },
+      {
+        "title": "Level crossings",
+        "text": "Never overtake on the approach to a level crossing.",
+        "icon": "train-front"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Passing on the left: OK",
+      "points": [
+        "Vehicle ahead is turning right",
+        "Queues where your lane is faster"
+      ]
+    },
+    "b": {
+      "label": "Passing on the left: no",
+      "points": [
+        "To get past a slow driver",
+        "Moving left on a motorway to overtake"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Another vehicle is overtaking you. What should you do?",
+      "options": [
+        "Keep a steady speed, or slow down",
+        "Speed up to stop them passing",
+        "Move towards the middle of the road",
+        "Brake hard to let them in"
+      ],
+      "answerIndex": 0,
+      "why": "Keep a steady speed and slow down if needed to let them back in safely. Speeding up puts everyone at risk."
+    }
+  ],
+  "traps": [
+    "A broken centre line doesn't make it safe near junctions, bends or hill brows.",
+    "A vehicle signalling right may be about to turn: never pass it on the right.",
+    "Being overtaken? Speeding up is dangerous and aggressive."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 162 to 169 (Overtaking)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

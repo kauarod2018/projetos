@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "motorways-breakdowns",
+  "niche": "uk-driving-theory",
+  "area": "motorways",
+  "order": 7,
+  "tier": "complete",
+  "officialTopics": [
+    "motorway-rules",
+    "incidents-accidents-and-emergencies"
+  ],
+  "title": "Breaking Down on a Motorway",
+  "whatItIs": "Breaking down on a motorway is dangerous because traffic passes very close and fast. Get yourself and your passengers away from it.",
+  "keyFacts": [
+    "Never put a warning triangle on a motorway.",
+    "Don't try even simple repairs on the hard shoulder.",
+    "Marker posts on the hard shoulder show the direction of the nearest emergency phone.",
+    "If you have a disability that stops you leaving the car, stay in it with hazard lights on and call for help.",
+    "To rejoin, build up speed on the hard shoulder and move out only when there is a safe gap."
+  ],
+  "visual": {
+    "type": "steps",
+    "caption": "If you break down (with a hard shoulder)",
+    "items": [
+      {
+        "title": "Pull over",
+        "text": "Get onto the hard shoulder and stop as far left as you can."
+      },
+      {
+        "title": "Lights on",
+        "text": "Hazard lights on. Sidelights too at night or in poor visibility."
+      },
+      {
+        "title": "Get out on the left",
+        "text": "Everyone out by the left-hand doors, away from the traffic."
+      },
+      {
+        "title": "Wait behind the barrier",
+        "text": "Keep well away from the traffic and the hard shoulder."
+      },
+      {
+        "title": "Call for help",
+        "text": "Use an emergency phone or your mobile and say where you are."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Ordinary road",
+      "points": [
+        "Warning triangle 45 m behind",
+        "If it is safe to place it"
+      ]
+    },
+    "b": {
+      "label": "Motorway",
+      "points": [
+        "No warning triangle",
+        "Wait behind the barrier"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You break down on a motorway and stop on the hard shoulder. Where should you and your passengers wait?",
+      "options": [
+        "Behind the barrier, away from the traffic",
+        "In the car with seat belts on",
+        "On the hard shoulder behind the car",
+        "In front of the car to warn traffic"
+      ],
+      "answerIndex": 0,
+      "why": "Get out by the left-hand doors and wait well away from the traffic, behind the barrier if there is one."
+    }
+  ],
+  "traps": [
+    "No warning triangles on a motorway.",
+    "Leave the car by the left-hand doors, away from the traffic.",
+    "On a smart motorway with no hard shoulder, aim for an emergency area instead."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 275 to 278 (Breakdowns)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 253 to 274 (Motorways)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

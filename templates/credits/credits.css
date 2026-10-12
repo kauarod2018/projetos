@@ -55,6 +55,49 @@
   font-weight: 700;
 }
 
+.cr-stats {
+  margin-top: 12mm;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4mm;
+}
+
+.cr-stat {
+  background: var(--soft);
+  border-radius: var(--radius);
+  padding: 5mm 5mm 4.5mm;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5mm;
+}
+
+.cr-stat b {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-stretch: 88%;
+  font-size: 34pt;
+  line-height: 1;
+}
+
+.cr-stat span {
+  font-size: 9.5pt;
+  color: var(--ink-2);
+  line-height: 1.3;
+}
+
+/* the lane line from the maps, once in each area colour */
+.cr-lane {
+  display: flex;
+  gap: 5mm;
+  margin-top: 9mm;
+}
+
+.cr-lane span {
+  flex: 1;
+  height: 2px;
+  background: repeating-linear-gradient(90deg, var(--area) 0 9mm, transparent 9mm 14mm);
+}
+
 .cr h2 {
   font-size: 8.5pt;
   font-weight: 700;
@@ -71,18 +114,43 @@
   gap: 9mm;
 }
 
-.cr-contents {
+.cr-toc-title {
+  font-size: 10pt !important;
+  margin-bottom: 5mm !important;
+}
+
+.cr-toc {
+  columns: 2;
+  column-gap: 9mm;
+}
+
+.cr-toc-area {
+  break-inside: avoid;
+  margin-bottom: 6mm;
+}
+
+.cr-toc-area h3 {
+  display: flex;
+  align-items: center;
+  gap: 2mm;
+  font-size: 10pt;
+  font-weight: 700;
+  margin-bottom: 1.6mm;
+  padding-bottom: 1.6mm;
+  border-bottom: 2px solid var(--area);
+}
+
+.cr-toc-area h3 .icon {
+  color: var(--area);
+}
+
+.cr-toc-area ol {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.cr-contents.two-col {
-  columns: 2;
-  column-gap: 5mm;
-}
-
-.cr-contents li {
+.cr-toc-area li {
   break-inside: avoid;
   display: flex;
   gap: 2mm;
@@ -104,7 +172,7 @@
 }
 
 .cr-how {
-  margin-bottom: 6mm;
+  margin-bottom: 0;
 }
 
 .cr-how li {

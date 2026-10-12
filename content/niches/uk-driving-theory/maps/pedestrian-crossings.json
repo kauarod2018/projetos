@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "id": "pedestrian-crossings",
+  "niche": "uk-driving-theory",
+  "area": "rules-of-the-road",
+  "order": 7,
+  "tier": "complete",
+  "officialTopics": [
+    "rules-of-the-road",
+    "vulnerable-road-users"
+  ],
+  "title": "Pedestrian Crossings",
+  "whatItIs": "Each type of crossing works a little differently. Know who uses it and what the lights mean for you.",
+  "keyFacts": [
+    {
+      "text": "You MUST NOT park on a crossing or on its zigzag lines.",
+      "law": true
+    },
+    {
+      "text": "On the zigzags you MUST NOT overtake the moving vehicle nearest the crossing, or one that has stopped for pedestrians.",
+      "law": true
+    },
+    "At a zebra, give way to people waiting to cross. You MUST give way once they are on the crossing.",
+    {
+      "text": "Flashing amber at a pelican: you MUST give way to anyone on the crossing, then go if it is clear.",
+      "law": true
+    },
+    "Don't wave people across or sound your horn to hurry them: another vehicle may not stop.",
+    "In queuing traffic, keep the crossing clear."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Know your crossings",
+    "columns": 3,
+    "items": [
+      {
+        "title": "Zebra",
+        "text": "Black and white stripes and flashing amber beacons. No lights for traffic.",
+        "icon": "footprints"
+      },
+      {
+        "title": "Pelican",
+        "text": "Push-button lights. Has a flashing amber phase after the red.",
+        "icon": "hand"
+      },
+      {
+        "title": "Puffin",
+        "text": "Sensors watch the crossing. No flashing amber: normal light sequence.",
+        "icon": "scan-eye"
+      },
+      {
+        "title": "Toucan",
+        "text": "Pedestrians and cyclists cross together. No flashing amber.",
+        "icon": "bike"
+      },
+      {
+        "title": "Equestrian",
+        "text": "For horse riders, with higher push buttons. Often next to a toucan.",
+        "icon": "signpost"
+      },
+      {
+        "title": "Parallel",
+        "text": "A zebra with a cycle crossing beside it. Give way to both.",
+        "icon": "git-merge"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Pelican",
+      "points": [
+        "Has flashing amber",
+        "Signals on the far side of the road"
+      ]
+    },
+    "b": {
+      "label": "Puffin",
+      "points": [
+        "No flashing amber",
+        "Sensors adjust the timing"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "The amber light is flashing at a pelican crossing. What must you do?",
+      "options": [
+        "Give way to anyone still on the crossing",
+        "Stop and wait for the green light",
+        "Drive on, because you have priority",
+        "Sound your horn and drive on"
+      ],
+      "answerIndex": 0,
+      "why": "Flashing amber means pedestrians on the crossing still have priority. Go on only when the crossing is clear."
+    }
+  ],
+  "traps": [
+    "Only pelican crossings have a flashing amber phase.",
+    "Waving someone across can lead them into the path of another vehicle.",
+    "Toucan crossings are shared with cyclists: expect bikes as well as people."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 191 to 199 (Pedestrian crossings)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 18 to 30 (Crossings, for pedestrians)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

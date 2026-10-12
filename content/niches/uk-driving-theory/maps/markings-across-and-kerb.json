@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "id": "markings-across-and-kerb",
+  "niche": "uk-driving-theory",
+  "area": "signs",
+  "order": 8,
+  "tier": "complete",
+  "officialTopics": [
+    "road-and-traffic-signs"
+  ],
+  "title": "Road Markings Across the Road & at the Kerb",
+  "whatItIs": "Lines across the road show where to stop or give way; yellow lines and kerb marks show where you cannot wait or load.",
+  "keyFacts": [
+    {
+      "text": "A double broken white line across your lane means you MUST give way to traffic on the major road.",
+      "law": true
+    },
+    {
+      "text": "At a STOP sign you MUST stop behind the solid white line.",
+      "law": true
+    },
+    {
+      "text": "You MUST NOT enter a box junction until your exit road or lane is clear.",
+      "law": true
+    },
+    "Double yellow lines: no waiting at any time. Single yellow: no waiting at the times shown on nearby plates.",
+    "Yellow marks on the kerb restrict loading: one mark at the times shown, two marks at any time."
+  ],
+  "visual": {
+    "type": "markings",
+    "caption": "Lines across the road and at the edge",
+    "items": [
+      {
+        "pattern": "give-way",
+        "label": "Give way line",
+        "meaning": "Give way to traffic on the road you're joining.",
+        "law": true
+      },
+      {
+        "pattern": "stop-line",
+        "label": "Stop line",
+        "meaning": "Used with a STOP sign: you MUST stop behind it.",
+        "law": true
+      },
+      {
+        "pattern": "box-junction",
+        "label": "Box junction",
+        "meaning": "Don't enter until your exit is clear.",
+        "law": true
+      },
+      {
+        "pattern": "single-yellow",
+        "label": "Single yellow line",
+        "meaning": "No waiting at the times shown on the plate."
+      },
+      {
+        "pattern": "double-yellow",
+        "label": "Double yellow lines",
+        "meaning": "No waiting at any time."
+      },
+      {
+        "pattern": "kerb-double",
+        "label": "Two yellow kerb marks",
+        "meaning": "No loading or unloading at any time."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Yellow lines on the road",
+      "points": [
+        "Control waiting",
+        "Single: times shown. Double: any time"
+      ]
+    },
+    "b": {
+      "label": "Yellow marks on the kerb",
+      "points": [
+        "Control loading",
+        "One mark: times shown. Two: any time"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "When may you wait inside a yellow box junction?",
+      "options": [
+        "When your exit is blocked by queuing traffic",
+        "When turning right and only oncoming traffic stops you",
+        "Whenever the traffic lights are red",
+        "Never, under any circumstances"
+      ],
+      "answerIndex": 1,
+      "why": "You must not enter until your exit is clear, but you may wait in the box when turning right if only oncoming traffic or other right-turners are holding you up."
+    }
+  ],
+  "traps": [
+    "Kerb marks control loading; yellow lines control waiting.",
+    "A give way line doesn't always mean stop: stop only if you need to.",
+    "'Never' is wrong for box junctions: turning right is the exception."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 170 to 183 (Road junctions)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 238 to 252 (Waiting and parking)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "Know Your Traffic Signs (DfT)",
+      "ref": "Road markings",
+      "url": "https://assets.publishing.service.gov.uk/media/655dca78046ed4000d8b9de7/know-your-traffic-signs-dft.pdf"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "id": "pedestrians",
+  "niche": "uk-driving-theory",
+  "area": "hazards-and-vulnerable",
+  "order": 6,
+  "tier": "basic",
+  "officialTopics": [
+    "vulnerable-road-users"
+  ],
+  "title": "Pedestrians: Children, Older & Disabled People",
+  "whatItIs": "Pedestrians are the road users most at risk. Children, older people and disabled people need the most care.",
+  "keyFacts": [
+    "Watch for children near schools, parks, ice cream vans and buses: they can run out without looking.",
+    "Older people may need more time to cross and may not see or hear you coming.",
+    "Someone with a white cane may be blind or partially sighted. A white cane with a red band: they may be deafblind.",
+    "Powered wheelchairs and mobility scooters can travel at up to 8 mph on the road: give them room.",
+    "Give way to pedestrians crossing or waiting to cross the road you are turning into or out of."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Pedestrians who need extra care",
+    "columns": 3,
+    "items": [
+      {
+        "title": "Children",
+        "text": "Small, quick and hard to see. They can step out from behind parked cars.",
+        "icon": "baby"
+      },
+      {
+        "title": "Older people",
+        "text": "May be slower and may misjudge your speed.",
+        "icon": "person-standing"
+      },
+      {
+        "title": "White cane",
+        "text": "The person may be blind or partially sighted.",
+        "icon": "eye-off"
+      },
+      {
+        "title": "White cane with a red band",
+        "text": "The person may be deafblind: they may not see or hear you.",
+        "icon": "ear-off"
+      },
+      {
+        "title": "Assistance dogs",
+        "text": "The person may be blind or have another disability.",
+        "icon": "dog"
+      },
+      {
+        "title": "Wheelchairs and scooters",
+        "text": "Slow, low and may use the road where there is no pavement.",
+        "icon": "accessibility"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "White cane",
+      "points": [
+        "Blind or partially sighted",
+        "May not see you"
+      ]
+    },
+    "b": {
+      "label": "White cane with a red band",
+      "points": [
+        "May be deafblind",
+        "May not see or hear you"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You see a pedestrian with a white cane with a red band. What does this mean?",
+      "options": [
+        "They may be deaf and blind",
+        "They are partially sighted only",
+        "They are an older person",
+        "They are training a guide dog"
+      ],
+      "answerIndex": 0,
+      "why": "A white cane with a red band means the person may be deafblind, so they may not see you or hear your horn."
+    }
+  ],
+  "traps": [
+    "Don't sound your horn to warn a deafblind person: they may not hear it.",
+    "Children can appear from behind parked cars, buses and ice cream vans.",
+    "Where there is no pavement, people may walk in the road: give them room."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 204 to 210 (Road users requiring extra care)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 220 (Powered wheelchairs and mobility scooters)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "ice-and-snow",
+  "niche": "uk-driving-theory",
+  "area": "safety-margins",
+  "order": 4,
+  "tier": "basic",
+  "officialTopics": [
+    "safety-margins",
+    "vehicle-handling"
+  ],
+  "title": "Ice & Snow",
+  "whatItIs": "On ice and snow you have very little grip. Only drive if you must, and then do everything slowly and gently.",
+  "keyFacts": [
+    {
+      "text": "You MUST be able to see: clear all snow and ice from every window before you set off.",
+      "law": true
+    },
+    {
+      "text": "Lights MUST be clean and number plates clearly visible.",
+      "law": true
+    },
+    "Stopping distances on ice can be up to ten times longer than on dry roads.",
+    "Use the highest gear you can, and accelerate and brake very gently.",
+    "Brake on the straight before a bend, then steer smoothly round it.",
+    "Very quiet tyres and light steering can mean you are on ice."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Driving in ice and snow",
+    "columns": 2,
+    "items": [
+      {
+        "title": "Clear everything first",
+        "text": "Windows, lights and number plates by law. Clear the mirrors and the snow on the roof too.",
+        "icon": "snowflake",
+        "law": true
+      },
+      {
+        "title": "Slow and gentle",
+        "text": "High gear, low revs, gentle on the accelerator, brakes and steering.",
+        "icon": "gauge"
+      },
+      {
+        "title": "Brake before bends",
+        "text": "Slow down on the straight, then steer smoothly round.",
+        "icon": "corner-up-right"
+      },
+      {
+        "title": "Signs of ice",
+        "text": "Tyres go quiet and the steering feels light.",
+        "icon": "volume-x"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "On ice",
+      "points": [
+        "Tyres almost silent",
+        "Stopping distance up to 10×"
+      ]
+    },
+    "b": {
+      "label": "On a wet road",
+      "points": [
+        "Tyre noise and spray",
+        "Stopping distance at least 2×"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You are driving on an icy road. How can you avoid wheelspin?",
+      "options": [
+        "Use the highest gear you can",
+        "Use first gear and high revs",
+        "Keep the handbrake partly on",
+        "Accelerate hard to keep moving"
+      ],
+      "answerIndex": 0,
+      "why": "A high gear and gentle acceleration send less power to the wheels, so they are less likely to spin."
+    }
+  ],
+  "traps": [
+    "Clear the whole windscreen, not just a small hole to see through.",
+    "Low gear and high revs make the wheels spin on ice.",
+    "Brake before the bend, not while you are in it."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 228 to 231 (Icy and snowy weather)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

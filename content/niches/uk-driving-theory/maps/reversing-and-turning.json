@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "id": "reversing-and-turning",
+  "niche": "uk-driving-theory",
+  "area": "rules-of-the-road",
+  "order": 10,
+  "tier": "complete",
+  "officialTopics": [
+    "rules-of-the-road",
+    "vehicle-handling"
+  ],
+  "title": "Reversing & Turning in the Road",
+  "whatItIs": "Reversing and turning round are slow manoeuvres, but you can easily miss people around you. Choose a safe place and keep looking.",
+  "keyFacts": [
+    "Choose a safe place: avoid turning round in a busy road. Find a quiet side road or go round the block.",
+    "Don't reverse from a side road into a main road.",
+    "At a driveway, reverse in and drive out forwards if you can.",
+    {
+      "text": "You MUST NOT reverse further than you need to.",
+      "law": true
+    },
+    "If you can't see properly behind you, get someone to guide you."
+  ],
+  "visual": {
+    "type": "steps",
+    "caption": "Reversing safely",
+    "items": [
+      {
+        "title": "Pick the place",
+        "text": "Quiet, with a good view, away from junctions and busy roads."
+      },
+      {
+        "title": "Look all round",
+        "text": "Mirrors and blind spots. Look for children and cyclists."
+      },
+      {
+        "title": "Go slowly",
+        "text": "Use clutch control so you can stop at once."
+      },
+      {
+        "title": "Keep looking",
+        "text": "Look mainly out of the rear window, and all around."
+      },
+      {
+        "title": "Stop if needed",
+        "text": "If someone approaches, stop and let them pass."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Driveway: reverse in",
+      "points": [
+        "Then drive out forwards",
+        "Best view of the road as you leave"
+      ]
+    },
+    "b": {
+      "label": "Driveway: reverse out",
+      "points": [
+        "Harder to see people and traffic",
+        "Avoid it if you can"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You need to turn your car round on a busy road. What should you do?",
+      "options": [
+        "Find a quiet side road or drive round the block",
+        "Make a U-turn where the road is widest",
+        "Reverse into the busy road",
+        "Turn in the road using the kerbs"
+      ],
+      "answerIndex": 0,
+      "why": "Avoid turning round in busy roads. Find a quiet side road or drive round a block of side streets."
+    }
+  ],
+  "traps": [
+    "Mirrors alone aren't enough: look out of the rear window and all around.",
+    "Small children can be hidden right behind the car.",
+    "Never reverse from a side road into a main road."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 200 to 203 (Reversing)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

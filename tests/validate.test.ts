@@ -84,6 +84,15 @@ describe('map errors', () => {
   test('signal-left marker after a later exit', () => {
     expectProblem(problemsAfter(join(MAPS, 'roundabouts.json'), (m) => (m.visual.routes[1].signalLeftAfterExit = 2)), /signalLeftAfterExit/);
   });
+  test('a card with neither an icon nor a swatch', () => {
+    expectProblem(problemsAfter(join(MAPS, 'signs-shapes-colours.json'), (m) => delete m.visual.items[0].icon), /give an icon or a swatch/);
+  });
+  test('a card icon that does not exist', () => {
+    expectProblem(problemsAfter(join(MAPS, 'signs-shapes-colours.json'), (m) => (m.visual.items[0].icon = 'not-an-icon')), /lucide icon "not-an-icon"/);
+  });
+  test('a road marking pattern that is not drawn', () => {
+    expectProblem(problemsAfter(join(MAPS, 'markings-along-the-road.json'), (m) => (m.visual.items[0].pattern = 'zebra-stripes')), /pattern/);
+  });
 });
 
 describe('numbers and niche errors', () => {

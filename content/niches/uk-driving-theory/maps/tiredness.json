@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "id": "tiredness",
+  "niche": "uk-driving-theory",
+  "area": "hazards-and-vulnerable",
+  "order": 2,
+  "tier": "complete",
+  "officialTopics": [
+    "alertness",
+    "hazard-awareness"
+  ],
+  "title": "Tiredness",
+  "whatItIs": "Tiredness slows your reactions and can make you fall asleep at the wheel for a few seconds without knowing it.",
+  "keyFacts": [
+    "Plan a break of at least 15 minutes after every 2 hours of driving.",
+    "Avoid long journeys between midnight and 6 am, when you are naturally least alert.",
+    "If you feel sleepy, stop somewhere safe as soon as you can. Not on a motorway hard shoulder.",
+    "The best fixes: two cups of caffeinated coffee and a short nap of at least 15 minutes.",
+    "Keep fresh air flowing in the car, but don't rely on an open window to keep you awake."
+  ],
+  "visual": {
+    "type": "stats",
+    "caption": "Plan your journey around these numbers",
+    "items": [
+      {
+        "value": "2 hours",
+        "label": "Drive at most this long",
+        "note": "Then take a break"
+      },
+      {
+        "value": "15 min",
+        "label": "Minimum break",
+        "note": "Sleepy? Two caffeinated coffees, then a nap of at least 15 min"
+      },
+      {
+        "value": "0–6 am",
+        "label": "Riskiest hours",
+        "note": "You are naturally least alert"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "What works",
+      "points": [
+        "Stop somewhere safe",
+        "Coffee plus a 15-minute nap"
+      ]
+    },
+    "b": {
+      "label": "What doesn't",
+      "points": [
+        "Opening the window",
+        "Turning up the music"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You feel sleepy while driving on a motorway. What should you do?",
+      "options": [
+        "Leave at the next exit and stop somewhere safe",
+        "Stop on the hard shoulder for a nap",
+        "Open the window and keep going",
+        "Turn the radio up loud"
+      ],
+      "answerIndex": 0,
+      "why": "Leave the motorway and stop in a safe place to rest. The hard shoulder is for emergencies only."
+    }
+  ],
+  "traps": [
+    "The hard shoulder is not a place to rest.",
+    "Fresh air and loud music only hide tiredness for a short time.",
+    "Long night journeys are riskiest between midnight and 6 am."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 91 (Fitness to drive: tiredness)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

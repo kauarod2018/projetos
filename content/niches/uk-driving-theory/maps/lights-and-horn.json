@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "id": "lights-and-horn",
+  "niche": "uk-driving-theory",
+  "area": "rules-of-the-road",
+  "order": 12,
+  "tier": "complete",
+  "officialTopics": [
+    "rules-of-the-road"
+  ],
+  "title": "Lights & Horn: When to Use Them",
+  "whatItIs": "Lights help you see and be seen; the horn warns others you are there. Both have rules about when to use them.",
+  "keyFacts": [
+    {
+      "text": "At night you MUST use headlights, except on roads with lit street lights.",
+      "law": true
+    },
+    {
+      "text": "You MUST NOT use lights in a way that dazzles or bothers other road users.",
+      "law": true
+    },
+    {
+      "text": "You MUST use headlights when visibility is seriously reduced, usually under 100 metres.",
+      "law": true
+    },
+    {
+      "text": "You MUST NOT use fog lights unless visibility is seriously reduced.",
+      "law": true
+    },
+    {
+      "text": "You MUST NOT use your horn while stationary, or in a built-up area from 11.30 pm to 7 am, unless there is danger.",
+      "law": true
+    }
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Which light, when",
+    "columns": 3,
+    "items": [
+      {
+        "title": "Dipped headlights",
+        "text": "At night in built-up areas, and in dull weather so others can see you.",
+        "icon": "lightbulb"
+      },
+      {
+        "title": "Main beam",
+        "text": "On unlit roads at night. Dip it for oncoming traffic and when following.",
+        "icon": "sun"
+      },
+      {
+        "title": "Fog lights",
+        "text": "Only when you can't see more than about 100 m. Off when it clears.",
+        "icon": "cloud-fog",
+        "law": true
+      },
+      {
+        "title": "Hazard warning lights",
+        "text": "When stopped and blocking traffic, or briefly on a motorway or dual carriageway to warn of danger.",
+        "icon": "triangle-alert"
+      },
+      {
+        "title": "Horn",
+        "text": "Only while moving, to warn others you are there. Never in anger.",
+        "icon": "megaphone"
+      },
+      {
+        "title": "Flashing headlights",
+        "text": "Only to let others know you are there. Not to say \"go\".",
+        "icon": "zap"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Dipped headlights",
+      "points": [
+        "Night in towns, dull weather",
+        "Normal lights for being seen"
+      ]
+    },
+    "b": {
+      "label": "Fog lights",
+      "points": [
+        "Visibility under about 100 m",
+        "Switch off as soon as it clears"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "When may you use front or rear fog lights?",
+      "options": [
+        "When visibility is seriously reduced",
+        "Whenever it is raining",
+        "At night on unlit roads",
+        "To warn of a hazard ahead"
+      ],
+      "answerIndex": 0,
+      "why": "Fog lights are only for when visibility is seriously reduced, generally under 100 metres. Otherwise they dazzle others and hide your brake lights."
+    }
+  ],
+  "traps": [
+    "Fog lights in light rain dazzle drivers behind and can hide your brake lights.",
+    "Main beam dazzles: dip it for oncoming traffic and when following another vehicle.",
+    "The horn is a warning, not a way to tell people off."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 110 to 116 (Signals and lighting)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 226 and 236 (Visibility and fog)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

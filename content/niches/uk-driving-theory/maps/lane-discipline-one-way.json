@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "id": "lane-discipline-one-way",
+  "niche": "uk-driving-theory",
+  "area": "rules-of-the-road",
+  "order": 11,
+  "tier": "complete",
+  "officialTopics": [
+    "rules-of-the-road"
+  ],
+  "title": "Lane Discipline & One-Way Streets",
+  "whatItIs": "Keep to the left unless you are overtaking or turning right, and pick your lane early. In one-way streets traffic can pass on both sides.",
+  "keyFacts": [
+    "Keep to the left-hand lane unless road signs or markings tell you otherwise.",
+    "On a two-lane dual carriageway, use the right-hand lane only to overtake or turn right, then move back.",
+    "On a three-lane single carriageway, use the middle lane only to overtake or turn right: oncoming traffic can too.",
+    "Follow lane arrows and get into the right lane in good time. Don't change lanes suddenly.",
+    {
+      "text": "In a one-way street, traffic MUST go in the direction shown by the signs.",
+      "law": true
+    }
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "In a one-way street",
+    "columns": 2,
+    "items": [
+      {
+        "title": "Turning left",
+        "text": "Use the left-hand lane, unless signs or markings say otherwise.",
+        "icon": "arrow-left"
+      },
+      {
+        "title": "Turning right",
+        "text": "Use the right-hand lane, unless signs or markings say otherwise.",
+        "icon": "arrow-right"
+      },
+      {
+        "title": "Going straight ahead",
+        "text": "Use the most suitable lane for where you are going.",
+        "icon": "arrow-up"
+      },
+      {
+        "title": "Traffic on both sides",
+        "text": "Others may pass you on the left or the right. Check both mirrors.",
+        "icon": "arrow-left-right"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Dual carriageway, 2 lanes",
+      "points": [
+        "Right lane: overtaking or turning right",
+        "Move back left when it is safe"
+      ]
+    },
+    "b": {
+      "label": "Single carriageway, 3 lanes",
+      "points": [
+        "Middle lane shared with oncoming traffic",
+        "Overtake only if it is clear"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You are in a one-way street and want to turn right. Which lane should you use?",
+      "options": [
+        "The right-hand lane",
+        "The left-hand lane",
+        "Any lane you like",
+        "The middle of the road"
+      ],
+      "answerIndex": 0,
+      "why": "Unless signs or markings say otherwise, use the right-hand lane to turn right in a one-way street."
+    }
+  ],
+  "traps": [
+    "In a one-way street you can be passed on either side.",
+    "Don't sit in the right lane of a dual carriageway once you have overtaken.",
+    "On a three-lane road, oncoming drivers may use the middle lane too."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 133 to 143 (Multi-lane carriageways and one-way streets)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

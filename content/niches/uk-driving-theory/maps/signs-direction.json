@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "signs-direction",
+  "niche": "uk-driving-theory",
+  "area": "signs",
+  "order": 6,
+  "tier": "complete",
+  "officialTopics": [
+    "road-and-traffic-signs"
+  ],
+  "title": "Direction Signs: Colour by Road Type",
+  "whatItIs": "Direction signs are colour-coded, so you can tell at a glance what type of road they lead to.",
+  "keyFacts": [
+    "Blue backgrounds are used on motorways.",
+    "Green backgrounds are used on primary routes.",
+    "White backgrounds with a black border are used on other (non-primary and local) routes.",
+    "Brown signs point to tourist attractions and facilities.",
+    "A blue panel on a green or white sign shows a route to a motorway."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "The colour tells you the type of road",
+    "columns": 2,
+    "items": [
+      {
+        "swatch": "#1D4ED8",
+        "title": "Blue",
+        "text": "Motorways. Motorway rules apply."
+      },
+      {
+        "swatch": "#15803D",
+        "title": "Green",
+        "text": "Primary routes: the main roads linking towns and cities."
+      },
+      {
+        "swatch": "#FFFFFF",
+        "title": "White (black border)",
+        "text": "Non-primary and local routes."
+      },
+      {
+        "swatch": "#7C3E1D",
+        "title": "Brown",
+        "text": "Tourist attractions and facilities."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Green sign",
+      "points": [
+        "Primary route",
+        "Major roads linking places"
+      ]
+    },
+    "b": {
+      "label": "Blue sign",
+      "points": [
+        "Motorway",
+        "Motorway rules apply"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "What colour are direction signs on primary routes?",
+      "options": [
+        "Blue",
+        "Green",
+        "White",
+        "Brown"
+      ],
+      "answerIndex": 1,
+      "why": "Green is for primary routes, blue for motorways, white for other roads and brown for tourist destinations."
+    }
+  ],
+  "traps": [
+    "A blue panel on a green sign points to a motorway: the road you're on isn't a motorway yet.",
+    "Brown signs are for tourist places, not a type of road.",
+    "Don't mix up blue direction signs (motorways) with blue circles (orders)."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Traffic signs: direction signs",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "Know Your Traffic Signs (DfT)",
+      "ref": "Direction signs",
+      "url": "https://assets.publishing.service.gov.uk/media/655dca78046ed4000d8b9de7/know-your-traffic-signs-dft.pdf"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

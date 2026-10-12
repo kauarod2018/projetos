@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "id": "signs-warning-hazards",
+  "niche": "uk-driving-theory",
+  "area": "signs",
+  "order": 3,
+  "tier": "complete",
+  "officialTopics": [
+    "road-and-traffic-signs"
+  ],
+  "title": "Warning Signs: Hazards, Road Users & Crossings",
+  "whatItIs": "Triangular signs that warn you about people, animals and hazards ahead, from schoolchildren to level crossings.",
+  "keyFacts": [
+    "Warning signs are triangles with a red border: slow down and look for the hazard shown.",
+    "Some school signs have amber lights that flash when children are crossing.",
+    "Level crossing signs warn you early: be ready to stop when the lights flash.",
+    "Animal signs mean animals may be on or near the road: slow down and give them room.",
+    "Pedestrian signs warn that people are likely to be in or crossing the road ahead."
+  ],
+  "visual": {
+    "type": "sign-grid",
+    "caption": "Warnings about road users, animals and crossings",
+    "signs": [
+      "children-school",
+      "elderly-crossing",
+      "pedestrians-crossing",
+      "cycle-route-ahead",
+      "wild-animals",
+      "accompanied-horses",
+      "level-crossing-barrier",
+      "level-crossing-no-barrier",
+      "traffic-signals-ahead",
+      "slippery-road"
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Level crossing with barrier",
+      "points": [
+        "Barriers or gates come down",
+        "The sign shows a gate"
+      ]
+    },
+    "b": {
+      "label": "Level crossing without barrier",
+      "points": [
+        "No barrier: watch the lights",
+        "The sign shows a train"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You see a warning sign showing two children. What does it warn you about?",
+      "options": [
+        "Elderly or disabled people crossing",
+        "Children going to or from school",
+        "A pedestrian zone ahead",
+        "A play street with no traffic"
+      ],
+      "answerIndex": 1,
+      "why": "It's the 'children going to or from school' sign: expect children near the road and be ready to stop."
+    }
+  ],
+  "traps": [
+    "At level crossings, don't mix up the gate symbol (barrier) with the train symbol (no barrier).",
+    "Animal signs show which animal to expect: wild animals, wild horses or horses with riders.",
+    "A warning sign tells you about a hazard; it doesn't give you priority or an order."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Traffic signs: warning signs",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "Know Your Traffic Signs (DfT)",
+      "ref": "Warning signs",
+      "url": "https://assets.publishing.service.gov.uk/media/655dca78046ed4000d8b9de7/know-your-traffic-signs-dft.pdf"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft",
+    "notes": "Official numbers of these warning signs still to be added from the DfT image pack."
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "hierarchy-of-road-users",
+  "niche": "uk-driving-theory",
+  "area": "rules-of-the-road",
+  "order": 2,
+  "tier": "basic",
+  "officialTopics": [
+    "rules-of-the-road",
+    "attitude",
+    "vulnerable-road-users"
+  ],
+  "title": "The Hierarchy of Road Users",
+  "whatItIs": "Since 2022 the Highway Code says that those who can do the greatest harm have the greatest responsibility to look out for others.",
+  "keyFacts": [
+    "The road users most at risk are pedestrians, cyclists, horse riders and motorcyclists.",
+    "Children, older people and disabled people are even more at risk.",
+    "At a junction, give way to pedestrians crossing or waiting to cross the road you are turning into or out of.",
+    "Don't cut across cyclists, horse riders or horse-drawn vehicles going ahead when you turn or change lane.",
+    "Everyone still has to take care: the hierarchy doesn't take responsibility away from anyone."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Three rules added in 2022",
+    "columns": 2,
+    "items": [
+      {
+        "icon": "users",
+        "title": "Rule H1: more harm, more care",
+        "text": "Drivers of larger, faster vehicles have the greatest responsibility to reduce danger to others."
+      },
+      {
+        "icon": "footprints",
+        "title": "Rule H2: pedestrians at junctions",
+        "text": "Give way to people crossing or waiting to cross the road you are turning into or out of."
+      },
+      {
+        "icon": "school",
+        "title": "Rule H2: zebra and parallel crossings",
+        "text": "Give way to pedestrians waiting to cross a zebra, and to people waiting at a parallel crossing."
+      },
+      {
+        "icon": "bike",
+        "title": "Rule H3: don't cut across",
+        "text": "Give way to cyclists and horse riders going ahead when you turn, in a lane, a track or on the road."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Rule H2",
+      "points": [
+        "Protects pedestrians",
+        "At junctions and crossings"
+      ]
+    },
+    "b": {
+      "label": "Rule H3",
+      "points": [
+        "Protects cyclists and horse riders",
+        "When you turn or change lane"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You are turning left into a side road. A pedestrian is waiting to cross it. What should you do?",
+      "options": [
+        "Give way and let them cross",
+        "Turn first, because you have priority",
+        "Sound your horn to warn them",
+        "Wave them across the road"
+      ],
+      "answerIndex": 0,
+      "why": "Rule H2: give way to pedestrians crossing or waiting to cross a road you are turning into. Waving people across can put them in danger."
+    }
+  ],
+  "traps": [
+    "The hierarchy doesn't mean pedestrians and cyclists can ignore their own safety.",
+    "\"Waiting to cross\" counts, not just people already in the road.",
+    "A cyclist going straight on in a cycle lane has priority over you turning across it."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Introduction: Rules H1 to H3 (Hierarchy of road users)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

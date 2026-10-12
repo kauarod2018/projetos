@@ -86,4 +86,39 @@ npm. O que ficou pronto para quando as imagens chegarem:
    pergunta sobre representante no Reino Unido para fins de UK GDPR.
 6. **Domínio e marca:** "Test Help" é um nome genérico. Vale checar se o domínio está livre e se não há marca registrada
    igual no Reino Unido.
-7. **Etapa 6:** produzir os outros 57 mapas, em lotes por área, cada lote parando para conferência.
+7. ~~Etapa 6: produzir os outros 57 mapas.~~ Feito, veja a seção 6 abaixo.
+
+## 6. Etapa 6: os 60 mapas
+
+Os 60 mapas do inventário estão escritos (26 no Basic, 60 no Complete). Todos continuam em **rascunho**.
+
+**Como ficou o produto**
+- Mapas mais enxutos: 4 a 6 fatos-chave, 1 questão e 2 a 3 armadilhas, com um visual grande em cada página.
+- 5 tipos novos de visual: cartões, passos, números grandes, faixas pintadas e semáforo (detalhes no `DESIGN.md`).
+- Os pacotes abrem com capa (60 mapas, 63 questões, 179 armadilhas no Complete) e sumário por área.
+- 8 PDFs de pacote: Complete (62 p.), Basic (28 p.) e um por área.
+- Prévias em `docs/preview/etapa-6/`: o PDF completo e uma folha de contato por área.
+
+**Revisão de fatos.** Dois revisores independentes leram os 57 mapas novos (e o 1.02), cruzando por busca na web: 36
+de 58 sem problema. Correções feitas:
+
+| Onde | Antes | Depois | Base |
+|---|---|---|---|
+| 6.05 Documents | "taxado para rodar, **a não ser que tenha SORN**" | Com SORN o carro **tem de ficar fora** da via pública | lei do imposto veicular, gov.uk SORN |
+| 2.08 Overtaking | "Ultrapassar nas zigue-zagues é ilegal" | Só é proibido ultrapassar o veículo mais próximo da faixa (ou o que parou) | Rules 165 e 191 |
+| 2.11 Lane discipline | Faixa do meio "quando estiver livre" | Só para ultrapassar ou virar à direita | Rule 135 |
+| 1.03 Quiz | Alternativa errada "playground" também podia ser certa | Trocada por "idosos ou pessoas com deficiência" | placa 545 + placa 547.2 |
+| 6.02, 4.04, 5.02 | Textos que exageravam a regra | Ajustados ao texto da Rule 123, 229 e 91 | Highway Code |
+| 12 mapas | Regras com MUST sem o selo LAW | Selo LAW incluído (Rules 106, 130, 149, 172, 196, 253, 293, Rule 98, Annex 3) | Highway Code |
+| Mapas de autoestrada | "Rules 253 to 273" | "Rules 253 to 274"; panes: Rules 275 a 278 (a Rule 276 é a do triângulo) | títulos das seções no gov.uk |
+
+**Confirmado na revisão:** limite de álcool na Inglaterra e no País de Gales continua 35 µg (a redução para 22 µg segue
+como proposta; consulta encerrada em 2026, sem lei); primeiro MOT aos 3 anos; reboque até 3.500 kg desde 16/12/2021;
+marcos de contagem a 300, 200 e 100 jardas; faixa de ônibus sem horário = 24 horas; queimadura 20 minutos e compressão
+5–6 cm, cerca de 2 por segundo.
+
+**Ainda conferir no gov.uk** (anotado em `review.notes` de cada mapa):
+- 6.09: se o "C" do DR ABC no Annex 7 atual é "Circulation" ou "Compressions".
+- 6.10: as regras de túnel e o conselho de não abrir o capô num incêndio no motor.
+- 4.08: o texto sobre ESC (não está no Highway Code; vem de material de direção).
+- Números de regra citados nas fontes, já que a numeração mudou entre edições.

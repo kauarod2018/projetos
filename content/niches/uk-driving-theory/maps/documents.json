@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "id": "documents",
+  "niche": "uk-driving-theory",
+  "area": "vehicle-docs-incidents",
+  "order": 5,
+  "tier": "basic",
+  "officialTopics": [
+    "essential-documents"
+  ],
+  "title": "Documents: Licence, Insurance, MOT & Tax",
+  "whatItIs": "To drive legally you need a valid licence, insurance, vehicle tax and, for older cars, an MOT certificate.",
+  "keyFacts": [
+    {
+      "text": "You MUST have at least third-party insurance to drive on a public road.",
+      "law": true
+    },
+    {
+      "text": "A car MUST normally have its first MOT at 3 years old, then every year.",
+      "law": true
+    },
+    {
+      "text": "A vehicle MUST be taxed to be driven or kept on a public road. With a SORN, it MUST be kept off the road.",
+      "law": true
+    },
+    "The V5C registration certificate shows the registered keeper, not necessarily the owner.",
+    "Tell DVLA when you change your name or address, or sell the car."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "The papers behind every car",
+    "columns": 3,
+    "items": [
+      {
+        "title": "Driving licence",
+        "text": "Must be valid for the vehicle you drive. Keep your address up to date.",
+        "icon": "id-card"
+      },
+      {
+        "title": "Insurance",
+        "text": "At least third-party cover to drive on a public road.",
+        "icon": "shield-check",
+        "law": true
+      },
+      {
+        "title": "MOT",
+        "text": "First at 3 years old, then every year. Shows the car met the minimum standard.",
+        "icon": "wrench"
+      },
+      {
+        "title": "Vehicle tax",
+        "text": "Needed to drive or keep the car on a public road.",
+        "icon": "receipt",
+        "law": true
+      },
+      {
+        "title": "V5C logbook",
+        "text": "Shows the registered keeper. Tell DVLA about any changes.",
+        "icon": "file-text"
+      },
+      {
+        "title": "SORN",
+        "text": "Declare it if you keep an untaxed vehicle off the road.",
+        "icon": "square-parking"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Third party only",
+      "points": [
+        "The legal minimum",
+        "Covers damage to others, not your car"
+      ]
+    },
+    "b": {
+      "label": "Comprehensive",
+      "points": [
+        "Covers others and your own car",
+        "Costs more, covers more"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "When does a car need its first MOT?",
+      "options": [
+        "When it is 3 years old",
+        "When it is 1 year old",
+        "When it is 4 years old",
+        "After 30,000 miles"
+      ],
+      "answerIndex": 0,
+      "why": "In Great Britain a car needs its first MOT when it is 3 years old, and then every year."
+    }
+  ],
+  "traps": [
+    "The V5C shows the keeper, not who owns the car.",
+    "Third-party cover doesn't pay for damage to your own car.",
+    "An MOT doesn't mean the car stays roadworthy all year: keep checking it."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Annex 3 (Motor vehicle documentation and learner driver requirements)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "GOV.UK",
+      "ref": "Getting an MOT",
+      "url": "https://www.gov.uk/getting-an-mot"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

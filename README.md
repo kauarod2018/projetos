@@ -16,7 +16,7 @@ Primeiro nicho: **UK Driving Theory Test** (Grã-Bretanha).
 | 3. 6 bônus | ✅ prontos (rascunho) |
 | 4. Criativos de carrossel | ✅ prontos (preview) |
 | 5. Páginas legais + banner de cookies | ✅ prontas (revisar com advogado) |
-| 6. Os outros 57 mapas | ⏳ a produzir, em lotes por área, com conferência no gov.uk |
+| 6. Os outros 57 mapas | ✅ escritos, os 60 (rascunho; dupla revisão de fatos feita por busca, falta o gov.uk) |
 
 Nada pode ser vendido ainda: os mapas não foram conferidos no gov.uk, as placas oficiais não foram importadas e faltam os
 dados da empresa e os links da Hotmart. O comando `npm run validate:release` lista tudo o que falta.
@@ -79,7 +79,8 @@ dist/  out/  public/media/          gerados (fora do Git)
 
 1. Confira se ele está em `inventory.json` (área, ordem, tier, título e tópicos DVSA).
 2. Copie um arquivo de `maps/`, use o mesmo `id` do inventário e preencha os blocos. Os limites de texto estão em
-   `schemas/map.ts` (`LIMITS`).
+   `schemas/map.ts` (`LIMITS`). O visual pode ser: `sign-grid`, `bar-scale`, `road-diagram`, `table`, `cards`,
+   `steps`, `stats`, `markings` ou `light-sequence` (veja `DESIGN.md`).
 3. Números que aparecem em mais de um lugar vão em `numbers.json` (o mapa aponta com `numbersKey`).
 4. `npm run validate`, depois `npm run build:pdfs -- --only <id>` e confira o PNG em `dist/`.
 5. Só troque `review.status` para `verified` depois de conferir cada fato no gov.uk, preenchendo `checkedOn` e

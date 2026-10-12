@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "id": "learner-new-driver-rules",
+  "niche": "uk-driving-theory",
+  "area": "vehicle-docs-incidents",
+  "order": 6,
+  "tier": "complete",
+  "officialTopics": [
+    "essential-documents"
+  ],
+  "title": "Learner & New Driver Rules",
+  "whatItIs": "Learners must meet extra rules while they learn, and new drivers face a lower points limit for their first 2 years.",
+  "keyFacts": [
+    "Your supervisor must be at least 21 and have held a full licence for that type of vehicle for at least 3 years.",
+    {
+      "text": "L plates (or D plates in Wales) MUST be shown on the front and back of the car.",
+      "law": true
+    },
+    "Learners can drive on motorways only with an approved driving instructor in a dual-control car.",
+    {
+      "text": "A supervisor MUST NOT use a hand-held phone while supervising: the phone law applies to them too.",
+      "law": true
+    },
+    "New drivers who get 6 or more points within 2 years of passing lose their licence."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Learner and new driver rules",
+    "columns": 3,
+    "items": [
+      {
+        "title": "Supervisor",
+        "text": "Aged 21 or over, with a full licence for 3 years or more.",
+        "icon": "user-check"
+      },
+      {
+        "title": "L or D plates",
+        "text": "Front and back of the car while you are learning.",
+        "icon": "square",
+        "law": true
+      },
+      {
+        "title": "Motorways",
+        "text": "Only with an approved driving instructor in a dual-control car.",
+        "icon": "route"
+      },
+      {
+        "title": "Insurance",
+        "text": "You must be insured to drive the car you learn in.",
+        "icon": "shield-check",
+        "law": true
+      },
+      {
+        "title": "P plates",
+        "text": "Optional after you pass. They show you are a new driver.",
+        "icon": "badge-check"
+      },
+      {
+        "title": "6 points in 2 years",
+        "text": "A new driver who reaches 6 points loses their licence.",
+        "icon": "triangle-alert"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "L plates",
+      "points": [
+        "Required while learning",
+        "D plates can be used in Wales"
+      ]
+    },
+    "b": {
+      "label": "P plates",
+      "points": [
+        "Optional after you pass",
+        "Show you are a new driver"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Who may supervise a learner driver in a car?",
+      "options": [
+        "Someone aged 21+ who has held a full licence for 3 years",
+        "Any full licence holder aged 18 or over",
+        "Someone aged 21+ who has held a licence for 1 year",
+        "Anyone who is insured to drive the car"
+      ],
+      "answerIndex": 0,
+      "why": "A supervisor must be at least 21 and have held a full licence for that type of vehicle for at least 3 years."
+    }
+  ],
+  "traps": [
+    "A learner can't go on a motorway with a parent, only with an instructor.",
+    "D plates are the Welsh version of L plates.",
+    "New drivers: 6 points within 2 years means applying for a provisional licence again."
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK",
+      "ref": "Driving lessons and learning to drive",
+      "url": "https://www.gov.uk/driving-lessons-learning-to-drive"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Annex 3 (Learner drivers)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "GOV.UK",
+      "ref": "New drivers: penalty points",
+      "url": "https://www.gov.uk/penalty-points-endorsements/new-drivers"
+    },
+    {
+      "doc": "GOV.UK",
+      "ref": "Using mobile phones when driving: the law",
+      "url": "https://www.gov.uk/using-mobile-phones-when-driving-the-law"
+    }
+  ],
+  "jurisdictionNotes": [
+    {
+      "jurisdiction": "wales",
+      "text": "In Wales learners can show D plates instead of L plates."
+    }
+  ],
+  "review": {
+    "status": "draft"
+  }
+}

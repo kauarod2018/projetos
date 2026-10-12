@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "id": "horse-riders-animals",
+  "niche": "uk-driving-theory",
+  "area": "hazards-and-vulnerable",
+  "order": 9,
+  "tier": "complete",
+  "officialTopics": [
+    "vulnerable-road-users"
+  ],
+  "title": "Horse Riders & Animals",
+  "whatItIs": "Horses can be frightened by noise and speed. Pass them slowly and widely, and take care with any animals on the road.",
+  "keyFacts": [
+    "Pass horse riders and horse-drawn vehicles at no more than 10 mph, leaving at least 2 metres.",
+    "Don't sound your horn or rev your engine near horses.",
+    "Riders may ride two abreast or in the middle of the lane, for example on narrow roads.",
+    "At a roundabout, a horse rider may keep to the left lane and signal right if they are going round.",
+    "If a herd of animals blocks the road, stop, switch off your engine and wait until they have gone."
+  ],
+  "visual": {
+    "type": "stats",
+    "caption": "Passing a horse",
+    "items": [
+      {
+        "value": "10 mph",
+        "label": "Maximum speed",
+        "note": "Pass slowly and be ready to stop"
+      },
+      {
+        "value": "2 m",
+        "label": "Minimum space",
+        "note": "Leave more if you can, and pass wide"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Horse rider at a roundabout",
+      "points": [
+        "Stays in the left lane",
+        "Signals right to go round"
+      ]
+    },
+    "b": {
+      "label": "Car at a roundabout",
+      "points": [
+        "Usually uses the right lane",
+        "Signals right to go round"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "How should you pass a horse rider?",
+      "options": [
+        "At no more than 10 mph, leaving at least 2 metres",
+        "Quickly, to spend less time near the horse",
+        "At 20 mph, leaving 1 metre",
+        "After sounding your horn to warn them"
+      ],
+      "answerIndex": 0,
+      "why": "Pass slowly, at no more than 10 mph, and leave at least 2 metres. Noise and speed can frighten horses."
+    }
+  ],
+  "traps": [
+    "Never sound your horn to warn a horse rider: it can frighten the horse.",
+    "At a roundabout, a rider in the left lane may be going all the way round.",
+    "Herd of animals on the road? Stop and switch off your engine."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 214 and 215 (Animals and horse riders)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 187 (Roundabouts)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

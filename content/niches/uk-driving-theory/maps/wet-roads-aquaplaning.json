@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "id": "wet-roads-aquaplaning",
+  "niche": "uk-driving-theory",
+  "area": "safety-margins",
+  "order": 3,
+  "tier": "basic",
+  "officialTopics": [
+    "safety-margins",
+    "vehicle-handling"
+  ],
+  "title": "Wet Roads & Aquaplaning",
+  "whatItIs": "In the rain your tyres grip less and you see less. Aquaplaning is when a layer of water lifts the tyres off the road.",
+  "keyFacts": [
+    "Stopping distances are at least double on wet roads, so leave at least twice the gap.",
+    "If the steering suddenly feels light, water may be stopping the tyres from gripping: ease off the accelerator.",
+    "Spray from large vehicles makes it hard to see and be seen: use dipped headlights.",
+    "Spilt diesel makes the road very slippery: look for a rainbow sheen.",
+    "After driving through deep water, test your brakes gently at the first safe place."
+  ],
+  "visual": {
+    "type": "steps",
+    "caption": "If you aquaplane",
+    "items": [
+      {
+        "title": "Steering goes light",
+        "text": "A sign the tyres are riding on water instead of the road."
+      },
+      {
+        "title": "Ease off",
+        "text": "Lift off the accelerator gently and let the car slow down."
+      },
+      {
+        "title": "No sudden moves",
+        "text": "Don't brake hard or steer sharply while you have no grip."
+      },
+      {
+        "title": "Grip returns",
+        "text": "As you slow down, the tyres touch the road again."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Aquaplaning",
+      "points": [
+        "Water lifts the tyres off the road",
+        "Steering feels light"
+      ]
+    },
+    "b": {
+      "label": "Wet brakes after a ford",
+      "points": [
+        "Brakes feel weak",
+        "Test them gently to dry them"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Your steering suddenly feels very light in heavy rain. What is the most likely cause?",
+      "options": [
+        "Your tyres are losing grip on the water",
+        "Your power steering has failed",
+        "Your tyres are over-inflated",
+        "Your brakes are overheating"
+      ],
+      "answerIndex": 0,
+      "why": "This is aquaplaning: water is stopping the tyres from gripping. Ease off the accelerator and slow down gradually."
+    }
+  ],
+  "traps": [
+    "Don't brake hard when aquaplaning: ease off the accelerator.",
+    "Rain alone isn't a reason for fog lights, only very poor visibility is.",
+    "Wet roads need at least double the gap, not just a little more."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 227 (Wet weather)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 121 (Brakes after driving through water)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

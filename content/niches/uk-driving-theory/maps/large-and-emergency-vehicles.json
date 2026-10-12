@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "large-and-emergency-vehicles",
+  "niche": "uk-driving-theory",
+  "area": "hazards-and-vulnerable",
+  "order": 10,
+  "tier": "basic",
+  "officialTopics": [
+    "other-types-of-vehicle"
+  ],
+  "title": "Large & Emergency Vehicles, Buses, Trams",
+  "whatItIs": "Large vehicles need more room and can't see you easily. Emergency vehicles need you to help them through safely.",
+  "keyFacts": [
+    "Emergency vehicles with flashing blue, red or green lights, headlights or sirens: help them pass when it is safe.",
+    "Don't break the law to make way: no red lights, no bus lanes, no mounting the kerb.",
+    "Long vehicles may move out to the right before turning left: don't try to pass on their left.",
+    "If you can't see a lorry driver's mirrors, the driver can't see you.",
+    "Give way to buses signalling to pull out from a stop, when it is safe."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Sharing the road with big vehicles",
+    "columns": 3,
+    "items": [
+      {
+        "title": "Blue, red or green lights",
+        "text": "Pull over to let them pass when it is safe and legal.",
+        "icon": "siren"
+      },
+      {
+        "title": "Long vehicles turning",
+        "text": "They may swing out the other way first. Hold back.",
+        "icon": "truck"
+      },
+      {
+        "title": "Blind spots",
+        "text": "Can't see the driver's mirrors? They can't see you.",
+        "icon": "scan-eye"
+      },
+      {
+        "title": "Buses pulling out",
+        "text": "Let them out of a stop when you safely can.",
+        "icon": "bus"
+      },
+      {
+        "title": "Trams",
+        "text": "They can't steer round you and can be very quiet.",
+        "icon": "tram-front"
+      },
+      {
+        "title": "Stay back",
+        "text": "Drop back so you can see past and the driver can see you.",
+        "icon": "move-horizontal"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Blue lights",
+      "points": [
+        "Police, fire, ambulance and others",
+        "Pull over when it is safe"
+      ]
+    },
+    "b": {
+      "label": "Green lights",
+      "points": [
+        "A doctor on an emergency call",
+        "Let them pass if you safely can"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "An ambulance with flashing blue lights is behind you at a red traffic light. What should you do?",
+      "options": [
+        "Stay where you are, unless you can let it pass safely and legally",
+        "Drive through the red light",
+        "Move into the bus lane at once",
+        "Get out and wave it past"
+      ],
+      "answerIndex": 0,
+      "why": "Help emergency vehicles through, but don't break the law or put anyone at risk. Don't go through a red light."
+    }
+  ],
+  "traps": [
+    "Making way never means going through a red light or into a bus lane.",
+    "A long vehicle moving right may be about to turn left.",
+    "Can't see the lorry's mirrors? The driver can't see you."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 219 to 225 (Other road users)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

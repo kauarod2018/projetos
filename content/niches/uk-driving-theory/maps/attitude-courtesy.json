@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "attitude-courtesy",
+  "niche": "uk-driving-theory",
+  "area": "hazards-and-vulnerable",
+  "order": 5,
+  "tier": "complete",
+  "officialTopics": [
+    "attitude"
+  ],
+  "title": "Attitude: Following Too Close & Courtesy",
+  "whatItIs": "Good drivers are patient and calm. Your attitude affects your safety as much as your skill does.",
+  "keyFacts": [
+    "Driving too close to the vehicle in front (tailgating) is dangerous and intimidating.",
+    "If someone pulls out in front of you, hold back and let them get clear. Don't drive close to make a point.",
+    "If another driver behaves badly, don't react. Pull over and calm down if you need to.",
+    "Be patient with learners, new and older drivers, and anyone who makes a mistake.",
+    "When someone overtakes you, don't speed up. Slow down if needed to let them in."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Calm, patient driving",
+    "columns": 2,
+    "items": [
+      {
+        "title": "Keep your distance",
+        "text": "At least a two-second gap. Never tailgate to push someone along.",
+        "icon": "move-horizontal"
+      },
+      {
+        "title": "Stay calm",
+        "text": "Don't answer bad driving with more bad driving. Let it go.",
+        "icon": "smile"
+      },
+      {
+        "title": "Be patient",
+        "text": "Learners and older drivers may need more time. Give it to them.",
+        "icon": "hourglass"
+      },
+      {
+        "title": "Let others in",
+        "text": "Make room for merging traffic, and don't block junctions.",
+        "icon": "users"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Flashing to say \"go\"",
+      "points": [
+        "Not what flashing means",
+        "They may pull out into danger"
+      ]
+    },
+    "b": {
+      "label": "Holding back to let them out",
+      "points": [
+        "Fine, if it is safe",
+        "Let them decide when to go"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "A driver pulls out of a junction in front of you, so you have to brake. What should you do?",
+      "options": [
+        "Slow down and stay calm",
+        "Flash your lights to show your annoyance",
+        "Sound your horn and follow closely",
+        "Overtake them as soon as you can"
+      ],
+      "answerIndex": 0,
+      "why": "Hold back and let them get clear. Reacting angrily makes the situation more dangerous for everyone."
+    }
+  ],
+  "traps": [
+    "Courtesy doesn't mean waving people on: let them decide when it is safe.",
+    "Speeding up when someone overtakes you is aggressive and dangerous.",
+    "Running late is no excuse for pushing other drivers."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 147 and 148 (Be considerate)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 126 (Stopping distances)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 168 (Being overtaken)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

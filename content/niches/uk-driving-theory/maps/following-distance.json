@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "id": "following-distance",
+  "niche": "uk-driving-theory",
+  "area": "safety-margins",
+  "order": 2,
+  "tier": "basic",
+  "officialTopics": [
+    "safety-margins",
+    "attitude"
+  ],
+  "title": "Following Distance: the Two-Second Rule",
+  "whatItIs": "Leave enough space to stop safely if the vehicle in front brakes suddenly. Measure it in seconds, so it grows with your speed.",
+  "keyFacts": [
+    "On faster roads and in tunnels, leave at least a two-second gap to the vehicle in front.",
+    "On wet roads, at least double the gap. On icy roads, leave much more.",
+    "Count it: as the vehicle ahead passes a fixed point, say \"Only a fool breaks the two-second rule\".",
+    "Reach the point before you finish the phrase? You are too close: drop back.",
+    "If someone is driving too close behind you, ease off gently to widen the gap in front of you."
+  ],
+  "visual": {
+    "type": "stats",
+    "caption": "The gap to the vehicle in front",
+    "items": [
+      {
+        "value": "2 s",
+        "label": "Dry roads: the minimum",
+        "note": "On faster roads and in tunnels"
+      },
+      {
+        "value": "4 s",
+        "label": "Wet roads: at least double",
+        "note": "Tyres grip less and spray hides the road"
+      },
+      {
+        "value": "Up to 10×",
+        "label": "Icy roads",
+        "note": "Stopping distances can be up to ten times longer"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Two-second gap",
+      "points": [
+        "A time, not a distance",
+        "Grows with your speed by itself"
+      ]
+    },
+    "b": {
+      "label": "Stopping distance",
+      "points": [
+        "Metres needed to stop",
+        "Grows much faster than your speed"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "In good conditions, what is the minimum gap you should leave on a fast road?",
+      "options": [
+        "2 seconds",
+        "1 second",
+        "4 seconds",
+        "10 seconds"
+      ],
+      "answerIndex": 0,
+      "why": "On faster roads, leave at least two seconds in good conditions, and at least double that on wet roads."
+    }
+  ],
+  "traps": [
+    "Two seconds is the minimum on dry roads, not a target.",
+    "Wet road? Make it at least four seconds.",
+    "Being tailgated? Don't brake sharply: drop back from the car in front."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 126 (Stopping distances)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 227 to 231 (Driving in adverse weather)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

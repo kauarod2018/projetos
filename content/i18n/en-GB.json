@@ -53,7 +53,21 @@
     "attributionsTitle": "Sources and licences",
     "copyright": "© {year} {brand}. For your personal use only. Please don't share or resell these files.",
     "support": "Questions or corrections: {email}",
-    "contents": "Contents"
+    "contents": "Contents",
+    "coverStats": [
+      {
+        "value": "{maps}",
+        "label": "revision maps, one topic per A4 page"
+      },
+      {
+        "value": "{questions}",
+        "label": "practice questions with explanations"
+      },
+      {
+        "value": "{traps}",
+        "label": "common traps to avoid"
+      }
+    ]
   },
   "bonus": {
     "label": "Bonus",

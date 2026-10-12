@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "id": "junctions-priority",
+  "niche": "uk-driving-theory",
+  "area": "rules-of-the-road",
+  "order": 3,
+  "tier": "basic",
+  "officialTopics": [
+    "rules-of-the-road"
+  ],
+  "title": "Junctions: Who Goes First",
+  "whatItIs": "At a junction, signs and road markings tell you who goes first. Where there are none, nobody has priority.",
+  "keyFacts": [
+    "Before you emerge, look all around: cyclists, motorcyclists and pedestrians are easy to miss.",
+    {
+      "text": "At a STOP sign you MUST stop at the solid white line, even if the road is clear.",
+      "law": true
+    },
+    {
+      "text": "At give way lines you MUST give way to traffic on the major road. Stop only if traffic is coming.",
+      "law": true
+    },
+    "At an unmarked crossroads nobody has priority: go on with great care.",
+    "Crossing a dual carriageway: if the gap in the middle is too narrow for your vehicle, wait and cross in one go."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Who goes first at a junction",
+    "columns": 2,
+    "items": [
+      {
+        "icon": "octagon-x",
+        "title": "STOP sign and solid line",
+        "text": "Stop at the line every time. Go when it is safe.",
+        "law": true
+      },
+      {
+        "icon": "triangle",
+        "title": "Give way lines (broken)",
+        "text": "Give way to traffic on the major road. Stop only if you need to.",
+        "law": true
+      },
+      {
+        "icon": "plus",
+        "title": "Unmarked crossroads",
+        "text": "No one has priority. Slow down, look and go on with care."
+      },
+      {
+        "icon": "eye",
+        "title": "Limited view",
+        "text": "Edge forward slowly until you can see. Watch for bikes and pedestrians."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "STOP sign",
+      "points": [
+        "You MUST stop at the line",
+        "Even when the road is clear"
+      ]
+    },
+    "b": {
+      "label": "GIVE WAY sign",
+      "points": [
+        "Slow down and give way",
+        "Stop only if traffic is coming"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You arrive at a STOP sign. The road is clear. What must you do?",
+      "options": [
+        "Stop at the line, then go when it is safe",
+        "Slow down and go if it is clear",
+        "Stop only if traffic is coming",
+        "Sound your horn and go"
+      ],
+      "answerIndex": 0,
+      "why": "At a STOP sign you must always stop at the solid white line, even if you can see the road is clear."
+    }
+  ],
+  "traps": [
+    "A clear road doesn't excuse you from stopping at a STOP sign.",
+    "At an unmarked crossroads nobody has priority, not even traffic from the right.",
+    "A window pillar can hide a motorcyclist: move your head and look again."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 170 to 173 (Road junctions)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

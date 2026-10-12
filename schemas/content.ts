@@ -165,6 +165,8 @@ export const i18n = z.object({
     copyright: z.string(),
     support: z.string(),
     contents: z.string(),
+    /** big figures on the cover; {maps}, {questions} and {traps} are counted from the package */
+    coverStats: z.array(z.object({ value: z.string(), label: z.string() })).min(1).max(4),
   }),
 });
 export type I18n = z.infer<typeof i18n>;

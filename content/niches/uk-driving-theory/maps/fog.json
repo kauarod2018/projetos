@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "id": "fog",
+  "niche": "uk-driving-theory",
+  "area": "safety-margins",
+  "order": 5,
+  "tier": "complete",
+  "officialTopics": [
+    "safety-margins",
+    "vehicle-handling"
+  ],
+  "title": "Fog",
+  "whatItIs": "Fog cuts how far you can see, sometimes suddenly. Slow down so you can stop within the distance you can see.",
+  "keyFacts": [
+    {
+      "text": "You MUST use headlights when visibility is seriously reduced, usually when you can't see more than 100 metres.",
+      "law": true
+    },
+    {
+      "text": "You MUST NOT use fog lights unless visibility is seriously reduced, and MUST switch them off when it improves.",
+      "law": true
+    },
+    "Drive slowly enough to stop well within the distance you can see is clear.",
+    "Don't follow the tail lights in front: they give a false sense of safety.",
+    "At junctions with a poor view, stop and listen for traffic, then go when you are sure it is safe."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Driving in fog",
+    "columns": 2,
+    "items": [
+      {
+        "title": "Lights",
+        "text": "Dipped headlights. Fog lights only when you can't see more than about 100 m.",
+        "icon": "lightbulb",
+        "law": true
+      },
+      {
+        "title": "Speed",
+        "text": "Slow enough to stop within the distance you can see.",
+        "icon": "gauge"
+      },
+      {
+        "title": "Distance",
+        "text": "Leave a big gap. Don't hang on to the tail lights ahead.",
+        "icon": "move-horizontal"
+      },
+      {
+        "title": "Junctions",
+        "text": "Stop, listen for traffic, then go when you are sure it is safe.",
+        "icon": "ear"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Fog lights on",
+      "points": [
+        "Visibility under about 100 m",
+        "Helps others see you"
+      ]
+    },
+    "b": {
+      "label": "Fog lights off",
+      "points": [
+        "As soon as visibility improves",
+        "They dazzle and hide brake lights"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "When must you switch off your rear fog lights?",
+      "options": [
+        "When visibility improves",
+        "When you enter a 30 mph area",
+        "Only at the end of your journey",
+        "When it gets dark"
+      ],
+      "answerIndex": 0,
+      "why": "Fog lights must be switched off as soon as visibility improves, because they dazzle drivers behind and can hide your brake lights."
+    }
+  ],
+  "traps": [
+    "Fog can be patchy: a clear stretch can suddenly turn thick again.",
+    "The tail lights ahead don't show you a safe gap.",
+    "Fog lights left on after the fog clears dazzle drivers and hide your brake lights."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 234 to 236 (Fog)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 226 (Visibility)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

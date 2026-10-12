@@ -192,6 +192,168 @@
       "officialNumber": "671",
       "file": null,
       "status": "pending-official-asset"
+    },
+    {
+      "id": "children-school",
+      "meaning": "Children going to or from school",
+      "category": "warning",
+      "shape": "triangle",
+      "officialNumber": null,
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "elderly-crossing",
+      "meaning": "Elderly people (or blind or disabled as shown) crossing road",
+      "category": "warning",
+      "shape": "triangle",
+      "officialNumber": null,
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "pedestrians-crossing",
+      "meaning": "Pedestrians crossing",
+      "category": "warning",
+      "shape": "triangle",
+      "officialNumber": null,
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "cycle-route-ahead",
+      "meaning": "Cycle route ahead",
+      "category": "warning",
+      "shape": "triangle",
+      "officialNumber": null,
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "wild-animals",
+      "meaning": "Wild animals",
+      "category": "warning",
+      "shape": "triangle",
+      "officialNumber": null,
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "accompanied-horses",
+      "meaning": "Accompanied horses or ponies",
+      "category": "warning",
+      "shape": "triangle",
+      "officialNumber": null,
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "level-crossing-barrier",
+      "meaning": "Level crossing with barrier or gate ahead",
+      "category": "warning",
+      "shape": "triangle",
+      "officialNumber": null,
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "level-crossing-no-barrier",
+      "meaning": "Level crossing without barrier or gate ahead",
+      "category": "warning",
+      "shape": "triangle",
+      "officialNumber": null,
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "traffic-signals-ahead",
+      "meaning": "Traffic signals",
+      "category": "warning",
+      "shape": "triangle",
+      "officialNumber": null,
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "slippery-road",
+      "meaning": "Slippery road",
+      "category": "warning",
+      "shape": "triangle",
+      "officialNumber": null,
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "no-right-turn",
+      "meaning": "No right turn",
+      "category": "regulatory",
+      "shape": "circle",
+      "officialNumber": null,
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "no-left-turn",
+      "meaning": "No left turn",
+      "category": "regulatory",
+      "shape": "circle",
+      "officialNumber": null,
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "no-u-turns",
+      "meaning": "No U-turns",
+      "category": "regulatory",
+      "shape": "circle",
+      "officialNumber": null,
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "no-cycling",
+      "meaning": "No cycling",
+      "category": "regulatory",
+      "shape": "circle",
+      "officialNumber": null,
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "turn-left-ahead",
+      "meaning": "Turn left ahead (right if symbol reversed)",
+      "category": "regulatory",
+      "shape": "circle",
+      "officialNumber": null,
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "keep-left",
+      "meaning": "Keep left (right if symbol reversed)",
+      "category": "regulatory",
+      "shape": "circle",
+      "officialNumber": null,
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "pedal-cycles-only",
+      "meaning": "Route to be used by pedal cycles only",
+      "category": "regulatory",
+      "shape": "circle",
+      "officialNumber": null,
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "no-through-road",
+      "meaning": "No through road for vehicles",
+      "category": "information",
+      "shape": "rectangle",
+      "officialNumber": null,
+      "file": null,
+      "status": "pending-official-asset"
     }
   ]
 }

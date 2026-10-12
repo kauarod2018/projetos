@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "id": "parking-and-waiting",
+  "niche": "uk-driving-theory",
+  "area": "rules-of-the-road",
+  "order": 9,
+  "tier": "complete",
+  "officialTopics": [
+    "rules-of-the-road"
+  ],
+  "title": "Parking & Waiting",
+  "whatItIs": "Park where you won't put anyone in danger or block the way. Some of these rules are the law.",
+  "keyFacts": [
+    {
+      "text": "Before you leave the car you MUST switch off the engine, headlights and fog lights and apply the handbrake.",
+      "law": true
+    },
+    "Don't park within 10 metres of a junction, unless in a marked parking space.",
+    {
+      "text": "At night you MUST NOT park on a road facing against the traffic, except in a marked parking space.",
+      "law": true
+    },
+    {
+      "text": "On a road with a limit over 30 mph, you MUST use parking lights when parked at night.",
+      "law": true
+    },
+    "Parking on a hill: uphill, turn the wheels away from the kerb; downhill, turn them towards it."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Don't park here",
+    "columns": 3,
+    "items": [
+      {
+        "title": "Within 10 m of a junction",
+        "text": "Drivers turning in can't see, and you block their way.",
+        "icon": "git-fork"
+      },
+      {
+        "title": "Near a school entrance",
+        "text": "Children can be hidden behind your car.",
+        "icon": "school"
+      },
+      {
+        "title": "Near a bus or tram stop",
+        "text": "Buses and trams need to pull in close to the kerb.",
+        "icon": "bus"
+      },
+      {
+        "title": "On a bend or hill brow",
+        "text": "Other drivers come on you with no warning.",
+        "icon": "mountain"
+      },
+      {
+        "title": "At a lowered kerb",
+        "text": "It is there for wheelchairs, buggies and mobility scooters.",
+        "icon": "accessibility"
+      },
+      {
+        "title": "On zigzag lines",
+        "text": "Crossing zigzags must be kept clear.",
+        "icon": "footprints",
+        "law": true
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Parking lights",
+      "points": [
+        "For parking at night",
+        "Needed on roads over 30 mph"
+      ]
+    },
+    "b": {
+      "label": "Hazard warning lights",
+      "points": [
+        "Not for parking",
+        "Only when stopped and blocking traffic"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You park at night on a road with a 40 mph limit. What must you do?",
+      "options": [
+        "Leave your parking lights on",
+        "Leave your hazard lights on",
+        "Park facing the oncoming traffic",
+        "Leave your dipped headlights on"
+      ],
+      "answerIndex": 0,
+      "why": "On roads with a limit above 30 mph, vehicles parked at night must show parking lights."
+    }
+  ],
+  "traps": [
+    "It is 10 metres from a junction, not 10 car lengths.",
+    "Hazard lights are not a licence to park where you shouldn't.",
+    "At night, park facing the same way as the traffic on your side."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 238 to 252 (Waiting and parking)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "id": "motorways-lanes-overtaking",
+  "niche": "uk-driving-theory",
+  "area": "motorways",
+  "order": 3,
+  "tier": "basic",
+  "officialTopics": [
+    "motorway-rules"
+  ],
+  "title": "Motorway Lanes & Overtaking",
+  "whatItIs": "On a motorway the left-hand lane is your normal lane. The other lanes are for overtaking, and you move back once you have passed.",
+  "keyFacts": [
+    "Drive in the left-hand lane unless you are overtaking. Move back to it as soon as it is safe.",
+    {
+      "text": "On motorways with 3 or more lanes, you MUST NOT use the right-hand lane if you are towing a trailer.",
+      "law": true
+    },
+    "Overtake only on the right. Don't move to a lane on your left to overtake.",
+    "In queues, if the lane on your left is moving faster, you may keep going in it.",
+    {
+      "text": "You MUST NOT stop on the hard shoulder, except in an emergency or when told to.",
+      "law": true
+    }
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "What each lane is for",
+    "columns": 2,
+    "items": [
+      {
+        "title": "Left-hand lane",
+        "text": "Your normal driving lane. Return to it after overtaking.",
+        "icon": "arrow-up"
+      },
+      {
+        "title": "Middle and right lanes",
+        "text": "For overtaking. Move back left when you have passed.",
+        "icon": "arrow-up-right"
+      },
+      {
+        "title": "Towing a trailer or caravan",
+        "text": "Never the right-hand lane on a motorway with 3 or more lanes.",
+        "icon": "caravan",
+        "law": true
+      },
+      {
+        "title": "Hard shoulder",
+        "text": "For emergencies only, unless signs open it as a lane.",
+        "icon": "triangle-alert",
+        "law": true
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Overtaking on the left",
+      "points": [
+        "Not allowed",
+        "Don't move left to pass someone"
+      ]
+    },
+    "b": {
+      "label": "Queue moving faster on the left",
+      "points": [
+        "Allowed in congestion",
+        "Keep going in your lane"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You are towing a caravan on a three-lane motorway. Which lane must you NOT use?",
+      "options": [
+        "The right-hand lane",
+        "The left-hand lane",
+        "The middle lane",
+        "The hard shoulder in an emergency"
+      ],
+      "answerIndex": 0,
+      "why": "Vehicles towing trailers must not use the right-hand lane of a motorway with three or more lanes."
+    }
+  ],
+  "traps": [
+    "Once you have overtaken, move back left: don't sit in the middle lane.",
+    "Towing on a motorway: 60 mph limit, and never the right-hand lane on 3 or more lanes.",
+    "Passing on the left is only OK in queues where your lane is moving faster."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 253 to 274 (Motorways)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

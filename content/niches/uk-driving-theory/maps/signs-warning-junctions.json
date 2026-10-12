@@ -5,7 +5,9 @@
   "area": "signs",
   "order": 2,
   "tier": "basic",
-  "officialTopics": ["road-and-traffic-signs"],
+  "officialTopics": [
+    "road-and-traffic-signs"
+  ],
   "title": "Warning Signs: Junctions, Bends & Layout",
   "whatItIs": "Signs that warn you about a hazard ahead, such as a junction, a bend or a change in the road layout. Most are triangles with a red border.",
   "keyFacts": [
@@ -34,23 +36,39 @@
   "confused": {
     "a": {
       "label": "Warning triangle (point up)",
-      "points": ["Tells you about a hazard ahead", "Slow down and get ready to react"]
+      "points": [
+        "Tells you about a hazard ahead",
+        "Slow down and get ready to react"
+      ]
     },
     "b": {
       "label": "GIVE WAY (point down)",
-      "points": ["An order, not a warning", "Let traffic on the major road go first"]
+      "points": [
+        "An order, not a warning",
+        "Let traffic on the major road go first"
+      ]
     }
   },
   "onTheTest": [
     {
       "question": "What shape are most warning signs?",
-      "options": ["Circle", "Triangle", "Rectangle", "Octagon"],
+      "options": [
+        "Circle",
+        "Triangle",
+        "Rectangle",
+        "Octagon"
+      ],
       "answerIndex": 1,
       "why": "Triangles warn, circles give orders and rectangles mostly inform. The octagon is used only for STOP."
     },
     {
       "question": "On a crossroads warning sign, one line is broader than the other. What does the broader line show?",
-      "options": ["The road with priority", "The busier road", "A dual carriageway", "The road you must turn into"],
+      "options": [
+        "The road with priority",
+        "The busier road",
+        "A dual carriageway",
+        "The road you must turn into"
+      ],
       "answerIndex": 0,
       "why": "The broader line marks the priority route. If you're on the narrower road, expect to give way."
     }
@@ -61,9 +79,20 @@
     "Read the plate under the sign: it can tell you the distance to the hazard or how far it goes on."
   ],
   "sources": [
-    { "doc": "The Highway Code", "ref": "Traffic signs: warning signs", "url": "https://www.gov.uk/guidance/the-highway-code" },
-    { "doc": "Know Your Traffic Signs (DfT)", "ref": "Warning signs", "url": "https://assets.publishing.service.gov.uk/media/655dca78046ed4000d8b9de7/know-your-traffic-signs-dft.pdf" }
+    {
+      "doc": "The Highway Code",
+      "ref": "Traffic signs: warning signs",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "Know Your Traffic Signs (DfT)",
+      "ref": "Warning signs",
+      "url": "https://assets.publishing.service.gov.uk/media/655dca78046ed4000d8b9de7/know-your-traffic-signs-dft.pdf"
+    }
   ],
   "jurisdictionNotes": [],
-  "review": { "status": "draft", "notes": "Official sign images still to be imported (content/assets/signs/gb)." }
+  "review": {
+    "status": "draft",
+    "notes": "Official sign images still to be imported (content/assets/signs/gb)."
+  }
 }

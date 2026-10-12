@@ -74,6 +74,33 @@ Nos diagramas de rotatória, as rotas usam azul `#2563EB`, laranja `#EA580C` e r
 - A resposta certa fica com contorno e fundo na cor da área, mais um ✓. As erradas ficam sem caixa.
 - Mapas em rascunho levam a marca d'água "DRAFT" em vermelho bem claro e o rodapé em vermelho.
 
+## Tipos de visual do mapa
+
+O bloco do visual ocupa o espaço que sobra na página. Os blocos crescem até um limite e o resto fica centralizado, para
+não sobrar um buraco em branco nem esticar demais.
+
+| Tipo | Quando usar | Exemplo |
+|---|---|---|
+| `sign-grid` | Até 10 placas oficiais com legenda | 1.03 Warning signs |
+| `bar-scale` | Barras empilhadas (tempo de reação + frenagem) | 4.01 Stopping distances |
+| `road-diagram` | Rotatória desenhada por geometria | 2.05 Roundabouts |
+| `table` | Comparações em linhas; tabela de até 6 linhas ganha letra maior | 2.01, 6.03 |
+| `cards` | 2 a 9 cartões com ícone Lucide ou amostra de cor; selo LAW opcional | 1.06, 3.06 |
+| `steps` | 2 a 6 passos em ordem, com setas | 2.04, 6.09 |
+| `stats` | 2 a 4 números grandes; número longo reduz a linha toda | 4.02, 5.03 |
+| `markings` | Faixas pintadas, desenhadas a partir de um padrão fixo (você dirige na faixa de cima) | 1.07, 1.08 |
+| `light-sequence` | Semáforo, com as luzes acesas de cada fase | 1.09 |
+
+Regra de conteúdo: 4 a 6 fatos-chave, 1 questão (no máximo 2), 2 a 3 armadilhas. Menos texto, mais visual.
+
+## Capa e sumário dos pacotes
+
+Cada pacote abre com 2 páginas:
+
+- **Capa:** os números do pacote (mapas, questões, armadilhas, contados dos arquivos), a linha de faixa nas 6 cores das
+  áreas, o modo de usar, a legenda, o aviso de independência e as licenças.
+- **Sumário:** os mapas agrupados por área, em 2 colunas.
+
 ## Marca (site, bônus e anúncios)
 
 Marca: **Ajuda com Provas**, traduzida por idioma (`content/site.json`): **Test Help** em inglês britânico. O símbolo é um

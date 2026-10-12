@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "id": "alcohol",
+  "niche": "uk-driving-theory",
+  "area": "hazards-and-vulnerable",
+  "order": 3,
+  "tier": "basic",
+  "officialTopics": [
+    "hazard-awareness"
+  ],
+  "title": "Alcohol & the Law",
+  "whatItIs": "Alcohol slows your reactions and makes you overconfident. The only safe amount before driving is none.",
+  "keyFacts": [
+    {
+      "text": "You MUST NOT drive with alcohol in your body above the legal limit.",
+      "law": true
+    },
+    "Alcohol slows reactions, affects judgement of speed and distance, and gives false confidence.",
+    "There is no way to tell how much is safe, so the safest choice is not to drink at all if you will drive.",
+    "Alcohol can still be in your body the next morning.",
+    "Drink-driving can mean at least a 1-year ban, an unlimited fine and up to 6 months in prison."
+  ],
+  "visual": {
+    "type": "stats",
+    "caption": "Legal limits in England and Wales",
+    "items": [
+      {
+        "value": "35 µg",
+        "label": "Per 100 ml of breath"
+      },
+      {
+        "value": "80 mg",
+        "label": "Per 100 ml of blood"
+      },
+      {
+        "value": "107 mg",
+        "label": "Per 100 ml of urine"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "England and Wales",
+      "points": [
+        "35 µg per 100 ml of breath",
+        "80 mg per 100 ml of blood"
+      ]
+    },
+    "b": {
+      "label": "Scotland",
+      "points": [
+        "22 µg per 100 ml of breath",
+        "50 mg per 100 ml of blood"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You are going to drive this evening. How much alcohol is safe to drink?",
+      "options": [
+        "None at all",
+        "One pint of beer",
+        "Two small glasses of wine",
+        "Any amount, if you eat a meal"
+      ],
+      "answerIndex": 0,
+      "why": "Alcohol affects everyone differently, so there is no safe amount. The safest choice is not to drink at all if you are driving."
+    }
+  ],
+  "traps": [
+    "Coffee, a cold shower or food don't remove alcohol from your body.",
+    "You can still be over the limit the morning after.",
+    "Scotland's limit is lower than England and Wales."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 95 (Alcohol)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "GOV.UK",
+      "ref": "The drink drive limit",
+      "url": "https://www.gov.uk/drink-drive-limit"
+    },
+    {
+      "doc": "GOV.UK",
+      "ref": "Drink-driving penalties",
+      "url": "https://www.gov.uk/drink-driving-penalties"
+    }
+  ],
+  "jurisdictionNotes": [
+    {
+      "jurisdiction": "scotland",
+      "text": "Scotland's limits are lower: 22 µg per 100 ml of breath, 50 mg per 100 ml of blood, 67 mg per 100 ml of urine."
+    },
+    {
+      "jurisdiction": "england-and-wales",
+      "text": "A lower limit for England and Wales has been proposed but was not law when this map was written. Check before your test."
+    }
+  ],
+  "review": {
+    "status": "draft"
+  }
+}

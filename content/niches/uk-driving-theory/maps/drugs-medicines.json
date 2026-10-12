@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "id": "drugs-medicines",
+  "niche": "uk-driving-theory",
+  "area": "hazards-and-vulnerable",
+  "order": 4,
+  "tier": "complete",
+  "officialTopics": [
+    "hazard-awareness"
+  ],
+  "title": "Drugs & Medicines",
+  "whatItIs": "Illegal drugs and some medicines can make you unsafe to drive. Driving while impaired by either is against the law.",
+  "keyFacts": [
+    {
+      "text": "You MUST NOT drive under the influence of drugs or medicine.",
+      "law": true
+    },
+    {
+      "text": "You MUST NOT drive with certain drugs in your blood above set limits, even if you feel fine.",
+      "law": true
+    },
+    "Some prescribed and over-the-counter medicines, like cold or hay fever remedies, can make you drowsy.",
+    "Read the leaflet, and ask your doctor or pharmacist if it is safe to drive.",
+    "Drug-driving penalties include at least a 1-year ban, an unlimited fine and a criminal record."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Before you drive",
+    "columns": 2,
+    "items": [
+      {
+        "title": "Illegal drugs",
+        "text": "Never drive after taking them. Their effects are unpredictable.",
+        "icon": "ban",
+        "law": true
+      },
+      {
+        "title": "Medicines",
+        "text": "Check the leaflet for warnings about drowsiness or driving.",
+        "icon": "pill"
+      },
+      {
+        "title": "Not sure?",
+        "text": "Ask your doctor or pharmacist before you drive.",
+        "icon": "stethoscope"
+      },
+      {
+        "title": "Roadside tests",
+        "text": "The police can test you for drugs at the roadside.",
+        "icon": "siren"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Illegal drugs",
+      "points": [
+        "Never drive after taking them",
+        "Illegal above very low limits"
+      ]
+    },
+    "b": {
+      "label": "Medicines",
+      "points": [
+        "Can be fine to drive on",
+        "Only if they don't impair you"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Your doctor has prescribed a new medicine. What should you do before you drive?",
+      "options": [
+        "Check if it is safe to drive while taking it",
+        "Drive only short distances",
+        "Drink a strong coffee first",
+        "Drive only in daylight"
+      ],
+      "answerIndex": 0,
+      "why": "Some medicines affect your driving. Read the leaflet and ask your doctor or pharmacist whether it is safe to drive."
+    }
+  ],
+  "traps": [
+    "Legal medicines can still make your driving illegal if they impair you.",
+    "Cold and flu remedies can cause drowsiness.",
+    "Feeling fine doesn't mean you are under the drug-driving limit."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 96 (Drugs and medicine)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "GOV.UK",
+      "ref": "Drugs and driving: the law",
+      "url": "https://www.gov.uk/drug-driving-law"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "id": "loading-and-towing",
+  "niche": "uk-driving-theory",
+  "area": "vehicle-docs-incidents",
+  "order": 4,
+  "tier": "basic",
+  "officialTopics": [
+    "vehicle-loading"
+  ],
+  "title": "Loading & Towing",
+  "whatItIs": "A heavy load or a trailer changes how your car brakes, steers and handles. Load it safely and know your limits.",
+  "keyFacts": [
+    {
+      "text": "Your load MUST be secure and MUST NOT stick out dangerously.",
+      "law": true
+    },
+    {
+      "text": "You MUST NOT overload your car or trailer: check the handbook for the maximum weights.",
+      "law": true
+    },
+    "With a heavy load you may need to change the tyre pressures and headlight aim.",
+    "If a trailer or caravan starts to snake, ease off the accelerator and slow down gently.",
+    "Towing: 50 mph on single carriageways, 60 mph on dual carriageways and motorways."
+  ],
+  "visual": {
+    "type": "stats",
+    "caption": "Towing in numbers",
+    "items": [
+      {
+        "value": "3,500 kg",
+        "label": "Maximum trailer weight on a car licence",
+        "note": "Most drivers since 16 December 2021 (trailer MAM)"
+      },
+      {
+        "value": "50 mph",
+        "label": "Single carriageways",
+        "note": "When towing a caravan or trailer"
+      },
+      {
+        "value": "60 mph",
+        "label": "Dual carriageways and motorways",
+        "note": "Never the right lane on 3 or more lanes"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Trailer snaking",
+      "points": [
+        "Ease off the accelerator",
+        "Slow down gently, no harsh braking"
+      ]
+    },
+    "b": {
+      "label": "Car skidding",
+      "points": [
+        "Ease off the pedals",
+        "Steer the way the rear is sliding"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Your caravan starts to snake from side to side. What should you do?",
+      "options": [
+        "Ease off the accelerator and slow down gently",
+        "Brake hard straight away",
+        "Speed up to straighten it",
+        "Steer sharply the other way"
+      ],
+      "answerIndex": 0,
+      "why": "Ease off the accelerator and reduce speed gently until the caravan is under control again."
+    }
+  ],
+  "traps": [
+    "Speeding up doesn't cure snaking: slowing down gently does.",
+    "Towing on a motorway with 3 or more lanes: never the right-hand lane.",
+    "A load sticking out dangerously is illegal, not just risky."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 98 (Vehicle towing and loading)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 124 (Speed limits)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "GOV.UK",
+      "ref": "Towing with a car",
+      "url": "https://www.gov.uk/towing-with-car"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft",
+    "notes": "Licence towing rule: drivers who passed their car test on or after 1 January 1997 can tow trailers up to 3,500 kg MAM since 16 December 2021. Confirm on gov.uk/towing-with-car."
+  }
+}

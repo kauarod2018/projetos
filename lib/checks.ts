@@ -222,6 +222,12 @@ export function checkContent(content: LoadedContent, opts: CheckOptions): CheckR
           errors.push(`${f}: map is verified but numbers.json → ${v.numbersKey} is not`);
         }
       }
+      if (v.type === 'cards') {
+        for (const c of v.items) {
+          if (!c.icon && !c.swatch) errors.push(`${f} → visual.items "${c.title}": give an icon or a swatch`);
+          if (c.icon && !existsSync(iconPath(c.icon))) errors.push(`${f} → visual.items "${c.title}": lucide icon "${c.icon}" does not exist`);
+        }
+      }
       if (v.type === 'road-diagram') {
         const exits = v.routes.map((r) => r.exit);
         if (new Set(exits).size !== exits.length) errors.push(`${f} → visual.routes: each exit can only appear once`);

@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "id": "motorways-who-can-use",
+  "niche": "uk-driving-theory",
+  "area": "motorways",
+  "order": 1,
+  "tier": "basic",
+  "officialTopics": [
+    "motorway-rules"
+  ],
+  "title": "Who Can Use Motorways (and Learners)",
+  "whatItIs": "Motorways are the safest roads per mile, but traffic is fast. Some road users are not allowed on them at all.",
+  "keyFacts": [
+    {
+      "text": "Motorways MUST NOT be used by pedestrians, cyclists, horse riders or motorcycles under 50 cc.",
+      "law": true
+    },
+    {
+      "text": "Slow vehicles such as farm tractors, mobility scooters and powered wheelchairs MUST NOT use motorways.",
+      "law": true
+    },
+    {
+      "text": "Learners MUST NOT use motorways unless with an approved driving instructor in a dual-control car with L plates.",
+      "law": true
+    },
+    {
+      "text": "Learner motorcyclists MUST NOT use motorways.",
+      "law": true
+    },
+    "Before a long motorway trip, check fuel, oil, water and tyres, and plan rest stops."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Who may use a motorway",
+    "columns": 3,
+    "items": [
+      {
+        "title": "Pedestrians",
+        "text": "Not allowed, except in an emergency.",
+        "icon": "footprints",
+        "law": true
+      },
+      {
+        "title": "Cyclists and horse riders",
+        "text": "Not allowed on motorways.",
+        "icon": "bike",
+        "law": true
+      },
+      {
+        "title": "Motorcycles under 50 cc",
+        "text": "Not allowed: too slow for motorway traffic.",
+        "icon": "gauge",
+        "law": true
+      },
+      {
+        "title": "Slow vehicles",
+        "text": "Farm tractors, mobility scooters and powered wheelchairs are not allowed.",
+        "icon": "tractor",
+        "law": true
+      },
+      {
+        "title": "Learner car drivers",
+        "text": "Only with an approved driving instructor in a dual-control car.",
+        "icon": "car-front",
+        "law": true
+      },
+      {
+        "title": "Full licence holders",
+        "text": "Cars, motorcycles of 50 cc or more, vans, lorries and buses.",
+        "icon": "check"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Learner with an instructor",
+      "points": [
+        "Allowed in a dual-control car",
+        "L plates (D plates in Wales)"
+      ]
+    },
+    "b": {
+      "label": "Learner with a parent",
+      "points": [
+        "Not allowed on a motorway",
+        "However experienced the parent is"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Who can take a learner car driver on a motorway?",
+      "options": [
+        "An approved driving instructor in a dual-control car",
+        "Any driver aged 21 or over",
+        "A parent who has held a licence for 3 years",
+        "Nobody: learners are banned from motorways"
+      ],
+      "answerIndex": 0,
+      "why": "Since 2018, learner car drivers can have motorway lessons, but only with an approved driving instructor in a car with dual controls."
+    }
+  ],
+  "traps": [
+    "Learners can't practise on a motorway with family or friends.",
+    "Learner motorcyclists still can't use motorways.",
+    "A motorcycle under 50 cc is banned, even with a full licence."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 253 to 274 (Motorways)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "GOV.UK",
+      "ref": "Driving lessons and learning to drive",
+      "url": "https://www.gov.uk/driving-lessons-learning-to-drive"
+    }
+  ],
+  "jurisdictionNotes": [
+    {
+      "jurisdiction": "wales",
+      "text": "In Wales learners can show D plates instead of L plates."
+    }
+  ],
+  "review": {
+    "status": "draft"
+  }
+}

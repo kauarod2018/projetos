@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "id": "motorways-signals-red-x",
+  "niche": "uk-driving-theory",
+  "area": "motorways",
+  "order": 4,
+  "tier": "basic",
+  "officialTopics": [
+    "motorway-rules",
+    "road-and-traffic-signs"
+  ],
+  "title": "Motorway Signals & the Red X",
+  "whatItIs": "Signals above the lanes and at the roadside warn of danger ahead. A red X closes a lane, and it is the law.",
+  "keyFacts": [
+    {
+      "text": "A red X above a lane means it is closed: you MUST NOT drive in that lane beyond the signal.",
+      "law": true
+    },
+    {
+      "text": "A speed limit shown in a red ring above your lane is the legal limit.",
+      "law": true
+    },
+    {
+      "text": "Red lights flashing at the roadside or on the central reservation: you MUST NOT go past them in any lane.",
+      "law": true
+    },
+    "Flashing amber lights warn of a hazard ahead: slow down and watch for lane closures.",
+    "Signs may show a lane closed ahead with an arrow: move to the open lane in good time."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Signals you must know",
+    "columns": 2,
+    "items": [
+      {
+        "title": "Red X over your lane",
+        "text": "The lane is closed. Move to an open lane in good time.",
+        "icon": "x",
+        "law": true
+      },
+      {
+        "title": "Speed in a red ring",
+        "text": "The legal limit for that stretch, even if the road looks clear.",
+        "icon": "gauge",
+        "law": true
+      },
+      {
+        "title": "Flashing red at the side",
+        "text": "Stop. Don't go past the signal in any lane.",
+        "icon": "octagon-alert",
+        "law": true
+      },
+      {
+        "title": "Flashing amber",
+        "text": "Hazard ahead. Slow down and be ready for lane changes.",
+        "icon": "triangle-alert"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Red X over your lane",
+      "points": [
+        "That lane is closed",
+        "Other lanes may stay open"
+      ]
+    },
+    "b": {
+      "label": "Red lights at the roadside",
+      "points": [
+        "The whole carriageway is closed",
+        "Don't pass them in any lane"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "A red X is shown above your lane on a motorway. What does it mean?",
+      "options": [
+        "The lane is closed: move to another lane",
+        "Slow down to 40 mph",
+        "The lane is for breakdown vehicles",
+        "Give way to traffic joining"
+      ],
+      "answerIndex": 0,
+      "why": "A red X closes the lane. You must not drive in that lane past the signal, usually because of an incident or people ahead."
+    }
+  ],
+  "traps": [
+    "A red X is not advice: driving under it is an offence.",
+    "A speed in a red ring over the lanes is the legal limit, not a suggestion.",
+    "Flashing red at the side of the road closes every lane."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 255 to 258 (Motorway signals)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "GOV.UK",
+      "ref": "How to drive on a smart motorway",
+      "url": "https://www.gov.uk/guidance/how-to-drive-on-a-smart-motorway"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "id": "mini-and-multiple-roundabouts",
+  "niche": "uk-driving-theory",
+  "area": "rules-of-the-road",
+  "order": 6,
+  "tier": "complete",
+  "officialTopics": [
+    "rules-of-the-road"
+  ],
+  "title": "Mini & Multiple Roundabouts",
+  "whatItIs": "Mini-roundabouts follow the same rules as large ones, with less space and less time. At double or multiple roundabouts, treat each one separately.",
+  "keyFacts": [
+    "Give way to traffic from your right, as at any roundabout.",
+    {
+      "text": "You MUST drive round the central marking. Only large vehicles that can't get round may drive over it.",
+      "law": true
+    },
+    "There is less room and less time to signal, so plan your lane and signal early.",
+    "Avoid U-turns at mini-roundabouts, and watch out for others making them.",
+    "At double and multiple roundabouts, treat each roundabout separately and give way to traffic from the right at each one."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Mini and multiple roundabouts",
+    "columns": 2,
+    "items": [
+      {
+        "icon": "circle-dot",
+        "title": "Mini-roundabout",
+        "text": "Same rules as a big one: give way to traffic from the right."
+      },
+      {
+        "icon": "circle",
+        "title": "The white circle",
+        "text": "Drive round it. Only large vehicles may drive over it if they must.",
+        "law": true
+      },
+      {
+        "icon": "repeat",
+        "title": "U-turns",
+        "text": "Avoid them here, and expect other drivers to make them."
+      },
+      {
+        "icon": "git-fork",
+        "title": "Double or multiple",
+        "text": "Treat each roundabout on its own. Give way to the right at each one."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Mini-roundabout sign",
+      "points": [
+        "Blue circle with white arrows",
+        "An order: give way to traffic from the right"
+      ]
+    },
+    "b": {
+      "label": "Roundabout ahead sign",
+      "points": [
+        "Red triangle with black arrows",
+        "A warning: a roundabout is coming"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "At a mini-roundabout, which vehicles may drive over the central white circle?",
+      "options": [
+        "Large vehicles that can't get round it",
+        "Any vehicle turning right",
+        "Cars when the roundabout is empty",
+        "Only motorcycles"
+      ],
+      "answerIndex": 0,
+      "why": "All vehicles must go round the central marking. The only exception is large vehicles that physically can't."
+    }
+  ],
+  "traps": [
+    "A mini-roundabout is still a roundabout: give way to traffic from the right.",
+    "Driving over the white circle in a car breaks the rule.",
+    "At a double mini-roundabout, give way at each one, not just the first."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 188 to 190 (Mini-roundabouts)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

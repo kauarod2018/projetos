@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "id": "night-driving-dazzle",
+  "niche": "uk-driving-theory",
+  "area": "safety-margins",
+  "order": 9,
+  "tier": "complete",
+  "officialTopics": [
+    "vehicle-handling",
+    "alertness"
+  ],
+  "title": "Driving at Night & Dazzle",
+  "whatItIs": "At night you see less and others see you less. Use your lights well and never dazzle other road users.",
+  "keyFacts": [
+    "If oncoming headlights dazzle you, slow down and stop if you need to.",
+    "Dip your headlights for oncoming traffic and when you are following another vehicle.",
+    "When overtaking at night, stay on dipped beam until you are level, then use main beam if needed.",
+    "Drive at a speed that lets you stop within the distance your lights show to be clear.",
+    "Pedestrians, cyclists and horse riders are much harder to see after dark."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Seeing and being seen at night",
+    "columns": 2,
+    "items": [
+      {
+        "title": "Main beam",
+        "text": "On unlit roads when nobody is ahead or coming towards you.",
+        "icon": "sun"
+      },
+      {
+        "title": "Dipped beam",
+        "text": "In built-up areas, for oncoming traffic and when following.",
+        "icon": "lightbulb"
+      },
+      {
+        "title": "Dazzled",
+        "text": "Slow down, and stop if you need to. Don't look at the lights.",
+        "icon": "eye-off"
+      },
+      {
+        "title": "Clean glass",
+        "text": "A dirty windscreen makes glare much worse at night.",
+        "icon": "sparkles"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Main beam",
+      "points": [
+        "Unlit roads, nobody ahead",
+        "Dip it for others"
+      ]
+    },
+    "b": {
+      "label": "Dipped beam",
+      "points": [
+        "Built-up areas and traffic",
+        "Doesn't dazzle others"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You are dazzled by the headlights of an oncoming vehicle. What should you do?",
+      "options": [
+        "Slow down, and stop if you need to",
+        "Flash your headlights at them",
+        "Switch to main beam",
+        "Look straight at their lights"
+      ],
+      "answerIndex": 0,
+      "why": "If you are dazzled, slow down and if necessary stop until you can see properly again."
+    }
+  ],
+  "traps": [
+    "Don't answer dazzle with your own main beam.",
+    "At dusk, cyclists and pedestrians are especially hard to see.",
+    "Tiredness is worse at night: plan rest breaks."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 113 to 116 (Lighting)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 126 (Stopping distances)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

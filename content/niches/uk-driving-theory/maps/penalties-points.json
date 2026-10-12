@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "id": "penalties-points",
+  "niche": "uk-driving-theory",
+  "area": "vehicle-docs-incidents",
+  "order": 7,
+  "tier": "complete",
+  "officialTopics": [
+    "essential-documents"
+  ],
+  "title": "Penalties & Points",
+  "whatItIs": "Penalty points (endorsements) go on your driving record when you break certain traffic laws. Too many and you lose your licence.",
+  "keyFacts": [
+    "If you get 12 or more points within 3 years, you can be banned from driving.",
+    "New drivers: 6 or more points within 2 years of passing and your licence is revoked.",
+    "Points stay on your driving record for 4 or 11 years, depending on the offence.",
+    "Using a hand-held phone while driving: £200 and 6 points.",
+    "Speeding usually means at least 3 points, and can mean up to 6."
+  ],
+  "visual": {
+    "type": "stats",
+    "caption": "Points in numbers",
+    "items": [
+      {
+        "value": "12 points",
+        "label": "Within 3 years",
+        "note": "You can be banned from driving"
+      },
+      {
+        "value": "6 points",
+        "label": "New drivers, within 2 years",
+        "note": "Your licence is revoked"
+      },
+      {
+        "value": "4 or 11 yrs",
+        "label": "How long points stay on record",
+        "note": "Depends on the offence"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Licence revoked (new driver)",
+      "points": [
+        "Back to a provisional licence",
+        "Pass theory and practical again"
+      ]
+    },
+    "b": {
+      "label": "Disqualified (ban)",
+      "points": [
+        "Can't drive for a set time",
+        "Set by a court"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You passed your test a year ago. How many points would get your licence revoked?",
+      "options": [
+        "6",
+        "3",
+        "9",
+        "12"
+      ],
+      "answerIndex": 0,
+      "why": "If you get 6 or more points within 2 years of passing your test, your licence is revoked."
+    }
+  ],
+  "traps": [
+    "12 points is the limit for experienced drivers. New drivers lose their licence at 6.",
+    "Drink-driving endorsements stay on your record for 11 years.",
+    "Points are counted over 3 years, not one calendar year."
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK",
+      "ref": "Penalty points (endorsements)",
+      "url": "https://www.gov.uk/penalty-points-endorsements"
+    },
+    {
+      "doc": "GOV.UK",
+      "ref": "New drivers: penalty points",
+      "url": "https://www.gov.uk/penalty-points-endorsements/new-drivers"
+    },
+    {
+      "doc": "GOV.UK",
+      "ref": "Using mobile phones when driving: the law",
+      "url": "https://www.gov.uk/using-mobile-phones-when-driving-the-law"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

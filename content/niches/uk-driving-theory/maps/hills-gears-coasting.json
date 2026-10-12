@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "hills-gears-coasting",
+  "niche": "uk-driving-theory",
+  "area": "safety-margins",
+  "order": 7,
+  "tier": "complete",
+  "officialTopics": [
+    "vehicle-handling"
+  ],
+  "title": "Hills, Gears & Coasting",
+  "whatItIs": "Hills change how your car speeds up and slows down. Use the right gear, and don't coast.",
+  "keyFacts": [
+    "Coasting means rolling in neutral or with the clutch pressed down. Avoid it.",
+    "When you coast you lose engine braking, so you speed up quickly downhill and have less control.",
+    "On a steep downhill, choose a lower gear so engine braking helps control your speed.",
+    "Parking uphill: turn the wheels away from the kerb. Downhill: turn them towards it.",
+    "On single-track roads, give way to vehicles coming uphill whenever you can."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Hills and gears",
+    "columns": 2,
+    "items": [
+      {
+        "title": "Going downhill",
+        "text": "Use a lower gear so the engine helps you hold your speed.",
+        "icon": "trending-down"
+      },
+      {
+        "title": "Going uphill",
+        "text": "You may need a lower gear. Hold back from slow vehicles ahead.",
+        "icon": "trending-up"
+      },
+      {
+        "title": "Coasting",
+        "text": "No engine braking and less control. Keep the car in gear.",
+        "icon": "circle-slash"
+      },
+      {
+        "title": "Narrow hill roads",
+        "text": "Give way to vehicles coming uphill when you can.",
+        "icon": "mountain"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Parked facing uphill",
+      "points": [
+        "Wheels turned away from the kerb",
+        "Handbrake on, first gear"
+      ]
+    },
+    "b": {
+      "label": "Parked facing downhill",
+      "points": [
+        "Wheels turned towards the kerb",
+        "Handbrake on, reverse gear"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Why is coasting downhill dangerous?",
+      "options": [
+        "You lose engine braking",
+        "It uses more fuel",
+        "The brakes stop working",
+        "The steering locks"
+      ],
+      "answerIndex": 0,
+      "why": "Coasting removes engine braking, so the car speeds up quickly downhill and you have less control."
+    }
+  ],
+  "traps": [
+    "Coasting doesn't save useful fuel, and it costs you control.",
+    "Uphill parking: wheels away from the kerb, so the car rolls into it.",
+    "On narrow hill roads, the vehicle coming uphill usually gets priority."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 122 (Coasting)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 252 (Parking on hills)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 155 (Single-track roads)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

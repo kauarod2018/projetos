@@ -1,0 +1,95 @@
+{
+  "schemaVersion": 1,
+  "id": "turning-and-box-junctions",
+  "niche": "uk-driving-theory",
+  "area": "rules-of-the-road",
+  "order": 4,
+  "tier": "complete",
+  "officialTopics": [
+    "rules-of-the-road"
+  ],
+  "title": "Turning Left & Right, Box Junctions",
+  "whatItIs": "Turning safely is a routine: mirrors, signal, position, speed, look. Box junctions keep crossings clear of queuing traffic.",
+  "keyFacts": [
+    "Turning right: position just left of the middle of the road, or in the lane marked for turning right.",
+    "Wait for a safe gap in the oncoming traffic, and don't cut the corner.",
+    "Turning left: keep close to the left and watch for cyclists, motorcyclists and pedestrians on your left.",
+    "Don't overtake just before you turn left.",
+    {
+      "text": "You MUST NOT enter a box junction unless your exit road or lane is clear.",
+      "law": true
+    },
+    "You may wait in a box when turning right if only oncoming traffic or other right-turners stop you."
+  ],
+  "visual": {
+    "type": "steps",
+    "caption": "The routine for every turn",
+    "items": [
+      {
+        "title": "Mirrors",
+        "text": "Check what is behind and beside you, including bikes on your left."
+      },
+      {
+        "title": "Signal",
+        "text": "Signal in good time so others know what you plan to do."
+      },
+      {
+        "title": "Position",
+        "text": "Left turn: keep left. Right turn: just left of the centre line."
+      },
+      {
+        "title": "Speed",
+        "text": "Slow down to a safe speed for the turn."
+      },
+      {
+        "title": "Look",
+        "text": "Look for traffic and pedestrians, then turn when it is safe."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Offside to offside",
+      "points": [
+        "Both turn right passing behind each other",
+        "Usually the safest way"
+      ]
+    },
+    "b": {
+      "label": "Nearside to nearside",
+      "points": [
+        "Both turn right passing in front",
+        "Your view of oncoming traffic is blocked"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You are turning left into a side road. Who should you watch for most carefully?",
+      "options": [
+        "Cyclists coming up on your left",
+        "Vehicles overtaking you on the right",
+        "Oncoming lorries",
+        "Cars parked on the right"
+      ],
+      "answerIndex": 0,
+      "why": "Cyclists and motorcyclists can be on your left as you turn. Check your left mirror and blind spot before you turn."
+    }
+  ],
+  "traps": [
+    "A signal tells others your plan: it doesn't give you priority.",
+    "A box junction isn't a place to wait in a queue. Turning right is the only exception.",
+    "Don't cut the corner when turning right."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 174 to 183 (Road junctions)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

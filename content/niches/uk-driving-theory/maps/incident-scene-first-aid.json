@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "incident-scene-first-aid",
+  "niche": "uk-driving-theory",
+  "area": "vehicle-docs-incidents",
+  "order": 9,
+  "tier": "basic",
+  "officialTopics": [
+    "incidents-accidents-and-emergencies"
+  ],
+  "title": "At the Scene of an Incident & First Aid",
+  "whatItIs": "At an incident, make the scene safe, get help and give basic first aid. Knowing DR ABC can save a life.",
+  "keyFacts": [
+    {
+      "text": "In a collision causing damage or injury, you MUST stop. Give your details, or report it to the police within 24 hours.",
+      "law": true
+    },
+    "Call 999 or 112 and give the exact location and the number of vehicles involved.",
+    "Don't move casualties who are still in vehicles unless there is further danger.",
+    "Don't remove a motorcyclist's helmet unless it is essential.",
+    "Don't give casualties anything to eat or drink. Keep them warm and reassure them.",
+    "Burns: cool with clean, cool water for at least 20 minutes."
+  ],
+  "visual": {
+    "type": "steps",
+    "caption": "DR ABC: first aid in order",
+    "items": [
+      {
+        "title": "D · Danger",
+        "text": "Check for danger. Switch off engines, warn traffic, stop anyone smoking."
+      },
+      {
+        "title": "R · Response",
+        "text": "Ask questions and gently shake their shoulders to get a response."
+      },
+      {
+        "title": "A · Airway",
+        "text": "No response? Tilt the head back gently to open the airway."
+      },
+      {
+        "title": "B · Breathing",
+        "text": "Look, listen and feel for normal breathing."
+      },
+      {
+        "title": "C · Circulation",
+        "text": "Not breathing normally? Chest compressions: 5 to 6 cm, about twice a second."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Burns",
+      "points": [
+        "Cool with water for at least 20 minutes",
+        "Don't remove anything stuck to the burn"
+      ]
+    },
+    "b": {
+      "label": "Bleeding",
+      "points": [
+        "Press firmly on the wound",
+        "Something in it? Pad around it"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "An adult casualty is not breathing normally. How deep should chest compressions be?",
+      "options": [
+        "5 to 6 cm",
+        "1 to 2 cm",
+        "10 to 12 cm",
+        "As deep as possible"
+      ],
+      "answerIndex": 0,
+      "why": "Press hard and fast in the centre of the chest, 5 to 6 cm deep, at about twice a second."
+    }
+  ],
+  "traps": [
+    "Burns: at least 20 minutes of cool water. Older books say 10.",
+    "Don't take off a motorcyclist's helmet unless it is essential.",
+    "Don't give a casualty anything to drink, not even water."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Annex 7 (First aid on the road)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 286 (If you are involved in a collision)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft",
+    "notes": "Check whether the current Annex 7 heads the last DR ABC step \"Circulation\" or \"Compressions\"."
+  }
+}

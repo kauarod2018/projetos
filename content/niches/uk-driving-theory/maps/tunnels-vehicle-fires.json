@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "tunnels-vehicle-fires",
+  "niche": "uk-driving-theory",
+  "area": "vehicle-docs-incidents",
+  "order": 10,
+  "tier": "complete",
+  "officialTopics": [
+    "incidents-accidents-and-emergencies"
+  ],
+  "title": "Tunnels & Vehicle Fires",
+  "whatItIs": "In a tunnel there is little room and little light. A breakdown or a fire there needs quick, calm action.",
+  "keyFacts": [
+    "Before a tunnel: dipped headlights on, sunglasses off, and tune in to the radio for traffic information.",
+    "Keep at least a two-second gap in a tunnel.",
+    "Broken down in a tunnel: hazard lights on, engine off, get out and call for help from an emergency point.",
+    "Fire in a tunnel: drive out if you can. If not, stop, engine off, leave the keys in and get out at once.",
+    "Engine fire anywhere: get everyone out to a safe place and call 999. Don't open the bonnet."
+  ],
+  "visual": {
+    "type": "steps",
+    "caption": "If your car catches fire in a tunnel",
+    "items": [
+      {
+        "title": "Drive out",
+        "text": "If the car still drives, keep going and leave the tunnel."
+      },
+      {
+        "title": "Can't drive out?",
+        "text": "Pull over, hazard lights on, switch off the engine."
+      },
+      {
+        "title": "Keys in, get out",
+        "text": "Leave the keys so the car can be moved. Get everyone out."
+      },
+      {
+        "title": "Raise the alarm",
+        "text": "Use an emergency point. Use an extinguisher only if it is safe."
+      },
+      {
+        "title": "Head for an exit",
+        "text": "Walk to the nearest emergency exit straight away."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Breakdown in a tunnel",
+      "points": [
+        "Hazards on, engine off",
+        "Get out, call from an emergency point"
+      ]
+    },
+    "b": {
+      "label": "Fire in a tunnel",
+      "points": [
+        "Drive out if you can",
+        "If not: keys in, get out at once"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Your car catches fire in a tunnel, but you can still drive it. What should you do?",
+      "options": [
+        "Drive out of the tunnel",
+        "Stop at once and get out",
+        "Open the bonnet to check",
+        "Reverse back to the entrance"
+      ],
+      "answerIndex": 0,
+      "why": "If you can, drive out of the tunnel. If you can't, pull over, switch off the engine, leave the keys in and get out."
+    }
+  ],
+  "traps": [
+    "Leave the keys in: it lets the emergency services move your car.",
+    "Opening the bonnet on an engine fire lets in air and makes it worse.",
+    "Take off your sunglasses before the tunnel: it is darker inside."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 126 (Stopping distances, tunnels)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Breakdowns and incidents: Incidents in tunnels",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft",
+    "notes": "Tunnel and fire advice cross-checked with tunnel operator guidance; confirm the current Highway Code tunnel rules and the bonnet advice on gov.uk."
+  }
+}

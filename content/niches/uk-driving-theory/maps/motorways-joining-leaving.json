@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "motorways-joining-leaving",
+  "niche": "uk-driving-theory",
+  "area": "motorways",
+  "order": 2,
+  "tier": "basic",
+  "officialTopics": [
+    "motorway-rules"
+  ],
+  "title": "Joining & Leaving a Motorway",
+  "whatItIs": "You join a motorway from a slip road and leave by one. Match your speed when joining, and plan your exit early.",
+  "keyFacts": [
+    "On the slip road, build up your speed to match the traffic on the motorway.",
+    "Give priority to traffic already on the motorway and join where there is a safe gap.",
+    "Stay in the left-hand lane long enough to get used to the speed before you overtake.",
+    "Countdown markers show the distance to the exit slip road: 300, 200 and 100 yards.",
+    "Move into the left lane well before your exit, signal left in good time, and slow down on the slip road.",
+    "After leaving, check your speedometer: you may be going faster than it feels."
+  ],
+  "visual": {
+    "type": "steps",
+    "caption": "Joining and leaving, step by step",
+    "items": [
+      {
+        "title": "Slip road",
+        "text": "Build up speed to match the traffic in the left lane."
+      },
+      {
+        "title": "Mirrors and look",
+        "text": "Check mirrors and look over your right shoulder for a gap."
+      },
+      {
+        "title": "Join a gap",
+        "text": "Give way to motorway traffic. Don't force your way in."
+      },
+      {
+        "title": "Settle in",
+        "text": "Stay in the left lane until you are used to the speed."
+      },
+      {
+        "title": "Exit early",
+        "text": "Get into the left lane early. Signal left by the markers."
+      },
+      {
+        "title": "Slow on the slip",
+        "text": "Slow down on the slip road, not on the motorway."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Joining",
+      "points": [
+        "Speed up on the slip road",
+        "Give way to motorway traffic"
+      ]
+    },
+    "b": {
+      "label": "Leaving",
+      "points": [
+        "Left lane early, then signal",
+        "Slow down on the slip road"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You are joining a motorway from a slip road. What should you do?",
+      "options": [
+        "Give way to traffic already on the motorway",
+        "Expect motorway traffic to move over for you",
+        "Join slowly, then speed up in the left lane",
+        "Stop at the end of the slip road and wait"
+      ],
+      "answerIndex": 0,
+      "why": "Traffic on the motorway has priority. Match its speed on the slip road and join where there is a safe gap."
+    }
+  ],
+  "traps": [
+    "Drivers on the motorway don't have to move over to let you in.",
+    "Countdown markers count down to the start of the slip road.",
+    "After the motorway, 40 mph can feel like 20: check your speedometer."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 253 to 274 (Motorways)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "Know Your Traffic Signs (DfT)",
+      "ref": "Motorway signs",
+      "url": "https://assets.publishing.service.gov.uk/media/655dca78046ed4000d8b9de7/know-your-traffic-signs-dft.pdf"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft",
+    "notes": "Countdown markers (300/200/100 yards) cross-checked by web search; confirm against Know Your Traffic Signs."
+  }
+}

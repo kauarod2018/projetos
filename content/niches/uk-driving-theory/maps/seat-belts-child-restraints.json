@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "id": "seat-belts-child-restraints",
+  "niche": "uk-driving-theory",
+  "area": "vehicle-docs-incidents",
+  "order": 3,
+  "tier": "complete",
+  "officialTopics": [
+    "safety-and-your-vehicle",
+    "vehicle-loading"
+  ],
+  "title": "Seat Belts & Child Restraints",
+  "whatItIs": "Seat belts save lives. The driver is responsible for children, and passengers aged 14 and over are responsible for themselves.",
+  "keyFacts": [
+    {
+      "text": "You MUST wear a seat belt if one is fitted, unless you are exempt.",
+      "law": true
+    },
+    {
+      "text": "The driver MUST make sure children under 14 wear a seat belt or the right child restraint.",
+      "law": true
+    },
+    "Children need the right child car seat until they are 12 years old or 135 cm tall, whichever comes first.",
+    {
+      "text": "You MUST NOT put a rear-facing baby seat in a seat with an active frontal airbag.",
+      "law": true
+    },
+    "Passengers aged 14 and over are responsible for wearing their own seat belts."
+  ],
+  "visual": {
+    "type": "table",
+    "caption": "Who wears what, and who is responsible",
+    "data": {
+      "columns": [
+        "Who",
+        "Front seat",
+        "Rear seat",
+        "Responsible"
+      ],
+      "rows": [
+        [
+          "Driver",
+          "Seat belt",
+          "-",
+          "Driver"
+        ],
+        [
+          "Child under 3",
+          "Child seat",
+          "Child seat",
+          "Driver"
+        ],
+        [
+          "Child from 3 to 12, under 135 cm",
+          "Child seat",
+          "Child seat (a few exceptions)",
+          "Driver"
+        ],
+        [
+          "Child aged 12 or 13, or taller than 135 cm",
+          "Seat belt",
+          "Seat belt",
+          "Driver"
+        ],
+        [
+          "Passenger aged 14 or over",
+          "Seat belt",
+          "Seat belt",
+          "Passenger"
+        ]
+      ],
+      "notes": [
+        "Exceptions for children apply only in a few cases, such as some taxis or an unexpected short trip."
+      ]
+    }
+  },
+  "confused": {
+    "a": {
+      "label": "Child under 14",
+      "points": [
+        "The driver is responsible",
+        "Belt or child seat"
+      ]
+    },
+    "b": {
+      "label": "Passenger 14 or over",
+      "points": [
+        "Responsible for themselves",
+        "They get the fine"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Who is responsible for making sure a 13-year-old passenger wears a seat belt?",
+      "options": [
+        "The driver",
+        "The child",
+        "The child's parent, even if not in the car",
+        "The owner of the car"
+      ],
+      "answerIndex": 0,
+      "why": "The driver is responsible for passengers under 14. Passengers aged 14 and over are responsible for themselves."
+    }
+  ],
+  "traps": [
+    "12 years or 135 cm: whichever comes first.",
+    "Rear-facing seat in front of an active airbag: never.",
+    "A 14-year-old who doesn't wear a belt is fined, not the driver."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 99 to 102 (Seat belts and child restraints)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "GOV.UK",
+      "ref": "Child car seats: the rules",
+      "url": "https://www.gov.uk/child-car-seats-the-rules"
+    },
+    {
+      "doc": "GOV.UK",
+      "ref": "Seat belts: the law",
+      "url": "https://www.gov.uk/seat-belts-law"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}
