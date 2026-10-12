@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 1,
+  "language": "en-GB",
+  "updated": "2026-10-12",
+  "privacy": {
+    "title": "Privacy Policy",
+    "intro": "This policy explains what personal data {brand} collects when you visit {domain} or buy our products, why we use it and the rights you have under the UK GDPR and the EU GDPR.",
+    "sections": [
+      {
+        "h": "Who we are",
+        "p": [
+          "{brand} is a trading name of {entityName}, {address} (company number {companyId}). We are the controller of the personal data described in this policy. Contact us at {email}."
+        ]
+      },
+      {
+        "h": "What we collect",
+        "p": [
+          "Cookies and similar technologies: only with your consent, we use the Meta Pixel to measure our adverts. It can collect the pages you visit, the buttons you click, your IP address and information about your device and browser.",
+          "Purchases: payments are processed by Hotmart, the platform that takes payment and delivers our products. Hotmart collects your payment details and shares with us your name, email address, country and order details so we can give you access and support. We never see your full card details.",
+          "Emails: if you contact us, we keep your message and email address to reply."
+        ]
+      },
+      {
+        "h": "Why we use it and our legal bases",
+        "p": [
+          "To deliver what you bought and support you (contract).",
+          "To measure and improve our adverts with the Meta Pixel (your consent, which you can withdraw at any time).",
+          "To keep the records the law requires, such as tax records (legal obligation).",
+          "To prevent fraud and protect our business (legitimate interests)."
+        ]
+      },
+      {
+        "h": "Who we share it with",
+        "p": [
+          "Hotmart (payments, delivery and members area), Meta Platforms (advert measurement, only with your consent) and our hosting and email providers. Some of them are outside the UK and the EU; where that happens, data is transferred with the safeguards required by law, such as standard contractual clauses."
+        ]
+      },
+      {
+        "h": "How long we keep it",
+        "p": [
+          "Order records: as long as tax and accounting rules require. Support emails: up to 2 years after the conversation ends. Your cookie choice is stored in your browser until you change it or clear your browser data."
+        ]
+      },
+      {
+        "h": "Cookies",
+        "p": [
+          "Strictly necessary storage remembers your cookie choice. Marketing cookies (Meta Pixel) are only loaded after you click Accept. You can change your choice at any time with the Cookie settings link at the bottom of every page."
+        ]
+      },
+      {
+        "h": "Your rights",
+        "p": [
+          "You can ask to access, correct, delete or receive a copy of your data, to restrict or object to its use, and to withdraw your consent. Email {email}. If you're unhappy with how we handle your data, you can complain to the Information Commissioner's Office (ico.org.uk) or to the data protection authority where you live."
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "title": "Terms of Use",
+    "intro": "These terms apply to the website {domain} and to the digital products sold by {brand}. By buying or using our products you agree to them. Nothing in these terms affects your statutory rights as a consumer.",
+    "sections": [
+      {
+        "h": "Who we are",
+        "p": [
+          "{brand} is a trading name of {entityName}, {address} (company number {companyId}). Contact: {email}."
+        ]
+      },
+      {
+        "h": "The products",
+        "p": [
+          "Our products are digital revision materials in PDF format, delivered through the Hotmart members area. They are independent revision guides. They are not affiliated with, endorsed by or connected to the DVSA, the Department for Transport or any government body."
+        ]
+      },
+      {
+        "h": "Buying",
+        "p": [
+          "Purchases are processed by Hotmart, our payment and delivery platform, and Hotmart's purchase terms also apply. The price shown on our website is the price you pay; for UK buyers it includes VAT."
+        ]
+      },
+      {
+        "h": "Your licence",
+        "p": [
+          "When you buy, you get a personal, non-transferable licence to download, print and use the files for your own revision. You may not share, resell, upload or publish the files, in whole or in part."
+        ]
+      },
+      {
+        "h": "Updates",
+        "p": [
+          "{updatePolicy} Updated files are made available in the members area."
+        ]
+      },
+      {
+        "h": "No guarantee of passing",
+        "p": [
+          "We check our content carefully against official sources, but we cannot guarantee that you will pass any test. The official sources (The Highway Code and GOV.UK) always take priority. If you think something is wrong, tell us at {email} and we will check it."
+        ]
+      },
+      {
+        "h": "Refunds",
+        "p": [
+          "You can ask for a full refund within {guaranteeDays} days of your purchase. See our Refund Policy."
+        ]
+      },
+      {
+        "h": "Liability",
+        "p": [
+          "We are responsible for loss or damage you suffer that is a foreseeable result of us breaking these terms. We are not responsible for loss or damage that is not foreseeable. We do not exclude or limit our liability where it would be unlawful to do so."
+        ]
+      }
+    ]
+  },
+  "refund": {
+    "title": "Refund Policy",
+    "intro": "If our product isn't right for you, you can get your money back.",
+    "sections": [
+      {
+        "h": "{guaranteeDays}-day money-back guarantee",
+        "p": [
+          "You can ask for a full refund within {guaranteeDays} days of your purchase, for any reason. You don't need to explain why."
+        ]
+      },
+      {
+        "h": "How to ask for a refund",
+        "p": [
+          "Use the refund option in the purchase email or the members area from Hotmart, or email us at {email} with the email address you used to buy. The refund goes back to your original payment method; how long it takes to appear depends on your bank or payment provider."
+        ]
+      },
+      {
+        "h": "After a refund",
+        "p": [
+          "Your access to the members area ends and you must delete any files you downloaded."
+        ]
+      },
+      {
+        "h": "Your statutory rights",
+        "p": [
+          "This guarantee is in addition to your legal rights as a consumer, which it does not affect."
+        ]
+      }
+    ]
+  },
+  "ui": {
+    "home": {
+      "title": "Visual revision maps for the tests that matter",
+      "sub": "Illustrated A4 maps that turn each topic of an official test into one clear page. Pick your test.",
+      "examsTitle": "Available tests",
+      "cardMeta": "{maps} maps · from {price}",
+      "cardCta": "See the maps",
+      "metaDescription": "Visual revision maps for official tests, one topic per A4 page. Independent revision guides."
+    },
+    "nav": {
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "refund": "Refund policy",
+      "cookies": "Cookie settings",
+      "contact": "Contact"
+    },
+    "cookies": {
+      "title": "Cookies",
+      "text": "With your consent we use the Meta Pixel to measure our adverts. Nothing is loaded until you choose.",
+      "accept": "Accept",
+      "reject": "Reject",
+      "more": "Privacy policy"
+    },
+    "footer": {
+      "company": "{brand} is a trading name of {entityName}, {address}. Company number {companyId}.",
+      "prices": "Prices in GBP."
+    },
+    "lastUpdated": "Last updated {date}",
+    "preview": "PREVIEW · numbers come from the plan and the files are drafts. Do not publish this build.",
+    "checkoutMissing": "Checkout link not set yet",
+    "notFound": {
+      "title": "Page not found",
+      "text": "The page you're looking for doesn't exist.",
+      "cta": "Go to the home page"
+    },
+    "labels": {
+      "bonus": "Bonus {n}",
+      "pages": "{n} pages",
+      "more": "+ {n} more",
+      "days": "days"
+    }
+  }
+}

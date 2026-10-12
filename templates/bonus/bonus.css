@@ -415,8 +415,9 @@
   overflow: hidden;
 }
 
+/* a flat fill: a hatched gradient here made each PDF page over 1 MB */
 .card.empty {
-  background: repeating-linear-gradient(45deg, transparent 0 3mm, var(--soft) 3mm 6mm);
+  background: var(--soft);
 }
 
 .card .card-kind {

@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 1,
+  "niche": "uk-driving-theory",
+  "meta": {
+    "title": "{totalMaps} Visual Revision Maps for the {examName} | {brand}",
+    "description": "A4 visual revision maps for the UK car theory test: all 14 official topics, original practice questions and the traps that cost marks."
+  },
+  "topBar": "Complete pack: {totalMaps} maps + {bonuses} bonuses · One-time payment",
+  "hero": {
+    "eyebrow": "{examName} {year}",
+    "h1": "{totalMaps} visual revision maps to pass your {examName}",
+    "highlight": "visual revision maps",
+    "sub": "Illustrated A4 maps covering all 14 official topics, organised into 6 areas: {areasList}. Ready to print or to revise on a tablet.",
+    "primaryCta": "Get my maps now",
+    "secondaryCta": "See what's inside",
+    "bullets": [
+      "One topic per page, same layout every time",
+      "All 14 official DVSA topics covered",
+      "Download and keep forever, with free updates",
+      "{bonuses} bonuses in the Complete pack"
+    ]
+  },
+  "socialProof": null,
+  "pain": {
+    "eyebrow": "Why it's worth revising properly",
+    "stat": "44.8%",
+    "title": "Fewer than half of car theory tests are passed",
+    "text": "The test covers 14 topics, from road signs and stopping distances to documents and first aid, and you have to pass both the multiple-choice questions and hazard perception. Visual maps help you see each topic at a glance and remember the details that trip people up.",
+    "source": "44.8% of car theory tests in Great Britain were passed between April 2025 and March 2026 (DVSA statistics)."
+  },
+  "pages": {
+    "eyebrow": "Real pages",
+    "title": "Real pages from the material",
+    "text": "These are the actual maps you download: one topic per A4 page, same layout every time."
+  },
+  "areas": {
+    "eyebrow": "What's covered",
+    "title": "6 areas, all 14 official topics",
+    "text": "Every map is linked to the official DVSA topic it covers, so nothing on the test is left out."
+  },
+  "lookInside": {
+    "eyebrow": "Look inside",
+    "title": "Everything you need on one page",
+    "mapId": "roundabouts",
+    "points": [
+      {
+        "title": "One topic, one page",
+        "text": "A short definition, then the key facts in plain English."
+      },
+      {
+        "title": "The visual does the work",
+        "text": "Diagrams, scales and the official sign images instead of long paragraphs."
+      },
+      {
+        "title": "LAW badge",
+        "text": "Shows what is a legal requirement (MUST) and what is advice."
+      },
+      {
+        "title": "Practice questions explained",
+        "text": "Original questions in the style of the test, with the reason the answer is right."
+      },
+      {
+        "title": "Traps",
+        "text": "The mistakes that cost candidates marks, so you don't make them."
+      }
+    ]
+  },
+  "strategic": {
+    "eyebrow": "Strategic content",
+    "title": "Built around how the test catches people out",
+    "cards": [
+      {
+        "icon": "hash",
+        "title": "Numbers to know",
+        "text": "Speeds, stopping distances, alcohol limits, tyre tread and deadlines in one table, plus flashcards to test yourself."
+      },
+      {
+        "icon": "route",
+        "title": "Decisions",
+        "text": "Who goes first at junctions and roundabouts, which lane and when to signal, drawn as diagrams you can follow."
+      },
+      {
+        "icon": "eye",
+        "title": "Traps",
+        "text": "Every map ends with the mistakes candidates make most, and a cheat sheet of signs that look alike."
+      }
+    ]
+  },
+  "whoFor": {
+    "eyebrow": "Who it's for",
+    "title": "Made for learners who want to pass first time",
+    "cards": [
+      {
+        "icon": "calendar-days",
+        "title": "Your test is coming up",
+        "text": "Revise every topic in the time you have left, one page at a time."
+      },
+      {
+        "icon": "eye",
+        "title": "You learn better with visuals",
+        "text": "Diagrams, scales and signs instead of walls of text."
+      },
+      {
+        "icon": "rotate-ccw",
+        "title": "You need another go",
+        "text": "Find your gaps quickly and focus on the traps that cost marks."
+      }
+    ]
+  },
+  "bonuses": {
+    "eyebrow": "Bonuses",
+    "title": "{bonuses} bonuses included in the Complete pack",
+    "text": "Extra guides that cover what the maps don't: hazard perception, the day of the test and quick revision."
+  },
+  "access": {
+    "eyebrow": "How access works",
+    "title": "From payment to revising in minutes",
+    "steps": [
+      "Buy securely through Hotmart",
+      "Get your access email from Hotmart within minutes",
+      "Log in to the members area",
+      "Download your PDFs",
+      "Revise with confidence"
+    ]
+  },
+  "testimonials": [],
+  "pricing": {
+    "eyebrow": "Prices",
+    "title": "Choose your pack",
+    "sub": "One-time payment. No subscription. Download and keep forever.",
+    "priceNote": "One-time payment",
+    "vatNote": "Prices include VAT for UK buyers.",
+    "basic": {
+      "name": "Basic",
+      "desc": "{basicMaps} essential maps covering all 6 areas",
+      "features": [
+        "{basicMaps} essential A4 maps",
+        "All 6 areas of the test",
+        "Print or use on a tablet"
+      ],
+      "missingTitle": "Basic version. Only Complete includes:",
+      "missing": [
+        "All {totalMaps} maps",
+        "The {bonuses} bonuses",
+        "The hazard perception guide and flashcards"
+      ],
+      "cta": "Get Basic"
+    },
+    "complete": {
+      "name": "Complete",
+      "badge": "Recommended",
+      "desc": "All {totalMaps} maps + {bonuses} bonuses",
+      "features": [
+        "All {totalMaps} A4 maps",
+        "{bonuses} bonuses, including the hazard perception guide and flashcards",
+        "Free updates when the rules change",
+        "Support by email"
+      ],
+      "cta": "Get Complete"
+    }
+  },
+  "guarantee": {
+    "title": "Risk-free for {guaranteeDays} days",
+    "text": "If the maps aren't right for you, ask for a refund within {guaranteeDays} days of buying and you'll get your money back in full. No questions asked."
+  },
+  "faq": {
+    "eyebrow": "Questions",
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "q": "Who is it for?",
+        "a": "Anyone preparing for the car theory test in Great Britain, especially if your test is coming up soon, you learn better with visuals, or you need to revise quickly after a fail."
+      },
+      {
+        "q": "Is it up to date?",
+        "a": "This is version {version}. Each map is checked against The Highway Code and official GOV.UK guidance, and the date of the check is printed on every page ({checkedOn}). When the rules or the test change, we update the PDFs and you get the new version free."
+      },
+      {
+        "q": "Is this official DVSA material?",
+        "a": "No. It's an independent revision guide based on The Highway Code and official public guidance. All the practice questions are our own, not taken from the official question bank."
+      },
+      {
+        "q": "Does it cover Northern Ireland?",
+        "a": "It's designed for the theory test in Great Britain (England, Scotland and Wales). Where the rules differ between England, Scotland and Wales, the maps say so."
+      },
+      {
+        "q": "How do I receive it?",
+        "a": "Right after you pay, Hotmart emails you your access to the members area, where you download the PDFs."
+      },
+      {
+        "q": "Can I print it?",
+        "a": "Yes. Every map is an A4 page, made to print in colour or black and white."
+      },
+      {
+        "q": "Does it work on my phone or tablet?",
+        "a": "Yes, the PDFs open on any device. They're designed for A4, so they're most comfortable on a tablet or printed; on a phone, zoom in. The flashcards also come in a phone version."
+      },
+      {
+        "q": "Does it cover hazard perception?",
+        "a": "Yes, the Complete pack includes a visual guide to how hazards are scored and what to look for. You'll still need to practise with video clips."
+      },
+      {
+        "q": "Are the files editable?",
+        "a": "No. They're high-resolution PDFs for your personal use."
+      },
+      {
+        "q": "Can I get a refund?",
+        "a": "Yes. You have {guaranteeDays} days from your purchase to ask for a full refund through Hotmart, no questions asked."
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Revise smarter for your {examName}",
+    "text": "{totalMaps} visual maps, {bonuses} bonuses and {guaranteeDays} days to decide.",
+    "cta": "Get my maps now"
+  }
+}

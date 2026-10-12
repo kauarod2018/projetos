@@ -3,10 +3,13 @@ import { basename, join, relative, resolve } from 'node:path';
 import type { z } from 'zod';
 import { i18n, inventory, numbers, signs, site, type I18n, type Inventory, type Numbers, type Signs, type Site } from '../schemas/content.ts';
 import { bonus, type Bonus } from '../schemas/bonus.ts';
+import { creatives, legal, sales, type Creatives, type Legal, type Sales } from '../schemas/site-copy.ts';
 import { map, type RevisionMap } from '../schemas/map.ts';
 import { niche, type Niche } from '../schemas/niche.ts';
 
-export const ROOT = resolve(import.meta.dirname, '..');
+/** project root: next to lib/ when run with tsx, the working directory inside the Next.js build */
+const here = typeof import.meta.dirname === 'string' ? resolve(import.meta.dirname, '..') : undefined;
+export const ROOT = process.env.PROJECT_ROOT ?? (here && existsSync(join(here, 'content', 'site.json')) ? here : process.cwd());
 export const CONTENT_DIR = join(ROOT, 'content');
 
 export interface LoadedMap {
@@ -29,11 +32,15 @@ export interface LoadedNiche {
   i18n: I18n;
   maps: LoadedMap[];
   bonuses: LoadedBonus[];
+  sales: Sales;
+  creatives: Creatives;
 }
 
 export interface LoadedContent {
   site: Site;
   niches: LoadedNiche[];
+  /** legal pages and site labels, by language */
+  legal: Record<string, Legal>;
 }
 
 export class ContentError extends Error {
@@ -113,16 +120,25 @@ export function loadContent(contentDir = CONTENT_DIR): LoadedContent {
       }
     }
 
-    if (nicheData && numbersData && inventoryData && i18nData && signsData) {
+    const salesData = parseFile(sales, join(dir, 'sales.json'), problems);
+    const creativesData = parseFile(creatives, join(dir, 'creatives.json'), problems);
+
+    if (nicheData && numbersData && inventoryData && i18nData && signsData && salesData && creativesData) {
       if (basename(dir) !== nicheData.id) {
         problems.push(`${rel(dir)}: folder name must match niche id "${nicheData.id}"`);
       }
-      loaded.push({ dir, niche: nicheData, numbers: numbersData, inventory: inventoryData, signs: signsData, signsDir, i18n: i18nData, maps, bonuses });
+      loaded.push({ dir, niche: nicheData, numbers: numbersData, inventory: inventoryData, signs: signsData, signsDir, i18n: i18nData, maps, bonuses, sales: salesData, creatives: creativesData });
     }
   }
 
+  const legalByLanguage: Record<string, Legal> = {};
+  for (const language of new Set(loaded.map((n) => n.niche.language))) {
+    const data = parseFile(legal, join(contentDir, 'legal', `${language}.json`), problems);
+    if (data) legalByLanguage[language] = data;
+  }
+
   if (problems.length || !siteData) throw new ContentError(problems);
-  return { site: siteData, niches: loaded };
+  return { site: siteData, niches: loaded, legal: legalByLanguage };
 }
 
 export { rel };

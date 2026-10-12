@@ -63,6 +63,24 @@ export function signsUsed(m: LoadedMap): string[] {
 
 const PLACEHOLDER = /^\{\{.*\}\}$|^your |example\.com|TODO/i;
 
+/** {placeholders} the site and the creatives know how to fill */
+export const COPY_PLACEHOLDERS = ['examName', 'brand', 'totalMaps', 'basicMaps', 'bonuses', 'areasList', 'guaranteeDays', 'version', 'checkedOn', 'priceBasic', 'priceComplete', 'year'];
+export const LEGAL_PLACEHOLDERS = ['brand', 'domain', 'email', 'entityName', 'address', 'companyId', 'guaranteeDays', 'updatePolicy', 'date', 'n', 'maps', 'price'];
+
+function* strings(value: unknown, path: string): Generator<[string, string]> {
+  if (typeof value === 'string') yield [path, value];
+  else if (Array.isArray(value)) for (const [i, v] of value.entries()) yield* strings(v, `${path}[${i}]`);
+  else if (value && typeof value === 'object') for (const [k, v] of Object.entries(value)) yield* strings(v, path ? `${path}.${k}` : k);
+}
+
+function unknownPlaceholders(value: unknown, allowed: string[], file: string, errors: string[]) {
+  for (const [path, s] of strings(value, '')) {
+    for (const [, key] of s.matchAll(/\{(\w+)\}/g)) {
+      if (!allowed.includes(key)) errors.push(`${file} → ${path}: unknown placeholder {${key}} (allowed: ${allowed.join(', ')})`);
+    }
+  }
+}
+
 export function checkContent(content: LoadedContent, opts: CheckOptions): CheckResult {
   const errors: string[] = [];
   const warnings: string[] = [];
@@ -77,6 +95,10 @@ export function checkContent(content: LoadedContent, opts: CheckOptions): CheckR
     'legal.companyId': site.legal.companyId,
   })) {
     if (PLACEHOLDER.test(value)) releaseOrWarn(`content/site.json → ${field} is still a placeholder ("${value}")`);
+  }
+
+  for (const [language, l] of Object.entries(content.legal)) {
+    unknownPlaceholders(l, LEGAL_PLACEHOLDERS, `content/legal/${language}.json`, errors);
   }
 
   for (const n of content.niches) {
@@ -251,6 +273,22 @@ export function checkContent(content: LoadedContent, opts: CheckOptions): CheckR
         (d.review.status === 'verified' || opts.release ? errors : warnings).push(msg);
       }
       if (d.review.status !== 'verified') warnings.push(`${f}: draft bonus — watermarked and left out of the packages`);
+    }
+
+    // sales page and ad creatives
+    const sf = rel(join(n.dir, 'sales.json'));
+    const cf = rel(join(n.dir, 'creatives.json'));
+    unknownPlaceholders(n.sales, COPY_PLACEHOLDERS, sf, errors);
+    unknownPlaceholders(n.creatives, COPY_PLACEHOLDERS, cf, errors);
+    if (!planned.has(n.sales.lookInside.mapId)) errors.push(`${sf} → lookInside.mapId: "${n.sales.lookInside.mapId}" is not in inventory.json`);
+    for (const card of [...n.sales.strategic.cards, ...n.sales.whoFor.cards]) {
+      if (!existsSync(iconPath(card.icon))) errors.push(`${sf}: lucide icon "${card.icon}" does not exist`);
+    }
+    for (const [i, s] of n.creatives.slides.entries()) {
+      if (s.kind === 'page' && !planned.has(s.mapId)) errors.push(`${cf} → slides[${i}].mapId: "${s.mapId}" is not in inventory.json`);
+    }
+    if (opts.release && n.sales.socialProof === null && n.sales.testimonials.length === 0) {
+      warnings.push(`${sf}: no social proof or testimonials yet (both stay hidden, which is correct until you have real ones)`);
     }
 
     // coverage of the official topics

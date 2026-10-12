@@ -1,6 +1,6 @@
 # Guia visual
 
-Vale para os mapas em PDF, os bônus e, na etapa 2, a página de vendas. Se algo precisar fugir daqui, avisar antes.
+Vale para os mapas em PDF, os bônus, o site e os criativos de anúncio. Se algo precisar fugir daqui, avisar antes.
 
 ## Direção
 
@@ -73,6 +73,27 @@ Nos diagramas de rotatória, as rotas usam azul `#2563EB`, laranja `#EA580C` e r
 - Selo **LAW** (preto) marca o que o Highway Code escreve com MUST / MUST NOT.
 - A resposta certa fica com contorno e fundo na cor da área, mais um ✓. As erradas ficam sem caixa.
 - Mapas em rascunho levam a marca d'água "DRAFT" em vermelho bem claro e o rodapé em vermelho.
+
+## Marca (site, bônus e anúncios)
+
+Marca: **Ajuda com Provas**, traduzida por idioma (`content/site.json`): **Test Help** em inglês britânico. O símbolo é um
+quadrado verde com uma faixa tracejada amarela, a mesma "linha de faixa" dos mapas.
+
+| Uso | Valor |
+|---|---|
+| Verde da marca (faixa dos bônus, títulos de destaque, final da página) | `#0B6E4F` |
+| Amarelo de ação (botões de compra, marca-texto do título, selo dos bônus) | `#FFC93C` (sombra `#F2B705`) |
+| Fundo suave do site | `#F6F5F1` |
+| Linhas do site | `#E3E1DA` |
+
+- **Botões de compra:** amarelos, texto escuro em maiúsculas, cantos totalmente arredondados, sombra "sólida" embaixo.
+  Um estilo só para a ação principal; o secundário é contornado em preto.
+- **Site:** mobile-first, margem lateral de 16 px, largura máxima de 1120 px, seções alternando branco e `#F6F5F1`,
+  sobretítulo verde em maiúsculas acima de cada título. Texto base de 17 px no celular e 18 px no desktop.
+- **Bônus:** mesma grade dos mapas, faixa verde da marca com o selo amarelo "BONUS 0N"; texto de 10,5 pt (são guias para
+  ler com calma).
+- **Criativos:** fundo verde (abertura e oferta) ou bege (páginas reais), título em Archivo 800, página real com sombra,
+  botão amarelo no último slide.
 
 ## Placas
 

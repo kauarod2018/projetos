@@ -112,3 +112,45 @@ describe('numbers and niche errors', () => {
     );
   });
 });
+
+describe('plan, bonuses and copy', () => {
+  test('a map that differs from inventory.json', () => {
+    expectProblem(problemsAfter(join(MAPS, 'roundabouts.json'), (m) => (m.title = 'Roundabouts!')), /title: "Roundabouts!" differs from inventory.json/);
+  });
+
+  test('a map that is not in the plan', () => {
+    expectProblem(
+      problemsAfter(join('niches', 'uk-driving-theory', 'inventory.json'), (inv) => (inv.maps = inv.maps.filter((m: { id: string }) => m.id !== 'roundabouts'))),
+      /"roundabouts" is not in inventory.json/,
+    );
+  });
+
+  test('a plan that leaves an official topic uncovered', () => {
+    expectProblem(
+      problemsAfter(join('niches', 'uk-driving-theory', 'inventory.json'), (inv) => {
+        for (const m of inv.maps) m.officialTopics = m.officialTopics.filter((t: string) => t !== 'vehicle-loading');
+        for (const m of inv.maps) if (!m.officialTopics.length) m.officialTopics = ['rules-of-the-road'];
+      }),
+      /the plan does not cover "vehicle-loading"/,
+    );
+  });
+
+  test('a bonus sign pair with an unknown sign', () => {
+    expectProblem(
+      problemsAfter(join('niches', 'uk-driving-theory', 'bonuses', 'critical-signs-cheat-sheet.json'), (b) => (b.pages[0].blocks[1].pairs[0].a = 'no-such-sign')),
+      /sign "no-such-sign" is not in signs.json/,
+    );
+  });
+
+  test('a typo in a sales page placeholder', () => {
+    expectProblem(problemsAfter(join('niches', 'uk-driving-theory', 'sales.json'), (s) => (s.topBar = '{totalMap} maps')), /unknown placeholder \{totalMap\}/);
+  });
+
+  test('a creative that points to a map that is not planned', () => {
+    expectProblem(problemsAfter(join('niches', 'uk-driving-theory', 'creatives.json'), (c) => (c.slides[1].mapId = 'nope')), /slides\[1\]\.mapId: "nope"/);
+  });
+
+  test('a niche without a brand name in its language', () => {
+    expectProblem(problemsAfter('site.json', (s) => delete s.brand.byLanguage['en-GB']), /add the brand name in en-GB/);
+  });
+});

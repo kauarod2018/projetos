@@ -1,7 +1,8 @@
 # Briefing para o Claude Code — Loja de mapas visuais de revisão para provas (Europa) — v3
 
 > v3 revisada em 12/10/2026. O que mudou em relação à v2 e por quê: `docs/revisao-v2-para-v3.md`.
-> Etapa 1 implementada: ver `README.md` (comandos) e `DESIGN.md` (guia visual).
+> Etapas 1 a 5 implementadas: ver `README.md` (comandos e status), `DESIGN.md` (guia visual) e `docs/revisao-geral.md` (revisão e pendências).
+> Marca definida: **Ajuda com Provas**, traduzida por país (**Test Help** no Reino Unido), em `content/site.json`.
 > Fatos marcados com **[conferir]** foram checados em fontes secundárias. O gov.uk estava bloqueado no ambiente da revisão, então reconfira no gov.uk antes de publicar.
 
 ## 0. Resumo em 30 segundos
@@ -57,7 +58,8 @@
 - **Home da loja** (`/`): lista as provas disponíveis em cards. No começo terá só uma.
 - **Página de vendas por nicho** (`/uk-driving-theory/`): mesmo componente para todos os nichos, alimentado por `niche.json`.
 - **i18n por nicho:** cada nicho define `language` (ex.: `en-GB`) e `currency` (ex.: `GBP`). Os **rótulos** dos blocos ("What it is", "Traps"…) e os textos fixos vêm de `/content/i18n/{language}.json`, nunca escritos dentro do template. Preços formatados com `Intl.NumberFormat(language, { style: 'currency', currency })`.
-- **Placeholders do site** (`site.json`): `{{BRAND_NAME}}`, `{{DOMAIN}}`, `{{SUPPORT_EMAIL}}`, `{{LEGAL_ENTITY_NAME}}`, `{{LEGAL_ADDRESS}}`, `{{COMPANY_ID}}` (CNPJ ou equivalente). A lei do Reino Unido exige nome e endereço físico de quem vende, num lugar visível (rodapé e páginas legais).
+- **Marca** (`site.json` → `brand`): "Ajuda com Provas", traduzida por idioma (`en-GB`: "Test Help"). O validador exige o nome no idioma de cada nicho.
+- **Placeholders do site** (`site.json`): `{{DOMAIN}}`, `{{SUPPORT_EMAIL}}`, `{{LEGAL_ENTITY_NAME}}`, `{{LEGAL_ADDRESS}}`, `{{COMPANY_ID}}` (CNPJ ou equivalente). A lei do Reino Unido exige nome e endereço físico de quem vende, num lugar visível (rodapé e páginas legais).
 - **Stack:** Next.js com exportação estática, para hospedar em qualquer lugar (Hostinger/Vercel). Mobile-first e rápido. Cuidados que costumam quebrar o build com `output: 'export'`:
   - `next/image` não otimiza imagens em export estático. Use `images: { unoptimized: true }` e entregue as imagens já otimizadas pelo pipeline (WebP, tamanhos certos).
   - Use `trailingSlash: true`, para `/uk-driving-theory/` virar `index.html` em hospedagem estática.
@@ -230,7 +232,7 @@ Na página de vendas isso vira um argumento honesto: **"All 14 official theory t
 
 ### 4.3 Inventário inicial de mapas (~60)
 
-Lista de partida, ajustável. **B** = entra também no Basic (`tier: "basic"`). As faixas de regras do Highway Code são referências para pesquisa; o número exato de cada regra vai no `sources` depois da conferência.
+A lista oficial agora é o arquivo `content/niches/uk-driving-theory/inventory.json` (60 mapas, com tier e tópicos DVSA); a lista abaixo é o resumo. **B** = entra também no Basic (`tier: "basic"`). As faixas de regras do Highway Code são referências para pesquisa; o número exato de cada regra vai no `sources` depois da conferência.
 
 **Área 1 — Road & Traffic Signs** (Know Your Traffic Signs; Highway Code: Traffic signs, Road markings, Light signals)
 1. How to read any sign: shapes and colours **B**

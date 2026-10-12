@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "niche": "uk-driving-theory",
+  "slides": [
+    {
+      "kind": "hook",
+      "eyebrow": "{examName}",
+      "title": "Fewer than half of car theory tests are passed",
+      "text": "Revise every topic with visual maps, one page at a time.",
+      "source": "44.8% of car theory tests in Great Britain were passed, April 2025 to March 2026 (DVSA)."
+    },
+    {
+      "kind": "page",
+      "mapId": "roundabouts",
+      "title": "One topic. One page.",
+      "text": "Diagram, key facts, test questions and traps on a single A4 map.",
+      "focusY": 0,
+      "zoom": 1
+    },
+    {
+      "kind": "page",
+      "mapId": "stopping-distances",
+      "title": "See the numbers",
+      "text": "Stopping distances drawn to scale, from 20 to 70 mph.",
+      "focusY": 24,
+      "zoom": 1
+    },
+    {
+      "kind": "page",
+      "mapId": "roundabouts",
+      "title": "Know the traps",
+      "text": "Every map ends with the mistakes that cost candidates marks.",
+      "focusY": 90,
+      "zoom": 1
+    },
+    {
+      "kind": "offer",
+      "title": "{totalMaps} visual maps + {bonuses} bonuses",
+      "text": "From {priceBasic}. One-time payment. {guaranteeDays}-day money-back guarantee.",
+      "cta": "Get my maps"
+    }
+  ]
+}

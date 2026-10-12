@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
-  "description": "Multi-niche store of visual revision maps (PDF) — content pipeline and sales site.",
+  "description": "Multi-niche store of visual revision maps (PDF) \u2014 content pipeline and sales site.",
   "scripts": {
     "validate": "tsx scripts/validate.ts",
     "validate:release": "tsx scripts/validate.ts --release",
@@ -11,7 +11,14 @@
     "build:preview": "tsx scripts/validate.ts && tsx scripts/build-pdfs.ts --include-drafts",
     "typecheck": "tsc --noEmit",
     "test": "tsx --test tests/*.test.ts",
-    "check": "npm run typecheck && npm run validate && npm test"
+    "check": "npm run typecheck && npm run validate && npm test",
+    "site:assets": "tsx scripts/sync-site-assets.ts",
+    "site:dev": "npm run site:assets && SITE_MODE=preview next dev",
+    "site:preview": "npm run build:preview && npm run site:assets && SITE_MODE=preview NEXT_TELEMETRY_DISABLED=1 next build",
+    "site:build": "npm run validate:release && npm run build:pdfs && npm run site:assets && SITE_MODE=release NEXT_TELEMETRY_DISABLED=1 next build",
+    "site:check": "tsx scripts/check-site.ts",
+    "creatives": "tsx scripts/build-creatives.ts",
+    "creatives:release": "tsx scripts/build-creatives.ts --release"
   },
   "engines": {
     "node": ">=20"
