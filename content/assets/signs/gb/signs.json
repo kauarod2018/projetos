@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "country": "GB",
+  "attribution": "Traffic sign images: Crown copyright, reproduced under the Open Government Licence v3.0.",
+  "sourceUrl": "https://www.gov.uk/traffic-sign-images",
+  "signs": [
+    { "id": "crossroads", "meaning": "Crossroads", "category": "warning", "shape": "triangle", "officialNumber": null, "file": null, "status": "pending-official-asset" },
+    { "id": "t-junction", "meaning": "T-junction", "category": "warning", "shape": "triangle", "officialNumber": null, "file": null, "status": "pending-official-asset" },
+    { "id": "staggered-junction", "meaning": "Staggered junction", "category": "warning", "shape": "triangle", "officialNumber": null, "file": null, "status": "pending-official-asset" },
+    { "id": "side-road", "meaning": "Side road", "category": "warning", "shape": "triangle", "officialNumber": null, "file": null, "status": "pending-official-asset" },
+    { "id": "roundabout-ahead", "meaning": "Roundabout ahead", "category": "warning", "shape": "triangle", "officialNumber": null, "file": null, "status": "pending-official-asset" },
+    { "id": "bend-right", "meaning": "Bend to the right", "category": "warning", "shape": "triangle", "officialNumber": null, "file": null, "status": "pending-official-asset" },
+    { "id": "double-bend-left", "meaning": "Double bend, first to the left", "category": "warning", "shape": "triangle", "officialNumber": null, "file": null, "status": "pending-official-asset" },
+    { "id": "road-narrows-both-sides", "meaning": "Road narrows on both sides", "category": "warning", "shape": "triangle", "officialNumber": null, "file": null, "status": "pending-official-asset" },
+    { "id": "dual-carriageway-ends", "meaning": "Dual carriageway ends", "category": "warning", "shape": "triangle", "officialNumber": null, "file": null, "status": "pending-official-asset" },
+    { "id": "two-way-traffic-ahead", "meaning": "Two-way traffic straight ahead", "category": "warning", "shape": "triangle", "officialNumber": null, "file": null, "status": "pending-official-asset" },
+    { "id": "give-way", "meaning": "Give way to traffic on the major road", "category": "regulatory", "shape": "inverted-triangle", "officialNumber": null, "file": null, "status": "pending-official-asset" },
+    { "id": "stop", "meaning": "Stop and give way", "category": "regulatory", "shape": "octagon", "officialNumber": null, "file": null, "status": "pending-official-asset" },
+    { "id": "mini-roundabout", "meaning": "Mini-roundabout (give way to traffic from the right)", "category": "regulatory", "shape": "circle", "officialNumber": null, "file": null, "status": "pending-official-asset" }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "id": "signs-warning-junctions",
+  "niche": "uk-driving-theory",
+  "area": "signs",
+  "order": 2,
+  "tier": "basic",
+  "officialTopics": ["road-and-traffic-signs"],
+  "title": "Warning Signs: Junctions, Bends & Layout",
+  "whatItIs": "Signs that warn you about a hazard ahead, such as a junction, a bend or a change in the road layout. Most are triangles with a red border.",
+  "keyFacts": [
+    "Most warning signs are triangles with a red border, a white background and a black symbol.",
+    "Circles give orders, triangles warn and rectangles mostly give information.",
+    "STOP (octagon) and GIVE WAY (upside-down triangle) break the shape rule so they stand out.",
+    "On junction signs, the broader line shows the road that has priority.",
+    "A plate below a sign adds to its message, for example the distance to the hazard."
+  ],
+  "visual": {
+    "type": "sign-grid",
+    "caption": "Junction, bend and road layout warnings",
+    "signs": [
+      "crossroads",
+      "t-junction",
+      "staggered-junction",
+      "side-road",
+      "roundabout-ahead",
+      "bend-right",
+      "double-bend-left",
+      "road-narrows-both-sides",
+      "dual-carriageway-ends",
+      "two-way-traffic-ahead"
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Warning triangle (point up)",
+      "points": ["Tells you about a hazard ahead", "Slow down and get ready to react"]
+    },
+    "b": {
+      "label": "GIVE WAY (point down)",
+      "points": ["An order, not a warning", "Let traffic on the major road go first"]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "What shape are most warning signs?",
+      "options": ["Circle", "Triangle", "Rectangle", "Octagon"],
+      "answerIndex": 1,
+      "why": "Triangles warn, circles give orders and rectangles mostly inform. The octagon is used only for STOP."
+    },
+    {
+      "question": "On a crossroads warning sign, one line is broader than the other. What does the broader line show?",
+      "options": ["The road with priority", "The busier road", "A dual carriageway", "The road you must turn into"],
+      "answerIndex": 0,
+      "why": "The broader line marks the priority route. If you're on the narrower road, expect to give way."
+    }
+  ],
+  "traps": [
+    "Don't mix up the upside-down GIVE WAY triangle (an order) with warning triangles (a hazard ahead).",
+    "The triangular 'roundabout ahead' sign is a warning. The blue circle with three arrows is the mini-roundabout order.",
+    "Read the plate under the sign: it can tell you the distance to the hazard or how far it goes on."
+  ],
+  "sources": [
+    { "doc": "The Highway Code", "ref": "Traffic signs: warning signs", "url": "https://www.gov.uk/guidance/the-highway-code" },
+    { "doc": "Know Your Traffic Signs (DfT)", "ref": "Warning signs", "url": "https://assets.publishing.service.gov.uk/media/655dca78046ed4000d8b9de7/know-your-traffic-signs-dft.pdf" }
+  ],
+  "jurisdictionNotes": [],
+  "review": { "status": "draft", "notes": "Official sign images still to be imported (content/assets/signs/gb)." }
+}

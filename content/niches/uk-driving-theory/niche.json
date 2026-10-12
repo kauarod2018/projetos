@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "id": "uk-driving-theory",
+  "examName": "UK Driving Theory Test",
+  "filePrefix": "UK-Theory-Maps",
+  "country": "GB",
+  "jurisdiction": "Great Britain (England, Scotland and Wales)",
+  "language": "en-GB",
+  "currency": "GBP",
+  "drivingSide": "left",
+  "primarySource": "The Highway Code",
+  "areas": [
+    {
+      "slug": "signs",
+      "name": "Road & Traffic Signs",
+      "colour": "#B45309",
+      "icon": "signpost",
+      "officialTopics": ["road-and-traffic-signs"]
+    },
+    {
+      "slug": "rules-of-the-road",
+      "name": "Rules of the Road",
+      "colour": "#0F766E",
+      "icon": "route",
+      "officialTopics": ["rules-of-the-road", "attitude"]
+    },
+    {
+      "slug": "motorways",
+      "name": "Motorways",
+      "colour": "#6D28D9",
+      "icon": "milestone",
+      "officialTopics": ["motorway-rules"]
+    },
+    {
+      "slug": "safety-margins",
+      "name": "Safety Margins & Vehicle Handling",
+      "colour": "#4D7C0F",
+      "icon": "gauge",
+      "officialTopics": ["safety-margins", "vehicle-handling"]
+    },
+    {
+      "slug": "hazards-and-vulnerable",
+      "name": "Hazard Awareness & Vulnerable Road Users",
+      "colour": "#BE185D",
+      "icon": "person-standing",
+      "officialTopics": ["alertness", "attitude", "hazard-awareness", "vulnerable-road-users", "other-types-of-vehicle"]
+    },
+    {
+      "slug": "vehicle-docs-incidents",
+      "name": "Your Vehicle, Documents & Incidents",
+      "colour": "#334155",
+      "icon": "file-text",
+      "officialTopics": ["safety-and-your-vehicle", "essential-documents", "incidents-accidents-and-emergencies", "vehicle-loading"]
+    }
+  ],
+  "officialTopics": {
+    "authority": "DVSA",
+    "items": [
+      { "slug": "alertness", "name": "Alertness" },
+      { "slug": "attitude", "name": "Attitude" },
+      { "slug": "safety-and-your-vehicle", "name": "Safety and your vehicle" },
+      { "slug": "safety-margins", "name": "Safety margins" },
+      { "slug": "hazard-awareness", "name": "Hazard awareness" },
+      { "slug": "vulnerable-road-users", "name": "Vulnerable road users" },
+      { "slug": "other-types-of-vehicle", "name": "Other types of vehicle" },
+      { "slug": "vehicle-handling", "name": "Vehicle handling" },
+      { "slug": "motorway-rules", "name": "Motorway rules" },
+      { "slug": "rules-of-the-road", "name": "Rules of the road" },
+      { "slug": "road-and-traffic-signs", "name": "Road and traffic signs" },
+      { "slug": "essential-documents", "name": "Essential documents" },
+      { "slug": "incidents-accidents-and-emergencies", "name": "Incidents, accidents and emergencies" },
+      { "slug": "vehicle-loading", "name": "Vehicle loading" }
+    ]
+  },
+  "coverage": {
+    "minMapsPerTopicComplete": 2,
+    "minMapsPerTopicBasic": 1
+  },
+  "content": {
+    "version": "0.1.0",
+    "checkedOn": null
+  },
+  "pricing": {
+    "basic": 15,
+    "complete": 24,
+    "anchor": null,
+    "vatIncluded": true
+  },
+  "checkout": {
+    "basicUrl": "",
+    "completeUrl": ""
+  },
+  "guaranteeDays": 15,
+  "updatePolicy": "Free updated PDFs whenever The Highway Code or the theory test format changes, for as long as the product is on sale.",
+  "disclaimer": "This product is independent and is not affiliated with, endorsed by or connected to the DVSA, the Department for Transport or any government body. It does not guarantee that you will pass the test.",
+  "attributions": [
+    "Contains public sector information licensed under the Open Government Licence v3.0 (The Highway Code; Know Your Traffic Signs).",
+    "All practice questions are original and are not taken from the official DVSA question bank."
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "language": "en-GB",
+  "blocks": {
+    "whatItIs": "What it is",
+    "keyFacts": "Key facts",
+    "confused": "Easily confused",
+    "onTheTest": "How it shows up on the test",
+    "traps": "Traps",
+    "sources": "Sources"
+  },
+  "map": {
+    "code": "Map",
+    "area": "Area",
+    "law": "LAW",
+    "lawLegend": "LAW marks a legal requirement: The Highway Code says MUST or MUST NOT. Everything else is advice you should follow.",
+    "why": "Why",
+    "vs": "vs",
+    "version": "v{version}",
+    "checkedAgainst": "Checked against {source} on {date}",
+    "draftFooter": "DRAFT · not yet checked against the official source",
+    "draftWatermark": "DRAFT",
+    "signPending": "Official image pending",
+    "jurisdictionNote": "In {place}"
+  },
+  "segments": {
+    "thinking": "Thinking distance",
+    "braking": "Braking distance"
+  },
+  "diagram": {
+    "giveWay": "Give way to traffic from your right",
+    "circulation": {
+      "clockwise": "Traffic goes round clockwise",
+      "anticlockwise": "Traffic goes round anticlockwise"
+    },
+    "signalLeft": "Signal left",
+    "signalRight": "Signal right",
+    "exitLabel": "exit"
+  },
+  "credits": {
+    "howToUseTitle": "How to use these maps",
+    "howToUse": [
+      "Each map covers one topic on one A4 page.",
+      "Read the key facts, study the visual, then cover the answer and try the test question.",
+      "Finish with the traps: they are the mistakes that cost marks.",
+      "The code in the footer (for example 4.01) tells you the area and the map number."
+    ],
+    "legendTitle": "Legend",
+    "versionLine": "Version {version} · content checked on {date}",
+    "draftLine": "Preview build · includes maps that have not been fact-checked yet",
+    "disclaimerTitle": "Independent revision guide",
+    "attributionsTitle": "Sources and licences",
+    "copyright": "© {year} {brand}. For your personal use only. Please don't share or resell these files.",
+    "support": "Questions or corrections: {email}",
+    "contents": "Contents"
+  }
+}

@@ -1,6 +1,7 @@
 # Briefing para o Claude Code — Loja de mapas visuais de revisão para provas (Europa) — v3
 
 > v3 revisada em 12/10/2026. O que mudou em relação à v2 e por quê: `docs/revisao-v2-para-v3.md`.
+> Etapa 1 implementada: ver `README.md` (comandos) e `DESIGN.md` (guia visual).
 > Fatos marcados com **[conferir]** foram checados em fontes secundárias. O gov.uk estava bloqueado no ambiente da revisão, então reconfira no gov.uk antes de publicar.
 
 ## 0. Resumo em 30 segundos
@@ -42,7 +43,7 @@
       /bonuses
         ...
   /assets
-    /signs/uk               ← SVGs convertidos das imagens oficiais do DfT + signs.json (manifesto)
+    /signs/gb               ← SVGs convertidos das imagens oficiais do DfT + signs.json (manifesto)
 /schemas                    ← schemas (zod ou JSON Schema) de map, niche, site, numbers, signs
 /templates
   map.html                  ← template único do mapa A4 (lê o JSON)
@@ -77,7 +78,7 @@ O gargalo é produzir dezenas de mapas, então **nada de mapa feito à mão um p
    - limites de texto (ver 3.2);
    - `answerIndex` válido e exatamente 4 opções distintas por questão;
    - `area` existente em `niche.json` e tópicos DVSA válidos;
-   - toda placa citada (`signId`) existe em `signs.json`;
+   - toda placa citada existe em `signs.json`;
    - **cobertura:** cada um dos 14 tópicos oficiais da DVSA (4.2) tem pelo menos 2 mapas no Complete e 1 no Basic;
    - IDs únicos e nomes de arquivo iguais ao `id`.
 3. Um **template HTML/CSS único** renderiza qualquer mapa.
@@ -91,7 +92,7 @@ O gargalo é produzir dezenas de mapas, então **nada de mapa feito à mão um p
    - **Complete:** todos os mapas `verified` + bônus;
    - **Basic:** só os mapas com `tier: "basic"` (ver 4.3).
    Nomes de arquivo legíveis: `UK-Theory-Maps-Area-1-Road-and-Traffic-Signs.pdf`.
-7. **Rodapé de versão em toda página:** `{{BRAND_NAME}} · v{{contentVersion}} · Checked against The Highway Code on {{checkedOn}} · p. X`. Esse rodapé sustenta a promessa de "up to date" e de atualizações.
+7. **Rodapé de versão em toda página:** `{{BRAND_NAME}} · Map 4.01 · v{{contentVersion}} · Checked against The Highway Code on {{checkedOn}}`. No lugar do número de página entra o **código do mapa** (área + ordem), que é o mesmo em qualquer pacote e serve de referência no plano de 30 dias. Esse rodapé sustenta a promessa de "up to date" e de atualizações.
 8. **Página de créditos** no início de cada PDF, com o disclaimer de independência (5.1, item 14) e as atribuições de licença (4.4).
 9. O build também grava um `manifest.json` com contagens (mapas por área e por tier, bônus, páginas). A página de vendas lê esses números desse arquivo.
 
@@ -112,7 +113,7 @@ O gargalo é produzir dezenas de mapas, então **nada de mapa feito à mão um p
 
 **Preset do nicho UK Driving Theory:**
 - O bloco Visual geralmente é: grade de placas, diagrama de cruzamento/rotatória, régua de distâncias de parada ou tabela de limites.
-- **Placas:** sempre pela referência `signId` ao manifesto `signs.json`, que aponta para a imagem oficial do DfT (4.4).
+- **Placas:** sempre pelo `id` do manifesto `signs.json`, que aponta para a imagem oficial do DfT (4.4).
 - **Diagramas de via:** monte com um conjunto pequeno de peças reutilizáveis (pista, faixa, seta, carro, pedestre, ciclista), já configuradas para **mão inglesa**. Não desenhe cada diagrama do zero. Checklist de revisão de todo diagrama: carros do lado esquerdo da pista · rotatória no sentido horário · preferência para quem vem da direita · setas de saída coerentes com a faixa.
 
 **Padrão visual:** 1 tema por página, mesma grade, **1 cor por área**, tipografia consistente, ícones de uma única biblioteca (ex.: Lucide). A cor da área nunca é o único jeito de identificar a área: use também número e ícone, porque muita gente imprime em preto e branco. Evite cores de área que se confundam com as cores das placas (vermelho de proibição, azul de ordem).
@@ -129,7 +130,7 @@ O gargalo é produzir dezenas de mapas, então **nada de mapa feito à mão um p
   "area": "safety-margins",
   "order": 1,
   "tier": "basic",
-  "dvsaTopics": ["safety-margins"],
+  "officialTopics": ["safety-margins"],
   "title": "Stopping Distances",
   "whatItIs": "The distance your car travels from the moment you see a hazard until it stops: thinking distance plus braking distance.",
   "keyFacts": [
@@ -181,9 +182,10 @@ O gargalo é produzir dezenas de mapas, então **nada de mapa feito à mão um p
 Regras do schema:
 - `area` é um **slug** que existe em `niche.json` (não um número). O número exibido (01–06) vem da ordem das áreas no `niche.json`.
 - `tier`: `"basic"` (entra nos dois pacotes) ou `"complete"` (só no Complete).
-- `dvsaTopics`: um ou mais dos 14 slugs da seção 4.2.
+- `officialTopics`: um ou mais dos 14 slugs da seção 4.2 (nome genérico porque cada país tem a sua autoridade; no Reino Unido são os tópicos da DVSA).
+- Números que aparecem em mais de um lugar ficam em `numbers.json`, e o visual aponta para eles com `numbersKey` em vez de repetir `data` (o exemplo acima mostra `data` inline só para ilustrar o formato).
 - `answerIndex` começa em **0**. Sempre 4 opções, uma correta, sem "all of the above".
-- `visual.type` é um enum fechado, cada um com o seu schema de `data`: `sign-grid` (lista de `signId` + legenda), `bar-scale`, `table`, `flowchart`, `road-diagram` (peças da 3.1), `comparison`, `timeline`.
+- `visual.type` é um enum fechado, cada um com o seu schema: `sign-grid` (lista de ids de placa), `bar-scale`, `table` e `road-diagram` (rotatória gerada por geometria) já existem. `flowchart`, `comparison` e `timeline` entram quando o primeiro mapa precisar deles.
 - `sources` é uma lista. Cada item tem `doc`, `ref` e `url`.
 - `jurisdictionNotes`: diferenças dentro da Grã-Bretanha (ex.: limite de álcool na Escócia).
 - `review.status`: `draft` → `verified`. Só vira `verified` com `checkedOn` (data) e `checkedAgainst` (documento e versão conferidos).
@@ -215,7 +217,7 @@ Regras do schema:
 
 A DVSA organiza a prova em **14 tópicos**. Agrupamos em **6 áreas**, e o validador garante que nenhum tópico fique sem mapa:
 
-| Área (slug) | Nome | Tópicos DVSA cobertos (`dvsaTopics`) |
+| Área (slug) | Nome | Tópicos DVSA cobertos (`officialTopics`) |
 |---|---|---|
 | `signs` | Road & Traffic Signs | `road-and-traffic-signs` |
 | `rules-of-the-road` | Rules of the Road | `rules-of-the-road`, `attitude` |
@@ -310,7 +312,7 @@ Total: 60 mapas no Complete, sendo 26 também no Basic. Se o validador de cobert
   - sejam reproduzidas **com fidelidade** (sem mudar cor, proporção nem símbolo, e sem estilizar);
   - não sejam usadas em contexto enganoso;
   - tenham a indicação de **Crown copyright**.
-- **Fluxo:** baixar o pacote EPS uma vez, converter para SVG (Inkscape, ou Ghostscript `ps2pdf -dEPSCrop` seguido de `pdftocairo -svg`), versionar em `/assets/signs/uk/` e registrar cada placa em `signs.json` (`signId` = número do diagrama TSRGD, significado em inglês, arquivo, origem).
+- **Fluxo:** baixar o pacote EPS uma vez, converter para SVG (Inkscape, ou Ghostscript `ps2pdf -dEPSCrop` seguido de `pdftocairo -svg`), versionar em `content/assets/signs/gb/svg/` e registrar cada placa em `signs.json` (`id` legível, `officialNumber` = número do diagrama TSRGD, significado em inglês, arquivo, `status: official`).
 - **Atribuição** na página de créditos de cada PDF: "Traffic sign images: Crown copyright, reproduced under the Open Government Licence v3.0." Para conteúdo baseado no Highway Code e no Know Your Traffic Signs: "Contains public sector information licensed under the Open Government Licence v3.0."
 - A licença OGL **não** permite usar brasões, logos (DVSA, gov.uk) nem sugerir que o produto é oficial ou endossado.
 - Os vídeos oficiais de hazard perception da DVSA são licenciados: não use prints deles. O bônus de hazard perception usa ilustrações próprias.

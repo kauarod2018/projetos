@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "id": "roundabouts",
+  "niche": "uk-driving-theory",
+  "area": "rules-of-the-road",
+  "order": 5,
+  "tier": "basic",
+  "officialTopics": ["rules-of-the-road"],
+  "title": "Roundabouts",
+  "whatItIs": "A junction where traffic goes round a central island. In the UK it flows clockwise and you give way to traffic coming from your right.",
+  "keyFacts": [
+    "Use Mirrors – Signal – Manoeuvre at every stage and decide on your exit early.",
+    "Give way to traffic from your right, unless signs, road markings or traffic lights say otherwise.",
+    "Follow lane markings. Where there are none, pick the lane that suits your exit.",
+    { "text": "At a mini-roundabout you MUST go round the central marking (except large vehicles that can't).", "law": true },
+    "At double or multiple roundabouts, treat each one separately.",
+    "Watch for cyclists, motorcyclists, horse riders and long vehicles on the roundabout."
+  ],
+  "visual": {
+    "type": "road-diagram",
+    "diagram": "roundabout-exits",
+    "caption": "Lanes and signals at a four-way roundabout",
+    "routes": [
+      {
+        "exit": 1,
+        "label": "1st exit · turning left",
+        "steps": ["Signal left and approach in the left lane", "Keep to the left and keep signalling left"],
+        "approachLane": "left",
+        "signalOnApproach": "left",
+        "signalLeftAfterExit": null
+      },
+      {
+        "exit": 2,
+        "label": "2nd exit · going ahead",
+        "steps": ["Choose the appropriate lane; no signal on approach", "Signal left after passing the 1st exit"],
+        "approachLane": "left",
+        "signalOnApproach": "none",
+        "signalLeftAfterExit": 1
+      },
+      {
+        "exit": 3,
+        "label": "3rd exit · turning right",
+        "steps": ["Signal right and approach in the right lane", "Keep to the right on the roundabout", "Signal left after passing the 2nd exit"],
+        "approachLane": "right",
+        "signalOnApproach": "right",
+        "signalLeftAfterExit": 2
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Roundabout",
+      "points": ["Raised central island", "Warning sign: triangle with arrows going round"]
+    },
+    "b": {
+      "label": "Mini-roundabout",
+      "points": ["Painted or slightly raised white circle", "Blue circular sign with three white arrows", "Less space and time: avoid U-turns"]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You're going straight ahead at a roundabout (2nd exit). When should you signal left?",
+      "options": ["As you approach the roundabout", "After passing the exit before the one you want", "Only if there is traffic behind you", "You never need to signal"],
+      "answerIndex": 1,
+      "why": "Going ahead, you don't normally signal on approach. Signal left once you've passed the exit before yours."
+    },
+    {
+      "question": "A cyclist on the roundabout is in the left lane and signalling right. What should you do?",
+      "options": ["Sound your horn to warn them", "Overtake them quickly on the right", "Give them plenty of room", "Assume they'll take the next exit"],
+      "answerIndex": 2,
+      "why": "Cyclists and horse riders may stay in the left lane and signal right if they're going round. Give them space and let them cross your path."
+    }
+  ],
+  "traps": [
+    "Going ahead? Don't signal left on approach: signal left only after passing the exit before yours.",
+    "A cyclist or horse rider in the left lane may be going all the way round.",
+    "Long vehicles may need more than one lane: hang back and watch their signals."
+  ],
+  "sources": [
+    { "doc": "The Highway Code", "ref": "Rules 184–190 (Roundabouts)", "url": "https://www.gov.uk/guidance/the-highway-code" }
+  ],
+  "jurisdictionNotes": [],
+  "review": { "status": "draft" }
+}

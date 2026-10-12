@@ -1,0 +1,125 @@
+import { z } from 'zod';
+import { barScaleData, LIMITS } from './map.ts';
+import { jurisdiction, review, slug, sourceRef } from './common.ts';
+
+export const site = z.object({
+  schemaVersion: z.literal(1),
+  brandName: z.string().min(1),
+  domain: z.string().min(1),
+  supportEmail: z.string().min(1),
+  legal: z.object({
+    entityName: z.string().min(1),
+    address: z.string().min(1),
+    companyId: z.string().min(1),
+  }),
+  metaPixelId: z.string().nullable(),
+});
+export type Site = z.infer<typeof site>;
+
+/** Numbers to know: one source of truth for maps, the Numbers Table bonus and the flashcards. */
+export const numbers = z.object({
+  schemaVersion: z.literal(1),
+  niche: slug,
+  items: z
+    .array(
+      z.object({
+        key: slug,
+        label: z.string().min(1).max(60),
+        /** short display value, e.g. "1.6 mm" */
+        value: z.string().min(1).max(160),
+        data: barScaleData.optional(),
+        jurisdiction,
+        sources: z.array(sourceRef).min(1),
+        review,
+        notes: z.string().optional(),
+      }),
+    )
+    .min(1),
+});
+export type Numbers = z.infer<typeof numbers>;
+export type NumberItem = Numbers['items'][number];
+
+export const signShape = z.enum(['triangle', 'inverted-triangle', 'circle', 'octagon', 'rectangle']);
+
+/**
+ * Manifest of road signs. Files must be the official images, reproduced accurately.
+ * A sign without an official file is "pending-official-asset" and renders as an empty outline.
+ */
+export const signs = z.object({
+  schemaVersion: z.literal(1),
+  country: z.string().length(2),
+  attribution: z.string().min(1),
+  sourceUrl: z.url(),
+  signs: z
+    .array(
+      z
+        .object({
+          id: slug,
+          meaning: z.string().min(1).max(60),
+          category: z.enum(['warning', 'regulatory', 'information', 'direction', 'road-marking']),
+          shape: signShape,
+          /** official diagram number (TSRGD in the UK), filled in when the official file is imported */
+          officialNumber: z.string().nullable(),
+          /** path relative to the signs folder, e.g. "svg/crossroads.svg" */
+          file: z.string().nullable(),
+          status: z.enum(['pending-official-asset', 'official']),
+        })
+        .refine((s) => s.status !== 'official' || (s.file && s.officialNumber), {
+          message: 'an "official" sign needs "file" and "officialNumber"',
+        }),
+    )
+    .min(1),
+});
+export type Signs = z.infer<typeof signs>;
+export type Sign = Signs['signs'][number];
+
+/** Labels printed by the templates. Every language file must have all of them. */
+export const i18n = z.object({
+  schemaVersion: z.literal(1),
+  language: z.string(),
+  blocks: z.object({
+    whatItIs: z.string(),
+    keyFacts: z.string(),
+    confused: z.string(),
+    onTheTest: z.string(),
+    traps: z.string(),
+    sources: z.string(),
+  }),
+  map: z.object({
+    code: z.string(),
+    area: z.string(),
+    law: z.string(),
+    lawLegend: z.string(),
+    why: z.string(),
+    vs: z.string(),
+    version: z.string(),
+    checkedAgainst: z.string(),
+    draftFooter: z.string(),
+    draftWatermark: z.string(),
+    signPending: z.string(),
+    jurisdictionNote: z.string(),
+  }),
+  segments: z.record(z.string(), z.string()),
+  diagram: z.object({
+    giveWay: z.string(),
+    circulation: z.object({ clockwise: z.string(), anticlockwise: z.string() }),
+    signalLeft: z.string(),
+    signalRight: z.string(),
+    exitLabel: z.string(),
+  }),
+  credits: z.object({
+    howToUseTitle: z.string(),
+    howToUse: z.array(z.string()).min(1),
+    legendTitle: z.string(),
+    versionLine: z.string(),
+    draftLine: z.string(),
+    disclaimerTitle: z.string(),
+    attributionsTitle: z.string(),
+    copyright: z.string(),
+    support: z.string(),
+    contents: z.string(),
+  }),
+});
+export type I18n = z.infer<typeof i18n>;
+
+export { LIMITS };

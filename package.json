@@ -1,0 +1,33 @@
+{
+  "name": "revision-maps-store",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Multi-niche store of visual revision maps (PDF) \u2014 content pipeline and sales site.",
+  "scripts": {
+    "validate": "tsx scripts/validate.ts",
+    "validate:release": "tsx scripts/validate.ts --release",
+    "build:pdfs": "tsx scripts/validate.ts && tsx scripts/build-pdfs.ts",
+    "build:preview": "tsx scripts/validate.ts && tsx scripts/build-pdfs.ts --include-drafts",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "check": "npm run typecheck && npm run validate && npm test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@fontsource-variable/archivo": "5.3.0",
+    "@fontsource/atkinson-hyperlegible": "5.3.0",
+    "lucide-static": "1.55.0",
+    "pdf-lib": "1.17.1",
+    "sharp": "0.35.5",
+    "zod": "4.6.6"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.5",
+    "playwright": "1.56.1",
+    "tsx": "4.23.15",
+    "typescript": "7.0.2"
+  }
+}
