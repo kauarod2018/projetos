@@ -21,7 +21,7 @@
     "type": "sign-grid",
     "caption": "Blue circles (orders) and blue rectangles (information)",
     "signs": [
-      "ahead-only",
+      "turn-left",
       "turn-left-ahead",
       "keep-left",
       "mini-roundabout",
@@ -50,7 +50,7 @@
     {
       "question": "What does a blue circle with a white arrow pointing left mean?",
       "options": [
-        "Turn left ahead",
+        "Turn left",
         "No left turn",
         "Left lane closes ahead",
         "Cycle route on the left"

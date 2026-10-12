@@ -14,3 +14,13 @@ Para cada placa:
 
 Enquanto a placa estiver `pending-official-asset`, o mapa mostra só o contorno da forma, com o aviso
 "Official image pending", e o validador em modo release bloqueia o pacote.
+
+## Importação feita em 12/10/2026
+
+- Fonte: pacotes EPS da página [Traffic sign images](https://www.gov.uk/guidance/traffic-sign-images) (warning,
+  regulatory, speed limit, level crossing, bus and cycle) e a planilha "Traffic signs image details", que liga cada
+  arquivo ao número do diagrama TSRGD.
+- Conversão: `ps2pdf -dEPSCrop` (Ghostscript) e `pdftocairo -svg`, sem nenhuma alteração no desenho.
+- Velocidade máxima usa o arquivo `670V30` (30 mph). "Zebra crossing" é o diagrama 544.
+- **Ahead only** (606 com seta para cima) não existe no pacote oficial, que só traz as versões para a esquerda e a
+  direita. A imagem não foi girada: os mapas e o bônus usam "Turn left" (606, seta para a esquerda).

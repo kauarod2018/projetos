@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "country": "GB",
   "attribution": "Traffic sign images: Crown copyright, reproduced under the Open Government Licence v3.0.",
-  "sourceUrl": "https://www.gov.uk/traffic-sign-images",
+  "sourceUrl": "https://www.gov.uk/guidance/traffic-sign-images",
   "signs": [
     {
       "id": "crossroads",
@@ -10,8 +10,8 @@
       "category": "warning",
       "shape": "triangle",
       "officialNumber": "504.1",
-      "file": null,
-      "status": "pending-official-asset"
+      "file": "svg/crossroads.svg",
+      "status": "official"
     },
     {
       "id": "t-junction",
@@ -19,8 +19,8 @@
       "category": "warning",
       "shape": "triangle",
       "officialNumber": "505.1",
-      "file": null,
-      "status": "pending-official-asset"
+      "file": "svg/t-junction.svg",
+      "status": "official"
     },
     {
       "id": "staggered-junction",
@@ -28,8 +28,8 @@
       "category": "warning",
       "shape": "triangle",
       "officialNumber": "507.1",
-      "file": null,
-      "status": "pending-official-asset"
+      "file": "svg/staggered-junction.svg",
+      "status": "official"
     },
     {
       "id": "side-road",
@@ -37,8 +37,8 @@
       "category": "warning",
       "shape": "triangle",
       "officialNumber": "506.1",
-      "file": null,
-      "status": "pending-official-asset"
+      "file": "svg/side-road.svg",
+      "status": "official"
     },
     {
       "id": "roundabout-ahead",
@@ -46,8 +46,8 @@
       "category": "warning",
       "shape": "triangle",
       "officialNumber": "510",
-      "file": null,
-      "status": "pending-official-asset"
+      "file": "svg/roundabout-ahead.svg",
+      "status": "official"
     },
     {
       "id": "bend-right",
@@ -55,8 +55,8 @@
       "category": "warning",
       "shape": "triangle",
       "officialNumber": "512",
-      "file": null,
-      "status": "pending-official-asset"
+      "file": "svg/bend-right.svg",
+      "status": "official"
     },
     {
       "id": "double-bend-left",
@@ -64,8 +64,8 @@
       "category": "warning",
       "shape": "triangle",
       "officialNumber": "513",
-      "file": null,
-      "status": "pending-official-asset"
+      "file": "svg/double-bend-left.svg",
+      "status": "official"
     },
     {
       "id": "road-narrows-both-sides",
@@ -73,8 +73,8 @@
       "category": "warning",
       "shape": "triangle",
       "officialNumber": "516",
-      "file": null,
-      "status": "pending-official-asset"
+      "file": "svg/road-narrows-both-sides.svg",
+      "status": "official"
     },
     {
       "id": "dual-carriageway-ends",
@@ -82,8 +82,8 @@
       "category": "warning",
       "shape": "triangle",
       "officialNumber": "520",
-      "file": null,
-      "status": "pending-official-asset"
+      "file": "svg/dual-carriageway-ends.svg",
+      "status": "official"
     },
     {
       "id": "two-way-traffic-ahead",
@@ -91,8 +91,8 @@
       "category": "warning",
       "shape": "triangle",
       "officialNumber": "521",
-      "file": null,
-      "status": "pending-official-asset"
+      "file": "svg/two-way-traffic-ahead.svg",
+      "status": "official"
     },
     {
       "id": "give-way",
@@ -100,8 +100,8 @@
       "category": "regulatory",
       "shape": "inverted-triangle",
       "officialNumber": "602",
-      "file": null,
-      "status": "pending-official-asset"
+      "file": "svg/give-way.svg",
+      "status": "official"
     },
     {
       "id": "stop",
@@ -109,8 +109,8 @@
       "category": "regulatory",
       "shape": "octagon",
       "officialNumber": "601.1",
-      "file": null,
-      "status": "pending-official-asset"
+      "file": "svg/stop.svg",
+      "status": "official"
     },
     {
       "id": "mini-roundabout",
@@ -118,8 +118,8 @@
       "category": "regulatory",
       "shape": "circle",
       "officialNumber": "611.1",
-      "file": null,
-      "status": "pending-official-asset"
+      "file": "svg/mini-roundabout.svg",
+      "status": "official"
     },
     {
       "id": "no-entry",
@@ -127,8 +127,8 @@
       "category": "regulatory",
       "shape": "circle",
       "officialNumber": "616",
-      "file": null,
-      "status": "pending-official-asset"
+      "file": "svg/no-entry.svg",
+      "status": "official"
     },
     {
       "id": "no-vehicles",
@@ -136,8 +136,8 @@
       "category": "regulatory",
       "shape": "circle",
       "officialNumber": "617",
-      "file": null,
-      "status": "pending-official-asset"
+      "file": "svg/no-vehicles.svg",
+      "status": "official"
     },
     {
       "id": "no-motor-vehicles",
@@ -145,8 +145,8 @@
       "category": "regulatory",
       "shape": "circle",
       "officialNumber": "619",
-      "file": null,
-      "status": "pending-official-asset"
+      "file": "svg/no-motor-vehicles.svg",
+      "status": "official"
     },
     {
       "id": "no-overtaking",
@@ -154,17 +154,8 @@
       "category": "regulatory",
       "shape": "circle",
       "officialNumber": "632",
-      "file": null,
-      "status": "pending-official-asset"
-    },
-    {
-      "id": "ahead-only",
-      "meaning": "Ahead only",
-      "category": "regulatory",
-      "shape": "circle",
-      "officialNumber": "606",
-      "file": null,
-      "status": "pending-official-asset"
+      "file": "svg/no-overtaking.svg",
+      "status": "official"
     },
     {
       "id": "one-way-traffic",
@@ -172,8 +163,8 @@
       "category": "regulatory",
       "shape": "rectangle",
       "officialNumber": "652",
-      "file": null,
-      "status": "pending-official-asset"
+      "file": "svg/one-way-traffic.svg",
+      "status": "official"
     },
     {
       "id": "maximum-speed",
@@ -181,8 +172,8 @@
       "category": "regulatory",
       "shape": "circle",
       "officialNumber": "670",
-      "file": null,
-      "status": "pending-official-asset"
+      "file": "svg/maximum-speed.svg",
+      "status": "official"
     },
     {
       "id": "national-speed-limit",
@@ -190,170 +181,179 @@
       "category": "regulatory",
       "shape": "circle",
       "officialNumber": "671",
-      "file": null,
-      "status": "pending-official-asset"
+      "file": "svg/national-speed-limit.svg",
+      "status": "official"
     },
     {
       "id": "children-school",
       "meaning": "Children going to or from school",
       "category": "warning",
       "shape": "triangle",
-      "officialNumber": null,
-      "file": null,
-      "status": "pending-official-asset"
+      "officialNumber": "545",
+      "file": "svg/children-school.svg",
+      "status": "official"
     },
     {
       "id": "elderly-crossing",
       "meaning": "Elderly people (or blind or disabled as shown) crossing road",
       "category": "warning",
       "shape": "triangle",
-      "officialNumber": null,
-      "file": null,
-      "status": "pending-official-asset"
+      "officialNumber": "544.2",
+      "file": "svg/elderly-crossing.svg",
+      "status": "official"
     },
     {
       "id": "pedestrians-crossing",
-      "meaning": "Pedestrians crossing",
+      "meaning": "Zebra crossing",
       "category": "warning",
       "shape": "triangle",
-      "officialNumber": null,
-      "file": null,
-      "status": "pending-official-asset"
+      "officialNumber": "544",
+      "file": "svg/pedestrians-crossing.svg",
+      "status": "official"
     },
     {
       "id": "cycle-route-ahead",
       "meaning": "Cycle route ahead",
       "category": "warning",
       "shape": "triangle",
-      "officialNumber": null,
-      "file": null,
-      "status": "pending-official-asset"
+      "officialNumber": "950",
+      "file": "svg/cycle-route-ahead.svg",
+      "status": "official"
     },
     {
       "id": "wild-animals",
       "meaning": "Wild animals",
       "category": "warning",
       "shape": "triangle",
-      "officialNumber": null,
-      "file": null,
-      "status": "pending-official-asset"
+      "officialNumber": "551",
+      "file": "svg/wild-animals.svg",
+      "status": "official"
     },
     {
       "id": "accompanied-horses",
       "meaning": "Accompanied horses or ponies",
       "category": "warning",
       "shape": "triangle",
-      "officialNumber": null,
-      "file": null,
-      "status": "pending-official-asset"
+      "officialNumber": "550.1",
+      "file": "svg/accompanied-horses.svg",
+      "status": "official"
     },
     {
       "id": "level-crossing-barrier",
       "meaning": "Level crossing with barrier or gate ahead",
       "category": "warning",
       "shape": "triangle",
-      "officialNumber": null,
-      "file": null,
-      "status": "pending-official-asset"
+      "officialNumber": "770",
+      "file": "svg/level-crossing-barrier.svg",
+      "status": "official"
     },
     {
       "id": "level-crossing-no-barrier",
       "meaning": "Level crossing without barrier or gate ahead",
       "category": "warning",
       "shape": "triangle",
-      "officialNumber": null,
-      "file": null,
-      "status": "pending-official-asset"
+      "officialNumber": "771",
+      "file": "svg/level-crossing-no-barrier.svg",
+      "status": "official"
     },
     {
       "id": "traffic-signals-ahead",
       "meaning": "Traffic signals",
       "category": "warning",
       "shape": "triangle",
-      "officialNumber": null,
-      "file": null,
-      "status": "pending-official-asset"
+      "officialNumber": "543",
+      "file": "svg/traffic-signals-ahead.svg",
+      "status": "official"
     },
     {
       "id": "slippery-road",
       "meaning": "Slippery road",
       "category": "warning",
       "shape": "triangle",
-      "officialNumber": null,
-      "file": null,
-      "status": "pending-official-asset"
+      "officialNumber": "557",
+      "file": "svg/slippery-road.svg",
+      "status": "official"
     },
     {
       "id": "no-right-turn",
       "meaning": "No right turn",
       "category": "regulatory",
       "shape": "circle",
-      "officialNumber": null,
-      "file": null,
-      "status": "pending-official-asset"
+      "officialNumber": "612",
+      "file": "svg/no-right-turn.svg",
+      "status": "official"
     },
     {
       "id": "no-left-turn",
       "meaning": "No left turn",
       "category": "regulatory",
       "shape": "circle",
-      "officialNumber": null,
-      "file": null,
-      "status": "pending-official-asset"
+      "officialNumber": "613",
+      "file": "svg/no-left-turn.svg",
+      "status": "official"
     },
     {
       "id": "no-u-turns",
       "meaning": "No U-turns",
       "category": "regulatory",
       "shape": "circle",
-      "officialNumber": null,
-      "file": null,
-      "status": "pending-official-asset"
+      "officialNumber": "614",
+      "file": "svg/no-u-turns.svg",
+      "status": "official"
     },
     {
       "id": "no-cycling",
       "meaning": "No cycling",
       "category": "regulatory",
       "shape": "circle",
-      "officialNumber": null,
-      "file": null,
-      "status": "pending-official-asset"
+      "officialNumber": "951",
+      "file": "svg/no-cycling.svg",
+      "status": "official"
     },
     {
       "id": "turn-left-ahead",
       "meaning": "Turn left ahead (right if symbol reversed)",
       "category": "regulatory",
       "shape": "circle",
-      "officialNumber": null,
-      "file": null,
-      "status": "pending-official-asset"
+      "officialNumber": "609",
+      "file": "svg/turn-left-ahead.svg",
+      "status": "official"
     },
     {
       "id": "keep-left",
       "meaning": "Keep left (right if symbol reversed)",
       "category": "regulatory",
       "shape": "circle",
-      "officialNumber": null,
-      "file": null,
-      "status": "pending-official-asset"
+      "officialNumber": "610",
+      "file": "svg/keep-left.svg",
+      "status": "official"
     },
     {
       "id": "pedal-cycles-only",
       "meaning": "Route to be used by pedal cycles only",
       "category": "regulatory",
       "shape": "circle",
-      "officialNumber": null,
-      "file": null,
-      "status": "pending-official-asset"
+      "officialNumber": "955",
+      "file": "svg/pedal-cycles-only.svg",
+      "status": "official"
     },
     {
       "id": "no-through-road",
       "meaning": "No through road for vehicles",
       "category": "information",
       "shape": "rectangle",
-      "officialNumber": null,
-      "file": null,
-      "status": "pending-official-asset"
+      "officialNumber": "816",
+      "file": "svg/no-through-road.svg",
+      "status": "official"
+    },
+    {
+      "id": "turn-left",
+      "meaning": "Turn left (right if symbol reversed)",
+      "category": "regulatory",
+      "shape": "circle",
+      "officialNumber": "606",
+      "file": "svg/turn-left.svg",
+      "status": "official"
     }
   ]
 }

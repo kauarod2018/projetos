@@ -29,9 +29,9 @@
               "tell": "The triangle warns that a roundabout is ahead. The blue circle is an order: a mini-roundabout, give way to traffic from the right."
             },
             {
-              "a": "ahead-only",
+              "a": "turn-left",
               "b": "one-way-traffic",
-              "tell": "Blue circle: an order, you must go ahead. Blue rectangle: information, the road is one-way."
+              "tell": "Blue circle: an order, you must turn left. Blue rectangle: information, the road is one-way."
             }
           ]
         }
