@@ -3,7 +3,7 @@ import { join } from 'node:path';
 import { mapCode } from '../../lib/checks.ts';
 import type { LoadedMap, LoadedNiche } from '../../lib/content.ts';
 import { icon } from '../../lib/icons.ts';
-import type { Site } from '../../schemas/content.ts';
+import { brandName, type Site } from '../../schemas/content.ts';
 import { esc, fill, formatDate, pad2 } from '../shared/html.ts';
 import { htmlDocument } from '../map/render.ts';
 
@@ -21,6 +21,7 @@ export interface CreditsInput {
 export function renderCreditsPage(n: LoadedNiche, site: Site, input: CreditsInput): string {
   const t = n.i18n;
   const c = t.credits;
+  const brand = brandName(site, n.niche.language);
   const versionLine = input.preview
     ? `<p class="cr-draft">${esc(c.draftLine)}</p>`
     : `<p class="cr-version">${fill(c.versionLine, {
@@ -43,7 +44,7 @@ export function renderCreditsPage(n: LoadedNiche, site: Site, input: CreditsInpu
 
   const body = `<div class="page cr">
   <header class="cr-band">
-    <span class="cr-brand">${esc(site.brandName)}</span>
+    <span class="cr-brand">${esc(brand)}</span>
     <span class="cr-exam">${esc(n.niche.examName)}</span>
   </header>
   <main class="cr-main">
@@ -69,7 +70,7 @@ export function renderCreditsPage(n: LoadedNiche, site: Site, input: CreditsInpu
     <p>${esc(n.niche.disclaimer)}</p>
     <h2>${esc(c.attributionsTitle)}</h2>
     <ul>${attributions}</ul>
-    <p class="cr-copy">${fill(c.copyright, { year: input.year, brand: site.brandName })} ${fill(c.support, { email: site.supportEmail })}</p>
+    <p class="cr-copy">${fill(c.copyright, { year: input.year, brand })} ${fill(c.support, { email: site.supportEmail })}</p>
   </footer>
   ${input.preview ? `<div class="watermark"><span>${esc(t.map.draftWatermark)}</span></div>` : ''}
 </div>`;

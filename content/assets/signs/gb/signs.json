@@ -4,18 +4,194 @@
   "attribution": "Traffic sign images: Crown copyright, reproduced under the Open Government Licence v3.0.",
   "sourceUrl": "https://www.gov.uk/traffic-sign-images",
   "signs": [
-    { "id": "crossroads", "meaning": "Crossroads", "category": "warning", "shape": "triangle", "officialNumber": null, "file": null, "status": "pending-official-asset" },
-    { "id": "t-junction", "meaning": "T-junction", "category": "warning", "shape": "triangle", "officialNumber": null, "file": null, "status": "pending-official-asset" },
-    { "id": "staggered-junction", "meaning": "Staggered junction", "category": "warning", "shape": "triangle", "officialNumber": null, "file": null, "status": "pending-official-asset" },
-    { "id": "side-road", "meaning": "Side road", "category": "warning", "shape": "triangle", "officialNumber": null, "file": null, "status": "pending-official-asset" },
-    { "id": "roundabout-ahead", "meaning": "Roundabout ahead", "category": "warning", "shape": "triangle", "officialNumber": null, "file": null, "status": "pending-official-asset" },
-    { "id": "bend-right", "meaning": "Bend to the right", "category": "warning", "shape": "triangle", "officialNumber": null, "file": null, "status": "pending-official-asset" },
-    { "id": "double-bend-left", "meaning": "Double bend, first to the left", "category": "warning", "shape": "triangle", "officialNumber": null, "file": null, "status": "pending-official-asset" },
-    { "id": "road-narrows-both-sides", "meaning": "Road narrows on both sides", "category": "warning", "shape": "triangle", "officialNumber": null, "file": null, "status": "pending-official-asset" },
-    { "id": "dual-carriageway-ends", "meaning": "Dual carriageway ends", "category": "warning", "shape": "triangle", "officialNumber": null, "file": null, "status": "pending-official-asset" },
-    { "id": "two-way-traffic-ahead", "meaning": "Two-way traffic straight ahead", "category": "warning", "shape": "triangle", "officialNumber": null, "file": null, "status": "pending-official-asset" },
-    { "id": "give-way", "meaning": "Give way to traffic on the major road", "category": "regulatory", "shape": "inverted-triangle", "officialNumber": null, "file": null, "status": "pending-official-asset" },
-    { "id": "stop", "meaning": "Stop and give way", "category": "regulatory", "shape": "octagon", "officialNumber": null, "file": null, "status": "pending-official-asset" },
-    { "id": "mini-roundabout", "meaning": "Mini-roundabout (give way to traffic from the right)", "category": "regulatory", "shape": "circle", "officialNumber": null, "file": null, "status": "pending-official-asset" }
+    {
+      "id": "crossroads",
+      "meaning": "Crossroads",
+      "category": "warning",
+      "shape": "triangle",
+      "officialNumber": "504.1",
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "t-junction",
+      "meaning": "T-junction",
+      "category": "warning",
+      "shape": "triangle",
+      "officialNumber": "505.1",
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "staggered-junction",
+      "meaning": "Staggered junction",
+      "category": "warning",
+      "shape": "triangle",
+      "officialNumber": "507.1",
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "side-road",
+      "meaning": "Side road",
+      "category": "warning",
+      "shape": "triangle",
+      "officialNumber": "506.1",
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "roundabout-ahead",
+      "meaning": "Roundabout",
+      "category": "warning",
+      "shape": "triangle",
+      "officialNumber": "510",
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "bend-right",
+      "meaning": "Bend to the right",
+      "category": "warning",
+      "shape": "triangle",
+      "officialNumber": "512",
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "double-bend-left",
+      "meaning": "Double bend, first to the left",
+      "category": "warning",
+      "shape": "triangle",
+      "officialNumber": "513",
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "road-narrows-both-sides",
+      "meaning": "Road narrows on both sides",
+      "category": "warning",
+      "shape": "triangle",
+      "officialNumber": "516",
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "dual-carriageway-ends",
+      "meaning": "Dual carriageway ends",
+      "category": "warning",
+      "shape": "triangle",
+      "officialNumber": "520",
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "two-way-traffic-ahead",
+      "meaning": "Two-way traffic straight ahead",
+      "category": "warning",
+      "shape": "triangle",
+      "officialNumber": "521",
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "give-way",
+      "meaning": "Give way to traffic on the major road",
+      "category": "regulatory",
+      "shape": "inverted-triangle",
+      "officialNumber": "602",
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "stop",
+      "meaning": "Stop and give way",
+      "category": "regulatory",
+      "shape": "octagon",
+      "officialNumber": "601.1",
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "mini-roundabout",
+      "meaning": "Mini-roundabout (give way to traffic from the right)",
+      "category": "regulatory",
+      "shape": "circle",
+      "officialNumber": "611.1",
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "no-entry",
+      "meaning": "No entry for vehicular traffic",
+      "category": "regulatory",
+      "shape": "circle",
+      "officialNumber": "616",
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "no-vehicles",
+      "meaning": "No vehicles except bicycles being pushed",
+      "category": "regulatory",
+      "shape": "circle",
+      "officialNumber": "617",
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "no-motor-vehicles",
+      "meaning": "No motor vehicles",
+      "category": "regulatory",
+      "shape": "circle",
+      "officialNumber": "619",
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "no-overtaking",
+      "meaning": "No overtaking",
+      "category": "regulatory",
+      "shape": "circle",
+      "officialNumber": "632",
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "ahead-only",
+      "meaning": "Ahead only",
+      "category": "regulatory",
+      "shape": "circle",
+      "officialNumber": "606",
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "one-way-traffic",
+      "meaning": "One-way traffic",
+      "category": "regulatory",
+      "shape": "rectangle",
+      "officialNumber": "652",
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "maximum-speed",
+      "meaning": "Maximum speed",
+      "category": "regulatory",
+      "shape": "circle",
+      "officialNumber": "670",
+      "file": null,
+      "status": "pending-official-asset"
+    },
+    {
+      "id": "national-speed-limit",
+      "meaning": "National speed limit applies",
+      "category": "regulatory",
+      "shape": "circle",
+      "officialNumber": "671",
+      "file": null,
+      "status": "pending-official-asset"
+    }
   ]
 }

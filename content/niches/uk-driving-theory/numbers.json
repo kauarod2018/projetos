@@ -8,115 +8,350 @@
       "value": "20 mph: 12 m · 30 mph: 23 m · 40 mph: 36 m · 50 mph: 53 m · 60 mph: 73 m · 70 mph: 96 m",
       "data": {
         "unit": "m",
-        "segments": ["thinking", "braking"],
+        "segments": [
+          "thinking",
+          "braking"
+        ],
         "rows": [
-          { "label": "20 mph", "values": [6, 6], "total": 12, "totalFeet": 40 },
-          { "label": "30 mph", "values": [9, 14], "total": 23, "totalFeet": 75 },
-          { "label": "40 mph", "values": [12, 24], "total": 36, "totalFeet": 118 },
-          { "label": "50 mph", "values": [15, 38], "total": 53, "totalFeet": 175 },
-          { "label": "60 mph", "values": [18, 55], "total": 73, "totalFeet": 240 },
-          { "label": "70 mph", "values": [21, 75], "total": 96, "totalFeet": 315 }
+          {
+            "label": "20 mph",
+            "values": [
+              6,
+              6
+            ],
+            "total": 12,
+            "totalFeet": 40
+          },
+          {
+            "label": "30 mph",
+            "values": [
+              9,
+              14
+            ],
+            "total": 23,
+            "totalFeet": 75
+          },
+          {
+            "label": "40 mph",
+            "values": [
+              12,
+              24
+            ],
+            "total": 36,
+            "totalFeet": 118
+          },
+          {
+            "label": "50 mph",
+            "values": [
+              15,
+              38
+            ],
+            "total": 53,
+            "totalFeet": 175
+          },
+          {
+            "label": "60 mph",
+            "values": [
+              18,
+              55
+            ],
+            "total": 73,
+            "totalFeet": 240
+          },
+          {
+            "label": "70 mph",
+            "values": [
+              21,
+              75
+            ],
+            "total": 96,
+            "totalFeet": 315
+          }
         ]
       },
       "jurisdiction": "great-britain",
-      "sources": [{ "doc": "The Highway Code", "ref": "Rule 126", "url": "https://www.gov.uk/guidance/the-highway-code" }],
-      "review": { "status": "draft", "notes": "Figures match secondary sources (AA, theory test sites); confirm against Rule 126 on gov.uk." }
+      "sources": [
+        {
+          "doc": "The Highway Code",
+          "ref": "Rule 126",
+          "url": "https://www.gov.uk/guidance/the-highway-code"
+        }
+      ],
+      "review": {
+        "status": "draft",
+        "notes": "Figures match secondary sources (AA, theory test sites); confirm against Rule 126 on gov.uk."
+      }
     },
     {
       "key": "following-distance",
       "label": "Gap to the vehicle in front",
-      "value": "At least 2 seconds on a dry road; at least 4 seconds on a wet road; braking distances can be up to 10 times longer on ice",
+      "value": "At least 2 seconds on faster roads and in tunnels; at least double that on wet roads; on icy roads stopping distances can be up to 10 times longer",
       "jurisdiction": "great-britain",
-      "sources": [{ "doc": "The Highway Code", "ref": "Rule 126 and the adverse weather rules", "url": "https://www.gov.uk/guidance/the-highway-code" }],
-      "review": { "status": "draft", "notes": "Confirm the rule number for icy roads." }
+      "sources": [
+        {
+          "doc": "The Highway Code",
+          "ref": "Rules 126, 227 and 230",
+          "url": "https://www.gov.uk/guidance/the-highway-code"
+        }
+      ],
+      "review": {
+        "status": "draft",
+        "notes": "Rule 126 wording confirmed in secondary sources; confirm rules 227 and 230 on gov.uk."
+      }
     },
     {
       "key": "speed-limits",
-      "label": "National speed limits",
-      "value": "Copy the full Rule 124 table (every vehicle type and road type) from the source. Do not type it from memory.",
+      "label": "National speed limits (mph)",
+      "value": "Cars and motorcycles: 30 in built-up areas, 60 on single carriageways, 70 on dual carriageways and motorways (unless signs show a lower limit)",
       "jurisdiction": "great-britain",
-      "sources": [{ "doc": "The Highway Code", "ref": "Rule 124", "url": "https://www.gov.uk/guidance/the-highway-code" }],
-      "review": { "status": "draft", "notes": "TODO: fill in from Rule 124." }
+      "sources": [
+        {
+          "doc": "The Highway Code",
+          "ref": "Rule 124",
+          "url": "https://www.gov.uk/guidance/the-highway-code"
+        },
+        {
+          "doc": "Welsh Government",
+          "ref": "Introducing default 20mph speed limits",
+          "url": "https://www.gov.wales/introducing-default-20mph-speed-limits"
+        }
+      ],
+      "review": {
+        "status": "draft",
+        "notes": "Table matches secondary sources (RAC, driving schools). Confirm every cell against Rule 124 on gov.uk, and how the Highway Code shows the Welsh 20 mph default."
+      },
+      "table": {
+        "columns": [
+          "Type of vehicle",
+          "Built-up areas",
+          "Single carriageways",
+          "Dual carriageways",
+          "Motorways"
+        ],
+        "rows": [
+          [
+            "Cars, motorcycles and car-derived vans",
+            "30",
+            "60",
+            "70",
+            "70"
+          ],
+          [
+            "Cars towing caravans or trailers",
+            "30",
+            "50",
+            "60",
+            "60"
+          ],
+          [
+            "Motorhomes up to 3.05 tonnes unladen",
+            "30",
+            "60",
+            "70",
+            "70"
+          ],
+          [
+            "Motorhomes over 3.05 tonnes unladen",
+            "30",
+            "50",
+            "60",
+            "70"
+          ],
+          [
+            "Buses, coaches and minibuses up to 12 m long",
+            "30",
+            "50",
+            "60",
+            "70 (60 if over 12 m)"
+          ],
+          [
+            "Goods vehicles up to 7.5 tonnes",
+            "30",
+            "50",
+            "60",
+            "70 (60 if articulated or towing)"
+          ],
+          [
+            "Goods vehicles over 7.5 tonnes (England and Wales)",
+            "30",
+            "50",
+            "60",
+            "60"
+          ],
+          [
+            "Goods vehicles over 7.5 tonnes (Scotland)",
+            "30",
+            "40",
+            "50",
+            "60"
+          ]
+        ],
+        "notes": [
+          "These are national maximums: a lower limit shown on signs always applies.",
+          "In Wales the default limit on restricted roads (usually with street lights) has been 20 mph since 17 September 2023."
+        ]
+      }
     },
     {
       "key": "towing",
       "label": "Car towing a caravan or trailer",
       "value": "50 mph on single carriageways; 60 mph on dual carriageways and motorways; not in the right-hand lane of a motorway with 3 or more lanes",
       "jurisdiction": "great-britain",
-      "sources": [{ "doc": "The Highway Code", "ref": "Rule 124 and the motorway rules", "url": "https://www.gov.uk/guidance/the-highway-code" }],
-      "review": { "status": "draft" }
+      "sources": [
+        {
+          "doc": "The Highway Code",
+          "ref": "Rule 124 and the motorway rules",
+          "url": "https://www.gov.uk/guidance/the-highway-code"
+        }
+      ],
+      "review": {
+        "status": "draft"
+      }
     },
     {
       "key": "alcohol-england-wales",
       "label": "Drink-drive limit (England and Wales)",
       "value": "35 µg per 100 ml of breath · 80 mg per 100 ml of blood · 107 mg per 100 ml of urine",
       "jurisdiction": "england-and-wales",
-      "sources": [{ "doc": "GOV.UK", "ref": "The drink drive limit", "url": "https://www.gov.uk/drink-drive-limit" }],
-      "review": { "status": "draft", "notes": "The Road Safety Strategy (Jan 2026) proposes 22 / 50 / 67. Still a consultation in Oct 2026: re-check before every release." }
+      "sources": [
+        {
+          "doc": "GOV.UK",
+          "ref": "The drink drive limit",
+          "url": "https://www.gov.uk/drink-drive-limit"
+        }
+      ],
+      "review": {
+        "status": "draft",
+        "notes": "The Road Safety Strategy (Jan 2026) proposes 22 / 50 / 67. Still a consultation in Oct 2026: re-check before every release."
+      }
     },
     {
       "key": "alcohol-scotland",
       "label": "Drink-drive limit (Scotland)",
       "value": "22 µg per 100 ml of breath · 50 mg per 100 ml of blood · 67 mg per 100 ml of urine",
       "jurisdiction": "scotland",
-      "sources": [{ "doc": "GOV.UK", "ref": "The drink drive limit", "url": "https://www.gov.uk/drink-drive-limit" }],
-      "review": { "status": "draft" }
+      "sources": [
+        {
+          "doc": "GOV.UK",
+          "ref": "The drink drive limit",
+          "url": "https://www.gov.uk/drink-drive-limit"
+        }
+      ],
+      "review": {
+        "status": "draft"
+      }
     },
     {
       "key": "tyre-tread",
       "label": "Minimum tyre tread depth (cars)",
       "value": "1.6 mm across the central three-quarters of the tread, all the way round",
       "jurisdiction": "great-britain",
-      "sources": [{ "doc": "The Highway Code", "ref": "Annex 6", "url": "https://www.gov.uk/guidance/the-highway-code" }],
-      "review": { "status": "draft" }
+      "sources": [
+        {
+          "doc": "The Highway Code",
+          "ref": "Annex 6",
+          "url": "https://www.gov.uk/guidance/the-highway-code"
+        }
+      ],
+      "review": {
+        "status": "draft"
+      }
     },
     {
       "key": "first-mot",
       "label": "First MOT",
       "value": "When the car is 3 years old",
       "jurisdiction": "great-britain",
-      "sources": [{ "doc": "GOV.UK", "ref": "Getting an MOT", "url": "https://www.gov.uk/getting-an-mot" }],
-      "review": { "status": "draft" }
+      "sources": [
+        {
+          "doc": "GOV.UK",
+          "ref": "Getting an MOT",
+          "url": "https://www.gov.uk/getting-an-mot"
+        }
+      ],
+      "review": {
+        "status": "draft"
+      }
     },
     {
       "key": "new-drivers",
       "label": "New drivers",
       "value": "6 or more penalty points within 2 years of passing: licence revoked",
       "jurisdiction": "great-britain",
-      "sources": [{ "doc": "GOV.UK", "ref": "Penalty points (endorsements)", "url": "https://www.gov.uk/penalty-points-endorsements" }],
-      "review": { "status": "draft" }
+      "sources": [
+        {
+          "doc": "GOV.UK",
+          "ref": "Penalty points (endorsements)",
+          "url": "https://www.gov.uk/penalty-points-endorsements"
+        }
+      ],
+      "review": {
+        "status": "draft"
+      }
     },
     {
       "key": "mobile-phone",
       "label": "Using a hand-held phone while driving",
       "value": "£200 fine and 6 penalty points",
       "jurisdiction": "great-britain",
-      "sources": [{ "doc": "GOV.UK", "ref": "Using mobile phones when driving: the law", "url": "https://www.gov.uk/using-mobile-phones-when-driving-the-law" }],
-      "review": { "status": "draft" }
+      "sources": [
+        {
+          "doc": "GOV.UK",
+          "ref": "Using mobile phones when driving: the law",
+          "url": "https://www.gov.uk/using-mobile-phones-when-driving-the-law"
+        }
+      ],
+      "review": {
+        "status": "draft"
+      }
     },
     {
       "key": "child-seats",
       "label": "Child car seats",
       "value": "Until the child is 12 years old or 135 cm tall, whichever comes first",
       "jurisdiction": "great-britain",
-      "sources": [{ "doc": "GOV.UK", "ref": "Child car seats: the rules", "url": "https://www.gov.uk/child-car-seats-the-rules" }],
-      "review": { "status": "draft" }
+      "sources": [
+        {
+          "doc": "GOV.UK",
+          "ref": "Child car seats: the rules",
+          "url": "https://www.gov.uk/child-car-seats-the-rules"
+        }
+      ],
+      "review": {
+        "status": "draft"
+      }
     },
     {
       "key": "passing-cyclists",
       "label": "Passing a cyclist",
       "value": "Leave at least 1.5 metres at speeds up to 30 mph, more at higher speeds",
       "jurisdiction": "great-britain",
-      "sources": [{ "doc": "The Highway Code", "ref": "Rule 163", "url": "https://www.gov.uk/guidance/the-highway-code" }],
-      "review": { "status": "draft" }
+      "sources": [
+        {
+          "doc": "The Highway Code",
+          "ref": "Rule 163",
+          "url": "https://www.gov.uk/guidance/the-highway-code"
+        }
+      ],
+      "review": {
+        "status": "draft"
+      }
     },
     {
       "key": "passing-horses",
       "label": "Passing a horse rider or horse-drawn vehicle",
       "value": "At no more than 10 mph, leaving at least 2 metres",
       "jurisdiction": "great-britain",
-      "sources": [{ "doc": "The Highway Code", "ref": "Rule 215", "url": "https://www.gov.uk/guidance/the-highway-code" }],
-      "review": { "status": "draft" }
+      "sources": [
+        {
+          "doc": "The Highway Code",
+          "ref": "Rule 215",
+          "url": "https://www.gov.uk/guidance/the-highway-code"
+        }
+      ],
+      "review": {
+        "status": "draft"
+      }
     }
   ]
 }

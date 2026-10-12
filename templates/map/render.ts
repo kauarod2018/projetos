@@ -1,9 +1,9 @@
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { barData, mapCode } from '../../lib/checks.ts';
+import { barData, mapCode, tableDataOf } from '../../lib/checks.ts';
 import type { LoadedMap, LoadedNiche } from '../../lib/content.ts';
 import { icon } from '../../lib/icons.ts';
-import type { Site } from '../../schemas/content.ts';
+import { brandName, type Site } from '../../schemas/content.ts';
 import type { KeyFact } from '../../schemas/map.ts';
 import { fontFaceCss } from '../shared/fonts.ts';
 import { esc, fill, formatDate, pad2 } from '../shared/html.ts';
@@ -56,7 +56,7 @@ export function renderMapPage(n: LoadedNiche, m: LoadedMap, site: Site): string 
   } else if (v.type === 'road-diagram') {
     visualBody = renderRoundabout(v, n.niche.drivingSide, t, area.colour);
   } else {
-    visualBody = renderTable(v);
+    visualBody = renderTable(tableDataOf(n, m)!);
   }
 
   const questions = d.onTheTest
@@ -132,7 +132,7 @@ export function renderMapPage(n: LoadedNiche, m: LoadedMap, site: Site): string 
     <div class="sources"><span class="tag">${icon('book-open', 10, 2.4)}${esc(t.blocks.sources)}</span><span>${d.sources
       .map((s) => `${esc(s.doc)}, ${esc(s.ref)}`)
       .join(' · ')}</span></div>
-    <div class="foot-line"><span class="brand">${esc(site.brandName)}</span>${footRight}</div>
+    <div class="foot-line"><span class="brand">${esc(brandName(site, n.niche.language))}</span>${footRight}</div>
   </footer>
   ${draft ? `<div class="watermark"><span>${esc(t.map.draftWatermark)}</span></div>` : ''}
 </div>`;

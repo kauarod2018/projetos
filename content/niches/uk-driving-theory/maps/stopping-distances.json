@@ -5,15 +5,17 @@
   "area": "safety-margins",
   "order": 1,
   "tier": "basic",
-  "officialTopics": ["safety-margins"],
+  "officialTopics": [
+    "safety-margins"
+  ],
   "title": "Stopping Distances",
   "whatItIs": "The distance your car travels from the moment you see a hazard until it stops: thinking distance plus braking distance.",
   "keyFacts": [
     "Overall stopping distance = thinking distance + braking distance.",
-    "The figures assume a dry road, good brakes and tyres, and an alert driver.",
-    "Keep at least a two-second gap to the vehicle in front on a dry road.",
-    "On wet roads, stopping distances are at least double: leave at least four seconds.",
-    "On icy roads, braking distances can be up to ten times longer."
+    "The table is a general guide: a dry road, a car in good condition and an alert driver.",
+    "On faster roads and in tunnels, leave at least a two-second gap to the vehicle in front.",
+    "On wet roads, at least double that gap: stopping distances are at least double.",
+    "On icy roads, stopping distances can be up to ten times longer than on dry roads."
   ],
   "visual": {
     "type": "bar-scale",
@@ -23,23 +25,39 @@
   "confused": {
     "a": {
       "label": "Thinking distance",
-      "points": ["Grows in step with your speed", "Longer if you're tired, distracted or have been drinking"]
+      "points": [
+        "Grows in step with your speed",
+        "Longer if you're tired, distracted or have been drinking"
+      ]
     },
     "b": {
       "label": "Braking distance",
-      "points": ["Grows much faster than your speed", "Longer on wet or icy roads and with worn tyres"]
+      "points": [
+        "Grows much faster than your speed",
+        "Longer on wet or icy roads and with worn tyres"
+      ]
     }
   },
   "onTheTest": [
     {
       "question": "You're driving at 50 mph on a dry road. What is the typical overall stopping distance?",
-      "options": ["23 metres (75 feet)", "36 metres (118 feet)", "53 metres (175 feet)", "96 metres (315 feet)"],
+      "options": [
+        "23 metres (75 feet)",
+        "36 metres (118 feet)",
+        "53 metres (175 feet)",
+        "96 metres (315 feet)"
+      ],
       "answerIndex": 2,
       "why": "At 50 mph: 15 m thinking + 38 m braking = 53 m (175 feet)."
     },
     {
       "question": "The road is wet. How much space should you leave to the vehicle in front, compared with a dry road?",
-      "options": ["The same gap", "At least double the gap", "Half the gap", "One extra car length"],
+      "options": [
+        "The same gap",
+        "At least double the gap",
+        "Half the gap",
+        "One extra car length"
+      ],
       "answerIndex": 1,
       "why": "Stopping distances at least double in the wet, so the two-second gap becomes at least four seconds."
     }
@@ -50,8 +68,14 @@
     "Double the speed is far more than double the distance: 30 mph is 23 m, 60 mph is 73 m."
   ],
   "sources": [
-    { "doc": "The Highway Code", "ref": "Rule 126", "url": "https://www.gov.uk/guidance/the-highway-code" }
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 126",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    }
   ],
   "jurisdictionNotes": [],
-  "review": { "status": "draft" }
+  "review": {
+    "status": "draft"
+  }
 }

@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "id": "critical-signs-cheat-sheet",
+  "niche": "uk-driving-theory",
+  "number": 2,
+  "title": "Critical Signs Cheat Sheet",
+  "summary": "The signs candidates mix up most, side by side, with the one detail that tells them apart.",
+  "kind": "document",
+  "pages": [
+    {
+      "heading": "Signs that look alike: orders vs warnings",
+      "blocks": [
+        {
+          "type": "lead",
+          "text": "Start with the shape: circles give orders, triangles warn and rectangles mostly inform. Then check the colour and the detail that sets each pair apart."
+        },
+        {
+          "type": "sign-pairs",
+          "title": "Orders vs warnings",
+          "pairs": [
+            {
+              "a": "give-way",
+              "b": "stop",
+              "tell": "GIVE WAY: let traffic on the major road go first, stopping only if you need to. STOP: you must stop at the line, even if the road is clear."
+            },
+            {
+              "a": "roundabout-ahead",
+              "b": "mini-roundabout",
+              "tell": "The triangle warns that a roundabout is ahead. The blue circle is an order: a mini-roundabout, give way to traffic from the right."
+            },
+            {
+              "a": "ahead-only",
+              "b": "one-way-traffic",
+              "tell": "Blue circle: an order, you must go ahead. Blue rectangle: information, the road is one-way."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Signs that look alike: entry, vehicles and speed",
+      "blocks": [
+        {
+          "type": "sign-pairs",
+          "title": "No entry, no vehicles and speed",
+          "pairs": [
+            {
+              "a": "no-entry",
+              "b": "no-vehicles",
+              "tell": "Red circle, white bar: no entry for vehicles (often the end of a one-way street). White circle, red ring: no vehicles except bicycles being pushed."
+            },
+            {
+              "a": "no-vehicles",
+              "b": "no-motor-vehicles",
+              "tell": "An empty red ring bans all vehicles. With a car and a motorcycle inside, it bans motor vehicles only."
+            },
+            {
+              "a": "maximum-speed",
+              "b": "national-speed-limit",
+              "tell": "A number in a red ring is the maximum speed. The white circle with a black diagonal stripe means the national limit for your vehicle and that road applies."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Traffic signs",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "Know Your Traffic Signs (DfT)",
+      "ref": "The signing system; regulatory and warning signs",
+      "url": "https://assets.publishing.service.gov.uk/media/655dca78046ed4000d8b9de7/know-your-traffic-signs-dft.pdf"
+    }
+  ],
+  "review": {
+    "status": "draft",
+    "notes": "Needs the official DfT images for all 12 signs."
+  }
+}

@@ -1,7 +1,8 @@
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { basename, join, relative, resolve } from 'node:path';
 import type { z } from 'zod';
-import { i18n, numbers, signs, site, type I18n, type Numbers, type Signs, type Site } from '../schemas/content.ts';
+import { i18n, inventory, numbers, signs, site, type I18n, type Inventory, type Numbers, type Signs, type Site } from '../schemas/content.ts';
+import { bonus, type Bonus } from '../schemas/bonus.ts';
 import { map, type RevisionMap } from '../schemas/map.ts';
 import { niche, type Niche } from '../schemas/niche.ts';
 
@@ -13,14 +14,21 @@ export interface LoadedMap {
   data: RevisionMap;
 }
 
+export interface LoadedBonus {
+  file: string;
+  data: Bonus;
+}
+
 export interface LoadedNiche {
   dir: string;
   niche: Niche;
   numbers: Numbers;
+  inventory: Inventory;
   signs: Signs;
   signsDir: string;
   i18n: I18n;
   maps: LoadedMap[];
+  bonuses: LoadedBonus[];
 }
 
 export interface LoadedContent {
@@ -78,6 +86,7 @@ export function loadContent(contentDir = CONTENT_DIR): LoadedContent {
   for (const dir of nicheDirs) {
     const nicheData = parseFile(niche, join(dir, 'niche.json'), problems);
     const numbersData = parseFile(numbers, join(dir, 'numbers.json'), problems);
+    const inventoryData = parseFile(inventory, join(dir, 'inventory.json'), problems);
     const i18nData = nicheData
       ? parseFile(i18n, join(contentDir, 'i18n', `${nicheData.language}.json`), problems)
       : undefined;
@@ -94,11 +103,21 @@ export function loadContent(contentDir = CONTENT_DIR): LoadedContent {
       }
     }
 
-    if (nicheData && numbersData && i18nData && signsData) {
+    const bonusesDir = join(dir, 'bonuses');
+    const bonuses: LoadedBonus[] = [];
+    if (existsSync(bonusesDir)) {
+      for (const name of readdirSync(bonusesDir).filter((f) => f.endsWith('.json')).sort()) {
+        const file = join(bonusesDir, name);
+        const data = parseFile(bonus, file, problems);
+        if (data) bonuses.push({ file, data });
+      }
+    }
+
+    if (nicheData && numbersData && inventoryData && i18nData && signsData) {
       if (basename(dir) !== nicheData.id) {
         problems.push(`${rel(dir)}: folder name must match niche id "${nicheData.id}"`);
       }
-      loaded.push({ dir, niche: nicheData, numbers: numbersData, signs: signsData, signsDir, i18n: i18nData, maps });
+      loaded.push({ dir, niche: nicheData, numbers: numbersData, inventory: inventoryData, signs: signsData, signsDir, i18n: i18nData, maps, bonuses });
     }
   }
 

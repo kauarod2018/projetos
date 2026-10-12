@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "id": "test-day-checklist",
+  "niche": "uk-driving-theory",
+  "number": 5,
+  "title": "Test-Day Checklist",
+  "summary": "What to bring, how the day runs and how to pace yourself in both parts of the test.",
+  "kind": "document",
+  "pages": [
+    {
+      "heading": "Before and on the day",
+      "blocks": [
+        {
+          "type": "checklist",
+          "span": 1,
+          "title": "The days before",
+          "items": [
+            "Book only on GOV.UK. The official fee is £23.",
+            "Check the date, time and address of your test centre.",
+            "Plan your journey so you arrive early.",
+            "Do one full practice run of both parts.",
+            "Read the traps on your maps one last time."
+          ]
+        },
+        {
+          "type": "checklist",
+          "span": 1,
+          "title": "Bring with you",
+          "items": [
+            "Your photocard driving licence.",
+            "Paper licence only? Bring a valid passport too.",
+            "Changed your name since booking? Bring proof, like a marriage certificate or deed poll.",
+            "Without the right documents the test is cancelled and you lose the fee."
+          ]
+        },
+        { "type": "callout", "tone": "tip", "title": "At the centre", "text": "Expect to leave your phone and personal belongings in a locker before the test. Switch your phone off." }
+      ]
+    },
+    {
+      "heading": "During and after the test",
+      "blocks": [
+        {
+          "type": "stat-row",
+          "items": [
+            { "value": "50", "label": "questions" },
+            { "value": "57", "label": "minutes" },
+            { "value": "43", "label": "correct to pass" },
+            { "value": "44/75", "label": "hazard perception" }
+          ]
+        },
+        {
+          "type": "facts",
+          "span": 1,
+          "title": "Part 1: multiple choice",
+          "items": [
+            "57 minutes for 50 questions is just over a minute each.",
+            "3 of the questions are about a short video clip.",
+            "Not sure? Pick your best answer and move on; come back at the end if you have time.",
+            "Read every word: 'most', 'least', 'must' and 'should' change the answer."
+          ]
+        },
+        {
+          "type": "facts",
+          "span": 1,
+          "title": "Part 2: hazard perception",
+          "items": [
+            "14 clips: click when a hazard starts to develop.",
+            "Wrong clicks don't cost points; clicking in a pattern scores zero for that clip.",
+            "One clip has two developing hazards."
+          ]
+        },
+        {
+          "type": "facts",
+          "title": "After the test",
+          "items": [
+            "You must pass both parts in the same test.",
+            "Passed: your certificate is valid for 2 years. Book your practical test before it runs out.",
+            "Failed: you take both parts again and have to wait at least 3 working days."
+          ]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    { "doc": "GOV.UK", "ref": "Theory test: cars (what to take, multiple-choice questions, hazard perception, pass mark and result)", "url": "https://www.gov.uk/theory-test" }
+  ],
+  "review": { "status": "draft", "notes": "Confirm on gov.uk: lockers, the 3-working-day wait and the fee before verifying." }
+}

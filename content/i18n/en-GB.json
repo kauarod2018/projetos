@@ -21,7 +21,8 @@
     "draftFooter": "DRAFT · not yet checked against the official source",
     "draftWatermark": "DRAFT",
     "signPending": "Official image pending",
-    "jurisdictionNote": "In {place}"
+    "jurisdictionNote": "In {place}",
+    "overall": "Overall"
   },
   "segments": {
     "thinking": "Thinking distance",
@@ -53,5 +54,24 @@
     "copyright": "© {year} {brand}. For your personal use only. Please don't share or resell these files.",
     "support": "Questions or corrections: {email}",
     "contents": "Contents"
+  },
+  "bonus": {
+    "label": "Bonus",
+    "page": "p. {page}/{pages}",
+    "day": "Day {day}",
+    "study": "Study",
+    "review": "Review",
+    "reviewTask": "Go back over the traps on maps {from}–{to}.",
+    "practice": "Practice test",
+    "practiceTask": "Do a full practice test: multiple choice and hazard perception.",
+    "final": "Final check",
+    "finalTask": "Read the Test-Day Checklist and the traps. Rest.",
+    "mapIndex": "Map index",
+    "flashcardsFront": "Fronts: print this page first",
+    "flashcardsBack": "Backs: print on the reverse (flip on the long edge)",
+    "flashcardsHowTo": "Print double-sided on A4, flip on the long edge, then cut along the dashed lines.",
+    "cardSign": "What does this sign mean?",
+    "cardNumber": "Do you know the number?",
+    "answer": "Answer"
   }
 }

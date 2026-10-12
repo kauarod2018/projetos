@@ -1,0 +1,624 @@
+{
+  "schemaVersion": 1,
+  "niche": "uk-driving-theory",
+  "maps": [
+    {
+      "id": "signs-shapes-colours",
+      "area": "signs",
+      "order": 1,
+      "tier": "basic",
+      "title": "How to Read Any Sign: Shapes & Colours",
+      "officialTopics": [
+        "road-and-traffic-signs"
+      ]
+    },
+    {
+      "id": "signs-warning-junctions",
+      "area": "signs",
+      "order": 2,
+      "tier": "basic",
+      "title": "Warning Signs: Junctions, Bends & Layout",
+      "officialTopics": [
+        "road-and-traffic-signs"
+      ]
+    },
+    {
+      "id": "signs-warning-hazards",
+      "area": "signs",
+      "order": 3,
+      "tier": "complete",
+      "title": "Warning Signs: Hazards, Road Users & Crossings",
+      "officialTopics": [
+        "road-and-traffic-signs"
+      ]
+    },
+    {
+      "id": "signs-prohibition",
+      "area": "signs",
+      "order": 4,
+      "tier": "basic",
+      "title": "Prohibition Signs (Red Circles)",
+      "officialTopics": [
+        "road-and-traffic-signs"
+      ]
+    },
+    {
+      "id": "signs-mandatory-vs-information",
+      "area": "signs",
+      "order": 5,
+      "tier": "complete",
+      "title": "Mandatory Signs vs Information Signs",
+      "officialTopics": [
+        "road-and-traffic-signs"
+      ]
+    },
+    {
+      "id": "signs-direction",
+      "area": "signs",
+      "order": 6,
+      "tier": "complete",
+      "title": "Direction Signs: Colour by Road Type",
+      "officialTopics": [
+        "road-and-traffic-signs"
+      ]
+    },
+    {
+      "id": "markings-along-the-road",
+      "area": "signs",
+      "order": 7,
+      "tier": "basic",
+      "title": "Road Markings Along the Road",
+      "officialTopics": [
+        "road-and-traffic-signs"
+      ]
+    },
+    {
+      "id": "markings-across-and-kerb",
+      "area": "signs",
+      "order": 8,
+      "tier": "complete",
+      "title": "Road Markings Across the Road & at the Kerb",
+      "officialTopics": [
+        "road-and-traffic-signs"
+      ]
+    },
+    {
+      "id": "traffic-lights",
+      "area": "signs",
+      "order": 9,
+      "tier": "basic",
+      "title": "Traffic Lights & Filter Arrows",
+      "officialTopics": [
+        "road-and-traffic-signs"
+      ]
+    },
+    {
+      "id": "signals-police-and-drivers",
+      "area": "signs",
+      "order": 10,
+      "tier": "complete",
+      "title": "Signals by Police, Officials & Other Drivers",
+      "officialTopics": [
+        "road-and-traffic-signs"
+      ]
+    },
+    {
+      "id": "bus-tram-cycle-lanes",
+      "area": "signs",
+      "order": 11,
+      "tier": "complete",
+      "title": "Bus, Tram & Cycle Lanes",
+      "officialTopics": [
+        "road-and-traffic-signs"
+      ]
+    },
+    {
+      "id": "speed-limits",
+      "area": "rules-of-the-road",
+      "order": 1,
+      "tier": "basic",
+      "title": "Speed Limits",
+      "officialTopics": [
+        "rules-of-the-road"
+      ]
+    },
+    {
+      "id": "hierarchy-of-road-users",
+      "area": "rules-of-the-road",
+      "order": 2,
+      "tier": "basic",
+      "title": "The Hierarchy of Road Users",
+      "officialTopics": [
+        "rules-of-the-road",
+        "attitude",
+        "vulnerable-road-users"
+      ]
+    },
+    {
+      "id": "junctions-priority",
+      "area": "rules-of-the-road",
+      "order": 3,
+      "tier": "basic",
+      "title": "Junctions: Who Goes First",
+      "officialTopics": [
+        "rules-of-the-road"
+      ]
+    },
+    {
+      "id": "turning-and-box-junctions",
+      "area": "rules-of-the-road",
+      "order": 4,
+      "tier": "complete",
+      "title": "Turning Left & Right, Box Junctions",
+      "officialTopics": [
+        "rules-of-the-road"
+      ]
+    },
+    {
+      "id": "roundabouts",
+      "area": "rules-of-the-road",
+      "order": 5,
+      "tier": "basic",
+      "title": "Roundabouts",
+      "officialTopics": [
+        "rules-of-the-road"
+      ]
+    },
+    {
+      "id": "mini-and-multiple-roundabouts",
+      "area": "rules-of-the-road",
+      "order": 6,
+      "tier": "complete",
+      "title": "Mini & Multiple Roundabouts",
+      "officialTopics": [
+        "rules-of-the-road"
+      ]
+    },
+    {
+      "id": "pedestrian-crossings",
+      "area": "rules-of-the-road",
+      "order": 7,
+      "tier": "complete",
+      "title": "Pedestrian Crossings",
+      "officialTopics": [
+        "rules-of-the-road",
+        "vulnerable-road-users"
+      ]
+    },
+    {
+      "id": "overtaking",
+      "area": "rules-of-the-road",
+      "order": 8,
+      "tier": "complete",
+      "title": "Overtaking: When and When Not",
+      "officialTopics": [
+        "rules-of-the-road",
+        "attitude"
+      ]
+    },
+    {
+      "id": "parking-and-waiting",
+      "area": "rules-of-the-road",
+      "order": 9,
+      "tier": "complete",
+      "title": "Parking & Waiting",
+      "officialTopics": [
+        "rules-of-the-road"
+      ]
+    },
+    {
+      "id": "reversing-and-turning",
+      "area": "rules-of-the-road",
+      "order": 10,
+      "tier": "complete",
+      "title": "Reversing & Turning in the Road",
+      "officialTopics": [
+        "rules-of-the-road",
+        "vehicle-handling"
+      ]
+    },
+    {
+      "id": "lane-discipline-one-way",
+      "area": "rules-of-the-road",
+      "order": 11,
+      "tier": "complete",
+      "title": "Lane Discipline & One-Way Streets",
+      "officialTopics": [
+        "rules-of-the-road"
+      ]
+    },
+    {
+      "id": "lights-and-horn",
+      "area": "rules-of-the-road",
+      "order": 12,
+      "tier": "complete",
+      "title": "Lights & Horn: When to Use Them",
+      "officialTopics": [
+        "rules-of-the-road"
+      ]
+    },
+    {
+      "id": "level-crossings-and-trams",
+      "area": "rules-of-the-road",
+      "order": 13,
+      "tier": "complete",
+      "title": "Level Crossings & Tramways",
+      "officialTopics": [
+        "rules-of-the-road",
+        "other-types-of-vehicle"
+      ]
+    },
+    {
+      "id": "motorways-who-can-use",
+      "area": "motorways",
+      "order": 1,
+      "tier": "basic",
+      "title": "Who Can Use Motorways (and Learners)",
+      "officialTopics": [
+        "motorway-rules"
+      ]
+    },
+    {
+      "id": "motorways-joining-leaving",
+      "area": "motorways",
+      "order": 2,
+      "tier": "basic",
+      "title": "Joining & Leaving a Motorway",
+      "officialTopics": [
+        "motorway-rules"
+      ]
+    },
+    {
+      "id": "motorways-lanes-overtaking",
+      "area": "motorways",
+      "order": 3,
+      "tier": "basic",
+      "title": "Motorway Lanes & Overtaking",
+      "officialTopics": [
+        "motorway-rules"
+      ]
+    },
+    {
+      "id": "motorways-signals-red-x",
+      "area": "motorways",
+      "order": 4,
+      "tier": "basic",
+      "title": "Motorway Signals & the Red X",
+      "officialTopics": [
+        "motorway-rules",
+        "road-and-traffic-signs"
+      ]
+    },
+    {
+      "id": "smart-motorways",
+      "area": "motorways",
+      "order": 5,
+      "tier": "complete",
+      "title": "Smart Motorways & Emergency Areas",
+      "officialTopics": [
+        "motorway-rules"
+      ]
+    },
+    {
+      "id": "motorways-studs-markings",
+      "area": "motorways",
+      "order": 6,
+      "tier": "complete",
+      "title": "Reflective Studs & Motorway Markings",
+      "officialTopics": [
+        "motorway-rules",
+        "road-and-traffic-signs"
+      ]
+    },
+    {
+      "id": "motorways-breakdowns",
+      "area": "motorways",
+      "order": 7,
+      "tier": "complete",
+      "title": "Breaking Down on a Motorway",
+      "officialTopics": [
+        "motorway-rules",
+        "incidents-accidents-and-emergencies"
+      ]
+    },
+    {
+      "id": "stopping-distances",
+      "area": "safety-margins",
+      "order": 1,
+      "tier": "basic",
+      "title": "Stopping Distances",
+      "officialTopics": [
+        "safety-margins"
+      ]
+    },
+    {
+      "id": "following-distance",
+      "area": "safety-margins",
+      "order": 2,
+      "tier": "basic",
+      "title": "Following Distance: the Two-Second Rule",
+      "officialTopics": [
+        "safety-margins",
+        "attitude"
+      ]
+    },
+    {
+      "id": "wet-roads-aquaplaning",
+      "area": "safety-margins",
+      "order": 3,
+      "tier": "basic",
+      "title": "Wet Roads & Aquaplaning",
+      "officialTopics": [
+        "safety-margins",
+        "vehicle-handling"
+      ]
+    },
+    {
+      "id": "ice-and-snow",
+      "area": "safety-margins",
+      "order": 4,
+      "tier": "basic",
+      "title": "Ice & Snow",
+      "officialTopics": [
+        "safety-margins",
+        "vehicle-handling"
+      ]
+    },
+    {
+      "id": "fog",
+      "area": "safety-margins",
+      "order": 5,
+      "tier": "complete",
+      "title": "Fog",
+      "officialTopics": [
+        "safety-margins",
+        "vehicle-handling"
+      ]
+    },
+    {
+      "id": "windy-weather",
+      "area": "safety-margins",
+      "order": 6,
+      "tier": "complete",
+      "title": "Windy Weather",
+      "officialTopics": [
+        "vehicle-handling",
+        "other-types-of-vehicle"
+      ]
+    },
+    {
+      "id": "hills-gears-coasting",
+      "area": "safety-margins",
+      "order": 7,
+      "tier": "complete",
+      "title": "Hills, Gears & Coasting",
+      "officialTopics": [
+        "vehicle-handling"
+      ]
+    },
+    {
+      "id": "skids-abs-esc",
+      "area": "safety-margins",
+      "order": 8,
+      "tier": "complete",
+      "title": "Skids, ABS & ESC",
+      "officialTopics": [
+        "vehicle-handling",
+        "safety-margins"
+      ]
+    },
+    {
+      "id": "night-driving-dazzle",
+      "area": "safety-margins",
+      "order": 9,
+      "tier": "complete",
+      "title": "Driving at Night & Dazzle",
+      "officialTopics": [
+        "vehicle-handling",
+        "alertness"
+      ]
+    },
+    {
+      "id": "alertness-distractions",
+      "area": "hazards-and-vulnerable",
+      "order": 1,
+      "tier": "basic",
+      "title": "Alertness, Distractions & Phones",
+      "officialTopics": [
+        "alertness"
+      ]
+    },
+    {
+      "id": "tiredness",
+      "area": "hazards-and-vulnerable",
+      "order": 2,
+      "tier": "complete",
+      "title": "Tiredness",
+      "officialTopics": [
+        "alertness",
+        "hazard-awareness"
+      ]
+    },
+    {
+      "id": "alcohol",
+      "area": "hazards-and-vulnerable",
+      "order": 3,
+      "tier": "basic",
+      "title": "Alcohol & the Law",
+      "officialTopics": [
+        "hazard-awareness"
+      ]
+    },
+    {
+      "id": "drugs-medicines",
+      "area": "hazards-and-vulnerable",
+      "order": 4,
+      "tier": "complete",
+      "title": "Drugs & Medicines",
+      "officialTopics": [
+        "hazard-awareness"
+      ]
+    },
+    {
+      "id": "attitude-courtesy",
+      "area": "hazards-and-vulnerable",
+      "order": 5,
+      "tier": "complete",
+      "title": "Attitude: Following Too Close & Courtesy",
+      "officialTopics": [
+        "attitude"
+      ]
+    },
+    {
+      "id": "pedestrians",
+      "area": "hazards-and-vulnerable",
+      "order": 6,
+      "tier": "basic",
+      "title": "Pedestrians: Children, Older & Disabled People",
+      "officialTopics": [
+        "vulnerable-road-users"
+      ]
+    },
+    {
+      "id": "cyclists",
+      "area": "hazards-and-vulnerable",
+      "order": 7,
+      "tier": "basic",
+      "title": "Cyclists: Passing, Lanes & the Dutch Reach",
+      "officialTopics": [
+        "vulnerable-road-users"
+      ]
+    },
+    {
+      "id": "motorcyclists",
+      "area": "hazards-and-vulnerable",
+      "order": 8,
+      "tier": "complete",
+      "title": "Motorcyclists",
+      "officialTopics": [
+        "vulnerable-road-users"
+      ]
+    },
+    {
+      "id": "horse-riders-animals",
+      "area": "hazards-and-vulnerable",
+      "order": 9,
+      "tier": "complete",
+      "title": "Horse Riders & Animals",
+      "officialTopics": [
+        "vulnerable-road-users"
+      ]
+    },
+    {
+      "id": "large-and-emergency-vehicles",
+      "area": "hazards-and-vulnerable",
+      "order": 10,
+      "tier": "basic",
+      "title": "Large & Emergency Vehicles, Buses, Trams",
+      "officialTopics": [
+        "other-types-of-vehicle"
+      ]
+    },
+    {
+      "id": "vehicle-checks-tyres",
+      "area": "vehicle-docs-incidents",
+      "order": 1,
+      "tier": "basic",
+      "title": "Vehicle Checks & Tyres",
+      "officialTopics": [
+        "safety-and-your-vehicle"
+      ]
+    },
+    {
+      "id": "eco-safe-driving",
+      "area": "vehicle-docs-incidents",
+      "order": 2,
+      "tier": "complete",
+      "title": "Eco-Safe Driving & the Environment",
+      "officialTopics": [
+        "safety-and-your-vehicle"
+      ]
+    },
+    {
+      "id": "seat-belts-child-restraints",
+      "area": "vehicle-docs-incidents",
+      "order": 3,
+      "tier": "complete",
+      "title": "Seat Belts & Child Restraints",
+      "officialTopics": [
+        "safety-and-your-vehicle",
+        "vehicle-loading"
+      ]
+    },
+    {
+      "id": "loading-and-towing",
+      "area": "vehicle-docs-incidents",
+      "order": 4,
+      "tier": "basic",
+      "title": "Loading & Towing",
+      "officialTopics": [
+        "vehicle-loading"
+      ]
+    },
+    {
+      "id": "documents",
+      "area": "vehicle-docs-incidents",
+      "order": 5,
+      "tier": "basic",
+      "title": "Documents: Licence, Insurance, MOT & Tax",
+      "officialTopics": [
+        "essential-documents"
+      ]
+    },
+    {
+      "id": "learner-new-driver-rules",
+      "area": "vehicle-docs-incidents",
+      "order": 6,
+      "tier": "complete",
+      "title": "Learner & New Driver Rules",
+      "officialTopics": [
+        "essential-documents"
+      ]
+    },
+    {
+      "id": "penalties-points",
+      "area": "vehicle-docs-incidents",
+      "order": 7,
+      "tier": "complete",
+      "title": "Penalties & Points",
+      "officialTopics": [
+        "essential-documents"
+      ]
+    },
+    {
+      "id": "breakdowns-warning-triangles",
+      "area": "vehicle-docs-incidents",
+      "order": 8,
+      "tier": "complete",
+      "title": "Breakdowns & Warning Triangles",
+      "officialTopics": [
+        "incidents-accidents-and-emergencies"
+      ]
+    },
+    {
+      "id": "incident-scene-first-aid",
+      "area": "vehicle-docs-incidents",
+      "order": 9,
+      "tier": "basic",
+      "title": "At the Scene of an Incident & First Aid",
+      "officialTopics": [
+        "incidents-accidents-and-emergencies"
+      ]
+    },
+    {
+      "id": "tunnels-vehicle-fires",
+      "area": "vehicle-docs-incidents",
+      "order": 10,
+      "tier": "complete",
+      "title": "Tunnels & Vehicle Fires",
+      "officialTopics": [
+        "incidents-accidents-and-emergencies"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "id": "numbers-table",
+  "niche": "uk-driving-theory",
+  "number": 3,
+  "title": "Numbers Table",
+  "summary": "Every speed, distance, limit and deadline you need for the test, on one page.",
+  "kind": "document",
+  "pages": [
+    {
+      "heading": "Numbers to know",
+      "blocks": [
+        {
+          "type": "numbers-table",
+          "title": "The numbers that come up most"
+        }
+      ]
+    },
+    {
+      "heading": "Speed limits and stopping distances",
+      "blocks": [
+        {
+          "type": "table",
+          "title": "National speed limits (mph)",
+          "numbersKey": "speed-limits"
+        },
+        {
+          "type": "table",
+          "title": "Typical stopping distances (dry road)",
+          "numbersKey": "stopping-distances"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 124, 126, 163, 215 and Annex 6",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "GOV.UK",
+      "ref": "Drink-drive limit, MOT, penalty points, mobile phones, child car seats",
+      "url": "https://www.gov.uk"
+    }
+  ],
+  "review": {
+    "status": "draft"
+  }
+}

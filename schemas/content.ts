@@ -1,10 +1,14 @@
 import { z } from 'zod';
-import { barScaleData, LIMITS } from './map.ts';
+import { barScaleData, LIMITS, tableData } from './map.ts';
 import { jurisdiction, review, slug, sourceRef } from './common.ts';
 
 export const site = z.object({
   schemaVersion: z.literal(1),
-  brandName: z.string().min(1),
+  /** brand name, translated per language ("Ajuda com Provas" → "Test Help" in en-GB) */
+  brand: z.object({
+    default: z.string().min(1),
+    byLanguage: z.record(z.string().regex(/^[a-z]{2}-[A-Z]{2}$/), z.string().min(1)),
+  }),
   domain: z.string().min(1),
   supportEmail: z.string().min(1),
   legal: z.object({
@@ -15,6 +19,9 @@ export const site = z.object({
   metaPixelId: z.string().nullable(),
 });
 export type Site = z.infer<typeof site>;
+
+/** brand name in the language of the niche, falling back to the default */
+export const brandName = (s: Site, language: string) => s.brand.byLanguage[language] ?? s.brand.default;
 
 /** Numbers to know: one source of truth for maps, the Numbers Table bonus and the flashcards. */
 export const numbers = z.object({
@@ -28,6 +35,7 @@ export const numbers = z.object({
         /** short display value, e.g. "1.6 mm" */
         value: z.string().min(1).max(160),
         data: barScaleData.optional(),
+        table: tableData.optional(),
         jurisdiction,
         sources: z.array(sourceRef).min(1),
         review,
@@ -38,6 +46,25 @@ export const numbers = z.object({
 });
 export type Numbers = z.infer<typeof numbers>;
 export type NumberItem = Numbers['items'][number];
+
+/** The planned maps of a niche. Map files must match their entry; coverage is planned here first. */
+export const inventory = z.object({
+  schemaVersion: z.literal(1),
+  niche: slug,
+  maps: z
+    .array(
+      z.object({
+        id: slug,
+        area: slug,
+        order: z.number().int().min(1).max(99),
+        tier: z.enum(['basic', 'complete']),
+        title: z.string().min(1).max(LIMITS.title),
+        officialTopics: z.array(slug).min(1),
+      }),
+    )
+    .min(1),
+});
+export type Inventory = z.infer<typeof inventory>;
 
 export const signShape = z.enum(['triangle', 'inverted-triangle', 'circle', 'octagon', 'rectangle']);
 
@@ -98,6 +125,7 @@ export const i18n = z.object({
     draftWatermark: z.string(),
     signPending: z.string(),
     jurisdictionNote: z.string(),
+    overall: z.string(),
   }),
   segments: z.record(z.string(), z.string()),
   diagram: z.object({
@@ -106,6 +134,25 @@ export const i18n = z.object({
     signalLeft: z.string(),
     signalRight: z.string(),
     exitLabel: z.string(),
+  }),
+  bonus: z.object({
+    label: z.string(),
+    page: z.string(),
+    day: z.string(),
+    study: z.string(),
+    review: z.string(),
+    reviewTask: z.string(),
+    practice: z.string(),
+    practiceTask: z.string(),
+    final: z.string(),
+    finalTask: z.string(),
+    mapIndex: z.string(),
+    flashcardsFront: z.string(),
+    flashcardsBack: z.string(),
+    flashcardsHowTo: z.string(),
+    cardSign: z.string(),
+    cardNumber: z.string(),
+    answer: z.string(),
   }),
   credits: z.object({
     howToUseTitle: z.string(),

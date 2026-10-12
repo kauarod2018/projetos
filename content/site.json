@@ -1,6 +1,15 @@
 {
   "schemaVersion": 1,
-  "brandName": "{{BRAND_NAME}}",
+  "brand": {
+    "default": "Ajuda com Provas",
+    "byLanguage": {
+      "en-GB": "Test Help",
+      "fr-FR": "Aide aux Examens",
+      "es-ES": "Ayuda con Exámenes",
+      "de-DE": "Prüfungshilfe",
+      "pt-BR": "Ajuda com Provas"
+    }
+  },
   "domain": "{{DOMAIN}}",
   "supportEmail": "{{SUPPORT_EMAIL}}",
   "legal": {

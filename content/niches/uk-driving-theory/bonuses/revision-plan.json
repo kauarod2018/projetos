@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "revision-plan",
+  "niche": "uk-driving-theory",
+  "number": 4,
+  "title": "30-Day Revision Plan",
+  "summary": "A day-by-day schedule through every map, with review days and a practice test before the big day.",
+  "kind": "document",
+  "pages": [
+    {
+      "heading": "Your 30-day plan",
+      "blocks": [
+        {
+          "type": "lead",
+          "text": "About 20–30 minutes a day. Study the maps listed for the day, cover the answers and try the test questions. Review days go back over the traps."
+        },
+        {
+          "type": "revision-plan",
+          "title": "Day by day",
+          "days": 30
+        }
+      ]
+    },
+    {
+      "heading": "Map index",
+      "blocks": [
+        {
+          "type": "map-index",
+          "title": "Every map by code"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK",
+      "ref": "Practise your driving theory test",
+      "url": "https://www.gov.uk/take-practice-theory-test"
+    }
+  ],
+  "review": {
+    "status": "draft"
+  }
+}

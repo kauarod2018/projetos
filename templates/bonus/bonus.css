@@ -1,0 +1,622 @@
+/* Bonus documents: same tokens and blocks as the maps, brand green band. */
+
+.bn-band {
+  flex: none;
+  height: 15mm;
+  padding: 0 10mm;
+  background: var(--area);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 4mm;
+  font-family: var(--font-head);
+}
+
+.bn-num {
+  font-weight: 800;
+  font-size: 9pt;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #1a1400;
+  background: #ffc93c;
+  border-radius: 99px;
+  padding: 1.2mm 2.8mm;
+}
+
+.bn-title {
+  font-weight: 700;
+  font-size: 10pt;
+  letter-spacing: 0.02em;
+}
+
+.bn-brand {
+  margin-left: auto;
+  font-weight: 800;
+  font-size: 10pt;
+  opacity: 0.9;
+}
+
+.bn-main {
+  flex: 1;
+  min-height: 0;
+  padding: 7mm 10mm 0;
+}
+
+.bn-main h1 {
+  font-size: 22pt;
+  font-weight: 800;
+  font-stretch: 88%;
+  line-height: 1.05;
+  letter-spacing: -0.012em;
+  margin-bottom: 4mm;
+}
+
+.bn-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5mm 7mm;
+  align-items: start;
+}
+
+.bn-grid > * {
+  grid-column: span 2;
+}
+
+.bn-grid > .half {
+  grid-column: span 1;
+}
+
+.bn-lead {
+  margin: 0;
+}
+
+/* stat row */
+.stat-row {
+  display: grid;
+  grid-template-columns: repeat(var(--n), 1fr);
+  gap: 3mm;
+}
+
+.stat {
+  background: var(--area-soft);
+  border-radius: var(--radius);
+  padding: 3mm 3.5mm;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6mm;
+}
+
+.stat b {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 22pt;
+  line-height: 1;
+  color: var(--area-deep);
+}
+
+.stat span {
+  font-size: 9pt;
+  color: var(--ink-2);
+}
+
+/* steps */
+.steps {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.4mm 4mm;
+}
+
+.step {
+  border: 1px solid var(--line);
+  border-radius: 2mm;
+  padding: 2.2mm 2.8mm;
+}
+
+.step h3 {
+  font-size: 10pt;
+  font-weight: 700;
+  margin-bottom: 0.6mm;
+}
+
+.step p {
+  margin: 0;
+  font-size: 9pt;
+}
+
+/* callouts */
+.callout {
+  display: flex;
+  gap: 3mm;
+  align-items: flex-start;
+  padding: 3mm 3.5mm;
+  border-radius: var(--radius);
+}
+
+.callout.tip {
+  background: #fff8e1;
+  border-left: 1.2mm solid #ffc93c;
+}
+
+.callout.warning {
+  background: #fdecec;
+  border-left: 1.2mm solid var(--draft);
+}
+
+.callout h3 {
+  font-size: 10pt;
+  font-weight: 700;
+  margin-bottom: 0.6mm;
+}
+
+.callout p {
+  margin: 0;
+  font-size: 9.5pt;
+}
+
+/* checklist */
+.checklist li {
+  display: flex;
+  gap: 2.4mm;
+  align-items: baseline;
+  padding: 1mm 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.checklist li:last-child {
+  border-bottom: 0;
+}
+
+.checklist i {
+  flex: none;
+  width: 3.4mm;
+  height: 3.4mm;
+  border: 1.5px solid var(--ink);
+  border-radius: 0.8mm;
+  transform: translateY(0.4mm);
+}
+
+/* scoring window */
+.sw-bar {
+  display: grid;
+  grid-template-columns: 1.2fr repeat(5, 1fr) 1.2fr;
+  height: 12mm;
+  border-radius: 2mm;
+  overflow: hidden;
+}
+
+.sw-off {
+  display: grid;
+  place-items: center;
+  background: var(--soft);
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 12pt;
+  color: var(--ink-3);
+}
+
+.sw-seg {
+  display: grid;
+  place-items: center;
+  background: color-mix(in srgb, var(--area) calc(var(--k) * 100%), white);
+  border-left: 1px solid #fff;
+}
+
+.sw-seg b {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 14pt;
+  color: #fff;
+}
+
+.sw-seg.light b {
+  color: var(--area-deep);
+}
+
+.sw-labels {
+  display: grid;
+  grid-template-columns: 1.2fr 2.5fr 2.5fr 1.2fr;
+  gap: 2mm;
+  margin-top: 2mm;
+  font-size: 8.5pt;
+  color: var(--ink-2);
+}
+
+.sw-start {
+  border-left: 2px solid var(--area);
+  padding-left: 1.6mm;
+}
+
+.sw-end {
+  text-align: right;
+  border-right: 2px solid var(--area);
+  padding-right: 1.6mm;
+}
+
+.sw-labels span:last-child {
+  text-align: right;
+}
+
+/* sign pairs */
+.pairs {
+  display: grid;
+  gap: 3mm;
+}
+
+.pair {
+  display: grid;
+  grid-template-columns: 34mm auto 34mm 1fr;
+  align-items: center;
+  gap: 3mm;
+  padding: 2.4mm 3mm;
+  border: 1px solid var(--line);
+  border-radius: 2mm;
+}
+
+.pair .sg-img {
+  width: 26mm;
+  height: 26mm;
+}
+
+.pair p {
+  margin: 0;
+  font-size: 9.5pt;
+}
+
+/* numbers table */
+.tb.numbers th {
+  width: 42%;
+  text-transform: none;
+  letter-spacing: 0;
+  font-family: var(--font-body);
+  font-size: 9.5pt;
+  color: var(--ink);
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.tb.numbers th em {
+  font-style: normal;
+  font-size: 8pt;
+  color: var(--area-deep);
+  background: var(--area-soft);
+  border-radius: 0.8mm;
+  padding: 0 1mm;
+  white-space: nowrap;
+}
+
+.tb.numbers td {
+  font-size: 9.5pt;
+  font-weight: 700;
+}
+
+/* revision plan */
+.plan {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 2mm;
+}
+
+.day {
+  border: 1px solid var(--line);
+  border-radius: 1.6mm;
+  padding: 1.6mm 1.8mm;
+  min-height: 25mm;
+}
+
+.day-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1.2mm;
+  font-size: 8pt;
+}
+
+.day-head b {
+  font-family: var(--font-head);
+  font-size: 9pt;
+}
+
+.day-head span {
+  color: var(--ink-3);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 8pt;
+}
+
+.day.review,
+.day.practice,
+.day.final {
+  background: var(--area-soft);
+  border-color: transparent;
+}
+
+.day.final {
+  background: #fff8e1;
+}
+
+.day p {
+  margin: 0;
+  font-size: 8.5pt;
+  line-height: 1.25;
+}
+
+.code {
+  display: inline-block;
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 8pt;
+  color: #fff;
+  background: var(--area);
+  border-radius: 0.8mm;
+  padding: 0.2mm 1.1mm;
+  margin: 0 0.8mm 0.8mm 0;
+}
+
+.map-index {
+  columns: 2;
+  column-gap: 7mm;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.map-index li {
+  break-inside: avoid;
+  display: flex;
+  gap: 2mm;
+  align-items: baseline;
+  padding: 0.7mm 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 9pt;
+}
+
+.map-index .code {
+  margin: 0;
+}
+
+/* ---------- flashcards ---------- */
+.fc-sheet {
+  padding: 8mm 10mm 0;
+}
+
+.fc-note {
+  height: 6mm;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 8pt;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  display: flex;
+  justify-content: space-between;
+}
+
+.fc-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 95mm);
+  grid-template-rows: repeat(4, 66mm);
+  border-top: 1px dashed #9aa1ad;
+  border-left: 1px dashed #9aa1ad;
+}
+
+.card {
+  position: relative;
+  border-right: 1px dashed #9aa1ad;
+  border-bottom: 1px dashed #9aa1ad;
+  padding: 5mm 6mm;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 2mm;
+  overflow: hidden;
+}
+
+.card.empty {
+  background: repeating-linear-gradient(45deg, transparent 0 3mm, var(--soft) 3mm 6mm);
+}
+
+.card .card-kind {
+  position: absolute;
+  top: 3mm;
+  left: 4mm;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 8pt;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--area-deep);
+}
+
+.card .card-brand {
+  position: absolute;
+  bottom: 2.6mm;
+  right: 4mm;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 8pt;
+  color: var(--ink-3);
+}
+
+.card .sg-img {
+  width: 30mm;
+  height: 30mm;
+}
+
+.card .sg-cell figcaption {
+  display: none;
+}
+
+.card .card-q {
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-stretch: 92%;
+  font-size: 14pt;
+  line-height: 1.15;
+}
+
+.card .card-a {
+  font-size: 11.5pt;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.card .card-sub {
+  font-size: 9pt;
+  color: var(--ink-2);
+}
+
+.card .hint {
+  font-size: 9pt;
+  color: var(--ink-3);
+}
+
+/* phone edition: one card per screen */
+.page.phone {
+  width: 90mm;
+  height: 160mm;
+}
+
+.phone .card {
+  flex: 1;
+  border: 0;
+  padding: 10mm 8mm;
+}
+
+.phone .card .sg-img {
+  width: 44mm;
+  height: 44mm;
+}
+
+.phone .card .card-q {
+  font-size: 18pt;
+}
+
+.phone .card .card-a {
+  font-size: 15pt;
+}
+
+.phone .phone-bar {
+  flex: none;
+  height: 9mm;
+  background: var(--area);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5mm;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 8pt;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* bonus guides are read slowly, so text runs larger than on the maps */
+.bn-main {
+  font-size: 10.5pt;
+  line-height: 1.4;
+}
+
+.bn-main .lead {
+  font-size: 12.5pt;
+  max-width: none;
+}
+
+.bn-main .facts li,
+.bn-main .checklist li {
+  font-size: 10.5pt;
+  padding: 1.7mm 0;
+}
+
+.bn-main .step {
+  padding: 3.2mm 3.6mm;
+}
+
+.bn-main .step h3,
+.bn-main .callout h3 {
+  font-size: 11.5pt;
+}
+
+.bn-main .step p,
+.bn-main .callout p,
+.bn-main .pair p {
+  font-size: 10.5pt;
+}
+
+.bn-main .callout {
+  padding: 4mm 4.5mm;
+}
+
+.bn-main .stat {
+  padding: 4.5mm 4.5mm;
+}
+
+.bn-main .stat b {
+  font-size: 28pt;
+}
+
+.bn-main .stat span {
+  font-size: 10pt;
+}
+
+.bn-main .sw-bar {
+  height: 16mm;
+}
+
+.bn-main .sw-labels {
+  font-size: 9.5pt;
+}
+
+.bn-main .tb {
+  font-size: 10pt;
+}
+
+.bn-main .tb td,
+.bn-main .tb th {
+  padding: 1.8mm 2mm;
+}
+
+.bn-main .tb.numbers th,
+.bn-main .tb.numbers td {
+  font-size: 10.5pt;
+}
+
+.bn-main .pair {
+  padding: 4mm;
+}
+
+.bn-main .pair .sg-img {
+  width: 30mm;
+  height: 30mm;
+}
+
+.bn-main .pair .sg-cell figcaption {
+  font-size: 9pt;
+}
+
+.bn-main .day {
+  min-height: 34mm;
+  padding: 2.2mm 2.2mm;
+}
+
+.bn-main .day p {
+  font-size: 9.5pt;
+}
+
+.bn-main .day-head {
+  flex-wrap: wrap;
+  gap: 0 1.5mm;
+}
+
+.bn-main .map-index li {
+  font-size: 10pt;
+  padding: 1.15mm 0;
+}
+
+.bn-grid {
+  gap: 7mm 8mm;
+}

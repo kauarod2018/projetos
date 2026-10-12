@@ -661,3 +661,13 @@
   padding: 1.2mm 1.6mm;
   border-bottom: 1px solid var(--line);
 }
+
+.tb-notes {
+  margin-top: 2mm;
+}
+
+.tb-notes li {
+  font-size: 8.5pt;
+  color: var(--ink-2);
+  margin-top: 0.6mm;
+}

@@ -48,6 +48,13 @@ export const barScaleData = z.object({
 });
 export type BarScaleData = z.infer<typeof barScaleData>;
 
+export const tableData = z.object({
+  columns: z.array(z.string().min(1)).min(2).max(6),
+  rows: z.array(z.array(z.string())).min(1).max(12),
+  notes: z.array(z.string().min(1).max(160)).max(3).default([]),
+});
+export type TableData = z.infer<typeof tableData>;
+
 const signGrid = z.object({
   type: z.literal('sign-grid'),
   caption: z.string().min(1).max(LIMITS.caption),
@@ -85,12 +92,16 @@ const roadDiagram = z.object({
   notes: z.array(z.string().min(1).max(70)).max(3).default([]),
 });
 
-const table = z.object({
-  type: z.literal('table'),
-  caption: z.string().min(1).max(LIMITS.caption),
-  columns: z.array(z.string().min(1)).min(2).max(6),
-  rows: z.array(z.array(z.string())).min(1).max(12),
-});
+const table = z
+  .object({
+    type: z.literal('table'),
+    caption: z.string().min(1).max(LIMITS.caption),
+    data: tableData.optional(),
+    numbersKey: slug.optional(),
+  })
+  .refine((v) => Boolean(v.data) !== Boolean(v.numbersKey), {
+    message: 'table needs exactly one of "data" or "numbersKey"',
+  });
 
 export const visual = z.discriminatedUnion('type', [signGrid, barScale, roadDiagram, table]);
 export type Visual = z.infer<typeof visual>;

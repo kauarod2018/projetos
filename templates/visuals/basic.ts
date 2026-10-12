@@ -1,5 +1,5 @@
 import type { I18n, Sign } from '../../schemas/content.ts';
-import type { BarScaleData, Visual } from '../../schemas/map.ts';
+import type { BarScaleData, TableData } from '../../schemas/map.ts';
 import { esc } from '../shared/html.ts';
 
 /** Horizontal stacked bars drawn to scale (e.g. thinking + braking distance). */
@@ -54,12 +54,16 @@ export function renderSignGrid(ids: string[], signs: Sign[], signFile: (s: Sign)
   const cells = ids
     .map((id) => {
       const sign = signs.find((s) => s.id === id)!;
-      const src = sign.status === 'official' ? signFile(sign) : undefined;
-      const img = src ? `<img src="${src}" alt="${esc(sign.meaning)}">` : shapeOutline(sign.shape);
-      return `<figure class="sg-cell"><div class="sg-img">${img}</div><figcaption>${esc(sign.meaning)}</figcaption></figure>`;
+      return signCell(sign, signFile(sign));
     })
     .join('');
   return `<div class="sg" style="--cols:${Math.min(5, ids.length)}">${cells}</div>`;
+}
+
+/** one sign with its caption: the official image, or only the empty outline of its shape */
+export function signCell(sign: Sign, src: string | undefined, caption = true): string {
+  const img = sign.status === 'official' && src ? `<img src="${src}" alt="${esc(sign.meaning)}">` : shapeOutline(sign.shape);
+  return `<figure class="sg-cell"><div class="sg-img">${img}</div>${caption ? `<figcaption>${esc(sign.meaning)}</figcaption>` : ''}</figure>`;
 }
 
 function shapeOutline(shape: Sign['shape']): string {
@@ -74,8 +78,9 @@ function shapeOutline(shape: Sign['shape']): string {
   return `<svg viewBox="0 0 100 100" aria-hidden="true">${shapes[shape]}</svg>`;
 }
 
-export function renderTable(v: Extract<Visual, { type: 'table' }>): string {
-  return `<table class="tb"><thead><tr>${v.columns.map((c) => `<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>${v.rows
+export function renderTable(data: TableData): string {
+  const notes = data.notes.length ? `<ul class="tb-notes">${data.notes.map((n) => `<li>${esc(n)}</li>`).join('')}</ul>` : '';
+  return `<table class="tb"><thead><tr>${data.columns.map((c) => `<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>${data.rows
     .map((r) => `<tr>${r.map((c) => `<td>${esc(c)}</td>`).join('')}</tr>`)
-    .join('')}</tbody></table>`;
+    .join('')}</tbody></table>${notes}`;
 }
