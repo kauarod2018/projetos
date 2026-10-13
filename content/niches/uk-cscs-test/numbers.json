@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "niche": "uk-cscs-test",
+  "items": [
+    {
+      "key": "test-format",
+      "label": "HS&E test for operatives",
+      "value": "50 questions in 45 minutes · pass mark 90% (45 out of 50)",
+      "jurisdiction": "great-britain",
+      "sources": [
+        {
+          "doc": "CITB: Operatives test",
+          "ref": "About the Operatives HS&E test; Structure of the tests",
+          "url": "https://www.citb.co.uk/courses-tests/health-safety-and-environment-hse-test/operatives-test/"
+        }
+      ],
+      "review": {
+        "status": "draft"
+      }
+    }
+  ]
+}

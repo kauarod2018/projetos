@@ -1,0 +1,8 @@
+{
+  "map": {
+    "lawLegend": "LAW marks a legal requirement: a duty set by health and safety law (what you MUST or MUST NOT do). Everything else is HSE guidance and good practice."
+  },
+  "bonus": {
+    "practiceTask": "Do a full practice test: 50 questions in 45 minutes. Aim for at least 45 correct."
+  }
+}

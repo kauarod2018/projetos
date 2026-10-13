@@ -1,0 +1,401 @@
+{
+  "schemaVersion": 1,
+  "niche": "uk-cscs-test",
+  "maps": [
+    {
+      "id": "health-safety-law",
+      "area": "working-environment",
+      "order": 1,
+      "tier": "basic",
+      "title": "Health & Safety Law: Who Must Do What",
+      "officialTopics": [
+        "law-and-management"
+      ]
+    },
+    {
+      "id": "cdm-roles",
+      "area": "working-environment",
+      "order": 2,
+      "tier": "basic",
+      "title": "CDM 2015: Clients, Contractors & Workers",
+      "officialTopics": [
+        "law-and-management"
+      ]
+    },
+    {
+      "id": "site-inductions-rules",
+      "area": "working-environment",
+      "order": 3,
+      "tier": "basic",
+      "title": "Inductions, Site Rules & Supervision",
+      "officialTopics": [
+        "site-rules-and-welfare",
+        "law-and-management"
+      ]
+    },
+    {
+      "id": "risk-assessment",
+      "area": "working-environment",
+      "order": 4,
+      "tier": "basic",
+      "title": "Risk Assessments & Method Statements",
+      "officialTopics": [
+        "law-and-management"
+      ]
+    },
+    {
+      "id": "welfare-facilities",
+      "area": "working-environment",
+      "order": 5,
+      "tier": "basic",
+      "title": "Welfare Facilities on Site",
+      "officialTopics": [
+        "site-rules-and-welfare"
+      ]
+    },
+    {
+      "id": "accident-reporting",
+      "area": "working-environment",
+      "order": 6,
+      "tier": "basic",
+      "title": "Accidents, Near Misses & RIDDOR",
+      "officialTopics": [
+        "accidents-and-emergencies"
+      ]
+    },
+    {
+      "id": "first-aid",
+      "area": "working-environment",
+      "order": 7,
+      "tier": "complete",
+      "title": "First Aid at Work",
+      "officialTopics": [
+        "accidents-and-emergencies"
+      ]
+    },
+    {
+      "id": "emergency-procedures",
+      "area": "working-environment",
+      "order": 8,
+      "tier": "complete",
+      "title": "Emergency Procedures & Evacuation",
+      "officialTopics": [
+        "accidents-and-emergencies"
+      ]
+    },
+    {
+      "id": "fire-safety",
+      "area": "working-environment",
+      "order": 9,
+      "tier": "basic",
+      "title": "Fire Safety on Site",
+      "officialTopics": [
+        "accidents-and-emergencies"
+      ]
+    },
+    {
+      "id": "safety-signs",
+      "area": "working-environment",
+      "order": 10,
+      "tier": "basic",
+      "title": "Safety Signs: Shapes & Colours",
+      "officialTopics": [
+        "safety-signs"
+      ]
+    },
+    {
+      "id": "signals-and-markings",
+      "area": "working-environment",
+      "order": 11,
+      "tier": "complete",
+      "title": "Hand Signals, Acoustic Signals & Markings",
+      "officialTopics": [
+        "safety-signs"
+      ]
+    },
+    {
+      "id": "environment-waste",
+      "area": "working-environment",
+      "order": 12,
+      "tier": "basic",
+      "title": "Waste, Pollution & the Environment",
+      "officialTopics": [
+        "environment"
+      ]
+    },
+    {
+      "id": "protecting-public",
+      "area": "working-environment",
+      "order": 13,
+      "tier": "complete",
+      "title": "Protecting the Public",
+      "officialTopics": [
+        "environment",
+        "site-rules-and-welfare"
+      ]
+    },
+    {
+      "id": "health-risks-overview",
+      "area": "occupational-health",
+      "order": 1,
+      "tier": "basic",
+      "title": "Health Risks in Construction",
+      "officialTopics": [
+        "health-risks"
+      ]
+    },
+    {
+      "id": "manual-handling",
+      "area": "occupational-health",
+      "order": 2,
+      "tier": "basic",
+      "title": "Manual Handling: Lifting Safely",
+      "officialTopics": [
+        "manual-handling"
+      ]
+    },
+    {
+      "id": "hazardous-substances",
+      "area": "occupational-health",
+      "order": 3,
+      "tier": "basic",
+      "title": "Hazardous Substances & COSHH",
+      "officialTopics": [
+        "hazardous-substances"
+      ]
+    },
+    {
+      "id": "construction-dust",
+      "area": "occupational-health",
+      "order": 4,
+      "tier": "basic",
+      "title": "Construction Dust & Silica",
+      "officialTopics": [
+        "hazardous-substances",
+        "health-risks"
+      ]
+    },
+    {
+      "id": "asbestos",
+      "area": "occupational-health",
+      "order": 5,
+      "tier": "basic",
+      "title": "Asbestos: Find It, Stop, Report",
+      "officialTopics": [
+        "hazardous-substances"
+      ]
+    },
+    {
+      "id": "noise",
+      "area": "occupational-health",
+      "order": 6,
+      "tier": "basic",
+      "title": "Noise & Hearing Protection",
+      "officialTopics": [
+        "noise-and-vibration"
+      ]
+    },
+    {
+      "id": "vibration",
+      "area": "occupational-health",
+      "order": 7,
+      "tier": "complete",
+      "title": "Hand-Arm Vibration",
+      "officialTopics": [
+        "noise-and-vibration"
+      ]
+    },
+    {
+      "id": "ppe",
+      "area": "occupational-health",
+      "order": 8,
+      "tier": "basic",
+      "title": "Personal Protective Equipment",
+      "officialTopics": [
+        "ppe"
+      ]
+    },
+    {
+      "id": "skin-and-infections",
+      "area": "occupational-health",
+      "order": 9,
+      "tier": "complete",
+      "title": "Skin, Sun & Infections",
+      "officialTopics": [
+        "health-risks"
+      ]
+    },
+    {
+      "id": "electrical-safety",
+      "area": "safety",
+      "order": 1,
+      "tier": "basic",
+      "title": "Electrical Safety on Site",
+      "officialTopics": [
+        "electricity"
+      ]
+    },
+    {
+      "id": "overhead-lines",
+      "area": "safety",
+      "order": 2,
+      "tier": "complete",
+      "title": "Overhead Power Lines",
+      "officialTopics": [
+        "electricity"
+      ]
+    },
+    {
+      "id": "work-equipment",
+      "area": "safety",
+      "order": 3,
+      "tier": "basic",
+      "title": "Work Equipment & Hand Tools",
+      "officialTopics": [
+        "equipment-and-lifting"
+      ]
+    },
+    {
+      "id": "lifting-operations",
+      "area": "safety",
+      "order": 4,
+      "tier": "complete",
+      "title": "Lifting Equipment & Operations",
+      "officialTopics": [
+        "equipment-and-lifting"
+      ]
+    },
+    {
+      "id": "site-traffic",
+      "area": "safety",
+      "order": 5,
+      "tier": "basic",
+      "title": "Site Traffic & Mobile Plant",
+      "officialTopics": [
+        "site-traffic"
+      ]
+    },
+    {
+      "id": "reversing-and-plant",
+      "area": "safety",
+      "order": 6,
+      "tier": "complete",
+      "title": "Reversing, Signallers & Plant Safety",
+      "officialTopics": [
+        "site-traffic"
+      ]
+    },
+    {
+      "id": "slips-trips",
+      "area": "safety",
+      "order": 7,
+      "tier": "basic",
+      "title": "Slips, Trips & Good Housekeeping",
+      "officialTopics": [
+        "slips-trips-housekeeping"
+      ]
+    },
+    {
+      "id": "work-at-height",
+      "area": "high-risk-activities",
+      "order": 1,
+      "tier": "basic",
+      "title": "Working at Height: The Basics",
+      "officialTopics": [
+        "work-at-height"
+      ]
+    },
+    {
+      "id": "ladders",
+      "area": "high-risk-activities",
+      "order": 2,
+      "tier": "basic",
+      "title": "Ladders & Stepladders",
+      "officialTopics": [
+        "work-at-height"
+      ]
+    },
+    {
+      "id": "scaffolds",
+      "area": "high-risk-activities",
+      "order": 3,
+      "tier": "basic",
+      "title": "Scaffolds & Tower Scaffolds",
+      "officialTopics": [
+        "work-at-height"
+      ]
+    },
+    {
+      "id": "mewps",
+      "area": "high-risk-activities",
+      "order": 4,
+      "tier": "complete",
+      "title": "Mobile Elevating Work Platforms",
+      "officialTopics": [
+        "work-at-height"
+      ]
+    },
+    {
+      "id": "roofs-fragile",
+      "area": "high-risk-activities",
+      "order": 5,
+      "tier": "complete",
+      "title": "Roof Work & Fragile Surfaces",
+      "officialTopics": [
+        "work-at-height"
+      ]
+    },
+    {
+      "id": "excavations",
+      "area": "high-risk-activities",
+      "order": 6,
+      "tier": "basic",
+      "title": "Excavations",
+      "officialTopics": [
+        "excavations-and-services"
+      ]
+    },
+    {
+      "id": "underground-services",
+      "area": "high-risk-activities",
+      "order": 7,
+      "tier": "complete",
+      "title": "Buried Services: Cables & Pipes",
+      "officialTopics": [
+        "excavations-and-services",
+        "electricity"
+      ]
+    },
+    {
+      "id": "confined-spaces",
+      "area": "high-risk-activities",
+      "order": 8,
+      "tier": "basic",
+      "title": "Confined Spaces",
+      "officialTopics": [
+        "confined-spaces"
+      ]
+    },
+    {
+      "id": "demolition",
+      "area": "high-risk-activities",
+      "order": 9,
+      "tier": "basic",
+      "title": "Demolition & Structural Alteration",
+      "officialTopics": [
+        "demolition"
+      ]
+    },
+    {
+      "id": "work-near-water",
+      "area": "high-risk-activities",
+      "order": 10,
+      "tier": "complete",
+      "title": "Work On or Near Water",
+      "officialTopics": [
+        "work-at-height",
+        "health-risks"
+      ]
+    }
+  ]
+}

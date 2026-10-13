@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 1,
+  "id": "uk-cscs-test",
+  "examName": "CSCS Health, Safety & Environment Test",
+  "published": false,
+  "filePrefix": "CSCS-HSE-Test",
+  "store": {
+    "category": "Construction",
+    "countryName": "United Kingdom",
+    "productName": "CSCS Test: Visual Revision Maps",
+    "cardText": "One-page maps for the CITB health, safety and environment test for operatives, with practice questions and traps.",
+    "format": "PDF · A4 · instant download",
+    "coverTagline": "Site safety revision maps",
+    "coverBadges": [
+      "{maps} one-page maps",
+      "{questions} practice questions",
+      "{bonuses} bonuses"
+    ],
+    "keywords": [
+      "CSCS",
+      "CITB",
+      "HS&E test",
+      "health and safety test",
+      "construction",
+      "green card",
+      "labourer",
+      "operatives",
+      "site safety",
+      "building site",
+      "Great Britain"
+    ],
+    "badge": "New",
+    "rank": 3
+  },
+  "theme": {
+    "primary": "#7C2D12",
+    "accent": "#FACC15"
+  },
+  "country": "GB",
+  "jurisdiction": "Great Britain (England, Scotland and Wales)",
+  "language": "en-GB",
+  "currency": "GBP",
+  "primarySource": "HSE guidance and health and safety law",
+  "areas": [
+    {
+      "slug": "working-environment",
+      "name": "Working Environment & the Law",
+      "colour": "#1D4ED8",
+      "icon": "clipboard-list",
+      "officialTopics": [
+        "law-and-management",
+        "site-rules-and-welfare",
+        "accidents-and-emergencies",
+        "safety-signs",
+        "environment"
+      ]
+    },
+    {
+      "slug": "occupational-health",
+      "name": "Occupational Health",
+      "colour": "#15803D",
+      "icon": "heart-pulse",
+      "officialTopics": [
+        "health-risks",
+        "manual-handling",
+        "hazardous-substances",
+        "noise-and-vibration",
+        "ppe"
+      ]
+    },
+    {
+      "slug": "safety",
+      "name": "General Safety",
+      "colour": "#B45309",
+      "icon": "hard-hat",
+      "officialTopics": [
+        "electricity",
+        "equipment-and-lifting",
+        "site-traffic",
+        "slips-trips-housekeeping"
+      ]
+    },
+    {
+      "slug": "high-risk-activities",
+      "name": "High Risk Activities",
+      "colour": "#B91C1C",
+      "icon": "triangle-alert",
+      "officialTopics": [
+        "work-at-height",
+        "excavations-and-services",
+        "confined-spaces",
+        "demolition"
+      ]
+    }
+  ],
+  "officialTopics": {
+    "authority": "HelpTest syllabus for the CITB HS&E test for operatives",
+    "items": [
+      {
+        "slug": "law-and-management",
+        "name": "Health and safety law, CDM and site management"
+      },
+      {
+        "slug": "site-rules-and-welfare",
+        "name": "Site rules, inductions and welfare"
+      },
+      {
+        "slug": "accidents-and-emergencies",
+        "name": "Accidents, first aid, fire and emergencies"
+      },
+      {
+        "slug": "safety-signs",
+        "name": "Safety signs and signals"
+      },
+      {
+        "slug": "environment",
+        "name": "Environmental awareness and the public"
+      },
+      {
+        "slug": "health-risks",
+        "name": "Occupational health risks"
+      },
+      {
+        "slug": "manual-handling",
+        "name": "Manual handling"
+      },
+      {
+        "slug": "hazardous-substances",
+        "name": "Hazardous substances, dust and asbestos"
+      },
+      {
+        "slug": "noise-and-vibration",
+        "name": "Noise and vibration"
+      },
+      {
+        "slug": "ppe",
+        "name": "Personal protective equipment"
+      },
+      {
+        "slug": "electricity",
+        "name": "Electrical safety"
+      },
+      {
+        "slug": "equipment-and-lifting",
+        "name": "Work equipment, hand tools and lifting"
+      },
+      {
+        "slug": "site-traffic",
+        "name": "Site traffic and mobile plant"
+      },
+      {
+        "slug": "slips-trips-housekeeping",
+        "name": "Slips, trips and good order"
+      },
+      {
+        "slug": "work-at-height",
+        "name": "Working at height"
+      },
+      {
+        "slug": "excavations-and-services",
+        "name": "Excavations and underground services"
+      },
+      {
+        "slug": "confined-spaces",
+        "name": "Confined spaces"
+      },
+      {
+        "slug": "demolition",
+        "name": "Demolition and structural alteration"
+      }
+    ]
+  },
+  "coverage": {
+    "minMapsPerTopicComplete": 1,
+    "minMapsPerTopicBasic": 1
+  },
+  "content": {
+    "version": "0.1.0",
+    "checkedOn": null
+  },
+  "pricing": {
+    "basic": 15,
+    "complete": 24,
+    "anchor": null,
+    "vatIncluded": true
+  },
+  "checkout": {
+    "basicUrl": "",
+    "completeUrl": ""
+  },
+  "guaranteeDays": 15,
+  "updatePolicy": "Free updated PDFs whenever the HSE guidance, the law or the test changes, for as long as the product is on sale.",
+  "disclaimer": "This product is independent and is not affiliated with, endorsed by or connected to CITB, CSCS, the HSE or any government body. It does not guarantee that you will pass the test.",
+  "attributions": [
+    "Contains public sector information published by the Health and Safety Executive and licensed under the Open Government Licence v3.0; legislation.gov.uk; GOV.UK.",
+    "All practice questions are original and are not taken from the CITB question bank or revision materials."
+  ]
+}

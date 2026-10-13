@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "niche": "uk-cscs-test",
+  "slides": [
+    {
+      "kind": "hook",
+      "eyebrow": "CSCS test",
+      "title": "You need 45 out of 50 to pass",
+      "text": "Revise every topic with visual maps, one page at a time.",
+      "source": "CITB: the pass mark for the Operatives test is 90%."
+    },
+    {
+      "kind": "page",
+      "mapId": "ladders",
+      "title": "One topic. One page.",
+      "text": "Key facts, a clear visual, test questions and traps on a single A4 map.",
+      "focusY": 0,
+      "zoom": 1
+    },
+    {
+      "kind": "page",
+      "mapId": "noise",
+      "title": "See the numbers",
+      "text": "Action values, limits and what each one means for you.",
+      "focusY": 24,
+      "zoom": 1
+    },
+    {
+      "kind": "page",
+      "mapId": "ladders",
+      "title": "Know the traps",
+      "text": "Every map ends with the mistakes that cost candidates marks.",
+      "focusY": 90,
+      "zoom": 1
+    },
+    {
+      "kind": "offer",
+      "title": "{totalMaps} visual maps + {bonuses} bonuses",
+      "text": "From {priceBasic}. One-time payment. {guaranteeDays}-day money-back guarantee.",
+      "cta": "Get my maps"
+    }
+  ]
+}
