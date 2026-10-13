@@ -1,3 +1,18 @@
-# Hostinger (Apache): the site is plain static files exported by Next.js
+# Hostinger (Apache/LiteSpeed): the site is plain static files exported by Next.js
 ErrorDocument 404 /404.html
 DirectoryIndex index.html
+
+# HTTPS: turn on "Force HTTPS" in hPanel (Security → SSL) once the free SSL is active.
+# It is not forced here because a redirect to HTTPS before the certificate exists would take the site offline.
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  # Next.js puts a hash in its CSS/JS/font file names, so they can be cached for a year
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+  ExpiresByType text/javascript "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 week"
+  ExpiresByType image/svg+xml "access plus 1 week"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType text/html "access plus 0 seconds"
+</IfModule>

@@ -106,5 +106,7 @@ dist/  out/  public/media/          gerados (fora do Git)
 
 ## Publicar (quando o conteúdo estiver verificado)
 
-`npm run site:build` gera `out/`. Envie o conteúdo de `out/` para a hospedagem (Hostinger: pasta `public_html`; Vercel:
-projeto estático). As URLs terminam com `/` (por exemplo `/uk-driving-theory/`).
+`npm run site:package` gera a versão final (sem faixa de PREVIEW, com `sitemap.xml` e `robots.txt`) e o arquivo
+`entrega/helptest-site-AAAA-MM-DD.zip`, pronto para extrair na pasta `public_html` da Hostinger. O passo a passo
+completo, com o domínio, o SSL e a Hotmart, está em [`docs/publicar-na-hostinger.md`](docs/publicar-na-hostinger.md).
+As URLs terminam com `/` (por exemplo `/uk-driving-theory/`).

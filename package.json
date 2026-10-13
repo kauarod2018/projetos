@@ -16,7 +16,7 @@
     "site:dev": "npm run site:assets && SITE_MODE=preview next dev",
     "site:preview": "npm run build:preview && npm run site:assets && SITE_MODE=preview NEXT_TELEMETRY_DISABLED=1 next build",
     "site:build": "npm run validate:release && npm run build:pdfs && npm run site:assets && SITE_MODE=release NEXT_TELEMETRY_DISABLED=1 next build",
-    "site:package": "npm run site:build && mkdir -p entrega && tar -czf entrega/site-$(date +%F).tar.gz -C out .",
+    "site:package": "npm run site:build && mkdir -p entrega && rm -f entrega/helptest-site-*.zip && cd out && zip -qrX ../entrega/helptest-site-$(date +%F).zip .",
     "site:check": "tsx scripts/check-site.ts",
     "creatives": "tsx scripts/build-creatives.ts",
     "creatives:release": "tsx scripts/build-creatives.ts --release"

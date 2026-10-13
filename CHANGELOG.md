@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-10-13 (versão final para publicar)
+
+- Site final em `entrega/helptest-site-2026-10-13.zip`, com `sitemap.xml`, `robots.txt`, endereço canônico em cada
+  página e imagem de compartilhamento na página inicial. Passo a passo em `docs/publicar-na-hostinger.md`.
+- Arquivos da Hotmart refeitos com a logo e o nome novos: `HelpTest-UK-Theory-Basic.zip`,
+  `HelpTest-UK-Theory-Complete.zip`, `hotmart-basic.png` e `hotmart-complete.png`.
+
 ## 2026-10-13 (nova logo e loja de mercado)
 
 - Nova logo **HelpTest** (folha com visto dourado) em SVG no site, no favicon, na capa do produto e nos PDFs. A marca

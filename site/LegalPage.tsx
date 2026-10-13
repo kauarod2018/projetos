@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { ShopShell } from './components/Chrome.tsx';
-import { allNiches, fillText, legalFor, siteValues } from './data.ts';
+import { allNiches, content, fillText, legalFor, siteValues } from './data.ts';
 import { formatDate } from '../templates/shared/html.ts';
 
 const LANGUAGE = 'en-GB';
@@ -17,7 +17,11 @@ function values() {
 export function legalMetadata(kind: Kind): Metadata {
   const page = legalFor(LANGUAGE)[kind];
   const v = values();
-  return { title: `${page.title} | ${v.brand}`, description: fillText(page.intro, v, `legal.${kind}.intro`).slice(0, 160) };
+  return {
+    title: `${page.title} | ${v.brand}`,
+    description: fillText(page.intro, v, `legal.${kind}.intro`).slice(0, 160),
+    alternates: { canonical: `https://${content().site.domain}/${kind}/` },
+  };
 }
 
 export function LegalPage({ kind }: { kind: Kind }) {

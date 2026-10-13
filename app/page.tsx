@@ -5,7 +5,7 @@ import { ShopShell, TrustStrip } from '../site/components/Chrome.tsx';
 import { Icon } from '../site/components/Icon.tsx';
 import { LogoMark } from '../site/components/Logo.tsx';
 import { ProductCard } from '../site/components/ProductCard.tsx';
-import { allNiches, fillText, legalFor, nicheView, shopIndex, siteValues, type NicheView } from '../site/data.ts';
+import { allNiches, content, fillText, legalFor, nicheView, shopIndex, siteValues, type NicheView } from '../site/data.ts';
 import { normalise, slugify } from '../site/shopFilter.ts';
 
 const LANGUAGE = 'en-GB';
@@ -20,7 +20,16 @@ export function generateMetadata(): Metadata {
   return {
     title: `${v.brand}: ${ui.home.title}`,
     description: ui.home.metaDescription,
-    openGraph: { title: `${v.brand}: ${ui.home.title}`, description: ui.home.metaDescription, type: 'website' },
+    alternates: { canonical: `https://${content().site.domain}/` },
+    openGraph: {
+      title: `${v.brand}: ${ui.home.title}`,
+      description: ui.home.metaDescription,
+      type: 'website',
+      // share image: the best seller's page preview
+      images: allNiches()
+        .slice(0, 1)
+        .map((n) => ({ url: `/media/${n.niche.id}/og.jpg`, width: 1200, height: 630 })),
+    },
   };
 }
 
