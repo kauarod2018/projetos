@@ -68,7 +68,7 @@
       {
         "h": "The products",
         "p": [
-          "Our products are digital revision materials in PDF format, delivered through the Hotmart members area. They are independent revision guides. They are not affiliated with, endorsed by or connected to the DVSA, the Department for Transport or any government body."
+          "Our products are digital revision materials in PDF format, delivered through the Hotmart members area. They are independent revision guides. They are not affiliated with, endorsed by or connected to any exam body, regulator or government body (for example the DVSA, CITB or TfL)."
         ]
       },
       {
@@ -92,7 +92,7 @@
       {
         "h": "No guarantee of passing",
         "p": [
-          "We check our content carefully against official sources, but we cannot guarantee that you will pass any test. The official sources (The Highway Code and GOV.UK) always take priority. If you think something is wrong, tell us at {email} and we will check it."
+          "We check our content carefully against official sources, but we cannot guarantee that you will pass any test. The official sources for each exam (for example The Highway Code, GOV.UK or the exam body's own materials) always take priority. If you think something is wrong, tell us at {email} and we will check it."
         ]
       },
       {

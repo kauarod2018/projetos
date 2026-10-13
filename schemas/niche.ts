@@ -31,8 +31,8 @@ export const niche = z.object({
   jurisdiction: z.string().min(1),
   language: z.string().regex(/^[a-z]{2}-[A-Z]{2}$/),
   currency: z.string().length(3),
-  /** which side of the road traffic drives on: drives every road diagram */
-  drivingSide: z.enum(['left', 'right']),
+  /** which side of the road traffic drives on: drives every road diagram (driving niches only) */
+  drivingSide: z.enum(['left', 'right']).optional(),
   /** the main official document maps are checked against, e.g. "The Highway Code" */
   primarySource: z.string().min(1),
   areas: z

@@ -78,6 +78,36 @@ function parseFile<S extends z.ZodType>(schema: S, file: string, problems: strin
   return result.data;
 }
 
+/** objects merge key by key; anything else (strings, arrays) in the override replaces the base */
+function deepMerge(base: unknown, override: unknown): unknown {
+  if (base && override && typeof base === 'object' && typeof override === 'object' && !Array.isArray(base) && !Array.isArray(override)) {
+    const out: Record<string, unknown> = { ...(base as Record<string, unknown>) };
+    for (const [k, v] of Object.entries(override as Record<string, unknown>)) out[k] = deepMerge(out[k], v);
+    return out;
+  }
+  return override === undefined ? base : override;
+}
+
+/**
+ * Labels printed on the pages: the language file, with the niche's own i18n.json on top when there is one
+ * (e.g. what "LAW" means: The Highway Code for driving, health and safety law for construction).
+ */
+function loadLabels(languageFile: string, nicheFile: string, problems: string[]): I18n | undefined {
+  if (!existsSync(languageFile)) {
+    problems.push(`${rel(languageFile)}: file is missing`);
+    return undefined;
+  }
+  const base = readJson(languageFile, problems);
+  const override = existsSync(nicheFile) ? readJson(nicheFile, problems) : {};
+  if (base === undefined || override === undefined) return undefined;
+  const result = i18n.safeParse(deepMerge(base, override));
+  if (!result.success) {
+    for (const issue of result.error.issues) problems.push(`${rel(languageFile)} + ${rel(nicheFile)} → ${issue.path.join('.') || '(root)'}: ${issue.message}`);
+    return undefined;
+  }
+  return result.data;
+}
+
 /** Loads and schema-checks every content file. Throws ContentError listing all problems. */
 export function loadContent(contentDir = CONTENT_DIR): LoadedContent {
   const problems: string[] = [];
@@ -94,9 +124,7 @@ export function loadContent(contentDir = CONTENT_DIR): LoadedContent {
     const nicheData = parseFile(niche, join(dir, 'niche.json'), problems);
     const numbersData = parseFile(numbers, join(dir, 'numbers.json'), problems);
     const inventoryData = parseFile(inventory, join(dir, 'inventory.json'), problems);
-    const i18nData = nicheData
-      ? parseFile(i18n, join(contentDir, 'i18n', `${nicheData.language}.json`), problems)
-      : undefined;
+    const i18nData = nicheData ? loadLabels(join(contentDir, 'i18n', `${nicheData.language}.json`), join(dir, 'i18n.json'), problems) : undefined;
     const signsDir = nicheData ? join(contentDir, 'assets', 'signs', nicheData.country.toLowerCase()) : '';
     const signsData = nicheData ? parseFile(signs, join(signsDir, 'signs.json'), problems) : undefined;
 

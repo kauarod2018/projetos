@@ -226,6 +226,7 @@ export function checkContent(content: LoadedContent, opts: CheckOptions): CheckR
         }
       }
       if (v.type === 'road-diagram') {
+        if (!n.niche.drivingSide) errors.push(`${f} → visual: a road diagram needs "drivingSide" in niche.json`);
         const exits = v.routes.map((r) => r.exit);
         if (new Set(exits).size !== exits.length) errors.push(`${f} → visual.routes: each exit can only appear once`);
         for (const r of v.routes) {

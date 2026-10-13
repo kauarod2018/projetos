@@ -55,7 +55,7 @@ export function renderMapPage(n: LoadedNiche, m: LoadedMap, site: Site): string 
   } else if (v.type === 'bar-scale') {
     visualBody = renderBarScale(barData(n, m)!, t);
   } else if (v.type === 'road-diagram') {
-    visualBody = renderRoundabout(v, n.niche.drivingSide, t, area.colour);
+    visualBody = renderRoundabout(v, n.niche.drivingSide ?? 'left', t, area.colour); // checks.ts requires drivingSide for road diagrams
   } else if (v.type === 'table') {
     visualBody = renderTable(tableDataOf(n, m)!);
   } else if (v.type === 'cards') {
