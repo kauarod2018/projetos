@@ -10,6 +10,17 @@ export const niche = z.object({
   examName: z.string().min(1),
   /** short name for file names, e.g. "UK-Theory-Maps" */
   filePrefix: z.string().regex(/^[A-Za-z0-9-]+$/),
+  /** how the product shows in the shop: category filter, country label and the product card */
+  store: z.object({
+    category: z.string().min(1),
+    countryName: z.string().min(1),
+    productName: z.string().min(1).max(60),
+    cardText: z.string().min(1).max(140),
+    format: z.string().min(1).max(40),
+    /** the designed product cover: tagline under the exam name and up to 3 badges ({maps} {questions} {bonuses}) */
+    coverTagline: z.string().min(1).max(40),
+    coverBadges: z.array(z.string().min(1).max(30)).min(1).max(3),
+  }),
   country: z.string().length(2),
   jurisdiction: z.string().min(1),
   language: z.string().regex(/^[a-z]{2}-[A-Z]{2}$/),

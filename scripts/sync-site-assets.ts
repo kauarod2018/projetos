@@ -1,9 +1,9 @@
 /**
- * Copies the rendered page images from dist/ into public/media/ for the website,
+ * Copies the page images the shop shows from dist/ into public/media/ for the website,
  * with a 600 px version for phones and a social share image per niche.
  * Run after build:pdfs or build:preview.
  */
-import { existsSync, mkdirSync, readdirSync, rmSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync } from 'node:fs';
 import { dirname, join, relative } from 'node:path';
 import sharp from 'sharp';
 import { loadContent, ROOT } from '../lib/content.ts';
@@ -22,9 +22,21 @@ function* walk(dir: string): Generator<string> {
 for (const n of loadContent().niches) {
   const dist = join(ROOT, 'dist', n.niche.id);
   if (!existsSync(join(dist, 'manifest.json'))) throw new Error(`run "npm run build:preview" first: dist/${n.niche.id} is missing`);
+  // only what the shop shows: the gallery (cover, contents, sample maps) and the first page of each bonus.
+  // Publishing every map would give the whole product away to anyone who guesses the URLs.
+  const manifest = JSON.parse(readFileSync(join(dist, 'manifest.json'), 'utf8')) as {
+    covers?: Record<string, string>;
+    maps: { id: string; webp: string }[];
+    bonuses: { id: string; preview: { webp: string }; release?: { webp: string } }[];
+  };
+  const wanted = new Set<string>([
+    ...Object.values(manifest.covers ?? {}),
+    ...manifest.maps.filter((m) => n.sales.gallery.maps.includes(m.id) || m.id === n.sales.lookInside.mapId).map((m) => m.webp),
+    ...manifest.bonuses.flatMap((b) => [b.preview.webp, ...(b.release ? [b.release.webp] : [])]),
+  ]);
   let count = 0;
   for (const file of walk(dist)) {
-    if (!file.endsWith('.webp')) continue;
+    if (!file.endsWith('.webp') || !wanted.has(relative(dist, file))) continue;
     const target = join(publicMedia, n.niche.id, relative(dist, file));
     mkdirSync(dirname(target), { recursive: true });
     await sharp(file).toFile(target);

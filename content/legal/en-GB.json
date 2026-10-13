@@ -141,14 +141,88 @@
   },
   "ui": {
     "home": {
-      "title": "Visual revision maps for the tests that matter",
-      "sub": "Illustrated A4 maps that turn each topic of an official test into one clear page. Pick your test.",
-      "examsTitle": "Available tests",
-      "cardMeta": "{maps} maps · from {price}",
-      "cardCta": "See the maps",
-      "metaDescription": "Visual revision maps for official tests, one topic per A4 page. Independent revision guides."
+      "metaDescription": "Printable visual study guides for official exams: one topic per A4 page, checked against the official sources. Instant access, one-time payment.",
+      "eyebrow": "Visual study guides",
+      "title": "Pass your test with one clear page per topic",
+      "highlight": "one clear page",
+      "sub": "Printable revision guides for official exams. Every topic on a single A4 page, checked against the official sources.",
+      "ctaShop": "Shop the guides",
+      "ctaHow": "How it works",
+      "shopTitle": "Shop guides",
+      "shopSub": "Pick your exam. More exams are on the way.",
+      "allCategories": "All",
+      "cardFrom": "From {price}",
+      "cardCta": "View guide",
+      "cardSpecs": "{maps} maps · {bonuses} bonuses",
+      "soonTitle": "Your exam not here yet?",
+      "soonText": "We're adding new exams. Tell us which one you need and we'll let you know when it's ready.",
+      "soonCta": "Suggest an exam",
+      "howTitle": "How it works",
+      "howSteps": [
+        {
+          "title": "Choose your guide",
+          "text": "Pick your exam and the pack that suits you."
+        },
+        {
+          "title": "Pay securely",
+          "text": "Checkout is handled by Hotmart. One-time payment, no subscription."
+        },
+        {
+          "title": "Download and revise",
+          "text": "Your access arrives by email within minutes. Print it or use it on a tablet."
+        }
+      ],
+      "whyTitle": "Why {brand}",
+      "whyCards": [
+        {
+          "icon": "file-text",
+          "title": "One topic, one page",
+          "text": "Each topic fits on a single A4 page, so you can see it all at a glance."
+        },
+        {
+          "icon": "badge-check",
+          "title": "Checked against official sources",
+          "text": "Facts are checked against the official texts, and every page shows the date."
+        },
+        {
+          "icon": "list-checks",
+          "title": "Practice built in",
+          "text": "Original test-style questions, each with the reason the answer is right."
+        },
+        {
+          "icon": "printer",
+          "title": "Print or use on screen",
+          "text": "PDF files that work on paper, on a tablet or on your phone."
+        }
+      ],
+      "faqTitle": "Questions",
+      "faq": [
+        {
+          "q": "How do I get my guide?",
+          "a": "After payment, Hotmart emails you access to the members area, where you download the PDF files."
+        },
+        {
+          "q": "Is it a subscription?",
+          "a": "No. You pay once and keep the files."
+        },
+        {
+          "q": "Can I get a refund?",
+          "a": "Yes. Every guide has a money-back guarantee. Ask for it through Hotmart within the period shown on the product page."
+        },
+        {
+          "q": "Are these official materials?",
+          "a": "No. They are independent revision guides, checked against the official sources but not endorsed by any exam body."
+        },
+        {
+          "q": "How can I contact you?",
+          "a": "Email us at {email}."
+        }
+      ]
     },
     "nav": {
+      "shop": "Shop",
+      "how": "How it works",
+      "help": "Help",
       "privacy": "Privacy",
       "terms": "Terms",
       "refund": "Refund policy",
@@ -179,6 +253,78 @@
       "pages": "{n} pages",
       "more": "+ {n} more",
       "days": "days"
+    },
+    "trust": [
+      {
+        "icon": "mail-check",
+        "text": "Access by email within minutes"
+      },
+      {
+        "icon": "shield-check",
+        "text": "Secure checkout by Hotmart"
+      },
+      {
+        "icon": "rotate-ccw",
+        "text": "{guaranteeDays}-day money-back guarantee"
+      },
+      {
+        "icon": "badge-check",
+        "text": "Checked against official sources"
+      }
+    ],
+    "product": {
+      "breadcrumbShop": "Shop",
+      "sample": "Sample page",
+      "zoomHint": "Click to enlarge",
+      "chooseTitle": "Choose your pack",
+      "buy": "Buy now",
+      "selected": "Selected",
+      "checked": "Checked against the official sources on {checkedOn}",
+      "sections": {
+        "inside": "What's inside",
+        "compare": "Compare packs",
+        "bonuses": "Bonuses",
+        "why": "Why it works",
+        "access": "How you get it",
+        "faq": "FAQ"
+      },
+      "compareFeature": "What you get",
+      "compareRows": {
+        "maps": "A4 revision maps",
+        "areas": "Areas of the test covered",
+        "questions": "Practice questions with explanations",
+        "traps": "Traps to avoid",
+        "price": "One-time price"
+      },
+      "included": "Included",
+      "notIncluded": "Not included",
+      "sticky": "From {price}",
+      "specs": {
+        "maps": "{maps} maps · {format}",
+        "practice": "{questions} practice questions · {traps} traps",
+        "bonuses": "{bonuses} bonuses in the {pack} pack"
+      },
+      "contact": "Questions? Email us at {email}.",
+      "aria": {
+        "breadcrumb": "Breadcrumb",
+        "onThisPage": "On this page",
+        "close": "Close",
+        "prev": "Previous page",
+        "next": "Next page"
+      },
+      "galleryLabels": {
+        "product": "Overview",
+        "cover": "Pack cover",
+        "contents": "Contents",
+        "map": "Map {code}",
+        "bonus": "Bonus {n}"
+      }
+    },
+    "footerCols": {
+      "shop": "Shop",
+      "help": "Help",
+      "legal": "Legal",
+      "payments": "Secure payments by Hotmart."
     }
   }
 }

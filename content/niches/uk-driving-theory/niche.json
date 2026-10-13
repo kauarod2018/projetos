@@ -3,6 +3,19 @@
   "id": "uk-driving-theory",
   "examName": "UK Driving Theory Test",
   "filePrefix": "UK-Theory-Maps",
+  "store": {
+    "category": "Driving tests",
+    "countryName": "United Kingdom",
+    "productName": "UK Driving Theory Test: Visual Revision Maps",
+    "cardText": "60 one-page maps covering all 14 official topics, with practice questions, traps and 6 bonuses.",
+    "format": "PDF · A4 · instant download",
+    "coverTagline": "Visual revision maps",
+    "coverBadges": [
+      "{maps} one-page maps",
+      "{questions} practice questions",
+      "{bonuses} bonuses"
+    ]
+  },
   "country": "GB",
   "jurisdiction": "Great Britain (England, Scotland and Wales)",
   "language": "en-GB",

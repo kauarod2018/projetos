@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
-import { CookieConsent } from './components/CookieConsent.tsx';
-import { Footer, Header, PreviewBanner } from './components/Chrome.tsx';
-import { allNiches, content, fillText, legalFor, MODE, siteValues } from './data.ts';
+import { ShopShell } from './components/Chrome.tsx';
+import { allNiches, fillText, legalFor, siteValues } from './data.ts';
 import { formatDate } from '../templates/shared/html.ts';
 
 const LANGUAGE = 'en-GB';
@@ -27,9 +26,7 @@ export function LegalPage({ kind }: { kind: Kind }) {
   const v = values();
   const f = (s: string, where: string) => fillText(s, v, `legal.${kind}.${where}`);
   return (
-    <>
-      {MODE === 'preview' ? <PreviewBanner text={legal.ui.preview} /> : null}
-      <Header brand={v.brand} />
+    <ShopShell guaranteeDays={v.guaranteeDays}>
       <main className="wrap">
         <article className="legal">
           <h1>{page.title}</h1>
@@ -45,8 +42,6 @@ export function LegalPage({ kind }: { kind: Kind }) {
           ))}
         </article>
       </main>
-      <Footer brand={v.brand} ui={legal.ui} company={f(legal.ui.footer.company, 'ui.footer.company')} email={v.email} />
-      <CookieConsent pixelId={content().site.metaPixelId} labels={legal.ui.cookies} />
-    </>
+    </ShopShell>
   );
 }

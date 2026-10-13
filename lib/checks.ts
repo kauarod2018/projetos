@@ -65,7 +65,7 @@ const PLACEHOLDER = /^\{\{.*\}\}$|^your |example\.com|TODO/i;
 
 /** {placeholders} the site and the creatives know how to fill */
 export const COPY_PLACEHOLDERS = ['examName', 'brand', 'totalMaps', 'basicMaps', 'bonuses', 'areasList', 'guaranteeDays', 'version', 'checkedOn', 'priceBasic', 'priceComplete', 'year'];
-export const LEGAL_PLACEHOLDERS = ['brand', 'domain', 'email', 'guaranteeDays', 'updatePolicy', 'date', 'n', 'maps', 'price'];
+export const LEGAL_PLACEHOLDERS = ['brand', 'domain', 'email', 'guaranteeDays', 'updatePolicy', 'date', 'n', 'maps', 'price', 'bonuses', 'checkedOn', 'format', 'questions', 'traps', 'pack', 'code'];
 
 function* strings(value: unknown, path: string): Generator<[string, string]> {
   if (typeof value === 'string') yield [path, value];
@@ -284,6 +284,10 @@ export function checkContent(content: LoadedContent, opts: CheckOptions): CheckR
     unknownPlaceholders(n.sales, COPY_PLACEHOLDERS, sf, errors);
     unknownPlaceholders(n.creatives, COPY_PLACEHOLDERS, cf, errors);
     if (!planned.has(n.sales.lookInside.mapId)) errors.push(`${sf} → lookInside.mapId: "${n.sales.lookInside.mapId}" is not in inventory.json`);
+    for (const id of n.sales.gallery.maps) if (!planned.has(id)) errors.push(`${sf} → gallery.maps: "${id}" is not in inventory.json`);
+    const galleryBonusIds = new Set(n.bonuses.map((b) => b.data.id));
+    for (const id of n.sales.gallery.bonuses) if (!galleryBonusIds.has(id)) errors.push(`${sf} → gallery.bonuses: "${id}" is not a bonus`);
+    if (2 + n.sales.gallery.maps.length + n.sales.gallery.bonuses.length < 5) errors.push(`${sf} → gallery: show at least 5 pages (cover and contents count as 2)`);
     for (const card of [...n.sales.strategic.cards, ...n.sales.whoFor.cards]) {
       if (!existsSync(iconPath(card.icon))) errors.push(`${sf}: lucide icon "${card.icon}" does not exist`);
     }

@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "brand": {
-    "default": "Ajuda com Provas",
+    "default": "Help Test",
     "byLanguage": {
-      "en-GB": "Test Help",
-      "fr-FR": "Aide aux Examens",
-      "es-ES": "Ayuda con Exámenes",
-      "de-DE": "Prüfungshilfe",
-      "pt-BR": "Ajuda com Provas"
+      "en-GB": "Help Test",
+      "fr-FR": "Help Test",
+      "es-ES": "Help Test",
+      "de-DE": "Help Test",
+      "pt-BR": "Help Test"
     }
   },
   "domain": "{{DOMAIN}}",

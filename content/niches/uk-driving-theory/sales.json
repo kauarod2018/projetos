@@ -65,6 +65,18 @@
       }
     ]
   },
+  "gallery": {
+    "maps": [
+      "roundabouts",
+      "stopping-distances",
+      "signs-warning-hazards",
+      "motorways-signals-red-x",
+      "incident-scene-first-aid"
+    ],
+    "bonuses": [
+      "flashcards"
+    ]
+  },
   "strategic": {
     "eyebrow": "Strategic content",
     "title": "Built around how the test catches people out",

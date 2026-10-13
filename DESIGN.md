@@ -103,7 +103,8 @@ Cada pacote abre com 2 páginas:
 
 ## Marca (site, bônus e anúncios)
 
-Marca: **Ajuda com Provas**, traduzida por idioma (`content/site.json`): **Test Help** em inglês britânico. O símbolo é um
+Marca: **Help Test**, igual em todos os países e idiomas (`content/site.json`), fácil de entender mesmo para quem não
+fala inglês. O símbolo é um
 quadrado verde com uma faixa tracejada amarela, a mesma "linha de faixa" dos mapas.
 
 | Uso | Valor |
@@ -121,6 +122,20 @@ quadrado verde com uma faixa tracejada amarela, a mesma "linha de faixa" dos map
   ler com calma).
 - **Criativos:** fundo verde (abertura e oferta) ou bege (páginas reais), título em Archivo 800, página real com sombra,
   botão amarelo no último slide.
+
+## Loja (site)
+
+Cara de loja online, sem enfeite: fundo branco, cartões com borda fina, preço sempre visível, botão amarelo da marca.
+
+- **Vitrine (`/`):** topo curto com 3 páginas em leque, faixa de confiança (acesso por e-mail, checkout Hotmart,
+  garantia, conferido nas fontes oficiais), grade de produtos com filtro por categoria (aparece com 2+ categorias),
+  cartão "sugira uma prova", como funciona, vantagens, perguntas.
+- **Produto (`/<nicho>/`):** galeria à esquerda (capa do produto, capa do pacote, sumário, 5 mapas e 1 bônus; miniaturas
+  e zoom em tela cheia), caixa de compra à direita (pacote Completo pré-selecionado, preço no botão), abas de seção,
+  conteúdo, tabela comparando os pacotes, bônus, porquê, como recebe, perguntas e chamada final. No celular, uma barra
+  com o preço aparece quando a caixa de compra sai da tela.
+- **Capa do produto:** gerada no build (`templates/cover/`), 1200×1500, fundo verde da marca, nome da prova, selos com
+  os números reais e 3 páginas em leque. É a imagem do cartão, da galeria e do topo da vitrine.
 
 ## Placas
 

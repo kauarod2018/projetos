@@ -17,6 +17,7 @@ export const MODE: Mode = process.env.SITE_MODE === 'release' ? 'release' : 'pre
 interface Manifest {
   counts: { completeMaps: number; basicMaps: number; bonuses: number };
   maps: { id: string; code: string; title: string; area: string; tier: string; status: string; webp: string }[];
+  covers?: { product?: string; cover?: string; contents?: string };
   bonuses: {
     id: string;
     number: number;
@@ -102,8 +103,14 @@ export interface NicheView {
   prices: { basic: string; complete: string; basicValue: number; completeValue: number; currency: string; vatIncluded: boolean };
   checkout: { basic: string; complete: string };
   areas: { num: string; slug: string; name: string; colour: string; icon: string; maps: { code: string; title: string }[] }[];
-  pages: (Img & { code: string; title: string })[];
   lookInside: Img | undefined;
+  /** product page gallery: pack cover, contents, sample maps and bonus pages */
+  gallery: (Img & { label: string; kind: 'product' | 'cover' | 'contents' | 'map' | 'bonus' })[];
+  store: { category: string; countryName: string; productName: string; cardText: string; format: string };
+  checkedOn: string;
+  questions: number;
+  traps: number;
+  basic: { questions: number; traps: number };
   bonuses: { number: number; title: string; summary: string; pages: number; image: Img }[];
   disclaimer: string;
   guaranteeDays: number;
@@ -158,6 +165,17 @@ export function nicheView(n: LoadedNiche): NicheView {
   copy.hero.eyebrow = copy.hero.eyebrow.trim();
 
   const pageMaps = release ? m.maps.filter((x) => x.status === 'verified') : m.maps;
+  const gl = legalFor(n.niche.language).ui.product.galleryLabels;
+  const soldMaps = n.maps.filter((x) => !release || x.data.review.status === 'verified');
+  const basicMaps = soldMaps.filter((x) => x.data.tier === 'basic');
+  const counted = {
+    questions: soldMaps.reduce((sum, x) => sum + x.data.onTheTest.length, 0),
+    traps: soldMaps.reduce((sum, x) => sum + x.data.traps.length, 0),
+    basic: {
+      questions: basicMaps.reduce((sum, x) => sum + x.data.onTheTest.length, 0),
+      traps: basicMaps.reduce((sum, x) => sum + x.data.traps.length, 0),
+    },
+  };
   const look = pageMaps.find((x) => x.id === n.sales.lookInside.mapId) ?? pageMaps[0];
 
   return {
@@ -186,14 +204,39 @@ export function nicheView(n: LoadedNiche): NicheView {
       icon: a.icon,
       maps: mapList.filter((x) => x.area === a.slug).map(({ code, title }) => ({ code, title })),
     })),
-    pages: pageMaps.map((x) => ({ ...img(id, x.webp, `${x.title} (map ${x.code})`), code: x.code, title: x.title })),
     lookInside: look ? img(id, look.webp, `${look.title}: a full page from the maps`) : undefined,
+    gallery: [
+      ...(['product', 'cover', 'contents'] as const)
+        .filter((k) => m.covers?.[k])
+        .map((k) => ({
+          ...img(id, m.covers![k]!, `${n.niche.examName}: ${gl[k].toLowerCase()}`),
+          label: gl[k],
+          kind: k,
+        })),
+      ...n.sales.gallery.maps
+        .map((mapId) => pageMaps.find((x) => x.id === mapId))
+        .filter((x) => x !== undefined)
+        .map((x) => ({ ...img(id, x.webp, `${x.title} (map ${x.code})`), label: fillText(gl.map, { code: x.code }, 'ui.product.galleryLabels.map'), kind: 'map' as const })),
+      ...n.sales.gallery.bonuses
+        .map((bonusId) => bonusList.find((b) => b.id === bonusId))
+        .filter((b) => b !== undefined)
+        .map((b) => ({
+          ...img(id, b.release?.webp ?? b.preview.webp, `${b.title}, first page`),
+          label: fillText(gl.bonus, { n: b.number }, 'ui.product.galleryLabels.bonus'),
+          kind: 'bonus' as const,
+        })),
+    ],
+    store: n.niche.store,
+    checkedOn: values.checkedOn,
+    questions: counted.questions,
+    traps: counted.traps,
+    basic: counted.basic,
     bonuses: bonusList.map((b) => ({
       number: b.number,
       title: b.title,
       summary: b.summary,
       pages: b.pages,
-      image: img(id, release ? b.release!.webp : b.preview.webp, `${b.title}, first page`),
+      image: img(id, b.release?.webp ?? b.preview.webp, `${b.title}, first page`),
     })),
     disclaimer: n.niche.disclaimer,
     guaranteeDays: n.niche.guaranteeDays,

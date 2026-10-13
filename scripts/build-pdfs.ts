@@ -19,6 +19,7 @@ import { brandName, type Sign, type Site } from '../schemas/content.ts';
 import { renderBonusDocument, type BonusContext, type PlanMap } from '../templates/bonus/render.ts';
 import { renderFlashcardsA4, renderFlashcardsPhone } from '../templates/bonus/flashcards.ts';
 import { renderCreditsPage } from '../templates/credits/render.ts';
+import { COVER_SIZE, renderProductCover } from '../templates/cover/render.ts';
 import { renderMapPage } from '../templates/map/render.ts';
 import { pad2 } from '../templates/shared/html.ts';
 
@@ -266,12 +267,49 @@ async function buildNiche(n: LoadedNiche, site: Site, browser: Browser) {
 
   // ---------- packages ----------
   const packages: { file: string; preview: boolean; pages: number; maps: string[] }[] = [];
-  const assemble = async (set: BuiltMap[], opts: { title: string; subtitle: string; file: string; preview: boolean; root: string }) => {
+  const covers: Record<string, string> = {};
+
+  // ---------- product cover for the shop ----------
+  if (!only) {
+    const sold = verifiedMaps.length ? verifiedMaps : built;
+    const coverPages = n.sales.gallery.maps
+      .map((id) => sold.find((b) => b.map.data.id === id))
+      .filter((b) => b !== undefined)
+      .map((b) => b.files.png);
+    const html = renderProductCover(n, site, {
+      pages: coverPages,
+      counts: {
+        maps: sold.length,
+        questions: sold.reduce((sum, b) => sum + b.map.data.onTheTest.length, 0),
+        bonuses: (verifiedMaps.length ? bonuses.filter((b) => b.release) : bonuses).length,
+      },
+    });
+    const previous = page.viewportSize();
+    await page.setViewportSize(COVER_SIZE);
+    await page.setContent(html, { waitUntil: 'load' });
+    await page.evaluate(WAIT_FOR_ASSETS);
+    const png = await page.screenshot({ type: 'png', clip: { x: 0, y: 0, ...COVER_SIZE } });
+    if (previous) await page.setViewportSize(previous);
+    mkdirSync(join(out, 'covers'), { recursive: true });
+    await writeImages(png, join(out, 'covers', 'product.png'), join(out, 'covers', 'product.webp'));
+    covers.product = r(join(out, 'covers', 'product.webp'));
+    console.log('  ✓ product cover');
+  }
+  const assemble = async (set: BuiltMap[], opts: { title: string; subtitle: string; file: string; preview: boolean; root: string; covers?: boolean }) => {
     const credits = await render(
       page,
       renderCreditsPage(n, site, { title: opts.title, subtitle: opts.subtitle, maps: set.map((b) => b.map), preview: opts.preview, year: new Date().getFullYear() }),
     );
     if (credits.problems.length) throw new Error(`credits page for ${opts.file}: ${credits.problems.join('; ')}`);
+    // the shop shows the cover and the contents page of the main pack next to the sample maps
+    if (opts.covers) {
+      mkdirSync(join(out, 'covers'), { recursive: true });
+      for (const [i, name] of ['cover', 'contents'].entries()) {
+        const png = await page.locator('.page').nth(i).screenshot({ type: 'png' });
+        await writeImages(png, join(out, 'covers', `${name}.png`), join(out, 'covers', `${name}.webp`));
+        covers[name] = r(join(out, 'covers', `${name}.webp`));
+      }
+    }
     const { bytes, pages } = await merge([credits.pdf, ...set.map((b) => b.pdf)], {
       title: `${opts.title}${opts.preview ? ' (PREVIEW)' : ''}`,
       subject: `${n.niche.examName} · ${opts.subtitle}`,
@@ -312,7 +350,15 @@ async function buildNiche(n: LoadedNiche, site: Site, browser: Browser) {
           root,
         });
       }
-      await assemble(set.maps, { title: `${n.niche.examName}: all maps`, subtitle: 'Complete pack', file: join('complete', `${p}-All-Maps${suffix}.pdf`), preview: set.preview, root });
+      await assemble(set.maps, {
+        title: `${n.niche.examName}: all maps`,
+        subtitle: 'Complete pack',
+        file: join('complete', `${p}-All-Maps${suffix}.pdf`),
+        preview: set.preview,
+        root,
+        // release covers win; preview covers are used only while nothing is verified
+        covers: !set.preview || verifiedMaps.length === 0,
+      });
       const basic = set.maps.filter((b) => b.map.data.tier === 'basic');
       if (basic.length) {
         await assemble(basic, { title: `${n.niche.examName}: essential maps`, subtitle: 'Basic pack', file: join('basic', `${p}-Basic${suffix}.pdf`), preview: set.preview, root });
@@ -368,6 +414,7 @@ async function buildNiche(n: LoadedNiche, site: Site, browser: Browser) {
       ...(b.release ? { release: { pdf: r(b.release.pdf), png: r(b.release.png), webp: r(b.release.webp) } } : {}),
     })),
     packages,
+    covers,
   };
   if (!only) writeFileSync(join(out, 'manifest.json'), `${JSON.stringify(manifest, null, 2)}\n`);
   console.log(

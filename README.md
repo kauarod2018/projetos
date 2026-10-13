@@ -1,6 +1,10 @@
-# Ajuda com Provas · loja de mapas visuais de revisão
+# Help Test · loja de guias visuais de revisão
 
-Pacotes de mapas visuais de revisão em PDF, um por prova. A marca é traduzida por país: **Test Help** no Reino Unido.
+Loja de guias visuais de revisão em PDF, um produto por prova. A marca é a mesma em todo lugar: **Help Test**.
+
+O site é uma loja: vitrine com os produtos (cada nicho em `content/niches/` vira um produto, com categoria e país) e
+uma página por produto com galeria de 9 páginas reais, escolha de pacote (Básico/Completo) e as seções de conteúdo.
+Só as páginas da galeria e as capas dos bônus vão para o site; os mapas completos ficam só nos PDFs vendidos.
 Primeiro nicho: **UK Driving Theory Test** (Grã-Bretanha).
 
 - Plano completo: [`docs/briefing-v3.md`](docs/briefing-v3.md)

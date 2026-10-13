@@ -4,7 +4,7 @@ import { jurisdiction, review, slug, sourceRef } from './common.ts';
 
 export const site = z.object({
   schemaVersion: z.literal(1),
-  /** brand name, translated per language ("Ajuda com Provas" → "Test Help" in en-GB) */
+  /** brand name: one name everywhere ("Help Test"); byLanguage can override it for a market if ever needed */
   brand: z.object({
     default: z.string().min(1),
     byLanguage: z.record(z.string().regex(/^[a-z]{2}-[A-Z]{2}$/), z.string().min(1)),
