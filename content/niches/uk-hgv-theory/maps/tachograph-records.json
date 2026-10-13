@@ -21,7 +21,6 @@
       "text": "With an analogue tachograph, you MUST return used charts to your operator within 42 days.",
       "law": true
     },
-    "One analogue chart must not cover more than 24 hours.",
     "Operators download vehicle units at least every 90 days and driver cards at least every 28 days."
   ],
   "visual": {
@@ -35,7 +34,7 @@
       "rows": [
         [
           "Work away from the vehicle",
-          "Manual entry"
+          "Manual entry on the tachograph or chart"
         ],
         [
           "Tachograph or card fault",
@@ -88,12 +87,12 @@
       "why": "Today and the previous 28 calendar days, or 56 days for journeys to and from an EU country."
     },
     {
-      "question": "Your digital driver card stops working during a trip. What must you do?",
+      "question": "Your driver card stops working during a trip. What must you do?",
       "options": [
-        "Stop driving until a new card arrives",
+        "Stop until a new card arrives",
         "Use a colleague's card",
-        "Take start and end printouts and report it to DVLA within 7 days",
-        "Keep driving with no records"
+        "Use printouts; report it to DVLA",
+        "Drive on with no records"
       ],
       "answerIndex": 2,
       "why": "You may drive for up to 15 days with start and end printouts. Report it to DVLA and apply for a new card within 7 days."
@@ -107,13 +106,8 @@
   "sources": [
     {
       "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
-      "ref": "4. Tachograph rules: 4.1 Analogue tachographs; 4.2 Digital or smart tachographs (manual records); 4.3 Common rules",
+      "ref": "Sections 4.1 to 4.3 (tachograph rules); section 5 (downloading, breakdowns)",
       "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/4-tachograph-rules"
-    },
-    {
-      "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
-      "ref": "5. Responsibilities of vehicle operators: downloading data; breakdown of the tachograph",
-      "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/5-responsibilities-of-vehicle-operators"
     }
   ],
   "jurisdictionNotes": [],
