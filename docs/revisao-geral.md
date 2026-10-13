@@ -122,3 +122,40 @@ marcos de contagem a 300, 200 e 100 jardas; faixa de ônibus sem horário = 24 h
 - 6.10: as regras de túnel e o conselho de não abrir o capô num incêndio no motor.
 - 4.08: o texto sobre ESC (não está no Highway Code; vem de material de direção).
 - Números de regra citados nas fontes, já que a numeração mudou entre edições.
+
+## 7. Conferência no gov.uk e placas oficiais (12–13/10/2026)
+
+Com o acesso ao gov.uk liberado, tudo foi conferido no **texto oficial** (Highway Code atualizado em 22/10/2025, Know
+Your Traffic Signs 2023 e páginas do gov.uk). Nada foi marcado como verificado a partir de memória ou de site de
+terceiros.
+
+**Placas.** As 39 placas são as imagens oficiais do DfT (pacotes EPS da página "Traffic sign images"), convertidas para
+SVG sem alteração e ligadas ao número TSRGD pela planilha oficial. "Ahead only" não existe no pacote; foi trocada pela
+oficial "Turn left" (606). Legendas acertadas: "Frail (or blind or disabled) pedestrians likely to cross", "Zebra
+crossing", "give way to traffic from immediate right".
+
+**Erros encontrados e corrigidos (principais)**
+
+| Mapa | Antes | Depois (oficial) |
+|---|---|---|
+| 1.04, 1.05, 1.01 e bônus 2 | Placa retangular azul "One-way traffic" = informação | É uma **ordem** (Rule 143; KYTS "Regulatory signs") |
+| 3.04 | Luzes vermelhas na lateral fecham todas as faixas | Só fecham todas quando a placa mostra todas as faixas fechadas (Rule 258) |
+| 3.02 | "40 mph parece 20" | "50 mph pode parecer 30" (Rule 274); marcos contam até a faixa de desaceleração |
+| 6.09 | Massagem cardíaca no passo C | Fica no **B · Breathing**; o C (Circulation) é checar sangramento (Annex 7) |
+| 5.02 | Café + cochilo de 15 min | Não está mais na Rule 91; não parar em área de emergência nem no acostamento |
+| 6.10 | Conselhos de túnel de operadoras (sair dirigindo, chave na ignição) | Só o que é oficial: Rule 126 (2 s; 5 m parado), Annex 6 (não abrir o capô) |
+| 4.08 | ABS e ESC | ESC não está em nenhuma fonte oficial: mapa virou "Skids & ABS" |
+| 6.05 | Carro com SORN pode ficar na rua | Tem de ficar fora da via pública |
+| Bônus 5 | Certificado "válido por 2 anos, marque a prática" | Dura 2 anos e é preciso **passar** na prática nesse prazo; chegar 15 min antes |
+
+Além disso, dezenas de frases que eram "bom conselho" mas não estão no texto oficial foram reescritas com a redação do
+Highway Code, e o selo LAW foi acertado onde a regra diz MUST.
+
+**Confirmado no gov.uk:** prova com 50 questões em 57 min (43 para passar) e hazard perception com 14 vídeos e 15
+perigos (44 de 75); taxa de £23; esperar 3 dias úteis após reprovar; 44,8% de aprovação em 2025/26 (dado provisório da
+DVSA); limites de velocidade; distâncias de parada; álcool 35/80/107 (redução em consulta, sem lei); pneus 1,6 mm;
+primeiro MOT aos 3 anos; 6 pontos em 2 anos para novos motoristas; celular £200 + 6 pontos; cadeirinha até 12 anos ou
+135 cm; 1,5 m para ciclistas; 10 mph e 2 m para cavalos.
+
+**Não deu para confirmar no gov.uk:** a lista dos "14 tópicos oficiais da DVSA" usada na página de vendas. Ela está no
+site da DVSA (safedrivingforlife.info), fora dos domínios liberados.

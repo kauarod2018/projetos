@@ -16,7 +16,7 @@
       "text": "You MUST drive round the central marking. Only large vehicles that can't get round may drive over it.",
       "law": true
     },
-    "There is less room and less time to signal, so plan your lane and signal early.",
+    "There is less space to manoeuvre and less time to signal.",
     "Avoid U-turns at mini-roundabouts, and watch out for others making them.",
     "At double and multiple roundabouts, treat each roundabout separately and give way to traffic from the right at each one."
   ],
@@ -85,12 +85,14 @@
   "sources": [
     {
       "doc": "The Highway Code",
-      "ref": "Rules 188 to 190 (Mini-roundabouts)",
+      "ref": "Rules 188 to 190 (Mini-roundabouts and multiple roundabouts)",
       "url": "https://www.gov.uk/guidance/the-highway-code"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rules 188 to 190 (Mini-roundabouts and multiple roundabouts)"
   }
 }

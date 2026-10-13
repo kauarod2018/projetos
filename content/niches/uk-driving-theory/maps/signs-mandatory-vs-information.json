@@ -9,17 +9,20 @@
     "road-and-traffic-signs"
   ],
   "title": "Mandatory Signs vs Information Signs",
-  "whatItIs": "Blue circles give positive orders you must follow; blue rectangles give information, such as one-way streets.",
+  "whatItIs": "Blue circles mostly give orders you must follow. Most blue rectangles give information, but the rectangular one-way traffic sign is also an order.",
   "keyFacts": [
     "Blue circles with no red border mostly tell you what you must do.",
     "Ahead only, turn left and keep left are orders, not suggestions.",
-    "A blue rectangle with an arrow means one-way traffic: it is information about the road.",
+    {
+      "text": "The blue rectangular one-way traffic sign is an order: traffic MUST travel in the direction it shows.",
+      "law": true
+    },
     "The mini-roundabout sign is a blue circle: give way to traffic from your right.",
     "Some blue circles show who may use a route, such as pedal cycles only."
   ],
   "visual": {
     "type": "sign-grid",
-    "caption": "Blue circles (orders) and blue rectangles (information)",
+    "caption": "Blue circles give orders; blue rectangles can order or inform",
     "signs": [
       "turn-left",
       "turn-left-ahead",
@@ -41,8 +44,8 @@
     "b": {
       "label": "One-way traffic (rectangle)",
       "points": [
-        "Information about the road",
-        "All traffic goes one way"
+        "The whole road carries one-way traffic",
+        "Traffic MUST go the way shown (Rule 143)"
       ]
     }
   },
@@ -60,9 +63,9 @@
     }
   ],
   "traps": [
-    "Blue isn't always information: a blue circle is an order, a blue rectangle is information.",
+    "Most blue rectangles inform, but not all: the rectangular one-way traffic sign is an order, just like a blue circle.",
     "The mini-roundabout sign is a blue circle, not a warning triangle.",
-    "Keep left means pass on the left of the sign, usually at an island or bollard."
+    "Keep left is an order, not advice. With the arrow reversed, the same sign means keep right."
   ],
   "sources": [
     {
@@ -74,10 +77,17 @@
       "doc": "Know Your Traffic Signs (DfT)",
       "ref": "Regulatory signs",
       "url": "https://assets.publishing.service.gov.uk/media/656ef4271104cf0013fa74ef/know-your-traffic-signs-dft.pdf"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 143 (One-way streets)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Traffic signs: signs giving orders; Know Your Traffic Signs (DfT): Regulatory signs; The Highway Code: Rule 143 (One-way streets)"
   }
 }

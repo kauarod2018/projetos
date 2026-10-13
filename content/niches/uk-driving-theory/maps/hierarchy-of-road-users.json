@@ -11,7 +11,7 @@
     "vulnerable-road-users"
   ],
   "title": "The Hierarchy of Road Users",
-  "whatItIs": "Since 2022 the Highway Code says that those who can do the greatest harm have the greatest responsibility to look out for others.",
+  "whatItIs": "Since 2022 the Highway Code says that those who can do the greatest harm have the greatest responsibility to take care and reduce the danger to others.",
   "keyFacts": [
     "The road users most at risk are pedestrians, cyclists, horse riders and motorcyclists.",
     "Children, older people and disabled people are even more at risk.",
@@ -27,7 +27,7 @@
       {
         "icon": "users",
         "title": "Rule H1: more harm, more care",
-        "text": "Drivers of larger, faster vehicles have the greatest responsibility to reduce danger to others."
+        "text": "Those in charge of vehicles that can cause the greatest harm have the greatest responsibility to reduce danger."
       },
       {
         "icon": "footprints",
@@ -37,7 +37,7 @@
       {
         "icon": "school",
         "title": "Rule H2: zebra and parallel crossings",
-        "text": "Give way to pedestrians waiting to cross a zebra, and to people waiting at a parallel crossing."
+        "text": "Give way to pedestrians waiting at a zebra, and to pedestrians and cyclists waiting at a parallel crossing."
       },
       {
         "icon": "bike",
@@ -89,6 +89,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Introduction: Rules H1 to H3 (Hierarchy of road users)"
   }
 }

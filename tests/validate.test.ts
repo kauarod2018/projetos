@@ -40,10 +40,17 @@ describe('content as committed', () => {
     assert.deepEqual(checkContent(loadContent(), { release: false }).errors, []);
   });
 
-  test('is blocked in release mode while maps are drafts and the shop data is missing', () => {
+  test('is blocked in release mode while the shop data is missing', () => {
     const errors = checkContent(loadContent(), { release: true }).errors;
-    expectProblem(errors, /topics are below the minimum/);
     expectProblem(errors, /placeholder/);
+    expectProblem(errors, /checkout/);
+  });
+
+  test('a verified map that uses a number still in draft', () => {
+    const problems = problemsAfter(join('niches', 'uk-driving-theory', 'numbers.json'), (n) => {
+      n.items.find((i: { key: string }) => i.key === 'speed-limits').review = { status: 'draft' };
+    });
+    expectProblem(problems, /map is verified but numbers\.json → speed-limits is not/);
   });
 });
 

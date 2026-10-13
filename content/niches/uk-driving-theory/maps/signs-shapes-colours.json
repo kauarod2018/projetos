@@ -65,8 +65,8 @@
     "b": {
       "label": "Blue rectangle",
       "points": [
-        "Information, not an order",
-        "For example: one-way traffic, motorway signs"
+        "Mostly information, not an order",
+        "e.g. motorway direction signs, parking signs"
       ]
     }
   },
@@ -84,7 +84,7 @@
     }
   ],
   "traps": [
-    "A blue rectangle is information; a blue circle is an order.",
+    "Blue circles give orders and most blue rectangles inform, but the rectangular one-way traffic sign is an order too.",
     "The upside-down triangle is GIVE WAY: an order, not a warning.",
     "Plates under a sign change or limit what it means, such as times or distances."
   ],
@@ -102,6 +102,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Traffic signs; Know Your Traffic Signs (DfT): The signing system"
   }
 }

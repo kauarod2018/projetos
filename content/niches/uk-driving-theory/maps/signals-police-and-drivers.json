@@ -24,7 +24,7 @@
       "text": "You MUST NOT use your horn while stationary, or between 11.30 pm and 7 am in a built-up area, unless there is danger.",
       "law": true
     },
-    "Hazard lights: when stopped and blocking traffic, or briefly on a motorway or dual carriageway to warn of danger ahead."
+    "Hazard lights: when stopped and blocking traffic, or briefly on a motorway or unrestricted dual carriageway."
   ],
   "visual": {
     "type": "cards",
@@ -55,12 +55,12 @@
       {
         "icon": "triangle-alert",
         "title": "Hazard warning lights",
-        "text": "When stopped and causing an obstruction. Never as an excuse to park."
+        "text": "When stopped and blocking traffic. Never for dangerous or illegal parking."
       },
       {
         "icon": "school",
         "title": "School crossing patrol",
-        "text": "When the patrol shows the 'Stop' sign, you MUST stop.",
+        "text": "When a school crossing patrol shows a 'Stop for children' sign, you MUST stop.",
         "law": true
       }
     ]
@@ -96,23 +96,30 @@
   ],
   "traps": [
     "Flashing headlights is not a signal to go.",
-    "Arm signals are given with the right arm: circling it means you are turning left.",
+    "A driver gives arm signals with the right arm: circling it means you intend to turn left.",
     "Hazard lights don't make it OK to park where you shouldn't."
   ],
   "sources": [
     {
       "doc": "The Highway Code",
-      "ref": "Rules 103 to 116 (Signals and lighting)",
+      "ref": "Rules 103 to 116 (Signals, stopping procedures and lighting)",
       "url": "https://www.gov.uk/guidance/the-highway-code"
     },
     {
       "doc": "The Highway Code",
       "ref": "Signals by authorised persons",
       "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Signals to other road users",
+      "url": "https://www.gov.uk/guidance/the-highway-code/signals-to-other-road-users"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rules 103 to 116 (Signals, stopping procedures and lighting); The Highway Code: Signals by authorised persons; The Highway Code: Signals to other road users"
   }
 }

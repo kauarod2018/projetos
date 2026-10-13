@@ -15,7 +15,7 @@
       "text": "You MUST NOT drive faster than the speed limit for the road and for your vehicle.",
       "law": true
     },
-    "Roads with street lights are usually 30 mph, unless signs show a different limit.",
+    "Roads with street lights generally have a 30 mph limit (20 mph in Wales), unless signs show otherwise.",
     "A white circle with a black diagonal stripe means the national speed limit applies.",
     "Drive slower when conditions call for it: rain, fog, ice, darkness or lots of pedestrians."
   ],
@@ -71,7 +71,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft",
-    "notes": "The Welsh 20 mph default is shown as a note under the table (from numbers.json), so it is not repeated as a jurisdiction note."
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rule 124 (Speed limits); The Highway Code: Rule 125 (Speed limits are a maximum)"
   }
 }

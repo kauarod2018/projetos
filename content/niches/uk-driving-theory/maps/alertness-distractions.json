@@ -9,15 +9,18 @@
     "alertness"
   ],
   "title": "Alertness, Distractions & Phones",
-  "whatItIs": "Driving needs your full attention. Anything that takes your eyes, hands or mind off the road makes a crash more likely.",
+  "whatItIs": "Safe driving needs concentration at all times. Phones, loud music, eating, smoking and arguing can all distract you.",
   "keyFacts": [
     {
       "text": "You MUST NOT use a hand-held phone or similar device while driving, even when stopped at lights or in a queue.",
       "law": true
     },
     "You may call 999 or 112 on a hand-held phone in a real emergency, if it is unsafe or impractical to stop.",
-    "Hands-free is allowed, but you can still be prosecuted if you are not in proper control.",
-    "Set up your sat nav before you set off, and pull over somewhere safe to make or take calls.",
+    {
+      "text": "You MUST exercise proper control of your vehicle at all times, even when using a hands-free phone.",
+      "law": true
+    },
+    "It's far safer not to use any phone while driving: find a safe place to stop first, or use voicemail.",
     "Loud music, eating, smoking and arguing passengers can all distract you."
   ],
   "visual": {
@@ -67,7 +70,7 @@
         "To check your sat nav for a moment"
       ],
       "answerIndex": 0,
-      "why": "The only exception is a genuine emergency call to 999 or 112 when it is unsafe or impractical to stop. Stopped in traffic still counts as driving."
+      "why": "You can call 999 or 112 in a genuine emergency if it's unsafe or impractical to stop. Being stopped in traffic still counts as driving."
     }
   ],
   "traps": [
@@ -89,6 +92,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rules 148 to 150 (Driving and distractions); GOV.UK: Using mobile phones when driving: the law"
   }
 }

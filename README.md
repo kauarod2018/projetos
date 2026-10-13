@@ -16,10 +16,12 @@ Primeiro nicho: **UK Driving Theory Test** (Grã-Bretanha).
 | 3. 6 bônus | ✅ prontos (rascunho) |
 | 4. Criativos de carrossel | ✅ prontos (preview) |
 | 5. Páginas legais + banner de cookies | ✅ prontas (revisar com advogado) |
-| 6. Os outros 57 mapas | ✅ escritos, os 60 (rascunho; dupla revisão de fatos feita por busca, falta o gov.uk) |
+| 6. Os outros 57 mapas | ✅ os 60 escritos e **verificados no gov.uk** (12/10/2026) |
+| Placas oficiais | ✅ as 39 importadas do DfT (EPS → SVG, sem alteração) |
 
-Nada pode ser vendido ainda: os mapas não foram conferidos no gov.uk, as placas oficiais não foram importadas e faltam os
-dados da empresa e os links da Hotmart. O comando `npm run validate:release` lista tudo o que falta.
+O conteúdo está pronto para venda: mapas, bônus e números foram conferidos no texto oficial do gov.uk e as placas
+são as imagens oficiais do DfT. O que ainda trava o `npm run validate:release` é só dado da loja: domínio, e-mail e dados
+da empresa em `content/site.json` e os 2 links de checkout da Hotmart em `niche.json`.
 
 ## Comandos
 

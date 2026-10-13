@@ -9,17 +9,17 @@
     "safety-and-your-vehicle"
   ],
   "title": "Eco-Safe Driving & the Environment",
-  "whatItIs": "Eco-safe driving means smooth, planned driving. It saves fuel, cuts pollution and is usually safer too.",
+  "whatItIs": "Eco-safe driving means planning ahead and driving smoothly, avoiding unnecessary acceleration and braking. It saves fuel and cuts CO2.",
   "keyFacts": [
     "Plan ahead so you can avoid harsh braking and sudden acceleration.",
-    "Change up a gear early: lower engine speed uses less fuel.",
+    "Change up through the gears early, usually by about 2,000 rpm.",
     {
       "text": "You MUST NOT leave your engine running unnecessarily while stopped on a public road.",
       "law": true
     },
-    "Take off roof racks and boxes when you don't need them: they add drag.",
+    "Remove roof boxes when not needed: at motorway speeds one can raise fuel use by around 25%.",
     "Under-inflated tyres and extra weight make the car use more fuel.",
-    "For short trips, think about walking, cycling or public transport."
+    "Fuel use rises with speed: at 70 mph a car uses about 10% more fuel than at 60 mph."
   ],
   "visual": {
     "type": "cards",
@@ -60,7 +60,7 @@
     "b": {
       "label": "Coasting",
       "points": [
-        "Rolling in neutral",
+        "Rolling in neutral or with the clutch down",
         "Less control, not eco-safe"
       ]
     }
@@ -79,7 +79,7 @@
     }
   ],
   "traps": [
-    "Coasting in neutral isn't eco-safe: you lose control and engine braking.",
+    "Coasting reduces your control: engine braking is lost and speed builds quickly downhill.",
     "Leaving the engine running while parked can be an offence, not just a waste.",
     "A roof box left on when empty still costs you fuel."
   ],
@@ -88,10 +88,22 @@
       "doc": "The Highway Code",
       "ref": "Rule 123 (The driver and the environment)",
       "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 122 (Coasting)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "GOV.UK",
+      "ref": "Save money on your holiday driving (DfT)",
+      "url": "https://www.gov.uk/government/news/save-money-on-your-holiday-driving"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rule 123 (The driver and the environment); The Highway Code: Rule 122 (Coasting); GOV.UK: Save money on your holiday driving (DfT)"
   }
 }

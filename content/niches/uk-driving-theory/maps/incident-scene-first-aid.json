@@ -35,15 +35,15 @@
       },
       {
         "title": "A · Airway",
-        "text": "No response? Tilt the head back gently to open the airway."
+        "text": "No response? Put your fingers under their chin and lift it forward to open the airway."
       },
       {
         "title": "B · Breathing",
-        "text": "Look, listen and feel for normal breathing."
+        "text": "Check for normal breathing. No signs of breathing? Start CPR: 5 to 6 cm deep, about twice a second."
       },
       {
         "title": "C · Circulation",
-        "text": "Not breathing normally? Chest compressions: 5 to 6 cm, about twice a second."
+        "text": "Responsive and breathing? Check for bleeding. Press firmly on the wound unless something is in it."
       }
     ]
   },
@@ -77,7 +77,7 @@
     }
   ],
   "traps": [
-    "Burns: at least 20 minutes of cool water. Older books say 10.",
+    "Burns: cool for at least 20 minutes with plenty of clean, cool water. Don't remove anything stuck to it.",
     "Don't take off a motorcyclist's helmet unless it is essential.",
     "Don't give a casualty anything to drink, not even water."
   ],
@@ -91,11 +91,17 @@
       "doc": "The Highway Code",
       "ref": "Rule 286 (If you are involved in a collision)",
       "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 283 (Incidents)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft",
-    "notes": "Check whether the current Annex 7 heads the last DR ABC step \"Circulation\" or \"Compressions\"."
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Annex 7 (First aid on the road); The Highway Code: Rule 286 (If you are involved in a collision); The Highway Code: Rule 283 (Incidents)"
   }
 }

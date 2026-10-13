@@ -86,10 +86,17 @@
       "doc": "The Highway Code",
       "ref": "Rules 133 to 143 (Multi-lane carriageways and one-way streets)",
       "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 160 (Once moving)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rules 133 to 143 (Multi-lane carriageways and one-way streets); The Highway Code: Rule 160 (Once moving)"
   }
 }

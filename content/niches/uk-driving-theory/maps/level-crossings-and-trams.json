@@ -98,10 +98,17 @@
       "doc": "The Highway Code",
       "ref": "Rules 300 to 307 (Tramways)",
       "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 224 (Electric vehicles)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rules 291 to 299 (Level crossings); The Highway Code: Rules 300 to 307 (Tramways); The Highway Code: Rule 224 (Electric vehicles)"
   }
 }

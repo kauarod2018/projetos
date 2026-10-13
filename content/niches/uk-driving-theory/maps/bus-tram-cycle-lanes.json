@@ -11,7 +11,7 @@
   "title": "Bus, Tram & Cycle Lanes",
   "whatItIs": "Lanes kept for buses, trams or cycles, shown by signs and road markings. Some apply only at certain times.",
   "keyFacts": [
-    "Bus lanes are marked by a thick white line and signs showing which vehicles may use them and when.",
+    "Bus lanes are shown by road markings and signs showing which other vehicles may use them, and when.",
     "Don't drive in a bus lane during its times of operation unless the sign allows your vehicle.",
     {
       "text": "You MUST NOT drive or park in a cycle lane marked by a solid white line during its times of operation.",
@@ -92,13 +92,14 @@
     },
     {
       "doc": "Know Your Traffic Signs (DfT)",
-      "ref": "Bus and cycle lanes",
+      "ref": "Bus and cycle signs and road markings",
       "url": "https://assets.publishing.service.gov.uk/media/656ef4271104cf0013fa74ef/know-your-traffic-signs-dft.pdf"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft",
-    "notes": "Confirm the 24-hour rule for bus lanes without times in Know Your Traffic Signs."
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rules 140 to 142 (Cycle and bus lanes); The Highway Code: Rules 300 to 307 (Tramways); Know Your Traffic Signs (DfT): Bus and cycle signs and road markings"
   }
 }

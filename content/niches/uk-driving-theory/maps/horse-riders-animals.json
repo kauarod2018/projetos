@@ -13,7 +13,7 @@
   "keyFacts": [
     "Pass horse riders and horse-drawn vehicles at no more than 10 mph, leaving at least 2 metres.",
     "Don't sound your horn or rev your engine near horses.",
-    "Riders may ride two abreast or in the middle of the lane, for example on narrow roads.",
+    "Riders may ride in the centre of the lane on narrow roads, or in double file to escort a young horse or rider.",
     "At a roundabout, a horse rider may keep to the left lane and signal right if they are going round.",
     "If a herd of animals blocks the road, stop, switch off your engine and wait until they have gone."
   ],
@@ -75,12 +75,19 @@
     },
     {
       "doc": "The Highway Code",
-      "ref": "Rule 187 (Roundabouts)",
+      "ref": "Rule 186 (Roundabouts: signals and position)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 163 and 213 (Overtaking, narrow roads)",
       "url": "https://www.gov.uk/guidance/the-highway-code"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rules 214 and 215 (Animals and horse riders); The Highway Code: Rule 186 (Roundabouts: signals and position); The Highway Code: Rules 163 and 213 (Overtaking, narrow roads)"
   }
 }

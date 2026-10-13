@@ -9,18 +9,18 @@
     "safety-and-your-vehicle"
   ],
   "title": "Vehicle Checks & Tyres",
-  "whatItIs": "You are responsible for your car being safe to drive. Quick, regular checks catch most problems before they cause one.",
+  "whatItIs": "You MUST make sure your vehicle is legal and roadworthy. Regular checks of tyres, lights, fluids and warning displays help.",
   "keyFacts": [
     {
       "text": "Car tyres MUST have at least 1.6 mm of tread across the central three-quarters, all the way round.",
       "law": true
     },
     {
-      "text": "Tyres MUST be at the right pressure and free from cuts and other defects.",
+      "text": "Tyres MUST be correctly inflated to the maker's specification for the load being carried.",
       "law": true
     },
     {
-      "text": "Lights, indicators, reflectors and number plates MUST be clean and working.",
+      "text": "Lights, indicators, reflectors and number plates MUST be kept clean and clear.",
       "law": true
     },
     {
@@ -36,12 +36,12 @@
     "items": [
       {
         "title": "P · Petrol",
-        "text": "Enough fuel (or charge) for the journey, with some to spare.",
+        "text": "Enough fuel or charge for your journey, especially on motorways.",
         "icon": "fuel"
       },
       {
         "title": "O · Oil",
-        "text": "Check the level on the dipstick with the engine cold and the car level.",
+        "text": "Check fluid levels, including oil, at least weekly. Know your low-fluid warning lights.",
         "icon": "droplet"
       },
       {
@@ -51,7 +51,7 @@
       },
       {
         "title": "D · Damage",
-        "text": "Look for damage to the body, glass, mirrors and lights.",
+        "text": "Check for fuel leaks and any damage to the fuel cap or tank.",
         "icon": "search"
       },
       {
@@ -68,17 +68,17 @@
   },
   "confused": {
     "a": {
-      "label": "Under-inflated tyres",
+      "label": "Wrong tyre pressures",
       "points": [
-        "Heavier steering",
-        "More fuel and more wear"
+        "Brakes and steering are affected",
+        "Under-inflated: more fuel used"
       ]
     },
     "b": {
-      "label": "Over-inflated tyres",
+      "label": "Uneven tyre wear",
       "points": [
-        "Less grip on the road",
-        "Harsher ride, uneven wear"
+        "May be a brake or suspension fault",
+        "Or wheels out of alignment"
       ]
     }
   },
@@ -98,18 +98,24 @@
   "traps": [
     "1.6 mm is across the central three-quarters, all the way round the tyre.",
     "Check pressures when the tyres are cold.",
-    "A bulge or deep cut in the tyre wall means replace it, even with good tread."
+    "Good tread isn't enough: tyres should also be free from cuts and other defects."
   ],
   "sources": [
     {
       "doc": "The Highway Code",
       "ref": "Annex 6 (Vehicle maintenance, safety and security)",
       "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 97 (Before setting off)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft",
-    "notes": "POWDER is a common memory aid, not wording from the Highway Code."
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Annex 6 (Vehicle maintenance, safety and security); The Highway Code: Rule 97 (Before setting off)"
   }
 }

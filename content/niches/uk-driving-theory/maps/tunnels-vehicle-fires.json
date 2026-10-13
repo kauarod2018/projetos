@@ -9,73 +9,73 @@
     "incidents-accidents-and-emergencies"
   ],
   "title": "Tunnels & Vehicle Fires",
-  "whatItIs": "In a tunnel there is little room and little light. A breakdown or a fire there needs quick, calm action.",
+  "whatItIs": "Tunnels reduce visibility, so keep a bigger gap. If your vehicle catches fire, get everyone out to a safe place and call the fire brigade.",
   "keyFacts": [
-    "Before a tunnel: dipped headlights on, sunglasses off, and tune in to the radio for traffic information.",
+    "At night or in poor visibility, don't wear tinted glasses or visors if they restrict your vision.",
     "Keep at least a two-second gap in a tunnel.",
-    "Broken down in a tunnel: hazard lights on, engine off, get out and call for help from an emergency point.",
-    "Fire in a tunnel: drive out if you can. If not, stop, engine off, leave the keys in and get out at once.",
+    "If you have to stop in a tunnel, leave at least a 5-metre gap to the vehicle in front.",
+    "Breakdown or incident: hazard lights on, then keep well away from your vehicle and moving traffic.",
     "Engine fire anywhere: get everyone out to a safe place and call 999. Don't open the bonnet."
   ],
   "visual": {
     "type": "steps",
-    "caption": "If your car catches fire in a tunnel",
+    "caption": "If your vehicle catches fire",
     "items": [
       {
-        "title": "Drive out",
-        "text": "If the car still drives, keep going and leave the tunnel."
+        "title": "Stop safely",
+        "text": "If you can, stop in a place of relative safety and switch off the engine."
       },
       {
-        "title": "Can't drive out?",
-        "text": "Pull over, hazard lights on, switch off the engine."
+        "title": "Hazard lights on",
+        "text": "Use your hazard warning lights to warn other traffic."
       },
       {
-        "title": "Keys in, get out",
-        "text": "Leave the keys so the car can be moved. Get everyone out."
+        "title": "Get everyone out",
+        "text": "Get the occupants out quickly and to a safe place."
       },
       {
-        "title": "Raise the alarm",
-        "text": "Use an emergency point. Use an extinguisher only if it is safe."
+        "title": "Keep the bonnet shut",
+        "text": "Don't try to put out an engine fire: opening the bonnet will make it flare."
       },
       {
-        "title": "Head for an exit",
-        "text": "Walk to the nearest emergency exit straight away."
+        "title": "Call the fire brigade",
+        "text": "Call 999 with the exact location. Wait well away from the vehicle and traffic."
       }
     ]
   },
   "confused": {
     "a": {
-      "label": "Breakdown in a tunnel",
+      "label": "Gap in a tunnel",
       "points": [
-        "Hazards on, engine off",
-        "Get out, call from an emergency point"
+        "Moving: at least a two-second gap",
+        "Stopped: at least 5 metres"
       ]
     },
     "b": {
-      "label": "Fire in a tunnel",
+      "label": "Engine fire",
       "points": [
-        "Drive out if you can",
-        "If not: keys in, get out at once"
+        "Get everyone out to a safe place",
+        "Don't open the bonnet; call 999"
       ]
     }
   },
   "onTheTest": [
     {
-      "question": "Your car catches fire in a tunnel, but you can still drive it. What should you do?",
+      "question": "You have to stop in a tunnel. What gap should you leave to the vehicle in front?",
       "options": [
-        "Drive out of the tunnel",
-        "Stop at once and get out",
-        "Open the bonnet to check",
-        "Reverse back to the entrance"
+        "At least 5 metres",
+        "At least 1 metre",
+        "At least 2 metres",
+        "At least 20 metres"
       ],
       "answerIndex": 0,
-      "why": "If you can, drive out of the tunnel. If you can't, pull over, switch off the engine, leave the keys in and get out."
+      "why": "Leave at least a 5-metre gap when you stop in a tunnel. When moving, keep at least a two-second gap."
     }
   ],
   "traps": [
-    "Leave the keys in: it lets the emergency services move your car.",
-    "Opening the bonnet on an engine fire lets in air and makes it worse.",
-    "Take off your sunglasses before the tunnel: it is darker inside."
+    "Stopping in a tunnel? Leave at least a 5-metre gap to the vehicle in front.",
+    "Don't try to put out an engine fire: opening the bonnet will make the fire flare.",
+    "Tinted glasses or visors that restrict your vision: not at night or in poor visibility."
   ],
   "sources": [
     {
@@ -85,13 +85,24 @@
     },
     {
       "doc": "The Highway Code",
-      "ref": "Breakdowns and incidents: Incidents in tunnels",
+      "ref": "Annex 6 (Vehicle maintenance, safety and security): Overheated engines or fire",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 275 to 283 (Breakdowns and incidents)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 94 (Vision)",
       "url": "https://www.gov.uk/guidance/the-highway-code"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft",
-    "notes": "Tunnel and fire advice cross-checked with tunnel operator guidance; confirm the current Highway Code tunnel rules and the bonnet advice on gov.uk."
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rule 126 (Stopping distances, tunnels); The Highway Code: Annex 6 (Vehicle maintenance, safety and security): Overheated engines or fire; The Highway Code: Rules 275 to 283 (Breakdowns and incidents); The Highway Code: Rule 94 (Vision)"
   }
 }

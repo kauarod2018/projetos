@@ -20,7 +20,10 @@
       "text": "On the zigzags you MUST NOT overtake the moving vehicle nearest the crossing, or one that has stopped for pedestrians.",
       "law": true
     },
-    "At a zebra, give way to people waiting to cross. You MUST give way once they are on the crossing.",
+    {
+      "text": "You MUST give way to anyone who has moved onto a zebra crossing. Give way to those waiting, too.",
+      "law": true
+    },
     {
       "text": "Flashing amber at a pelican: you MUST give way to anyone on the crossing, then go if it is clear.",
       "law": true
@@ -109,10 +112,17 @@
       "doc": "The Highway Code",
       "ref": "Rules 18 to 30 (Crossings, for pedestrians)",
       "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "Know Your Traffic Signs (DfT)",
+      "ref": "Pedestrian, cycle and equestrian crossings",
+      "url": "https://assets.publishing.service.gov.uk/media/656ef4271104cf0013fa74ef/know-your-traffic-signs-dft.pdf"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rules 191 to 199 (Pedestrian crossings); The Highway Code: Rules 18 to 30 (Crossings, for pedestrians); Know Your Traffic Signs (DfT): Pedestrian, cycle and equestrian crossings"
   }
 }

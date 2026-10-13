@@ -9,7 +9,7 @@
     "vulnerable-road-users"
   ],
   "title": "Motorcyclists",
-  "whatItIs": "Motorcyclists are small, fast and easy to miss, especially at junctions. Look twice and give them room.",
+  "whatItIs": "Motorcyclists are hard to see, especially at junctions, and may be closer and faster than you think. Look out for them and give them room.",
   "keyFacts": [
     "Motorcyclists are hard to see at junctions, at roundabouts and when filtering: look carefully.",
     "They may filter between lanes of slow or stopped traffic: check your mirrors before you change lane.",
@@ -24,7 +24,7 @@
     "items": [
       {
         "title": "At junctions",
-        "text": "They may be closer and faster than you think. Look twice.",
+        "text": "They may be closer and faster than you think. Look carefully.",
         "icon": "git-fork"
       },
       {
@@ -74,7 +74,7 @@
     }
   ],
   "traps": [
-    "A window pillar can hide a whole motorcycle: move your head and look again.",
+    "Motorcyclists are hard to see: check mirrors and blind spots carefully before you turn or pull out.",
     "Filtering motorcyclists can pass on either side.",
     "A rider may swerve for a drain cover or pothole: leave room."
   ],
@@ -83,10 +83,27 @@
       "doc": "The Highway Code",
       "ref": "Rules 211 to 213 (Motorcyclists and cyclists)",
       "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 233 (Windy weather)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 104 (Signals)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 151 (Slow-moving traffic)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rules 211 to 213 (Motorcyclists and cyclists); The Highway Code: Rule 233 (Windy weather); The Highway Code: Rule 104 (Signals); The Highway Code: Rule 151 (Slow-moving traffic)"
   }
 }

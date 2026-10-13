@@ -17,11 +17,11 @@
       "law": true
     },
     {
-      "text": "At give way lines you MUST give way to traffic on the major road. Stop only if traffic is coming.",
+      "text": "At broken give way lines you MUST give way to traffic on the main road when you emerge.",
       "law": true
     },
     "At an unmarked crossroads nobody has priority: go on with great care.",
-    "Crossing a dual carriageway: if the gap in the middle is too narrow for your vehicle, wait and cross in one go."
+    "Crossing a dual carriageway: if the central reservation is too shallow for your vehicle, cross in one go."
   ],
   "visual": {
     "type": "cards",
@@ -37,7 +37,7 @@
       {
         "icon": "triangle",
         "title": "Give way lines (broken)",
-        "text": "Give way to traffic on the major road. Stop only if you need to.",
+        "text": "You MUST give way to traffic on the main road when you emerge.",
         "law": true
       },
       {
@@ -48,7 +48,7 @@
       {
         "icon": "eye",
         "title": "Limited view",
-        "text": "Edge forward slowly until you can see. Watch for bikes and pedestrians."
+        "text": "Look all around before emerging. Don't join the road until there is a safe gap."
       }
     ]
   },
@@ -63,8 +63,8 @@
     "b": {
       "label": "GIVE WAY sign",
       "points": [
-        "Slow down and give way",
-        "Stop only if traffic is coming"
+        "You MUST give way to traffic on the major road",
+        "Broken lines, not a solid stop line"
       ]
     }
   },
@@ -84,17 +84,24 @@
   "traps": [
     "A clear road doesn't excuse you from stopping at a STOP sign.",
     "At an unmarked crossroads nobody has priority, not even traffic from the right.",
-    "A window pillar can hide a motorcyclist: move your head and look again."
+    "Cyclists and motorcyclists are not always easy to see: look all around before you emerge."
   ],
   "sources": [
     {
       "doc": "The Highway Code",
       "ref": "Rules 170 to 173 (Road junctions)",
       "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 146 (Adapt your driving)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rules 170 to 173 (Road junctions); The Highway Code: Rule 146 (Adapt your driving)"
   }
 }

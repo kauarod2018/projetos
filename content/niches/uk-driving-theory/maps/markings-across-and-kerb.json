@@ -96,7 +96,7 @@
   ],
   "traps": [
     "Kerb marks control loading; yellow lines control waiting.",
-    "A give way line doesn't always mean stop: stop only if you need to.",
+    "Give way lines are broken; a STOP line is solid. At a STOP line you MUST stop, even if the road is clear.",
     "'Never' is wrong for box junctions: turning right is the exception."
   ],
   "sources": [
@@ -114,10 +114,17 @@
       "doc": "Know Your Traffic Signs (DfT)",
       "ref": "Road markings",
       "url": "https://assets.publishing.service.gov.uk/media/656ef4271104cf0013fa74ef/know-your-traffic-signs-dft.pdf"
+    },
+    {
+      "doc": "Know Your Traffic Signs (DfT)",
+      "ref": "On-street parking control signs and road markings",
+      "url": "https://assets.publishing.service.gov.uk/media/656ef4271104cf0013fa74ef/know-your-traffic-signs-dft.pdf"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rules 170 to 183 (Road junctions); The Highway Code: Rules 238 to 252 (Waiting and parking); Know Your Traffic Signs (DfT): Road markings; Know Your Traffic Signs (DfT): On-street parking control signs and road markings"
   }
 }

@@ -10,7 +10,7 @@
     "attitude"
   ],
   "title": "Overtaking: When and When Not",
-  "whatItIs": "Overtaking is one of the riskiest things you can do. Only do it when you can see it is safe and you don't need to.",
+  "whatItIs": "Overtake only when it is safe and legal to do so. If you are in any doubt, or can't see far enough ahead to be sure, don't overtake.",
   "keyFacts": [
     "Before you overtake, make sure the road ahead is clear far enough and nobody is overtaking you.",
     "Overtake on the right. Move back in when it is safe, without cutting in.",
@@ -30,7 +30,7 @@
       },
       {
         "title": "At or near junctions",
-        "text": "A vehicle may pull out or turn across your path.",
+        "text": "Approaching or at a road junction on either side of the road.",
         "icon": "git-fork"
       },
       {
@@ -47,12 +47,12 @@
       },
       {
         "title": "School crossing patrols",
-        "text": "Approaching a patrol, or where children may cross.",
+        "text": "When approaching a school crossing patrol.",
         "icon": "school"
       },
       {
         "title": "Level crossings",
-        "text": "Never overtake on the approach to a level crossing.",
+        "text": "Don't overtake at a level crossing.",
         "icon": "train-front"
       }
     ]
@@ -100,6 +100,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rules 162 to 169 (Overtaking)"
   }
 }

@@ -30,7 +30,7 @@
       {
         "value": "3,500 kg",
         "label": "Maximum trailer weight on a car licence",
-        "note": "Most drivers since 16 December 2021 (trailer MAM)"
+        "note": "Licence from 1 Jan 1997: trailer up to 3,500 kg MAM"
       },
       {
         "value": "50 mph",
@@ -55,7 +55,7 @@
     "b": {
       "label": "Car skidding",
       "points": [
-        "Ease off the pedals",
+        "Release the brake or ease off the accelerator",
         "Steer the way the rear is sliding"
       ]
     }
@@ -93,11 +93,22 @@
       "doc": "GOV.UK",
       "ref": "Towing with a car",
       "url": "https://www.gov.uk/towing-with-car"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 119 (Skids)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Annex 6 (Tyres: inflate for the load being carried)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft",
-    "notes": "Licence towing rule: drivers who passed their car test on or after 1 January 1997 can tow trailers up to 3,500 kg MAM since 16 December 2021. Confirm on gov.uk/towing-with-car."
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rule 98 (Vehicle towing and loading); The Highway Code: Rule 124 (Speed limits); GOV.UK: Towing with a car; The Highway Code: Rule 119 (Skids); The Highway Code: Annex 6 (Tyres: inflate for the load being carried)"
   }
 }

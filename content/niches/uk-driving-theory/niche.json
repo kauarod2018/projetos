@@ -15,61 +15,124 @@
       "name": "Road & Traffic Signs",
       "colour": "#B45309",
       "icon": "signpost",
-      "officialTopics": ["road-and-traffic-signs"]
+      "officialTopics": [
+        "road-and-traffic-signs"
+      ]
     },
     {
       "slug": "rules-of-the-road",
       "name": "Rules of the Road",
       "colour": "#0F766E",
       "icon": "route",
-      "officialTopics": ["rules-of-the-road", "attitude"]
+      "officialTopics": [
+        "rules-of-the-road",
+        "attitude"
+      ]
     },
     {
       "slug": "motorways",
       "name": "Motorways",
       "colour": "#6D28D9",
       "icon": "milestone",
-      "officialTopics": ["motorway-rules"]
+      "officialTopics": [
+        "motorway-rules"
+      ]
     },
     {
       "slug": "safety-margins",
       "name": "Safety Margins & Vehicle Handling",
       "colour": "#4D7C0F",
       "icon": "gauge",
-      "officialTopics": ["safety-margins", "vehicle-handling"]
+      "officialTopics": [
+        "safety-margins",
+        "vehicle-handling"
+      ]
     },
     {
       "slug": "hazards-and-vulnerable",
       "name": "Hazard Awareness & Vulnerable Road Users",
       "colour": "#BE185D",
       "icon": "person-standing",
-      "officialTopics": ["alertness", "attitude", "hazard-awareness", "vulnerable-road-users", "other-types-of-vehicle"]
+      "officialTopics": [
+        "alertness",
+        "attitude",
+        "hazard-awareness",
+        "vulnerable-road-users",
+        "other-types-of-vehicle"
+      ]
     },
     {
       "slug": "vehicle-docs-incidents",
       "name": "Your Vehicle, Documents & Incidents",
       "colour": "#334155",
       "icon": "file-text",
-      "officialTopics": ["safety-and-your-vehicle", "essential-documents", "incidents-accidents-and-emergencies", "vehicle-loading"]
+      "officialTopics": [
+        "safety-and-your-vehicle",
+        "essential-documents",
+        "incidents-accidents-and-emergencies",
+        "vehicle-loading"
+      ]
     }
   ],
   "officialTopics": {
     "authority": "DVSA",
     "items": [
-      { "slug": "alertness", "name": "Alertness" },
-      { "slug": "attitude", "name": "Attitude" },
-      { "slug": "safety-and-your-vehicle", "name": "Safety and your vehicle" },
-      { "slug": "safety-margins", "name": "Safety margins" },
-      { "slug": "hazard-awareness", "name": "Hazard awareness" },
-      { "slug": "vulnerable-road-users", "name": "Vulnerable road users" },
-      { "slug": "other-types-of-vehicle", "name": "Other types of vehicle" },
-      { "slug": "vehicle-handling", "name": "Vehicle handling" },
-      { "slug": "motorway-rules", "name": "Motorway rules" },
-      { "slug": "rules-of-the-road", "name": "Rules of the road" },
-      { "slug": "road-and-traffic-signs", "name": "Road and traffic signs" },
-      { "slug": "essential-documents", "name": "Essential documents" },
-      { "slug": "incidents-accidents-and-emergencies", "name": "Incidents, accidents and emergencies" },
-      { "slug": "vehicle-loading", "name": "Vehicle loading" }
+      {
+        "slug": "alertness",
+        "name": "Alertness"
+      },
+      {
+        "slug": "attitude",
+        "name": "Attitude"
+      },
+      {
+        "slug": "safety-and-your-vehicle",
+        "name": "Safety and your vehicle"
+      },
+      {
+        "slug": "safety-margins",
+        "name": "Safety margins"
+      },
+      {
+        "slug": "hazard-awareness",
+        "name": "Hazard awareness"
+      },
+      {
+        "slug": "vulnerable-road-users",
+        "name": "Vulnerable road users"
+      },
+      {
+        "slug": "other-types-of-vehicle",
+        "name": "Other types of vehicle"
+      },
+      {
+        "slug": "vehicle-handling",
+        "name": "Vehicle handling"
+      },
+      {
+        "slug": "motorway-rules",
+        "name": "Motorway rules"
+      },
+      {
+        "slug": "rules-of-the-road",
+        "name": "Rules of the road"
+      },
+      {
+        "slug": "road-and-traffic-signs",
+        "name": "Road and traffic signs"
+      },
+      {
+        "slug": "essential-documents",
+        "name": "Essential documents"
+      },
+      {
+        "slug": "incidents-accidents-and-emergencies",
+        "name": "Incidents, accidents and emergencies"
+      },
+      {
+        "slug": "vehicle-loading",
+        "name": "Vehicle loading"
+      }
     ]
   },
   "coverage": {
@@ -78,7 +141,7 @@
   },
   "content": {
     "version": "0.1.0",
-    "checkedOn": null
+    "checkedOn": "2026-10-12"
   },
   "pricing": {
     "basic": 15,

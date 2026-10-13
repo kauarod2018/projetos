@@ -9,13 +9,13 @@
     "attitude"
   ],
   "title": "Attitude: Following Too Close & Courtesy",
-  "whatItIs": "Good drivers are patient and calm. Your attitude affects your safety as much as your skill does.",
+  "whatItIs": "Be considerate and patient with all road users. Anyone can make a mistake, so don't react if someone drives badly.",
   "keyFacts": [
     "Driving too close to the vehicle in front (tailgating) is dangerous and intimidating.",
     "If someone pulls out in front of you, hold back and let them get clear. Don't drive close to make a point.",
     "If another driver behaves badly, don't react. Pull over and calm down if you need to.",
-    "Be patient with learners, new and older drivers, and anyone who makes a mistake.",
-    "When someone overtakes you, don't speed up. Slow down if needed to let them in."
+    "Be patient with learner, young and older drivers: anyone can make a mistake.",
+    "When someone overtakes you, keep a steady course and speed, slowing down if needed to let them pass."
   ],
   "visual": {
     "type": "cards",
@@ -24,7 +24,7 @@
     "items": [
       {
         "title": "Keep your distance",
-        "text": "At least a two-second gap. Never tailgate to push someone along.",
+        "text": "At least two seconds on fast roads, more in the wet. Never drive close to intimidate.",
         "icon": "move-horizontal"
       },
       {
@@ -46,10 +46,10 @@
   },
   "confused": {
     "a": {
-      "label": "Flashing to say \"go\"",
+      "label": "Flashing headlights",
       "points": [
-        "Not what flashing means",
-        "They may pull out into danger"
+        "Only means \"I am here\"",
+        "Never assume it invites you to go"
       ]
     },
     "b": {
@@ -75,13 +75,13 @@
   ],
   "traps": [
     "Courtesy doesn't mean waving people on: let them decide when it is safe.",
-    "Speeding up when someone overtakes you is aggressive and dangerous.",
-    "Running late is no excuse for pushing other drivers."
+    "Speeding up or driving unpredictably while someone is overtaking you is dangerous.",
+    "Don't flash your headlights or sound your horn to intimidate or show annoyance."
   ],
   "sources": [
     {
       "doc": "The Highway Code",
-      "ref": "Rules 147 and 148 (Be considerate)",
+      "ref": "Rule 147 (Be considerate)",
       "url": "https://www.gov.uk/guidance/the-highway-code"
     },
     {
@@ -93,10 +93,27 @@
       "doc": "The Highway Code",
       "ref": "Rule 168 (Being overtaken)",
       "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 110 and 111 (Flashing headlights)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 216 and 217 (Older, learner and inexperienced drivers)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 134 and 151 (Merging in turn, slow-moving traffic)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rule 147 (Be considerate); The Highway Code: Rule 126 (Stopping distances); The Highway Code: Rule 168 (Being overtaken); The Highway Code: Rules 110 and 111 (Flashing headlights); The Highway Code: Rules 216 and 217 (Older, learner and inexperienced drivers); The Highway Code: Rules 134 and 151 (Merging in turn, slow-moving traffic)"
   }
 }

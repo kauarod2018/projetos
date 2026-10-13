@@ -10,7 +10,7 @@
     "vehicle-handling"
   ],
   "title": "Reversing & Turning in the Road",
-  "whatItIs": "Reversing and turning round are slow manoeuvres, but you can easily miss people around you. Choose a safe place and keep looking.",
+  "whatItIs": "Reversing and turning round need care: choose a safe place, look all around and reverse slowly.",
   "keyFacts": [
     "Choose a safe place: avoid turning round in a busy road. Find a quiet side road or go round the block.",
     "Don't reverse from a side road into a main road.",
@@ -27,7 +27,7 @@
     "items": [
       {
         "title": "Pick the place",
-        "text": "Quiet, with a good view, away from junctions and busy roads."
+        "text": "A safe place. Don't reverse or turn round in a busy road: find a quiet side road."
       },
       {
         "title": "Look all round",
@@ -35,15 +35,15 @@
       },
       {
         "title": "Go slowly",
-        "text": "Use clutch control so you can stop at once."
+        "text": "Reverse slowly, checking all around and looking mainly through the rear window."
       },
       {
         "title": "Keep looking",
         "text": "Look mainly out of the rear window, and all around."
       },
       {
-        "title": "Stop if needed",
-        "text": "If someone approaches, stop and let them pass."
+        "title": "Give way",
+        "text": "Give way to any pedestrians who may be crossing the road behind you."
       }
     ]
   },
@@ -52,14 +52,14 @@
       "label": "Driveway: reverse in",
       "points": [
         "Then drive out forwards",
-        "Best view of the road as you leave"
+        "Rule 201: do this if you can"
       ]
     },
     "b": {
       "label": "Driveway: reverse out",
       "points": [
-        "Harder to see people and traffic",
-        "Avoid it if you can"
+        "Reversing out into the road",
+        "Rule 201: reverse in and drive out instead"
       ]
     }
   },
@@ -78,7 +78,7 @@
   ],
   "traps": [
     "Mirrors alone aren't enough: look out of the rear window and all around.",
-    "Small children can be hidden right behind the car.",
+    "Before reversing, check there are no pedestrians, particularly children, in the road behind you.",
     "Never reverse from a side road into a main road."
   ],
   "sources": [
@@ -86,10 +86,17 @@
       "doc": "The Highway Code",
       "ref": "Rules 200 to 203 (Reversing)",
       "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 206 (Pedestrians)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rules 200 to 203 (Reversing); The Highway Code: Rule 206 (Pedestrians)"
   }
 }

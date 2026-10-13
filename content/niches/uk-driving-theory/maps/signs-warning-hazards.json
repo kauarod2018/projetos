@@ -44,7 +44,7 @@
     "b": {
       "label": "Level crossing without barrier",
       "points": [
-        "No barrier: watch the lights",
+        "No gate or barrier: obey lights or give way",
         "The sign shows a train"
       ]
     }
@@ -77,11 +77,17 @@
       "doc": "Know Your Traffic Signs (DfT)",
       "ref": "Warning signs",
       "url": "https://assets.publishing.service.gov.uk/media/656ef4271104cf0013fa74ef/know-your-traffic-signs-dft.pdf"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 214 (Animals)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft",
-    "notes": "Official numbers of these warning signs still to be added from the DfT image pack."
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Traffic signs: warning signs; Know Your Traffic Signs (DfT): Warning signs; The Highway Code: Rule 214 (Animals)"
   }
 }

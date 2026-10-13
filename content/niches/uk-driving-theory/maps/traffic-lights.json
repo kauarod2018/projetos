@@ -9,7 +9,7 @@
     "road-and-traffic-signs"
   ],
   "title": "Traffic Lights & Filter Arrows",
-  "whatItIs": "Traffic lights follow the same sequence everywhere: red, red and amber, green, amber, then red again.",
+  "whatItIs": "Traffic lights change in a set order: red, red and amber, green, amber, then red again.",
   "keyFacts": [
     {
       "text": "Red: you MUST stop behind the white stop line.",
@@ -55,7 +55,7 @@
           "amber"
         ],
         "label": "Amber",
-        "meaning": "Stop, unless it is unsafe to do so."
+        "meaning": "Stop, unless you've crossed the line or are so close that stopping might cause a crash."
       }
     ]
   },
@@ -96,8 +96,13 @@
   "sources": [
     {
       "doc": "The Highway Code",
-      "ref": "Rules 175 to 178 (Traffic lights)",
+      "ref": "Rules 175 to 178 (Junctions controlled by traffic lights)",
       "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Light signals controlling traffic",
+      "url": "https://www.gov.uk/guidance/the-highway-code/light-signals-controlling-traffic"
     },
     {
       "doc": "Know Your Traffic Signs (DfT)",
@@ -107,6 +112,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rules 175 to 178 (Junctions controlled by traffic lights); The Highway Code: Light signals controlling traffic; Know Your Traffic Signs (DfT): Traffic signals"
   }
 }

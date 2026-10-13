@@ -9,10 +9,10 @@
     "vulnerable-road-users"
   ],
   "title": "Pedestrians: Children, Older & Disabled People",
-  "whatItIs": "Pedestrians are the road users most at risk. Children, older people and disabled people need the most care.",
+  "whatItIs": "Pedestrians are among the road users most at risk, in particular children, older adults and disabled people.",
   "keyFacts": [
-    "Watch for children near schools, parks, ice cream vans and buses: they can run out without looking.",
-    "Older people may need more time to cross and may not see or hear you coming.",
+    "Watch for children near schools, bus stops, parked cars and ice cream vans: they may run into the road.",
+    "Older pedestrians may need more time to cross and may not be able to judge your speed.",
     "Someone with a white cane may be blind or partially sighted. A white cane with a red band: they may be deafblind.",
     "Powered wheelchairs and mobility scooters can travel at up to 8 mph on the road: give them room.",
     "Give way to pedestrians crossing or waiting to cross the road you are turning into or out of."
@@ -24,7 +24,7 @@
     "items": [
       {
         "title": "Children",
-        "text": "Small, quick and hard to see. They can step out from behind parked cars.",
+        "text": "They may step into the road unexpectedly, for example from between parked cars.",
         "icon": "baby"
       },
       {
@@ -43,13 +43,13 @@
         "icon": "ear-off"
       },
       {
-        "title": "Assistance dogs",
-        "text": "The person may be blind or have another disability.",
+        "title": "Guide dogs",
+        "text": "Guide dog: blind or partially sighted. Red and white harness: may be deafblind.",
         "icon": "dog"
       },
       {
         "title": "Wheelchairs and scooters",
-        "text": "Slow, low and may use the road where there is no pavement.",
+        "text": "Small, slow vehicles (up to 8 mph). On most roads they have no warning beacon.",
         "icon": "accessibility"
       }
     ]
@@ -84,7 +84,7 @@
     }
   ],
   "traps": [
-    "Don't sound your horn to warn a deafblind person: they may not hear it.",
+    "A deafblind person may not see or hear your signals, including your horn.",
     "Children can appear from behind parked cars, buses and ice cream vans.",
     "Where there is no pavement, people may walk in the road: give them room."
   ],
@@ -98,10 +98,17 @@
       "doc": "The Highway Code",
       "ref": "Rule 220 (Powered wheelchairs and mobility scooters)",
       "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 152 (Residential streets)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rules 204 to 210 (Road users requiring extra care); The Highway Code: Rule 220 (Powered wheelchairs and mobility scooters); The Highway Code: Rule 152 (Residential streets)"
   }
 }

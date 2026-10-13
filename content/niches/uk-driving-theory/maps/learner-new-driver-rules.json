@@ -11,12 +11,18 @@
   "title": "Learner & New Driver Rules",
   "whatItIs": "Learners must meet extra rules while they learn, and new drivers face a lower points limit for their first 2 years.",
   "keyFacts": [
-    "Your supervisor must be at least 21 and have held a full licence for that type of vehicle for at least 3 years.",
+    {
+      "text": "Your supervisor MUST be at least 21 and have held a full licence for that type of car for at least 3 years.",
+      "law": true
+    },
     {
       "text": "L plates (or D plates in Wales) MUST be shown on the front and back of the car.",
       "law": true
     },
-    "Learners can drive on motorways only with an approved driving instructor in a dual-control car.",
+    {
+      "text": "Learners MUST NOT drive on motorways unless with an approved driving instructor in a dual-control car.",
+      "law": true
+    },
     {
       "text": "A supervisor MUST NOT use a hand-held phone while supervising: the phone law applies to them too.",
       "law": true
@@ -31,7 +37,8 @@
       {
         "title": "Supervisor",
         "text": "Aged 21 or over, with a full licence for 3 years or more.",
-        "icon": "user-check"
+        "icon": "user-check",
+        "law": true
       },
       {
         "title": "L or D plates",
@@ -42,7 +49,8 @@
       {
         "title": "Motorways",
         "text": "Only with an approved driving instructor in a dual-control car.",
-        "icon": "route"
+        "icon": "route",
+        "law": true
       },
       {
         "title": "Insurance",
@@ -94,7 +102,7 @@
   "traps": [
     "A learner can't go on a motorway with a parent, only with an instructor.",
     "D plates are the Welsh version of L plates.",
-    "New drivers: 6 points within 2 years means applying for a provisional licence again."
+    "New drivers: 6 points within 2 years means a new provisional licence and passing theory and practical tests again."
   ],
   "sources": [
     {
@@ -116,6 +124,11 @@
       "doc": "GOV.UK",
       "ref": "Using mobile phones when driving: the law",
       "url": "https://www.gov.uk/using-mobile-phones-when-driving-the-law"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 253 (Motorways: prohibited vehicles)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
     }
   ],
   "jurisdictionNotes": [
@@ -125,6 +138,8 @@
     }
   ],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — GOV.UK: Driving lessons and learning to drive; The Highway Code: Annex 3 (Learner drivers); GOV.UK: New drivers: penalty points; GOV.UK: Using mobile phones when driving: the law; The Highway Code: Rule 253 (Motorways: prohibited vehicles)"
   }
 }

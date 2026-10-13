@@ -9,7 +9,7 @@
     "vulnerable-road-users"
   ],
   "title": "Cyclists: Passing, Lanes & the Dutch Reach",
-  "whatItIs": "Cyclists are easy to miss and badly hurt in a crash. Give them space, look for them, and open your door with care.",
+  "whatItIs": "Cyclists are among the road users most at risk and are often hard to see. Give them space, look out for them, and open doors with care.",
   "keyFacts": [
     "When passing a cyclist, leave at least 1.5 metres at speeds up to 30 mph, and more at higher speeds.",
     "If you can't leave that much space, wait behind until you can.",
@@ -29,7 +29,7 @@
       {
         "value": "2 abreast",
         "label": "Cyclists may ride side by side",
-        "note": "Often safer in groups; overtake when you can pass both"
+        "note": "Can be safer for groups on narrow or quiet roads"
       },
       {
         "value": "Far hand",
@@ -43,14 +43,14 @@
       "label": "Cyclist in the middle of the lane",
       "points": [
         "Makes them easier to see",
-        "Normal on quiet roads and at junctions"
+        "Allowed on quiet roads and at junctions"
       ]
     },
     "b": {
-      "label": "Cyclist near the kerb",
+      "label": "Cyclist near the side of the road",
       "points": [
-        "Common in faster traffic",
-        "Still leave at least 1.5 m"
+        "Still leave at least 1.5 m up to 30 mph",
+        "May swerve round drains or potholes"
       ]
     }
   },
@@ -87,10 +87,17 @@
       "doc": "The Highway Code",
       "ref": "Rule H3",
       "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 178 (Advanced stop lines)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rules 163, 212 and 213 (Overtaking cyclists); The Highway Code: Rule 239 (Opening doors); The Highway Code: Rule H3; The Highway Code: Rule 178 (Advanced stop lines)"
   }
 }

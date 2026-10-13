@@ -92,7 +92,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft",
-    "notes": "Official sign images still to be imported (content/assets/signs/gb)."
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Traffic signs: warning signs; Know Your Traffic Signs (DfT): Warning signs"
   }
 }

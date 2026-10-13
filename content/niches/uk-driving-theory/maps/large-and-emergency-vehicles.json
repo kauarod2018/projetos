@@ -11,10 +11,10 @@
   "title": "Large & Emergency Vehicles, Buses, Trams",
   "whatItIs": "Large vehicles need more room and can't see you easily. Emergency vehicles need you to help them through safely.",
   "keyFacts": [
-    "Emergency vehicles with flashing blue, red or green lights, headlights or sirens: help them pass when it is safe.",
-    "Don't break the law to make way: no red lights, no bus lanes, no mounting the kerb.",
-    "Long vehicles may move out to the right before turning left: don't try to pass on their left.",
-    "If you can't see a lorry driver's mirrors, the driver can't see you.",
+    "Emergency vehicles with flashing blue, red or green lights, flashing headlights or sirens: let them pass when safe.",
+    "Let them pass while obeying all traffic signs, including red lights, and avoid mounting the kerb.",
+    "Long vehicles may need the whole width of the road to turn at a junction. Be ready to stop and wait.",
+    "If you follow a large vehicle, the driver may not be able to see you in their mirrors. Drop back.",
     "Give way to buses signalling to pull out from a stop, when it is safe."
   ],
   "visual": {
@@ -29,12 +29,12 @@
       },
       {
         "title": "Long vehicles turning",
-        "text": "They may swing out the other way first. Hold back.",
+        "text": "They may need the whole road width to turn. Be ready to stop and wait.",
         "icon": "truck"
       },
       {
         "title": "Blind spots",
-        "text": "Can't see the driver's mirrors? They can't see you.",
+        "text": "Following a large vehicle? The driver may not see you in their mirrors.",
         "icon": "scan-eye"
       },
       {
@@ -65,7 +65,7 @@
     "b": {
       "label": "Green lights",
       "points": [
-        "A doctor on an emergency call",
+        "Used by a doctor",
         "Let them pass if you safely can"
       ]
     }
@@ -85,18 +85,30 @@
   ],
   "traps": [
     "Making way never means going through a red light or into a bus lane.",
-    "A long vehicle moving right may be about to turn left.",
-    "Can't see the lorry's mirrors? The driver can't see you."
+    "Long vehicles may take a different course or straddle lanes to turn: watch for their signals.",
+    "Too close behind a large vehicle? The driver may not see you in their mirrors."
   ],
   "sources": [
     {
       "doc": "The Highway Code",
-      "ref": "Rules 219 to 225 (Other road users)",
+      "ref": "Rules 219 to 225 (Other vehicles)",
       "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 164 and 170 (Large vehicles, long vehicles at junctions)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "legislation.gov.uk",
+      "ref": "Road Vehicles Lighting Regulations 1989, reg 11",
+      "url": "https://www.legislation.gov.uk/uksi/1989/1796/regulation/11"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rules 219 to 225 (Other vehicles); The Highway Code: Rules 164 and 170 (Large vehicles, long vehicles at junctions); legislation.gov.uk: Road Vehicles Lighting Regulations 1989, reg 11"
   }
 }

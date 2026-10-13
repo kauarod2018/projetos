@@ -9,7 +9,7 @@
     "rules-of-the-road"
   ],
   "title": "Roundabouts",
-  "whatItIs": "A junction where traffic goes round a central island. In the UK it flows clockwise and you give way to traffic coming from your right.",
+  "whatItIs": "A junction where traffic goes round a central island. Give priority to traffic approaching from your right, unless signs, markings or lights say otherwise.",
   "keyFacts": [
     "Use Mirrors – Signal – Manoeuvre at every stage and decide on your exit early.",
     "Give way to traffic from your right, unless signs, road markings or traffic lights say otherwise.",
@@ -73,7 +73,7 @@
     "b": {
       "label": "Mini-roundabout",
       "points": [
-        "Painted or slightly raised white circle",
+        "White central circle marked on the road",
         "Blue circular sign with three white arrows",
         "Less space and time: avoid U-turns"
       ]
@@ -117,6 +117,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rules 184–190 (Roundabouts)"
   }
 }

@@ -16,7 +16,7 @@
       "law": true
     },
     "Alcohol slows reactions, affects judgement of speed and distance, and gives false confidence.",
-    "There is no way to tell how much is safe, so the safest choice is not to drink at all if you will drive.",
+    "Any amount of alcohol affects your driving, so the best choice is not to drink at all if you plan to drive.",
     "Alcohol can still be in your body the next morning.",
     "Drink-driving can mean at least a 1-year ban, an unlimited fine and up to 6 months in prison."
   ],
@@ -68,7 +68,7 @@
     }
   ],
   "traps": [
-    "Coffee, a cold shower or food don't remove alcohol from your body.",
+    "Even below the legal limit, alcohol reduces your driving ability.",
     "You can still be over the limit the morning after.",
     "Scotland's limit is lower than England and Wales."
   ],
@@ -87,6 +87,11 @@
       "doc": "GOV.UK",
       "ref": "Drink-driving penalties",
       "url": "https://www.gov.uk/drink-driving-penalties"
+    },
+    {
+      "doc": "GOV.UK",
+      "ref": "Road Safety Strategy announcement (7 January 2026)",
+      "url": "https://www.gov.uk/government/news/thousands-of-lives-to-be-saved-under-bold-new-road-safety-strategy"
     }
   ],
   "jurisdictionNotes": [
@@ -100,6 +105,8 @@
     }
   ],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rule 95 (Alcohol); GOV.UK: The drink drive limit; GOV.UK: Drink-driving penalties; GOV.UK: Road Safety Strategy announcement (7 January 2026)"
   }
 }

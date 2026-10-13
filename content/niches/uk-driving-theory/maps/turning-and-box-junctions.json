@@ -9,7 +9,7 @@
     "rules-of-the-road"
   ],
   "title": "Turning Left & Right, Box Junctions",
-  "whatItIs": "Turning safely is a routine: mirrors, signal, position, speed, look. Box junctions keep crossings clear of queuing traffic.",
+  "whatItIs": "Turning safely means Mirrors – Signal – Manoeuvre, the right position and a safe gap. Box junctions keep junctions clear of queuing traffic.",
   "keyFacts": [
     "Turning right: position just left of the middle of the road, or in the lane marked for turning right.",
     "Wait for a safe gap in the oncoming traffic, and don't cut the corner.",
@@ -23,7 +23,7 @@
   ],
   "visual": {
     "type": "steps",
-    "caption": "The routine for every turn",
+    "caption": "Mirrors – Signal – Manoeuvre, step by step",
     "items": [
       {
         "title": "Mirrors",
@@ -38,8 +38,8 @@
         "text": "Left turn: keep left. Right turn: just left of the centre line."
       },
       {
-        "title": "Speed",
-        "text": "Slow down to a safe speed for the turn."
+        "title": "Give way",
+        "text": "Give way to pedestrians crossing or waiting to cross the road you're turning into."
       },
       {
         "title": "Look",
@@ -49,14 +49,14 @@
   },
   "confused": {
     "a": {
-      "label": "Offside to offside",
+      "label": "Right side to right side",
       "points": [
         "Both turn right passing behind each other",
         "Usually the safest way"
       ]
     },
     "b": {
-      "label": "Nearside to nearside",
+      "label": "Left side to left side",
       "points": [
         "Both turn right passing in front",
         "Your view of oncoming traffic is blocked"
@@ -86,10 +86,17 @@
       "doc": "The Highway Code",
       "ref": "Rules 174 to 183 (Road junctions)",
       "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 159 to 161 (Mirrors – Signal – Manoeuvre)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rules 174 to 183 (Road junctions); The Highway Code: Rules 159 to 161 (Mirrors – Signal – Manoeuvre)"
   }
 }

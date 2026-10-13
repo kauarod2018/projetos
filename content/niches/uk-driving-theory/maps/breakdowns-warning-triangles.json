@@ -14,7 +14,7 @@
     "Put a warning triangle at least 45 metres behind your car, on the same side of the road.",
     "Never use a warning triangle on a motorway.",
     "Don't stand between your car and oncoming traffic.",
-    "Wear light-coloured or fluorescent clothing by day, and reflective clothing at night.",
+    "Wear light-coloured or fluorescent clothing in daylight, and reflective clothing at night or in poor visibility.",
     "Keep your sidelights on if it is dark or visibility is poor."
   ],
   "visual": {
@@ -23,15 +23,15 @@
     "items": [
       {
         "title": "Get off the road",
-        "text": "Pull onto the verge, a lay-by or a side road if you can."
+        "text": "Get your vehicle off the road if possible, ideally a place designed for parking or a lay-by."
       },
       {
         "title": "Hazard lights on",
         "text": "If your car is blocking traffic. Sidelights too after dark."
       },
       {
-        "title": "Everyone out safely",
-        "text": "Get passengers out on the side away from traffic."
+        "title": "Stand clear",
+        "text": "Don't stand between your car and oncoming traffic, or where you hide its lights at night."
       },
       {
         "title": "Triangle 45 m back",
@@ -74,7 +74,7 @@
   ],
   "traps": [
     "No warning triangles on motorways.",
-    "Standing behind the car hides your lights from drivers behind.",
+    "At night or in poor visibility, don't stand where you hide your lights from drivers behind.",
     "45 m, on the same side of the road as your car."
   ],
   "sources": [
@@ -82,11 +82,17 @@
       "doc": "The Highway Code",
       "ref": "Rule 276 (Breakdowns)",
       "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 275 (Place of relative safety)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft",
-    "notes": "Rule 276 in the current GB edition (earlier editions numbered it 274). Confirm on gov.uk."
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rule 276 (Breakdowns); The Highway Code: Rule 275 (Place of relative safety)"
   }
 }

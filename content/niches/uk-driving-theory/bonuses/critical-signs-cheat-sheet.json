@@ -31,7 +31,7 @@
             {
               "a": "turn-left",
               "b": "one-way-traffic",
-              "tell": "Blue circle: an order, you must turn left. Blue rectangle: information, the road is one-way."
+              "tell": "Both are orders. Blue circle: you must turn left. Blue rectangle: the whole road is one-way, so go the way shown."
             }
           ]
         }

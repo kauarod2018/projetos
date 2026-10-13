@@ -15,9 +15,9 @@
       "text": "Before you leave the car you MUST switch off the engine, headlights and fog lights and apply the handbrake.",
       "law": true
     },
-    "Don't park within 10 metres of a junction, unless in a marked parking space.",
+    "Don't park within 10 metres of a junction, except in an authorised parking space.",
     {
-      "text": "At night you MUST NOT park on a road facing against the traffic, except in a marked parking space.",
+      "text": "At night you MUST NOT park on a road facing against the traffic, unless in a recognised parking space.",
       "law": true
     },
     {
@@ -33,32 +33,32 @@
     "items": [
       {
         "title": "Within 10 m of a junction",
-        "text": "Drivers turning in can't see, and you block their way.",
+        "text": "Rule 243: not opposite or within 10 m of a junction, except in an authorised parking space.",
         "icon": "git-fork"
       },
       {
         "title": "Near a school entrance",
-        "text": "Children can be hidden behind your car.",
+        "text": "Keep school entrance markings clear, even when picking up or setting down children.",
         "icon": "school"
       },
       {
         "title": "Near a bus or tram stop",
-        "text": "Buses and trams need to pull in close to the kerb.",
+        "text": "Don't stop or park at or near a bus or tram stop, or a taxi rank.",
         "icon": "bus"
       },
       {
         "title": "On a bend or hill brow",
-        "text": "Other drivers come on you with no warning.",
+        "text": "Also avoid the brow of a hill or a hump bridge (Rule 243).",
         "icon": "mountain"
       },
       {
         "title": "At a lowered kerb",
-        "text": "It is there for wheelchairs, buggies and mobility scooters.",
+        "text": "Lowered to help wheelchair users and powered mobility vehicles.",
         "icon": "accessibility"
       },
       {
         "title": "On zigzag lines",
-        "text": "Crossing zigzags must be kept clear.",
+        "text": "You MUST NOT stop or park on a crossing or on its zigzag lines.",
         "icon": "footprints",
         "law": true
       }
@@ -76,7 +76,7 @@
       "label": "Hazard warning lights",
       "points": [
         "Not for parking",
-        "Only when stopped and blocking traffic"
+        "When stopped and temporarily blocking traffic"
       ]
     }
   },
@@ -103,10 +103,17 @@
       "doc": "The Highway Code",
       "ref": "Rules 238 to 252 (Waiting and parking)",
       "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Road markings",
+      "url": "https://www.gov.uk/guidance/the-highway-code/road-markings"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rules 238 to 252 (Waiting and parking); The Highway Code: Road markings"
   }
 }

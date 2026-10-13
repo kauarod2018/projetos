@@ -44,7 +44,7 @@
       },
       {
         "title": "Main beam",
-        "text": "On unlit roads at night. Dip it for oncoming traffic and when following.",
+        "text": "Never let it dazzle others. When overtaking, stay dipped until you're level.",
         "icon": "sun"
       },
       {
@@ -55,7 +55,7 @@
       },
       {
         "title": "Hazard warning lights",
-        "text": "When stopped and blocking traffic, or briefly on a motorway or dual carriageway to warn of danger.",
+        "text": "Stopped and blocking traffic, or briefly on a motorway or unrestricted dual carriageway.",
         "icon": "triangle-alert"
       },
       {
@@ -100,24 +100,26 @@
     }
   ],
   "traps": [
-    "Fog lights in light rain dazzle drivers behind and can hide your brake lights.",
-    "Main beam dazzles: dip it for oncoming traffic and when following another vehicle.",
+    "Fog lights used when visibility isn't seriously reduced dazzle others and can hide your brake lights.",
+    "Don't let your lights dazzle anyone. When overtaking, keep dipped until you are level with the other vehicle.",
     "The horn is a warning, not a way to tell people off."
   ],
   "sources": [
     {
       "doc": "The Highway Code",
-      "ref": "Rules 110 to 116 (Signals and lighting)",
+      "ref": "Rules 110 to 116 (Flashing headlights, horn and lighting)",
       "url": "https://www.gov.uk/guidance/the-highway-code"
     },
     {
       "doc": "The Highway Code",
-      "ref": "Rules 226 and 236 (Visibility and fog)",
+      "ref": "Rules 226 and 236 (Adverse weather: overview and fog)",
       "url": "https://www.gov.uk/guidance/the-highway-code"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rules 110 to 116 (Flashing headlights, horn and lighting); The Highway Code: Rules 226 and 236 (Adverse weather: overview and fog)"
   }
 }

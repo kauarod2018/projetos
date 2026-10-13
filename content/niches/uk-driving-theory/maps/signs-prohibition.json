@@ -14,7 +14,7 @@
     "Red rings mostly prohibit: the vehicle or action shown is not allowed.",
     "A number in a red ring is the maximum speed.",
     "The white circle with a black diagonal stripe means the national speed limit applies.",
-    "'No entry' (red circle, white bar) usually marks the exit end of a one-way street.",
+    "'No entry' (red circle, white bar) means no entry for vehicular traffic; a plate may exempt buses or cycles.",
     "A plate below can limit a sign to certain times or vehicles."
   ],
   "visual": {
@@ -81,6 +81,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Traffic signs: signs giving orders; Know Your Traffic Signs (DfT): Regulatory signs"
   }
 }

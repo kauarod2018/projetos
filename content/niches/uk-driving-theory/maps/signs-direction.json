@@ -86,12 +86,14 @@
     },
     {
       "doc": "Know Your Traffic Signs (DfT)",
-      "ref": "Direction signs",
+      "ref": "Direction signs on all-purpose roads",
       "url": "https://assets.publishing.service.gov.uk/media/656ef4271104cf0013fa74ef/know-your-traffic-signs-dft.pdf"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Traffic signs: direction signs; Know Your Traffic Signs (DfT): Direction signs on all-purpose roads"
   }
 }

@@ -10,7 +10,7 @@
     "vehicle-loading"
   ],
   "title": "Seat Belts & Child Restraints",
-  "whatItIs": "Seat belts save lives. The driver is responsible for children, and passengers aged 14 and over are responsible for themselves.",
+  "whatItIs": "You must wear a seat belt if one is fitted. The driver is responsible for children under 14; passengers 14 and over for themselves.",
   "keyFacts": [
     {
       "text": "You MUST wear a seat belt if one is fitted, unless you are exempt.",
@@ -20,7 +20,10 @@
       "text": "The driver MUST make sure children under 14 wear a seat belt or the right child restraint.",
       "law": true
     },
-    "Children need the right child car seat until they are 12 years old or 135 cm tall, whichever comes first.",
+    {
+      "text": "Children MUST use the correct child restraint until they are 12 years old or 135 cm tall, whichever comes first.",
+      "law": true
+    },
     {
       "text": "You MUST NOT put a rear-facing baby seat in a seat with an active frontal airbag.",
       "law": true
@@ -127,6 +130,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rules 99 to 102 (Seat belts and child restraints); GOV.UK: Child car seats: the rules; GOV.UK: Seat belts: the law"
   }
 }
