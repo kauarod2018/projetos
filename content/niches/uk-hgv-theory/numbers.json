@@ -15,7 +15,9 @@
         }
       ],
       "review": {
-        "status": "draft"
+        "status": "verified",
+        "checkedOn": "2026-10-13",
+        "checkedAgainst": "GOV.UK: Become a qualified HGV or bus driver, Driver CPC part 1 test: theory (https://www.gov.uk/become-lorry-bus-driver/driver-cpc-part-1-theory-test)"
       }
     },
     {
@@ -52,7 +54,9 @@
         }
       ],
       "review": {
-        "status": "draft"
+        "status": "verified",
+        "checkedOn": "2026-10-13",
+        "checkedAgainst": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262), 1.4 Breaks and driving limits (https://www.gov.uk/guidance/drivers-hours-goods-vehicles/1-assimilated-and-aetr-rules-on-drivers-hours)"
       }
     },
     {
@@ -68,7 +72,9 @@
         }
       ],
       "review": {
-        "status": "draft"
+        "status": "verified",
+        "checkedOn": "2026-10-13",
+        "checkedAgainst": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262), 1.4 Breaks and driving limits (https://www.gov.uk/guidance/drivers-hours-goods-vehicles/1-assimilated-and-aetr-rules-on-drivers-hours)"
       }
     },
     {
@@ -84,7 +90,9 @@
         }
       ],
       "review": {
-        "status": "draft"
+        "status": "verified",
+        "checkedOn": "2026-10-13",
+        "checkedAgainst": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262), 1.5 Daily rest periods (https://www.gov.uk/guidance/drivers-hours-goods-vehicles/1-assimilated-and-aetr-rules-on-drivers-hours)"
       }
     },
     {
@@ -100,7 +108,239 @@
         }
       ],
       "review": {
-        "status": "draft"
+        "status": "verified",
+        "checkedOn": "2026-10-13",
+        "checkedAgainst": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262), 1.6 Weekly rest periods (https://www.gov.uk/guidance/drivers-hours-goods-vehicles/1-assimilated-and-aetr-rules-on-drivers-hours)"
+      }
+    },
+    {
+      "key": "gb-domestic-limits",
+      "label": "GB domestic rules",
+      "value": "10 hours driving and 11 hours duty in a working day",
+      "jurisdiction": "great-britain",
+      "sources": [
+        {
+          "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
+          "ref": "2.2 Domestic driving limits",
+          "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/2-great-britain-domestic-rules-on-drivers-hours"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-13",
+        "checkedAgainst": "GV262 2.2 Domestic driving limits"
+      }
+    },
+    {
+      "key": "working-time",
+      "label": "Working time (2005 Regulations)",
+      "value": "48 hours a week on average (17 or 26 weeks) · 60 hours in any one week · 10 hours if night work · break after 6 hours",
+      "jurisdiction": "great-britain",
+      "sources": [
+        {
+          "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
+          "ref": "Annex 2 Working time rules",
+          "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/annex-2-working-time-rules"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-13",
+        "checkedAgainst": "GV262 annex 2 Working time rules"
+      }
+    },
+    {
+      "key": "speed-limits-goods",
+      "label": "Speed limits for goods vehicles over 7.5 t (mph)",
+      "value": "England and Wales: 50 single carriageway · 60 dual · 60 motorway (Scotland: 40 · 50 · 60)",
+      "jurisdiction": "great-britain",
+      "table": {
+        "columns": [
+          "Goods vehicle",
+          "Single c/way",
+          "Dual c/way",
+          "Motorway"
+        ],
+        "rows": [
+          [
+            "Up to 7.5 t",
+            "50",
+            "60",
+            "70*"
+          ],
+          [
+            "Over 7.5 t (England & Wales)",
+            "50",
+            "60",
+            "60"
+          ],
+          [
+            "Over 7.5 t (Scotland)",
+            "40",
+            "50",
+            "60"
+          ]
+        ],
+        "notes": [
+          "*60 mph if articulated or towing a trailer.",
+          "Built-up areas: 30 mph (20 mph in Wales) unless signs show otherwise."
+        ]
+      },
+      "sources": [
+        {
+          "doc": "The Highway Code",
+          "ref": "Rule 124 (speed limits table)",
+          "url": "https://www.gov.uk/guidance/the-highway-code/general-rules-techniques-and-advice-for-all-drivers-and-riders-103-to-158"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-13",
+        "checkedAgainst": "The Highway Code rule 124 table"
+      }
+    },
+    {
+      "key": "motorway-lane-ban",
+      "label": "Motorway right-hand lane",
+      "value": "Goods vehicles over 7.5 t (and lighter ones that must have a speed limiter) MUST NOT use the right-hand lane of a motorway with 3 or more lanes",
+      "jurisdiction": "great-britain",
+      "sources": [
+        {
+          "doc": "The Highway Code",
+          "ref": "Rule 265",
+          "url": "https://www.gov.uk/guidance/the-highway-code/motorways-253-to-273"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-13",
+        "checkedAgainst": "The Highway Code rule 265"
+      }
+    },
+    {
+      "key": "tyre-tread-large",
+      "label": "Minimum tyre tread (large vehicles)",
+      "value": "1 mm across three-quarters of the tread breadth and all the way round",
+      "jurisdiction": "great-britain",
+      "sources": [
+        {
+          "doc": "The Highway Code",
+          "ref": "Annex 6 (tyres)",
+          "url": "https://www.gov.uk/guidance/the-highway-code/annex-6-vehicle-maintenance-safety-and-security"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-13",
+        "checkedAgainst": "The Highway Code annex 6"
+      }
+    },
+    {
+      "key": "warning-triangle",
+      "label": "Warning triangle",
+      "value": "At least 45 metres behind your vehicle (never on a motorway)",
+      "jurisdiction": "great-britain",
+      "sources": [
+        {
+          "doc": "The Highway Code",
+          "ref": "Rules 274 and 276",
+          "url": "https://www.gov.uk/guidance/the-highway-code/breakdowns-and-incidents-274-to-287"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-13",
+        "checkedAgainst": "The Highway Code rule 274"
+      }
+    },
+    {
+      "key": "collision-reporting",
+      "label": "After a collision",
+      "value": "Report to the police within 24 hours · produce insurance within 7 days",
+      "jurisdiction": "great-britain",
+      "sources": [
+        {
+          "doc": "The Highway Code",
+          "ref": "Rules 286–287",
+          "url": "https://www.gov.uk/guidance/the-highway-code/breakdowns-and-incidents-274-to-287"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-13",
+        "checkedAgainst": "The Highway Code rules 286–287"
+      }
+    },
+    {
+      "key": "tunnel-gap-large",
+      "label": "Gap in a tunnel (large vehicle)",
+      "value": "4 seconds",
+      "jurisdiction": "great-britain",
+      "sources": [
+        {
+          "doc": "The Highway Code",
+          "ref": "Rule 126",
+          "url": "https://www.gov.uk/guidance/the-highway-code/general-rules-techniques-and-advice-for-all-drivers-and-riders-103-to-158"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-13",
+        "checkedAgainst": "The Highway Code rule 126"
+      }
+    },
+    {
+      "key": "drink-drive-limits",
+      "label": "Drink-drive limits",
+      "value": "England and Wales: 35 µg breath, 80 mg blood, 107 mg urine · Scotland: 22, 50, 67",
+      "jurisdiction": "great-britain",
+      "sources": [
+        {
+          "doc": "GOV.UK",
+          "ref": "The drink drive limit",
+          "url": "https://www.gov.uk/drink-drive-limit"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-13",
+        "checkedAgainst": "GOV.UK The drink drive limit"
+      }
+    },
+    {
+      "key": "periodic-training",
+      "label": "Driver CPC periodic training",
+      "value": "35 hours every 5 years",
+      "jurisdiction": "great-britain",
+      "sources": [
+        {
+          "doc": "GOV.UK",
+          "ref": "Driver CPC training for qualified drivers",
+          "url": "https://www.gov.uk/driver-cpc-training"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-13",
+        "checkedAgainst": "GOV.UK Driver CPC training for qualified drivers"
+      }
+    },
+    {
+      "key": "licence-renewal",
+      "label": "Renewing a lorry licence",
+      "value": "Every 5 years (with a medical from 45) and every year from 65",
+      "jurisdiction": "great-britain",
+      "sources": [
+        {
+          "doc": "GOV.UK",
+          "ref": "Become a qualified HGV or bus driver",
+          "url": "https://www.gov.uk/become-lorry-bus-driver"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-13",
+        "checkedAgainst": "GOV.UK Become a qualified HGV or bus driver: getting qualified; returning"
       }
     }
   ]
