@@ -427,7 +427,9 @@ async function buildNiche(n: LoadedNiche, site: Site, browser: Browser) {
 
 async function main() {
   const content = loadContent();
-  const { errors } = checkContent(content, { release: false });
+  const all = checkContent(content, { release: false }).errors;
+  // rendering one map while other maps are being written: only that map's own problems stop it
+  const errors = only ? all.filter((e) => e.includes(`/maps/${only}.json`)) : all;
   if (errors.length) throw new ContentError(errors);
   const browser = await launch();
   try {
