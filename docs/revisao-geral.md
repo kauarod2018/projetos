@@ -80,8 +80,8 @@ npm. O que ficou pronto para quando as imagens chegarem:
 2. **Conferência dos fatos** marcados como "conferir", no gov.uk, antes de trocar qualquer mapa ou bônus para `verified`.
 3. **Hotmart:** confirmar o VAT do Reino Unido, a precificação em GBP e a taxa para venda de £15; configurar a garantia
    de 15 dias; criar os 2 produtos e colar os links em `niche.json` → `checkout`.
-4. **Dados da empresa** em `content/site.json`: domínio, e-mail, nome legal, endereço, CNPJ. Também o Pixel ID, quando
-   houver.
+4. ~~Dados da empresa~~: não haverá empresa (decisão de 13/10/2026). Em `content/site.json` ficam só o domínio, o e-mail
+   de contato e o Pixel ID, quando houver. Os textos legais dizem que a marca é de uma pessoa física e vende pela Hotmart.
 5. **Revisão jurídica** dos textos de `content/legal/en-GB.json`. São um modelo de boa-fé, não um parecer. Inclui a
    pergunta sobre representante no Reino Unido para fins de UK GDPR.
 6. **Domínio e marca:** "Test Help" é um nome genérico. Vale checar se o domínio está livre e se não há marca registrada

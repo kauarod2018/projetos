@@ -12,10 +12,5 @@
   },
   "domain": "{{DOMAIN}}",
   "supportEmail": "{{SUPPORT_EMAIL}}",
-  "legal": {
-    "entityName": "{{LEGAL_ENTITY_NAME}}",
-    "address": "{{LEGAL_ADDRESS}}",
-    "companyId": "{{COMPANY_ID}}"
-  },
   "metaPixelId": null
 }

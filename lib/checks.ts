@@ -65,7 +65,7 @@ const PLACEHOLDER = /^\{\{.*\}\}$|^your |example\.com|TODO/i;
 
 /** {placeholders} the site and the creatives know how to fill */
 export const COPY_PLACEHOLDERS = ['examName', 'brand', 'totalMaps', 'basicMaps', 'bonuses', 'areasList', 'guaranteeDays', 'version', 'checkedOn', 'priceBasic', 'priceComplete', 'year'];
-export const LEGAL_PLACEHOLDERS = ['brand', 'domain', 'email', 'entityName', 'address', 'companyId', 'guaranteeDays', 'updatePolicy', 'date', 'n', 'maps', 'price'];
+export const LEGAL_PLACEHOLDERS = ['brand', 'domain', 'email', 'guaranteeDays', 'updatePolicy', 'date', 'n', 'maps', 'price'];
 
 function* strings(value: unknown, path: string): Generator<[string, string]> {
   if (typeof value === 'string') yield [path, value];
@@ -90,9 +90,6 @@ export function checkContent(content: LoadedContent, opts: CheckOptions): CheckR
   for (const [field, value] of Object.entries({
     domain: site.domain,
     supportEmail: site.supportEmail,
-    'legal.entityName': site.legal.entityName,
-    'legal.address': site.legal.address,
-    'legal.companyId': site.legal.companyId,
   })) {
     if (PLACEHOLDER.test(value)) releaseOrWarn(`content/site.json → ${field} is still a placeholder ("${value}")`);
   }

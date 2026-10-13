@@ -10,12 +10,8 @@ export const site = z.object({
     byLanguage: z.record(z.string().regex(/^[a-z]{2}-[A-Z]{2}$/), z.string().min(1)),
   }),
   domain: z.string().min(1),
+  /** the only contact the buyer needs: products are sold by an independent seller through Hotmart, no company */
   supportEmail: z.string().min(1),
-  legal: z.object({
-    entityName: z.string().min(1),
-    address: z.string().min(1),
-    companyId: z.string().min(1),
-  }),
   metaPixelId: z.string().nullable(),
 });
 export type Site = z.infer<typeof site>;

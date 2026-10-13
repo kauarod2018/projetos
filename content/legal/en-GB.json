@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "language": "en-GB",
-  "updated": "2026-10-12",
+  "updated": "2026-10-13",
   "privacy": {
     "title": "Privacy Policy",
     "intro": "This policy explains what personal data {brand} collects when you visit {domain} or buy our products, why we use it and the rights you have under the UK GDPR and the EU GDPR.",
@@ -9,7 +9,7 @@
       {
         "h": "Who we are",
         "p": [
-          "{brand} is a trading name of {entityName}, {address} (company number {companyId}). We are the controller of the personal data described in this policy. Contact us at {email}."
+          "{brand} is an independent brand run by a private individual, not a company. We are responsible for the personal data described in this policy. Contact us at {email}."
         ]
       },
       {
@@ -62,7 +62,7 @@
       {
         "h": "Who we are",
         "p": [
-          "{brand} is a trading name of {entityName}, {address} (company number {companyId}). Contact: {email}."
+          "{brand} is an independent brand run by a private individual, not a company. Our products are sold through Hotmart, which processes the payment. Contact: {email}."
         ]
       },
       {
@@ -163,7 +163,7 @@
       "more": "Privacy policy"
     },
     "footer": {
-      "company": "{brand} is a trading name of {entityName}, {address}. Company number {companyId}.",
+      "company": "{brand} is an independent brand. Products are sold through Hotmart.",
       "prices": "Prices in GBP."
     },
     "lastUpdated": "Last updated {date}",

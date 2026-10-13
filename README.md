@@ -20,8 +20,9 @@ Primeiro nicho: **UK Driving Theory Test** (Grã-Bretanha).
 | Placas oficiais | ✅ as 39 importadas do DfT (EPS → SVG, sem alteração) |
 
 O conteúdo está pronto para venda: mapas, bônus e números foram conferidos no texto oficial do gov.uk e as placas
-são as imagens oficiais do DfT. O que ainda trava o `npm run validate:release` é só dado da loja: domínio, e-mail e dados
-da empresa em `content/site.json` e os 2 links de checkout da Hotmart em `niche.json`.
+são as imagens oficiais do DfT. O que ainda trava o `npm run validate:release` é só dado da loja: domínio e e-mail de contato
+em `content/site.json` e os 2 links de checkout da Hotmart em `niche.json`. Não há empresa: a marca é vendida por pessoa
+física pela Hotmart.
 
 ## Comandos
 

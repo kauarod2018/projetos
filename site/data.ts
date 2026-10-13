@@ -85,9 +85,6 @@ export function siteValues(language: string, guaranteeDays?: number, updatePolic
     brand: brandName(s, language),
     domain: s.domain,
     email: s.supportEmail,
-    entityName: s.legal.entityName,
-    address: s.legal.address,
-    companyId: s.legal.companyId,
     guaranteeDays: guaranteeDays ?? 15,
     updatePolicy: updatePolicy ?? '',
   };
