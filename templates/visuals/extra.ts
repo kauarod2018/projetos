@@ -154,3 +154,56 @@ function markingSvg(pattern: string): string {
   }
   return `<svg class="mk-svg" viewBox="0 0 ${W} ${H}" aria-hidden="true"><rect width="${W}" height="${H}" rx="6" fill="${ROAD}"/>${body}</svg>`;
 }
+
+/** colours of the timeline blocks: the same in every niche, so a break always looks like a break */
+const TL_COLOUR: Record<Of<'timeline'>['rows'][number]['segments'][number]['kind'], string> = {
+  drive: '#1D4ED8',
+  break: '#F59E0B',
+  rest: '#16A34A',
+  work: '#9333EA',
+  availability: '#94A3B8',
+};
+
+const duration = (min: number) => {
+  const h = Math.floor(min / 60);
+  const m = min % 60;
+  return h && m ? `${h}h ${m}` : h ? `${h}h` : `${m}m`;
+};
+
+/** blocks of time drawn to scale, one row per example, with a tick/cross for allowed or not */
+export function renderTimeline(v: Of<'timeline'>, t: { drive: string; break: string; rest: string; work: string; availability: string; ok: string; wrong: string; hours: string }): string {
+  const total = v.scaleHours * 60;
+  const pct = (min: number) => `${((min / total) * 100).toFixed(3)}%`;
+  const used = [...new Set(v.rows.flatMap((r) => r.segments.map((s) => s.kind)))];
+  const legend = used.map((k) => `<span class="tl-key"><i style="background:${TL_COLOUR[k]}"></i>${esc(t[k])}</span>`).join('');
+  const step = v.scaleHours <= 6 ? 1 : v.scaleHours <= 14 ? 2 : v.scaleHours <= 26 ? 4 : 12;
+  const ticks = Array.from({ length: Math.floor(v.scaleHours / step) + 1 }, (_, i) => i * step);
+  const verdictMark = (verdict: string) =>
+    verdict === 'ok'
+      ? `<span class="tl-verdict ok" title="${esc(t.ok)}">${icon('check', 11, 3)}</span>`
+      : verdict === 'wrong'
+        ? `<span class="tl-verdict wrong" title="${esc(t.wrong)}">${icon('x', 11, 3)}</span>`
+        : '';
+  const rows = v.rows
+    .map((r) => {
+      const segs = r.segments
+        .map((s) => {
+          // short blocks get their text only if there is room for it
+          const text = s.label ?? duration(s.minutes);
+          const room = (s.minutes / total) * 150; // approx. characters that fit at this width
+          return `<span class="tl-seg tl-${s.kind}" style="width:${pct(s.minutes)};background:${TL_COLOUR[s.kind]}">${room >= text.length ? esc(text) : ''}</span>`;
+        })
+        .join('');
+      return `<div class="tl-row${r.verdict === 'wrong' ? ' is-wrong' : ''}">
+        <div class="tl-label">${verdictMark(r.verdict)}<span>${esc(r.label)}</span></div>
+        <div class="tl-track">${segs}</div>
+        ${r.note ? `<p class="tl-note">${esc(r.note)}</p>` : ''}
+      </div>`;
+    })
+    .join('');
+  // the first and last labels sit inside the scale so they never stick out of the page
+  const grid = ticks
+    .map((h, i) => `<span class="tl-tick${i === 0 ? ' first' : i === ticks.length - 1 ? ' last' : ''}" style="left:${pct(h * 60)}"><em>${h}${esc(t.hours)}</em></span>`)
+    .join('');
+  return `<div class="tl"><div class="tl-legend">${legend}</div><div class="tl-body"><div class="tl-grid">${grid}</div>${rows}</div></div>`;
+}

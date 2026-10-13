@@ -3,7 +3,8 @@
  *
  *   npm run build:pdfs       → maps and bonuses (drafts watermarked) + packages with verified content only
  *   npm run build:preview    → same, plus PREVIEW packages with the drafts (never sell these)
- *   ... -- --only <map-id>   → render a single map
+ *   ... -- --only <map-id>   → render a single map (in whichever niche has it)
+ *   ... -- --niche <id>      → build one niche only
  *   ... -- --debug-layout    → keep going when a page overflows and save <file>.OVERFLOW.png to inspect it
  *
  * Output: dist/<niche>/ (maps/, bonuses/, packages/release, packages/preview, manifest.json)
@@ -27,6 +28,8 @@ const args = process.argv.slice(2);
 const includeDrafts = args.includes('--include-drafts');
 const onlyIndex = args.indexOf('--only');
 const only = onlyIndex >= 0 ? args[onlyIndex + 1] : undefined;
+const nicheIndex = args.indexOf('--niche');
+const nicheOnly = nicheIndex >= 0 ? args[nicheIndex + 1] : undefined;
 /** development only: write the files even when a page overflows, so you can see what is wrong */
 const debugLayout = args.includes('--debug-layout');
 
@@ -428,7 +431,11 @@ async function main() {
   if (errors.length) throw new ContentError(errors);
   const browser = await launch();
   try {
-    for (const n of content.niches) await buildNiche(n, content.site, browser);
+    const targets = content.niches.filter(
+      (n) => (!nicheOnly || n.niche.id === nicheOnly) && (!only || n.maps.some((m) => m.data.id === only)),
+    );
+    if (!targets.length) throw new Error(only ? `no map with id "${only}"` : `no niche with id "${nicheOnly}"`);
+    for (const n of targets) await buildNiche(n, content.site, browser);
   } finally {
     await browser.close();
   }

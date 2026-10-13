@@ -354,6 +354,87 @@
       "officialNumber": "606",
       "file": "svg/turn-left.svg",
       "status": "official"
+    },
+    {
+      "id": "goods-vehicles-weight-limit",
+      "meaning": "No goods vehicles over maximum gross weight shown",
+      "category": "regulatory",
+      "shape": "circle",
+      "officialNumber": "622.1A",
+      "file": "svg/goods-vehicles-weight-limit.svg",
+      "status": "official"
+    },
+    {
+      "id": "end-goods-vehicle-restriction",
+      "meaning": "End of goods vehicles restriction",
+      "category": "regulatory",
+      "shape": "circle",
+      "officialNumber": "622.2",
+      "file": "svg/end-goods-vehicle-restriction.svg",
+      "status": "official"
+    },
+    {
+      "id": "no-articulated-vehicles",
+      "meaning": "No articulated vehicles",
+      "category": "regulatory",
+      "shape": "circle",
+      "officialNumber": "622.4",
+      "file": "svg/no-articulated-vehicles.svg",
+      "status": "official"
+    },
+    {
+      "id": "max-width",
+      "meaning": "No vehicles over maximum width shown",
+      "category": "regulatory",
+      "shape": "circle",
+      "officialNumber": "629",
+      "file": "svg/max-width.svg",
+      "status": "official"
+    },
+    {
+      "id": "max-length",
+      "meaning": "No vehicles over length shown",
+      "category": "regulatory",
+      "shape": "circle",
+      "officialNumber": "629.1",
+      "file": "svg/max-length.svg",
+      "status": "official"
+    },
+    {
+      "id": "max-height",
+      "meaning": "No vehicles over height shown",
+      "category": "regulatory",
+      "shape": "circle",
+      "officialNumber": "629.2A",
+      "file": "svg/max-height.svg",
+      "status": "official"
+    },
+    {
+      "id": "headroom-warning",
+      "meaning": "Maximum headroom at hazard ahead",
+      "category": "warning",
+      "shape": "triangle",
+      "officialNumber": "530",
+      "file": "svg/headroom-warning.svg",
+      "status": "official"
+    },
+    {
+      "id": "height-restriction-ahead",
+      "meaning": "Advance warning of height restriction ahead",
+      "category": "information",
+      "shape": "rectangle",
+      "officialNumber": "818.3",
+      "file": "svg/height-restriction-ahead.svg",
+      "status": "official"
+    },
+    {
+      "id": "arch-bridge-headroom",
+      "meaning": "Maximum headroom at arch bridge ahead",
+      "category": "warning",
+      "shape": "triangle",
+      "officialNumber": "531.1",
+      "file": "svg/arch-bridge-headroom.svg",
+      "status": "official"
     }
   ]
 }

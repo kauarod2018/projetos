@@ -1,0 +1,8 @@
+{
+  "map": {
+    "lawLegend": "LAW marks a legal requirement: MUST or MUST NOT in The Highway Code, or a duty set by the law or the official drivers' hours rules. Everything else is advice you should follow."
+  },
+  "bonus": {
+    "practiceTask": "Do a full practice test: 100 multiple-choice questions, then hazard perception."
+  }
+}

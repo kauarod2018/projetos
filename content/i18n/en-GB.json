@@ -28,6 +28,16 @@
     "thinking": "Thinking distance",
     "braking": "Braking distance"
   },
+  "timeline": {
+    "drive": "Driving",
+    "break": "Break",
+    "rest": "Rest",
+    "work": "Other work",
+    "availability": "Availability",
+    "ok": "Allowed",
+    "wrong": "Not allowed",
+    "hours": "h"
+  },
   "diagram": {
     "giveWay": "Give way to traffic from your right",
     "circulation": {

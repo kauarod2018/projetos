@@ -124,6 +124,17 @@ export const i18n = z.object({
     overall: z.string(),
   }),
   segments: z.record(z.string(), z.string()),
+  /** timeline visual: block names, verdicts and the hour unit */
+  timeline: z.object({
+    drive: z.string(),
+    break: z.string(),
+    rest: z.string(),
+    work: z.string(),
+    availability: z.string(),
+    ok: z.string(),
+    wrong: z.string(),
+    hours: z.string(),
+  }),
   diagram: z.object({
     giveWay: z.string(),
     circulation: z.object({ clockwise: z.string(), anticlockwise: z.string() }),

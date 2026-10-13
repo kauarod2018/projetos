@@ -252,7 +252,8 @@ export function nicheView(n: LoadedNiche): NicheView {
 
 /** every niche, best sellers first (store.rank, then name) */
 export function allNiches(): LoadedNiche[] {
-  return [...content().niches].sort((a, b) => a.niche.store.rank - b.niche.store.rank || a.niche.examName.localeCompare(b.niche.examName));
+  // products still being made show in preview builds only
+  return [...content().niches].filter((n) => MODE !== 'release' || n.niche.published).sort((a, b) => a.niche.store.rank - b.niche.store.rank || a.niche.examName.localeCompare(b.niche.examName));
 }
 
 

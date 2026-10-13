@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "niche": "uk-hgv-theory",
+  "items": [
+    {
+      "key": "theory-test-pass-marks",
+      "label": "Lorry theory test pass marks",
+      "value": "Multiple choice: 85 out of 100 · Hazard perception: 67 out of 100 (19 clips)",
+      "jurisdiction": "great-britain",
+      "sources": [
+        {
+          "doc": "GOV.UK: Become a qualified HGV or bus driver",
+          "ref": "Driver CPC part 1 test: theory",
+          "url": "https://www.gov.uk/become-lorry-bus-driver/driver-cpc-part-1-theory-test"
+        }
+      ],
+      "review": {
+        "status": "draft"
+      }
+    },
+    {
+      "key": "driving-limits",
+      "label": "Driving limits (assimilated rules)",
+      "value": "9 hours a day (10 hours twice a week) · 56 hours a week · 90 hours in 2 weeks",
+      "jurisdiction": "great-britain",
+      "table": {
+        "columns": [
+          "Limit",
+          "Maximum driving"
+        ],
+        "rows": [
+          [
+            "Daily",
+            "9 hours (10 hours twice in a fixed week)"
+          ],
+          [
+            "Weekly (fixed week)",
+            "56 hours"
+          ],
+          [
+            "Any 2 consecutive weeks",
+            "90 hours"
+          ]
+        ],
+        "notes": []
+      },
+      "sources": [
+        {
+          "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
+          "ref": "1.4 Breaks and driving limits",
+          "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/1-assimilated-and-aetr-rules-on-drivers-hours"
+        }
+      ],
+      "review": {
+        "status": "draft"
+      }
+    },
+    {
+      "key": "breaks",
+      "label": "Breaks (assimilated rules)",
+      "value": "After 4.5 hours of driving: a 45-minute break (or 15 minutes then 30 minutes)",
+      "jurisdiction": "great-britain",
+      "sources": [
+        {
+          "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
+          "ref": "1.4 Breaks and driving limits",
+          "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/1-assimilated-and-aetr-rules-on-drivers-hours"
+        }
+      ],
+      "review": {
+        "status": "draft"
+      }
+    },
+    {
+      "key": "daily-rest",
+      "label": "Daily rest (assimilated rules)",
+      "value": "11 hours (or 3 + 9 hours split) · reduced to 9 hours up to 3 times between weekly rests",
+      "jurisdiction": "great-britain",
+      "sources": [
+        {
+          "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
+          "ref": "1.5 Daily rest periods",
+          "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/1-assimilated-and-aetr-rules-on-drivers-hours"
+        }
+      ],
+      "review": {
+        "status": "draft"
+      }
+    },
+    {
+      "key": "weekly-rest",
+      "label": "Weekly rest (assimilated rules)",
+      "value": "45 hours (regular) or at least 24 hours (reduced, compensated by the end of the third week)",
+      "jurisdiction": "great-britain",
+      "sources": [
+        {
+          "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
+          "ref": "1.6 Weekly rest periods",
+          "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/1-assimilated-and-aetr-rules-on-drivers-hours"
+        }
+      ],
+      "review": {
+        "status": "draft"
+      }
+    }
+  ]
+}

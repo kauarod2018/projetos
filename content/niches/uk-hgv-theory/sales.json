@@ -1,0 +1,227 @@
+{
+  "schemaVersion": 1,
+  "niche": "uk-hgv-theory",
+  "meta": {
+    "title": "{totalMaps} Visual Revision Maps for the {examName} | {brand}",
+    "description": "A4 visual revision maps for the lorry (LGV) theory test: drivers' hours, tachographs, loads, vehicle checks and road rules, with original practice questions."
+  },
+  "topBar": "Complete pack: {totalMaps} maps + {bonuses} bonuses · One-time payment",
+  "hero": {
+    "eyebrow": "{examName} {year}",
+    "h1": "{totalMaps} visual revision maps to pass your {examName}",
+    "highlight": "visual revision maps",
+    "sub": "Illustrated A4 maps for the lorry theory test, organised into 6 areas: {areasList}. Ready to print or to revise on a tablet.",
+    "primaryCta": "Get my maps now",
+    "secondaryCta": "See what's inside",
+    "bullets": [
+      "One topic per page, same layout every time",
+      "Drivers' hours and tachograph rules made visual",
+      "Download and keep forever, with free updates",
+      "{bonuses} bonuses in the Complete pack"
+    ]
+  },
+  "socialProof": null,
+  "pain": {
+    "eyebrow": "Why it's worth revising properly",
+    "stat": "52.2%",
+    "title": "Only about half of lorry theory tests are passed",
+    "text": "You need 85 out of 100 in the multiple-choice part, and the questions go deep into drivers' hours, loads, vehicle checks and rules for large vehicles. Visual maps help you see each topic at a glance and remember the numbers that trip people up.",
+    "source": "52.2% of LGV multiple-choice theory tests in Great Britain were passed between April 2025 and March 2026 (DVSA statistics, provisional)."
+  },
+  "pages": {
+    "eyebrow": "Real pages",
+    "title": "Real pages from the material",
+    "text": "These are the actual maps you download: one topic per A4 page, same layout every time."
+  },
+  "areas": {
+    "eyebrow": "What's covered",
+    "title": "6 areas, from licences to loads",
+    "text": "Every map is checked against official GOV.UK guidance, The Highway Code or the law, and the source is printed on the page."
+  },
+  "lookInside": {
+    "eyebrow": "Look inside",
+    "title": "Everything you need on one page",
+    "mapId": "breaks",
+    "points": [
+      {
+        "title": "One topic, one page",
+        "text": "A short definition, then the key facts in plain English."
+      },
+      {
+        "title": "The visual does the work",
+        "text": "Timelines, tables and official sign images instead of long paragraphs."
+      },
+      {
+        "title": "LAW badge",
+        "text": "Shows what is a legal requirement and what is advice."
+      },
+      {
+        "title": "Practice questions explained",
+        "text": "Original questions in the style of the test, with the reason the answer is right."
+      },
+      {
+        "title": "Traps",
+        "text": "The mistakes that cost candidates marks, so you don't make them."
+      }
+    ]
+  },
+  "gallery": {
+    "maps": [
+      "breaks",
+      "driving-limits",
+      "walkaround-outside",
+      "load-securing-basics",
+      "lorry-signs"
+    ],
+    "bonuses": []
+  },
+  "strategic": {
+    "eyebrow": "Strategic content",
+    "title": "Built around how the test catches people out",
+    "cards": [
+      {
+        "icon": "clock",
+        "title": "Hours made visual",
+        "text": "Driving limits, breaks and rest periods drawn as timelines, so 4.5 hours, 45 minutes and 11 hours stick."
+      },
+      {
+        "icon": "hash",
+        "title": "Numbers to know",
+        "text": "Weights, speeds, tread depths, hours and deadlines in one table, plus flashcards to test yourself."
+      },
+      {
+        "icon": "eye",
+        "title": "Traps",
+        "text": "Every map ends with the mistakes candidates make most."
+      }
+    ]
+  },
+  "whoFor": {
+    "eyebrow": "Who it's for",
+    "title": "Made for new lorry drivers who want to pass first time",
+    "cards": [
+      {
+        "icon": "calendar-days",
+        "title": "Your test is booked",
+        "text": "Revise every topic in the time you have left, one page at a time."
+      },
+      {
+        "icon": "truck",
+        "title": "Moving up from a car licence",
+        "text": "Learn what changes when you drive a vehicle over 3.5 tonnes."
+      },
+      {
+        "icon": "rotate-ccw",
+        "title": "You need another go",
+        "text": "Find your gaps quickly and focus on the traps that cost marks."
+      }
+    ]
+  },
+  "bonuses": {
+    "eyebrow": "Bonuses",
+    "title": "{bonuses} bonuses included in the Complete pack",
+    "text": "Extra guides that cover what the maps don't: quick reference sheets, the day of the test and quick revision."
+  },
+  "access": {
+    "eyebrow": "How access works",
+    "title": "From payment to revising in minutes",
+    "steps": [
+      "Buy securely through Hotmart",
+      "Get your access email from Hotmart within minutes",
+      "Log in to the members area",
+      "Download your PDFs",
+      "Revise with confidence"
+    ]
+  },
+  "testimonials": [],
+  "pricing": {
+    "eyebrow": "Prices",
+    "title": "Choose your pack",
+    "sub": "One-time payment. No subscription. Download and keep forever.",
+    "priceNote": "One-time payment",
+    "vatNote": "Prices include VAT for UK buyers.",
+    "basic": {
+      "name": "Basic",
+      "desc": "{basicMaps} essential maps covering all 6 areas",
+      "features": [
+        "{basicMaps} essential A4 maps",
+        "All 6 areas of the test",
+        "Print or use on a tablet"
+      ],
+      "missingTitle": "Basic version. Only Complete includes:",
+      "missing": [
+        "All {totalMaps} maps",
+        "The {bonuses} bonuses",
+        "The drivers' hours cheat sheet and flashcards"
+      ],
+      "cta": "Get Basic"
+    },
+    "complete": {
+      "name": "Complete",
+      "badge": "Recommended",
+      "desc": "All {totalMaps} maps + {bonuses} bonuses",
+      "features": [
+        "All {totalMaps} A4 maps",
+        "{bonuses} bonuses, including the drivers' hours cheat sheet and flashcards",
+        "Free updates when the rules change",
+        "Support by email"
+      ],
+      "cta": "Get Complete"
+    }
+  },
+  "guarantee": {
+    "title": "Risk-free for {guaranteeDays} days",
+    "text": "If the maps aren't right for you, ask for a refund within {guaranteeDays} days of buying and you'll get your money back in full. No questions asked."
+  },
+  "faq": {
+    "eyebrow": "Questions",
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "q": "Who is it for?",
+        "a": "Anyone preparing for the lorry (LGV) theory test in Great Britain: categories C1, C, C1+E and C+E. It focuses on the multiple-choice part of the Driver CPC part 1 theory test."
+      },
+      {
+        "q": "Is it up to date?",
+        "a": "This is version {version}. Each map is checked against official GOV.UK guidance, The Highway Code or the law, and the date of the check is printed on every page ({checkedOn}). When the rules change, we update the PDFs and you get the new version free."
+      },
+      {
+        "q": "Is this official DVSA material?",
+        "a": "No. It's an independent revision guide based on official public guidance and the law. All the practice questions are our own, not taken from the official question bank."
+      },
+      {
+        "q": "Does it cover buses and coaches?",
+        "a": "No. It's made for lorry drivers. Some rules are shared, but the drivers' hours, loads and vehicle checks are the goods vehicle versions."
+      },
+      {
+        "q": "Does it cover the Driver CPC case studies (part 2)?",
+        "a": "The maps cover the knowledge the case studies draw on, like drivers' hours, loads, security and incidents, but they are not case-study practice."
+      },
+      {
+        "q": "How do I receive it?",
+        "a": "Right after you pay, Hotmart emails you your access to the members area, where you download the PDFs."
+      },
+      {
+        "q": "Can I print it?",
+        "a": "Yes. Every map is an A4 page, made to print at home."
+      },
+      {
+        "q": "Does it work on my phone or tablet?",
+        "a": "Yes, the PDFs open on any device. They're designed for A4, so they're most comfortable on a tablet or printed; on a phone, zoom in. The flashcards also come in a phone version."
+      },
+      {
+        "q": "Are the files editable?",
+        "a": "No. They're high-resolution PDFs for your personal use."
+      },
+      {
+        "q": "Can I get a refund?",
+        "a": "Yes. You have {guaranteeDays} days from your purchase to ask for a full refund through Hotmart, no questions asked."
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Revise smarter for your {examName}",
+    "text": "{totalMaps} visual maps, {bonuses} bonuses and {guaranteeDays} days to decide.",
+    "cta": "Get my maps now"
+  }
+}

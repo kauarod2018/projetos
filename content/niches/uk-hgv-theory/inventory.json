@@ -1,0 +1,468 @@
+{
+  "schemaVersion": 1,
+  "niche": "uk-hgv-theory",
+  "maps": [
+    {
+      "id": "licence-categories",
+      "area": "licences-and-cpc",
+      "order": 1,
+      "tier": "basic",
+      "title": "Lorry Licence Categories: C1, C, C1+E, C+E",
+      "officialTopics": [
+        "licences-and-qualifications"
+      ]
+    },
+    {
+      "id": "getting-qualified",
+      "area": "licences-and-cpc",
+      "order": 2,
+      "tier": "basic",
+      "title": "Getting Qualified: Driver CPC Parts 1 to 4",
+      "officialTopics": [
+        "licences-and-qualifications"
+      ]
+    },
+    {
+      "id": "theory-test-format",
+      "area": "licences-and-cpc",
+      "order": 3,
+      "tier": "basic",
+      "title": "The Lorry Theory Test: Format & Pass Marks",
+      "officialTopics": [
+        "licences-and-qualifications"
+      ]
+    },
+    {
+      "id": "periodic-training",
+      "area": "licences-and-cpc",
+      "order": 4,
+      "tier": "complete",
+      "title": "Staying Qualified: 35 Hours Every 5 Years",
+      "officialTopics": [
+        "licences-and-qualifications"
+      ]
+    },
+    {
+      "id": "medical-and-renewal",
+      "area": "licences-and-cpc",
+      "order": 5,
+      "tier": "complete",
+      "title": "Medicals & Renewing Your Lorry Licence",
+      "officialTopics": [
+        "licences-and-qualifications",
+        "the-driver"
+      ]
+    },
+    {
+      "id": "speed-limits-lorries",
+      "area": "licences-and-cpc",
+      "order": 6,
+      "tier": "basic",
+      "title": "Speed Limits for Goods Vehicles",
+      "officialTopics": [
+        "rules-of-the-road",
+        "licences-and-qualifications"
+      ]
+    },
+    {
+      "id": "fitness-alcohol-drugs",
+      "area": "licences-and-cpc",
+      "order": 7,
+      "tier": "basic",
+      "title": "Fit to Drive: Alcohol, Drugs & Tiredness",
+      "officialTopics": [
+        "the-driver"
+      ]
+    },
+    {
+      "id": "phones-and-distractions",
+      "area": "licences-and-cpc",
+      "order": 8,
+      "tier": "complete",
+      "title": "Phones, Distractions & Penalties",
+      "officialTopics": [
+        "the-driver"
+      ]
+    },
+    {
+      "id": "which-hours-rules",
+      "area": "hours-and-tachographs",
+      "order": 1,
+      "tier": "basic",
+      "title": "Which Drivers' Hours Rules Apply?",
+      "officialTopics": [
+        "drivers-hours"
+      ]
+    },
+    {
+      "id": "driving-limits",
+      "area": "hours-and-tachographs",
+      "order": 2,
+      "tier": "basic",
+      "title": "Daily, Weekly & Fortnightly Driving Limits",
+      "officialTopics": [
+        "drivers-hours"
+      ]
+    },
+    {
+      "id": "breaks",
+      "area": "hours-and-tachographs",
+      "order": 3,
+      "tier": "basic",
+      "title": "Breaks: 4.5 Hours Then 45 Minutes",
+      "officialTopics": [
+        "drivers-hours"
+      ]
+    },
+    {
+      "id": "daily-rest",
+      "area": "hours-and-tachographs",
+      "order": 4,
+      "tier": "basic",
+      "title": "Daily Rest: Regular, Reduced & Split",
+      "officialTopics": [
+        "drivers-hours"
+      ]
+    },
+    {
+      "id": "weekly-rest",
+      "area": "hours-and-tachographs",
+      "order": 5,
+      "tier": "complete",
+      "title": "Weekly Rest & Compensation",
+      "officialTopics": [
+        "drivers-hours"
+      ]
+    },
+    {
+      "id": "gb-domestic-rules",
+      "area": "hours-and-tachographs",
+      "order": 6,
+      "tier": "complete",
+      "title": "GB Domestic Rules",
+      "officialTopics": [
+        "drivers-hours"
+      ]
+    },
+    {
+      "id": "working-time",
+      "area": "hours-and-tachographs",
+      "order": 7,
+      "tier": "complete",
+      "title": "Working Time Rules",
+      "officialTopics": [
+        "drivers-hours"
+      ]
+    },
+    {
+      "id": "digital-tachograph",
+      "area": "hours-and-tachographs",
+      "order": 8,
+      "tier": "basic",
+      "title": "Digital Tachographs: Cards & Modes",
+      "officialTopics": [
+        "tachographs"
+      ]
+    },
+    {
+      "id": "tachograph-records",
+      "area": "hours-and-tachographs",
+      "order": 9,
+      "tier": "complete",
+      "title": "Records, Printouts & Faults",
+      "officialTopics": [
+        "tachographs"
+      ]
+    },
+    {
+      "id": "ferries-and-emergencies",
+      "area": "hours-and-tachographs",
+      "order": 10,
+      "tier": "complete",
+      "title": "Ferries, Trains & Emergencies",
+      "officialTopics": [
+        "drivers-hours",
+        "tachographs"
+      ]
+    },
+    {
+      "id": "weights-and-axles",
+      "area": "weights-and-loads",
+      "order": 1,
+      "tier": "basic",
+      "title": "Weights, Axles & Overloading",
+      "officialTopics": [
+        "weights-and-dimensions"
+      ]
+    },
+    {
+      "id": "height-and-bridges",
+      "area": "weights-and-loads",
+      "order": 2,
+      "tier": "basic",
+      "title": "Vehicle Height & Bridge Strikes",
+      "officialTopics": [
+        "weights-and-dimensions",
+        "traffic-signs"
+      ]
+    },
+    {
+      "id": "length-width-projections",
+      "area": "weights-and-loads",
+      "order": 3,
+      "tier": "complete",
+      "title": "Length, Width & Projecting Loads",
+      "officialTopics": [
+        "weights-and-dimensions",
+        "vehicle-loading"
+      ]
+    },
+    {
+      "id": "load-securing-basics",
+      "area": "weights-and-loads",
+      "order": 4,
+      "tier": "basic",
+      "title": "Load Securing: The Basics",
+      "officialTopics": [
+        "vehicle-loading"
+      ]
+    },
+    {
+      "id": "securing-methods",
+      "area": "weights-and-loads",
+      "order": 5,
+      "tier": "complete",
+      "title": "Ways to Secure a Load",
+      "officialTopics": [
+        "vehicle-loading"
+      ]
+    },
+    {
+      "id": "load-types",
+      "area": "weights-and-loads",
+      "order": 6,
+      "tier": "complete",
+      "title": "Carrying Different Types of Load",
+      "officialTopics": [
+        "vehicle-loading"
+      ]
+    },
+    {
+      "id": "load-shifts",
+      "area": "weights-and-loads",
+      "order": 7,
+      "tier": "complete",
+      "title": "If a Load Shifts on a Journey",
+      "officialTopics": [
+        "vehicle-loading",
+        "incidents-and-emergencies"
+      ]
+    },
+    {
+      "id": "walkaround-outside",
+      "area": "vehicle-checks",
+      "order": 1,
+      "tier": "basic",
+      "title": "Daily Walkaround Check: Outside the Cab",
+      "officialTopics": [
+        "vehicle-condition"
+      ]
+    },
+    {
+      "id": "walkaround-cab",
+      "area": "vehicle-checks",
+      "order": 2,
+      "tier": "basic",
+      "title": "Daily Walkaround Check: In the Cab",
+      "officialTopics": [
+        "vehicle-condition"
+      ]
+    },
+    {
+      "id": "defect-reporting",
+      "area": "vehicle-checks",
+      "order": 3,
+      "tier": "basic",
+      "title": "Reporting Defects & Roadworthiness",
+      "officialTopics": [
+        "vehicle-condition"
+      ]
+    },
+    {
+      "id": "tyres-and-wheels",
+      "area": "vehicle-checks",
+      "order": 4,
+      "tier": "complete",
+      "title": "Tyres, Wheels & Wheel Nuts",
+      "officialTopics": [
+        "vehicle-condition"
+      ]
+    },
+    {
+      "id": "brakes-and-air",
+      "area": "vehicle-checks",
+      "order": 5,
+      "tier": "complete",
+      "title": "Brakes & Air Systems",
+      "officialTopics": [
+        "vehicle-condition"
+      ]
+    },
+    {
+      "id": "roadside-checks",
+      "area": "vehicle-checks",
+      "order": 6,
+      "tier": "complete",
+      "title": "Roadside Checks & Prohibitions",
+      "officialTopics": [
+        "vehicle-condition",
+        "licences-and-qualifications"
+      ]
+    },
+    {
+      "id": "blind-spots",
+      "area": "driving-large-vehicles",
+      "order": 1,
+      "tier": "basic",
+      "title": "Blind Spots, Mirrors & Restricted View",
+      "officialTopics": [
+        "restricted-view"
+      ]
+    },
+    {
+      "id": "cyclists-pedestrians",
+      "area": "driving-large-vehicles",
+      "order": 2,
+      "tier": "basic",
+      "title": "Turning, Cyclists & Pedestrians",
+      "officialTopics": [
+        "restricted-view",
+        "rules-of-the-road"
+      ]
+    },
+    {
+      "id": "motorway-rules-lorries",
+      "area": "driving-large-vehicles",
+      "order": 3,
+      "tier": "basic",
+      "title": "Motorways: Lanes & Rules for Lorries",
+      "officialTopics": [
+        "rules-of-the-road"
+      ]
+    },
+    {
+      "id": "lorry-signs",
+      "area": "driving-large-vehicles",
+      "order": 4,
+      "tier": "basic",
+      "title": "Signs for Lorries: Weight, Height & Width",
+      "officialTopics": [
+        "traffic-signs"
+      ]
+    },
+    {
+      "id": "stopping-and-separation",
+      "area": "driving-large-vehicles",
+      "order": 5,
+      "tier": "complete",
+      "title": "Stopping Distances & Keeping Back",
+      "officialTopics": [
+        "road-and-weather",
+        "rules-of-the-road"
+      ]
+    },
+    {
+      "id": "wind-and-weather",
+      "area": "driving-large-vehicles",
+      "order": 6,
+      "tier": "basic",
+      "title": "High Winds, Rain, Ice & Fog",
+      "officialTopics": [
+        "road-and-weather"
+      ]
+    },
+    {
+      "id": "crossings-tunnels",
+      "area": "driving-large-vehicles",
+      "order": 7,
+      "tier": "complete",
+      "title": "Level Crossings, Tunnels & Narrow Roads",
+      "officialTopics": [
+        "rules-of-the-road",
+        "road-and-weather"
+      ]
+    },
+    {
+      "id": "parking-goods-vehicles",
+      "area": "driving-large-vehicles",
+      "order": 8,
+      "tier": "complete",
+      "title": "Parking a Goods Vehicle",
+      "officialTopics": [
+        "rules-of-the-road",
+        "security"
+      ]
+    },
+    {
+      "id": "fuel-efficient-driving",
+      "area": "driving-large-vehicles",
+      "order": 9,
+      "tier": "basic",
+      "title": "Fuel-Efficient Driving & Emissions",
+      "officialTopics": [
+        "environment"
+      ]
+    },
+    {
+      "id": "breakdowns-lorries",
+      "area": "incidents-and-security",
+      "order": 1,
+      "tier": "basic",
+      "title": "Breakdowns: Motorways & Other Roads",
+      "officialTopics": [
+        "incidents-and-emergencies"
+      ]
+    },
+    {
+      "id": "incidents-reporting",
+      "area": "incidents-and-security",
+      "order": 2,
+      "tier": "basic",
+      "title": "Incidents: Stopping, Reporting & First Aid",
+      "officialTopics": [
+        "incidents-and-emergencies"
+      ]
+    },
+    {
+      "id": "vehicle-fires",
+      "area": "incidents-and-security",
+      "order": 3,
+      "tier": "complete",
+      "title": "Fires & Tunnel Emergencies",
+      "officialTopics": [
+        "incidents-and-emergencies"
+      ]
+    },
+    {
+      "id": "clandestine-entrants",
+      "area": "incidents-and-security",
+      "order": 4,
+      "tier": "basic",
+      "title": "Clandestine Entrants: Securing Your Vehicle",
+      "officialTopics": [
+        "security"
+      ]
+    },
+    {
+      "id": "dangerous-goods",
+      "area": "incidents-and-security",
+      "order": 5,
+      "tier": "complete",
+      "title": "Dangerous Goods: Plates & Basics",
+      "officialTopics": [
+        "incidents-and-emergencies",
+        "vehicle-loading"
+      ]
+    }
+  ]
+}

@@ -8,7 +8,7 @@ import type { KeyFact } from '../../schemas/map.ts';
 import { fontFaceCss } from '../shared/fonts.ts';
 import { esc, fill, formatDate, pad2 } from '../shared/html.ts';
 import { renderBarScale, renderSignGrid, renderTable } from '../visuals/basic.ts';
-import { renderCards, renderLights, renderMarkings, renderStats, renderSteps } from '../visuals/extra.ts';
+import { renderCards, renderTimeline, renderLights, renderMarkings, renderStats, renderSteps } from '../visuals/extra.ts';
 import { renderRoundabout } from '../visuals/roundabout.ts';
 
 const HERE = import.meta.dirname;
@@ -60,6 +60,8 @@ export function renderMapPage(n: LoadedNiche, m: LoadedMap, site: Site): string 
     visualBody = renderTable(tableDataOf(n, m)!);
   } else if (v.type === 'cards') {
     visualBody = renderCards(v, t.map.law);
+  } else if (v.type === 'timeline') {
+    visualBody = renderTimeline(v, t.timeline);
   } else if (v.type === 'steps') {
     visualBody = renderSteps(v);
   } else if (v.type === 'stats') {

@@ -99,6 +99,9 @@ export function checkContent(content: LoadedContent, opts: CheckOptions): CheckR
   }
 
   for (const n of content.niches) {
+    // a product that is not published yet is checked like a preview, even in release mode
+    const release = opts.release && n.niche.published;
+    const releaseOrWarnHere = (msg: string) => (release ? errors : warnings).push(msg);
     const nf = rel(join(n.dir, 'niche.json'));
     if (!site.brand.byLanguage[n.niche.language]) {
       errors.push(`content/site.json → brand.byLanguage: add the brand name in ${n.niche.language} for ${n.niche.id}`);
@@ -196,7 +199,7 @@ export function checkContent(content: LoadedContent, opts: CheckOptions): CheckR
       }
       if (pending.length) {
         const msg = `${f} → visual.signs: ${pending.length} sign(s) without the official image yet: ${pending.join(', ')}`;
-        (d.review.status === 'verified' || opts.release ? errors : warnings).push(msg);
+        (d.review.status === 'verified' || release ? errors : warnings).push(msg);
       }
       const v = d.visual;
       if (v.type === 'bar-scale') {
@@ -223,6 +226,12 @@ export function checkContent(content: LoadedContent, opts: CheckOptions): CheckR
         for (const c of v.items) {
           if (!c.icon && !c.swatch) errors.push(`${f} → visual.items "${c.title}": give an icon or a swatch`);
           if (c.icon && !existsSync(iconPath(c.icon))) errors.push(`${f} → visual.items "${c.title}": lucide icon "${c.icon}" does not exist`);
+        }
+      }
+      if (v.type === 'timeline') {
+        for (const r of v.rows) {
+          const minutes = r.segments.reduce((sum, seg) => sum + seg.minutes, 0);
+          if (minutes > v.scaleHours * 60) errors.push(`${f} → visual.rows "${r.label}": ${minutes} minutes do not fit a ${v.scaleHours}-hour scale`);
         }
       }
       if (v.type === 'road-diagram') {
@@ -274,7 +283,7 @@ export function checkContent(content: LoadedContent, opts: CheckOptions): CheckR
       }
       if (pending.length) {
         const msg = `${f}: ${pending.length} sign(s) without the official image yet`;
-        (d.review.status === 'verified' || opts.release ? errors : warnings).push(msg);
+        (d.review.status === 'verified' || release ? errors : warnings).push(msg);
       }
       if (d.review.status !== 'verified') warnings.push(`${f}: draft bonus — watermarked and left out of the packages`);
     }
@@ -295,7 +304,7 @@ export function checkContent(content: LoadedContent, opts: CheckOptions): CheckR
     for (const [i, s] of n.creatives.slides.entries()) {
       if (s.kind === 'page' && !planned.has(s.mapId)) errors.push(`${cf} → slides[${i}].mapId: "${s.mapId}" is not in inventory.json`);
     }
-    if (opts.release && n.sales.socialProof === null && n.sales.testimonials.length === 0) {
+    if (release && n.sales.socialProof === null && n.sales.testimonials.length === 0) {
       warnings.push(`${sf}: no social proof or testimonials yet (both stay hidden, which is correct until you have real ones)`);
     }
 
@@ -303,7 +312,7 @@ export function checkContent(content: LoadedContent, opts: CheckOptions): CheckR
     const count = (tier: 'basic' | 'complete', topic: string) =>
       n.maps.filter(
         (m) => m.data.officialTopics.includes(topic) && (tier === 'complete' || m.data.tier === 'basic') &&
-          (!opts.release || m.data.review.status === 'verified'),
+          (!release || m.data.review.status === 'verified'),
       ).length;
     const missing: string[] = [];
     for (const t of n.niche.officialTopics.items) {
@@ -314,12 +323,12 @@ export function checkContent(content: LoadedContent, opts: CheckOptions): CheckR
       }
     }
     if (missing.length) {
-      releaseOrWarn(
+      releaseOrWarnHere(
         `${n.niche.id}: ${missing.length} of ${topicSlugs.size} ${n.niche.officialTopics.authority} topics are below the minimum number of maps: ${missing.join('; ')}`,
       );
     }
 
-    if (opts.release) {
+    if (release) {
       if (!n.niche.content.checkedOn) errors.push(`${nf} → content.checkedOn: set the date the content was checked`);
       if (!n.niche.checkout.basicUrl || !n.niche.checkout.completeUrl) errors.push(`${nf} → checkout: add both Hotmart checkout links`);
       if (n.niche.pricing.anchor !== null) {

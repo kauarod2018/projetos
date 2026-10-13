@@ -8,6 +8,8 @@ export const niche = z.object({
   schemaVersion: z.literal(1),
   id: slug,
   examName: z.string().min(1),
+  /** false while the product is being made: the validator still checks it, but release builds leave it out of the shop */
+  published: z.boolean().default(true),
   /** short name for file names, e.g. "UK-Theory-Maps" */
   filePrefix: z.string().regex(/^[A-Za-z0-9-]+$/),
   /** how the product shows in the shop: category filter, country label and the product card */

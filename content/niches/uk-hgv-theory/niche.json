@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "id": "uk-hgv-theory",
+  "examName": "UK HGV Theory Test",
+  "filePrefix": "UK-HGV-Theory",
+  "store": {
+    "category": "Professional drivers",
+    "countryName": "United Kingdom",
+    "productName": "UK HGV Theory Test: Visual Revision Maps",
+    "cardText": "One-page maps for lorry drivers: drivers' hours, tachographs, loads, vehicle checks and road rules, with practice questions.",
+    "format": "PDF · A4 · instant download",
+    "coverTagline": "Lorry theory revision maps",
+    "coverBadges": [
+      "{maps} one-page maps",
+      "{questions} practice questions",
+      "{bonuses} bonuses"
+    ],
+    "keywords": [
+      "HGV",
+      "LGV",
+      "lorry",
+      "truck",
+      "Driver CPC",
+      "Cat C",
+      "C+E",
+      "class 1",
+      "class 2",
+      "drivers' hours",
+      "tachograph",
+      "DVSA",
+      "theory test",
+      "Great Britain"
+    ],
+    "badge": "New",
+    "rank": 2
+  },
+  "country": "GB",
+  "jurisdiction": "Great Britain (England, Scotland and Wales)",
+  "language": "en-GB",
+  "currency": "GBP",
+  "drivingSide": "left",
+  "primarySource": "GOV.UK guidance and The Highway Code",
+  "areas": [
+    {
+      "slug": "licences-and-cpc",
+      "name": "Licences, Driver CPC & the Driver",
+      "colour": "#1D4ED8",
+      "icon": "id-card",
+      "officialTopics": [
+        "licences-and-qualifications",
+        "the-driver"
+      ]
+    },
+    {
+      "slug": "hours-and-tachographs",
+      "name": "Drivers' Hours & Tachographs",
+      "colour": "#7C3AED",
+      "icon": "clock",
+      "officialTopics": [
+        "drivers-hours",
+        "tachographs"
+      ]
+    },
+    {
+      "slug": "weights-and-loads",
+      "name": "Weights, Dimensions & Loads",
+      "colour": "#B45309",
+      "icon": "weight",
+      "officialTopics": [
+        "weights-and-dimensions",
+        "vehicle-loading"
+      ]
+    },
+    {
+      "slug": "vehicle-checks",
+      "name": "Vehicle Checks, Defects & Braking",
+      "colour": "#0F766E",
+      "icon": "wrench",
+      "officialTopics": [
+        "vehicle-condition"
+      ]
+    },
+    {
+      "slug": "driving-large-vehicles",
+      "name": "Driving a Large Vehicle",
+      "colour": "#BE185D",
+      "icon": "truck",
+      "officialTopics": [
+        "restricted-view",
+        "rules-of-the-road",
+        "traffic-signs",
+        "road-and-weather",
+        "environment"
+      ]
+    },
+    {
+      "slug": "incidents-and-security",
+      "name": "Incidents, Security & Emergencies",
+      "colour": "#334155",
+      "icon": "siren",
+      "officialTopics": [
+        "incidents-and-emergencies",
+        "security"
+      ]
+    }
+  ],
+  "officialTopics": {
+    "authority": "HelpTest syllabus for the DVSA lorry theory test",
+    "items": [
+      {
+        "slug": "licences-and-qualifications",
+        "name": "Licences, Driver CPC and documents"
+      },
+      {
+        "slug": "the-driver",
+        "name": "The driver: fitness, alcohol, drugs and distractions"
+      },
+      {
+        "slug": "drivers-hours",
+        "name": "Drivers' hours, rest and working time"
+      },
+      {
+        "slug": "tachographs",
+        "name": "Tachographs and records"
+      },
+      {
+        "slug": "weights-and-dimensions",
+        "name": "Vehicle weights and dimensions"
+      },
+      {
+        "slug": "vehicle-loading",
+        "name": "Loading and securing loads"
+      },
+      {
+        "slug": "vehicle-condition",
+        "name": "Vehicle condition, checks and braking"
+      },
+      {
+        "slug": "restricted-view",
+        "name": "Restricted view and vulnerable road users"
+      },
+      {
+        "slug": "rules-of-the-road",
+        "name": "Rules of the road for large vehicles"
+      },
+      {
+        "slug": "traffic-signs",
+        "name": "Traffic signs for large vehicles"
+      },
+      {
+        "slug": "road-and-weather",
+        "name": "Road and weather conditions"
+      },
+      {
+        "slug": "incidents-and-emergencies",
+        "name": "Incidents, breakdowns and emergencies"
+      },
+      {
+        "slug": "security",
+        "name": "Vehicle security and leaving the vehicle"
+      },
+      {
+        "slug": "environment",
+        "name": "Environmental issues and fuel-efficient driving"
+      }
+    ]
+  },
+  "coverage": {
+    "minMapsPerTopicComplete": 1,
+    "minMapsPerTopicBasic": 1
+  },
+  "content": {
+    "version": "0.1.0",
+    "checkedOn": null
+  },
+  "pricing": {
+    "basic": 19,
+    "complete": 29,
+    "anchor": null,
+    "vatIncluded": true
+  },
+  "checkout": {
+    "basicUrl": "",
+    "completeUrl": ""
+  },
+  "guaranteeDays": 15,
+  "updatePolicy": "Free updated PDFs whenever the official rules or the lorry theory test change, for as long as the product is on sale.",
+  "disclaimer": "This product is independent and is not affiliated with, endorsed by or connected to the DVSA, the Department for Transport or any government body. It does not guarantee that you will pass the test.",
+  "attributions": [
+    "Contains public sector information licensed under the Open Government Licence v3.0 (The Highway Code; Know Your Traffic Signs; GOV.UK guidance; legislation.gov.uk).",
+    "All practice questions are original and are not taken from the official DVSA question bank."
+  ],
+  "published": false
+}

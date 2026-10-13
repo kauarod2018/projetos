@@ -172,7 +172,35 @@ const lightSequence = z.object({
     .max(5),
 });
 
-export const visual = z.discriminatedUnion('type', [signGrid, barScale, roadDiagram, table, cards, steps, stats, markings, lightSequence]);
+/** what a driver is doing in each block of a timeline (drivers' hours, working days) */
+export const TIMELINE_KINDS = ['drive', 'break', 'rest', 'work', 'availability'] as const;
+
+/**
+ * Time drawn to scale: each row is a sequence of blocks (driving, break, rest...) with a verdict,
+ * e.g. a legal split break next to an illegal one.
+ */
+const timeline = z.object({
+  type: z.literal('timeline'),
+  caption: z.string().min(1).max(LIMITS.caption),
+  /** length of the scale in hours (every row must fit inside it) */
+  scaleHours: z.number().positive().max(48),
+  rows: z
+    .array(
+      z.object({
+        label: z.string().min(1).max(40),
+        verdict: z.enum(['ok', 'wrong', 'info']).default('info'),
+        note: z.string().min(1).max(90).optional(),
+        segments: z
+          .array(z.object({ kind: z.enum(TIMELINE_KINDS), minutes: z.number().int().positive(), label: z.string().min(1).max(14).optional() }))
+          .min(1)
+          .max(12),
+      }),
+    )
+    .min(1)
+    .max(5),
+});
+
+export const visual = z.discriminatedUnion('type', [signGrid, barScale, roadDiagram, table, cards, steps, stats, markings, lightSequence, timeline]);
 export type Visual = z.infer<typeof visual>;
 
 const confusedSide = z.object({

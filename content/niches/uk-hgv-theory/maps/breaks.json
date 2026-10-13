@@ -1,0 +1,161 @@
+{
+  "schemaVersion": 1,
+  "id": "breaks",
+  "niche": "uk-hgv-theory",
+  "area": "hours-and-tachographs",
+  "order": 3,
+  "tier": "basic",
+  "officialTopics": [
+    "drivers-hours"
+  ],
+  "title": "Breaks: 4.5 Hours Then 45 Minutes",
+  "whatItIs": "Under the assimilated (GB) drivers' hours rules, you can drive for no more than 4.5 hours before a break of at least 45 minutes. The break can be split 15 + 30.",
+  "keyFacts": [
+    {
+      "text": "After no more than 4.5 hours of driving, you MUST take a break of at least 45 minutes, unless you start a rest period.",
+      "law": true
+    },
+    {
+      "text": "You can split the 45 minutes: at least 15 minutes first, then at least 30 minutes, spread over the 4.5 hours.",
+      "law": true
+    },
+    "Breaks shorter than 15 minutes don't count towards the 45 minutes.",
+    "A break means no driving and no other work: it's only for recuperation.",
+    "A qualifying 45-minute break 'wipes the slate clean': a new 4.5-hour driving period starts.",
+    "Working time rules can require breaks too, on top of the drivers' hours rules."
+  ],
+  "visual": {
+    "type": "timeline",
+    "caption": "Legal and illegal ways to take the 45-minute break",
+    "scaleHours": 6,
+    "rows": [
+      {
+        "label": "One 45-minute break",
+        "verdict": "ok",
+        "segments": [
+          {
+            "kind": "drive",
+            "minutes": 270
+          },
+          {
+            "kind": "break",
+            "minutes": 45
+          },
+          {
+            "kind": "drive",
+            "minutes": 45
+          }
+        ]
+      },
+      {
+        "label": "Split: 15 minutes, then 30 minutes",
+        "verdict": "ok",
+        "segments": [
+          {
+            "kind": "drive",
+            "minutes": 120
+          },
+          {
+            "kind": "break",
+            "minutes": 15
+          },
+          {
+            "kind": "drive",
+            "minutes": 150
+          },
+          {
+            "kind": "break",
+            "minutes": 30
+          },
+          {
+            "kind": "drive",
+            "minutes": 30
+          }
+        ]
+      },
+      {
+        "label": "Split the wrong way: 30, then 15",
+        "verdict": "wrong",
+        "note": "The second part of a split break must be at least 30 minutes.",
+        "segments": [
+          {
+            "kind": "drive",
+            "minutes": 120
+          },
+          {
+            "kind": "break",
+            "minutes": 30
+          },
+          {
+            "kind": "drive",
+            "minutes": 150
+          },
+          {
+            "kind": "break",
+            "minutes": 15
+          },
+          {
+            "kind": "drive",
+            "minutes": 30
+          }
+        ]
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Break",
+      "points": [
+        "Short pause for recuperation: 15, 30 or 45 minutes",
+        "No driving and no other work"
+      ]
+    },
+    "b": {
+      "label": "Rest",
+      "points": [
+        "Long period you can spend as you like",
+        "Daily: 9 to 11 hours · Weekly: 24 to 45 hours"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You've been driving for 4.5 hours. Under the assimilated rules, what's the shortest break you must take now?",
+      "options": [
+        "15 minutes",
+        "30 minutes",
+        "45 minutes",
+        "1 hour"
+      ],
+      "answerIndex": 2,
+      "why": "After no more than 4.5 hours of driving you must take a break of at least 45 minutes, unless you start a rest period."
+    },
+    {
+      "question": "You want to split your 45-minute break. Which pattern is allowed?",
+      "options": [
+        "30 minutes, then 15 minutes",
+        "15 minutes, then 30 minutes",
+        "Three breaks of 15 minutes",
+        "10 minutes, then 35 minutes"
+      ],
+      "answerIndex": 1,
+      "why": "The first break must be at least 15 minutes and the second at least 30 minutes. Breaks under 15 minutes don't count."
+    }
+  ],
+  "traps": [
+    "Order matters: 15 then 30 is legal, but 30 then 15 is not.",
+    "A 10-minute stop doesn't count towards your 45 minutes.",
+    "Loading, unloading or paperwork is other work, not a break."
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
+      "ref": "1.4 Breaks and driving limits; 1.5 Daily rest periods",
+      "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/1-assimilated-and-aetr-rules-on-drivers-hours"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

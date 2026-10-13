@@ -963,3 +963,137 @@
   line-height: 1.3;
   color: var(--ink-2);
 }
+
+/* ---------- timeline (drivers' hours) ---------- */
+.tl {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.tl-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2mm 5mm;
+  margin-bottom: 3mm;
+  font-size: 9pt;
+}
+
+.tl-key {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.6mm;
+}
+
+.tl-key i {
+  width: 4mm;
+  height: 2.6mm;
+  border-radius: 0.6mm;
+}
+
+.tl-body {
+  flex: 1 1 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 2.4mm;
+  padding-bottom: 5mm;
+}
+
+.tl-grid {
+  position: absolute;
+  inset: 0 0 0 0;
+}
+
+.tl-tick {
+  position: absolute;
+  top: 0;
+  bottom: 5mm;
+  border-left: 1px dashed color-mix(in srgb, var(--area) 22%, white);
+}
+
+.tl-tick em {
+  position: absolute;
+  bottom: -4.6mm;
+  transform: translateX(-50%);
+  font-style: normal;
+  font-size: 8pt;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+
+.tl-tick.first em {
+  transform: none;
+}
+
+.tl-tick.last em {
+  transform: translateX(-100%);
+}
+
+.tl-row {
+  position: relative;
+}
+
+.tl-label {
+  display: flex;
+  align-items: center;
+  gap: 1.6mm;
+  font-weight: 700;
+  font-size: 9.5pt;
+  margin-bottom: 1mm;
+}
+
+.tl-verdict {
+  display: inline-grid;
+  place-items: center;
+  width: 4.2mm;
+  height: 4.2mm;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.tl-verdict.ok {
+  background: #16a34a;
+}
+
+.tl-verdict.wrong {
+  background: #dc2626;
+}
+
+.tl-track {
+  display: flex;
+  height: 6.2mm;
+  border-radius: 1mm;
+  overflow: hidden;
+  background: color-mix(in srgb, var(--area) 6%, white);
+}
+
+.tl-row.is-wrong .tl-track {
+  outline: 0.5mm solid #dc2626;
+  outline-offset: 0.4mm;
+}
+
+.tl-seg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 8pt;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.35mm solid #fff;
+}
+
+.tl-seg.tl-break,
+.tl-seg.tl-availability {
+  color: #1f2937;
+}
+
+.tl-note {
+  margin-top: 0.8mm;
+  font-size: 8.5pt;
+  color: var(--ink-2);
+}
