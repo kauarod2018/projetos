@@ -3,7 +3,7 @@ import { brandName, type NumberItem, type Sign, type Site } from '../../schemas/
 import { esc } from '../shared/html.ts';
 import { htmlDocument } from '../map/render.ts';
 import { signCell } from '../visuals/basic.ts';
-import { BRAND_GREEN, bonusCss, type BonusContext } from './render.ts';
+import { bonusCss, themeStyle, type BonusContext } from './render.ts';
 
 interface Card {
   kind: string;
@@ -82,7 +82,7 @@ export function renderFlashcardsA4(n: LoadedNiche, b: LoadedBonus, site: Site, c
       ['front', fronts, t.flashcardsFront],
       ['back', backs, t.flashcardsBack],
     ] as const) {
-      pages.push(`<div class="page fc" style="--area:${BRAND_GREEN}" data-side="${side}">
+      pages.push(`<div class="page fc" style="${themeStyle(n)}" data-side="${side}">
   <div class="fc-sheet">
     <div class="fc-note"><span>${esc(note)}</span><span>${esc(brand)} · ${sheetNo}/${sheets}</span></div>
     <div class="fc-grid">${html.join('')}</div>
@@ -106,7 +106,7 @@ export function renderFlashcardsPhone(n: LoadedNiche, b: LoadedBonus, site: Site
   const cards = flashcardList(n, b, ctx);
   const pages = cards.flatMap((c, i) =>
     (['front', 'back'] as const).map(
-      (side) => `<div class="page phone" style="--area:${BRAND_GREEN}">
+      (side) => `<div class="page phone" style="${themeStyle(n)}">
   <div class="phone-bar"><span>${esc(brand)}</span><span>${i + 1}/${cards.length} · ${side === 'front' ? 'Q' : 'A'}</span></div>
   <div class="card"><span class="card-kind">${esc(side === 'front' ? c.kind : n.i18n.bonus.answer)}</span>${side === 'front' ? c.front : c.back}</div>
   ${draft ? `<div class="watermark"><span>${esc(n.i18n.map.draftWatermark)}</span></div>` : ''}

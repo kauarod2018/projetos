@@ -18,7 +18,7 @@
   letter-spacing: 0.09em;
   text-transform: uppercase;
   color: #1a1400;
-  background: #ffc93c;
+  background: var(--accent, #ffc93c);
   border-radius: 99px;
   padding: 1.2mm 2.8mm;
 }
@@ -134,7 +134,7 @@
 
 .callout.tip {
   background: #fff8e1;
-  border-left: 1.2mm solid #ffc93c;
+  border-left: 1.2mm solid var(--accent, #ffc93c);
 }
 
 .callout.warning {

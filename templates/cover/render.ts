@@ -38,11 +38,11 @@ export function renderProductCover(n: LoadedNiche, site: Site, input: CoverInput
 html, body { width: ${COVER_SIZE.width}px; height: ${COVER_SIZE.height}px; }
 .cover {
   position: relative; width: 100%; height: 100%; overflow: hidden;
-  background: #0b6e4f; color: #fff; padding: 34px 38px; font-family: 'Atkinson', sans-serif;
+  background: ${n.niche.theme.primary}; color: #fff; padding: 34px 38px; font-family: 'Atkinson', sans-serif;
 }
 .cover::before {
   content: ''; position: absolute; left: 0; right: 0; top: 330px; height: 4px;
-  background: repeating-linear-gradient(90deg, #ffc93c 0 34px, transparent 34px 56px); opacity: 0.9;
+  background: repeating-linear-gradient(90deg, ${n.niche.theme.accent} 0 34px, transparent 34px 56px); opacity: 0.9;
 }
 header { display: flex; align-items: center; font-size: 24px; color: #fff; }
 .chip {
@@ -53,9 +53,9 @@ h1 {
   margin-top: 14px; font-family: 'Archivo', sans-serif; font-weight: 800; font-stretch: 88%;
   font-size: 54px; line-height: 0.98; letter-spacing: -0.02em; max-width: 480px;
 }
-.tagline { margin-top: 10px; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 26px; color: #ffc93c; }
+.tagline { margin-top: 10px; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 26px; color: ${n.niche.theme.accent}; }
 .badges { position: absolute; top: 352px; left: 38px; display: flex; flex-wrap: wrap; gap: 8px; list-style: none; max-width: 524px; }
-.badges li { background: #fff; color: #08513a; border-radius: 999px; padding: 5px 12px; font-weight: 700; font-size: 14px; }
+.badges li { background: #fff; color: ${n.niche.theme.primary}; border-radius: 999px; padding: 5px 12px; font-weight: 700; font-size: 14px; }
 .pages { position: absolute; left: 0; right: 0; top: 412px; height: 420px; }
 .pg { position: absolute; width: 250px; border-radius: 4px; box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35); background: #fff; }
 .pg-0 { left: 175px; top: 0; z-index: 3; }

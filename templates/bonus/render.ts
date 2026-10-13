@@ -12,7 +12,8 @@ import { htmlDocument } from '../map/render.ts';
 import { renderTable, signCell } from '../visuals/basic.ts';
 
 const HERE = import.meta.dirname;
-export const BRAND_GREEN = '#0B6E4F';
+/** the product's band colour and highlight (niche.json → theme) */
+export const themeStyle = (n: { niche: { theme: { primary: string; accent: string } } }) => `--area:${n.niche.theme.primary};--accent:${n.niche.theme.accent}`;
 
 export interface PlanMap {
   code: string;
@@ -165,7 +166,7 @@ export function renderBonusDocument(n: LoadedNiche, b: LoadedBonus, site: Site, 
     const status = draft
       ? `<span class="draft">${esc(t.map.draftFooter)}</span>`
       : `<span>${fill(t.map.version, { version: n.niche.content.version })}</span>`;
-    return `<div class="page bn" style="--area:${BRAND_GREEN}">
+    return `<div class="page bn" style="${themeStyle(n)}">
   <header class="bn-band">
     <span class="bn-num">${esc(t.bonus.label)} ${pad2(d.number)}</span>
     <span class="bn-title">${esc(d.title)}</span>

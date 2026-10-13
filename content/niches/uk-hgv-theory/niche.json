@@ -34,6 +34,10 @@
     "badge": "New",
     "rank": 2
   },
+  "theme": {
+    "primary": "#1F2937",
+    "accent": "#F59E0B"
+  },
   "country": "GB",
   "jurisdiction": "Great Britain (England, Scotland and Wales)",
   "language": "en-GB",

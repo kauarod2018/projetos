@@ -29,6 +29,8 @@ export const niche = z.object({
     /** order in the shop banners and lists: 1 shows first (put your best sellers first) */
     rank: z.number().int().min(1).default(100),
   }),
+  /** product colours: cover, bonus bands, flashcards and ads (primary = dark background, accent = highlight) */
+  theme: z.object({ primary: hexColour, accent: hexColour }).default({ primary: '#0B6E4F', accent: '#FFC93C' }),
   country: z.string().length(2),
   jurisdiction: z.string().min(1),
   language: z.string().regex(/^[a-z]{2}-[A-Z]{2}$/),
