@@ -13,7 +13,7 @@
   "whatItIs": "Strong winds can push vehicles and riders off course, especially in gusts and on exposed roads.",
   "keyFacts": [
     "High-sided vehicles are most affected, but gusts can also push cars, cyclists, motorcyclists and horse riders.",
-    "Expect sudden gusts on open roads, on bridges and in gaps between buildings or hedges.",
+    "Expect sudden gusts on exposed open roads, when passing bridges and at gaps in hedges.",
     "Give cyclists, motorcyclists and horse riders extra room: they may be blown into your path.",
     "Keep well back from motorcyclists overtaking a high-sided vehicle in strong wind."
   ],
@@ -28,14 +28,14 @@
         "icon": "wind"
       },
       {
-        "title": "Bridges and viaducts",
-        "text": "High and exposed, often with sudden gusts.",
+        "title": "Bridges",
+        "text": "Passing bridges can expose you to strong gusts.",
         "icon": "bridge"
       },
       {
-        "title": "Gaps in buildings or hedges",
-        "text": "You leave shelter and a gust hits the side of the car.",
-        "icon": "building"
+        "title": "Gaps in hedges",
+        "text": "Passing a gap in a hedge can let a strong gust hit you.",
+        "icon": "trees"
       },
       {
         "title": "Passing large vehicles",
@@ -48,8 +48,8 @@
     "a": {
       "label": "Passing a lorry in wind",
       "points": [
-        "Gust as you clear its front",
-        "Hold the wheel firmly"
+        "Turbulence can push you off course",
+        "Motorcyclists are hit hardest"
       ]
     },
     "b": {
@@ -74,7 +74,7 @@
     }
   ],
   "traps": [
-    "Gusts hit hardest when you come out of shelter.",
+    "Gaps in hedges and passing bridges can bring sudden strong gusts.",
     "Wind affects cars too, not just lorries and vans.",
     "Motorcyclists overtaking a lorry can be hit by turbulence: keep well back."
   ],
@@ -83,10 +83,17 @@
       "doc": "The Highway Code",
       "ref": "Rules 232 and 233 (Windy weather)",
       "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 163 and 212 (Extra space in high winds)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rules 232 and 233 (Windy weather); The Highway Code: Rules 163 and 212 (Extra space in high winds)"
   }
 }

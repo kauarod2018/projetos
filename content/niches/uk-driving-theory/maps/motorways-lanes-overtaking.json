@@ -56,7 +56,7 @@
     "a": {
       "label": "Overtaking on the left",
       "points": [
-        "Not allowed",
+        "Don't do it",
         "Don't move left to pass someone"
       ]
     },
@@ -91,10 +91,17 @@
       "doc": "The Highway Code",
       "ref": "Rules 253 to 274 (Motorways)",
       "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 124 (Speed limits)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rules 253 to 274 (Motorways); The Highway Code: Rule 124 (Speed limits)"
   }
 }

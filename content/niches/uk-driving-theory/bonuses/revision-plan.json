@@ -39,6 +39,8 @@
     }
   ],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "gov.uk theory test guide (multiple-choice, hazard perception, pass mark and result, what to take, test centre), Highway Code, Know Your Traffic Signs — https://www.gov.uk/take-practice-theory-test"
   }
 }

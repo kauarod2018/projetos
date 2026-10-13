@@ -13,9 +13,9 @@
   "whatItIs": "Reflective studs light up in your headlights and show where the lanes and edges are, even at night or in fog.",
   "keyFacts": [
     "Driving on the left: red studs are on your left, amber studs on your right.",
-    "Green studs mark where a slip road or lay-by joins or leaves the motorway.",
+    "Green studs mark the edge of the main carriageway at slip roads and lay-bys.",
     "Green and yellow studs show temporary layouts, such as roadworks.",
-    "The hard shoulder is marked with a solid white line.",
+    "A solid white edge line marks the left edge of the carriageway, next to the hard shoulder.",
     {
       "text": "You MUST NOT enter chevrons bordered by a solid white line, except in an emergency.",
       "law": true
@@ -101,12 +101,24 @@
     },
     {
       "doc": "The Highway Code",
-      "ref": "Rules 253 to 274 (Motorways)",
+      "ref": "Rule 130 (Chevrons)",
       "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "Know Your Traffic Signs (DfT)",
+      "ref": "Road studs (p. 84)",
+      "url": "https://assets.publishing.service.gov.uk/media/656ef4271104cf0013fa74ef/know-your-traffic-signs-dft.pdf"
+    },
+    {
+      "doc": "Know Your Traffic Signs (DfT)",
+      "ref": "Edge of carriageway line (p. 78)",
+      "url": "https://assets.publishing.service.gov.uk/media/656ef4271104cf0013fa74ef/know-your-traffic-signs-dft.pdf"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rule 132 (Reflective road studs); The Highway Code: Rule 130 (Chevrons); Know Your Traffic Signs (DfT): Road studs (p. 84); Know Your Traffic Signs (DfT): Edge of carriageway line (p. 78)"
   }
 }

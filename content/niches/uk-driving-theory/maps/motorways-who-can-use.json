@@ -9,7 +9,7 @@
     "motorway-rules"
   ],
   "title": "Who Can Use Motorways (and Learners)",
-  "whatItIs": "Motorways are the safest roads per mile, but traffic is fast. Some road users are not allowed on them at all.",
+  "whatItIs": "Traffic on motorways is fast, so you have less time to react. Some road users are not allowed on them at all.",
   "keyFacts": [
     {
       "text": "Motorways MUST NOT be used by pedestrians, cyclists, horse riders or motorcycles under 50 cc.",
@@ -20,14 +20,14 @@
       "law": true
     },
     {
-      "text": "Learners MUST NOT use motorways unless with an approved driving instructor in a dual-control car with L plates.",
+      "text": "Learner car drivers MUST NOT use motorways unless with an approved instructor in a dual-control car with L plates.",
       "law": true
     },
     {
       "text": "Learner motorcyclists MUST NOT use motorways.",
       "law": true
     },
-    "Before a long motorway trip, check fuel, oil, water and tyres, and plan rest stops."
+    "Before a motorway trip, make sure you have enough fuel or charge, and plan time for breaks."
   ],
   "visual": {
     "type": "cards",
@@ -48,7 +48,7 @@
       },
       {
         "title": "Motorcycles under 50 cc",
-        "text": "Not allowed: too slow for motorway traffic.",
+        "text": "Not allowed on motorways, even with a full licence.",
         "icon": "gauge",
         "law": true
       },
@@ -115,6 +115,11 @@
       "doc": "GOV.UK",
       "ref": "Driving lessons and learning to drive",
       "url": "https://www.gov.uk/driving-lessons-learning-to-drive"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 97 (Before setting off)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
     }
   ],
   "jurisdictionNotes": [
@@ -124,6 +129,8 @@
     }
   ],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rules 253 to 274 (Motorways); GOV.UK: Driving lessons and learning to drive; The Highway Code: Rule 97 (Before setting off)"
   }
 }

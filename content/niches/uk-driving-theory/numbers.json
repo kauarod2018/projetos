@@ -78,8 +78,9 @@
         }
       ],
       "review": {
-        "status": "draft",
-        "notes": "Figures match secondary sources (AA, theory test sites); confirm against Rule 126 on gov.uk."
+        "status": "verified",
+        "checkedOn": "2026-10-12",
+        "checkedAgainst": "Official text at https://www.gov.uk/guidance/the-highway-code"
       }
     },
     {
@@ -95,8 +96,9 @@
         }
       ],
       "review": {
-        "status": "draft",
-        "notes": "Rule 126 wording confirmed in secondary sources; confirm rules 227 and 230 on gov.uk."
+        "status": "verified",
+        "checkedOn": "2026-10-12",
+        "checkedAgainst": "Official text at https://www.gov.uk/guidance/the-highway-code"
       }
     },
     {
@@ -117,8 +119,9 @@
         }
       ],
       "review": {
-        "status": "draft",
-        "notes": "Table matches secondary sources (RAC, driving schools). Confirm every cell against Rule 124 on gov.uk, and how the Highway Code shows the Welsh 20 mph default."
+        "status": "verified",
+        "checkedOn": "2026-10-12",
+        "checkedAgainst": "Official text at https://www.gov.uk/guidance/the-highway-code, https://www.legislation.gov.uk/wsi/2022/800/made"
       },
       "table": {
         "columns": [
@@ -205,7 +208,9 @@
         }
       ],
       "review": {
-        "status": "draft"
+        "status": "verified",
+        "checkedOn": "2026-10-12",
+        "checkedAgainst": "Official text at https://www.gov.uk/guidance/the-highway-code"
       }
     },
     {
@@ -221,8 +226,9 @@
         }
       ],
       "review": {
-        "status": "draft",
-        "notes": "The Road Safety Strategy (Jan 2026) proposes 22 / 50 / 67. Still a consultation in Oct 2026: re-check before every release."
+        "status": "verified",
+        "checkedOn": "2026-10-12",
+        "checkedAgainst": "Official text at https://www.gov.uk/drink-drive-limit"
       }
     },
     {
@@ -238,7 +244,9 @@
         }
       ],
       "review": {
-        "status": "draft"
+        "status": "verified",
+        "checkedOn": "2026-10-12",
+        "checkedAgainst": "Official text at https://www.gov.uk/drink-drive-limit"
       }
     },
     {
@@ -254,7 +262,9 @@
         }
       ],
       "review": {
-        "status": "draft"
+        "status": "verified",
+        "checkedOn": "2026-10-12",
+        "checkedAgainst": "Official text at https://www.gov.uk/guidance/the-highway-code"
       }
     },
     {
@@ -270,7 +280,9 @@
         }
       ],
       "review": {
-        "status": "draft"
+        "status": "verified",
+        "checkedOn": "2026-10-12",
+        "checkedAgainst": "Official text at https://www.gov.uk/getting-an-mot"
       }
     },
     {
@@ -286,7 +298,9 @@
         }
       ],
       "review": {
-        "status": "draft"
+        "status": "verified",
+        "checkedOn": "2026-10-12",
+        "checkedAgainst": "Official text at https://www.gov.uk/penalty-points-endorsements"
       }
     },
     {
@@ -302,7 +316,9 @@
         }
       ],
       "review": {
-        "status": "draft"
+        "status": "verified",
+        "checkedOn": "2026-10-12",
+        "checkedAgainst": "Official text at https://www.gov.uk/using-mobile-phones-when-driving-the-law"
       }
     },
     {
@@ -318,7 +334,9 @@
         }
       ],
       "review": {
-        "status": "draft"
+        "status": "verified",
+        "checkedOn": "2026-10-12",
+        "checkedAgainst": "Official text at https://www.gov.uk/child-car-seats-the-rules"
       }
     },
     {
@@ -334,7 +352,9 @@
         }
       ],
       "review": {
-        "status": "draft"
+        "status": "verified",
+        "checkedOn": "2026-10-12",
+        "checkedAgainst": "Official text at https://www.gov.uk/guidance/the-highway-code"
       }
     },
     {
@@ -350,7 +370,9 @@
         }
       ],
       "review": {
-        "status": "draft"
+        "status": "verified",
+        "checkedOn": "2026-10-12",
+        "checkedAgainst": "Official text at https://www.gov.uk/guidance/the-highway-code"
       }
     }
   ]

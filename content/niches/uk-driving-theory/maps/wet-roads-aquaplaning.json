@@ -10,12 +10,12 @@
     "vehicle-handling"
   ],
   "title": "Wet Roads & Aquaplaning",
-  "whatItIs": "In the rain your tyres grip less and you see less. Aquaplaning is when a layer of water lifts the tyres off the road.",
+  "whatItIs": "In the rain your tyres grip less and you see less. Unresponsive steering can mean water is stopping the tyres gripping.",
   "keyFacts": [
     "Stopping distances are at least double on wet roads, so leave at least twice the gap.",
     "If the steering suddenly feels light, water may be stopping the tyres from gripping: ease off the accelerator.",
-    "Spray from large vehicles makes it hard to see and be seen: use dipped headlights.",
-    "Spilt diesel makes the road very slippery: look for a rainbow sheen.",
+    "Rain and spray from other vehicles make it hard to see and be seen: use dipped headlights in dull weather.",
+    "Watch for spilt diesel: it makes the road surface very slippery.",
     "After driving through deep water, test your brakes gently at the first safe place."
   ],
   "visual": {
@@ -32,11 +32,11 @@
       },
       {
         "title": "No sudden moves",
-        "text": "Don't brake hard or steer sharply while you have no grip."
+        "text": "Slow down gradually. Harsh braking or steering can cause a skid."
       },
       {
-        "title": "Grip returns",
-        "text": "As you slow down, the tyres touch the road again."
+        "title": "Keep your distance",
+        "text": "Keep well back from the vehicle in front."
       }
     ]
   },
@@ -44,7 +44,7 @@
     "a": {
       "label": "Aquaplaning",
       "points": [
-        "Water lifts the tyres off the road",
+        "Water stops the tyres gripping",
         "Steering feels light"
       ]
     },
@@ -84,10 +84,17 @@
       "doc": "The Highway Code",
       "ref": "Rule 121 (Brakes after driving through water)",
       "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 119 (Skids)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rule 227 (Wet weather); The Highway Code: Rule 121 (Brakes after driving through water); The Highway Code: Rule 119 (Skids)"
   }
 }

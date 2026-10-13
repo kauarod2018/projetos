@@ -12,7 +12,7 @@
   "whatItIs": "The distance your car travels from the moment you see a hazard until it stops: thinking distance plus braking distance.",
   "keyFacts": [
     "Overall stopping distance = thinking distance + braking distance.",
-    "The table is a general guide: a dry road, a car in good condition and an alert driver.",
+    "The figures are a general guide: they depend on your attention, the road surface, the weather and your vehicle.",
     "On faster roads and in tunnels, leave at least a two-second gap to the vehicle in front.",
     "On wet roads, at least double that gap: stopping distances are at least double.",
     "On icy roads, stopping distances can be up to ten times longer than on dry roads."
@@ -72,10 +72,22 @@
       "doc": "The Highway Code",
       "ref": "Rule 126",
       "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 227 (Wet weather)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 230 (Icy and snowy weather)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rule 126; The Highway Code: Rule 227 (Wet weather); The Highway Code: Rule 230 (Icy and snowy weather)"
   }
 }

@@ -12,13 +12,17 @@
   "whatItIs": "Smart motorways use variable speed limits and may use the hard shoulder as a lane. Some have no hard shoulder at all.",
   "keyFacts": [
     "On some smart motorways there is no hard shoulder: in an emergency, go to an emergency area.",
-    "Emergency areas have an orange surface and a blue sign with an orange SOS phone.",
-    "A hard shoulder has a solid white line. Use it as a lane only when a speed limit shows above it.",
+    "Emergency areas are marked by blue signs with an orange SOS phone, and may have an orange surface.",
+    "Use the hard shoulder as a lane only when a speed limit shows above it. Red X or blank sign: emergencies only.",
     {
-      "text": "Never drive in a lane closed by a red X.",
+      "text": "You MUST NOT drive in a lane closed by a red X.",
       "law": true
     },
-    "If you stop in a live lane, put hazard lights on, stay belted in and call 999 if you can't get out safely."
+    "If you stop in a live lane, put hazard lights on, stay belted in and call 999 if you can't get out safely.",
+    {
+      "text": "After stopping in an emergency area, you MUST use the emergency phone before you rejoin.",
+      "law": true
+    }
   ],
   "visual": {
     "type": "cards",
@@ -27,13 +31,14 @@
     "items": [
       {
         "title": "Emergency areas",
-        "text": "Orange surface, blue sign with an orange SOS phone. Use one if you have a problem.",
+        "text": "Blue sign with an orange SOS phone; may have an orange surface. Use one in an emergency.",
         "swatch": "#F97316"
       },
       {
-        "title": "Solid white line",
-        "text": "A hard shoulder. Use it only when a speed limit shows above it.",
-        "icon": "minus"
+        "title": "Hard shoulder as a lane",
+        "text": "Only when a speed limit shows above it. Red X or blank: emergencies only.",
+        "icon": "minus",
+        "law": true
       },
       {
         "title": "Variable speed limits",
@@ -50,17 +55,17 @@
   },
   "confused": {
     "a": {
-      "label": "Solid white line",
+      "label": "Speed limit above hard shoulder",
       "points": [
-        "A hard shoulder",
-        "Use it only if a limit shows above it"
+        "Open as a running lane",
+        "Keep to the limit shown"
       ]
     },
     "b": {
-      "label": "Broken white line",
+      "label": "Red X or blank above it",
       "points": [
-        "A normal running lane",
-        "Use it like any other lane"
+        "Not a running lane",
+        "Emergencies only"
       ]
     }
   },
@@ -89,13 +94,20 @@
       "url": "https://www.gov.uk/guidance/the-highway-code"
     },
     {
-      "doc": "GOV.UK",
-      "ref": "How to drive on a smart motorway",
-      "url": "https://www.gov.uk/guidance/how-to-drive-on-a-smart-motorway"
+      "doc": "The Highway Code",
+      "ref": "Rules 275 to 278 (Breakdowns and incidents)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "Know Your Traffic Signs (DfT)",
+      "ref": "Stopping on a motorway (p. 109)",
+      "url": "https://assets.publishing.service.gov.uk/media/656ef4271104cf0013fa74ef/know-your-traffic-signs-dft.pdf"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rules 253 to 274 (Motorways); The Highway Code: Rules 275 to 278 (Breakdowns and incidents); Know Your Traffic Signs (DfT): Stopping on a motorway (p. 109)"
   }
 }

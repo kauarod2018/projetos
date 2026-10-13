@@ -38,7 +38,7 @@
       },
       {
         "title": "Slow and gentle",
-        "text": "High gear, low revs, gentle on the accelerator, brakes and steering.",
+        "text": "Slow speed, high gear, gentle on the accelerator and brakes, no sudden steering.",
         "icon": "gauge"
       },
       {
@@ -64,7 +64,7 @@
     "b": {
       "label": "On a wet road",
       "points": [
-        "Tyre noise and spray",
+        "Rain and spray make it hard to see",
         "Stopping distance at least 2×"
       ]
     }
@@ -79,12 +79,12 @@
         "Accelerate hard to keep moving"
       ],
       "answerIndex": 0,
-      "why": "A high gear and gentle acceleration send less power to the wheels, so they are less likely to spin."
+      "why": "The Highway Code says to drive on ice at a slow speed in as high a gear as possible, and to accelerate and brake very gently."
     }
   ],
   "traps": [
     "Clear the whole windscreen, not just a small hole to see through.",
-    "Low gear and high revs make the wheels spin on ice.",
+    "On ice use as high a gear as possible, and accelerate very gently.",
     "Brake before the bend, not while you are in it."
   ],
   "sources": [
@@ -96,6 +96,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rules 228 to 231 (Icy and snowy weather)"
   }
 }

@@ -21,11 +21,14 @@
       "law": true
     },
     {
-      "text": "Red lights flashing at the roadside or on the central reservation: you MUST NOT go past them in any lane.",
+      "text": "Red flashing lights and all lanes shown closed: the road is closed. You MUST NOT go beyond the sign in any lane.",
       "law": true
     },
-    "Flashing amber lights warn of a hazard ahead: slow down and watch for lane closures.",
-    "Signs may show a lane closed ahead with an arrow: move to the open lane in good time."
+    "Flashing amber lights warn of a hazard ahead: reduce your speed and be prepared for the hazard.",
+    {
+      "text": "You MUST follow signs ahead of a closed lane and move safely to an open lane.",
+      "law": true
+    }
   ],
   "visual": {
     "type": "cards",
@@ -45,14 +48,14 @@
         "law": true
       },
       {
-        "title": "Flashing red at the side",
-        "text": "Stop. Don't go past the signal in any lane.",
+        "title": "All lanes shown closed",
+        "text": "Red flashing lights with every lane shown closed: the road is closed. Don't go beyond the sign.",
         "icon": "octagon-alert",
         "law": true
       },
       {
         "title": "Flashing amber",
-        "text": "Hazard ahead. Slow down and be ready for lane changes.",
+        "text": "Hazard ahead. Reduce your speed and be prepared for the hazard.",
         "icon": "triangle-alert"
       }
     ]
@@ -66,10 +69,10 @@
       ]
     },
     "b": {
-      "label": "Red lights at the roadside",
+      "label": "All lanes shown closed",
       "points": [
-        "The whole carriageway is closed",
-        "Don't pass them in any lane"
+        "The road is closed",
+        "Don't go beyond the sign in any lane"
       ]
     }
   },
@@ -89,7 +92,7 @@
   "traps": [
     "A red X is not advice: driving under it is an offence.",
     "A speed in a red ring over the lanes is the legal limit, not a suggestion.",
-    "Flashing red at the side of the road closes every lane."
+    "A roadside red X sign closes the lane it relates to. All lanes shown closed means the road is closed."
   ],
   "sources": [
     {
@@ -98,13 +101,25 @@
       "url": "https://www.gov.uk/guidance/the-highway-code"
     },
     {
-      "doc": "GOV.UK",
-      "ref": "How to drive on a smart motorway",
-      "url": "https://www.gov.uk/guidance/how-to-drive-on-a-smart-motorway"
+      "doc": "The Highway Code",
+      "ref": "Light signals controlling traffic (Motorway signals)",
+      "url": "https://www.gov.uk/guidance/the-highway-code/light-signals-controlling-traffic"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 261 (Speed limits on signs)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "Know Your Traffic Signs (DfT)",
+      "ref": "Motorway signs, signals and road markings (pp. 104 to 108)",
+      "url": "https://assets.publishing.service.gov.uk/media/656ef4271104cf0013fa74ef/know-your-traffic-signs-dft.pdf"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rules 255 to 258 (Motorway signals); The Highway Code: Light signals controlling traffic (Motorway signals); The Highway Code: Rule 261 (Speed limits on signs); Know Your Traffic Signs (DfT): Motorway signs, signals and road markings (pp. 104 to 108)"
   }
 }

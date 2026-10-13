@@ -16,7 +16,11 @@
     "Don't try even simple repairs on the hard shoulder.",
     "Marker posts on the hard shoulder show the direction of the nearest emergency phone.",
     "If you have a disability that stops you leaving the car, stay in it with hazard lights on and call for help.",
-    "To rejoin, build up speed on the hard shoulder and move out only when there is a safe gap."
+    "To rejoin, build up speed on the hard shoulder and move out only when there is a safe gap.",
+    {
+      "text": "After stopping in an emergency area, you MUST use the emergency phone before you rejoin.",
+      "law": true
+    }
   ],
   "visual": {
     "type": "steps",
@@ -36,7 +40,7 @@
       },
       {
         "title": "Wait behind the barrier",
-        "text": "Keep well away from the traffic and the hard shoulder."
+        "text": "Keep well away from your vehicle and the moving traffic."
       },
       {
         "title": "Call for help",
@@ -65,7 +69,7 @@
       "question": "You break down on a motorway and stop on the hard shoulder. Where should you and your passengers wait?",
       "options": [
         "Behind the barrier, away from the traffic",
-        "In the car with seat belts on",
+        "In the car, to keep warm and dry",
         "On the hard shoulder behind the car",
         "In front of the car to warn traffic"
       ],
@@ -92,6 +96,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rules 275 to 278 (Breakdowns); The Highway Code: Rules 253 to 274 (Motorways)"
   }
 }

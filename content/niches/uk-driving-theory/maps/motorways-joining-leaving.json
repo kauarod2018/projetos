@@ -9,12 +9,11 @@
     "motorway-rules"
   ],
   "title": "Joining & Leaving a Motorway",
-  "whatItIs": "You join a motorway from a slip road and leave by one. Match your speed when joining, and plan your exit early.",
+  "whatItIs": "You usually join and leave a motorway by a slip road. Match your speed when joining, and plan your exit early.",
   "keyFacts": [
     "On the slip road, build up your speed to match the traffic on the motorway.",
     "Give priority to traffic already on the motorway and join where there is a safe gap.",
-    "Stay in the left-hand lane long enough to get used to the speed before you overtake.",
-    "Countdown markers show the distance to the exit slip road: 300, 200 and 100 yards.",
+    "Countdown markers show the distance to the start of the deceleration lane. Each bar is about 100 yards.",
     "Move into the left lane well before your exit, signal left in good time, and slow down on the slip road.",
     "After leaving, check your speedometer: you may be going faster than it feels."
   ],
@@ -28,7 +27,7 @@
       },
       {
         "title": "Mirrors and look",
-        "text": "Check mirrors and look over your right shoulder for a gap."
+        "text": "Check the motorway traffic, using mirrors and a quick sideways glance."
       },
       {
         "title": "Join a gap",
@@ -40,7 +39,7 @@
       },
       {
         "title": "Exit early",
-        "text": "Get into the left lane early. Signal left by the markers."
+        "text": "Get into the left lane early and signal left in good time."
       },
       {
         "title": "Slow on the slip",
@@ -78,9 +77,9 @@
     }
   ],
   "traps": [
-    "Drivers on the motorway don't have to move over to let you in.",
-    "Countdown markers count down to the start of the slip road.",
-    "After the motorway, 40 mph can feel like 20: check your speedometer."
+    "Traffic already on the motorway has priority: match its speed and fit into a safe gap.",
+    "Countdown markers count down to the start of the deceleration lane, about 100 yards per bar.",
+    "After the motorway, 50 mph can feel like 30: check your speedometer."
   ],
   "sources": [
     {
@@ -90,13 +89,14 @@
     },
     {
       "doc": "Know Your Traffic Signs (DfT)",
-      "ref": "Motorway signs",
+      "ref": "Motorway signs, signals and road markings (p. 93, countdown markers)",
       "url": "https://assets.publishing.service.gov.uk/media/656ef4271104cf0013fa74ef/know-your-traffic-signs-dft.pdf"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft",
-    "notes": "Countdown markers (300/200/100 yards) cross-checked by web search; confirm against Know Your Traffic Signs."
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rules 253 to 274 (Motorways); Know Your Traffic Signs (DfT): Motorway signs, signals and road markings (p. 93, countdown markers)"
   }
 }

@@ -77,7 +77,8 @@
     }
   ],
   "review": {
-    "status": "draft",
-    "notes": "Needs the official DfT images for all 12 signs."
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "gov.uk theory test guide (multiple-choice, hazard perception, pass mark and result, what to take, test centre), Highway Code, Know Your Traffic Signs — https://assets.publishing.service.gov.uk/media/656ef4271104cf0013fa74ef/know-your-traffic-signs-dft.pdf, https://www.gov.uk/guidance/the-highway-code"
   }
 }

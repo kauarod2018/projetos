@@ -14,9 +14,9 @@
   "keyFacts": [
     "On faster roads and in tunnels, leave at least a two-second gap to the vehicle in front.",
     "On wet roads, at least double the gap. On icy roads, leave much more.",
-    "Count it: as the vehicle ahead passes a fixed point, say \"Only a fool breaks the two-second rule\".",
-    "Reach the point before you finish the phrase? You are too close: drop back.",
-    "If someone is driving too close behind you, ease off gently to widen the gap in front of you."
+    "Measure it: note when the vehicle ahead passes a fixed point, such as a sign, and count two seconds.",
+    "Reach that point within two seconds? You are too close: drop back.",
+    "If someone overtakes and pulls into the gap in front, drop back to keep a two-second gap."
   ],
   "visual": {
     "type": "stats",
@@ -71,7 +71,7 @@
   "traps": [
     "Two seconds is the minimum on dry roads, not a target.",
     "Wet road? Make it at least four seconds.",
-    "Being tailgated? Don't brake sharply: drop back from the car in front."
+    "Being tailgated? Don't speed up to get away from them: keep your gap ahead."
   ],
   "sources": [
     {
@@ -83,10 +83,22 @@
       "doc": "The Highway Code",
       "ref": "Rules 227 to 231 (Driving in adverse weather)",
       "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 168 (Being overtaken)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 235 (Fog)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rule 126 (Stopping distances); The Highway Code: Rules 227 to 231 (Driving in adverse weather); The Highway Code: Rule 168 (Being overtaken); The Highway Code: Rule 235 (Fog)"
   }
 }

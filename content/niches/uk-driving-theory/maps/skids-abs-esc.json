@@ -9,14 +9,14 @@
     "vehicle-handling",
     "safety-margins"
   ],
-  "title": "Skids, ABS & ESC",
-  "whatItIs": "A skid happens when the tyres lose grip. ABS and ESC help you keep control, but they can't change the laws of physics.",
+  "title": "Skids & ABS",
+  "whatItIs": "A skid happens when the tyres lose grip. ABS helps you keep steering control, but don't assume it will stop you sooner.",
   "keyFacts": [
     "Skids are usually caused by harsh braking, accelerating or steering, or by going too fast for the conditions.",
-    "If the rear of the car skids to the right, steer smoothly to the right to recover.",
-    "In a skid, ease off the brake and accelerator. Braking hard makes it worse.",
+    "If the rear of the car skids to the right, steer immediately to the right to recover.",
+    "In a skid, remove the cause: release the brake pedal fully or ease off the accelerator.",
     "With ABS, brake firmly in an emergency and keep your foot down: you can still steer.",
-    "ABS may not shorten your stopping distance, especially on loose or wet surfaces."
+    "Don't assume a car with ABS will stop in a shorter distance."
   ],
   "visual": {
     "type": "cards",
@@ -25,7 +25,7 @@
     "items": [
       {
         "title": "Rear skid",
-        "text": "Ease off the pedals and steer smoothly the same way as the skid.",
+        "text": "Release the brake or ease off the accelerator, and steer the same way as the skid.",
         "icon": "rotate-cw"
       },
       {
@@ -34,13 +34,13 @@
         "icon": "octagon-pause"
       },
       {
-        "title": "ESC",
-        "text": "Brakes single wheels to keep the car stable on bends and in swerves.",
-        "icon": "activity"
+        "title": "Emergency stop (no ABS)",
+        "text": "Brake immediately, but try not to lock the wheels: locked wheels can mean loss of control.",
+        "icon": "octagon-alert"
       },
       {
         "title": "Speed still matters",
-        "text": "No system can stop a car that is going too fast for the road.",
+        "text": "Skids are often caused by driving too fast for the road conditions.",
         "icon": "gauge"
       }
     ]
@@ -54,10 +54,10 @@
       ]
     },
     "b": {
-      "label": "ESC",
+      "label": "Without ABS",
       "points": [
-        "Works when the car starts to slide",
-        "Helps keep it pointing the right way"
+        "Harsh braking can lock the wheels",
+        "Locked wheels can cause loss of control"
       ]
     }
   },
@@ -71,24 +71,25 @@
         "Pull the handbrake"
       ],
       "answerIndex": 0,
-      "why": "Ease off the pedals and steer smoothly in the same direction as the skid: rear goes right, steer right."
+      "why": "Release the brake or ease off the accelerator, and steer in the direction of the skid: if the rear skids right, steer right."
     }
   ],
   "traps": [
-    "ABS isn't a reason to drive closer or faster.",
-    "With ABS, keep pressing firmly even if the pedal judders.",
-    "Braking hard in a skid makes it worse."
+    "Don't assume ABS will stop you in a shorter distance.",
+    "With ABS in an emergency, brake firmly and don't release until you have slowed down.",
+    "In a skid, release the brake pedal fully or ease off the accelerator."
   ],
   "sources": [
     {
       "doc": "The Highway Code",
-      "ref": "Rules 119 and 120 (Skids and ABS)",
+      "ref": "Rules 118 to 120 (Emergency braking, skids and ABS)",
       "url": "https://www.gov.uk/guidance/the-highway-code"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft",
-    "notes": "ESC is not covered by the Highway Code rules cited; the ESC lines are general vehicle-handling knowledge. Confirm wording against DVSA learning material."
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rules 118 to 120 (Emergency braking, skids and ABS)"
   }
 }

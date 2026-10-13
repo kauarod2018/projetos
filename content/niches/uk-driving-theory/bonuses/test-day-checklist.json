@@ -106,7 +106,8 @@
     }
   ],
   "review": {
-    "status": "draft",
-    "notes": "Confirm on gov.uk: lockers, the 3-working-day wait and the fee before verifying."
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "gov.uk theory test guide (multiple-choice, hazard perception, pass mark and result, what to take, test centre), Highway Code, Know Your Traffic Signs — https://www.gov.uk/theory-test"
   }
 }

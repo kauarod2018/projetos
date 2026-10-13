@@ -13,7 +13,7 @@
   "keyFacts": [
     "Coasting means rolling in neutral or with the clutch pressed down. Avoid it.",
     "When you coast you lose engine braking, so you speed up quickly downhill and have less control.",
-    "On a steep downhill, choose a lower gear so engine braking helps control your speed.",
+    "Before a long downhill slope, select a lower gear so engine braking helps control your speed.",
     "Parking uphill: turn the wheels away from the kerb. Downhill: turn them towards it.",
     "On single-track roads, give way to vehicles coming uphill whenever you can."
   ],
@@ -29,7 +29,7 @@
       },
       {
         "title": "Going uphill",
-        "text": "You may need a lower gear. Hold back from slow vehicles ahead.",
+        "text": "If you are slow, use a climbing lane if there is one so others can pass.",
         "icon": "trending-up"
       },
       {
@@ -49,7 +49,7 @@
       "label": "Parked facing uphill",
       "points": [
         "Wheels turned away from the kerb",
-        "Handbrake on, first gear"
+        "Handbrake on, a forward gear"
       ]
     },
     "b": {
@@ -74,8 +74,8 @@
     }
   ],
   "traps": [
-    "Coasting doesn't save useful fuel, and it costs you control.",
-    "Uphill parking: wheels away from the kerb, so the car rolls into it.",
+    "Coasting downhill: speed builds quickly and heavy use of the footbrake can make it less effective.",
+    "Uphill parking: forward gear, wheels away from the kerb. Downhill: reverse gear, wheels towards it.",
     "On narrow hill roads, the vehicle coming uphill usually gets priority."
   ],
   "sources": [
@@ -93,10 +93,22 @@
       "doc": "The Highway Code",
       "ref": "Rule 155 (Single-track roads)",
       "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 160 (Once moving)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 139 (Climbing and crawler lanes)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rule 122 (Coasting); The Highway Code: Rule 252 (Parking on hills); The Highway Code: Rule 155 (Single-track roads); The Highway Code: Rule 160 (Once moving); The Highway Code: Rule 139 (Climbing and crawler lanes)"
   }
 }

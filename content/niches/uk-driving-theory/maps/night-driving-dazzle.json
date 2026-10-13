@@ -13,7 +13,10 @@
   "whatItIs": "At night you see less and others see you less. Use your lights well and never dazzle other road users.",
   "keyFacts": [
     "If oncoming headlights dazzle you, slow down and stop if you need to.",
-    "Dip your headlights for oncoming traffic and when you are following another vehicle.",
+    {
+      "text": "You MUST NOT use any lights in a way that would dazzle or cause discomfort to other road users.",
+      "law": true
+    },
     "When overtaking at night, stay on dipped beam until you are level, then use main beam if needed.",
     "Drive at a speed that lets you stop within the distance your lights show to be clear.",
     "Pedestrians, cyclists and horse riders are much harder to see after dark."
@@ -25,23 +28,24 @@
     "items": [
       {
         "title": "Main beam",
-        "text": "On unlit roads when nobody is ahead or coming towards you.",
+        "text": "On unlit roads at night, as long as it won't dazzle anyone ahead or coming towards you.",
         "icon": "sun"
       },
       {
         "title": "Dipped beam",
-        "text": "In built-up areas, for oncoming traffic and when following.",
+        "text": "At night in built-up areas and in dull daytime weather.",
         "icon": "lightbulb"
       },
       {
         "title": "Dazzled",
-        "text": "Slow down, and stop if you need to. Don't look at the lights.",
+        "text": "Slow down, and stop if you need to.",
         "icon": "eye-off"
       },
       {
         "title": "Clean glass",
-        "text": "A dirty windscreen makes glare much worse at night.",
-        "icon": "sparkles"
+        "text": "Windscreen and windows MUST be kept clean and free from obstructions.",
+        "icon": "sparkles",
+        "law": true
       }
     ]
   },
@@ -49,15 +53,15 @@
     "a": {
       "label": "Main beam",
       "points": [
-        "Unlit roads, nobody ahead",
-        "Dip it for others"
+        "Unlit roads at night",
+        "Never if it would dazzle"
       ]
     },
     "b": {
       "label": "Dipped beam",
       "points": [
-        "Built-up areas and traffic",
-        "Doesn't dazzle others"
+        "Built-up areas at night",
+        "Also in dull daytime weather"
       ]
     }
   },
@@ -76,23 +80,35 @@
   ],
   "traps": [
     "Don't answer dazzle with your own main beam.",
-    "At dusk, cyclists and pedestrians are especially hard to see.",
-    "Tiredness is worse at night: plan rest breaks."
+    "At night other road users are harder to see: reduce your speed.",
+    "Avoid long journeys between midnight and 6 am, when alertness is at its lowest."
   ],
   "sources": [
     {
       "doc": "The Highway Code",
-      "ref": "Rules 113 to 116 (Lighting)",
+      "ref": "Rules 113 to 116 (Lighting requirements)",
       "url": "https://www.gov.uk/guidance/the-highway-code"
     },
     {
       "doc": "The Highway Code",
-      "ref": "Rule 126 (Stopping distances)",
+      "ref": "Rule 125 (Speed limits)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 91 (Tiredness)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Annex 6 (Vehicle maintenance, safety and security)",
       "url": "https://www.gov.uk/guidance/the-highway-code"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-12",
+    "checkedAgainst": "Official text on gov.uk — The Highway Code: Rules 113 to 116 (Lighting requirements); The Highway Code: Rule 125 (Speed limits); The Highway Code: Rule 91 (Tiredness); The Highway Code: Annex 6 (Vehicle maintenance, safety and security)"
   }
 }
