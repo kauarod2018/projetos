@@ -40,10 +40,12 @@ describe('content as committed', () => {
     assert.deepEqual(checkContent(loadContent(), { release: false }).errors, []);
   });
 
-  test('is blocked in release mode while the shop data is missing', () => {
-    const errors = checkContent(loadContent(), { release: true }).errors;
-    expectProblem(errors, /placeholder/);
-    expectProblem(errors, /checkout/);
+  test('is blocked in release mode while the checkout links are missing', () => {
+    expectProblem(checkContent(loadContent(), { release: true }).errors, /checkout/);
+  });
+
+  test('a placeholder domain is blocked in release mode', () => {
+    expectProblem(problemsAfter('site.json', (s) => (s.domain = '{{DOMAIN}}'), true), /domain is still a placeholder/);
   });
 
   test('a verified map that uses a number still in draft', () => {
