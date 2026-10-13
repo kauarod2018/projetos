@@ -40,9 +40,8 @@ describe('content as committed', () => {
     assert.deepEqual(checkContent(loadContent(), { release: false }).errors, []);
   });
 
-  test('is blocked in release mode while maps are drafts and signs are not official', () => {
+  test('is blocked in release mode while maps are drafts and the shop data is missing', () => {
     const errors = checkContent(loadContent(), { release: true }).errors;
-    expectProblem(errors, /without the official image/);
     expectProblem(errors, /topics are below the minimum/);
     expectProblem(errors, /placeholder/);
   });
@@ -115,8 +114,9 @@ describe('numbers and niche errors', () => {
   });
 
   test('an "official" sign without its file', () => {
+    // every sign is official now, so the test removes the file from one
     expectProblem(
-      problemsAfter(join('assets', 'signs', 'gb', 'signs.json'), (s) => (s.signs[0].status = 'official')),
+      problemsAfter(join('assets', 'signs', 'gb', 'signs.json'), (s) => (s.signs[0].file = null)),
       /needs "file" and "officialNumber"/,
     );
   });
