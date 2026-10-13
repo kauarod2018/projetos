@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "id": "weights-and-axles",
+  "niche": "uk-hgv-theory",
+  "area": "weights-and-loads",
+  "order": 1,
+  "tier": "basic",
+  "officialTopics": [
+    "weights-and-dimensions"
+  ],
+  "title": "Weights, Axles & Overloading",
+  "whatItIs": "Every lorry has legal limits for its gross weight, its train weight and each axle. Overloading is illegal: the vehicle is less stable, harder to steer and takes longer to stop.",
+  "keyFacts": [
+    {
+      "text": "A vehicle MUST NOT be used on a road if its weight, combination weight or any axle weight is over the legal maximum.",
+      "law": true
+    },
+    "Gross vehicle weight includes the vehicle, load, driver and passengers. Train weight adds the trailer.",
+    "Use the Department for Transport plated weights: they're the legal limits in Great Britain.",
+    "Don't automatically trust declared weights or delivery notes: the responsibility is yours, not the customer's."
+  ],
+  "visual": {
+    "type": "table",
+    "caption": "Maximum authorised weights: examples from the regulations",
+    "data": {
+      "columns": [
+        "Vehicle",
+        "Axles",
+        "Maximum weight"
+      ],
+      "rows": [
+        [
+          "Rigid",
+          "2",
+          "18,000 kg"
+        ],
+        [
+          "Rigid*",
+          "3",
+          "26,000 kg"
+        ],
+        [
+          "Articulated",
+          "5 or more",
+          "40,000 kg"
+        ],
+        [
+          "Articulated*",
+          "6 or more",
+          "44,000 kg"
+        ]
+      ],
+      "notes": [
+        "*If conditions in the regulations are met. Your vehicle's plate shows its own legal limits."
+      ]
+    }
+  },
+  "confused": {
+    "a": {
+      "label": "Gross vehicle weight",
+      "points": [
+        "Maximum permitted weight of the vehicle plus its load",
+        "Includes the driver and any passengers"
+      ]
+    },
+    "b": {
+      "label": "Gross train weight",
+      "points": [
+        "Maximum permitted weight of the vehicle plus any trailer",
+        "Includes the trailer and the load it carries"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You've made several drops and the rest of the load is at the front of the trailer. Why check your axle weights?",
+      "options": [
+        "The gross weight is now higher",
+        "The new weight spread may overload an axle",
+        "Axle weights only matter when fully loaded",
+        "The train weight limit no longer applies"
+      ],
+      "answerIndex": 1,
+      "why": "Removing part of the load reduces the gross weight, but the new weight distribution may overload individual axles."
+    },
+    {
+      "question": "Your vehicle has a manufacturer's plate and a Department for Transport plate. Which weights should you keep to?",
+      "options": [
+        "The manufacturer's plate",
+        "Whichever plate shows the higher weight",
+        "The Department for Transport plate",
+        "The weight shown on the delivery note"
+      ],
+      "answerIndex": 2,
+      "why": "Where a vehicle has both, the Department for Transport plated weights are the legal limits in England, Scotland and Wales."
+    }
+  ],
+  "traps": [
+    "Gross train weight isn't gross vehicle weight: it includes the trailer being towed.",
+    "Lift or tag axle raised while loaded? Axle or gross weights could go over their limits.",
+    "Overloaded at a roadside check? Immediate prohibition, and the vehicle may be immobilised."
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: HGV overloading: the basics",
+      "ref": "Preventing overloading; effects of overloading",
+      "url": "https://www.gov.uk/government/publications/hgv-overloading-the-basics/hgv-overloading-the-basics"
+    },
+    {
+      "doc": "The Road Vehicles (Authorised Weight) Regulations 1998 (SI 1998/3111)",
+      "ref": "Reg 4(1); Sch 1 Table 1; Sch 2 Table 3",
+      "url": "https://www.legislation.gov.uk/uksi/1998/3111/contents"
+    },
+    {
+      "doc": "The Road Vehicles (Authorised Weight) (Amendment) Regulations 2000 (SI 2000/3224)",
+      "ref": "Reg 6 (Sch 2 Table 3, item 13)",
+      "url": "https://www.legislation.gov.uk/uksi/2000/3224/contents"
+    },
+    {
+      "doc": "GOV.UK: Securing loads on HGVs and goods vehicles",
+      "ref": "2. Load securing: the basics",
+      "url": "https://www.gov.uk/guidance/securing-loads-on-hgvs-and-goods-vehicles/2-load-securing-the-basics"
+    },
+    {
+      "doc": "GOV.UK: Roadside checks for HGV, van, bus or coach drivers",
+      "ref": "Overloading prohibitions",
+      "url": "https://www.gov.uk/roadside-vehicle-checks-for-commercial-drivers/roadside-prohibitions"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

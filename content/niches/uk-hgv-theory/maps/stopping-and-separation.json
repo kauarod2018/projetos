@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "niche": "uk-hgv-theory",
+  "id": "stopping-and-separation",
+  "area": "driving-large-vehicles",
+  "order": 5,
+  "tier": "complete",
+  "officialTopics": [
+    "road-and-weather",
+    "rules-of-the-road"
+  ],
+  "title": "Stopping Distances & Keeping Back",
+  "whatItIs": "Large vehicles need a greater distance to stop. Never get closer than your overall stopping distance: keep at least a two-second gap, four seconds in a tunnel, and far more on wet or icy roads.",
+  "keyFacts": [
+    "Drive at a speed that lets you stop well within the distance you can see to be clear.",
+    "Never get closer to the vehicle in front than your overall stopping distance.",
+    "Keep at least a two-second gap on high-speed roads and in tunnels. Large vehicles need a greater distance to stop.",
+    "Driving a large vehicle in a tunnel: allow a four-second gap. If you stop in a tunnel, leave at least 5 metres.",
+    "Wet roads: stopping distances at least double. Icy roads: they can be ten times greater.",
+    "If someone overtakes and pulls into the gap in front of you, drop back to restore a two-second gap."
+  ],
+  "visual": {
+    "type": "stats",
+    "caption": "Following gaps (Highway Code rule 126)",
+    "items": [
+      {
+        "value": "2 seconds",
+        "label": "Minimum gap on high-speed roads",
+        "note": "Count it from a fixed point, such as a sign"
+      },
+      {
+        "value": "4 seconds",
+        "label": "Large vehicle in a tunnel"
+      },
+      {
+        "value": "×2",
+        "label": "At least double the gap on wet roads"
+      },
+      {
+        "value": "×10",
+        "label": "Up to ten times the gap on icy roads"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Moving in a tunnel",
+      "points": [
+        "Large vehicle: a four-second gap",
+        "Visibility is reduced in tunnels"
+      ]
+    },
+    "b": {
+      "label": "Stopped in a tunnel",
+      "points": [
+        "Leave at least 5 metres to the vehicle in front",
+        "A distance, not a time gap"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You're driving a lorry through a road tunnel. What gap should you leave to the vehicle in front?",
+      "options": [
+        "At least four seconds",
+        "At least one second",
+        "At least two seconds",
+        "At least ten seconds"
+      ],
+      "answerIndex": 0,
+      "why": "Large vehicles need a greater distance to stop. If you are driving a large vehicle in a tunnel, you should allow a four-second gap."
+    },
+    {
+      "question": "The road is wet. How should your following gap change?",
+      "options": [
+        "At least double it",
+        "Keep it at two seconds",
+        "Reduce it, as traffic is slower",
+        "Add one second to it"
+      ],
+      "answerIndex": 0,
+      "why": "In wet weather, stopping distances will be at least double those on dry roads, so the gap should be at least doubled."
+    }
+  ],
+  "traps": [
+    "In a tunnel: four seconds while moving, but at least 5 metres when stopped. Don’t mix them up.",
+    "ABS keeps you steering, but don't assume it will stop you in a shorter distance.",
+    "Ice can make stopping distances ten times greater, not just double.",
+    "In fog, rear lights ahead can give a false sense of security: keep a safe distance."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 120 and 126 (stopping distances, tunnels)",
+      "url": "https://www.gov.uk/guidance/the-highway-code/general-rules-techniques-and-advice-for-all-drivers-and-riders-103-to-158"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 168 (being overtaken)",
+      "url": "https://www.gov.uk/guidance/the-highway-code/using-the-road-159-to-203"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 227, 230 and 235",
+      "url": "https://www.gov.uk/guidance/the-highway-code/driving-in-adverse-weather-conditions-226-to-237"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

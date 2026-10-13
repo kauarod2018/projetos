@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "niche": "uk-hgv-theory",
+  "id": "blind-spots",
+  "area": "driving-large-vehicles",
+  "order": 1,
+  "tier": "basic",
+  "officialTopics": [
+    "restricted-view"
+  ],
+  "title": "Blind Spots, Mirrors & Restricted View",
+  "whatItIs": "Mirrors don't cover every area around a lorry. Use them often and early, look round into the blind spots before you move, and check every mirror and camera daily.",
+  "keyFacts": [
+    "Before moving off: check all mirrors, look round into the blind spots, signal if needed, then take a final look round.",
+    "Use your mirrors frequently, and in good time before you signal or change direction or speed.",
+    "Mirrors don't cover all areas: there will be blind spots, so you need to look round and check.",
+    "Before turning, check mirrors and blind spot again, and watch for traffic coming up on your left in a large vehicle.",
+    {
+      "text": "You MUST NOT reverse further than necessary. If you cannot see clearly, get someone to guide you.",
+      "law": true
+    },
+    "Daily check: every mirror in place and not damaged, obscured or insecure; any camera working with the correct view."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Where other road users can be hidden from your cab",
+    "columns": 2,
+    "items": [
+      {
+        "icon": "bike",
+        "title": "Alongside, on your left",
+        "text": "Cyclists and motorcyclists waiting alongside or coming up on your left, especially before you turn left."
+      },
+      {
+        "icon": "scan-eye",
+        "title": "Just in front of the cab",
+        "text": "At advanced stop lines, stop far enough back to see the whole cyclists’ area, allowing for the blind spot in front."
+      },
+      {
+        "icon": "car-front",
+        "title": "Close behind you",
+        "text": "A driver following too closely may not be visible in your mirrors."
+      },
+      {
+        "icon": "eye-off",
+        "title": "Behind you when reversing",
+        "text": "Check the blind spot behind before you reverse. Get someone to guide you if you cannot see clearly."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Using your mirrors",
+      "points": [
+        "Frequently, so you always know what is behind and to each side",
+        "In good time before you signal or change direction or speed"
+      ]
+    },
+    "b": {
+      "label": "Looking round (blind spots)",
+      "points": [
+        "Before moving off, plus a final look before you go",
+        "Before turning, to make sure you are not being overtaken"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You're about to move off from the kerb in your lorry and you've checked all your mirrors. What should you do next?",
+      "options": [
+        "Look round to check the blind spots",
+        "Move off and check your mirrors once moving",
+        "Sound your horn to warn others",
+        "Switch on your hazard warning lights"
+      ],
+      "answerIndex": 0,
+      "why": "Before moving off, use all mirrors, then look round to check the blind spots (the areas you can't see in the mirrors), signal if necessary and look round for a final check."
+    },
+    {
+      "question": "You're stopping at traffic lights with an advanced stop line for cyclists. Where should you stop your large vehicle?",
+      "options": [
+        "Far enough behind the first white line to see the whole cyclists’ area",
+        "On the second white line",
+        "Inside the cyclists’ area, close to the second line",
+        "Level with any cyclists waiting there"
+      ],
+      "answerIndex": 0,
+      "why": "Drivers of large vehicles should stop far enough behind the first white line to see the whole area where cyclists may be waiting, allowing for any blind spot in front of the vehicle."
+    }
+  ],
+  "traps": [
+    "Mirrors alone are not enough: there will always be blind spots, so look round as well.",
+    "A vehicle can disappear from view in your mirror: take a quick sideways glance before you change lanes.",
+    "A camera fitted instead of a mirror still needs a daily check: it must work and show the correct view.",
+    "Cyclists may pass on your left and be hidden from view, especially just before you turn left."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 159, 161, 178, 180, 182, 202 and 203",
+      "url": "https://www.gov.uk/guidance/the-highway-code/using-the-road-159-to-203"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 211 and 221",
+      "url": "https://www.gov.uk/guidance/the-highway-code/road-users-requiring-extra-care-204-to-225"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 267 (blind spot check before overtaking)",
+      "url": "https://www.gov.uk/guidance/the-highway-code/motorways-253-to-273"
+    },
+    {
+      "doc": "GOV.UK: Carry out HGV daily walkaround checks",
+      "ref": "1. Front view (mirrors, cameras and glass)",
+      "url": "https://www.gov.uk/guidance/carry-out-daily-heavy-goods-vehicle-hgv-walkaround-checks"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

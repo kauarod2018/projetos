@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "id": "load-types",
+  "niche": "uk-hgv-theory",
+  "area": "weights-and-loads",
+  "order": 6,
+  "tier": "complete",
+  "officialTopics": [
+    "vehicle-loading"
+  ],
+  "title": "Carrying Different Types of Load",
+  "whatItIs": "Some loads have their own rules: pallets, curtainsiders, tippers, plant, IBCs, gas cylinders and more. The common thread: make the load stable first, then secure it to the vehicle.",
+  "keyFacts": [
+    {
+      "text": "Pallets: the load MUST be secured to the pallet as one unit before loading. Securing the pallet alone isn't enough.",
+      "law": true
+    },
+    {
+      "text": "Standard curtainsiders: buckle straps and internal nets MUST NOT be used for items or stacks over 400 kg.",
+      "law": true
+    },
+    "Secure stacked pallets by the stack's weight: two 300 kg pallets stacked count as 600 kg.",
+    {
+      "text": "Tippers: you MUST NOT use a net if the load is above the sides, or rely on the load settling below them.",
+      "law": true
+    }
+  ],
+  "visual": {
+    "type": "table",
+    "caption": "Quick rules for some load types",
+    "data": {
+      "columns": [
+        "Load",
+        "Key rule"
+      ],
+      "rows": [
+        [
+          "Heavy plant",
+          "Barriers front and rear plus lashings: usually at least 4 direct lashings"
+        ],
+        [
+          "Scaffolding over the headboard",
+          "At least 2 loop (choke) lashings, unless clamped"
+        ],
+        [
+          "IBCs",
+          "2 lashing straps over the frame, or a system that spreads the force"
+        ],
+        [
+          "Construction products",
+          "Secure the last row with 2 frictional lashings"
+        ],
+        [
+          "Multi-deck upper deck",
+          "Single layer, stable without lashings, up to 400 kg each"
+        ],
+        [
+          "Gas cylinders",
+          "Never in the cab or footwell. LPG containers upright"
+        ]
+      ],
+      "notes": []
+    }
+  },
+  "confused": {
+    "a": {
+      "label": "Standard curtainsider",
+      "points": [
+        "Curtains don't secure the load",
+        "Buckle straps or nets: up to 400 kg"
+      ]
+    },
+    "b": {
+      "label": "XL curtainsider (BS EN 12642 XL)",
+      "points": [
+        "Body restrains the load if it positively fits",
+        "Within 30 cm front and rear, 8 cm sides"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You're carrying two 300 kg pallets stacked on each other. What weight should you secure them for?",
+      "options": [
+        "300 kg, as two separate pallets",
+        "600 kg, the weight of the stack",
+        "300 kg, the bottom pallet only",
+        "400 kg, the curtainsider limit"
+      ],
+      "answerIndex": 1,
+      "why": "Use the weight of the stack, not individual pallets: two stacked 300 kg pallets are secured as a 600 kg pallet."
+    },
+    {
+      "question": "Where must you never carry gas cylinders?",
+      "options": [
+        "In the cab or footwell",
+        "In racks fitted to the vehicle",
+        "In lift-on-off cribs or frames",
+        "Upright in a ventilated cargo space"
+      ],
+      "answerIndex": 0,
+      "why": "Cylinders must not be carried in the cab or footwell of any vehicle: they could cause injury in a collision."
+    }
+  ],
+  "traps": [
+    "A gap over 30 cm cancels the XL rating: secure the load as in a non-XL vehicle.",
+    "XL-rated curtains on a standard trailer don't make it an XL vehicle.",
+    "An unstable load can never be made safe with lashings alone."
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Securing loads on HGVs and goods vehicles",
+      "ref": "6. How to carry different types of load",
+      "url": "https://www.gov.uk/guidance/securing-loads-on-hgvs-and-goods-vehicles/6-how-to-carry-different-types-of-load-in-hgvs-and-goods-vehicles"
+    },
+    {
+      "doc": "GOV.UK: Securing loads on HGVs and goods vehicles",
+      "ref": "5. How to load different HGVs (curtainsiders, tippers, multi-deck)",
+      "url": "https://www.gov.uk/guidance/securing-loads-on-hgvs-and-goods-vehicles/5-how-to-load-different-hgvs-light-goods-vehicles-small-vans-and-cars"
+    },
+    {
+      "doc": "GOV.UK: Securing loads on HGVs and goods vehicles",
+      "ref": "4. Ways to secure a load (positive fit)",
+      "url": "https://www.gov.uk/guidance/securing-loads-on-hgvs-and-goods-vehicles/4-ways-to-secure-a-load-in-an-hgv-or-goods-vehicle"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

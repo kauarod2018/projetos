@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "niche": "uk-hgv-theory",
+  "id": "fuel-efficient-driving",
+  "area": "driving-large-vehicles",
+  "order": 9,
+  "tier": "basic",
+  "officialTopics": [
+    "environment"
+  ],
+  "title": "Fuel-Efficient Driving & Emissions",
+  "whatItIs": "Using less fuel cuts costs and harmful emissions. Don't leave the engine running unnecessarily, keep tyres correctly inflated and report emission control faults straight away.",
+  "keyFacts": [
+    {
+      "text": "You MUST NOT leave an engine running unnecessarily while your vehicle is stationary on a public road.",
+      "law": true
+    },
+    "Likely to be stopped for more than a couple of minutes? Apply the parking brake and switch off the engine.",
+    "A 20% drop in tyre pressure can increase fuel consumption by 2%.",
+    "SAFED, the DfT-approved Safe and Fuel Efficient Driving programme, has shown average fuel savings of over 10%.",
+    {
+      "text": "Exhaust emissions MUST NOT exceed prescribed levels.",
+      "law": true
+    },
+    "Watch the emission control warning lamps and keep the AdBlue (diesel exhaust fluid) level topped up."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "What helps a lorry use less fuel",
+    "columns": 3,
+    "items": [
+      {
+        "icon": "power",
+        "title": "Engine off",
+        "text": "Don't leave it running unnecessarily when stationary on a public road.",
+        "law": true
+      },
+      {
+        "icon": "circle-gauge",
+        "title": "Tyres",
+        "text": "Keep tyres correctly inflated. Energy efficient tyres can also cut fuel use."
+      },
+      {
+        "icon": "gauge",
+        "title": "Driver training",
+        "text": "Effective training cuts fuel use and costs such as brake and tyre wear."
+      },
+      {
+        "icon": "route",
+        "title": "Route planning",
+        "text": "Plan the most fuel-efficient route to cut fuel use and emissions."
+      },
+      {
+        "icon": "wind",
+        "title": "Aerodynamics",
+        "text": "Wind deflectors can reduce drag and fuel consumption."
+      },
+      {
+        "icon": "wrench",
+        "title": "Maintenance",
+        "text": "Servicing to the manufacturer's standards saves fuel and cuts exhaust emissions."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Switch the engine off",
+      "points": [
+        "Parked, or stationary for more than a couple of minutes",
+        "Apply the parking brake as well"
+      ]
+    },
+    "b": {
+      "label": "Engine may stay on",
+      "points": [
+        "Stationary in traffic",
+        "Diagnosing a fault"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You're parked on a public road waiting to unload, and expect to wait 20 minutes. What should you do?",
+      "options": [
+        "Apply the parking brake and switch off the engine",
+        "Keep the engine idling to keep the cab warm",
+        "Rev the engine every few minutes",
+        "Leave the engine running with hazard lights on"
+      ],
+      "answerIndex": 0,
+      "why": "You must not leave an engine running unnecessarily while stationary on a public road. If you will be stopped for more than a couple of minutes, apply the parking brake and switch off the engine."
+    },
+    {
+      "question": "How can tyre pressure affect fuel use?",
+      "options": [
+        "A 20% drop in pressure can raise fuel use by 2%",
+        "Lower pressure always reduces fuel use",
+        "Tyre pressure has no effect on fuel use",
+        "Over-inflating tyres by 20% saves 2% fuel"
+      ],
+      "answerIndex": 0,
+      "why": "DVSA guidance: a 20% drop in tyre pressure can result in a 2% increase in fuel consumption. Correctly inflated tyres help reduce fuel use."
+    }
+  ],
+  "traps": [
+    "Idling while stationary on a public road can be an offence, not just a waste of fuel.",
+    "Coasting is not fuel-efficient driving: it removes engine braking and reduces your control.",
+    "Removing or tampering with an emission control system is an offence and puts the operator licence at risk."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 122 (coasting) and 123 (the driver and the environment)",
+      "url": "https://www.gov.uk/guidance/the-highway-code/general-rules-techniques-and-advice-for-all-drivers-and-riders-103-to-158"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Vehicle maintenance (exhaust emissions)",
+      "url": "https://www.gov.uk/guidance/the-highway-code/annex-6-vehicle-maintenance-safety-and-security"
+    },
+    {
+      "doc": "DVSA: Guide to maintaining roadworthiness",
+      "ref": "5.5 Vehicle emissions and fuel management; Annex 2, 2.3 Saving fuel and protecting the environment",
+      "url": "https://www.gov.uk/government/publications/guide-to-maintaining-roadworthiness/guide-to-maintaining-roadworthiness-commercial-goods-and-passenger-carrying-vehicles"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

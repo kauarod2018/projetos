@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "id": "height-and-bridges",
+  "niche": "uk-hgv-theory",
+  "area": "weights-and-loads",
+  "order": 2,
+  "tier": "basic",
+  "officialTopics": [
+    "weights-and-dimensions",
+    "traffic-signs"
+  ],
+  "title": "Vehicle Height & Bridge Strikes",
+  "whatItIs": "Know your vehicle's full travelling height, including trailer and load, before you set off. Low bridge signs show the headroom: if your vehicle is higher, don't go under.",
+  "keyFacts": [
+    {
+      "text": "Overall travelling height over 3 m? A height notice MUST be displayed in the cab where you can easily read it.",
+      "law": true
+    },
+    "The notice shows the height in feet and inches (or in both feet and inches and metres).",
+    "Height can change when the fifth wheel is adjusted, or the trailer is loaded, unloaded or reloaded.",
+    "All bridges with less than 16 feet 6 inches (about 5 m) clearance are normally signed.",
+    {
+      "text": "An overheight vehicle MUST NOT pass a mandatory height restriction sign (red roundel).",
+      "law": true
+    }
+  ],
+  "visual": {
+    "type": "sign-grid",
+    "caption": "Low bridge signs: red roundel = legal limit, triangle = headroom warning",
+    "signs": [
+      "max-height",
+      "headroom-warning",
+      "arch-bridge-headroom",
+      "height-restriction-ahead"
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Red roundel (max height)",
+      "points": [
+        "Mandatory: unlawful for an overheight vehicle to pass",
+        "Used at non-arch bridges"
+      ]
+    },
+    "b": {
+      "label": "Warning triangle (headroom)",
+      "points": [
+        "Warns of the headroom under a bridge or structure",
+        "At arch bridges: maximum safe headroom"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Your lorry's overall travelling height is 4.2 metres. What must be displayed in the cab?",
+      "options": [
+        "Nothing, as long as you know the height",
+        "A notice showing the vehicle height that you can easily read",
+        "A copy of the operator licence",
+        "The weight of the load"
+      ],
+      "answerIndex": 1,
+      "why": "A vehicle with an overall travelling height over 3 m must display a height notice in the cab that the driver can easily read."
+    },
+    {
+      "question": "At an arch bridge, how do the road markings help drivers of high vehicles?",
+      "options": [
+        "They show where to stop and wait",
+        "They guide them through the highest part of the arch",
+        "They mark a lane for cars only",
+        "They show the bridge's weight limit"
+      ],
+      "answerIndex": 1,
+      "why": "The maximum safe headroom at an arch bridge is shown on the warning triangles. Road markings guide high vehicles through the highest part of the arch."
+    }
+  ],
+  "traps": [
+    "Changed trailer or reloaded? Check the in-cab height marker shows the correct height for today.",
+    "Some older signs show feet and inches only: know your height in both units.",
+    "Plant with a boom arm: load it facing away from the direction of travel to limit bridge strike damage."
+  ],
+  "sources": [
+    {
+      "doc": "The Road Vehicles (Construction and Use) Regulations 1986",
+      "ref": "Reg 10 (indication of overall travelling height)",
+      "url": "https://www.legislation.gov.uk/uksi/1986/1078/regulation/10"
+    },
+    {
+      "doc": "GOV.UK: Carry out HGV daily walkaround checks",
+      "ref": "7. Height marker",
+      "url": "https://www.gov.uk/guidance/carry-out-daily-heavy-goods-vehicle-hgv-walkaround-checks"
+    },
+    {
+      "doc": "DVSA: Guide to maintaining roadworthiness",
+      "ref": "3. Daily walkaround checks: bridge strike prevention",
+      "url": "https://www.gov.uk/government/publications/guide-to-maintaining-roadworthiness/guide-to-maintaining-roadworthiness-commercial-goods-and-passenger-carrying-vehicles"
+    },
+    {
+      "doc": "Know Your Traffic Signs (DfT)",
+      "ref": "Low bridge signs (pp. 24 to 28)",
+      "url": "https://assets.publishing.service.gov.uk/media/656ef4271104cf0013fa74ef/know-your-traffic-signs-dft.pdf"
+    },
+    {
+      "doc": "GOV.UK: Securing loads on HGVs and goods vehicles",
+      "ref": "6. Plant equipment: securing heavy plant",
+      "url": "https://www.gov.uk/guidance/securing-loads-on-hgvs-and-goods-vehicles/6-how-to-carry-different-types-of-load-in-hgvs-and-goods-vehicles"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

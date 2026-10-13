@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "theory-test-format",
+  "niche": "uk-hgv-theory",
+  "area": "licences-and-cpc",
+  "order": 3,
+  "tier": "basic",
+  "officialTopics": [
+    "licences-and-qualifications"
+  ],
+  "title": "The Lorry Theory Test: Format & Pass Marks",
+  "whatItIs": "Driver CPC part 1 is 2 tests: 100 multiple-choice questions and a hazard perception test of 19 video clips. Book them separately; pass both within 2 years of each other.",
+  "keyFacts": [
+    "Multiple choice: 100 questions in 1 hour 55 minutes. The pass mark is 85 out of 100.",
+    "You can flag questions, go back and change any answer, and finish early once all are answered.",
+    "Hazard perception: 19 clips, each with at least one developing hazard. One clip has 2.",
+    "You score up to 5 points for each developing hazard. The pass mark is 67 out of 100.",
+    "The questions are based on The Highway Code, Know your traffic signs and the DVSA guide to driving goods vehicles.",
+    "Your theory certificate is valid for 2 years from when you passed the first part."
+  ],
+  "visual": {
+    "type": "stats",
+    "caption": "Driver CPC part 1 (theory): the numbers",
+    "items": [
+      {
+        "value": "100",
+        "label": "Multiple-choice questions",
+        "note": "1 hour 55 minutes"
+      },
+      {
+        "value": "85/100",
+        "label": "Multiple-choice pass mark"
+      },
+      {
+        "value": "19 clips",
+        "label": "Hazard perception",
+        "note": "Up to 5 points per developing hazard"
+      },
+      {
+        "value": "67/100",
+        "label": "Hazard perception pass mark"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Developing hazard",
+      "points": [
+        "Something that would make you act, like changing speed or direction",
+        "e.g. a parked car signals right and starts to move away"
+      ]
+    },
+    "b": {
+      "label": "Not a developing hazard",
+      "points": [
+        "Something you can see that wouldn't make you take action",
+        "e.g. a car parked at the side of the road, doing nothing"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "In the hazard perception part of the lorry theory test, what is the most you can score for one developing hazard?",
+      "options": [
+        "1 point",
+        "3 points",
+        "5 points",
+        "10 points"
+      ],
+      "answerIndex": 2,
+      "why": "You can score up to 5 points for each developing hazard. To get a high score, click as soon as you see the hazard starting to develop."
+    },
+    {
+      "question": "How long do you have to answer the multiple-choice questions in the lorry theory test?",
+      "options": [
+        "57 minutes",
+        "1 hour 15 minutes",
+        "1 hour 55 minutes",
+        "2 hours 30 minutes"
+      ],
+      "answerIndex": 2,
+      "why": "You have 1 hour and 55 minutes to answer 100 multiple-choice questions. The pass mark is 85 out of 100."
+    }
+  ],
+  "traps": [
+    "The pass marks differ: 85 out of 100 for multiple choice, 67 out of 100 for hazard perception.",
+    "Clicking all the time or in a pattern scores nothing for that clip. Wrong clicks alone lose no points.",
+    "You get one attempt at each clip: you can't review or change your responses.",
+    "Failed? Book again straight away, but you can't take the test for another 3 clear working days."
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Become a qualified HGV or bus driver",
+      "ref": "Driver CPC part 1 test: theory",
+      "url": "https://www.gov.uk/become-lorry-bus-driver/driver-cpc-part-1-theory-test"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "id": "fitness-alcohol-drugs",
+  "niche": "uk-hgv-theory",
+  "area": "licences-and-cpc",
+  "order": 7,
+  "tier": "basic",
+  "officialTopics": [
+    "the-driver"
+  ],
+  "title": "Fit to Drive: Alcohol, Drugs & Tiredness",
+  "whatItIs": "You must be fit to drive: report health conditions to DVLA, meet the eyesight rule, and never drive over the alcohol or drug limits. Don't start a journey tired.",
+  "keyFacts": [
+    {
+      "text": "You MUST report to DVLA any health condition likely to affect your driving.",
+      "law": true
+    },
+    {
+      "text": "You MUST be able to read a number plate from 20 metres in good daylight, with glasses if you need them.",
+      "law": true
+    },
+    {
+      "text": "England and Wales: you MUST NOT drive above 35 µg of alcohol per 100 ml of breath (80 mg per 100 ml of blood).",
+      "law": true
+    },
+    "Alcohol takes time to leave your body: you may be unfit to drive the next morning.",
+    {
+      "text": "You MUST NOT drive under the influence of drugs or medicine. Check with your doctor or pharmacist.",
+      "law": true
+    },
+    "Don't begin a journey tired. Avoid long journeys between midnight and 6 am, when alertness is lowest."
+  ],
+  "visual": {
+    "type": "stats",
+    "caption": "Key figures for being fit to drive",
+    "items": [
+      {
+        "value": "35 µg",
+        "label": "Breath limit (per 100 ml), England and Wales"
+      },
+      {
+        "value": "22 µg",
+        "label": "Breath limit (per 100 ml), Scotland"
+      },
+      {
+        "value": "20 m",
+        "label": "Read a number plate in good daylight"
+      },
+      {
+        "value": "15 min",
+        "label": "Advised break every 2 hours"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Highway Code advice (all drivers)",
+      "points": [
+        "A break of at least 15 minutes after every 2 hours of driving",
+        "Recommended, not a legal limit"
+      ]
+    },
+    "b": {
+      "label": "Drivers' hours law (lorries)",
+      "points": [
+        "A break of at least 45 minutes after no more than 4.5 hours of driving",
+        "A legal requirement under the assimilated rules"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You are driving a lorry in Scotland. What is the legal limit for alcohol in your breath?",
+      "options": [
+        "9 µg per 100 ml",
+        "22 µg per 100 ml",
+        "35 µg per 100 ml",
+        "50 µg per 100 ml"
+      ],
+      "answerIndex": 1,
+      "why": "In Scotland you MUST NOT drive with a breath alcohol level higher than 22 microgrammes per 100 ml of breath. In England and Wales the limit is 35."
+    },
+    {
+      "question": "You start to feel sleepy while driving on a motorway. What should you do?",
+      "options": [
+        "Stop on the hard shoulder for a short sleep",
+        "Stop in an emergency area",
+        "Stop at a service area or leave at the next exit",
+        "Turn up the radio and keep going"
+      ],
+      "answerIndex": 2,
+      "why": "Rule 91: if you feel sleepy, stop in a safe place, not in an emergency area or on the hard shoulder. Rule 262: service areas and roads off motorway exits have rest facilities."
+    }
+  ],
+  "traps": [
+    "Below the limit is not the same as safe: any alcohol reduces your driving ability.",
+    "Prescribed medicines can impair you too: ask your doctor or pharmacist before driving.",
+    "Limits for illegal drugs are set very low: even a small amount can put you over.",
+    "Scotland has lower drink-drive limits than England and Wales."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 90 to 96",
+      "url": "https://www.gov.uk/guidance/the-highway-code/rules-for-drivers-and-motorcyclists-89-to-102"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 262",
+      "url": "https://www.gov.uk/guidance/the-highway-code/motorways-253-to-273"
+    },
+    {
+      "doc": "GOV.UK: The drink drive limit",
+      "ref": "Limits table",
+      "url": "https://www.gov.uk/drink-drive-limit"
+    },
+    {
+      "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
+      "ref": "1.4 Breaks and driving limits",
+      "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/1-assimilated-and-aetr-rules-on-drivers-hours"
+    }
+  ],
+  "jurisdictionNotes": [
+    {
+      "jurisdiction": "scotland",
+      "text": "Lower drink-drive limits: 22 µg per 100 ml of breath, 50 mg per 100 ml of blood, 67 mg per 100 ml of urine."
+    }
+  ],
+  "review": {
+    "status": "draft"
+  }
+}

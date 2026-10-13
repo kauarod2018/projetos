@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "id": "length-width-projections",
+  "niche": "uk-hgv-theory",
+  "area": "weights-and-loads",
+  "order": 3,
+  "tier": "complete",
+  "officialTopics": [
+    "weights-and-dimensions",
+    "vehicle-loading"
+  ],
+  "title": "Length, Width & Projecting Loads",
+  "whatItIs": "Loads that stick out at the front, rear or sides must be made visible. Longer projections need marker boards, an attendant or police notice. Signs can ban vehicles over a set width or length.",
+  "keyFacts": [
+    {
+      "text": "A vehicle MUST NOT be used or loaded in a way that endangers people in it or other road users.",
+      "law": true
+    },
+    "Projecting more than 2 m at the front or rear: end and side projection markers are needed.",
+    "Over 3.05 m at the front or rear: 2 clear working days' notice to the police, an attendant and marker boards.",
+    {
+      "text": "Vehicles with projecting loads MUST NOT be left on a road at night without lights.",
+      "law": true
+    }
+  ],
+  "visual": {
+    "type": "table",
+    "caption": "Front and rear projections: what the regulations require",
+    "data": {
+      "columns": [
+        "Projection",
+        "Rearwards",
+        "Forwards"
+      ],
+      "rows": [
+        [
+          "Up to 1 m",
+          "Nothing specified",
+          "Nothing specified"
+        ],
+        [
+          "Over 1 m to 2 m",
+          "End clearly visible",
+          "Nothing specified"
+        ],
+        [
+          "Over 2 m to 3.05 m",
+          "Marker boards",
+          "Attendant + marker boards"
+        ],
+        [
+          "Over 3.05 m",
+          "Police notice, attendant, boards",
+          "Police notice, attendant, boards"
+        ]
+      ],
+      "notes": [
+        "Side projection over 305 mm: police notice, marker boards and extra lights in the dark."
+      ]
+    }
+  },
+  "confused": {
+    "a": {
+      "label": "Rearward projection over 2 m",
+      "points": [
+        "Marker boards",
+        "No attendant until over 3.05 m"
+      ]
+    },
+    "b": {
+      "label": "Forward projection over 2 m",
+      "points": [
+        "Marker boards",
+        "An attendant as well"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Your load projects 2.5 metres beyond the front of your vehicle. What's required?",
+      "options": [
+        "Nothing, as it's under 3.05 m",
+        "Only the end made clearly visible",
+        "An attendant and marker boards",
+        "Police notice only"
+      ],
+      "answerIndex": 2,
+      "why": "A forward projection over 2 m needs an attendant and marker boards. Over 3.05 m, the police also need 2 clear working days' notice."
+    },
+    {
+      "question": "You see a red-ringed circular sign showing a width in metres and feet. What does it mean?",
+      "options": [
+        "The road narrows to the width shown",
+        "No vehicles over the width shown",
+        "Advised width for lorries only",
+        "Minimum lane width ahead"
+      ],
+      "answerIndex": 1,
+      "why": "This regulatory sign means no vehicles over the maximum width shown. A similar sign shows a maximum length for vehicles or combinations."
+    }
+  ],
+  "traps": [
+    "Front and rear differ: a forward projection over 2 m needs an attendant, a rearward one only over 3.05 m.",
+    "Police notice means 2 clear working days, not counting Sundays or bank holidays.",
+    "Overhang of 1 m or less: no marking requirements are specified."
+  ],
+  "sources": [
+    {
+      "doc": "DfT: Overhanging loads (information sheet)",
+      "ref": "1. Front or rear; 2. Side; 3. C&U Schedule 12; 6. Safety of loads",
+      "url": "https://www.gov.uk/government/publications/overhanging-loads-on-vehicles/overhanging-loads"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Vehicle markings (projection markers); rule 249",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "Know Your Traffic Signs (DfT)",
+      "ref": "Signs giving orders: width and length limits (p. 18)",
+      "url": "https://assets.publishing.service.gov.uk/media/656ef4271104cf0013fa74ef/know-your-traffic-signs-dft.pdf"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

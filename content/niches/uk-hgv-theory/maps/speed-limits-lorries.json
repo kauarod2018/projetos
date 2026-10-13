@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "id": "speed-limits-lorries",
+  "niche": "uk-hgv-theory",
+  "area": "licences-and-cpc",
+  "order": 6,
+  "tier": "basic",
+  "officialTopics": [
+    "rules-of-the-road",
+    "licences-and-qualifications"
+  ],
+  "title": "Speed Limits for Goods Vehicles",
+  "whatItIs": "Lorries have lower limits than cars. Over 7.5 tonnes in England and Wales: 50 mph on single carriageways and 60 mph on dual carriageways and motorways. Scotland is lower.",
+  "keyFacts": [
+    {
+      "text": "You MUST NOT go over the speed limit for the road, or the limit for your vehicle.",
+      "law": true
+    },
+    "Over 7.5 t (England and Wales): 50 mph single carriageway, 60 mph dual carriageway and motorway.",
+    "Up to 7.5 t: 70 mph on motorways, but 60 mph if articulated or towing a trailer.",
+    {
+      "text": "Goods vehicles over 7.5 t MUST NOT use the right-hand lane of a motorway with 3 or more lanes.",
+      "law": true
+    },
+    {
+      "text": "Goods vehicles over 12 t first used from 1988, or over 3.5 t from 2005, MUST be speed-limited to 90 km/h.",
+      "law": true
+    },
+    "A limit is a maximum, not a target: slow down for hazards, bad weather and at night."
+  ],
+  "visual": {
+    "type": "table",
+    "caption": "National speed limits for goods vehicles in mph (Highway Code rule 124)",
+    "data": {
+      "columns": [
+        "Goods vehicle",
+        "Built-up",
+        "Single c/way",
+        "Dual c/way",
+        "Motorway"
+      ],
+      "rows": [
+        [
+          "Up to 7.5 t",
+          "30",
+          "50",
+          "60",
+          "70 (60 artic or towing)"
+        ],
+        [
+          "Over 7.5 t (E & W)",
+          "30",
+          "50",
+          "60",
+          "60"
+        ],
+        [
+          "Over 7.5 t (Scotland)",
+          "30",
+          "40",
+          "50",
+          "60"
+        ]
+      ],
+      "notes": [
+        "Maximum laden weight. Built-up areas in Wales: 20 mph. Signs may set lower limits."
+      ]
+    }
+  },
+  "confused": {
+    "a": {
+      "label": "Goods vehicle up to 7.5 t",
+      "points": [
+        "Motorway: 70 mph, or 60 mph if articulated or towing",
+        "Needs a speed limiter (over 3.5 t)? No right-hand lane on 3+ lanes"
+      ]
+    },
+    "b": {
+      "label": "Goods vehicle over 7.5 t",
+      "points": [
+        "Motorway: 60 mph",
+        "No right-hand lane on 3+ lane motorways (except prescribed cases)"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You are driving a lorry over 7.5 tonnes on a dual carriageway in England. What is the national speed limit?",
+      "options": [
+        "40 mph",
+        "50 mph",
+        "60 mph",
+        "70 mph"
+      ],
+      "answerIndex": 2,
+      "why": "Rule 124: goods vehicles over 7.5 tonnes in England and Wales are limited to 60 mph on dual carriageways (50 mph in Scotland)."
+    },
+    {
+      "question": "You are driving a goods vehicle over 7.5 tonnes on a three-lane motorway. Which lane MUST you not use, except in prescribed circumstances?",
+      "options": [
+        "The left-hand lane",
+        "The middle lane",
+        "The right-hand lane",
+        "Any lane, when overtaking"
+      ],
+      "answerIndex": 2,
+      "why": "Rule 265: goods vehicles over 7.5 tonnes, and any vehicle towing a trailer, MUST NOT use the right-hand lane of a 3+ lane motorway."
+    }
+  ],
+  "traps": [
+    "Over 7.5 t, the motorway limit is 60 mph, not 70.",
+    "Up to 7.5 t but articulated or towing? The motorway limit is 60 mph, not 70.",
+    "Towing a trailer? The right-hand lane of a 3+ lane motorway is banned too."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 124 (speed limits table) and 125",
+      "url": "https://www.gov.uk/guidance/the-highway-code/general-rules-techniques-and-advice-for-all-drivers-and-riders-103-to-158"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 265",
+      "url": "https://www.gov.uk/guidance/the-highway-code/motorways-253-to-273"
+    },
+    {
+      "doc": "The Road Vehicles (Construction and Use) Regulations 1986",
+      "ref": "Regulation 36B(1A), (2) and (9): speed limiters on goods vehicles",
+      "url": "https://www.legislation.gov.uk/uksi/1986/1078/regulation/36B"
+    }
+  ],
+  "jurisdictionNotes": [
+    {
+      "jurisdiction": "scotland",
+      "text": "Goods vehicles over 7.5 t: 40 mph on single carriageways and 50 mph on dual carriageways. Motorways: 60 mph."
+    },
+    {
+      "jurisdiction": "wales",
+      "text": "20 mph generally applies on roads with street lights (not motorways), unless signs show otherwise."
+    }
+  ],
+  "review": {
+    "status": "draft"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "id": "load-shifts",
+  "niche": "uk-hgv-theory",
+  "area": "weights-and-loads",
+  "order": 7,
+  "tier": "complete",
+  "officialTopics": [
+    "vehicle-loading",
+    "incidents-and-emergencies"
+  ],
+  "title": "If a Load Shifts on a Journey",
+  "whatItIs": "If your load moves, slow down, stop safely and resecure it. If it falls into the road or is dangerously unstable, stop, call 999 and wait for help.",
+  "keyFacts": [
+    {
+      "text": "If the load has shifted but is still on the vehicle, you MUST slow down and avoid heavy braking and steering.",
+      "law": true
+    },
+    {
+      "text": "You MUST NOT continue the journey until the load is secure.",
+      "law": true
+    },
+    "Never try to retrieve a load from a motorway, dual carriageway or any road where you might be in danger."
+  ],
+  "visual": {
+    "type": "steps",
+    "caption": "Load shifting or lost: what to do",
+    "items": [
+      {
+        "title": "Slow down",
+        "text": "Avoid heavy braking and steering."
+      },
+      {
+        "title": "Stop in a safe place",
+        "text": "Find somewhere safe to stop."
+      },
+      {
+        "title": "Check it safely",
+        "text": "Don't walk under a leaning load."
+      },
+      {
+        "title": "Resecure if it's safe",
+        "text": "Only if it's safe. Avoid risks like working at height."
+      },
+      {
+        "title": "Load in the road? Call 999",
+        "text": "Report it to the police and wait for help."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Load shifted, still on board",
+      "points": [
+        "Slow down, avoid harsh braking and steering",
+        "Stop safely and resecure if it's safe"
+      ]
+    },
+    "b": {
+      "label": "Load off or dangerously unstable",
+      "points": [
+        "Stop in a safe place as soon as possible",
+        "Call 999 and wait for help"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Part of your load falls onto a dual carriageway. What should you do?",
+      "options": [
+        "Stop on the carriageway and pick it up quickly",
+        "Stop in a safe place, call 999 and wait for help",
+        "Drive on and report it at the end of your shift",
+        "Ask other drivers to help you collect it"
+      ],
+      "answerIndex": 1,
+      "why": "Stop in a safe place, call 999 and wait for the emergency services or highway authorities. Don't retrieve a load from a road where you might be in danger."
+    },
+    {
+      "question": "You arrive at a delivery and find the load has shifted. What should happen?",
+      "options": [
+        "Drive back to the depot to reload",
+        "Quarantine the vehicle until there's a safe unloading plan",
+        "Release all the lashings at once",
+        "Unload by hand as quickly as possible"
+      ],
+      "answerIndex": 1,
+      "why": "The vehicle should be quarantined on site until a safe unloading plan is made. A known unstable 'shot load' must not go back on the public road."
+    }
+  ],
+  "traps": [
+    "Open vehicle: don't release lashings until you're sure the load is stable.",
+    "Load might be leaning on the rear doors? Check it from the side.",
+    "In a live lane or on the hard shoulder, contact the police or highway authority."
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Securing loads on HGVs and goods vehicles",
+      "ref": "3. What to do if a load becomes unstable during a journey",
+      "url": "https://www.gov.uk/guidance/securing-loads-on-hgvs-and-goods-vehicles/3-what-to-do-if-a-load-becomes-unstable-during-a-journey"
+    },
+    {
+      "doc": "GOV.UK: Securing loads on HGVs and goods vehicles",
+      "ref": "1. Responsibility for load security (during the journey)",
+      "url": "https://www.gov.uk/guidance/securing-loads-on-hgvs-and-goods-vehicles/1-responsibility-for-load-security"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

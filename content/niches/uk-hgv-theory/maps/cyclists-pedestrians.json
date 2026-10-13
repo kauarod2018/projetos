@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "niche": "uk-hgv-theory",
+  "id": "cyclists-pedestrians",
+  "area": "driving-large-vehicles",
+  "order": 2,
+  "tier": "basic",
+  "officialTopics": [
+    "restricted-view",
+    "rules-of-the-road"
+  ],
+  "title": "Turning, Cyclists & Pedestrians",
+  "whatItIs": "A lorry can cause the greatest harm in a collision, so its driver carries the greatest responsibility. When you turn, give way to people crossing and never cut across cyclists.",
+  "keyFacts": [
+    "Those who can cause the greatest harm bear the greatest responsibility. This applies most strongly to lorry drivers.",
+    "At a junction, give way to pedestrians crossing or waiting to cross the road you're turning into or out of.",
+    {
+      "text": "You MUST give way to pedestrians on a zebra crossing, and to pedestrians and cyclists on a parallel crossing.",
+      "law": true
+    },
+    "Don't turn if it would make a cyclist going straight ahead stop or swerve. Wait for a safe gap.",
+    "Overtaking cyclists: leave at least 1.5 metres at up to 30 mph, and more space at higher speeds.",
+    "Give cyclists and motorcyclists plenty of room, especially if you're driving a long vehicle."
+  ],
+  "visual": {
+    "type": "steps",
+    "caption": "Turning left in a lorry",
+    "items": [
+      {
+        "title": "Mirrors and signal early",
+        "text": "Use your mirrors and give a left signal well before you turn."
+      },
+      {
+        "title": "Don't overtake, then turn",
+        "text": "Never overtake just before you turn left. If you're behind a cyclist, stay behind."
+      },
+      {
+        "title": "Check down your left side",
+        "text": "Watch for cyclists and others coming up on your left: they may be hidden from view."
+      },
+      {
+        "title": "Give way",
+        "text": "To pedestrians crossing, and to anyone using a cycle lane, cycle track or bus lane."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Pedestrian at a junction",
+      "points": [
+        "You should give way if they are crossing or waiting to cross",
+        "Once they have started to cross, they have priority"
+      ]
+    },
+    "b": {
+      "label": "Pedestrian on a zebra crossing",
+      "points": [
+        "You MUST give way once they are on it",
+        "You should also give way to those waiting to cross"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You're turning left in your lorry. A cyclist is riding straight ahead in a cycle lane on your left. What should you do?",
+      "options": [
+        "Give way and let the cyclist go ahead first",
+        "Turn quickly before the cyclist reaches the junction",
+        "Sound your horn and turn",
+        "Signal left and turn: the cyclist must stop"
+      ],
+      "answerIndex": 0,
+      "why": "Give way to anyone using a cycle lane when you turn. Don't turn if it would make a cyclist going straight ahead stop or swerve."
+    },
+    {
+      "question": "You're overtaking a cyclist at 30 mph. What is the minimum space you should leave?",
+      "options": [
+        "1 metre",
+        "1.5 metres",
+        "2 metres",
+        "50 centimetres"
+      ],
+      "answerIndex": 1,
+      "why": "Leave at least 1.5 metres when overtaking cyclists at speeds of up to 30 mph, and give them more space at higher speeds."
+    }
+  ],
+  "traps": [
+    "Signalling left doesn't give you priority over a cyclist going straight ahead.",
+    "Cyclists may ride in the centre of the lane on narrow roads, and they are not obliged to use cycle lanes.",
+    "Pedestrians who have started to cross the road you're turning into have priority.",
+    "In bad weather, high winds and at night, give cyclists and pedestrians even more space."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Hierarchy of road users: rules H1, H2 and H3",
+      "url": "https://www.gov.uk/guidance/the-highway-code/introduction"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 160, 163, 167, 170, 182 and 183",
+      "url": "https://www.gov.uk/guidance/the-highway-code/using-the-road-159-to-203"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 140 (cycle lanes)",
+      "url": "https://www.gov.uk/guidance/the-highway-code/general-rules-techniques-and-advice-for-all-drivers-and-riders-103-to-158"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 211 to 213",
+      "url": "https://www.gov.uk/guidance/the-highway-code/road-users-requiring-extra-care-204-to-225"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

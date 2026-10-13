@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "id": "phones-and-distractions",
+  "niche": "uk-hgv-theory",
+  "area": "licences-and-cpc",
+  "order": 8,
+  "tier": "complete",
+  "officialTopics": [
+    "the-driver"
+  ],
+  "title": "Phones, Distractions & Penalties",
+  "whatItIs": "It's illegal to hold and use a phone, sat nav or any device that can send or receive data while driving, even in a queue. Expect 6 points and a £200 fine.",
+  "keyFacts": [
+    {
+      "text": "You MUST NOT use a hand-held phone or similar device for any purpose when driving, even offline.",
+      "law": true
+    },
+    {
+      "text": "You MUST NOT pick up and use your phone while stationary in traffic.",
+      "law": true
+    },
+    "You may call 999 or 112 in a genuine emergency if it is unsafe or impractical to stop.",
+    "Hands-free is allowed if you never hold the device, but it still distracts you.",
+    "Hand-held use: 6 penalty points and a £200 fine. In court, up to £2,500 for a goods vehicle.",
+    {
+      "text": "You MUST keep proper control of your vehicle at all times.",
+      "law": true
+    }
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Distractions in the cab and what the law says",
+    "columns": 3,
+    "items": [
+      {
+        "icon": "smartphone",
+        "title": "Hand-held device",
+        "text": "6 points, £200 fine. In court: up to £2,500 for a lorry.",
+        "law": true
+      },
+      {
+        "icon": "eye",
+        "title": "No proper control or view",
+        "text": "3 points. In court: up to £2,500 for a lorry.",
+        "law": true
+      },
+      {
+        "icon": "phone-off",
+        "title": "Hands-free",
+        "text": "Legal if you never hold it, but still distracting."
+      },
+      {
+        "icon": "navigation",
+        "title": "Sat nav and screens",
+        "text": "Don't be distracted by screens. Stop safely first."
+      },
+      {
+        "icon": "music",
+        "title": "Other distractions",
+        "text": "Loud music, eating, drinking, smoking, arguing."
+      },
+      {
+        "icon": "siren",
+        "title": "999 or 112 emergency",
+        "text": "Allowed if it's unsafe or impractical to stop."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Hand-held use",
+      "points": [
+        "Illegal while driving, even when stopped in traffic",
+        "6 penalty points and a £200 fine"
+      ]
+    },
+    "b": {
+      "label": "Hands-free use",
+      "points": [
+        "Legal if you don't hold the device at any time",
+        "Police can still act if you're distracted and not in control"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You are queuing in slow traffic in your lorry. When may you hold your phone to send a message?",
+      "options": [
+        "When the engine stops automatically",
+        "When the traffic is stationary",
+        "Only when you are safely parked",
+        "When the phone is in flight mode"
+      ],
+      "answerIndex": 2,
+      "why": "The ban applies when queuing, if the engine turns off when you stop, or if the device is offline. You can use it when safely parked."
+    },
+    {
+      "question": "What is the maximum fine a court can give a lorry driver for using a hand-held phone while driving?",
+      "options": [
+        "£200",
+        "£1,000",
+        "£2,500",
+        "£5,000"
+      ],
+      "answerIndex": 2,
+      "why": "Highway Code annex 5: using a hand-held mobile phone when driving carries a maximum £1,000 fine, or £2,500 for a goods vehicle or PCV, and 6 penalty points."
+    }
+  ],
+  "traps": [
+    "Stopped in a queue or at lights still counts: the hand-held ban applies.",
+    "Flight mode doesn't help: the ban covers devices that are offline.",
+    "New drivers: 6 points within 2 years of your first test means your licence is revoked.",
+    "Already hold a full UK licence? Passing your lorry test doesn't restart the 2-year new driver period."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 148 to 150",
+      "url": "https://www.gov.uk/guidance/the-highway-code/general-rules-techniques-and-advice-for-all-drivers-and-riders-103-to-158"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Annex 5: Penalties (penalty table; new drivers)",
+      "url": "https://www.gov.uk/guidance/the-highway-code/annex-5-penalties"
+    },
+    {
+      "doc": "GOV.UK: Using a phone, sat nav or other device when driving",
+      "ref": "Exceptions; Using devices hands-free; Penalties",
+      "url": "https://www.gov.uk/using-mobile-phones-when-driving-the-law"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

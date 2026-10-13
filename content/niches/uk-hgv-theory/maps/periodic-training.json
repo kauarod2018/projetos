@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "id": "periodic-training",
+  "niche": "uk-hgv-theory",
+  "area": "licences-and-cpc",
+  "order": 4,
+  "tier": "complete",
+  "officialTopics": [
+    "licences-and-qualifications"
+  ],
+  "title": "Staying Qualified: 35 Hours Every 5 Years",
+  "whatItIs": "Your Driver CPC lasts 5 years. To keep it, do 35 hours of periodic training before the deadline on your card. There's no exam: you get a certificate of attendance.",
+  "keyFacts": [
+    {
+      "text": "You MUST do 35 hours of periodic training every 5 years to keep your Driver CPC.",
+      "law": true
+    },
+    "It's illegal to drive professionally after your deadline without the training: fine up to £1,000.",
+    "International Driver CPC courses last at least 7 hours; National courses at least 3 hours 30 minutes.",
+    "Up to 12 of the 35 hours can be e-learning.",
+    "Training counts for 5 years from the date you took the course.",
+    "If you drive both lorries and buses, one set of 35 hours covers both."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Which Driver CPC training and card you need",
+    "columns": 2,
+    "items": [
+      {
+        "icon": "globe",
+        "title": "International Driver CPC",
+        "text": "Only International courses, 35 hours. You can drive professionally in the UK and Europe."
+      },
+      {
+        "icon": "flag",
+        "title": "National Driver CPC",
+        "text": "National courses or a mix. UK only: the card says 'Domestic UK use only'."
+      },
+      {
+        "icon": "refresh-cw",
+        "title": "Return to Driving course",
+        "text": "CPC expired less than 2 years ago? 7 hours, then 28 more hours within 12 months."
+      },
+      {
+        "icon": "id-card",
+        "title": "Driver CPC card (DQC)",
+        "text": "Carry it while driving professionally. £50 fixed penalty if you drive without it.",
+        "law": true
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "International Driver CPC",
+      "points": [
+        "Drive professionally in the UK and Europe",
+        "Only International courses (at least 7 hours each)"
+      ]
+    },
+    "b": {
+      "label": "National Driver CPC",
+      "points": [
+        "Drive professionally in the UK only",
+        "National courses (at least 3 hours 30 minutes) or a mix"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "How many hours of periodic training must you complete every 5 years to keep your Driver CPC?",
+      "options": [
+        "7 hours",
+        "21 hours",
+        "35 hours",
+        "50 hours"
+      ],
+      "answerIndex": 2,
+      "why": "You must do 35 hours of periodic training every 5 years to keep your Driver CPC to drive a lorry, bus or coach."
+    },
+    {
+      "question": "What is the most e-learning that can count towards your 35 hours of Driver CPC training?",
+      "options": [
+        "7 hours",
+        "12 hours",
+        "20 hours",
+        "35 hours"
+      ],
+      "answerIndex": 1,
+      "why": "You can only do up to 12 hours of e-learning (online courses with interactive videos or presentations) as part of your 35 hours."
+    }
+  ],
+  "traps": [
+    "There's no test at the end of a course: you attend and get a certificate, which your employer can't keep.",
+    "Include any National course in your 35 hours and you get a National (UK only) card.",
+    "Training taken more than 5 years ago no longer counts towards the 35 hours.",
+    "You can't repeat the same course in a 5-year period without a good reason."
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Driver CPC training for qualified drivers",
+      "ref": "How much training you need to do; When to take training; Finding training courses; Taking a training course; Getting your Driver CPC card",
+      "url": "https://www.gov.uk/driver-cpc-training"
+    },
+    {
+      "doc": "GOV.UK: Become a qualified HGV or bus driver",
+      "ref": "Returning to be an HGV or bus driver",
+      "url": "https://www.gov.uk/become-lorry-bus-driver"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

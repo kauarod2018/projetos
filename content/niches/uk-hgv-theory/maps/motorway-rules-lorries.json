@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "niche": "uk-hgv-theory",
+  "id": "motorway-rules-lorries",
+  "area": "driving-large-vehicles",
+  "order": 3,
+  "tier": "basic",
+  "officialTopics": [
+    "rules-of-the-road"
+  ],
+  "title": "Motorways: Lanes & Rules for Lorries",
+  "whatItIs": "Lorries over 7.5 tonnes must not use the right-hand lane of a motorway with three or more lanes. Keep left unless overtaking, and remember your lower speed limit.",
+  "keyFacts": [
+    {
+      "text": "Goods vehicles over 7.5 t MUST NOT use the right-hand lane of a motorway with three or more lanes.",
+      "law": true
+    },
+    {
+      "text": "Also MUST NOT use it: 3.5 to 7.5 t goods vehicles required to have a speed limiter, and any vehicle towing a trailer.",
+      "law": true
+    },
+    {
+      "text": "Goods vehicles over 7.5 t MUST NOT exceed 60 mph on a motorway.",
+      "law": true
+    },
+    "Many large vehicles have speed limiters that restrict them to 56 mph (90 km/h), even on a motorway.",
+    "Keep in the left lane unless overtaking. Overtake only on the right, and don't cut in on the vehicle you've passed.",
+    {
+      "text": "You MUST NOT stop on the carriageway or hard shoulder except in an emergency, or when told to.",
+      "law": true
+    }
+  ],
+  "visual": {
+    "type": "table",
+    "caption": "Which lanes a goods vehicle over 7.5 tonnes may use",
+    "data": {
+      "columns": [
+        "Motorway",
+        "Lanes you may use"
+      ],
+      "rows": [
+        [
+          "2 lanes",
+          "Both lanes (the right-hand lane only to overtake)"
+        ],
+        [
+          "3 lanes",
+          "Left and middle lanes only"
+        ],
+        [
+          "4 or more lanes",
+          "Every lane except the right-hand lane"
+        ]
+      ],
+      "notes": [
+        "The same lane ban applies to any vehicle towing a trailer, and to 3.5 to 7.5 t goods vehicles that must have a speed limiter."
+      ]
+    }
+  },
+  "confused": {
+    "a": {
+      "label": "Speed limit for lorries over 7.5 t",
+      "points": [
+        "60 mph on a motorway",
+        "Set by law: you MUST NOT exceed it"
+      ]
+    },
+    "b": {
+      "label": "Speed limiter",
+      "points": [
+        "Many large vehicles are restricted to 56 mph",
+        "A device on the vehicle, not the legal limit"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You're driving a 40-tonne articulated lorry on a three-lane motorway. Which lanes may you use?",
+      "options": [
+        "The left and middle lanes only",
+        "All three lanes",
+        "The left lane only",
+        "The middle and right-hand lanes only"
+      ],
+      "answerIndex": 0,
+      "why": "Goods vehicles over 7.5 tonnes must not use the right-hand lane of a motorway with three or more lanes (except in prescribed circumstances)."
+    },
+    {
+      "question": "What's the national speed limit on a motorway for a goods vehicle over 7.5 tonnes?",
+      "options": [
+        "50 mph",
+        "56 mph",
+        "60 mph",
+        "70 mph"
+      ],
+      "answerIndex": 2,
+      "why": "The motorway limit for goods vehicles over 7.5 tonnes is 60 mph. 56 mph is the speed many speed limiters are set to, not the legal limit."
+    }
+  ],
+  "traps": [
+    "56 mph is a speed limiter setting, not the speed limit: it's 60 mph on a motorway for lorries over 7.5 t.",
+    "The right-hand lane ban is for motorways with three or more lanes, not two-lane motorways.",
+    "Missed your exit? Carry on to the next one: you MUST NOT reverse, cross the central reservation or drive against the flow.",
+    "Don't move to a lane on your left to overtake."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 263, 264, 265, 267, 268 and 271",
+      "url": "https://www.gov.uk/guidance/the-highway-code/motorways-253-to-273"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 124 (speed limits table)",
+      "url": "https://www.gov.uk/guidance/the-highway-code/general-rules-techniques-and-advice-for-all-drivers-and-riders-103-to-158"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 222 (speed limiters)",
+      "url": "https://www.gov.uk/guidance/the-highway-code/road-users-requiring-extra-care-204-to-225"
+    },
+    {
+      "doc": "Know Your Traffic Signs (DfT)",
+      "ref": "Motorway signs, signals and road markings (page 91)",
+      "url": "https://assets.publishing.service.gov.uk/media/656ef4271104cf0013fa74ef/know-your-traffic-signs-dft.pdf"
+    }
+  ],
+  "jurisdictionNotes": [
+    {
+      "jurisdiction": "scotland",
+      "text": "Goods vehicles over 7.5 t in Scotland: 60 mph on motorways, but 50 mph on dual carriageways and 40 mph on single carriageways."
+    }
+  ],
+  "review": {
+    "status": "draft"
+  }
+}

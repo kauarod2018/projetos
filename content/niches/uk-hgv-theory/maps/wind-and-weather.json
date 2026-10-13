@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "niche": "uk-hgv-theory",
+  "id": "wind-and-weather",
+  "area": "driving-large-vehicles",
+  "order": 6,
+  "tier": "basic",
+  "officialTopics": [
+    "road-and-weather"
+  ],
+  "title": "High Winds, Rain, Ice & Fog",
+  "whatItIs": "High-sided vehicles are the most affected by strong winds. In rain, ice and fog, slow down, leave much bigger gaps and use your lights when visibility is seriously reduced.",
+  "keyFacts": [
+    "High-sided vehicles are most affected by wind, especially on exposed roads and when passing bridges or gaps in hedges.",
+    "In very windy weather, turbulence from large vehicles can affect others. Motorcyclists are particularly affected.",
+    "Give cyclists, motorcyclists, horse riders and pedestrians more space when overtaking in high winds.",
+    {
+      "text": "You MUST use headlights when visibility is seriously reduced: generally when you cannot see beyond 100 metres.",
+      "law": true
+    },
+    {
+      "text": "You MUST NOT use fog lights unless visibility is seriously reduced, and MUST switch them off when it improves.",
+      "law": true
+    },
+    "On ice, drive slowly in as high a gear as possible. Accelerate and brake very gently."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Weather hazards for lorry drivers",
+    "columns": 2,
+    "items": [
+      {
+        "icon": "wind",
+        "title": "Strong wind",
+        "text": "High-sided vehicles are most affected. Expect gusts on exposed roads, at bridges and at gaps in hedges."
+      },
+      {
+        "icon": "cloud-rain",
+        "title": "Rain",
+        "text": "Stopping distances at least double. Steering feels light? Ease off the accelerator and slow down gradually."
+      },
+      {
+        "icon": "snowflake",
+        "title": "Ice and snow",
+        "text": "Stopping distances up to ten times greater. Clear snow and ice from all windows before you set off."
+      },
+      {
+        "icon": "cloud-fog",
+        "title": "Fog",
+        "text": "Headlights on if you cannot see beyond 100 metres. Be able to stop well within the distance you can see."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Headlights",
+      "points": [
+        "MUST be used when visibility is seriously reduced",
+        "Generally when you cannot see for more than 100 metres"
+      ]
+    },
+    "b": {
+      "label": "Fog lights",
+      "points": [
+        "Only when visibility is seriously reduced",
+        "MUST be switched off when visibility improves"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You're driving a high-sided lorry on an exposed road in strong winds. Where are you most likely to meet a sudden gust?",
+      "options": [
+        "Passing a gap in a hedge",
+        "Waiting at traffic lights in town",
+        "Driving in a built-up street",
+        "Following a car at a safe distance"
+      ],
+      "answerIndex": 0,
+      "why": "High-sided vehicles are most affected by windy weather. Strong gusts happen on open roads exposed to crosswinds, or when passing bridges or gaps in hedges."
+    },
+    {
+      "question": "When must you use headlights in poor weather?",
+      "options": [
+        "When visibility is seriously reduced, generally under 100 metres",
+        "Whenever it is raining",
+        "Only on motorways",
+        "When visibility is under 500 metres"
+      ],
+      "answerIndex": 0,
+      "why": "You must use headlights when visibility is seriously reduced, generally when you cannot see for more than 100 metres (328 feet)."
+    }
+  ],
+  "traps": [
+    "Wind doesn't only affect you: your lorry's turbulence can push motorcyclists off course.",
+    "Fog lights left on after the fog clears dazzle others and can hide your brake lights.",
+    "On ice, tyres make virtually no noise: quiet tyres and unresponsive steering are warning signs.",
+    "In fog, don't speed up to get away from a vehicle that's too close behind you."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 226 to 236",
+      "url": "https://www.gov.uk/guidance/the-highway-code/driving-in-adverse-weather-conditions-226-to-237"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 163 (more space in high winds)",
+      "url": "https://www.gov.uk/guidance/the-highway-code/using-the-road-159-to-203"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 212",
+      "url": "https://www.gov.uk/guidance/the-highway-code/road-users-requiring-extra-care-204-to-225"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

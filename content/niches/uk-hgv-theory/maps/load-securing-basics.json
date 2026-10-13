@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "id": "load-securing-basics",
+  "niche": "uk-hgv-theory",
+  "area": "weights-and-loads",
+  "order": 4,
+  "tier": "basic",
+  "officialTopics": [
+    "vehicle-loading"
+  ],
+  "title": "Load Securing: The Basics",
+  "whatItIs": "All loads must be secure, whatever the vehicle, the load or the length of the journey. The securing system has to hold the load when you brake, corner or swerve.",
+  "keyFacts": [
+    {
+      "text": "Operators, drivers and consignors MUST secure all loads and make sure they're loaded, carried and unloaded safely.",
+      "law": true
+    },
+    {
+      "text": "The securing system MUST withstand the full load weight forwards, and half of it to the sides and to the rear.",
+      "law": true
+    },
+    "Don't rely on a load's weight to keep it in place: friction between most loads and load beds is low.",
+    {
+      "text": "A sheet or net only contains a load. It MUST be used with other securing, such as lashings.",
+      "law": true
+    },
+    "Keep the load near the centre line with its centre of gravity low. Put heavier items at the bottom."
+  ],
+  "visual": {
+    "type": "stats",
+    "caption": "What a load securing system must withstand (minimum)",
+    "items": [
+      {
+        "value": "100%",
+        "label": "of the load's weight, forwards"
+      },
+      {
+        "value": "50%",
+        "label": "of the load's weight, to the sides"
+      },
+      {
+        "value": "50%",
+        "label": "of the load's weight, to the rear"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Containing a load",
+      "points": [
+        "Sheets, nets: stop items bouncing or blowing off",
+        "Never enough on its own"
+      ]
+    },
+    "b": {
+      "label": "Securing a load",
+      "points": [
+        "Stops it sliding, toppling or bouncing",
+        "Lashings, headboards, chocks, friction mats"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "A load securing system must withstand a force equal to how much of the load's weight in the forward direction?",
+      "options": [
+        "A quarter",
+        "Half",
+        "The entire weight",
+        "Twice the weight"
+      ],
+      "answerIndex": 2,
+      "why": "The minimum is the entire weight of the load forwards, and half the weight to the sides and to the rear."
+    },
+    {
+      "question": "Before you set off, you have doubts about how the consignor has secured your load. What should you do?",
+      "options": [
+        "Drive slowly to the delivery point",
+        "Don't set off: report your concerns",
+        "Put a sheet over the load",
+        "Set off and check it after an hour"
+      ],
+      "answerIndex": 1,
+      "why": "You should not proceed with a load if you have any doubts about its security. Report concerns to your employer or the load consignor."
+    }
+  ],
+  "traps": [
+    "Too heavy to move by hand? It can still slide once the vehicle is moving.",
+    "Check restraints during the journey: straps and chains can lose tension and loads like sand can settle.",
+    "An insecure load can be careless or dangerous driving, for the driver, consignor and operator."
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Securing loads on HGVs and goods vehicles",
+      "ref": "1. Responsibility for load security",
+      "url": "https://www.gov.uk/guidance/securing-loads-on-hgvs-and-goods-vehicles/1-responsibility-for-load-security"
+    },
+    {
+      "doc": "GOV.UK: Securing loads on HGVs and goods vehicles",
+      "ref": "2. Load securing: the basics",
+      "url": "https://www.gov.uk/guidance/securing-loads-on-hgvs-and-goods-vehicles/2-load-securing-the-basics"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

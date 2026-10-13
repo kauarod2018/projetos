@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "id": "medical-and-renewal",
+  "niche": "uk-hgv-theory",
+  "area": "licences-and-cpc",
+  "order": 5,
+  "tier": "complete",
+  "officialTopics": [
+    "licences-and-qualifications",
+    "the-driver"
+  ],
+  "title": "Medicals & Renewing Your Lorry Licence",
+  "whatItIs": "You need a D4 medical to get a provisional lorry licence. You then renew every 5 years, with a new D4 medical from age 45, and every year from 65. Renewing is free.",
+  "keyFacts": [
+    {
+      "text": "You MUST tell DVLA about any health condition likely to affect your driving.",
+      "law": true
+    },
+    "To apply for a provisional lorry licence, send form D2 and a D4 medical report filled in by a doctor.",
+    "Renew your lorry licence every 5 years, and every year once you reach 65. Renewing is free.",
+    "DVLA sends the renewal forms 56 days before your licence runs out.",
+    "Under 45: you renew with form D47PU. From 45: form D47P plus a D4 medical report from a doctor.",
+    "An optician or optometrist can fill in the eyesight part of the D4. They may charge for this."
+  ],
+  "visual": {
+    "type": "table",
+    "caption": "Renewing a lorry licence: what DVLA sends you",
+    "data": {
+      "columns": [
+        "Your age",
+        "Forms",
+        "How often"
+      ],
+      "rows": [
+        [
+          "Under 45",
+          "D47PU (no D4 medical)",
+          "Every 5 years"
+        ],
+        [
+          "45 to 64",
+          "D47P and D4 medical report",
+          "Every 5 years"
+        ],
+        [
+          "65 and over",
+          "D47P and D4 medical report",
+          "Every year"
+        ]
+      ],
+      "notes": [
+        "Licence runs out within 56 days of your 45th birthday? Follow the 45-and-over process.",
+        "Renewing a lorry licence and applying for a provisional bus licence? You may need a D4 too."
+      ]
+    }
+  },
+  "confused": {
+    "a": {
+      "label": "Renewing your lorry licence",
+      "points": [
+        "Every 5 years (every year from 65), through DVLA",
+        "From 45, needs a D4 medical report"
+      ]
+    },
+    "b": {
+      "label": "Keeping your Driver CPC",
+      "points": [
+        "35 hours of periodic training every 5 years",
+        "Recorded by DVSA; your deadline is on your Driver CPC card"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You are 47 and your lorry licence is due for renewal. What must you send to DVLA with form D47P?",
+      "options": [
+        "A D4 medical examination report",
+        "A new theory test certificate",
+        "Proof of 35 hours of training",
+        "A D2 provisional licence application"
+      ],
+      "answerIndex": 0,
+      "why": "If you're 45 or over, DVLA sends you form D47P and a D4 medical examination report. A doctor must complete the D4."
+    },
+    {
+      "question": "How often must you renew your lorry licence once you reach 65?",
+      "options": [
+        "Every year",
+        "Every 2 years",
+        "Every 3 years",
+        "Every 5 years"
+      ],
+      "answerIndex": 0,
+      "why": "You need to renew your bus or lorry licence every 5 years, and every year when you reach 65."
+    }
+  ],
+  "traps": [
+    "Renewing is free, but the doctor, optician or optometrist may charge for the D4.",
+    "Your licence and your Driver CPC are separate: renewing one does not renew the other.",
+    "No forms through the post? Get a pack from a Post Office that offers DVLA services."
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Renew or change a lorry or bus licence",
+      "ref": "If you're under 45; If you're 45 or over",
+      "url": "https://www.gov.uk/renew-lorry-bus-coach-licence"
+    },
+    {
+      "doc": "GOV.UK: Become a qualified HGV or bus driver",
+      "ref": "Getting qualified; Applying for a provisional licence; After you've qualified (Stay qualified)",
+      "url": "https://www.gov.uk/become-lorry-bus-driver"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 90",
+      "url": "https://www.gov.uk/guidance/the-highway-code/rules-for-drivers-and-motorcyclists-89-to-102"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

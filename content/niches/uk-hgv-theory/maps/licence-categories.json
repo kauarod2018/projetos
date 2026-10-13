@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "id": "licence-categories",
+  "niche": "uk-hgv-theory",
+  "area": "licences-and-cpc",
+  "order": 1,
+  "tier": "basic",
+  "officialTopics": [
+    "licences-and-qualifications"
+  ],
+  "title": "Lorry Licence Categories: C1, C, C1+E, C+E",
+  "whatItIs": "Your lorry licence category depends on the vehicle's maximum authorised mass (MAM) and the trailer. C1 is for medium lorries, C for large ones. Add +E for a trailer over 750 kg.",
+  "keyFacts": [
+    "To drive a type of vehicle, you need an 'entitlement' for that category on your driving licence.",
+    "C1: vehicles between 3,500 and 7,500 kg MAM, with a trailer up to 750 kg.",
+    "C1+E: a C1 vehicle with a trailer over 750 kg. The combined MAM can't exceed 12,000 kg.",
+    "C: vehicles over 3,500 kg MAM, with a trailer up to 750 kg.",
+    "C+E: a category C vehicle with a trailer over 750 kg.",
+    "An articulated lorry needs category C+E, and you must take your test in one."
+  ],
+  "visual": {
+    "type": "table",
+    "caption": "Lorry licence categories (MAM = maximum authorised mass)",
+    "data": {
+      "columns": [
+        "Category",
+        "Vehicle",
+        "Trailer"
+      ],
+      "rows": [
+        [
+          "C1",
+          "3,500 to 7,500 kg MAM",
+          "Up to 750 kg"
+        ],
+        [
+          "C1+E",
+          "A C1 vehicle",
+          "Over 750 kg (combined MAM no more than 12,000 kg)"
+        ],
+        [
+          "C",
+          "Over 3,500 kg MAM",
+          "Up to 750 kg"
+        ],
+        [
+          "C+E",
+          "A category C vehicle",
+          "Over 750 kg"
+        ]
+      ],
+      "notes": [
+        "Older names: a category C licence may be known as 'HGV 2', and towing heavier trailers as 'HGV 1'."
+      ]
+    }
+  },
+  "confused": {
+    "a": {
+      "label": "C1 (medium lorry)",
+      "points": [
+        "3,500 to 7,500 kg MAM",
+        "Trailer over 750 kg needs C1+E: 12,000 kg combined maximum"
+      ]
+    },
+    "b": {
+      "label": "C (large lorry)",
+      "points": [
+        "Over 3,500 kg MAM",
+        "Trailer over 750 kg needs C+E, e.g. an articulated lorry"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You hold category C1 on your licence. What is the heaviest vehicle (MAM) you can drive?",
+      "options": [
+        "3,500 kg",
+        "7,500 kg",
+        "12,000 kg",
+        "18,000 kg"
+      ],
+      "answerIndex": 1,
+      "why": "Category C1 covers vehicles between 3,500 and 7,500 kg maximum authorised mass, with a trailer up to 750 kg."
+    },
+    {
+      "question": "Which licence category do you need to drive an articulated lorry?",
+      "options": [
+        "C1",
+        "C",
+        "C1+E",
+        "C+E"
+      ],
+      "answerIndex": 3,
+      "why": "GOV.UK gives an articulated lorry as a category C+E vehicle, and says you must use an articulated lorry for the test."
+    }
+  ],
+  "traps": [
+    "'+E' is about the trailer: a trailer over 750 kg needs +E; one up to 750 kg doesn't.",
+    "C1+E is capped at 12,000 kg combined MAM. C1 alone stops at 7,500 kg.",
+    "Upgrading from C to C+E: no new provisional licence or part 1 test, but you must pass parts 3a and 3b.",
+    "Applying for a provisional C licence also gives you provisional C1, C1+E and C+E."
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Driving licence categories",
+      "ref": "Medium-sized vehicles (C1, C1E); Large vehicles (C, CE)",
+      "url": "https://www.gov.uk/driving-licence-categories"
+    },
+    {
+      "doc": "GOV.UK: Become a qualified HGV or bus driver",
+      "ref": "Applying for a provisional licence (form D2 table); Part 3a test; Upgrade your licence to tow heavier trailers",
+      "url": "https://www.gov.uk/become-lorry-bus-driver/qualify-heavier-trailers"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

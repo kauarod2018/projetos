@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "id": "securing-methods",
+  "niche": "uk-hgv-theory",
+  "area": "weights-and-loads",
+  "order": 5,
+  "tier": "complete",
+  "officialTopics": [
+    "vehicle-loading"
+  ],
+  "title": "Ways to Secure a Load",
+  "whatItIs": "Lashings, chains, headboards, chocks and friction matting work together. Each has its own rules, from attachment points to headboard gaps.",
+  "keyFacts": [
+    {
+      "text": "You MUST NOT attach more than one lashing to an anchorage point, or thread one through and hook it back on itself.",
+      "law": true
+    },
+    {
+      "text": "Sheeting or rope hooks MUST NOT be used as anchors for straps or chains.",
+      "law": true
+    },
+    {
+      "text": "Straps and chains MUST NOT be combined in the same lashing: they stretch differently.",
+      "law": true
+    },
+    {
+      "text": "If the headboard is part of the system, the load MUST be against it or within 30 cm wherever possible.",
+      "law": true
+    }
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Securing equipment: what to remember",
+    "columns": 3,
+    "items": [
+      {
+        "icon": "link",
+        "title": "Chains",
+        "text": "Stronger than straps. Heavy plant by direct lashing: at least 4 chains.",
+        "law": true
+      },
+      {
+        "icon": "brick-wall",
+        "title": "Headboards",
+        "text": "Load against it or within 30 cm. If not, block it or add lashings.",
+        "law": true
+      },
+      {
+        "icon": "grip-horizontal",
+        "title": "Friction matting",
+        "text": "At least 0.6 to be effective. Never used on its own.",
+        "law": true
+      },
+      {
+        "icon": "square-stack",
+        "title": "Chocks and cradles",
+        "text": "Barriers to movement. Used with lashings, but fewer may be needed."
+      },
+      {
+        "icon": "tag",
+        "title": "Strap label",
+        "text": "Use LC for direct lashing and STF for frictional lashing."
+      },
+      {
+        "icon": "ban",
+        "title": "Ropes",
+        "text": "Not for securing a load for the journey."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Frictional (tie-down) lashing",
+      "points": [
+        "Presses the load down onto the load bed",
+        "Uses STF (standard tension force)"
+      ]
+    },
+    "b": {
+      "label": "Direct lashing",
+      "points": [
+        "One end on the load, the other on the vehicle",
+        "Uses LC (lashing capacity)"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Your frictional lashings over a low load are at less than 30° to the load bed. What does the guidance say?",
+      "options": [
+        "That's the ideal angle",
+        "The lashing won't be effective",
+        "It's fine if the straps are new",
+        "Only the rear strap matters"
+      ],
+      "answerIndex": 1,
+      "why": "Frictional lashing works best close to vertical. Under 30° it won't be effective: raise the load (for example, with empty pallets) or use another method."
+    },
+    {
+      "question": "Which of these is a suitable point to attach a lashing strap to?",
+      "options": [
+        "A sheeting hook on the side rave",
+        "A dedicated anchorage point in good condition",
+        "A chain already securing the load",
+        "A rope hook"
+      ],
+      "answerIndex": 1,
+      "why": "Attach to the chassis, side raves or dedicated anchorage points. Sheeting and rope hooks aren't designed for load securing."
+    }
+  ],
+  "traps": [
+    "Strap involved in a load shift? Don't reuse it if worn or damaged, even slightly.",
+    "Never tie a knot in any part of a strap that's under tension.",
+    "BS 5759 straps are withdrawn: replace them with straps made to BS EN 12195-2."
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Securing loads on HGVs and goods vehicles",
+      "ref": "4. Ways to secure a load in an HGV or goods vehicle",
+      "url": "https://www.gov.uk/guidance/securing-loads-on-hgvs-and-goods-vehicles/4-ways-to-secure-a-load-in-an-hgv-or-goods-vehicle"
+    },
+    {
+      "doc": "GOV.UK: Securing loads on HGVs and goods vehicles",
+      "ref": "2. Load securing: the basics (British Standards)",
+      "url": "https://www.gov.uk/guidance/securing-loads-on-hgvs-and-goods-vehicles/2-load-securing-the-basics"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

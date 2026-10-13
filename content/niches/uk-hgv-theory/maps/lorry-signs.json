@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "niche": "uk-hgv-theory",
+  "id": "lorry-signs",
+  "area": "driving-large-vehicles",
+  "order": 4,
+  "tier": "basic",
+  "officialTopics": [
+    "traffic-signs"
+  ],
+  "title": "Signs for Lorries: Weight, Height & Width",
+  "whatItIs": "Red circles tell you what you must not do. Learn the signs that ban lorries by weight, type, width, length or height, and the triangles that warn of low headroom ahead.",
+  "keyFacts": [
+    "Red rings or circles tell you what you must not do, for example no vehicles over the height shown.",
+    {
+      "text": "An overheight vehicle MUST NOT pass a red-circle height restriction sign: it is unlawful.",
+      "law": true
+    },
+    "A red warning triangle shows the maximum headroom under a bridge or other overhead obstruction ahead.",
+    "Bridges with less than 16 feet 6 inches (about 5 metres) clearance are normally signed.",
+    "Plates can add exemptions, such as 'Except for loading' by goods vehicles, or access to premises.",
+    "At an arch bridge, road markings guide high vehicles through the highest part of the arch."
+  ],
+  "visual": {
+    "type": "sign-grid",
+    "caption": "Official signs that restrict or warn lorry drivers",
+    "signs": [
+      "goods-vehicles-weight-limit",
+      "end-goods-vehicle-restriction",
+      "no-articulated-vehicles",
+      "max-width",
+      "max-length",
+      "max-height",
+      "headroom-warning",
+      "height-restriction-ahead"
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Red circle (e.g. maximum height)",
+      "points": [
+        "An order: no vehicles over the height shown",
+        "Unlawful to pass if your vehicle is overheight"
+      ]
+    },
+    "b": {
+      "label": "Red triangle (headroom)",
+      "points": [
+        "A warning of the maximum headroom ahead",
+        "May be placed well before the bridge, with a distance plate"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You see a red circle showing a lorry and the figure 7.5 t. What does it mean?",
+      "options": [
+        "No goods vehicles over 7.5 tonnes maximum gross weight",
+        "Lorries over 7.5 tonnes must use the left lane",
+        "Maximum axle weight 7.5 tonnes",
+        "Goods vehicles must keep below 7.5 mph"
+      ],
+      "answerIndex": 0,
+      "why": "This regulatory sign means no goods vehicles over the maximum gross weight shown, in tonnes."
+    },
+    {
+      "question": "A goods vehicle weight limit sign has a plate saying 'Except for loading'. What does this mean?",
+      "options": [
+        "Goods vehicles over the limit may enter only to load or unload",
+        "Only empty vehicles may enter",
+        "There is a loading bay ahead",
+        "The limit applies only while you are loading"
+      ],
+      "answerIndex": 0,
+      "why": "The plate shows an exemption from the prohibition: 'except for loading and unloading by goods vehicles'."
+    }
+  ],
+  "traps": [
+    "Red circle = an order you MUST obey; red triangle = a warning. Both can show a headroom figure.",
+    "'Except for loading' exempts goods vehicles only to load and unload.",
+    "At an arch bridge, a high vehicle may need the middle of the road: other drivers should give way to it."
+  ],
+  "sources": [
+    {
+      "doc": "Know Your Traffic Signs (DfT)",
+      "ref": "The signing system (page 9); Regulatory signs (pages 17 to 18); Low bridge signs (pages 24 to 27)",
+      "url": "https://assets.publishing.service.gov.uk/media/656ef4271104cf0013fa74ef/know-your-traffic-signs-dft.pdf"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Signs giving orders; Warning signs",
+      "url": "https://www.gov.uk/guidance/the-highway-code/traffic-signs"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}
