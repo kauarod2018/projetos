@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "niche": "uk-hgv-theory",
+  "id": "breakdowns-lorries",
+  "area": "incidents-and-security",
+  "order": 1,
+  "tier": "basic",
+  "officialTopics": [
+    "incidents-and-emergencies"
+  ],
+  "title": "Breakdowns: Motorways & Other Roads",
+  "whatItIs": "If you break down, stop in a place of relative safety, warn other traffic and keep well away from your vehicle and moving traffic. Never use a warning triangle on a motorway.",
+  "keyFacts": [
+    "The safest place to stop is one designed for parking. On motorways and high-speed roads, that is a service area.",
+    "Hard shoulders give less protection than other places of relative safety: they are close to fast traffic.",
+    "Other roads: put a warning triangle at least 45 metres behind, on the same side. Never use one on a motorway.",
+    "Can't get out safely? Stay in the vehicle with seat belt and hazard lights on, and call 999 for the police.",
+    "Give your location using the numbers on marker posts or driver location signs at the roadside."
+  ],
+  "visual": {
+    "type": "steps",
+    "caption": "Motorway breakdown: Go left, Get safe, Get help (rule 277)",
+    "items": [
+      {
+        "title": "Go left",
+        "text": "Move to the left lane, then into an emergency area or onto the hard shoulder."
+      },
+      {
+        "title": "Stop well to the left",
+        "text": "Wheels turned left, hazard lights on. Ideally just beyond an emergency phone."
+      },
+      {
+        "title": "Get safe",
+        "text": "Get out on the side away from traffic. Wait behind the barrier, away from the vehicle."
+      },
+      {
+        "title": "Get help",
+        "text": "Use the free emergency phone, facing the traffic, or call a recovery service."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Motorway",
+      "points": [
+        "No warning triangle",
+        "Wait behind the safety barrier, away from your lorry"
+      ]
+    },
+    "b": {
+      "label": "Other roads",
+      "points": [
+        "Warning triangle at least 45 m behind",
+        "Don't stand between your vehicle and oncoming traffic"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Your lorry breaks down on a motorway and you stop on the hard shoulder. Where should you wait?",
+      "options": [
+        "Behind the safety barrier, away from your lorry",
+        "In the cab with the engine running",
+        "In front of your lorry",
+        "Beside the lorry to warn traffic"
+      ],
+      "answerIndex": 0,
+      "why": "Get out on the side away from traffic and wait well away from your vehicle and moving traffic, behind the safety barrier where there is one."
+    },
+    {
+      "question": "Your lorry breaks down on a single carriageway road. Where should you place a warning triangle?",
+      "options": [
+        "At least 45 metres behind",
+        "At least 10 metres behind",
+        "At least 20 metres in front",
+        "Right next to the lorry"
+      ],
+      "answerIndex": 0,
+      "why": "Put a warning triangle on the road at least 45 metres (147 feet) behind your vehicle, on the same side of the road."
+    }
+  ],
+  "traps": [
+    "Don't go back to your vehicle, even if it's raining, cold or dark.",
+    "Something fell off your lorry on a motorway? Don't remove it: stop safely and call 999.",
+    "Leaving an emergency area: you MUST use the emergency phone and follow the advice first."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 275 to 278 and 280",
+      "url": "https://www.gov.uk/guidance/the-highway-code/breakdowns-and-incidents-274-to-287"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

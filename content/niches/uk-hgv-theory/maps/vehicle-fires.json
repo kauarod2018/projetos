@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "niche": "uk-hgv-theory",
+  "id": "vehicle-fires",
+  "area": "incidents-and-security",
+  "order": 3,
+  "tier": "complete",
+  "officialTopics": [
+    "incidents-and-emergencies"
+  ],
+  "title": "Fires & Tunnel Emergencies",
+  "whatItIs": "If your vehicle catches fire, get everyone out to a safe place and call the fire brigade. Don't open a burning engine compartment. In tunnels, keep your distance.",
+  "keyFacts": [
+    "Don't try to put out an engine compartment fire: opening it will make the fire flare.",
+    "Smell burning rubber, fuel or an electrical fault? Investigate straight away: do not risk a fire.",
+    "Never smoke or use a mobile phone on a fuel station forecourt: both are major fire risks.",
+    "Large vehicle in a tunnel: allow a four-second gap. If you stop, leave at least 5 metres.",
+    "Signs in road tunnels show the direction and distance to an emergency exit."
+  ],
+  "visual": {
+    "type": "steps",
+    "caption": "If your vehicle catches fire",
+    "items": [
+      {
+        "title": "Stop safely",
+        "text": "If you can, stop in a place of relative safety. Hazard lights on."
+      },
+      {
+        "title": "Get everyone out",
+        "text": "Get the occupants out quickly and to a safe place."
+      },
+      {
+        "title": "Keep it shut",
+        "text": "Don't open the engine compartment: the fire will flare."
+      },
+      {
+        "title": "Call 999",
+        "text": "Ask for the fire brigade. Give the exact location and direction of travel."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Engine fire",
+      "points": [
+        "Get everyone out and call the fire brigade",
+        "Don't open the engine compartment"
+      ]
+    },
+    "b": {
+      "label": "Overheated engine",
+      "points": [
+        "Wait until it has cooled naturally",
+        "Only then remove the coolant cap"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Smoke is coming from your lorry's engine compartment. What should you do?",
+      "options": [
+        "Get out and call the fire brigade without opening it",
+        "Open it to find the fire",
+        "Drive on to the next services",
+        "Add water to the radiator"
+      ],
+      "answerIndex": 0,
+      "why": "Get the occupants out quickly to a safe place and call the fire brigade. Opening the engine compartment will make the fire flare."
+    },
+    {
+      "question": "You have to stop in a tunnel. What gap should you leave to the vehicle in front?",
+      "options": [
+        "At least 5 metres",
+        "At least 1 metre",
+        "Four seconds",
+        "At least 20 metres"
+      ],
+      "answerIndex": 0,
+      "why": "If you have to stop in a tunnel, leave at least a 5-metre gap. A four-second gap is for a large vehicle moving through a tunnel."
+    }
+  ],
+  "traps": [
+    "Moving in a tunnel: four seconds. Stopped in a tunnel: at least 5 metres.",
+    "Fire and further collisions are the main dangers after a crash: switch engines off.",
+    "Spilt diesel makes the road very slippery: don't overfill, and check the fuel cap seals."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Overheated engines or fire; Petrol stations/fuel tank/fuel leaks",
+      "url": "https://www.gov.uk/guidance/the-highway-code/annex-6-vehicle-maintenance-safety-and-security"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "1. Deal with danger; 2. Get help",
+      "url": "https://www.gov.uk/guidance/the-highway-code/annex-7-first-aid-on-the-road"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 126 (tunnels)",
+      "url": "https://www.gov.uk/guidance/the-highway-code/general-rules-techniques-and-advice-for-all-drivers-and-riders-103-to-158"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 275 and 283",
+      "url": "https://www.gov.uk/guidance/the-highway-code/breakdowns-and-incidents-274-to-287"
+    },
+    {
+      "doc": "Know Your Traffic Signs (DfT)",
+      "ref": "Pedestrian signs: emergency exit from a road tunnel (page 137)",
+      "url": "https://assets.publishing.service.gov.uk/media/656ef4271104cf0013fa74ef/know-your-traffic-signs-dft.pdf"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "niche": "uk-hgv-theory",
+  "id": "clandestine-entrants",
+  "area": "incidents-and-security",
+  "order": 4,
+  "tier": "basic",
+  "officialTopics": [
+    "security"
+  ],
+  "title": "Clandestine Entrants: Securing Your Vehicle",
+  "whatItIs": "Drivers, owners and hirers must secure goods vehicles so nobody can hide in them to enter the UK. You can be fined even if no one is found: secure, check and record.",
+  "keyFacts": [
+    "Carrying a clandestine entrant: a fine of up to £10,000 per person carried, for each person responsible.",
+    "Goods vehicle not adequately secured: up to £6,000, even if no one is found, entering or leaving the UK.",
+    "Curtain-siders: a taut TIR cord or strap through all eyelets, secured with a lock, seal or other device.",
+    {
+      "text": "You MUST NOT go through UK border control if you know or suspect someone is hiding in your vehicle.",
+      "law": true
+    },
+    "Don't approach anyone hiding. Stay in the cab and contact the police, port security or Border Force."
+  ],
+  "visual": {
+    "type": "steps",
+    "caption": "Secure, check, record",
+    "items": [
+      {
+        "title": "Watch the loading",
+        "text": "Make sure no one gets in. Can't watch? Check the vehicle as soon as you can."
+      },
+      {
+        "title": "Lock and seal",
+        "text": "Padlock the doors. Note seal numbers on your checklist."
+      },
+      {
+        "title": "Check after every stop",
+        "text": "Roof, fabric, seals and locks, panniers, wind break and axles."
+      },
+      {
+        "title": "Check and record",
+        "text": "Repeat the checks before the UK control zone. Record every check on your checklist."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Carrying a clandestine entrant",
+      "points": [
+        "Up to £10,000 per person carried",
+        "Owner, hirer or driver can be fined"
+      ]
+    },
+    "b": {
+      "label": "Vehicle not adequately secured",
+      "points": [
+        "Up to £6,000, even if no one is found",
+        "Applies entering or leaving the UK"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You suspect someone has got into your trailer before UK border control. What should you do?",
+      "options": [
+        "Not go through; tell the police or Border Force",
+        "Open the trailer and remove them yourself",
+        "Carry on and report it on delivery",
+        "Reseal the trailer and continue"
+      ],
+      "answerIndex": 0,
+      "why": "You must not go through UK border control if you suspect someone is hiding in your vehicle. Don't approach them: contact the police or Border Force."
+    },
+    {
+      "question": "Your curtain-sided trailer has just been loaded. How should you secure it?",
+      "options": [
+        "A taut TIR cord through all eyelets, locked or sealed",
+        "Tie the curtains with spare straps",
+        "Leave it unsealed for inspection",
+        "Lock the cab doors only"
+      ],
+      "answerIndex": 0,
+      "why": "A curtain-sided vehicle is secured with a TIR cable or strap that is taut, passes through all eyelets and is secured by a lock, seal or other device."
+    }
+  ],
+  "traps": [
+    "An unsecured goods vehicle alone can bring a fine: no one needs to be found.",
+    "You're not expected to climb on the roof: check it from inside, or use poles, mirrors or a phone.",
+    "Don't break a customs seal to check: record which checks you couldn't do."
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Clandestine entrant civil penalty scheme",
+      "ref": "Fines; At UK border control",
+      "url": "https://www.gov.uk/guidance/clandestine-entrant-civil-penalty-scheme"
+    },
+    {
+      "doc": "Home Office: How to secure your vehicle when travelling to the UK",
+      "ref": "Steps 1 to 10",
+      "url": "https://www.gov.uk/government/publications/preventing-clandestine-entrants/guidance-on-preventing-clandestine-entry-english-accessible"
+    },
+    {
+      "doc": "Home Office: Check and secure your vehicle",
+      "ref": "Sealed trailers; Tilt cords; Checking the roof",
+      "url": "https://www.gov.uk/government/publications/clandestine-entrant-penalty-scheme-check-and-secure-your-vehicle/clandestine-entrant-penalty-scheme-check-and-secure-your-vehicle"
+    },
+    {
+      "doc": "Home Office: Level of penalty code of practice",
+      "ref": "Maximum level of penalty",
+      "url": "https://www.gov.uk/government/publications/level-of-penalty-code-of-practice/level-of-penalty-code-of-practice-accessible"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

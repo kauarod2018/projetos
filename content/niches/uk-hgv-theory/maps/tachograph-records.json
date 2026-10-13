@@ -106,8 +106,13 @@
   "sources": [
     {
       "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
-      "ref": "Sections 4.1 to 4.3 (tachograph rules); section 5 (downloading, breakdowns)",
+      "ref": "4.1 to 4.3",
       "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/4-tachograph-rules"
+    },
+    {
+      "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
+      "ref": "5. Operators: downloading; breakdowns",
+      "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/5-responsibilities-of-vehicle-operators"
     }
   ],
   "jurisdictionNotes": [],

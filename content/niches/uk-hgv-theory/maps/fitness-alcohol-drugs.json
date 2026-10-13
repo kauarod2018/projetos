@@ -47,8 +47,8 @@
         "label": "Read a number plate in good daylight"
       },
       {
-        "value": "15 min",
-        "label": "Advised break every 2 hours"
+        "value": "15",
+        "label": "Minutes' break advised every 2 hours"
       }
     ]
   },
@@ -89,7 +89,7 @@
         "Turn up the radio and keep going"
       ],
       "answerIndex": 2,
-      "why": "Rule 91: if you feel sleepy, stop in a safe place, not in an emergency area or on the hard shoulder. Rule 262: service areas and roads off motorway exits have rest facilities."
+      "why": "Rule 91: stop in a safe place, not in an emergency area or on the hard shoulder. Rule 262: use service areas or facilities off motorway exits."
     }
   ],
   "traps": [

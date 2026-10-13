@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "niche": "uk-hgv-theory",
+  "id": "incidents-reporting",
+  "area": "incidents-and-security",
+  "order": 2,
+  "tier": "basic",
+  "officialTopics": [
+    "incidents-and-emergencies"
+  ],
+  "title": "Incidents: Stopping, Reporting & First Aid",
+  "whatItIs": "At an incident, warn traffic, call 999 and be ready to give first aid. If your lorry is in a collision that causes damage or injury, you must stop and give your details.",
+  "keyFacts": [
+    {
+      "text": "In a collision causing damage or injury, you MUST stop and give your details to anyone who reasonably asks.",
+      "law": true
+    },
+    {
+      "text": "If you don't give your details at the time, you MUST report it to the police as soon as possible, within 24 hours.",
+      "law": true
+    },
+    {
+      "text": "Injury, and no insurance certificate shown at the time: you MUST produce it to the police within seven days.",
+      "law": true
+    },
+    "Don't move injured people from their vehicles unless they are in immediate danger.",
+    "Burns: cool for at least 20 minutes with plenty of clean, cool water."
+  ],
+  "visual": {
+    "type": "table",
+    "caption": "First aid at the scene: D R A B C (Highway Code annex 7)",
+    "data": {
+      "columns": [
+        "Step",
+        "What to do"
+      ],
+      "rows": [
+        [
+          "D: Danger",
+          "Check it is safe to approach. Switch off engines and stop anyone smoking."
+        ],
+        [
+          "R: Response",
+          "Gently shake their shoulders and ask loudly 'Are you all right?'"
+        ],
+        [
+          "A: Airway",
+          "No response? Lift the chin forward with your fingers to open the airway."
+        ],
+        [
+          "B: Breathing",
+          "No normal breathing? Start CPR: press hard and fast, 5 to 6 cm, about twice a second."
+        ],
+        [
+          "C: Circulation",
+          "Check for bleeding. Apply firm pressure over the wound (not on anything stuck in it)."
+        ]
+      ],
+      "notes": []
+    }
+  },
+  "confused": {
+    "a": {
+      "label": "Within 24 hours",
+      "points": [
+        "Report the collision to the police",
+        "If you didn't give your details at the scene"
+      ]
+    },
+    "b": {
+      "label": "Within seven days",
+      "points": [
+        "Produce your insurance certificate to the police",
+        "After an injury collision where you did not show it"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You're first at a crash. A casualty is not responding and not breathing. What should you do?",
+      "options": [
+        "Start CPR",
+        "Give them a drink of water",
+        "Pull them out of the vehicle",
+        "Wait for the ambulance"
+      ],
+      "answerIndex": 0,
+      "why": "If there are no signs of breathing, start CPR. Keep going until they breathe or a medical professional takes over."
+    },
+    {
+      "question": "Your lorry damages a parked car and you can't find the owner. What must you do?",
+      "options": [
+        "Report it to the police within 24 hours",
+        "Leave a note and drive on",
+        "Report it within seven days",
+        "Tell your transport manager only"
+      ],
+      "answerIndex": 0,
+      "why": "If you don't give your details at the time, report it to the police as soon as possible, and within 24 hours."
+    }
+  ],
+  "traps": [
+    "24 hours is for reporting to the police; seven days is for producing your insurance.",
+    "Don't give casualties anything to eat or drink.",
+    "Don't remove a motorcyclist's helmet unless it is essential."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 283, 286 and 287",
+      "url": "https://www.gov.uk/guidance/the-highway-code/breakdowns-and-incidents-274-to-287"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Annex 7: First aid on the road",
+      "url": "https://www.gov.uk/guidance/the-highway-code/annex-7-first-aid-on-the-road"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

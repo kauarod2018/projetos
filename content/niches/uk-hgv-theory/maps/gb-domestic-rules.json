@@ -108,17 +108,17 @@
   "sources": [
     {
       "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
-      "ref": "2. GB domestic rules: 2.2 Domestic driving limits; 2.3 Record keeping; 2.6 Travelling abroad",
+      "ref": "2.2, 2.3, 2.6 (GB domestic rules)",
       "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/2-great-britain-domestic-rules-on-drivers-hours"
     },
     {
       "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
-      "ref": "3. Mixed assimilated or AETR and GB domestic driving: 3.1 and 3.2",
+      "ref": "3.1, 3.2 (mixed driving)",
       "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/3-mixed-assimilated-or-aetr-and-great-britain-domestic-driving"
     },
     {
       "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
-      "ref": "1.4 Breaks and driving limits; 1.5 Daily rest periods",
+      "ref": "1.4, 1.5",
       "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/1-assimilated-and-aetr-rules-on-drivers-hours"
     }
   ],

@@ -83,13 +83,13 @@
     {
       "question": "Heavy snow delays you and you will go over your driving time. What may you do?",
       "options": [
-        "Drive on to your planned destination",
-        "Go over the limits only as far as needed to reach a suitable stopping place",
-        "Ignore the rules for the rest of the day",
-        "Ask your employer to change your tachograph record"
+        "Drive on to your destination",
+        "Only go on to a suitable stopping place",
+        "Ignore the rules for the day",
+        "Ask your employer to edit the record"
       ],
       "answerIndex": 1,
-      "why": "You may depart from the rules only as far as needed to reach a suitable stopping place, without risking road safety."
+      "why": "You may depart from the rules only as far as needed to reach a suitable stopping place, if road safety is not put at risk."
     }
   ],
   "traps": [
@@ -100,12 +100,12 @@
   "sources": [
     {
       "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
-      "ref": "1.7 Journeys involving a ferry or train; 1.8 Emergencies; 1.10 Unforeseen events",
+      "ref": "1.7 Ferry or train; 1.8 Emergencies; 1.10 Unforeseen events",
       "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/1-assimilated-and-aetr-rules-on-drivers-hours"
     },
     {
       "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
-      "ref": "4.2 Digital or smart tachographs (ferry mode); manual records",
+      "ref": "4.2 (ferry mode, manual records)",
       "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/4-tachograph-rules"
     }
   ],

@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "niche": "uk-hgv-theory",
+  "id": "dangerous-goods",
+  "area": "incidents-and-security",
+  "order": 5,
+  "tier": "complete",
+  "officialTopics": [
+    "incidents-and-emergencies",
+    "vehicle-loading"
+  ],
+  "title": "Dangerous Goods: Plates & Basics",
+  "whatItIs": "Vehicles carrying dangerous goods in packages show plain orange plates; tankers show hazard warning plates. Drivers need ADR training, and some tunnels ban certain loads.",
+  "keyFacts": [
+    "Vehicles carrying dangerous goods in packages are marked with plain orange reflective plates.",
+    "Road tankers and vehicles carrying tank containers of dangerous goods have hazard warning plates.",
+    {
+      "text": "Drivers carrying dangerous goods MUST hold an ADR training certificate, unless an exemption applies.",
+      "law": true
+    },
+    "On ADR journeys, carry the transport documents, emergency instructions in writing and photo ID for each crew member.",
+    "Tunnel signs can ban dangerous goods by restriction code: Dartford is category C, Blackwall category E."
+  ],
+  "visual": {
+    "type": "steps",
+    "caption": "An incident involving dangerous goods (rule 285)",
+    "items": [
+      {
+        "title": "Follow rule 283",
+        "text": "Stop safely, hazard lights on, call 999 with full details."
+      },
+      {
+        "title": "Engines off, no smoking",
+        "text": "Switch off engines and DO NOT SMOKE."
+      },
+      {
+        "title": "Keep well away",
+        "text": "Don't try to rescue casualties: you could become one yourself."
+      },
+      {
+        "title": "Report the markings",
+        "text": "Tell the emergency services about the labels and markings on the vehicle."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Plain orange reflective plate",
+      "points": [
+        "Dangerous goods carried in packages",
+        "Plain orange and reflective"
+      ]
+    },
+    "b": {
+      "label": "Hazard warning plate",
+      "points": [
+        "Road tankers and tank containers",
+        "Shows a diamond symbol for the hazard"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "A lorry is displaying plain orange reflective plates. What does this tell you?",
+      "options": [
+        "It's carrying dangerous goods in packages",
+        "It's a tanker carrying flammable liquid",
+        "It's carrying an abnormal load",
+        "It's longer than 13 metres"
+      ],
+      "answerIndex": 0,
+      "why": "Vehicles carrying dangerous goods in packages are marked with plain orange reflective plates. Tankers have hazard warning plates."
+    },
+    {
+      "question": "A tanker carrying dangerous goods has crashed. What should you tell the emergency services?",
+      "options": [
+        "As much as you can about its labels and markings",
+        "Only the number of vehicles involved",
+        "Nothing until you have checked the load",
+        "Only the name of the haulier"
+      ],
+      "answerIndex": 0,
+      "why": "Call the emergency services and give as much information as possible about the labels and markings on the vehicle."
+    }
+  ],
+  "traps": [
+    "Don't use a mobile phone close to a vehicle carrying flammable loads.",
+    "Below certain amounts, many parts of ADR may not apply, or apply in a modified form: not none at all.",
+    "Emergency instructions must be in a language every crew member understands."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 284 and 285 (incidents involving dangerous goods)",
+      "url": "https://www.gov.uk/guidance/the-highway-code/breakdowns-and-incidents-274-to-287"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Hazard warning plates",
+      "url": "https://www.gov.uk/guidance/the-highway-code/vehicle-markings"
+    },
+    {
+      "doc": "GOV.UK: Driving dangerous goods and special loads abroad",
+      "ref": "ADR; Exemptions; Documentation; Emergency instructions in writing",
+      "url": "https://www.gov.uk/guidance/driving-dangerous-goods-and-special-loads"
+    },
+    {
+      "doc": "Know Your Traffic Signs (DfT)",
+      "ref": "Regulatory signs: dangerous goods tunnel categories (page 18)",
+      "url": "https://assets.publishing.service.gov.uk/media/656ef4271104cf0013fa74ef/know-your-traffic-signs-dft.pdf"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}
