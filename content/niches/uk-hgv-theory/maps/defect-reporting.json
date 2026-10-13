@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "id": "defect-reporting",
+  "niche": "uk-hgv-theory",
+  "area": "vehicle-checks",
+  "order": 3,
+  "tier": "basic",
+  "officialTopics": [
+    "vehicle-condition"
+  ],
+  "title": "Reporting Defects & Roadworthiness",
+  "whatItIs": "You're legally responsible for your vehicle's condition on the road. Record every defect from your walkaround check or journey in writing and report it to the person who sorts out defects.",
+  "keyFacts": [
+    {
+      "text": "Drivers MUST report any defects, or symptoms of defects, that could prevent the vehicle being operated safely.",
+      "law": true
+    },
+    {
+      "text": "You MUST get dangerous defects fixed before you continue your journey.",
+      "law": true
+    },
+    "On a tachograph, record the walkaround check and any repairs as 'other work'."
+  ],
+  "visual": {
+    "type": "steps",
+    "caption": "From walkaround check to repair",
+    "items": [
+      {
+        "title": "Check",
+        "text": "At least once in every 24 hours the vehicle is used."
+      },
+      {
+        "title": "Record",
+        "text": "Registration, date, defects or 'nil', your name."
+      },
+      {
+        "title": "Report",
+        "text": "In writing, to the person who sorts out defects."
+      },
+      {
+        "title": "Act",
+        "text": "The vehicle may be taken out of service."
+      },
+      {
+        "title": "Repair and keep",
+        "text": "Reports are kept for at least 15 months."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "'S' marked prohibition",
+      "points": [
+        "Severe defect, usually a maintenance problem",
+        "Should have been found, e.g. at the daily check"
+      ]
+    },
+    "b": {
+      "label": "'X' marked defect",
+      "points": [
+        "Random failure the driver wouldn't notice",
+        "No reflection on the maintenance system"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You find no defects during your walkaround check. What should you record?",
+      "options": [
+        "Nothing: there's nothing to report",
+        "'Nil' defects on the report",
+        "Only the vehicle's mileage",
+        "Only the time you finished"
+      ],
+      "answerIndex": 1,
+      "why": "Record 'nil' defects if you don't find any: it shows the check was done and no defects were found."
+    },
+    {
+      "question": "On your journey you notice a dangerous defect. What must you do?",
+      "options": [
+        "Finish the day and report it at the depot",
+        "Stop safely, report it and get it fixed before going on",
+        "Report it at tomorrow's walkaround check",
+        "Drive on slowly with hazard lights on"
+      ],
+      "answerIndex": 1,
+      "why": "Stop somewhere safe to assess and report it. Dangerous defects must be fixed before you continue."
+    }
+  ],
+  "traps": [
+    "Someone else did the check? You still need to see evidence it was done.",
+    "Not doing an adequate walkaround check can lead to a driver conduct hearing and loss of your vocational licence.",
+    "Using an HGV in a dangerous condition can mean an unlimited fine and a prison sentence."
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Carry out HGV daily walkaround checks",
+      "ref": "Record and report the result of your check",
+      "url": "https://www.gov.uk/guidance/carry-out-daily-heavy-goods-vehicle-hgv-walkaround-checks"
+    },
+    {
+      "doc": "DVSA: Guide to maintaining roadworthiness",
+      "ref": "3. Daily walkaround checks; 3.1 Reporting and recording defects; 3.2 Drivers' responsibilities; Annex 1",
+      "url": "https://www.gov.uk/government/publications/guide-to-maintaining-roadworthiness/guide-to-maintaining-roadworthiness-commercial-goods-and-passenger-carrying-vehicles"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

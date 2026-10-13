@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "id": "weekly-rest",
+  "niche": "uk-hgv-theory",
+  "area": "hours-and-tachographs",
+  "order": 5,
+  "tier": "complete",
+  "officialTopics": [
+    "drivers-hours"
+  ],
+  "title": "Weekly Rest & Compensation",
+  "whatItIs": "Start a weekly rest after no more than six 24-hour periods. Regular: at least 45 hours. Reduced: at least 24 hours, made up in one block by the end of the third week after.",
+  "keyFacts": [
+    {
+      "text": "A weekly rest MUST start no later than the end of six 24-hour periods after your last weekly rest.",
+      "law": true
+    },
+    "Regular weekly rest: at least 45 continuous hours. Reduced: at least 24 but under 45 hours.",
+    {
+      "text": "In any 2 consecutive fixed weeks you MUST take 2 regular weekly rests, or 1 regular and 1 reduced.",
+      "law": true
+    },
+    {
+      "text": "A reduction MUST be made up in one block before the end of the third week after the week in question.",
+      "law": true
+    },
+    "The make-up rest is added to another rest of at least 9 hours.",
+    {
+      "text": "You MUST NOT take a regular weekly rest in the vehicle. Your employer pays for suitable accommodation.",
+      "law": true
+    }
+  ],
+  "visual": {
+    "type": "timeline",
+    "caption": "Weekly rest lengths, drawn to scale",
+    "scaleHours": 48,
+    "rows": [
+      {
+        "label": "Regular weekly rest: 45 hours",
+        "verdict": "ok",
+        "segments": [
+          {
+            "kind": "rest",
+            "minutes": 2700,
+            "label": "45 h"
+          }
+        ]
+      },
+      {
+        "label": "Reduced to 33 hours in week 1",
+        "verdict": "ok",
+        "note": "12 hours owed: in one block, added to a 9 h+ rest, by the end of week 4.",
+        "segments": [
+          {
+            "kind": "rest",
+            "minutes": 1980,
+            "label": "33 h"
+          }
+        ]
+      },
+      {
+        "label": "Too short: 20 hours",
+        "verdict": "wrong",
+        "note": "Under 24 hours is not a weekly rest.",
+        "segments": [
+          {
+            "kind": "rest",
+            "minutes": 1200,
+            "label": "20 h"
+          }
+        ]
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Regular weekly rest",
+      "points": [
+        "At least 45 hours",
+        "Not in the vehicle: suitable accommodation, paid by the employer"
+      ]
+    },
+    "b": {
+      "label": "Reduced weekly rest",
+      "points": [
+        "At least 24 but under 45 hours",
+        "Can be in a stationary vehicle with suitable sleeping facilities"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You took a reduced weekly rest of 33 hours. How many hours of rest must you make up?",
+      "options": [
+        "9 hours",
+        "12 hours",
+        "21 hours",
+        "24 hours"
+      ],
+      "answerIndex": 1,
+      "why": "45 − 33 = 12 hours, made up in one block with a rest of at least 9 hours, by the end of the third week after."
+    },
+    {
+      "question": "What is the most time allowed between two weekly rests?",
+      "options": [
+        "Five 24-hour periods",
+        "Six 24-hour periods",
+        "Seven 24-hour periods",
+        "Two fixed weeks"
+      ],
+      "answerIndex": 1,
+      "why": "A weekly rest must start no later than the end of six 24-hour periods after the last one."
+    }
+  ],
+  "traps": [
+    "The make-up rest must be one block: it can't be split into smaller pieces.",
+    "Your working week doesn't have to match the fixed week: it starts when your weekly rest ends.",
+    "A weekly rest that spans two weeks counts in either week, but not both."
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
+      "ref": "1.6 Weekly rest periods (incl. Sleeping facilities); 1.11 Summary of assimilated limits",
+      "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/1-assimilated-and-aetr-rules-on-drivers-hours"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

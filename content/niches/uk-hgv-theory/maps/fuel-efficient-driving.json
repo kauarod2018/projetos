@@ -27,7 +27,7 @@
   "visual": {
     "type": "cards",
     "caption": "What helps a lorry use less fuel",
-    "columns": 3,
+    "columns": 2,
     "items": [
       {
         "icon": "power",
@@ -38,27 +38,17 @@
       {
         "icon": "circle-gauge",
         "title": "Tyres",
-        "text": "Keep tyres correctly inflated. Energy efficient tyres can also cut fuel use."
-      },
-      {
-        "icon": "gauge",
-        "title": "Driver training",
-        "text": "Effective training cuts fuel use and costs such as brake and tyre wear."
+        "text": "Keep tyres correctly inflated. Energy efficient tyres also help."
       },
       {
         "icon": "route",
         "title": "Route planning",
-        "text": "Plan the most fuel-efficient route to cut fuel use and emissions."
+        "text": "Plan the most fuel-efficient route."
       },
       {
         "icon": "wind",
         "title": "Aerodynamics",
         "text": "Wind deflectors can reduce drag and fuel consumption."
-      },
-      {
-        "icon": "wrench",
-        "title": "Maintenance",
-        "text": "Servicing to the manufacturer's standards saves fuel and cuts exhaust emissions."
       }
     ]
   },
@@ -80,7 +70,7 @@
   },
   "onTheTest": [
     {
-      "question": "You're parked on a public road waiting to unload, and expect to wait 20 minutes. What should you do?",
+      "question": "You're parked on a public road and expect to wait 20 minutes to unload. What should you do?",
       "options": [
         "Apply the parking brake and switch off the engine",
         "Keep the engine idling to keep the cab warm",
@@ -88,7 +78,7 @@
         "Leave the engine running with hazard lights on"
       ],
       "answerIndex": 0,
-      "why": "You must not leave an engine running unnecessarily while stationary on a public road. If you will be stopped for more than a couple of minutes, apply the parking brake and switch off the engine."
+      "why": "Don't leave an engine running unnecessarily while stationary. Stopped for more than a couple of minutes? Parking brake on, engine off."
     },
     {
       "question": "How can tyre pressure affect fuel use?",

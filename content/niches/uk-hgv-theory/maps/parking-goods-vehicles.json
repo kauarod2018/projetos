@@ -10,41 +10,30 @@
     "security"
   ],
   "title": "Parking a Goods Vehicle",
-  "whatItIs": "A goods vehicle over 7.5 tonnes must not be parked on a verge, pavement or land between carriageways without police permission. Park off-street where you can, and secure your vehicle.",
+  "whatItIs": "Over 7.5 tonnes, a goods vehicle must not be parked on a verge, pavement or central land without police permission. Park off-street where you can.",
   "keyFacts": [
     {
       "text": "Over 7.5 t (trailer included): you MUST NOT park on a verge, pavement or central land without police permission.",
       "law": true
     },
     {
-      "text": "Only exception: parking there is essential for loading or unloading, and then the vehicle MUST NOT be left unattended.",
+      "text": "Exception: essential loading or unloading, but then the vehicle MUST NOT be left unattended.",
       "law": true
     },
     {
-      "text": "Before leaving your vehicle you MUST switch off the engine, headlights and fog lights, and apply the handbrake.",
+      "text": "Before leaving, you MUST switch off the engine, headlights and fog lights and apply the handbrake.",
       "law": true
     },
     {
-      "text": "You MUST NOT leave your vehicle or trailer in a dangerous position or where it causes unnecessary obstruction.",
+      "text": "On a road or lay-by with a limit over 30 mph, all vehicles MUST show parking lights.",
       "law": true
-    },
-    {
-      "text": "All vehicles MUST show parking lights when parked on a road or lay-by with a speed limit over 30 mph.",
-      "law": true
-    },
-    "Use off-street parking areas or bays marked with white lines wherever possible."
+    }
   ],
   "visual": {
     "type": "cards",
-    "caption": "Parking rules for lorry drivers",
-    "columns": 3,
+    "caption": "More parking rules for lorry drivers",
+    "columns": 2,
     "items": [
-      {
-        "icon": "ban",
-        "title": "Verges and pavements",
-        "text": "Over 7.5 t: never without police permission, unless essential for loading.",
-        "law": true
-      },
       {
         "icon": "lightbulb",
         "title": "At night",
@@ -52,24 +41,19 @@
         "law": true
       },
       {
-        "icon": "package",
-        "title": "Loading and unloading",
-        "text": "Don't load or unload where yellow kerb markings and signs show restrictions."
-      },
-      {
         "icon": "triangle-alert",
         "title": "Places to avoid",
-        "text": "Within 10 m of a junction, on a bend, near a hill brow, a bus stop or a level crossing."
+        "text": "Within 10 m of a junction, on a bend, near a bus stop or a level crossing."
+      },
+      {
+        "icon": "package",
+        "title": "Loading and unloading",
+        "text": "Not where yellow kerb markings and signs show restrictions."
       },
       {
         "icon": "lock",
         "title": "Security",
-        "text": "Remove the key, close the windows, lock the vehicle and never leave vehicle documents inside."
-      },
-      {
-        "icon": "circle-parking",
-        "title": "Passing places",
-        "text": "Don't park in passing places on single-track roads."
+        "text": "Remove the key, lock the vehicle and never leave vehicle documents in it."
       }
     ]
   },
@@ -78,31 +62,31 @@
       "label": "Goods vehicle over 7.5 t",
       "points": [
         "MUST NOT park on verges or pavements without police permission",
-        "Loading there only if essential, and never unattended"
+        "Loading there only if essential, never unattended"
       ]
     },
     "b": {
       "label": "Vehicle up to 7.5 t",
       "points": [
         "The 7.5 t verge rule does not apply",
-        "Still should not park on pavements unless signs permit it"
+        "Should still avoid pavements unless signs permit"
       ]
     }
   },
   "onTheTest": [
     {
-      "question": "You drive an 18-tonne rigid lorry. When may you park it on a grass verge without police permission?",
+      "question": "When may you park an 18-tonne lorry on a grass verge without police permission?",
       "options": [
-        "Only when essential for loading or unloading, and never unattended",
-        "Whenever there is no space on the road",
+        "Only if essential for loading, and never unattended",
+        "Whenever the road is full",
         "Overnight, if you leave the lights on",
         "At weekends, when traffic is light"
       ],
       "answerIndex": 0,
-      "why": "Vehicles over 7.5 tonnes must not be parked on a verge without police permission. The only exception is when it is essential for loading or unloading, and then the vehicle must not be left unattended."
+      "why": "Over 7.5 t you need police permission, unless it is essential for loading or unloading, and then never unattended."
     },
     {
-      "question": "You leave your lorry parked on a road at night where the speed limit is 30 mph. What must you do?",
+      "question": "You leave your lorry parked on a 30 mph road at night. What must you do?",
       "options": [
         "Leave its parking lights on",
         "Nothing, as the limit is 30 mph",
@@ -110,19 +94,18 @@
         "Leave the dipped headlights on"
       ],
       "answerIndex": 0,
-      "why": "Only cars and goods vehicles up to 2,500 kg laden may park without lights on a 30 mph road. Other vehicles must not be left on a road at night without lights."
+      "why": "Only cars and goods vehicles up to 2,500 kg may park without lights on a 30 mph road."
     }
   ],
   "traps": [
     "The 7.5 t limit for verges and pavements includes any trailer.",
-    "Loading on a verge is allowed only if essential, and you MUST stay with the vehicle.",
     "The 30 mph 'no lights at night' exemption is for goods vehicles up to 2,500 kg, not lorries.",
-    "Check for cyclists before you open your cab door: you MUST NOT hit anyone with it."
+    "Don't park in passing places on single-track roads."
   ],
   "sources": [
     {
       "doc": "The Highway Code",
-      "ref": "Rules 239, 242, 243, 244, 246, 247, 249 and 250",
+      "ref": "Rules 239, 243, 244, 246, 247, 249 and 250",
       "url": "https://www.gov.uk/guidance/the-highway-code/waiting-and-parking-238-to-252"
     },
     {
@@ -139,11 +122,11 @@
   "jurisdictionNotes": [
     {
       "jurisdiction": "scotland",
-      "text": "In Scotland you MUST NOT park partially or wholly on the pavement, or double park (limited exceptions)."
+      "text": "You MUST NOT park on the pavement or double park (limited exceptions)."
     },
     {
       "jurisdiction": "england",
-      "text": "In London you MUST NOT park partially or wholly on the pavement (limited exceptions)."
+      "text": "In London you MUST NOT park on the pavement (limited exceptions)."
     }
   ],
   "review": {

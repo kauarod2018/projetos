@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "id": "tachograph-records",
+  "niche": "uk-hgv-theory",
+  "area": "hours-and-tachographs",
+  "order": 9,
+  "tier": "complete",
+  "officialTopics": [
+    "tachographs"
+  ],
+  "title": "Records, Printouts & Faults",
+  "whatItIs": "Keep a full record of your working day. At the roadside, show records for today and the previous 28 days (56 for UK–EU journeys). Use printouts or manual entries when needed.",
+  "keyFacts": [
+    {
+      "text": "At the roadside you MUST produce records for today and the previous 28 days (56 for UK–EU journeys).",
+      "law": true
+    },
+    "Keep a record of your whole working day, including work away from the vehicle.",
+    "Carry enough print roll for a printout if an officer asks.",
+    {
+      "text": "With an analogue tachograph, you MUST return used charts to your operator within 42 days.",
+      "law": true
+    },
+    "One analogue chart must not cover more than 24 hours.",
+    "Operators download vehicle units at least every 90 days and driver cards at least every 28 days."
+  ],
+  "visual": {
+    "type": "table",
+    "caption": "When you need a manual record or printout",
+    "data": {
+      "columns": [
+        "Situation",
+        "What you do"
+      ],
+      "rows": [
+        [
+          "Work away from the vehicle",
+          "Manual entry"
+        ],
+        [
+          "Tachograph or card fault",
+          "Manual record on a chart or printout"
+        ],
+        [
+          "Unforeseen event",
+          "Reasons on a printout, by the stopping place"
+        ],
+        [
+          "Wrong mode recorded",
+          "Signed printout with the reason, asap"
+        ],
+        [
+          "Card lost, stolen or faulty",
+          "Start and end printouts (up to 15 days)"
+        ]
+      ],
+      "notes": [
+        "Printouts need your name, card or licence number, and your signature."
+      ]
+    }
+  },
+  "confused": {
+    "a": {
+      "label": "Analogue chart",
+      "points": [
+        "Wax-coated chart: no more than 24 hours on one chart",
+        "Centrefield: name, places, dates, odometer readings"
+      ]
+    },
+    "b": {
+      "label": "Digital printout",
+      "points": [
+        "Printed from the tachograph on type-approved print roll",
+        "Manual notes need your name, card or licence number, signature"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "On a UK-only journey, records for how many previous days must you show at a roadside check, as well as today?",
+      "options": [
+        "7 days",
+        "14 days",
+        "28 days",
+        "56 days"
+      ],
+      "answerIndex": 2,
+      "why": "Today and the previous 28 calendar days, or 56 days for journeys to and from an EU country."
+    },
+    {
+      "question": "Your digital driver card stops working during a trip. What must you do?",
+      "options": [
+        "Stop driving until a new card arrives",
+        "Use a colleague's card",
+        "Take start and end printouts and report it to DVLA within 7 days",
+        "Keep driving with no records"
+      ],
+      "answerIndex": 2,
+      "why": "You may drive for up to 15 days with start and end printouts. Report it to DVLA and apply for a new card within 7 days."
+    }
+  ],
+  "traps": [
+    "UK–EU journeys: 56 days of records, not 28.",
+    "Diaries and timesheets aren't allowed as manual records.",
+    "A faulty tachograph must be repaired asap: en route if you can't get back to base within a week."
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
+      "ref": "4. Tachograph rules: 4.1 Analogue tachographs; 4.2 Digital or smart tachographs (manual records); 4.3 Common rules",
+      "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/4-tachograph-rules"
+    },
+    {
+      "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
+      "ref": "5. Responsibilities of vehicle operators: downloading data; breakdown of the tachograph",
+      "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/5-responsibilities-of-vehicle-operators"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

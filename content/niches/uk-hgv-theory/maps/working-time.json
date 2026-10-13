@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "id": "working-time",
+  "niche": "uk-hgv-theory",
+  "area": "hours-and-tachographs",
+  "order": 7,
+  "tier": "complete",
+  "officialTopics": [
+    "drivers-hours"
+  ],
+  "title": "Working Time Rules",
+  "whatItIs": "The Road Transport (Working Time) Regulations 2005 limit all the work you do, not just driving: 48 hours a week on average, 60 in any single week, plus breaks and night-work limits.",
+  "keyFacts": [
+    {
+      "text": "Weekly working time MUST NOT exceed an average of 48 hours over the reference period (17 or 26 weeks).",
+      "law": true
+    },
+    "You can work up to 60 hours in a single week, as long as the 48-hour average is not exceeded.",
+    {
+      "text": "You MUST NOT work more than 6 hours in a row without a break.",
+      "law": true
+    },
+    "Working 6 to 9 hours: breaks of at least 30 minutes in total. Over 9 hours: at least 45 minutes.",
+    "Night work (00.00 to 04.00 for goods vehicles): no more than 10 hours of work in 24 hours.",
+    "There's no individual opt-out from the 48-hour average. Breaks and periods of availability aren't working time."
+  ],
+  "visual": {
+    "type": "stats",
+    "caption": "Road Transport (Working Time) Regulations 2005: key limits",
+    "items": [
+      {
+        "value": "48 h",
+        "label": "Average working week",
+        "note": "Over 17 weeks (26 if agreed)"
+      },
+      {
+        "value": "60 h",
+        "label": "Most in any single week"
+      },
+      {
+        "value": "6 h",
+        "label": "Most work in a row without a break"
+      },
+      {
+        "value": "10 h",
+        "label": "Work limit in 24 h with night work",
+        "note": "Night: 00.00 to 04.00 for goods vehicles"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Working time",
+      "points": [
+        "Driving, loading, cleaning, safety checks, admin",
+        "Waiting when you don't know in advance how long it will last"
+      ]
+    },
+    "b": {
+      "label": "Period of availability",
+      "points": [
+        "Waiting of known length, e.g. on a ferry or while others load",
+        "Doesn't count towards the 48-hour average"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Your working day will total 8 hours. Under the working time rules, how much break must you take in total?",
+      "options": [
+        "15 minutes",
+        "30 minutes",
+        "45 minutes",
+        "1 hour"
+      ],
+      "answerIndex": 1,
+      "why": "If working hours total between 6 and 9 hours, working time should be interrupted by breaks totalling at least 30 minutes. Over 9 hours: at least 45 minutes."
+    },
+    {
+      "question": "Under the Road Transport (Working Time) Regulations 2005, what is the most you can work in any single week?",
+      "options": [
+        "48 hours",
+        "56 hours",
+        "60 hours",
+        "90 hours"
+      ],
+      "answerIndex": 2,
+      "why": "A maximum of 60 hours can be worked in any single week, as long as the average of 48 hours a week over the reference period is not exceeded."
+    }
+  ],
+  "traps": [
+    "Drivers' hours limit driving; working time limits all work, including loading and paperwork.",
+    "The 2005 rules have no opt-out. (Drivers under GB domestic rules can opt out of the 1998 48-hour average.)",
+    "Waiting only counts as availability if you know in advance how long it will last.",
+    "Working for two employers? You must tell each one, in writing, the hours worked for the other."
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
+      "ref": "Annex 2. Working time rules",
+      "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/annex-2-working-time-rules"
+    },
+    {
+      "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
+      "ref": "4.3 Common rules: Recording other work",
+      "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/4-tachograph-rules"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

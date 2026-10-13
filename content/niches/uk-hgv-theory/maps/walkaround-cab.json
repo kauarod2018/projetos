@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "id": "walkaround-cab",
+  "niche": "uk-hgv-theory",
+  "area": "vehicle-checks",
+  "order": 2,
+  "tier": "basic",
+  "officialTopics": [
+    "vehicle-condition"
+  ],
+  "title": "Daily Walkaround Check: In the Cab",
+  "whatItIs": "Start the walkaround check in the cab: your view, mirrors, wipers, warning lights, steering, horn, air brakes, height marker, seatbelts, and the cab, doors and steps.",
+  "keyFacts": [
+    "Nothing should be in the area the wipers sweep. Some official stickers, like the operator licence disc, are allowed.",
+    "Warning lights must work, including the engine, emissions, ABS and EBS warning lights.",
+    {
+      "text": "The windscreen and front side windows MUST NOT have excessively dark tinting.",
+      "law": true
+    }
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "In-cab checks (items 1 to 9 of the DVSA walkaround check)",
+    "columns": 3,
+    "items": [
+      {
+        "icon": "eye",
+        "title": "View, mirrors, wipers",
+        "text": "Nothing in the wiper area. Glass not cracked. Mirrors secure. Wipers and washer work."
+      },
+      {
+        "icon": "gauge",
+        "title": "Warning lights and gauges",
+        "text": "All work, including the ABS and EBS warning lights."
+      },
+      {
+        "icon": "cog",
+        "title": "Steering and horn",
+        "text": "No excessive play, no jamming. Horn works and is easy to reach."
+      },
+      {
+        "icon": "wind",
+        "title": "Brakes and air build-up",
+        "text": "Air builds up, warning works, no leaks, footwell clear."
+      },
+      {
+        "icon": "ruler",
+        "title": "Height marker",
+        "text": "Shows the correct vehicle height for today."
+      },
+      {
+        "icon": "door-open",
+        "title": "Seatbelts, cab and steps",
+        "text": "Belts not cut or frayed. Doors close securely. Steps safe."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Warning lights at start-up",
+      "points": [
+        "Light up when you turn the ignition key",
+        "Go out when the engine starts (not handbrake)"
+      ]
+    },
+    "b": {
+      "label": "Warning light while driving",
+      "points": [
+        "Could mean a serious fault",
+        "Stop and investigate the problem"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Which of these is a defect to report from your in-cab brake checks?",
+      "options": [
+        "The air builds up correctly",
+        "The footwell is clear",
+        "Anti-slip tread missing from the brake pedal",
+        "The air warning system works"
+      ],
+      "answerIndex": 2,
+      "why": "The service brake pedal must not have excessive side play or missing, loose or incomplete anti-slip tread."
+    },
+    {
+      "question": "You turn the ignition key and the warning lights come on. When should they go out?",
+      "options": [
+        "When the engine starts, except the handbrake light",
+        "After the first 10 minutes of driving",
+        "Only when you switch off the engine",
+        "When you release the parking brake"
+      ],
+      "answerIndex": 0,
+      "why": "Warning lights come on with the ignition but go out when the engine starts (except the handbrake light). If not, stop and investigate."
+    }
+  ],
+  "traps": [
+    "A camera instead of a mirror is fine only if it works and the view is correct.",
+    "Check the steering column too: no excessive lift or movement.",
+    "Official stickers are allowed only if they don't seriously block your view of the road."
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Carry out HGV daily walkaround checks",
+      "ref": "Check inside the vehicle (items 1 to 9)",
+      "url": "https://www.gov.uk/guidance/carry-out-daily-heavy-goods-vehicle-hgv-walkaround-checks"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Annex 6: vehicle maintenance (warning displays, window tints)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

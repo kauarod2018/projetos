@@ -15,7 +15,7 @@
     "In very windy weather, turbulence from large vehicles can affect others. Motorcyclists are particularly affected.",
     "Give cyclists, motorcyclists, horse riders and pedestrians more space when overtaking in high winds.",
     {
-      "text": "You MUST use headlights when visibility is seriously reduced: generally when you cannot see beyond 100 metres.",
+      "text": "You MUST use headlights when visibility is seriously reduced, generally below 100 metres.",
       "law": true
     },
     {
@@ -32,22 +32,22 @@
       {
         "icon": "wind",
         "title": "Strong wind",
-        "text": "High-sided vehicles are most affected. Expect gusts on exposed roads, at bridges and at gaps in hedges."
+        "text": "Expect gusts on exposed roads, at bridges and at gaps in hedges."
       },
       {
         "icon": "cloud-rain",
         "title": "Rain",
-        "text": "Stopping distances at least double. Steering feels light? Ease off the accelerator and slow down gradually."
+        "text": "Stopping distances at least double. Steering unresponsive? Ease off and slow down gradually."
       },
       {
         "icon": "snowflake",
         "title": "Ice and snow",
-        "text": "Stopping distances up to ten times greater. Clear snow and ice from all windows before you set off."
+        "text": "Stopping distances up to ten times greater. Clear all windows before you set off."
       },
       {
         "icon": "cloud-fog",
         "title": "Fog",
-        "text": "Headlights on if you cannot see beyond 100 metres. Be able to stop well within the distance you can see."
+        "text": "Headlights if you cannot see beyond 100 m. Be able to stop within the distance you can see."
       }
     ]
   },
@@ -69,7 +69,7 @@
   },
   "onTheTest": [
     {
-      "question": "You're driving a high-sided lorry on an exposed road in strong winds. Where are you most likely to meet a sudden gust?",
+      "question": "You're driving a high-sided lorry in strong winds. Where are you most likely to meet a sudden gust?",
       "options": [
         "Passing a gap in a hedge",
         "Waiting at traffic lights in town",
@@ -77,7 +77,7 @@
         "Following a car at a safe distance"
       ],
       "answerIndex": 0,
-      "why": "High-sided vehicles are most affected by windy weather. Strong gusts happen on open roads exposed to crosswinds, or when passing bridges or gaps in hedges."
+      "why": "High-sided vehicles are most affected by wind. Strong gusts happen on exposed open roads, or when passing bridges or gaps in hedges."
     },
     {
       "question": "When must you use headlights in poor weather?",
@@ -88,14 +88,13 @@
         "When visibility is under 500 metres"
       ],
       "answerIndex": 0,
-      "why": "You must use headlights when visibility is seriously reduced, generally when you cannot see for more than 100 metres (328 feet)."
+      "why": "You must use headlights when visibility is seriously reduced, generally when you cannot see for more than 100 metres."
     }
   ],
   "traps": [
     "Wind doesn't only affect you: your lorry's turbulence can push motorcyclists off course.",
     "Fog lights left on after the fog clears dazzle others and can hide your brake lights.",
-    "On ice, tyres make virtually no noise: quiet tyres and unresponsive steering are warning signs.",
-    "In fog, don't speed up to get away from a vehicle that's too close behind you."
+    "On ice, tyres make virtually no noise: quiet tyres and unresponsive steering are warning signs."
   ],
   "sources": [
     {

@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 1,
+  "id": "daily-rest",
+  "niche": "uk-hgv-theory",
+  "area": "hours-and-tachographs",
+  "order": 4,
+  "tier": "basic",
+  "officialTopics": [
+    "drivers-hours"
+  ],
+  "title": "Daily Rest: Regular, Reduced & Split",
+  "whatItIs": "Within 24 hours of the end of your last rest, you must take a daily rest: 11 hours (regular), split 3 + 9 hours, or 9 hours (reduced, up to 3 times between weekly rests).",
+  "keyFacts": [
+    {
+      "text": "You MUST take a daily rest within each 24 hours after the end of your previous daily or weekly rest.",
+      "law": true
+    },
+    "Regular daily rest: at least 11 continuous hours.",
+    "Split daily rest: at least 3 hours, then at least 9 hours: 12 hours in total.",
+    "Reduced daily rest: 9 to under 11 hours, up to 3 times between weekly rests.",
+    "Work for another employer is never rest.",
+    "You may rest in the vehicle only if it is stationary and has suitable sleeping facilities, e.g. a bunk."
+  ],
+  "visual": {
+    "type": "timeline",
+    "caption": "Daily rest within 24 hours: legal and illegal patterns",
+    "scaleHours": 24,
+    "rows": [
+      {
+        "label": "Regular: 11 hours",
+        "verdict": "ok",
+        "segments": [
+          {
+            "kind": "work",
+            "minutes": 60
+          },
+          {
+            "kind": "drive",
+            "minutes": 270
+          },
+          {
+            "kind": "break",
+            "minutes": 45
+          },
+          {
+            "kind": "drive",
+            "minutes": 270
+          },
+          {
+            "kind": "work",
+            "minutes": 60
+          },
+          {
+            "kind": "rest",
+            "minutes": 660,
+            "label": "11 h"
+          }
+        ]
+      },
+      {
+        "label": "Split: 3 hours, then 9 hours",
+        "verdict": "ok",
+        "segments": [
+          {
+            "kind": "work",
+            "minutes": 30
+          },
+          {
+            "kind": "drive",
+            "minutes": 270
+          },
+          {
+            "kind": "rest",
+            "minutes": 180,
+            "label": "3 h"
+          },
+          {
+            "kind": "drive",
+            "minutes": 270
+          },
+          {
+            "kind": "work",
+            "minutes": 30
+          },
+          {
+            "kind": "rest",
+            "minutes": 540,
+            "label": "9 h"
+          }
+        ]
+      },
+      {
+        "label": "Reduced: 9 hours",
+        "verdict": "ok",
+        "note": "No more than 3 times between weekly rests.",
+        "segments": [
+          {
+            "kind": "work",
+            "minutes": 60
+          },
+          {
+            "kind": "drive",
+            "minutes": 270
+          },
+          {
+            "kind": "break",
+            "minutes": 45
+          },
+          {
+            "kind": "drive",
+            "minutes": 270
+          },
+          {
+            "kind": "work",
+            "minutes": 210
+          },
+          {
+            "kind": "rest",
+            "minutes": 540,
+            "label": "9 h"
+          }
+        ]
+      },
+      {
+        "label": "Split wrongly: 3 hours, then 8 hours",
+        "verdict": "wrong",
+        "note": "The second part of a split rest must be at least 9 hours.",
+        "segments": [
+          {
+            "kind": "work",
+            "minutes": 30
+          },
+          {
+            "kind": "drive",
+            "minutes": 270
+          },
+          {
+            "kind": "rest",
+            "minutes": 180,
+            "label": "3 h"
+          },
+          {
+            "kind": "drive",
+            "minutes": 270
+          },
+          {
+            "kind": "work",
+            "minutes": 120
+          },
+          {
+            "kind": "rest",
+            "minutes": 480,
+            "label": "8 h"
+          }
+        ]
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Reduced daily rest",
+      "points": [
+        "At least 9 hours in one block",
+        "Only 3 times between weekly rests; no compensation needed"
+      ]
+    },
+    "b": {
+      "label": "Split daily rest",
+      "points": [
+        "3 hours + 9 hours: 12 hours in total",
+        "A regular rest: doesn't count towards the 3 reductions"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Since your last weekly rest you've taken 3 reduced daily rests. What is the shortest daily rest you can take next?",
+      "options": [
+        "9 hours",
+        "10 hours",
+        "11 hours, or 3 + 9 hours split",
+        "12 hours in one block"
+      ],
+      "answerIndex": 2,
+      "why": "A 9-hour reduced rest is allowed only 3 times between weekly rests. Then you need a regular rest: 11 hours, or 3 + 9."
+    },
+    {
+      "question": "You want to split your daily rest into two periods. Which pattern is allowed?",
+      "options": [
+        "2 hours, then 9 hours",
+        "3 hours, then 8 hours",
+        "3 hours, then 9 hours",
+        "4 hours, then 7 hours"
+      ],
+      "answerIndex": 2,
+      "why": "The first part must be at least 3 hours and the second at least 9 hours: 12 hours in total."
+    }
+  ],
+  "traps": [
+    "A split rest totals 12 hours, not 11: at least 3 + at least 9.",
+    "Reduced rests: up to 3 times between weekly rests, not 3 times a week.",
+    "The 24 hours start when your last rest ended, not at midnight."
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
+      "ref": "1.5 Daily rest periods; 1.11 Summary of assimilated limits",
+      "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/1-assimilated-and-aetr-rules-on-drivers-hours"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

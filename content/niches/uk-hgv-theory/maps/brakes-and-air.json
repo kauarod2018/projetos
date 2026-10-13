@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "id": "brakes-and-air",
+  "niche": "uk-hgv-theory",
+  "area": "vehicle-checks",
+  "order": 5,
+  "tier": "complete",
+  "officialTopics": [
+    "vehicle-condition"
+  ],
+  "title": "Brakes & Air Systems",
+  "whatItIs": "Check the brakes every day: air builds up and the warning works, there are no leaks, and the service and parking brakes work on both tractor and trailer.",
+  "keyFacts": [
+    {
+      "text": "Every part of every braking system MUST be maintained in good and efficient working order and properly adjusted.",
+      "law": true
+    },
+    {
+      "text": "Trailers with EBS MUST be connected with an ISO 7638 ABS/EBS lead. Without it, the trailer EBS won't work.",
+      "law": true
+    },
+    "The service brake should operate both the tractor and the trailer brakes.",
+    "Defective brakes at a roadside check can mean a £100 fine and 3 penalty points."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Brake checks on the daily walkaround",
+    "columns": 3,
+    "items": [
+      {
+        "icon": "gauge",
+        "title": "Air build-up",
+        "text": "Air builds up correctly, the warning system works, no air leaks."
+      },
+      {
+        "icon": "octagon-alert",
+        "title": "Service brake",
+        "text": "Works tractor and trailer brakes. Pedal: no excess side play, tread intact."
+      },
+      {
+        "icon": "lock",
+        "title": "Parking brakes",
+        "text": "Check the tractor parking brake and the trailer parking brake both work."
+      },
+      {
+        "icon": "cable",
+        "title": "Brake lines and couplings",
+        "text": "Couplings clean and in the right place. No leaks, damage or wear."
+      },
+      {
+        "icon": "plug",
+        "title": "ISO 7638 lead",
+        "text": "Inspect for damage and connect correctly. It runs trailer ABS/EBS.",
+        "law": true
+      },
+      {
+        "icon": "lightbulb",
+        "title": "Warning lights",
+        "text": "ABS and EBS warning lights work correctly."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Service brake",
+      "points": [
+        "The footbrake: works tractor and trailer brakes",
+        "Stop lamps on when applied, off when released"
+      ]
+    },
+    "b": {
+      "label": "Parking brake",
+      "points": [
+        "Check tractor and trailer parking brakes",
+        "MUST be applied before leaving the vehicle"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "A trailer fitted with EBS isn't connected with the ISO 7638 lead. What's the result?",
+      "options": [
+        "Nothing: the air lines are enough",
+        "The trailer EBS won't work",
+        "Only the trailer lights fail",
+        "The tractor's ABS switches off"
+      ],
+      "answerIndex": 1,
+      "why": "Without the ISO lead the trailer EBS won't function. The trailer must not be used until the fault is put right."
+    },
+    {
+      "question": "You must brake in an emergency in a vehicle with ABS. What does The Highway Code advise?",
+      "options": [
+        "Pump the brake pedal",
+        "Brake firmly and keep the pressure on",
+        "Use only the parking brake",
+        "Brake lightly and steer hard"
+      ],
+      "answerIndex": 1,
+      "why": "Apply the footbrake firmly and don't release the pressure until you've slowed to the speed you want. ABS should let you keep steering control."
+    }
+  ],
+  "traps": [
+    "ABS helps you steer while braking, but don't assume it stops you in a shorter distance.",
+    "After driving through deep water, test your brakes gently at the first safe opportunity.",
+    "Coasting removes engine braking and makes you use the footbrake more, which can reduce its effectiveness."
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Carry out HGV daily walkaround checks",
+      "ref": "3. Warning lights; 6. Brakes and air build-up; 20. Brake lines and trailer parking brake",
+      "url": "https://www.gov.uk/guidance/carry-out-daily-heavy-goods-vehicle-hgv-walkaround-checks"
+    },
+    {
+      "doc": "DVSA: Guide to maintaining roadworthiness",
+      "ref": "1. Maintaining compliance (C&U reg 18(1)); 5.4 EBS trailer connection",
+      "url": "https://www.gov.uk/government/publications/guide-to-maintaining-roadworthiness/guide-to-maintaining-roadworthiness-commercial-goods-and-passenger-carrying-vehicles"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 117 to 122; rule 239",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "GOV.UK: Roadside checks for HGV, van, bus or coach drivers",
+      "ref": "Fines, penalty points and other sanctions",
+      "url": "https://www.gov.uk/roadside-vehicle-checks-for-commercial-drivers/fines-penalty-points-sanctions"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

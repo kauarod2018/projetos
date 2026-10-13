@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "id": "roadside-checks",
+  "niche": "uk-hgv-theory",
+  "area": "vehicle-checks",
+  "order": 6,
+  "tier": "complete",
+  "officialTopics": [
+    "vehicle-condition",
+    "licences-and-qualifications"
+  ],
+  "title": "Roadside Checks & Prohibitions",
+  "whatItIs": "The police and DVSA can stop lorries to check weights, roadworthiness, tachograph records and licences. A prohibition stops you driving until the problem is fixed.",
+  "keyFacts": [
+    {
+      "text": "You MUST stop when a uniformed DVSA officer or police officer asks you to: not stopping is an offence.",
+      "law": true
+    },
+    "DVSA officers wear yellow jackets with the DVSA logo and always carry a DVSA warrant card.",
+    "A vehicle with a trailer is treated as 2 units, so you could get more than one prohibition.",
+    "Fines are usually £50 to £300. Defective brakes, for example: £100 and 3 penalty points."
+  ],
+  "visual": {
+    "type": "table",
+    "caption": "Delayed prohibitions: time to get defects fixed",
+    "data": {
+      "columns": [
+        "Time to fix",
+        "Defects found"
+      ],
+      "rows": [
+        [
+          "Up to 3 days",
+          "More than 1 defect in a safety critical area"
+        ],
+        [
+          "4 to 7 days",
+          "1 safety critical defect, or 5 or more non-critical defects"
+        ],
+        [
+          "Up to 10 days",
+          "Fewer than 5 defects in non-critical areas"
+        ]
+      ],
+      "notes": [
+        "Safety critical areas include brakes, lights and steering.",
+        "An immobilised vehicle costs £80 to release, once the issues are fixed."
+      ]
+    }
+  },
+  "confused": {
+    "a": {
+      "label": "Immediate prohibition",
+      "points": [
+        "You can't drive until the problem is fixed",
+        "The vehicle may be immobilised"
+      ]
+    },
+    "b": {
+      "label": "Delayed prohibition",
+      "points": [
+        "You can drive away: up to 10 days to fix it",
+        "Reinspection before it's removed"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "An examiner finds 1 defect in a safety critical area and issues a delayed prohibition. How long could you have to fix it?",
+      "options": [
+        "Up to 3 days",
+        "4 to 7 days",
+        "Up to 10 days",
+        "28 days"
+      ],
+      "answerIndex": 1,
+      "why": "1 defect in a safety critical area gives 4 to 7 days. More than 1 safety critical defect gives up to 3 days."
+    },
+    {
+      "question": "At a roadside check your vehicle is found to be overloaded. What will you be issued with?",
+      "options": [
+        "A verbal warning only",
+        "A delayed prohibition",
+        "An immediate prohibition",
+        "A vehicle inspection notice"
+      ],
+      "answerIndex": 2,
+      "why": "An overloaded vehicle gets an immediate prohibition notice and may be immobilised. Officers can direct it nearby to redistribute or remove the load."
+    }
+  ],
+  "traps": [
+    "Immediate 'S' marked prohibition: the vehicle is likely to be immobilised and you could be prosecuted.",
+    "No 'S' marking for a defect you couldn't have known about, such as an underside defect.",
+    "Carrying a high-value load? Keep the engine running and doors locked until sure the officer is genuine."
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Roadside checks for HGV, van, bus or coach drivers",
+      "ref": "Checks on your vehicle; Roadside prohibitions; Fines; Immobilisation",
+      "url": "https://www.gov.uk/roadside-vehicle-checks-for-commercial-drivers"
+    },
+    {
+      "doc": "DVSA: Guide to maintaining roadworthiness",
+      "ref": "Annex 1: prohibition notices endorsed",
+      "url": "https://www.gov.uk/government/publications/guide-to-maintaining-roadworthiness/guide-to-maintaining-roadworthiness-commercial-goods-and-passenger-carrying-vehicles"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

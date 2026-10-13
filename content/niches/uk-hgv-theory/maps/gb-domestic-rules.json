@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "id": "gb-domestic-rules",
+  "niche": "uk-hgv-theory",
+  "area": "hours-and-tachographs",
+  "order": 6,
+  "tier": "complete",
+  "officialTopics": [
+    "drivers-hours"
+  ],
+  "title": "GB Domestic Rules",
+  "whatItIs": "GB domestic rules (Transport Act 1968) apply to most goods vehicles that are exempt from the assimilated rules. The limits: 10 hours of driving and 11 hours of duty in a working day.",
+  "keyFacts": [
+    {
+      "text": "Under domestic rules you MUST NOT drive for more than 10 hours in a working day, on or off the public road.",
+      "law": true
+    },
+    {
+      "text": "Duty MUST NOT exceed 11 hours in a working day. Days when you do not drive are exempt.",
+      "law": true
+    },
+    "Drive 4 hours or less every day of a week? No duty limit that week.",
+    "A working day is the 24 hours from the start of duty. A week is Monday 00.00 to Sunday 24.00.",
+    {
+      "text": "Keep a weekly record sheet if the vehicle needs an operator licence and you drive over 4 hours that day.",
+      "law": true
+    },
+    "No set breaks or rest, but employers must give 'adequate rest'."
+  ],
+  "visual": {
+    "type": "table",
+    "caption": "GB domestic rules compared with the assimilated rules",
+    "data": {
+      "columns": [
+        "Rule",
+        "GB domestic",
+        "Assimilated"
+      ],
+      "rows": [
+        [
+          "Daily driving",
+          "10 hours",
+          "9 hours (10 hours twice a week)"
+        ],
+        [
+          "Daily duty",
+          "11 hours",
+          "13 or 15 hours"
+        ],
+        [
+          "Breaks and rest",
+          "'Adequate rest'",
+          "45 min break; 11 h rest"
+        ],
+        [
+          "Records",
+          "Record sheet or tachograph",
+          "Tachograph"
+        ]
+      ]
+    }
+  },
+  "confused": {
+    "a": {
+      "label": "Driving (domestic rules)",
+      "points": [
+        "At the controls, moving or stationary with the engine running",
+        "Maximum 10 hours in a working day"
+      ]
+    },
+    "b": {
+      "label": "Duty (domestic rules)",
+      "points": [
+        "All driving and other work for your employer, not rest or breaks",
+        "Maximum 11 hours in a working day"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Under GB domestic rules, what is the most driving in a working day?",
+      "options": [
+        "9 hours",
+        "10 hours",
+        "11 hours",
+        "13 hours"
+      ],
+      "answerIndex": 1,
+      "why": "Domestic rules: 10 hours of driving and 11 hours of duty a day."
+    },
+    {
+      "question": "Under GB domestic rules, when must you keep a weekly record sheet?",
+      "options": [
+        "Every day you drive any goods vehicle",
+        "When it needs an operator licence and you drive over 4 hours that day",
+        "Only on journeys abroad",
+        "Only when carrying dangerous goods"
+      ],
+      "answerIndex": 1,
+      "why": "Keep a weekly record sheet if the vehicle needs an operator licence and you drive over 4 hours that day."
+    }
+  ],
+  "traps": [
+    "Domestic daily driving is 10 hours every day, not 9 hours with two 10-hour days.",
+    "Domestic rules apply only in GB: abroad, follow local rules.",
+    "Mixed with assimilated driving? GB limits still apply, and assimilated time counts towards them."
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
+      "ref": "2. GB domestic rules: 2.2 Domestic driving limits; 2.3 Record keeping; 2.6 Travelling abroad",
+      "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/2-great-britain-domestic-rules-on-drivers-hours"
+    },
+    {
+      "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
+      "ref": "3. Mixed assimilated or AETR and GB domestic driving: 3.1 and 3.2",
+      "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/3-mixed-assimilated-or-aetr-and-great-britain-domestic-driving"
+    },
+    {
+      "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
+      "ref": "1.4 Breaks and driving limits; 1.5 Daily rest periods",
+      "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/1-assimilated-and-aetr-rules-on-drivers-hours"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

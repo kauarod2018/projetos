@@ -16,10 +16,9 @@
       "text": "You MUST NOT go over the speed limit for the road, or the limit for your vehicle.",
       "law": true
     },
-    "Over 7.5 t (England and Wales): 50 mph single carriageway, 60 mph dual carriageway and motorway.",
-    "Up to 7.5 t: 70 mph on motorways, but 60 mph if articulated or towing a trailer.",
+    "Up to 7.5 t: 70 mph on motorways, or 60 mph if articulated or towing.",
     {
-      "text": "Goods vehicles over 7.5 t MUST NOT use the right-hand lane of a motorway with 3 or more lanes.",
+      "text": "Over 7.5 t, you MUST NOT use the right-hand lane of a motorway with 3 or more lanes.",
       "law": true
     },
     {
@@ -72,7 +71,7 @@
       "label": "Goods vehicle up to 7.5 t",
       "points": [
         "Motorway: 70 mph, or 60 mph if articulated or towing",
-        "Needs a speed limiter (over 3.5 t)? No right-hand lane on 3+ lanes"
+        "No right-hand lane on 3+ lanes if it must have a speed limiter"
       ]
     },
     "b": {
@@ -93,10 +92,10 @@
         "70 mph"
       ],
       "answerIndex": 2,
-      "why": "Rule 124: goods vehicles over 7.5 tonnes in England and Wales are limited to 60 mph on dual carriageways (50 mph in Scotland)."
+      "why": "Rule 124: over 7.5 tonnes in England and Wales, 60 mph on dual carriageways (50 mph in Scotland)."
     },
     {
-      "question": "You are driving a goods vehicle over 7.5 tonnes on a three-lane motorway. Which lane MUST you not use, except in prescribed circumstances?",
+      "question": "You drive a lorry over 7.5 tonnes on a three-lane motorway. Which lane MUST you not use?",
       "options": [
         "The left-hand lane",
         "The middle lane",
@@ -104,13 +103,12 @@
         "Any lane, when overtaking"
       ],
       "answerIndex": 2,
-      "why": "Rule 265: goods vehicles over 7.5 tonnes, and any vehicle towing a trailer, MUST NOT use the right-hand lane of a 3+ lane motorway."
+      "why": "Rule 265: over 7.5 tonnes, you MUST NOT use the right-hand lane of a 3+ lane motorway (except in prescribed cases)."
     }
   ],
   "traps": [
     "Over 7.5 t, the motorway limit is 60 mph, not 70.",
-    "Up to 7.5 t but articulated or towing? The motorway limit is 60 mph, not 70.",
-    "Towing a trailer? The right-hand lane of a 3+ lane motorway is banned too."
+    "Up to 7.5 t but articulated or towing? The motorway limit is 60 mph, not 70."
   ],
   "sources": [
     {
@@ -132,11 +130,11 @@
   "jurisdictionNotes": [
     {
       "jurisdiction": "scotland",
-      "text": "Goods vehicles over 7.5 t: 40 mph on single carriageways and 50 mph on dual carriageways. Motorways: 60 mph."
+      "text": "Goods vehicles over 7.5 t: 40 mph on single and 50 mph on dual carriageways."
     },
     {
       "jurisdiction": "wales",
-      "text": "20 mph generally applies on roads with street lights (not motorways), unless signs show otherwise."
+      "text": "20 mph generally applies on roads with street lights, unless signs say otherwise."
     }
   ],
   "review": {

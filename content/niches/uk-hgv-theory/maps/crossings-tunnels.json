@@ -21,10 +21,10 @@
       "law": true
     },
     {
-      "text": "You MUST obey safe height signs at overhead electric lines. Clearance is usually 5 m (16 ft 6 in) but may be lower.",
+      "text": "You MUST obey safe height signs at overhead electric lines: clearance is usually 5 m but may be lower.",
       "law": true
     },
-    "Never drive onto a crossing until the road is clear on the other side. Never stop or park on, or near, a crossing.",
+    "Never drive onto a crossing until the road beyond is clear. Never stop or park on or near one.",
     "Large vehicle in a tunnel: allow a four-second gap. If you stop, leave at least 5 metres.",
     "Single-track road: pull into a passing place on your left, or wait opposite one on your right."
   ],
@@ -34,19 +34,19 @@
     "items": [
       {
         "title": "Park in the marked place",
-        "text": "Some crossings have a place where drivers of large or slow vehicles should park to phone."
+        "text": "Some crossings mark a place for large or slow vehicles to park while phoning."
       },
       {
         "title": "Phone the signal operator",
-        "text": "Use the railway telephone and get permission before you cross."
+        "text": "Use the railway telephone and get permission to cross."
       },
       {
         "title": "Cross only when clear",
-        "text": "Don't drive onto the crossing until the road is clear on the other side."
+        "text": "Only when the road is clear on the other side."
       },
       {
         "title": "Phone again if asked",
-        "text": "When you are clear of the crossing, phone the signal operator if you are asked to."
+        "text": "When clear of the crossing, phone again if asked to."
       }
     ]
   },
@@ -68,7 +68,7 @@
   },
   "onTheTest": [
     {
-      "question": "You're driving a long, low lorry that could ground on a level crossing. A sign tells you to phone before crossing. What must you do?",
+      "question": "Your long, low lorry could ground on a level crossing. A sign tells you to phone before crossing. What must you do?",
       "options": [
         "Phone the signal operator and get permission to cross",
         "Cross slowly if no train is in sight",
@@ -76,7 +76,7 @@
         "Wait for another vehicle to cross first"
       ],
       "answerIndex": 0,
-      "why": "If you drive a large or slow vehicle, or a long, low vehicle that could ground, you must obey any sign telling you to use the railway telephone to get permission to cross."
+      "why": "Drivers of large, slow or long, low vehicles must obey any sign telling them to use the railway telephone to get permission to cross."
     },
     {
       "question": "Your lorry breaks down on a level crossing. What should you do first?",
@@ -87,14 +87,14 @@
         "Switch on hazard lights and wait in the cab"
       ],
       "answerIndex": 0,
-      "why": "Get everyone out and clear of the crossing immediately, then use a railway telephone to tell the signal operator and follow the instructions you are given."
+      "why": "Get everyone out and clear of the crossing immediately, then use a railway telephone to tell the signal operator."
     }
   ],
   "traps": [
     "Never zig-zag round half-barriers: they come down because a train is approaching.",
     "If your lorry touches a height barrier or bells, don't continue onto the railway.",
     "Red lights flashing for over 3 minutes with no train (not at full barriers)? Phone the signal operator.",
-    "Single-track road: give way to vehicles coming uphill whenever you can, and never park in a passing place."
+    "Single-track road: give way to vehicles coming uphill whenever you can."
   ],
   "sources": [
     {

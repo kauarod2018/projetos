@@ -41,6 +41,10 @@
       {
         "value": "50%",
         "label": "of the load's weight, to the rear"
+      },
+      {
+        "value": "0.2",
+        "label": "friction coefficient if no tested value"
       }
     ]
   },

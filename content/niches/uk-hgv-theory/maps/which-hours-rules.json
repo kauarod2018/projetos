@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "id": "which-hours-rules",
+  "niche": "uk-hgv-theory",
+  "area": "hours-and-tachographs",
+  "order": 1,
+  "tier": "basic",
+  "officialTopics": [
+    "drivers-hours"
+  ],
+  "title": "Which Drivers' Hours Rules Apply?",
+  "whatItIs": "Three sets of drivers' hours rules: assimilated (most lorries over 3.5 t, in the UK and UK–EU), AETR (other international journeys) and GB domestic (most exempt vehicles).",
+  "keyFacts": [
+    "Most goods vehicles over 3.5 t (including any trailer) are in scope of assimilated rules.",
+    "Assimilated rules apply to journeys within the UK and between the UK and the EU.",
+    "AETR rules: international journeys to, from or through AETR countries, not wholly UK–EU.",
+    "Most vehicles exempt from assimilated rules come under GB domestic rules on journeys in GB.",
+    {
+      "text": "Even a short spell of assimilated driving in a day means you MUST follow those rules for the whole day.",
+      "law": true
+    },
+    "A vehicle doesn't have to be laden to be in scope of the assimilated or AETR rules."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Which drivers' hours rules apply?",
+    "columns": 2,
+    "items": [
+      {
+        "icon": "truck",
+        "title": "Assimilated rules",
+        "text": "Most goods vehicles over 3.5 t, on UK journeys and UK–EU journeys. A tachograph is needed."
+      },
+      {
+        "icon": "globe",
+        "title": "AETR rules",
+        "text": "Journeys to, from or through AETR countries that are not wholly UK–EU, e.g. UK to Norway."
+      },
+      {
+        "icon": "flag",
+        "title": "GB domestic rules",
+        "text": "Most vehicles that are exempt from assimilated rules, while driving in Great Britain."
+      },
+      {
+        "icon": "ban",
+        "title": "Exemptions",
+        "text": "e.g. vehicles that can't exceed 40 km/h, or up to 7.5 t for non-commercial carriage."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Exemption",
+      "points": [
+        "Applies on UK journeys and on UK–EU journeys",
+        "e.g. vehicles not capable of exceeding 40 km/h"
+      ]
+    },
+    "b": {
+      "label": "National derogation",
+      "points": [
+        "Applies only to journeys wholly within the UK",
+        "e.g. some farming vehicles within 100 km of their base"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You drive a 12-tonne lorry delivering goods from London to Paris. Which drivers' hours rules apply?",
+      "options": [
+        "GB domestic rules",
+        "Assimilated rules",
+        "AETR rules",
+        "Only French national rules"
+      ],
+      "answerIndex": 1,
+      "why": "Assimilated rules apply to most goods vehicles over 3.5 tonnes used within the UK or on journeys between the UK and the EU."
+    },
+    {
+      "question": "You are driving a lorry from the UK to Norway. Which drivers' hours rules apply?",
+      "options": [
+        "Assimilated rules",
+        "AETR rules",
+        "GB domestic rules",
+        "No rules apply outside the EU"
+      ],
+      "answerIndex": 1,
+      "why": "GV262: journeys between the UK and Liechtenstein or Norway must follow AETR rules."
+    }
+  ],
+  "traps": [
+    "An empty lorry is still in scope: it does not need to be carrying goods.",
+    "UK to Norway or Iceland isn't a UK–EU journey: AETR rules apply.",
+    "National derogations only work in the UK. Abroad, only true exemptions apply."
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
+      "ref": "Introduction: Which rules apply; EU, AETR and EEA countries",
+      "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/introduction"
+    },
+    {
+      "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
+      "ref": "1. Assimilated and AETR rules: Overview; 1.1 Exemptions and national derogations; 1.2 Driving",
+      "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/1-assimilated-and-aetr-rules-on-drivers-hours"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

@@ -24,11 +24,7 @@
       "law": true
     },
     "Many large vehicles have speed limiters that restrict them to 56 mph (90 km/h), even on a motorway.",
-    "Keep in the left lane unless overtaking. Overtake only on the right, and don't cut in on the vehicle you've passed.",
-    {
-      "text": "You MUST NOT stop on the carriageway or hard shoulder except in an emergency, or when told to.",
-      "law": true
-    }
+    "Keep in the left lane unless overtaking. Overtake only on the right, and don't cut in on the vehicle you've passed."
   ],
   "visual": {
     "type": "table",

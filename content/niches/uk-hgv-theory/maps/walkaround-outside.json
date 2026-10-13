@@ -11,15 +11,13 @@
   "title": "Daily Walkaround Check: Outside the Cab",
   "whatItIs": "Before your journey, walk round the lorry and trailer: lights, leaks, tyres, brake lines, coupling, load, plates and markings. Report any defects in writing.",
   "keyFacts": [
-    "You're responsible for making sure your vehicle is safe to drive. Do the walkaround check before your journey.",
+    "You're responsible for making sure your vehicle is safe to drive. Check it before your journey.",
     {
       "text": "A driver or responsible person MUST do a walkaround check before the vehicle is used: at least once in every 24 hours.",
       "law": true
     },
     "Check the tyres have at least 1 mm of tread, no deep sidewall cuts and no cord visible anywhere.",
-    "Stop lamps should come on when you press the service brake and go out when you release it.",
-    "After the first brake test, leave the engine running: air pressure builds and leaks are easier to hear.",
-    "If you change trailers during the day, check each trailer you use."
+    "Not happy with the load? Ask the person in charge of vehicle safety to have it assessed and resecured."
   ],
   "visual": {
     "type": "cards",
@@ -29,32 +27,32 @@
       {
         "icon": "lightbulb",
         "title": "Lights and indicators",
-        "text": "All work. Lenses fitted, clean and the right colour. Marker lights work."
+        "text": "All work. Lenses fitted, clean, right colour."
       },
       {
         "icon": "droplets",
         "title": "Fuel and oil leaks",
-        "text": "Filler cap fitted correctly. Engine on: look underneath for leaks."
+        "text": "Filler cap fitted. Engine on: look underneath."
       },
       {
         "icon": "circle-dot",
-        "title": "Tyres and wheel fixing",
-        "text": "Tread at least 1 mm, correct pressure, wheel nuts tight, nothing between twins."
+        "title": "Tyres and wheels",
+        "text": "Tread at least 1 mm, right pressure, nuts tight."
       },
       {
         "icon": "link",
-        "title": "Brake lines and coupling",
-        "text": "No air leaks or worn lines. Trailer secure in the fifth wheel, locks in place."
+        "title": "Brake lines, coupling",
+        "text": "No air leaks or worn lines. Trailer locked in."
       },
       {
         "icon": "package",
-        "title": "Body, guards and load",
-        "text": "Doors, panels and guards secure. The load isn't moving or likely to move."
+        "title": "Body, guards, load",
+        "text": "Doors, panels, guards secure. Load not moving."
       },
       {
         "icon": "rectangle-horizontal",
-        "title": "Plates, reflectors, markings",
-        "text": "Number plate clean and complete. Reflectors and markings visible, right colour."
+        "title": "Plates and markings",
+        "text": "Number plate, reflectors and markings clean and visible."
       }
     ]
   },
@@ -63,38 +61,36 @@
       "label": "Daily walkaround check",
       "points": [
         "Driver or responsible person, before use",
-        "At least once in every 24 hours in service",
-        "Items readily visible, without dismantling"
+        "At least once every 24 hours in service"
       ]
     },
     "b": {
       "label": "Safety inspection",
       "points": [
         "Periodic, at pre-set intervals",
-        "Intervals as declared for the operator licence",
         "Covers at least the annual test items"
       ]
     }
   },
   "onTheTest": [
     {
-      "question": "You've finished the first brake test of your walkaround check. What should you do with the engine for the rest of the check?",
+      "question": "After the first brake test of your walkaround check, what should you do with the engine?",
       "options": [
         "Switch it off to save fuel",
-        "Leave it running so pressure builds and air leaks are easier to hear",
-        "Rev it hard to test the exhaust smoke",
-        "Switch it off so you can hear the radio"
+        "Leave it running so air pressure builds up",
+        "Rev it to test the exhaust",
+        "Switch it off so leaks are easier to hear"
       ],
       "answerIndex": 1,
-      "why": "DVSA advises leaving the engine running after the initial brake test so pressure can build up. This makes it easier to hear any leaks during the rest of the check."
+      "why": "Leave the engine running after the initial brake test so pressure can build up. This makes leaks easier to hear."
     },
     {
       "question": "You couple up to a different trailer halfway through your shift. What should you do?",
       "options": [
-        "Nothing: the morning check covers the whole day",
-        "Only check the trailer's number plate",
+        "Nothing: the morning check covers it",
+        "Check only its number plate",
         "Record 'nil' defects without checking",
-        "Do a walkaround check of the new trailer before using it"
+        "Check the new trailer before using it"
       ],
       "answerIndex": 3,
       "why": "Where trailers are changed during the day, a check should be made on each trailer being used."
@@ -102,9 +98,8 @@
   ],
   "traps": [
     "Fuel and oil leaks are checked with the engine on: look underneath the vehicle, not just at the filler cap.",
-    "Stop lamps should come on with the brake AND go out when you release it.",
     "Look between twin wheels too: no objects or debris should be trapped there.",
-    "Not happy with the load? Ask the person in charge of vehicle safety to have it assessed and resecured."
+    "Stop lamps should come on with the brake AND go out when you release it."
   ],
   "sources": [
     {

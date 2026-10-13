@@ -35,13 +35,13 @@
       {
         "icon": "smartphone",
         "title": "Hand-held device",
-        "text": "6 points, £200 fine. In court: up to £2,500 for a lorry.",
+        "text": "6 points and a £200 fine. Court: up to £2,500 (lorry).",
         "law": true
       },
       {
         "icon": "eye",
-        "title": "No proper control or view",
-        "text": "3 points. In court: up to £2,500 for a lorry.",
+        "title": "No proper control",
+        "text": "3 points. Court: up to £2,500 (lorry).",
         "law": true
       },
       {
@@ -61,7 +61,7 @@
       },
       {
         "icon": "siren",
-        "title": "999 or 112 emergency",
+        "title": "999 or 112",
         "text": "Allowed if it's unsafe or impractical to stop."
       }
     ]
@@ -84,15 +84,15 @@
   },
   "onTheTest": [
     {
-      "question": "You are queuing in slow traffic in your lorry. When may you hold your phone to send a message?",
+      "question": "You are queuing in traffic. When may you hold your phone to send a text?",
       "options": [
-        "When the engine stops automatically",
-        "When the traffic is stationary",
-        "Only when you are safely parked",
-        "When the phone is in flight mode"
+        "When the engine cuts out",
+        "When the traffic is stopped",
+        "Only when safely parked",
+        "When it is in flight mode"
       ],
       "answerIndex": 2,
-      "why": "The ban applies when queuing, if the engine turns off when you stop, or if the device is offline. You can use it when safely parked."
+      "why": "The ban applies in queues, if the engine cuts out, and offline. You can use it when safely parked."
     },
     {
       "question": "What is the maximum fine a court can give a lorry driver for using a hand-held phone while driving?",
@@ -103,14 +103,13 @@
         "£5,000"
       ],
       "answerIndex": 2,
-      "why": "Highway Code annex 5: using a hand-held mobile phone when driving carries a maximum £1,000 fine, or £2,500 for a goods vehicle or PCV, and 6 penalty points."
+      "why": "Highway Code annex 5: maximum £1,000 fine, or £2,500 for a goods vehicle or PCV, plus 6 penalty points."
     }
   ],
   "traps": [
     "Stopped in a queue or at lights still counts: the hand-held ban applies.",
     "Flight mode doesn't help: the ban covers devices that are offline.",
-    "New drivers: 6 points within 2 years of your first test means your licence is revoked.",
-    "Already hold a full UK licence? Passing your lorry test doesn't restart the 2-year new driver period."
+    "6 points within 2 years of your first test: your licence is revoked."
   ],
   "sources": [
     {

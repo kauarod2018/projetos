@@ -12,13 +12,13 @@
   "whatItIs": "To drive a lorry professionally you need a full car licence, a provisional lorry licence and the full Driver CPC: 5 tests in 4 parts. Then 35 hours of training every 5 years.",
   "keyFacts": [
     {
-      "text": "You MUST have the full Driver CPC if you drive a lorry as the main part of your job.",
+      "text": "You MUST have the full Driver CPC if driving a lorry is your main job.",
       "law": true
     },
-    "Start with a provisional licence: forms D2 and D4 (a medical report by a doctor).",
-    "Pass part 1 before booking parts 3a and 3b, and part 2 before booking part 4.",
-    "Pass part 3b within 6 months of your part 3a certificate, or take 3a again.",
-    "The theory certificate lasts 2 years: pass 3a and 3b in that time or retake part 1.",
+    "Start with a provisional licence: forms D2 and D4 (medical).",
+    "Pass part 1 before booking 3a and 3b, and part 2 before part 4.",
+    "Pass 3b within 6 months of passing 3a, or take 3a again.",
+    "Pass 3a and 3b within 2 years of your theory pass, or retake part 1.",
     {
       "text": "You MUST carry your Driver CPC card when driving professionally: £50 fixed penalty without it.",
       "law": true
@@ -49,7 +49,7 @@
         "text": "1 hour of driving. Pass: 12 or fewer driving faults, no serious ones."
       },
       {
-        "title": "Part 4: practical demonstration",
+        "title": "Part 4: demonstration",
         "text": "5 topics. At least 15/20 in each, 80/100 overall."
       }
     ]
@@ -58,21 +58,21 @@
     "a": {
       "label": "Part 2: case studies",
       "points": [
-        "Computer test: 7 short stories about working life",
+        "Computer test: 7 case studies",
         "Pass mark 40 out of 50"
       ]
     },
     "b": {
       "label": "Part 4: practical demonstration",
       "points": [
-        "Hands-on test with a lorry: loading, security, emergencies, checks",
-        "At least 15 out of 20 in each topic and 80 out of 100 overall"
+        "Hands-on test with a lorry",
+        "15/20 in each topic, 80/100 overall"
       ]
     }
   },
   "onTheTest": [
     {
-      "question": "You have passed Driver CPC part 3a. How long do you have to pass part 3b before you must take part 3a again?",
+      "question": "You passed Driver CPC part 3a. How long do you have to pass part 3b?",
       "options": [
         "3 months",
         "6 months",
@@ -80,10 +80,10 @@
         "2 years"
       ],
       "answerIndex": 1,
-      "why": "You need to pass the part 3b test within 6 months of getting your part 3a certificate. If you don't, you'll need to pass part 3a again."
+      "why": "Pass part 3b within 6 months of getting your part 3a certificate, or you'll need to pass part 3a again."
     },
     {
-      "question": "Which test must you pass before you can book the Driver CPC part 4 practical demonstration?",
+      "question": "Which test must you pass before you can book Driver CPC part 4?",
       "options": [
         "Part 1 theory test",
         "Part 2 case studies",
@@ -91,12 +91,11 @@
         "Part 3b on-road driving"
       ],
       "answerIndex": 1,
-      "why": "You must have passed the Driver CPC part 2 (case studies) test before you can book the part 4 test."
+      "why": "You must pass part 2 (case studies) before you can book part 4."
     }
   ],
   "traps": [
     "Part 2 doesn't need part 1 first: book it once you have a provisional licence.",
-    "Lose your car licence and you automatically lose your lorry licence too.",
     "Driving not your main job? You may not need the full Driver CPC, but still pass parts 1, 3a and 3b."
   ],
   "sources": [

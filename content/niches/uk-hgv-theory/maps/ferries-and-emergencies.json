@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "ferries-and-emergencies",
+  "niche": "uk-hgv-theory",
+  "area": "hours-and-tachographs",
+  "order": 10,
+  "tier": "complete",
+  "officialTopics": [
+    "drivers-hours",
+    "tachographs"
+  ],
+  "title": "Ferries, Trains & Emergencies",
+  "whatItIs": "On a ferry or train, a regular daily rest can be interrupted twice, for no more than 1 hour in total. In exceptional circumstances you can depart from the rules to reach a safe stopping place.",
+  "keyFacts": [
+    "Ferry or train: a regular daily rest can be interrupted twice, 1 hour in total.",
+    "You need a sleeper cabin, bunk or couchette, and the rest must still total 11 hours (12 if split).",
+    "A regular weekly rest: only on a crossing of 8 hours or more, with a sleeper cabin.",
+    {
+      "text": "On a digital tachograph you MUST select ferry mode as well as rest mode when using this rule.",
+      "law": true
+    },
+    "Unforeseen events (e.g. severe weather): you may depart from the rules to reach a safe stop.",
+    {
+      "text": "You MUST note the reasons on a printout or chart, at the latest when you reach the stopping place.",
+      "law": true
+    }
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "When the drivers' hours rules can bend",
+    "columns": 2,
+    "items": [
+      {
+        "icon": "ship",
+        "title": "Ferry or train",
+        "text": "Interrupt a regular daily rest twice at most, 1 hour in total."
+      },
+      {
+        "icon": "clock-alert",
+        "title": "Unforeseen event",
+        "text": "Only as far as needed to reach a suitable stopping place."
+      },
+      {
+        "icon": "route",
+        "title": "Reaching base or home",
+        "text": "Up to 1 hour extra, or 2 hours after a 30-minute break."
+      },
+      {
+        "icon": "siren",
+        "title": "Emergency",
+        "text": "Vehicles in emergency or rescue operations are exempt."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Unforeseen event",
+      "points": [
+        "Unexpected delay: e.g. severe weather, collision, breakdown",
+        "Planned breaches are never allowed"
+      ]
+    },
+    "b": {
+      "label": "Emergency",
+      "points": [
+        "Immediate action needed, e.g. to avoid danger to life or health",
+        "Vehicles in emergency or rescue operations are exempt"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You take a regular daily rest on an overnight ferry. What is the most total interruption allowed?",
+      "options": [
+        "30 minutes",
+        "1 hour",
+        "2 hours",
+        "3 hours"
+      ],
+      "answerIndex": 1,
+      "why": "No more than twice, and 1 hour in total, to drive on and off and for customs."
+    },
+    {
+      "question": "Heavy snow delays you and you will go over your driving time. What may you do?",
+      "options": [
+        "Drive on to your planned destination",
+        "Go over the limits only as far as needed to reach a suitable stopping place",
+        "Ignore the rules for the rest of the day",
+        "Ask your employer to change your tachograph record"
+      ],
+      "answerIndex": 1,
+      "why": "You may depart from the rules only as far as needed to reach a suitable stopping place, without risking road safety."
+    }
+  ],
+  "traps": [
+    "Planned breaches are never unforeseen: the rules only bend for genuine, unexpected delays.",
+    "Extra driving must be paid back: equivalent rest in one block by the end of the third week after.",
+    "You still need your 11-hour (or 9-hour) daily rest, even if it can't be finished within 24 hours."
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
+      "ref": "1.7 Journeys involving a ferry or train; 1.8 Emergencies; 1.10 Unforeseen events",
+      "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/1-assimilated-and-aetr-rules-on-drivers-hours"
+    },
+    {
+      "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
+      "ref": "4.2 Digital or smart tachographs (ferry mode); manual records",
+      "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/4-tachograph-rules"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

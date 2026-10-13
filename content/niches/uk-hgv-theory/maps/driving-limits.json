@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "id": "driving-limits",
+  "niche": "uk-hgv-theory",
+  "area": "hours-and-tachographs",
+  "order": 2,
+  "tier": "basic",
+  "officialTopics": [
+    "drivers-hours"
+  ],
+  "title": "Daily, Weekly & Fortnightly Driving Limits",
+  "whatItIs": "Under the assimilated rules: no more than 9 hours of driving a day (10 hours twice in a fixed week), 56 hours in a fixed week and 90 hours in any two consecutive weeks.",
+  "keyFacts": [
+    {
+      "text": "Daily driving MUST NOT exceed 9 hours. It can go up to 10 hours, but only twice in a fixed week.",
+      "law": true
+    },
+    "Daily driving time is all the driving between the end of one daily rest and the start of the next.",
+    {
+      "text": "Weekly driving MUST NOT exceed 56 hours in a fixed week.",
+      "law": true
+    },
+    "A fixed week runs from 00.00 on Monday to 24.00 on the following Sunday.",
+    {
+      "text": "Driving in any two consecutive weeks MUST NOT exceed 90 hours.",
+      "law": true
+    },
+    "Example of a full week: 4 days of 9 hours + 2 days of 10 hours = 56 hours."
+  ],
+  "visual": {
+    "type": "table",
+    "caption": "Assimilated driving limits",
+    "numbersKey": "driving-limits"
+  },
+  "confused": {
+    "a": {
+      "label": "56 hours",
+      "points": [
+        "Most driving in one fixed week",
+        "Monday 00.00 to Sunday 24.00"
+      ]
+    },
+    "b": {
+      "label": "90 hours",
+      "points": [
+        "Most driving in any two consecutive weeks",
+        "So two 56-hour weeks in a row would break the limit"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You drove for 56 hours last week. Under the assimilated rules, what is the most you can drive this week?",
+      "options": [
+        "34 hours",
+        "45 hours",
+        "56 hours",
+        "90 hours"
+      ],
+      "answerIndex": 0,
+      "why": "Driving in any two consecutive weeks must not exceed 90 hours, so 90 − 56 = 34 hours this week."
+    },
+    {
+      "question": "How many times in a fixed week can you extend your daily driving time to 10 hours?",
+      "options": [
+        "Once",
+        "Twice",
+        "Three times",
+        "Every day"
+      ],
+      "answerIndex": 1,
+      "why": "The maximum daily driving time is 9 hours. It can be increased to 10 hours twice in a fixed week."
+    }
+  ],
+  "traps": [
+    "10-hour days: twice in a fixed week, not twice between weekly rests.",
+    "Two 56-hour weeks in a row break the 90-hour two-week limit.",
+    "Off-road driving between rests counts towards the daily limit if you also drove on public roads."
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
+      "ref": "1.4 Breaks and driving limits; 1.11 Summary of assimilated limits",
+      "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/1-assimilated-and-aetr-rules-on-drivers-hours"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

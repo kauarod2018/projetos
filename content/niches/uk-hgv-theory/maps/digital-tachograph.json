@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "id": "digital-tachograph",
+  "niche": "uk-hgv-theory",
+  "area": "hours-and-tachographs",
+  "order": 8,
+  "tier": "basic",
+  "officialTopics": [
+    "tachographs"
+  ],
+  "title": "Digital Tachographs: Cards & Modes",
+  "whatItIs": "A digital or smart tachograph records your driving, other work, availability, breaks and rest in the vehicle unit and on your driver card. You must use your own card.",
+  "keyFacts": [
+    {
+      "text": "You MUST use your driver card when driving an in-scope vehicle with a digital or smart tachograph.",
+      "law": true
+    },
+    {
+      "text": "You MUST only use your own card. Never use someone else's, or let anyone use yours.",
+      "law": true
+    },
+    "Driver in slot 1, second driver in slot 2. Insert the card before the vehicle moves.",
+    {
+      "text": "You MUST record the country where you start and end your daily work period.",
+      "law": true
+    },
+    "The tachograph clock runs on UTC (the same as GMT): one hour behind British Summer Time.",
+    "Card lost, stolen or faulty? Drive up to 15 days with printouts; report it to DVLA within 7 days."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "The four tachograph modes: use the mode button correctly",
+    "columns": 2,
+    "items": [
+      {
+        "icon": "truck",
+        "title": "Driving",
+        "text": "Recorded automatically on most tachographs when the vehicle moves."
+      },
+      {
+        "icon": "briefcase",
+        "title": "Other work",
+        "text": "All work except driving, for any employer, inside or outside transport."
+      },
+      {
+        "icon": "hourglass",
+        "title": "Availability",
+        "text": "Waiting of known length, e.g. on a ferry or while others load the vehicle."
+      },
+      {
+        "icon": "bed",
+        "title": "Break or rest",
+        "text": "No driving or other work. Also used for annual and sick leave."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Driver card",
+      "points": [
+        "Personal to you: records your activities",
+        "Your employer downloads it at least every 28 days"
+      ]
+    },
+    "b": {
+      "label": "Company card",
+      "points": [
+        "Issued to the operator, not the driver",
+        "Used to download vehicle unit data and lock it in"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You have left your driver card at home. Can you drive an in-scope lorry with a digital tachograph?",
+      "options": [
+        "Yes, if you keep a manual record",
+        "Yes, if you take printouts",
+        "No, not without your card",
+        "Yes, for up to 15 days"
+      ],
+      "answerIndex": 2,
+      "why": "A driver without their issued card may not drive a vehicle with a digital or smart tachograph unless it's lost or stolen. Manual records aren't allowed for a forgotten card."
+    },
+    {
+      "question": "In June you did other work from 06.00 to 08.00 local time. What times do you enter on the digital tachograph?",
+      "options": [
+        "05.00 to 07.00",
+        "06.00 to 08.00",
+        "07.00 to 09.00",
+        "04.00 to 06.00"
+      ],
+      "answerIndex": 0,
+      "why": "The tachograph records in UTC, which is one hour behind British Summer Time. So 06.00 to 08.00 BST is entered as 05.00 to 07.00."
+    }
+  ],
+  "traps": [
+    "A forgotten card isn't a lost card: if you forget it, you can't drive.",
+    "Manual entries are in UTC: in summer, take one hour off local time.",
+    "Don't remove the card during the working day unless authorised, e.g. when changing vehicle.",
+    "You may only hold one driver card."
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
+      "ref": "4. Tachograph rules: 4.2 Digital or smart tachographs; 4.3 Common rules",
+      "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/4-tachograph-rules"
+    },
+    {
+      "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
+      "ref": "5. Responsibilities of vehicle operators: downloading; company cards",
+      "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/5-responsibilities-of-vehicle-operators"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}
