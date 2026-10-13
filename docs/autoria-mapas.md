@@ -83,3 +83,31 @@ read `content/niches/uk-hgv-theory/maps/breaks.json` (finished example) and a fe
 For every map: the id, then each key fact, question answer and trap with the source and the exact sentence (or a
 close paraphrase with the section) that supports it. List anything you left out because you couldn't find it in
 an official source, and any number that should go into `numbers.json`.
+
+## Sources for the CSCS product (`uk-cscs-test`)
+
+The CITB test questions come from CITB's own book (GT100), which we don't use or copy. Our maps are built from the
+HSE guidance and the law the test is about. Texts in `$SP/cscs/`:
+
+| File | What it is | URL to cite |
+|---|---|---|
+| `pubns/hsg150.txt` | HSG150 Health and safety in construction: site set-up, welfare, emergencies, first aid, RIDDOR, site rules, work at height (ladders, scaffolds, roofs, MEWPs), site traffic, moving goods, groundwork/excavations, demolition, occupational health, electricity, slips and trips, confined spaces, drowning, PPE, the public | https://www.hse.gov.uk/pubns/priced/hsg150.pdf |
+| `pubns/l153.txt` | L153 CDM 2015 guidance (duties of clients, designers, contractors, workers; welfare schedule 2) | https://www.hse.gov.uk/pubns/priced/l153.pdf |
+| `pubns/l64.txt` | L64 Safety signs and signals regulations guidance (shapes, colours, hand and acoustic signals) | https://www.hse.gov.uk/pubns/priced/l64.pdf |
+| `pubns/hsg168.txt` | HSG168 Fire safety in construction | https://www.hse.gov.uk/pubns/priced/hsg168.pdf |
+| `pubns/hsg47.txt` | HSG47 Avoiding danger from underground services | https://www.hse.gov.uk/pubns/priced/hsg47.pdf |
+| `pubns/hsg141.txt` | HSG141 Electrical safety on construction sites | https://www.hse.gov.uk/pubns/priced/hsg141.pdf |
+| `pubns/hsg144.txt` | HSG144 Safe use of vehicles on construction sites | https://www.hse.gov.uk/pubns/priced/hsg144.pdf |
+| `pubns/hsg151.txt` | HSG151 Protecting the public | https://www.hse.gov.uk/pubns/priced/hsg151.pdf |
+| `pubns/indg362.txt` noise · `indg175` vibration · `indg143` manual handling · `indg136` COSHH · `indg401` work at height · `indg453` RIDDOR · `indg214` first aid · `indg290` lifting (LOLER) · `indg291` work equipment (PUWER) · `indg258` confined spaces · `indg199` workplace transport · `indg231` electrical safety · `indg344` construction toolkit · `indg411` CDM clients · `cis36` construction dust · `cis59` welfare · `cis80` construction phase plan · `geis6` MEWPs | HSE leaflets | https://www.hse.gov.uk/pubns/<name>.pdf |
+| `hse/asbestos_workers_htm.txt`, `hse/asbestos_essentials.txt`, `hse/legionnaires.txt`, `hse/skin.txt` | HSE web pages | https://www.hse.gov.uk/asbestos/workers.htm etc. |
+| `law/hswa-s2.txt`, `hswa-s7.txt`, `hswa-s8.txt` | Health and Safety at Work etc. Act 1974, ss. 2, 7, 8 | https://www.legislation.gov.uk/ukpga/1974/37/section/7 |
+| `govuk/pollution-prevention.txt`, `govuk/waste-duty-of-care.txt` | Pollution prevention for businesses; waste duty of care code of practice | https://www.gov.uk/guidance/pollution-prevention-for-businesses ; https://www.gov.uk/government/publications/waste-duty-of-care-code-of-practice |
+
+More HSE pages: `curl -sS -L -A "Mozilla/5.0" https://www.hse.gov.uk/<path> -o x.html && python3 $SP/html2txt.py x.html`.
+More law: legislation.gov.uk (e.g. Work at Height Regulations 2005, SI 2005/735; PPE at Work Regulations 1992,
+SI 1992/2966; Control of Noise at Work Regulations 2005, SI 2005/1643). Cite the regulation number.
+
+`LAW` in this product = a duty in the Act or regulations (or "must" in an HSE text that states the legal duty). HSE
+advice ("should") is never `law`. Safety signs: never draw sign pictograms; use `cards` with a colour `swatch` and
+words for shapes and colours.
