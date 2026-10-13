@@ -163,8 +163,8 @@
     "vatIncluded": true
   },
   "checkout": {
-    "basicUrl": "",
-    "completeUrl": ""
+    "basicUrl": "https://pay.hotmart.com/K108006347L",
+    "completeUrl": "https://pay.hotmart.com/Q108006436Q"
   },
   "guaranteeDays": 15,
   "updatePolicy": "Free updated PDFs whenever The Highway Code or the theory test format changes, for as long as the product is on sale.",

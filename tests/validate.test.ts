@@ -40,8 +40,12 @@ describe('content as committed', () => {
     assert.deepEqual(checkContent(loadContent(), { release: false }).errors, []);
   });
 
-  test('is blocked in release mode while the checkout links are missing', () => {
-    expectProblem(checkContent(loadContent(), { release: true }).errors, /checkout/);
+  test('passes the release validation', () => {
+    assert.deepEqual(checkContent(loadContent(), { release: true }).errors, []);
+  });
+
+  test('a missing checkout link is blocked in release mode', () => {
+    expectProblem(problemsAfter(join('niches', 'uk-driving-theory', 'niche.json'), (n) => (n.checkout.basicUrl = ''), true), /checkout/);
   });
 
   test('a placeholder domain is blocked in release mode', () => {

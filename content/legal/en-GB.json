@@ -241,7 +241,7 @@
       "prices": "Prices in GBP."
     },
     "lastUpdated": "Last updated {date}",
-    "preview": "PREVIEW · checkout links are not set yet, so the buy buttons do not work. Do not publish this build.",
+    "preview": "PREVIEW · test version of the site, hidden from search engines. Do not publish this build.",
     "checkoutMissing": "Checkout link not set yet",
     "notFound": {
       "title": "Page not found",
