@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 1,
+  "id": "drivers-hours-cheat-sheet",
+  "niche": "uk-hgv-theory",
+  "number": 1,
+  "title": "Drivers' Hours Cheat Sheet",
+  "summary": "Every drivers' hours and working time limit for lorry drivers, on two pages.",
+  "kind": "document",
+  "pages": [
+    {
+      "heading": "Assimilated rules (most lorries over 3.5 tonnes)",
+      "blocks": [
+        {
+          "type": "stat-row",
+          "items": [
+            {
+              "value": "4.5 h",
+              "label": "driving, then a break"
+            },
+            {
+              "value": "45 min",
+              "label": "break (or 15 + 30)"
+            },
+            {
+              "value": "9 h",
+              "label": "daily driving (10 h twice a week)"
+            },
+            {
+              "value": "11 h",
+              "label": "daily rest"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "Limits at a glance",
+          "data": {
+            "columns": [
+              "Rule",
+              "Limit"
+            ],
+            "rows": [
+              [
+                "Driving before a break",
+                "No more than 4.5 hours"
+              ],
+              [
+                "Break",
+                "At least 45 minutes, or at least 15 then at least 30"
+              ],
+              [
+                "Daily driving",
+                "9 hours, up to 10 hours twice in a fixed week"
+              ],
+              [
+                "Weekly driving",
+                "56 hours in a fixed week"
+              ],
+              [
+                "Two-week driving",
+                "90 hours in any two consecutive fixed weeks"
+              ],
+              [
+                "Daily rest",
+                "11 hours, or split 3 + 9 hours (12 in total)"
+              ],
+              [
+                "Reduced daily rest",
+                "At least 9 hours, up to 3 times between weekly rests"
+              ],
+              [
+                "Weekly rest",
+                "45 hours, or reduced to at least 24 hours"
+              ],
+              [
+                "When weekly rest starts",
+                "No later than six 24-hour periods after the last one"
+              ]
+            ],
+            "notes": [
+              "A reduced weekly rest must be made up in one block before the end of the third week after it."
+            ]
+          }
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "The split break trap",
+          "text": "A split break must be at least 15 minutes first and at least 30 minutes second. 30 then 15 doesn't count as a full break."
+        }
+      ]
+    },
+    {
+      "heading": "GB domestic rules and working time",
+      "blocks": [
+        {
+          "type": "table",
+          "span": 1,
+          "title": "GB domestic rules",
+          "data": {
+            "columns": [
+              "Rule",
+              "Limit"
+            ],
+            "rows": [
+              [
+                "Daily driving",
+                "10 hours"
+              ],
+              [
+                "Daily duty",
+                "11 hours"
+              ],
+              [
+                "Written records",
+                "Weekly record sheet when driving over 4 hours a day (operator licence vehicles)"
+              ]
+            ],
+            "notes": [
+              "Used by most goods vehicles exempt from the assimilated rules."
+            ]
+          }
+        },
+        {
+          "type": "table",
+          "span": 1,
+          "title": "Working time (2005 Regulations)",
+          "data": {
+            "columns": [
+              "Rule",
+              "Limit"
+            ],
+            "rows": [
+              [
+                "Average week",
+                "48 hours over 17 (or 26) weeks"
+              ],
+              [
+                "Single week",
+                "60 hours maximum"
+              ],
+              [
+                "Night work",
+                "10 hours in 24 (night: 00.00 to 04.00)"
+              ],
+              [
+                "Work before a break",
+                "No more than 6 hours"
+              ]
+            ],
+            "notes": []
+          }
+        },
+        {
+          "type": "facts",
+          "title": "Breaks under working time",
+          "items": [
+            "Working 6 to 9 hours: breaks totalling at least 30 minutes.",
+            "Working more than 9 hours: breaks totalling at least 45 minutes.",
+            "Each break should be at least 15 minutes.",
+            "Breaks and periods of availability don't count as working time.",
+            "Working time records are kept for 2 years."
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Duty isn't driving",
+          "text": "Under GB domestic rules, the 10-hour limit counts only driving, while the 11-hour limit counts all duty, including loading and other work."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
+      "ref": "1.4–1.6; 2.2–2.3; Annex 2 Working time rules",
+      "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/1-assimilated-and-aetr-rules-on-drivers-hours"
+    }
+  ],
+  "review": {
+    "status": "draft"
+  }
+}

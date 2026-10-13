@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "id": "walkaround-checklist",
+  "niche": "uk-hgv-theory",
+  "number": 2,
+  "title": "Daily Walkaround Checklist",
+  "summary": "The 27 checks DVSA lists for a lorry's daily walkaround, as a printable checklist, plus how to record defects.",
+  "kind": "document",
+  "pages": [
+    {
+      "heading": "Inside the cab",
+      "blocks": [
+        {
+          "type": "lead",
+          "text": "You're responsible for making sure your vehicle is safe to drive. Do a walkaround check before your journey and report any defects in writing to the person in charge of sorting out defects."
+        },
+        {
+          "type": "checklist",
+          "span": 1,
+          "title": "In the cab (1–5)",
+          "items": [
+            "Front view: nothing in the swept area of the wipers; windscreen not cracked, scratched, discoloured or over-tinted.",
+            "Mirrors in place, not damaged, obscured or insecure. Camera instead of a mirror? Check it works and the view is right.",
+            "Wipers work and aren't missing, damaged or worn. Washer works.",
+            "Instruments, gauges and warning lights work, including engine, emissions, ABS and EBS warnings.",
+            "Steering moves properly, power steering works, no excessive play, no jamming, no lift in the column."
+          ]
+        },
+        {
+          "type": "checklist",
+          "span": 1,
+          "title": "In the cab (6–9)",
+          "items": [
+            "Horn works and is easy to reach from the driver's seat.",
+            "Air builds up and the warning system works; no air leaks; footwell clear.",
+            "Service brake works tractor and trailer brakes; tractor parking brake works; pedal: no excessive side play, tread intact.",
+            "Height marker in the cab shows the correct vehicle height (it can change with the fifth wheel or the load).",
+            "Seatbelts: no cuts or fraying, stay secure when plugged in, retract properly.",
+            "Cab mountings, tilt devices, panels, doors and steps are secure."
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Listen for leaks",
+          "text": "After the first brake test, leave the engine running so air pressure can build up. It makes air leaks easier to hear during the rest of the check."
+        }
+      ]
+    },
+    {
+      "heading": "Outside the vehicle",
+      "blocks": [
+        {
+          "type": "checklist",
+          "span": 1,
+          "title": "All round (10–18)",
+          "items": [
+            "All lights and indicators work; lenses fitted, clean and the right colour; stop lamps on with the brake; marker lights work.",
+            "Fuel cap fitted; no fuel or oil leaks under the vehicle (engine on).",
+            "Body, wings, doors, landing legs, sideguards and rear under-run guards secure and undamaged.",
+            "Battery secure, in good condition and not leaking.",
+            "Enough AdBlue (diesel exhaust fluid); top up if needed.",
+            "No excessive exhaust smoke.",
+            "High voltage cut-off and fuel isolation switches: know where they are; no leaks or damage.",
+            "Spray suppression flaps (if required) fitted, secure, undamaged and not clogged."
+          ]
+        },
+        {
+          "type": "checklist",
+          "span": 1,
+          "title": "Wheels, coupling and load (19–27)",
+          "items": [
+            "Tyres and wheels secure; tread at least 1 mm; correctly inflated; no deep sidewall cuts or visible cord.",
+            "Wheel nuts tight (check wheel nut indicators if fitted); nothing trapped between twin wheels.",
+            "Brake lines: couplings clean and in place, no leaks, damage or wear; trailer parking brake works.",
+            "Electrical wiring insulated and safe; trailer electrical couplings connected securely.",
+            "Trailer located correctly in the fifth wheel or coupling; secondary locking devices in position.",
+            "Load doesn't move and isn't likely to move, with the right securing system.",
+            "Number plate, reflectors, markings and hazard panels: present, correct, secure and clean."
+          ]
+        },
+        {
+          "type": "facts",
+          "title": "Record and report",
+          "items": [
+            "Record the registration, date, defects, your assessment (e.g. 'dangerous'), your name and who you told.",
+            "No defects? Record 'nil' defects.",
+            "Defect found on the road? Stop somewhere safe to assess and report it.",
+            {
+              "text": "Dangerous defects MUST be fixed before you continue your journey.",
+              "law": true
+            },
+            "DVSA can ask for the record of your walkaround check at a roadside check."
+          ]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Carry out HGV daily walkaround checks",
+      "ref": "Checks 1–27; Record and report the result of your check",
+      "url": "https://www.gov.uk/guidance/carry-out-daily-heavy-goods-vehicle-hgv-walkaround-checks"
+    }
+  ],
+  "review": {
+    "status": "draft"
+  }
+}

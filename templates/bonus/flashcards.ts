@@ -30,7 +30,8 @@ export function flashcardList(n: LoadedNiche, b: LoadedBonus, ctx: BonusContext)
   const t = n.i18n.bonus;
   const cards: Card[] = [];
   if (b.data.flashcards?.signs) {
-    const signs = n.signs.signs.filter((s) => ctx.preview || s.status === 'official');
+    const only = b.data.flashcards.signIds;
+    const signs = n.signs.signs.filter((s) => (ctx.preview || s.status === 'official') && (!only || only.includes(s.id)));
     for (const s of signs) {
       cards.push({
         kind: t.cardSign,

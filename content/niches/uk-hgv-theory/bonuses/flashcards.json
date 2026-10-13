@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "flashcards",
+  "niche": "uk-hgv-theory",
+  "number": 6,
+  "title": "Flashcards: Signs & Numbers",
+  "summary": "Print-and-cut cards (double-sided A4) plus a phone version to test yourself anywhere.",
+  "kind": "flashcards",
+  "flashcards": {
+    "signs": true,
+    "numbers": true,
+    "signIds": [
+      "goods-vehicles-weight-limit",
+      "end-goods-vehicle-restriction",
+      "no-articulated-vehicles",
+      "max-width",
+      "max-length",
+      "max-height",
+      "headroom-warning",
+      "height-restriction-ahead",
+      "arch-bridge-headroom",
+      "level-crossing-barrier",
+      "level-crossing-no-barrier",
+      "no-overtaking",
+      "national-speed-limit"
+    ]
+  },
+  "sources": [
+    {
+      "doc": "Know Your Traffic Signs (DfT)",
+      "ref": "Sign meanings",
+      "url": "https://assets.publishing.service.gov.uk/media/656ef4271104cf0013fa74ef/know-your-traffic-signs-dft.pdf"
+    }
+  ],
+  "review": {
+    "status": "draft"
+  }
+}

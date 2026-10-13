@@ -59,7 +59,8 @@ export const bonus = z
     summary: z.string().min(1).max(110),
     kind: z.enum(['document', 'flashcards']),
     pages: z.array(z.object({ heading: z.string().min(1).max(60), blocks: z.array(block).min(1) })).default([]),
-    flashcards: z.object({ signs: z.boolean(), numbers: z.boolean() }).optional(),
+    /** signIds: only these signs (default: every official sign of the country) */
+    flashcards: z.object({ signs: z.boolean(), numbers: z.boolean(), signIds: z.array(slug).optional() }).optional(),
     sources: z.array(sourceRef).min(1),
     review,
   })

@@ -73,7 +73,9 @@
       "load-securing-basics",
       "lorry-signs"
     ],
-    "bonuses": []
+    "bonuses": [
+      "flashcards"
+    ]
   },
   "strategic": {
     "eyebrow": "Strategic content",

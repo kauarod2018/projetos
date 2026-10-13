@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "numbers-table",
+  "niche": "uk-hgv-theory",
+  "number": 3,
+  "title": "Numbers Table",
+  "summary": "Every hour, weight, speed, depth and deadline you need for the lorry theory test, in one table.",
+  "kind": "document",
+  "pages": [
+    {
+      "heading": "Numbers to know",
+      "blocks": [
+        {
+          "type": "numbers-table",
+          "title": "The numbers that come up most"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
+      "ref": "Sections 1, 2, 4 and annex 2",
+      "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles"
+    },
+    {
+      "doc": "GOV.UK: Become a qualified HGV or bus driver",
+      "ref": "Driver CPC part 1 test: theory",
+      "url": "https://www.gov.uk/become-lorry-bus-driver"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 124 and annex 6",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    }
+  ],
+  "review": {
+    "status": "draft"
+  }
+}

@@ -262,6 +262,9 @@ export function checkContent(content: LoadedContent, opts: CheckOptions): CheckR
       bonusIds.add(d.id);
       bonusNumbers.add(d.number);
       const pending: string[] = [];
+      for (const id of d.flashcards?.signIds ?? []) {
+        if (!n.signs.signs.some((s) => s.id === id)) errors.push(`${f} → flashcards.signIds: sign "${id}" is not in signs.json`);
+      }
       for (const [pi, page] of d.pages.entries()) {
         for (const block of page.blocks) {
           if (block.type === 'sign-pairs') {

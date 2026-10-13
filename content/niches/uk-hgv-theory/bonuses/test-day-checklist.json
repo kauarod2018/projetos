@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "id": "test-day-checklist",
+  "niche": "uk-hgv-theory",
+  "number": 5,
+  "title": "Theory Test Day Checklist",
+  "summary": "What to bring, how both parts of the lorry theory test work and what happens after.",
+  "kind": "document",
+  "pages": [
+    {
+      "heading": "Before the test",
+      "blocks": [
+        {
+          "type": "lead",
+          "text": "The Driver CPC part 1 theory test has two parts: multiple choice and hazard perception. You book them separately, but you can take them on the same day, in either order."
+        },
+        {
+          "type": "checklist",
+          "span": 1,
+          "title": "Bring with you",
+          "items": [
+            "A Great Britain photocard driving licence, or",
+            "A Northern Ireland photocard licence and paper counterpart, or",
+            "An EU photocard licence (and paper counterpart, if you have one).",
+            "Paper licence only? Bring a valid passport too.",
+            "Changed your name since booking? Bring proof, like a marriage certificate or deed poll."
+          ]
+        },
+        {
+          "type": "callout",
+          "span": 1,
+          "tone": "warning",
+          "title": "No documents, no test",
+          "text": "If you don't bring the right documents, your test is cancelled and you lose your fee."
+        },
+        {
+          "type": "checklist",
+          "title": "The days before",
+          "items": [
+            "Book through the official GOV.UK service: £26 for multiple choice and £11 for hazard perception.",
+            "Questions are based on The Highway Code, Know Your Traffic Signs and the DVSA guide to driving goods vehicles.",
+            "Read the traps on your maps one last time, especially drivers' hours and loads.",
+            "Practise hazard perception clips: they're a separate skill."
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "During and after the test",
+      "blocks": [
+        {
+          "type": "stat-row",
+          "items": [
+            {
+              "value": "100",
+              "label": "multiple-choice questions"
+            },
+            {
+              "value": "1h 55",
+              "label": "to answer them"
+            },
+            {
+              "value": "85",
+              "label": "correct to pass"
+            },
+            {
+              "value": "19",
+              "label": "hazard clips"
+            },
+            {
+              "value": "67/100",
+              "label": "to pass hazards"
+            }
+          ]
+        },
+        {
+          "type": "facts",
+          "span": 1,
+          "title": "Multiple choice",
+          "items": [
+            "You get instructions and a practice question first.",
+            "You can flag questions and come back to them.",
+            "You can review and change any answer before you finish.",
+            "You don't have to use the full 1 hour 55 minutes."
+          ]
+        },
+        {
+          "type": "facts",
+          "span": 1,
+          "title": "Hazard perception",
+          "items": [
+            "19 clips; each has at least one developing hazard, and one clip has two.",
+            "Up to 5 points for each developing hazard: click as soon as it starts to develop.",
+            "Clicking continuously or in a pattern scores nothing.",
+            "One attempt per clip: you can't review or change responses."
+          ]
+        },
+        {
+          "type": "checklist",
+          "title": "After the test",
+          "items": [
+            "You get a results letter at the test centre for each part.",
+            "Pass both parts within 2 years of each other to get your theory test certificate.",
+            "The certificate is valid for 2 years from passing the first part: pass parts 3a and 3b within that time.",
+            "Failed? You can book again straight away, but you can't take the test for 3 clear working days."
+          ]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Become a qualified HGV or bus driver",
+      "ref": "Driver CPC part 1 test: theory; Fees",
+      "url": "https://www.gov.uk/become-lorry-bus-driver/driver-cpc-part-1-theory-test"
+    }
+  ],
+  "review": {
+    "status": "draft"
+  }
+}
