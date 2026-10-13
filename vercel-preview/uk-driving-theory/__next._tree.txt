@@ -1,0 +1,8 @@
+:HL["/_next/static/chunks/1lod3-a47eui6.css","style"]
+:HC["/",""]
+:HL["/media/uk-driving-theory/maps/webp/1-01-signs-shapes-colours.webp","image",{"imageSrcSet":"/media/uk-driving-theory/maps/webp/1-01-signs-shapes-colours-600.webp 600w, /media/uk-driving-theory/maps/webp/1-01-signs-shapes-colours.webp 1200w","imageSizes":"(max-width: 720px) 90vw, 320px"}]
+:HL["/media/uk-driving-theory/maps/webp/1-02-signs-warning-junctions.webp","image",{"imageSrcSet":"/media/uk-driving-theory/maps/webp/1-02-signs-warning-junctions-600.webp 600w, /media/uk-driving-theory/maps/webp/1-02-signs-warning-junctions.webp 1200w","imageSizes":"(max-width: 720px) 90vw, 320px"}]
+:HL["/media/uk-driving-theory/maps/webp/1-03-signs-warning-hazards.webp","image",{"imageSrcSet":"/media/uk-driving-theory/maps/webp/1-03-signs-warning-hazards-600.webp 600w, /media/uk-driving-theory/maps/webp/1-03-signs-warning-hazards.webp 1200w","imageSizes":"(max-width: 720px) 90vw, 320px"}]
+2:[["children",{"s":"__PAGE__","h":160}]]
+1:[["children",{"s":{"n":"niche","t":"d","k":"uk-driving-theory","s":["privacy","refund","terms"]},"h":65632,"c":"$Q2"}]]
+0:{"b":"hq_wYW_fd0GUAn57xBLSv","t":{"t":{"s":"","h":131152,"c":"$Q1"}}}

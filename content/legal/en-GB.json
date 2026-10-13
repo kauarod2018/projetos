@@ -4,7 +4,7 @@
   "updated": "2026-10-13",
   "privacy": {
     "title": "Privacy Policy",
-    "intro": "This policy explains what personal data {brand} collects when you visit {domain} or buy our products, why we use it and the rights you have under the UK GDPR and the EU GDPR.",
+    "intro": "This policy explains what personal data {brand} collects when you visit this website or buy our products, why we use it and the rights you have under the UK GDPR and the EU GDPR.",
     "sections": [
       {
         "h": "Who we are",
@@ -57,7 +57,7 @@
   },
   "terms": {
     "title": "Terms of Use",
-    "intro": "These terms apply to the website {domain} and to the digital products sold by {brand}. By buying or using our products you agree to them. Nothing in these terms affects your statutory rights as a consumer.",
+    "intro": "These terms apply to this website and to the digital products sold by {brand}. By buying or using our products you agree to them. Nothing in these terms affects your statutory rights as a consumer.",
     "sections": [
       {
         "h": "Who we are",
@@ -167,7 +167,7 @@
       "prices": "Prices in GBP."
     },
     "lastUpdated": "Last updated {date}",
-    "preview": "PREVIEW · numbers come from the plan and the files are drafts. Do not publish this build.",
+    "preview": "PREVIEW · checkout links are not set yet, so the buy buttons do not work. Do not publish this build.",
     "checkoutMissing": "Checkout link not set yet",
     "notFound": {
       "title": "Page not found",

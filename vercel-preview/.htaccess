@@ -1,0 +1,3 @@
+# Hostinger (Apache): the site is plain static files exported by Next.js
+ErrorDocument 404 /404.html
+DirectoryIndex index.html
