@@ -142,20 +142,38 @@
   "ui": {
     "home": {
       "metaDescription": "Printable visual study guides for official exams: one topic per A4 page, checked against the official sources. Instant access, one-time payment.",
-      "eyebrow": "Visual study guides",
-      "title": "Pass your test with one clear page per topic",
-      "highlight": "one clear page",
-      "sub": "Printable revision guides for official exams. Every topic on a single A4 page, checked against the official sources.",
-      "ctaShop": "Shop the guides",
-      "ctaHow": "How it works",
-      "shopTitle": "Shop guides",
-      "shopSub": "Pick your exam. More exams are on the way.",
-      "allCategories": "All",
-      "cardFrom": "From {price}",
-      "cardCta": "View guide",
+      "title": "Visual study guides for official exams",
+      "banner": {
+        "region": "Featured guides",
+        "label": "Featured",
+        "from": "From {price}",
+        "cta": "View guide",
+        "complete": "Complete pack {price}",
+        "prev": "Previous",
+        "next": "Next",
+        "goTo": "Show banner {n}"
+      },
+      "search": {
+        "label": "Search guides",
+        "placeholder": "Search exams or topics",
+        "button": "Search",
+        "country": "Country",
+        "allCountries": "All countries"
+      },
+      "allCategories": "All guides",
+      "catalogTitle": "Shop by exam",
+      "countOne": "{n} guide",
+      "countMany": "{n} guides",
+      "resultsTitle": "Search results",
+      "clear": "Clear filters",
+      "noResultsTitle": "No guides match your search",
+      "noResultsText": "Try another word or country, or tell us which exam you need.",
       "cardSpecs": "{maps} maps · {bonuses} bonuses",
+      "cardPacks": "{n} packs",
+      "cardDelivery": "Instant download",
+      "cardCta": "View guide",
       "soonTitle": "Your exam not here yet?",
-      "soonText": "We're adding new exams. Tell us which one you need and we'll let you know when it's ready.",
+      "soonText": "We're adding exams from more countries. Tell us which one you need.",
       "soonCta": "Suggest an exam",
       "howTitle": "How it works",
       "howSteps": [
@@ -165,45 +183,51 @@
         },
         {
           "title": "Pay securely",
-          "text": "Checkout is handled by Hotmart. One-time payment, no subscription."
+          "text": "One-time payment through Hotmart. No subscription."
         },
         {
           "title": "Download and revise",
-          "text": "Your access arrives by email within minutes. Print it or use it on a tablet."
+          "text": "Access arrives by email in minutes. Print it or use a tablet."
         }
       ],
-      "whyTitle": "Why {brand}",
+      "whyTitle": "In every guide",
       "whyCards": [
         {
           "icon": "file-text",
           "title": "One topic, one page",
-          "text": "Each topic fits on a single A4 page, so you can see it all at a glance."
+          "text": "Each topic fits on one A4 page."
         },
         {
           "icon": "badge-check",
-          "title": "Checked against official sources",
-          "text": "Facts are checked against the official texts, and every page shows the date."
+          "title": "Checked facts",
+          "text": "Against the official sources, dated."
         },
         {
           "icon": "list-checks",
           "title": "Practice built in",
-          "text": "Original test-style questions, each with the reason the answer is right."
+          "text": "Test-style questions with reasons."
         },
         {
           "icon": "printer",
-          "title": "Print or use on screen",
-          "text": "PDF files that work on paper, on a tablet or on your phone."
+          "title": "Print or screen",
+          "text": "PDF for paper, tablet or phone."
         }
       ],
       "faqTitle": "Questions",
+      "faqSub": "Can't find your answer? Send us an email.",
+      "faqContact": "Email us",
       "faq": [
         {
           "q": "How do I get my guide?",
-          "a": "After payment, Hotmart emails you access to the members area, where you download the PDF files."
+          "a": "Right after payment, Hotmart emails you access to the members area, where you download the PDF files. It usually takes a few minutes. Check your spam folder if you can't see it."
         },
         {
           "q": "Is it a subscription?",
-          "a": "No. You pay once and keep the files."
+          "a": "No. You pay once and the files are yours to keep."
+        },
+        {
+          "q": "Can I print the guides?",
+          "a": "Yes. Every page is A4, ready to print at home. The PDF files also work on a tablet or phone."
         },
         {
           "q": "Can I get a refund?",
@@ -227,7 +251,8 @@
       "terms": "Terms",
       "refund": "Refund policy",
       "cookies": "Cookie settings",
-      "contact": "Contact"
+      "contact": "Contact",
+      "promise": "Instant download · Secure checkout by Hotmart"
     },
     "cookies": {
       "title": "Cookies",
@@ -238,7 +263,8 @@
     },
     "footer": {
       "company": "{brand} is an independent brand. Products are sold through Hotmart.",
-      "prices": "Prices in GBP."
+      "prices": "Prices in GBP.",
+      "contactTitle": "Contact"
     },
     "lastUpdated": "Last updated {date}",
     "preview": "PREVIEW · test version of the site, hidden from search engines. Do not publish this build.",

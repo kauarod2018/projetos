@@ -4,6 +4,7 @@ import { mapCode } from '../../lib/checks.ts';
 import type { LoadedMap, LoadedNiche } from '../../lib/content.ts';
 import { icon } from '../../lib/icons.ts';
 import { brandName, type Site } from '../../schemas/content.ts';
+import { brandLockup } from '../shared/brand.ts';
 import { esc, fill, formatDate, pad2 } from '../shared/html.ts';
 import { htmlDocument } from '../map/render.ts';
 
@@ -45,7 +46,7 @@ export function renderCreditsPage(n: LoadedNiche, site: Site, input: CreditsInpu
 
   const attributions = [...n.niche.attributions, n.signs.attribution].map((a) => `<li>${esc(a)}</li>`).join('');
   const band = `<header class="cr-band">
-    <span class="cr-brand">${esc(brand)}</span>
+    <span class="cr-brand">${brandLockup(brand, 16)}</span>
     <span class="cr-exam">${esc(n.niche.examName)}</span>
   </header>`;
   const counts = {

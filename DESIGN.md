@@ -103,39 +103,48 @@ Cada pacote abre com 2 páginas:
 
 ## Marca (site, bônus e anúncios)
 
-Marca: **Help Test**, igual em todos os países e idiomas (`content/site.json`), fácil de entender mesmo para quem não
-fala inglês. O símbolo é um
-quadrado verde com uma faixa tracejada amarela, a mesma "linha de faixa" dos mapas.
+Marca: **HelpTest**, igual em todos os países e idiomas (`content/site.json`). Logo: uma folha com o canto dobrado
+(contorno azul-marinho) e um visto dourado que corta a borda direita, seguido de "Help" azul + "Test" dourado em
+Montserrat 800. O desenho é o mesmo em SVG no site (`site/components/Logo.tsx`, favicon em `app/icon.svg`) e nos PDFs
+e na capa do produto (`templates/shared/brand.ts`). Em fundo escuro, o contorno da folha e o "Help" ficam brancos.
 
 | Uso | Valor |
 |---|---|
-| Verde da marca (faixa dos bônus, títulos de destaque, final da página) | `#0B6E4F` |
-| Amarelo de ação (botões de compra, marca-texto do título, selo dos bônus) | `#FFC93C` (sombra `#F2B705`) |
-| Fundo suave do site | `#F6F5F1` |
-| Linhas do site | `#E3E1DA` |
+| Azul-marinho da marca (cabeçalho, barra de categorias, banners, rodapé, botões secundários) | `#133056` (escuro `#0C2242`) |
+| Dourado da marca (botões de compra, busca, selos, detalhes) | `#C9A23F` (hover `#D4B052`; texto sobre ele em azul-marinho) |
+| Fundo suave do site | `#F5F4F0` |
+| Linhas do site | `#E3E6EC` |
+| Verde dos mapas e da capa do produto (identidade do produto de direção, não da loja) | `#0B6E4F` |
 
-- **Botões de compra:** amarelos, texto escuro em maiúsculas, cantos totalmente arredondados, sombra "sólida" embaixo.
-  Um estilo só para a ação principal; o secundário é contornado em preto.
-- **Site:** mobile-first, margem lateral de 16 px, largura máxima de 1120 px, seções alternando branco e `#F6F5F1`,
-  sobretítulo verde em maiúsculas acima de cada título. Texto base de 17 px no celular e 18 px no desktop.
-- **Bônus:** mesma grade dos mapas, faixa verde da marca com o selo amarelo "BONUS 0N"; texto de 10,5 pt (são guias para
-  ler com calma).
-- **Criativos:** fundo verde (abertura e oferta) ou bege (páginas reais), título em Archivo 800, página real com sombra,
-  botão amarelo no último slide.
+- **Site:** mobile-first, margem lateral de 16 px (24 px no desktop), largura máxima de 1200 px. Títulos em Montserrat,
+  texto em Atkinson Hyperlegible (17 px no celular, 18 px no desktop). Cantos de 8–14 px, bordas finas, sem degradês.
+- **Bônus:** mesma grade dos mapas, faixa verde com o selo "BONUS 0N" e a logo HelpTest à direita.
+- **Criativos:** fundo verde (abertura e oferta) ou bege (páginas reais), título em Archivo 800, página real com sombra.
 
 ## Loja (site)
 
-Cara de loja online, sem enfeite: fundo branco, cartões com borda fina, preço sempre visível, botão amarelo da marca.
+Cara de mercado online, organizada e sem enfeite.
 
-- **Vitrine (`/`):** topo curto com 3 páginas em leque, faixa de confiança (acesso por e-mail, checkout Hotmart,
-  garantia, conferido nas fontes oficiais), grade de produtos com filtro por categoria (aparece com 2+ categorias),
-  cartão "sugira uma prova", como funciona, vantagens, perguntas.
+- **Cabeçalho:** logo, busca grande no centro (seletor de país com bandeira + campo de texto + botão dourado) e links
+  de ajuda/contato. Embaixo, barra azul com as categorias ("All guides", uma por categoria, "How it works"). Fixo no
+  topo só no desktop. A busca procura em nome, prova, categoria, país, palavras-chave (`store.keywords`) e nos títulos
+  dos mapas; o filtro fica na URL (`/?q=…&country=gb&cat=driving-tests`), então uma busca feita em qualquer página
+  abre a vitrine já filtrada.
+- **Vitrine (`/`):** banners rotativos (um por produto, na ordem de `store.rank`, até 3, + banner "sugira uma prova");
+  passam sozinhos a cada 7 s, param com o mouse em cima e respeitam "reduzir movimento". Depois a faixa de confiança,
+  o catálogo com chips de categoria e **uma prateleira por categoria** (cartões de mercado: capa, bandeira + país,
+  nome, conteúdo, faixa de preço, "Instant download"), a faixa compacta "How it works / In every guide" e as perguntas
+  com o e-mail de contato ao lado.
+- **Ordem e selo:** `store.rank` em `niche.json` (1 = primeiro; coloque os mais vendidos primeiro). `store.badge` é o
+  selo do cartão ("New"); só escreva "Best seller" quando as vendas mostrarem isso.
+- **Bandeiras:** `flag-icons` (MIT), copiadas para `public/media/flags/` pelo `site:assets` a partir do campo
+  `country` do nicho.
 - **Produto (`/<nicho>/`):** galeria à esquerda (capa do produto, capa do pacote, sumário, 5 mapas e 1 bônus; miniaturas
   e zoom em tela cheia), caixa de compra à direita (pacote Completo pré-selecionado, preço no botão), abas de seção,
   conteúdo, tabela comparando os pacotes, bônus, porquê, como recebe, perguntas e chamada final. No celular, uma barra
   com o preço aparece quando a caixa de compra sai da tela.
-- **Capa do produto:** gerada no build (`templates/cover/`), 1200×1500, fundo verde da marca, nome da prova, selos com
-  os números reais e 3 páginas em leque. É a imagem do cartão, da galeria e do topo da vitrine.
+- **Capa do produto:** gerada no build (`templates/cover/`), 1200×1500, fundo verde, logo HelpTest, nome da prova,
+  selos com os números reais e 3 páginas em leque. É a imagem do cartão e da galeria.
 
 ## Placas
 

@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "brand": {
-    "default": "Help Test",
+    "default": "HelpTest",
     "byLanguage": {
-      "en-GB": "Help Test",
-      "fr-FR": "Help Test",
-      "es-ES": "Help Test",
-      "de-DE": "Help Test",
-      "pt-BR": "Help Test"
+      "en-GB": "HelpTest",
+      "fr-FR": "HelpTest",
+      "es-ES": "HelpTest",
+      "de-DE": "HelpTest",
+      "pt-BR": "HelpTest"
     }
   },
   "domain": "helptest.online",

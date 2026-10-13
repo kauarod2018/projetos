@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs';
 import type { LoadedNiche } from '../../lib/content.ts';
 import { brandName, type Site } from '../../schemas/content.ts';
+import { brandLockup } from '../shared/brand.ts';
 import { esc, fill } from '../shared/html.ts';
 import { htmlDocument } from '../map/render.ts';
 
@@ -25,7 +26,7 @@ export function renderProductCover(n: LoadedNiche, site: Site, input: CoverInput
     .map((file, i) => `<img class="pg pg-${i}" src="${dataUri(file)}" alt="">`)
     .join('');
   const body = `<div class="cover">
-  <header><span class="mark"><i></i></span>${esc(brand)}</header>
+  <header>${brandLockup(brand, 34)}</header>
   <p class="chip">${esc(s.countryName)} · ${esc(s.category)}</p>
   <h1>${esc(n.niche.examName)}</h1>
   <p class="tagline">${esc(s.coverTagline)}</p>
@@ -43,9 +44,7 @@ html, body { width: ${COVER_SIZE.width}px; height: ${COVER_SIZE.height}px; }
   content: ''; position: absolute; left: 0; right: 0; top: 330px; height: 4px;
   background: repeating-linear-gradient(90deg, #ffc93c 0 34px, transparent 34px 56px); opacity: 0.9;
 }
-header { display: flex; align-items: center; gap: 10px; font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 20px; }
-.mark { width: 30px; height: 30px; border-radius: 8px; background: #fff; display: grid; place-items: center; }
-.mark i { width: 16px; height: 3px; background: repeating-linear-gradient(90deg, #0b6e4f 0 5px, transparent 5px 8px); }
+header { display: flex; align-items: center; font-size: 24px; color: #fff; }
 .chip {
   display: inline-block; margin-top: 30px; padding: 5px 12px; border-radius: 999px;
   background: rgba(255, 255, 255, 0.14); font-weight: 700; font-size: 14px; letter-spacing: 0.02em;

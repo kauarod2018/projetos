@@ -26,7 +26,9 @@
   },
   "dependencies": {
     "@fontsource-variable/archivo": "5.3.0",
+    "@fontsource-variable/montserrat": "5.3.0",
     "@fontsource/atkinson-hyperlegible": "5.3.0",
+    "flag-icons": "7.5.0",
     "lucide-static": "1.55.0",
     "next": "16.4.0",
     "pdf-lib": "1.17.1",

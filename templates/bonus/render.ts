@@ -6,6 +6,7 @@ import { icon } from '../../lib/icons.ts';
 import type { BonusBlock } from '../../schemas/bonus.ts';
 import { brandName, type NumberItem, type Sign, type Site } from '../../schemas/content.ts';
 import type { KeyFact } from '../../schemas/map.ts';
+import { brandLockup } from '../shared/brand.ts';
 import { esc, fill, pad2 } from '../shared/html.ts';
 import { htmlDocument } from '../map/render.ts';
 import { renderTable, signCell } from '../visuals/basic.ts';
@@ -168,7 +169,7 @@ export function renderBonusDocument(n: LoadedNiche, b: LoadedBonus, site: Site, 
   <header class="bn-band">
     <span class="bn-num">${esc(t.bonus.label)} ${pad2(d.number)}</span>
     <span class="bn-title">${esc(d.title)}</span>
-    <span class="bn-brand">${esc(brand)}</span>
+    <span class="bn-brand">${brandLockup(brand, 13)}</span>
   </header>
   <main class="bn-main">
     <h1>${esc(page.heading)}</h1>

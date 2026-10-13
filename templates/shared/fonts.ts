@@ -4,11 +4,13 @@ import { ROOT } from '../../lib/content.ts';
 
 /**
  * Fonts are embedded as data URIs so every page renders the same without network access.
- * Archivo (headings, variable weight + width) and Atkinson Hyperlegible (body, designed for legibility).
+ * Archivo (headings, variable weight + width), Atkinson Hyperlegible (body, designed for legibility)
+ * and Montserrat (the HelpTest word mark only).
  * Both are SIL Open Font License. Only the Latin subset is embedded (covers English, £, µ, dashes).
  */
 const FONTS = [
   { family: 'Archivo', file: '@fontsource-variable/archivo/files/archivo-latin-wdth-normal.woff2', weight: '100 900', stretch: '62% 125%', style: 'normal' },
+  { family: 'Montserrat', file: '@fontsource-variable/montserrat/files/montserrat-latin-wght-normal.woff2', weight: '100 900', style: 'normal' },
   { family: 'Atkinson', file: '@fontsource/atkinson-hyperlegible/files/atkinson-hyperlegible-latin-400-normal.woff2', weight: '400', style: 'normal' },
   { family: 'Atkinson', file: '@fontsource/atkinson-hyperlegible/files/atkinson-hyperlegible-latin-700-normal.woff2', weight: '700', style: 'normal' },
   { family: 'Atkinson', file: '@fontsource/atkinson-hyperlegible/files/atkinson-hyperlegible-latin-400-italic.woff2', weight: '400', style: 'italic' },

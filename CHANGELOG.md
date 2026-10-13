@@ -1,5 +1,16 @@
 # Changelog
 
+## 2026-10-13 (nova logo e loja de mercado)
+
+- Nova logo **HelpTest** (folha com visto dourado) em SVG no site, no favicon, na capa do produto e nos PDFs. A marca
+  passou a se escrever junto, como na logo.
+- Cores do site trocadas para o azul-marinho e o dourado da logo; títulos em Montserrat.
+- Cabeçalho de loja: busca com filtro por país e barra de categorias.
+- Topo da vitrine virou banners rotativos com os produtos mais vendidos (`store.rank`).
+- Produtos em prateleiras por categoria, com cartões de mercado; "Como funciona" virou uma faixa compacta; perguntas
+  revisadas; e-mail de contato no rodapé.
+- Links de checkout da Hotmart preenchidos (Basic e Complete).
+
 ## 2026-10-13 (loja)
 
 - Marca única **Help Test**, também nos PDFs.

@@ -10,6 +10,7 @@ import { loadContent, ROOT, type LoadedContent, type LoadedNiche } from '../lib/
 import { brandName } from '../schemas/content.ts';
 import type { Legal, Sales } from '../schemas/site-copy.ts';
 import { formatDate, pad2 } from '../templates/shared/html.ts';
+import { slugify } from './shopFilter.ts';
 
 export type Mode = 'preview' | 'release';
 export const MODE: Mode = process.env.SITE_MODE === 'release' ? 'release' : 'preview';
@@ -106,7 +107,11 @@ export interface NicheView {
   lookInside: Img | undefined;
   /** product page gallery: pack cover, contents, sample maps and bonus pages */
   gallery: (Img & { label: string; kind: 'product' | 'cover' | 'contents' | 'map' | 'bonus' })[];
-  store: { category: string; countryName: string; productName: string; cardText: string; format: string };
+  store: { category: string; countryName: string; productName: string; cardText: string; format: string; coverTagline: string; keywords: string[]; badge?: string; rank: number };
+  /** country of the exam: ISO code and the flag copied from flag-icons by site:assets */
+  country: { code: string; name: string; flag: string };
+  /** the cover badges with the counts filled in, e.g. "60 one-page maps" */
+  highlights: string[];
   checkedOn: string;
   questions: number;
   traps: number;
@@ -227,6 +232,8 @@ export function nicheView(n: LoadedNiche): NicheView {
         })),
     ],
     store: n.niche.store,
+    country: { code: n.niche.country.toLowerCase(), name: n.niche.store.countryName, flag: `/media/flags/${n.niche.country.toLowerCase()}.svg` },
+    highlights: n.niche.store.coverBadges.map((b) => fillText(b, { maps: counts.totalMaps, questions: counted.questions, bonuses: counts.bonuses }, `${id}/niche.json → store.coverBadges`)),
     checkedOn: values.checkedOn,
     questions: counted.questions,
     traps: counted.traps,
@@ -243,7 +250,23 @@ export function nicheView(n: LoadedNiche): NicheView {
   };
 }
 
+/** every niche, best sellers first (store.rank, then name) */
 export function allNiches(): LoadedNiche[] {
-  return content().niches;
+  return [...content().niches].sort((a, b) => a.niche.store.rank - b.niche.store.rank || a.niche.examName.localeCompare(b.niche.examName));
 }
 
+
+/** categories and countries across the shop, in best-seller order, for the header and the filters */
+export function shopIndex() {
+  const niches = allNiches();
+  const categories = [...new Map(niches.map((n) => [slugify(n.niche.store.category), { slug: slugify(n.niche.store.category), name: n.niche.store.category }])).values()];
+  const countries = [
+    ...new Map(
+      niches.map((n) => {
+        const code = n.niche.country.toLowerCase();
+        return [code, { code, name: n.niche.store.countryName, flag: `/media/flags/${code}.svg` }];
+      }),
+    ).values(),
+  ].sort((a, b) => a.name.localeCompare(b.name));
+  return { categories, countries };
+}

@@ -3,7 +3,7 @@
  * with a 600 px version for phones and a social share image per niche.
  * Run after build:pdfs or build:preview.
  */
-import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync } from 'node:fs';
+import { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync } from 'node:fs';
 import { dirname, join, relative } from 'node:path';
 import sharp from 'sharp';
 import { loadContent, ROOT } from '../lib/content.ts';
@@ -19,7 +19,17 @@ function* walk(dir: string): Generator<string> {
   }
 }
 
-for (const n of loadContent().niches) {
+const niches = loadContent().niches;
+
+// country flags for the shop filter and product cards (flag-icons, MIT licence)
+mkdirSync(join(publicMedia, 'flags'), { recursive: true });
+for (const code of new Set(niches.map((n) => n.niche.country.toLowerCase()))) {
+  const flag = join(ROOT, 'node_modules', 'flag-icons', 'flags', '4x3', `${code}.svg`);
+  if (!existsSync(flag)) throw new Error(`no flag for country "${code}" in flag-icons: check "country" in niche.json`);
+  copyFileSync(flag, join(publicMedia, 'flags', `${code}.svg`));
+}
+
+for (const n of niches) {
   const dist = join(ROOT, 'dist', n.niche.id);
   if (!existsSync(join(dist, 'manifest.json'))) throw new Error(`run "npm run build:preview" first: dist/${n.niche.id} is missing`);
   // only what the shop shows: the gallery (cover, contents, sample maps) and the first page of each bonus.

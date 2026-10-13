@@ -14,7 +14,22 @@
       "{maps} one-page maps",
       "{questions} practice questions",
       "{bonuses} bonuses"
-    ]
+    ],
+    "keywords": [
+      "DVSA",
+      "theory test",
+      "Highway Code",
+      "road signs",
+      "hazard perception",
+      "driving licence",
+      "car",
+      "Great Britain",
+      "England",
+      "Scotland",
+      "Wales"
+    ],
+    "badge": "New",
+    "rank": 1
   },
   "country": "GB",
   "jurisdiction": "Great Britain (England, Scotland and Wales)",

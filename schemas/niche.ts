@@ -20,6 +20,12 @@ export const niche = z.object({
     /** the designed product cover: tagline under the exam name and up to 3 badges ({maps} {questions} {bonuses}) */
     coverTagline: z.string().min(1).max(40),
     coverBadges: z.array(z.string().min(1).max(30)).min(1).max(3),
+    /** extra words the shop search should match (exam body, document names, common terms) */
+    keywords: z.array(z.string().min(1)).default([]),
+    /** short label on the product card, e.g. "New"; write "Best seller" only when sales show it */
+    badge: z.string().min(1).max(16).optional(),
+    /** order in the shop banners and lists: 1 shows first (put your best sellers first) */
+    rank: z.number().int().min(1).default(100),
   }),
   country: z.string().length(2),
   jurisdiction: z.string().min(1),

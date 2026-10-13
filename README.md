@@ -1,6 +1,6 @@
-# Help Test · loja de guias visuais de revisão
+# HelpTest · loja de guias visuais de revisão
 
-Loja de guias visuais de revisão em PDF, um produto por prova. A marca é a mesma em todo lugar: **Help Test**.
+Loja de guias visuais de revisão em PDF, um produto por prova. A marca é a mesma em todo lugar: **HelpTest**.
 
 O site é uma loja: vitrine com os produtos (cada nicho em `content/niches/` vira um produto, com categoria e país) e
 uma página por produto com galeria de 9 páginas reais, escolha de pacote (Básico/Completo) e as seções de conteúdo.

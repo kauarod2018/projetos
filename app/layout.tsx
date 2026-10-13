@@ -1,4 +1,4 @@
-import '@fontsource-variable/archivo/wdth.css';
+import '@fontsource-variable/montserrat/wght.css';
 import '@fontsource/atkinson-hyperlegible/400.css';
 import '@fontsource/atkinson-hyperlegible/700.css';
 import './globals.css';
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#0B6E4F',
+  themeColor: '#133056',
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
