@@ -12,27 +12,23 @@
   "whatItIs": "The Health and Safety at Work etc. Act 1974 covers all work. It puts duties on employers, the self-employed and employees. HSE inspectors enforce it.",
   "keyFacts": [
     {
-      "text": "Employers MUST ensure, so far as is reasonably practicable, the health, safety and welfare at work of all employees.",
+      "text": "Employers MUST ensure, so far as is reasonably practicable, the health, safety and welfare of all employees.",
       "law": true
     },
     {
-      "text": "Employers MUST give the information, instruction, training and supervision needed to keep employees safe.",
+      "text": "Employers MUST give the information, instruction, training and supervision needed for safety.",
       "law": true
     },
     {
-      "text": "Employees MUST take reasonable care of themselves and of others affected by what they do, or fail to do.",
+      "text": "Employees MUST take reasonable care of themselves and others affected by what they do or don't do.",
       "law": true
     },
     {
-      "text": "Employees MUST co-operate with their employer so that it can carry out its health and safety duties.",
+      "text": "You MUST NOT intentionally or recklessly interfere with or misuse anything provided for safety.",
       "law": true
     },
     {
-      "text": "You MUST NOT intentionally or recklessly interfere with or misuse anything provided for health, safety or welfare.",
-      "law": true
-    },
-    {
-      "text": "An employer MUST NOT charge employees for anything it provides to meet a specific legal requirement.",
+      "text": "An employer MUST NOT charge employees for anything the law specifically requires it to provide.",
       "law": true
     }
   ],
@@ -44,37 +40,37 @@
       {
         "icon": "building-2",
         "title": "Employer to employees",
-        "text": "Health, safety and welfare of all employees, so far as is reasonably practicable (s. 2).",
+        "text": "Health, safety and welfare of all employees (s. 2).",
         "law": true
       },
       {
         "icon": "users",
-        "title": "Employer to other people",
-        "text": "Run the work so people it doesn't employ, like the public, aren't put at risk (s. 3).",
+        "title": "Employer to others",
+        "text": "Don't put others, like the public, at risk (s. 3).",
         "law": true
       },
       {
         "icon": "file-text",
         "title": "Safety policy",
-        "text": "A written health and safety policy, brought to the notice of all employees (s. 2(3)).",
+        "text": "Written, and brought to all employees' notice (s. 2(3)).",
         "law": true
       },
       {
         "icon": "hard-hat",
         "title": "Employees",
-        "text": "Take reasonable care of yourself and others, and co-operate with your employer (s. 7).",
+        "text": "Take reasonable care; co-operate with your employer (s. 7).",
         "law": true
       },
       {
         "icon": "ban",
         "title": "Everyone",
-        "text": "Never interfere with or misuse anything provided for health, safety or welfare (s. 8).",
+        "text": "Don't interfere with or misuse safety equipment (s. 8).",
         "law": true
       },
       {
         "icon": "search",
         "title": "HSE inspectors",
-        "text": "Can enter sites, talk to workers, take photos and samples, and serve notices.",
+        "text": "Enter sites, question workers, serve notices.",
         "law": false
       }
     ]
@@ -83,64 +79,61 @@
     "a": {
       "label": "Improvement notice",
       "points": [
-        "Requires improvements to be made",
-        "Says what is wrong, what to do and by when",
-        "Action is suspended while an appeal is heard"
+        "Requires improvements by a set date",
+        "Suspended while an appeal is heard"
       ]
     },
     "b": {
       "label": "Prohibition notice",
       "points": [
-        "Stops a process or the use of dangerous equipment",
-        "Used where there is a risk of serious personal injury",
-        "Not suspended by an appeal"
+        "Stops a process or dangerous equipment: risk of serious injury",
+        "Still applies during an appeal"
       ]
     }
   },
   "onTheTest": [
     {
-      "question": "Under the Health and Safety at Work etc. Act 1974, which of these is a legal duty of every employee?",
+      "question": "Under the 1974 Act, which of these is a legal duty of every employee?",
       "options": [
         "Take reasonable care of themselves and others",
-        "Write the company's health and safety policy",
+        "Write the company safety policy",
         "Supply their own first-aid kit",
         "Notify the project to HSE"
       ],
       "answerIndex": 0,
-      "why": "Section 7 says every employee must take reasonable care for the health and safety of themselves and others affected by their acts or omissions, and co-operate with their employer."
+      "why": "Section 7: employees must take reasonable care of themselves and others affected by what they do, and co-operate with their employer."
     },
     {
-      "question": "A worker takes down a guard rail to make a job quicker and walks away. Which legal duty has he broken?",
+      "question": "A worker removes a guard rail to save time and leaves it off. Which legal duty has he broken?",
       "options": [
-        "The duty to write a method statement",
-        "The duty not to interfere with things provided for safety",
-        "The duty to report injuries to HSE",
-        "The duty to provide welfare facilities"
+        "To write a method statement",
+        "Not to interfere with things provided for safety",
+        "To report injuries to HSE",
+        "To provide welfare facilities"
       ],
       "answerIndex": 1,
-      "why": "Section 8: no person shall intentionally or recklessly interfere with or misuse anything provided in the interests of health, safety or welfare."
+      "why": "Section 8: no one may intentionally or recklessly interfere with or misuse anything provided for health, safety or welfare."
     }
   ],
   "traps": [
     "Safety isn't only the employer's job: employees have legal duties too.",
-    "Your employer can't charge you for things the law requires it to provide.",
     "Paying your own tax doesn't automatically make you self-employed under health and safety law.",
     "A prohibition notice still applies during an appeal; an improvement notice is suspended."
   ],
   "sources": [
     {
       "doc": "Health and Safety at Work etc. Act 1974",
-      "ref": "Section 2 (employers' duties to employees), section 3 (duties to others)",
+      "ref": "ss. 2, 3",
       "url": "https://www.legislation.gov.uk/ukpga/1974/37/section/2"
     },
     {
       "doc": "Health and Safety at Work etc. Act 1974",
-      "ref": "Section 7 (employees), section 8 (interference or misuse), section 9 (no charges)",
+      "ref": "ss. 7, 8, 9",
       "url": "https://www.legislation.gov.uk/ukpga/1974/37/section/7"
     },
     {
-      "doc": "HSE: Health and safety in construction (HSG150)",
-      "ref": "Section 4, paras 574-577 (the Act), 663-666 (employees' duties), 674-680 (inspectors and notices)",
+      "doc": "HSE HSG150 Health and safety in construction",
+      "ref": "paras 574-577, 663-666, 674-680",
       "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
     }
   ],
