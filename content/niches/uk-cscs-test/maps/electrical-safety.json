@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "id": "electrical-safety",
+  "niche": "uk-cscs-test",
+  "area": "safety",
+  "order": 1,
+  "tier": "basic",
+  "officialTopics": [
+    "electricity"
+  ],
+  "title": "Electrical Safety on Site",
+  "whatItIs": "Electricity gives no warning and can kill. Site tools and leads get rough use, so the lowest practical voltage, RCDs and checks before use keep you safe.",
+  "keyFacts": [
+    {
+      "text": "Electrical systems MUST be maintained, so far as reasonably practicable, to prevent danger.",
+      "law": true
+    },
+    {
+      "text": "Equipment made dead for work MUST be secured so it can't become live again during the work.",
+      "law": true
+    },
+    {
+      "text": "Anyone doing electrical work that needs technical knowledge MUST have it, or be properly supervised.",
+      "law": true
+    },
+    "A 110 V supply centre-tapped to earth limits a shock to no more than 55 V to earth.",
+    "On 230 V, use an RCD that trips at 30 mA or less, and press its test button every day.",
+    "Check tool, lead and plug before use. Seen damage? Stop, report it and take it out of use."
+  ],
+  "visual": {
+    "type": "steps",
+    "caption": "Choose the lowest voltage that does the job (safest first)",
+    "items": [
+      {
+        "title": "Battery (cordless) tools",
+        "text": "The safest choice. No extension leads or trailing cables."
+      },
+      {
+        "title": "110 V reduced low voltage",
+        "text": "Centre-tapped to earth, so at most 55 V to earth. Used for site power tools and lighting."
+      },
+      {
+        "title": "230 V mains, only if needed",
+        "text": "Only from RCD-protected sockets (30 mA or less). Best suited to dry indoor work."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Switching off",
+      "points": [
+        "Not isolation: it isn't secure",
+        "Someone else could switch it back on",
+        "Tape over a breaker is not acceptable"
+      ]
+    },
+    "b": {
+      "label": "Isolating",
+      "points": [
+        "Disconnected from every supply, securely",
+        "Usually locked off at the isolator",
+        "Then proved dead before work starts"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You need a power drill for work outdoors on a building site. Which option does HSE guidance say is the safest?",
+      "options": [
+        "A 230 V drill on a household extension lead",
+        "A battery-operated drill",
+        "A 230 V drill plugged into an adaptor",
+        "A 400 V three-phase drill"
+      ],
+      "answerIndex": 1,
+      "why": "HSG141 para 36: battery-operated tools are the safest and remove the need for extension leads. 110 V systems can be used elsewhere."
+    },
+    {
+      "question": "The RCD on your 230 V supply keeps tripping. What should happen?",
+      "options": [
+        "Bypass the RCD so work can carry on",
+        "Plug into a socket with no RCD",
+        "Stop and have the fault found by a competent person",
+        "Hold the reset button in while you work"
+      ],
+      "answerIndex": 2,
+      "why": "HSG141 para 64: repeated tripping means something is likely wrong; a competent person should investigate. Never bypass or disable an RCD."
+    }
+  ],
+  "traps": [
+    "Never accept being told equipment is dead. It must be proved dead first.",
+    "Tape over a circuit breaker is not a safe isolation: use a lock-off device.",
+    "Double-insulated tools are well protected, but their leads still get damaged.",
+    "An RCD helps, but it is not as safe as cordless tools or a 110 V supply."
+  ],
+  "sources": [
+    {
+      "doc": "Electricity at Work Regulations 1989 (SI 1989/635)",
+      "ref": "regs 4(2), 12, 13, 16",
+      "url": "https://www.legislation.gov.uk/uksi/1989/635/regulation/4"
+    },
+    {
+      "doc": "HSE HSG141 Electrical safety on construction sites (2023)",
+      "ref": "paras 29, 36, 54, 64, 68, 70; case studies p9",
+      "url": "https://www.hse.gov.uk/pubns/priced/hsg141.pdf"
+    },
+    {
+      "doc": "HSE HSG150 Health and safety in construction",
+      "ref": "Electricity, paras 475-486",
+      "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
+    },
+    {
+      "doc": "HSE INDG231 Electrical safety and you",
+      "ref": "Reduce the voltage; Provide a safety device; Work safely",
+      "url": "https://www.hse.gov.uk/pubns/indg231.pdf"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

@@ -32,9 +32,16 @@
       "doc": "The Highway Code",
       "ref": "Rule 124 and annex 6",
       "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "Road Vehicles (Authorised Weight) Regulations 1998 and Construction and Use Regulations 1986",
+      "ref": "SI 1998/3111 schedules 1–2; SI 1986/1078 regs 27 and 36B",
+      "url": "https://www.legislation.gov.uk/uksi/1998/3111/contents"
     }
   ],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Every row comes from the verified numbers table (GV262, GOV.UK, Highway Code, SI 1998/3111, SI 1986/1078)"
   }
 }

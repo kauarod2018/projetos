@@ -39,6 +39,8 @@
     }
   ],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Built from the verified maps; GOV.UK Become a qualified lorry or bus driver (revision and practice)"
   }
 }

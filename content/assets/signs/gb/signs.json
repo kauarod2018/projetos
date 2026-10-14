@@ -393,7 +393,7 @@
     },
     {
       "id": "max-length",
-      "meaning": "No vehicles over length shown",
+      "meaning": "No vehicles or combinations of vehicles over length shown",
       "category": "regulatory",
       "shape": "circle",
       "officialNumber": "629.1",

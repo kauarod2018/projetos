@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "id": "slips-trips",
+  "niche": "uk-cscs-test",
+  "area": "safety",
+  "order": 7,
+  "tier": "basic",
+  "officialTopics": [
+    "slips-trips-housekeeping"
+  ],
+  "title": "Slips, Trips & Good Housekeeping",
+  "whatItIs": "HSE's HSG150 calls slips and trips the single largest cause of injuries on construction sites. Most are easily avoided by keeping walkways, stairs and work areas tidy.",
+  "keyFacts": [
+    {
+      "text": "Every part of a site MUST be kept in good order, and work areas reasonably clean.",
+      "law": true
+    },
+    {
+      "text": "Timber with projecting nails MUST NOT be used or left lying where it could hurt someone.",
+      "law": true
+    },
+    {
+      "text": "There MUST be safe access to and from every place of work on site, so far as reasonably practicable.",
+      "law": true
+    },
+    {
+      "text": "Sites, approaches and traffic routes MUST have suitable and sufficient lighting.",
+      "law": true
+    },
+    "Everyone is responsible: don't leave cables across corridors or waste in stairwells.",
+    "Don't let stored materials spread onto footpaths, access routes or escape routes."
+  ],
+  "visual": {
+    "type": "table",
+    "caption": "Main causes of slips and trips on site, and the fix (HSG150)",
+    "data": {
+      "columns": [
+        "Cause",
+        "Fix"
+      ],
+      "rows": [
+        [
+          "Materials and waste left lying around",
+          "Keep areas tidy; use marked waste areas, bins and skips"
+        ],
+        [
+          "Trailing cables",
+          "Use cordless tools; run cables at high level"
+        ],
+        [
+          "Uneven, muddy, wet or icy walkways",
+          "Level ruts, stone mud, grit ice; wear good-grip footwear"
+        ],
+        [
+          "Small changes in level",
+          "Soundly built temporary ramps, e.g. at doorways"
+        ]
+      ],
+      "notes": []
+    }
+  },
+  "confused": {
+    "a": {
+      "label": "Storage areas",
+      "points": [
+        "Marked areas for plant, materials and waste",
+        "Deliveries planned to keep stock on site low"
+      ]
+    },
+    "b": {
+      "label": "Walkways and stairs",
+      "points": [
+        "Kept clear of obstructions at all times",
+        "No materials or waste left in them"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Extension leads for temporary lighting run along a busy corridor. What is the best way to stop people tripping?",
+      "options": [
+        "Tape the leads flat to the floor",
+        "Put a warning sign at each end",
+        "Run the leads at high level along the corridor",
+        "Tell everyone to watch where they walk"
+      ],
+      "answerIndex": 2,
+      "why": "HSG150 para 504: where cables are needed for temporary lighting or mains tools, run them at high level, particularly along corridors. Use cordless tools when possible."
+    },
+    {
+      "question": "According to HSE's HSG150, what is the single largest cause of injuries on construction sites?",
+      "options": [
+        "Slips and trips",
+        "Falling objects",
+        "Electric shocks",
+        "Hand-arm vibration"
+      ],
+      "answerIndex": 0,
+      "why": "HSG150 para 501: a slip or trip is the single largest cause of injuries on construction sites, with more than 1000 major injuries reported each year."
+    }
+  ],
+  "traps": [
+    "Small changes in level trip people too, not just big obstacles.",
+    "Floor protection sheets can create a slip or trip risk themselves.",
+    "Take extra care to keep the foot of stairs and ladders clear and in good condition.",
+    "Housekeeping isn't only the labourer's job: everyone manages their own waste."
+  ],
+  "sources": [
+    {
+      "doc": "Construction (Design and Management) Regulations 2015 (SI 2015/51)",
+      "ref": "regs 17(1), 18(1), 18(3), 35(1)",
+      "url": "https://www.legislation.gov.uk/uksi/2015/51/regulation/18"
+    },
+    {
+      "doc": "HSE HSG150 Health and safety in construction",
+      "ref": "Slips and trips, paras 501-504",
+      "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
+    },
+    {
+      "doc": "HSE: Materials storage and waste management (construction)",
+      "ref": "What you need to do; Materials storage",
+      "url": "https://www.hse.gov.uk/construction/safetytopics/storage.htm"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

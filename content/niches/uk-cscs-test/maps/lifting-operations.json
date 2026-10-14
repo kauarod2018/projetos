@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "id": "lifting-operations",
+  "niche": "uk-cscs-test",
+  "area": "safety",
+  "order": 4,
+  "tier": "complete",
+  "officialTopics": [
+    "equipment-and-lifting"
+  ],
+  "title": "Lifting Equipment & Operations",
+  "whatItIs": "Lifting equipment includes cranes, hoists, forklifts, MEWPs and accessories such as chains, slings and eyebolts. LOLER 1998 covers how lifts are run and how kit is examined.",
+  "keyFacts": [
+    {
+      "text": "Every lift MUST be planned by a competent person, properly supervised and carried out safely.",
+      "law": true
+    },
+    {
+      "text": "Lifting machinery and accessories MUST be clearly marked with their safe working load.",
+      "law": true
+    },
+    {
+      "text": "Kit with a dangerous defect found at a thorough examination MUST NOT be used until it is fixed.",
+      "law": true
+    },
+    "Never stand under a load. Plan load routes so loads are not lifted over people.",
+    "The crane supervisor should not be the crane operator, and can stop the lift if it is unsafe.",
+    "Never ride on a goods-only hoist. Hoists are marked for goods only or for passengers."
+  ],
+  "visual": {
+    "type": "table",
+    "caption": "Thorough examination by a competent person (LOLER reg 9)",
+    "data": {
+      "columns": [
+        "Equipment",
+        "Thorough examination"
+      ],
+      "rows": [
+        [
+          "Accessories, e.g. chains, slings, eyebolts",
+          "At least every 6 months"
+        ],
+        [
+          "Equipment for lifting people",
+          "At least every 6 months"
+        ],
+        [
+          "Other lifting equipment, e.g. cranes",
+          "At least every 12 months"
+        ],
+        [
+          "After exceptional events that could affect safety",
+          "Each time"
+        ]
+      ],
+      "notes": [
+        "Or follow an examination scheme drawn up by a competent person."
+      ]
+    }
+  },
+  "confused": {
+    "a": {
+      "label": "Crane hire",
+      "points": [
+        "Operator works to your instructions",
+        "You plan, supervise and run the lift safely"
+      ]
+    },
+    "b": {
+      "label": "Contract lift",
+      "points": [
+        "Crane hire company plans and supervises",
+        "Hire company is responsible for a safe lift"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Unless an examination scheme says otherwise, how often must lifting accessories such as slings and chains be thoroughly examined?",
+      "options": [
+        "Every week",
+        "At least every 6 months",
+        "At least every 12 months",
+        "Every 2 years"
+      ],
+      "answerIndex": 1,
+      "why": "LOLER reg 9(3): equipment for lifting persons and accessories for lifting at least every 6 months; other lifting equipment at least every 12 months."
+    },
+    {
+      "question": "A crane is lifting a bundle of steel across the site. Where should you be?",
+      "options": [
+        "Underneath it, ready to steady it",
+        "Out of its path, never under the load",
+        "Next to the crane's counterweight",
+        "On the load, to guide the operator"
+      ],
+      "answerIndex": 1,
+      "why": "HSG150 paras 311 and 332: do not stand under loads; set load routes so loads are not lifted over people; keep clear of the load and counterweight."
+    }
+  ],
+  "traps": [
+    "No lift is too small to plan: every lift needs planning by competent people.",
+    "Wider sling angles mean more load in each leg, not less.",
+    "Never use makeshift hooks such as bent reinforcing bar.",
+    "Doubt the load's weight or the kit? Don't lift."
+  ],
+  "sources": [
+    {
+      "doc": "Lifting Operations and Lifting Equipment Regulations 1998 (SI 1998/2307)",
+      "ref": "regs 7, 8, 9, 10",
+      "url": "https://www.legislation.gov.uk/uksi/1998/2307/regulation/9"
+    },
+    {
+      "doc": "HSE INDG290 Lifting equipment at work",
+      "ref": "What equipment is covered; What do the Regulations require; Dos and don'ts of lifting safely",
+      "url": "https://www.hse.gov.uk/pubns/indg290.pdf"
+    },
+    {
+      "doc": "HSE HSG150 Health and safety in construction",
+      "ref": "Moving goods safely, paras 311, 316, 318, 325-335",
+      "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
+    },
+    {
+      "doc": "HSE: Lifting operations (construction)",
+      "ref": "What you need to do; Supervision of lifting; Hoists",
+      "url": "https://www.hse.gov.uk/construction/safetytopics/lifting-operations.htm"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

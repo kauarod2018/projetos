@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "id": "site-traffic",
+  "niche": "uk-cscs-test",
+  "area": "safety",
+  "order": 5,
+  "tier": "basic",
+  "officialTopics": [
+    "site-traffic"
+  ],
+  "title": "Site Traffic & Mobile Plant",
+  "whatItIs": "Every year workers are killed on sites by moving or overturning vehicles. Most transport accidents come from not keeping pedestrians and vehicles apart.",
+  "keyFacts": [
+    {
+      "text": "A site MUST be organised so pedestrians and vehicles can move safely, so far as reasonably practicable.",
+      "law": true
+    },
+    {
+      "text": "Traffic routes MUST be suitable, signed where needed, regularly checked and properly maintained.",
+      "law": true
+    },
+    {
+      "text": "You MUST NOT ride on a site vehicle except in a safe place provided for that purpose.",
+      "law": true
+    },
+    {
+      "text": "Steps MUST be taken to stop vehicles falling into excavations, pits or water, e.g. stop blocks.",
+      "law": true
+    },
+    "Only competent drivers authorised for that vehicle should drive site plant. Keys stay with them.",
+    "Leaving a vehicle? Park on level ground, turn the engine off and take the key."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Keeping people and vehicles apart",
+    "columns": 3,
+    "items": [
+      {
+        "icon": "door-open",
+        "title": "Separate gates",
+        "text": "Separate ways in and out for vehicles and pedestrians.",
+        "law": false
+      },
+      {
+        "icon": "footprints",
+        "title": "Walkways",
+        "text": "Firm, level and kept clear of obstructions.",
+        "law": false
+      },
+      {
+        "icon": "traffic-cone",
+        "title": "Crossing points",
+        "text": "Signed and lit, with clear views both ways.",
+        "law": false
+      },
+      {
+        "icon": "route",
+        "title": "One-way systems",
+        "text": "Plus turning areas, to cut reversing.",
+        "law": false
+      },
+      {
+        "icon": "gauge",
+        "title": "Speed limits",
+        "text": "Set for each route and clearly signed.",
+        "law": false
+      },
+      {
+        "icon": "parking-square",
+        "title": "Parking away from work",
+        "text": "Cars and vans parked away from the work area.",
+        "law": false
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Site layout and planning",
+      "points": [
+        "Separate routes, barriers, one-way systems",
+        "Put in place first: removes the risk"
+      ]
+    },
+    "b": {
+      "label": "Mirrors, cameras and alarms",
+      "points": [
+        "Help drivers see and warn people",
+        "Never the only precaution"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "A pedestrian walkway has to cross a site haul road. What should be provided?",
+      "options": [
+        "Nothing, as long as everyone wears hi-vis",
+        "A clearly signed, well-lit crossing point with clear views",
+        "A sign telling drivers to sound their horn",
+        "A rule that pedestrians run across quickly"
+      ],
+      "answerIndex": 1,
+      "why": "HSG150 para 271: where walkways cross vehicle routes, provide a clearly signed, well-lit crossing point where drivers and pedestrians can easily see each other."
+    },
+    {
+      "question": "You need to speak to the driver of a working excavator. What should you do?",
+      "options": [
+        "Walk up behind it and tap on the cab",
+        "Stand in front of the bucket and wave",
+        "Get the driver's attention and wait until the machine is at rest",
+        "Climb onto the tracks so the driver can see you"
+      ],
+      "answerIndex": 2,
+      "why": "HSG150 para 306: make the driver aware you want to approach, and make sure the machine is safely at rest before you approach."
+    }
+  ],
+  "traps": [
+    "Don't block walkways: it forces people to step into the vehicle route.",
+    "Use the pedestrian routes and site rules you were shown at induction.",
+    "Don't park on slopes: failed handbrakes cause runaway vehicles.",
+    "Don't drive any site vehicle unless you are trained and authorised for it."
+  ],
+  "sources": [
+    {
+      "doc": "Construction (Design and Management) Regulations 2015 (SI 2015/51)",
+      "ref": "regs 27, 28(4), 28(6)",
+      "url": "https://www.legislation.gov.uk/uksi/2015/51/regulation/27"
+    },
+    {
+      "doc": "HSE HSG150 Health and safety in construction",
+      "ref": "Site traffic and mobile plant, paras 264-307",
+      "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
+    },
+    {
+      "doc": "HSE: Traffic management on site",
+      "ref": "What you need to do; Keeping pedestrians and vehicles apart",
+      "url": "https://www.hse.gov.uk/construction/safetytopics/vehiclestrafficmanagement.htm"
+    },
+    {
+      "doc": "HSE INDG199 Workplace transport safety",
+      "ref": "Segregation; Speed; Parking",
+      "url": "https://www.hse.gov.uk/pubns/indg199.pdf"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

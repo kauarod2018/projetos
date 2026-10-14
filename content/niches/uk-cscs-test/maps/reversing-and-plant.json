@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "id": "reversing-and-plant",
+  "niche": "uk-cscs-test",
+  "area": "safety",
+  "order": 6,
+  "tier": "complete",
+  "officialTopics": [
+    "site-traffic"
+  ],
+  "title": "Reversing, Signallers & Plant Safety",
+  "whatItIs": "Reversing is a major cause of deaths on site: HSG144 says about a third of fatal construction transport accidents. Plant also kills by striking people and overturning.",
+  "keyFacts": [
+    {
+      "text": "Where a vehicle could endanger people, they MUST be warned, by the driver or the person directing it.",
+      "law": true
+    },
+    "Only trained, authorised signallers should direct vehicles.",
+    "Signallers stand in a safe place, never directly behind a reversing vehicle.",
+    "Driver can't see the signaller? Stop at once until contact is back.",
+    "Keep out of the slewing area of excavators: the driver is watching the boom.",
+    "Wear the seat belt on plant, even when roll-over protection (ROPS) is fitted."
+  ],
+  "visual": {
+    "type": "steps",
+    "caption": "Controlling reversing: most effective first (HSG144 Table 3)",
+    "items": [
+      {
+        "title": "Remove the need to reverse",
+        "text": "One-way systems, turning areas, drive-through loading."
+      },
+      {
+        "title": "Reverse less",
+        "text": "Fewer vehicle movements; reverse only if really needed."
+      },
+      {
+        "title": "Keep people out",
+        "text": "Marked reversing areas with no pedestrians and physical stops."
+      },
+      {
+        "title": "Safe system of work",
+        "text": "CCTV, mirrors, sensors, signallers in constant contact."
+      },
+      {
+        "title": "Warnings",
+        "text": "Alarms and lights: the lowest level of protection."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Signaller (banksman)",
+      "points": [
+        "Trained and authorised by site management",
+        "Must see the driver and be seen at all times",
+        "Keeps pedestrians away from the vehicle"
+      ]
+    },
+    "b": {
+      "label": "Driver",
+      "points": [
+        "Checks behind before reversing",
+        "Uses visibility aids or a signaller",
+        "Stops if the signaller goes out of sight"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You are guiding a reversing lorry and step out of the driver's view. What should happen?",
+      "options": [
+        "The driver carries on slowly using the mirrors",
+        "The driver sounds the horn and keeps reversing",
+        "The vehicle stops until driver and signaller can see each other",
+        "Another worker shouts directions instead"
+      ],
+      "answerIndex": 2,
+      "why": "HSG144 Table 5: signaller and driver must be visible to each other; if not, stop the vehicle. HSG150 para 303: drivers who can't see the signaller stop immediately."
+    },
+    {
+      "question": "What is the most effective way to cut the risk from reversing vehicles on site?",
+      "options": [
+        "Fit louder reversing alarms",
+        "Remove the need to reverse, e.g. a one-way system",
+        "Tell pedestrians to listen out",
+        "Put up more warning signs"
+      ],
+      "answerIndex": 1,
+      "why": "HSG144 para 39 and INDG199: the most effective way is to avoid the need to reverse with one-way systems, turning areas and drive-through areas."
+    }
+  ],
+  "traps": [
+    "A reversing alarm is not enough on its own: warnings are the last line of protection.",
+    "Telehandlers can have a big blind spot at the front right with the boom raised.",
+    "Over 60% of dumper deaths involve overturning: keep to safe gradients and off stockpiles.",
+    "Slewing plant needs more than 0.5 m clearance from obstructions, or the area fenced off."
+  ],
+  "sources": [
+    {
+      "doc": "Construction (Design and Management) Regulations 2015 (SI 2015/51)",
+      "ref": "reg 28(2)",
+      "url": "https://www.legislation.gov.uk/uksi/2015/51/regulation/28"
+    },
+    {
+      "doc": "HSE HSG144 The safe use of vehicles on construction sites",
+      "ref": "paras 39-40, Table 3, Tables 4-5, paras 52, 54, 57, 59",
+      "url": "https://www.hse.gov.uk/pubns/priced/hsg144.pdf"
+    },
+    {
+      "doc": "HSE HSG150 Health and safety in construction",
+      "ref": "paras 269-270, 276, 286, 301-303",
+      "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
+    },
+    {
+      "doc": "HSE INDG199 Workplace transport safety",
+      "ref": "Reversing; Signalling; Overturning",
+      "url": "https://www.hse.gov.uk/pubns/indg199.pdf"
+    },
+    {
+      "doc": "HSE: Dumpers (construction)",
+      "ref": "Dumper hazards; Controlling the risk",
+      "url": "https://www.hse.gov.uk/construction/safetytopics/dumpers.htm"
+    },
+    {
+      "doc": "HSE: Telescopic handlers (construction)",
+      "ref": "Controlling the risk",
+      "url": "https://www.hse.gov.uk/construction/safetytopics/telescopic.htm"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

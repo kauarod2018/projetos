@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "id": "work-equipment",
+  "niche": "uk-cscs-test",
+  "area": "safety",
+  "order": 3,
+  "tier": "basic",
+  "officialTopics": [
+    "equipment-and-lifting"
+  ],
+  "title": "Work Equipment & Hand Tools",
+  "whatItIs": "Work equipment is anything used at work: hammers, knives, ladders, power tools, saws, dumpers. PUWER 1998 says it must be suitable, kept safe and used by trained people.",
+  "keyFacts": [
+    {
+      "text": "Employers MUST provide suitable equipment and only use it for jobs and conditions it suits.",
+      "law": true
+    },
+    {
+      "text": "Work equipment MUST be maintained in efficient working order and in good repair.",
+      "law": true
+    },
+    {
+      "text": "Everyone who uses work equipment MUST have had adequate training to use it safely.",
+      "law": true
+    },
+    {
+      "text": "You MUST NOT interfere with or misuse anything provided for health and safety, such as guards.",
+      "law": true
+    },
+    "Never use a machine with a danger sign or tag on it. Only an authorised person may remove it.",
+    "Switch off and isolate or lock off before clearing blockages, cleaning or adjusting."
+  ],
+  "visual": {
+    "type": "steps",
+    "caption": "Protecting people from dangerous parts: the order PUWER reg 11 sets",
+    "items": [
+      {
+        "title": "Fixed guards",
+        "text": "Enclose dangerous parts wherever practicable."
+      },
+      {
+        "title": "Other guards or devices",
+        "text": "e.g. interlocked guards: the machine can't start until closed."
+      },
+      {
+        "title": "Jigs, holders, push-sticks",
+        "text": "Where guards can't give full protection."
+      },
+      {
+        "title": "Information and training",
+        "text": "Instruction, training and supervision for any risk left."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Your check before use",
+      "points": [
+        "Complete, with all safeguards fitted",
+        "No visible damage or defects",
+        "Faulty? Don't use it: report it"
+      ]
+    },
+    "b": {
+      "label": "Formal inspection",
+      "points": [
+        "Done by a competent person",
+        "Where wear or damage could make it dangerous",
+        "Result recorded and kept until the next one"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "The guard on a power tool makes your job slower and more awkward. What should you do?",
+      "options": [
+        "Take the guard off and put it back after",
+        "Keep the guard on and tell your supervisor",
+        "Tape the guard open so it can't get in the way",
+        "Use the tool without the guard if you're careful"
+      ],
+      "answerIndex": 1,
+      "why": "INDG291: never remove safeguards, even if they make the job harder. HSW Act s8: you must not interfere with things provided for safety."
+    },
+    {
+      "question": "Under PUWER, who must make sure that people who use work equipment have had adequate training?",
+      "options": [
+        "The equipment manufacturer",
+        "The HSE",
+        "The employer",
+        "The site's first aider"
+      ],
+      "answerIndex": 2,
+      "why": "PUWER reg 9: every employer shall ensure that all persons who use work equipment have received adequate training for health and safety."
+    }
+  ],
+  "traps": [
+    "Hand tools like hammers and knives are work equipment too, not just machines.",
+    "Your own tools brought to work are still covered by PUWER.",
+    "Loose clothing, chains, rings or long hair can get caught in moving parts.",
+    "Don't distract anyone who is using a machine."
+  ],
+  "sources": [
+    {
+      "doc": "Provision and Use of Work Equipment Regulations 1998 (SI 1998/2306)",
+      "ref": "regs 4, 5, 6, 9, 11",
+      "url": "https://www.legislation.gov.uk/uksi/1998/2306/regulation/11"
+    },
+    {
+      "doc": "Health and Safety at Work etc. Act 1974",
+      "ref": "section 8",
+      "url": "https://www.legislation.gov.uk/ukpga/1974/37/section/8"
+    },
+    {
+      "doc": "HSE INDG291 Providing and using work equipment safely",
+      "ref": "What equipment is covered; Before you start; Preventing access to dangerous parts; Dos and don'ts; Safe isolation",
+      "url": "https://www.hse.gov.uk/pubns/indg291.pdf"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

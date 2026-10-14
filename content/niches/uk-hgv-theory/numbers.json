@@ -370,6 +370,42 @@
         "checkedOn": "2026-10-13",
         "checkedAgainst": "GOV.UK Become a qualified HGV or bus driver: getting qualified; returning"
       }
+    },
+    {
+      "key": "max-weights",
+      "label": "Maximum authorised weights",
+      "value": "2-axle rigid 18,000 kg · 3-axle rigid 26,000 kg* · 5-axle artic 40,000 kg · 6-axle artic 44,000 kg* (*if the conditions in the regulations are met)",
+      "jurisdiction": "great-britain",
+      "sources": [
+        {
+          "doc": "Road Vehicles (Authorised Weight) Regulations 1998 (SI 1998/3111), as amended",
+          "ref": "Schedule 1 Table 1 items 1 and 5; Schedule 2 Table 3 items 8 and 13",
+          "url": "https://www.legislation.gov.uk/uksi/1998/3111/contents"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "SI 1998/3111 schedules 1–2 with amendments SI 2000/3224, 2001/1125, 2017/881, 2023/760"
+      }
+    },
+    {
+      "key": "defect-records",
+      "label": "Defect reports",
+      "value": "Kept for at least 15 months",
+      "jurisdiction": "great-britain",
+      "sources": [
+        {
+          "doc": "DVSA: Guide to maintaining roadworthiness",
+          "ref": "Section 3.1",
+          "url": "https://www.gov.uk/government/publications/guide-to-maintaining-roadworthiness/guide-to-maintaining-roadworthiness-commercial-goods-and-passenger-carrying-vehicles"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "DVSA Guide to maintaining roadworthiness, section 3"
+      }
     }
   ]
 }
