@@ -76,10 +76,10 @@
         "Pass, with risk management to be retested"
       ],
       "answerIndex": 0,
-      "why": "GOV.UK part 3 test: you automatically fail if you score 7 or less in the risk management category, whatever your total score."
+      "why": "GOV.UK part 3 test: 7 or less in risk management is an automatic fail, whatever the total."
     },
     {
-      "question": "Under the training standard, what should an instructor do when they spot a hazard the learner doesn't seem aware of?",
+      "question": "You spot a hazard the learner doesn't seem aware of. What does the training standard say?",
       "options": [
         "Take suitable and timely action",
         "Wait and discuss it at the end",
@@ -87,7 +87,7 @@
         "Note it for the next lesson"
       ],
       "answerIndex": 0,
-      "why": "Element 6.4.1: take suitable and timely action where you identify a hazard the learner doesn't appear to be aware of, then use client-centred techniques so they cope better in future."
+      "why": "Element 6.4.1: take suitable and timely action when the learner doesn't appear aware of a hazard."
     }
   ],
   "traps": [

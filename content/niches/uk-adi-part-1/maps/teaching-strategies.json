@@ -67,7 +67,7 @@
   },
   "onTheTest": [
     {
-      "question": "According to DVSA's examiner guidance, when is direct instruction most useful?",
+      "question": "When is direct instruction most useful, according to DVSA guidance?",
       "options": [
         "Helping an early-stage pupil cope with a new situation",
         "Never: coaching should always be used",
@@ -75,10 +75,10 @@
         "When the pupil is performing well"
       ],
       "answerIndex": 0,
-      "why": "Examiner guidance 3.24: direct instruction is useful for a pupil in the early stages facing new situations, or one clearly struggling. It becomes coaching if the pupil then analyses the problem."
+      "why": "Examiner guidance 3.24: it helps early-stage pupils with new situations, or a pupil clearly struggling."
     },
     {
-      "question": "An instructor says 'you're a bit close to these parked cars' and leaves it there. What's the main problem?",
+      "question": "An instructor says only 'you're a bit close to these parked cars'. What's the problem?",
       "options": [
         "It's unclear: how close is 'a bit', and does it matter?",
         "It's too detailed for a learner",
@@ -86,7 +86,7 @@
         "It should be said only after the lesson"
       ],
       "answerIndex": 0,
-      "why": "Examiner guidance 3.24: comments like this could introduce coaching on a weakness, but on their own they are of little use because they are unclear."
+      "why": "Examiner guidance 3.24: it could start coaching on a weakness, but on its own it is unclear and of little use."
     }
   ],
   "traps": [

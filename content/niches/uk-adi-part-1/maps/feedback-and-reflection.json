@@ -58,7 +58,7 @@
   },
   "onTheTest": [
     {
-      "question": "At the end of a lesson an instructor simply asks 'what score would you give yourself?'. How does DVSA guidance see this?",
+      "question": "To end a lesson, an instructor only asks 'what score would you give yourself?'. How does DVSA see this?",
       "options": [
         "Meaningless on its own: a development need",
         "Best practice for pupil reflection",
@@ -66,18 +66,18 @@
         "Only suitable for full licence holders"
       ],
       "answerIndex": 0,
-      "why": "Examiner guidance 3.24 (end of the session): simply asking 'what score would you give yourself' is meaningless and highlights a development need for the instructor."
+      "why": "Examiner guidance 3.24: simply asking this is meaningless and shows a development need for the instructor."
     },
     {
-      "question": "A keen pupil keeps asking questions while approaching a busy junction. What's the best response?",
+      "question": "A keen pupil keeps asking questions near a busy junction. Best response?",
       "options": [
-        "Praise the questions, focus on the hazard, answer when stopped",
+        "Hold them: focus on the hazard, answer when stopped",
         "Answer each one fully straight away",
         "Ban questions while driving",
         "Ignore them until the next lesson"
       ],
       "answerIndex": 0,
-      "why": "Examiner guidance 3.24: manage the keenness without demotivating, e.g. 'good questions but hold onto them, let's focus on this hazard and we'll stop to cover them'."
+      "why": "Examiner guidance 3.24: manage the keenness without demotivating: hold the questions, focus on the hazard, stop later to cover them."
     }
   ],
   "traps": [

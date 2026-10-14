@@ -65,18 +65,18 @@
   },
   "onTheTest": [
     {
-      "question": "The agreed lesson is roundabouts and the pupil is nervous about entering them. Which choice of area best fits DVSA guidance?",
+      "question": "A pupil is nervous about entering roundabouts. Which practice area best fits DVSA guidance?",
       "options": [
-        "Roundabouts that stretch them without overwhelming them",
-        "A fast-flowing multi-lane, multi-exit roundabout first",
-        "An area with no roundabouts, to build confidence",
-        "Only very quiet junctions, whatever their progress"
+        "Roundabouts that stretch but don't overwhelm them",
+        "A fast multi-lane roundabout first",
+        "An area with no roundabouts",
+        "Only very quiet junctions"
       ],
       "answerIndex": 0,
-      "why": "Examiner guidance 3.24: the structure should stretch the pupil without overwhelming them; not a fast multi-lane roundabout first, nor only very quiet junctions, and an area with no roundabouts is pointless."
+      "why": "Examiner guidance 3.24: stretch the pupil without overwhelming them. Not a fast multi-lane roundabout first, but not only very quiet junctions either."
     },
     {
-      "question": "You haven't worked with a pupil before. What does DVSA guidance say you can do before finalising the lesson plan?",
+      "question": "You haven't taught a pupil before. What can you do before finalising the lesson plan?",
       "options": [
         "Ask them to do an assessment drive",
         "Use your standard lesson for their hours",
@@ -84,7 +84,7 @@
         "Spend the lesson on one manoeuvre"
       ],
       "answerIndex": 0,
-      "why": "Examiner guidance 3.10 and 3.24: with little or no experience of the pupil, the instructor can suggest an assessment drive before finalising the plan, leaving time for development and feedback."
+      "why": "Examiner guidance 3.10: with little or no experience of the pupil, suggest an assessment drive, leaving time for development and feedback."
     }
   ],
   "traps": [

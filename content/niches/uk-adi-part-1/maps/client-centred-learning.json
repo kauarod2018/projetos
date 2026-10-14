@@ -65,10 +65,10 @@
         "The learner is coached and never told anything"
       ],
       "answerIndex": 0,
-      "why": "Unit 3: client-centred learning is not about the learner taking charge of the learning process. It is a conversation between learner and instructor based on mutual respect."
+      "why": "Unit 3: it is not about the learner taking charge; it is a conversation based on mutual respect."
     },
     {
-      "question": "A pupil clearly needs help in a situation they can't handle, but the instructor gives none. What does DVSA guidance call this?",
+      "question": "A pupil clearly needs help but the instructor gives none. What does DVSA guidance call this?",
       "options": [
         "Under instruction",
         "Client-centred coaching",
@@ -76,7 +76,7 @@
         "Over instruction"
       ],
       "answerIndex": 0,
-      "why": "Examiner guidance 3.24: if the pupil needs support and gets it, that's client-centred. If they need help and don't get it, that's not client-centred and is often called 'under instruction'."
+      "why": "Examiner guidance 3.24: a pupil who needs help and doesn't get it isn't being taught client-centred; this is often called 'under instruction'."
     }
   ],
   "traps": [

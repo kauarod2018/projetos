@@ -74,18 +74,18 @@
         "Having a full licence already"
       ],
       "answerIndex": 0,
-      "why": "Element 6.3.1: instructors must know how to identify and deal with barriers to learning, including delivery methods, times, location, lack of support for special needs and lack of facilities."
+      "why": "Element 6.3.1 lists barriers such as delivery methods, times, location, lack of special needs support and lack of facilities."
     },
     {
-      "question": "A pupil can't come up with an answer on the spot during a lesson. What does DVSA guidance suggest?",
+      "question": "A pupil can't answer a problem on the spot. What does DVSA guidance suggest?",
       "options": [
-        "Some pupils need time to reflect: allow it or suggest reading",
+        "Allow time to reflect, or suggest reading",
         "Keep asking until they answer",
         "Always give the answer and move on",
-        "Treat them as not ready for their test"
+        "Treat them as not ready for test"
       ],
       "answerIndex": 0,
-      "why": "Examiner guidance 3.24: some pupils need to go away and reflect, or be pointed to reading; pushing a pupil to answer on the spot may be unproductive."
+      "why": "Examiner guidance 3.24: some pupils need to reflect or be pointed to reading; pushing for answers on the spot may be unproductive."
     }
   ],
   "traps": [
