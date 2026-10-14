@@ -113,7 +113,7 @@
     },
     {
       "doc": "DVSA: Guide to maintaining roadworthiness",
-      "ref": "1. Maintaining compliance (C&U reg 18(1)); 5.4 EBS trailer connection",
+      "ref": "1. Maintaining compliance (C&U reg 18(1)); 5.4 EBPMS: EBS trailer connection",
       "url": "https://www.gov.uk/government/publications/guide-to-maintaining-roadworthiness/guide-to-maintaining-roadworthiness-commercial-goods-and-passenger-carrying-vehicles"
     },
     {
@@ -129,6 +129,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "GOV.UK HGV daily walkaround checks 3, 6, 20; DVSA Guide to maintaining roadworthiness 1 (maintaining compliance, C&U reg 18(1)), 5.4 (EBS trailer connection, ISO 7638 lead); Highway Code rules 120 to 122 and 239; GOV.UK Roadside checks: fines, penalty points"
   }
 }

@@ -43,7 +43,7 @@
       },
       {
         "title": "Repair and keep",
-        "text": "Reports listing defects are kept for at least 15 months, with the repair details."
+        "text": "Defect reports are kept for at least 15 months."
       }
     ]
   },
@@ -51,7 +51,7 @@
     "a": {
       "label": "'S' marked prohibition",
       "points": [
-        "Severe defect, usually a maintenance problem",
+        "Significant failure of roadworthiness compliance",
         "Should have been found, e.g. at the daily check"
       ]
     },
@@ -102,17 +102,12 @@
       "doc": "DVSA: Guide to maintaining roadworthiness",
       "ref": "3. Daily walkaround checks; 3.1 Reporting and recording defects; 3.2 Drivers' responsibilities; Annex 1",
       "url": "https://www.gov.uk/government/publications/guide-to-maintaining-roadworthiness/guide-to-maintaining-roadworthiness-commercial-goods-and-passenger-carrying-vehicles"
-    },
-    {
-      "doc": "GOV.UK: Roadside checks for HGV, van, bus or coach drivers",
-      "ref": "Roadside prohibitions: severe vehicle defects",
-      "url": "https://www.gov.uk/roadside-vehicle-checks-for-commercial-drivers/roadside-prohibitions"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
     "status": "verified",
     "checkedOn": "2026-10-14",
-    "checkedAgainst": "GOV.UK HGV daily walkaround checks (record and report the result of your check); DVSA Guide to maintaining roadworthiness 1.1, 3 (daily walkaround checks), 3.1 (drivers' defect reports, written report, appropriate action), 3.2, Annex 1 (S and X endorsements); GOV.UK Roadside checks: severe vehicle defects"
+    "checkedAgainst": "GOV.UK HGV daily walkaround checks (record and report the result of your check); DVSA Guide to maintaining roadworthiness 1.1, 3 (daily walkaround checks), 3.1 (drivers' defect reports, written report, appropriate action), 3.2, Annex 1 (S and X endorsements)"
   }
 }

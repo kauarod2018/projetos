@@ -18,7 +18,7 @@
     },
     "DVSA officers wear yellow jackets with the DVSA logo and always carry a DVSA warrant card.",
     "A vehicle with a trailer is treated as 2 units, so you could get more than one prohibition.",
-    "Fines are usually £50 to £300. Defective brakes, for example: £100 and 3 penalty points."
+    "You can be fined £50 to £300, or taken to court for more serious offences. Defective brakes: £100 and 3 points."
   ],
   "visual": {
     "type": "table",
@@ -35,7 +35,7 @@
         ],
         [
           "4 to 7 days",
-          "1 safety critical defect, or 5 or more non-critical defects"
+          "1 defect in a safety critical area, or 5 or more in non-critical areas"
         ],
         [
           "Up to 10 days",
@@ -100,6 +100,11 @@
       "url": "https://www.gov.uk/roadside-vehicle-checks-for-commercial-drivers"
     },
     {
+      "doc": "DVSA: Categorisation of vehicle defects (December 2024)",
+      "ref": "Introduction, para 8: period of delay bands A to C",
+      "url": "https://www.gov.uk/government/publications/categorisation-of-defects"
+    },
+    {
       "doc": "DVSA: Guide to maintaining roadworthiness",
       "ref": "Annex 1: prohibition notices endorsed",
       "url": "https://www.gov.uk/government/publications/guide-to-maintaining-roadworthiness/guide-to-maintaining-roadworthiness-commercial-goods-and-passenger-carrying-vehicles"
@@ -107,6 +112,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "GOV.UK Roadside checks for HGV, van, bus or coach drivers (checks on your vehicle, roadside prohibitions, fines and penalty points, immobilisation); DVSA Categorisation of vehicle defects (Dec 2024) intro para 8 period of delay; DVSA Guide to maintaining roadworthiness Annex 1"
   }
 }

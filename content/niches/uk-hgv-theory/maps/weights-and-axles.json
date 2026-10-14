@@ -51,7 +51,7 @@
         ]
       ],
       "notes": [
-        "*Only if the conditions in the regulations are met. Axle spacing or the vehicle's plate can set a lower limit."
+        "*If conditions in the regulations are met. Axle spacing or your plate can set a lower limit."
       ]
     }
   },
@@ -67,7 +67,7 @@
       "label": "Gross train weight",
       "points": [
         "Maximum permitted weight of the vehicle plus any trailer",
-        "Also includes the trailer, as well as the load, driver and passengers"
+        "Also includes the weight of the trailer"
       ]
     }
   },
@@ -107,19 +107,9 @@
       "url": "https://www.gov.uk/government/publications/hgv-overloading-the-basics/hgv-overloading-the-basics"
     },
     {
-      "doc": "The Road Vehicles (Authorised Weight) Regulations 1998 (SI 1998/3111)",
-      "ref": "Reg 4(1); Sch 1 Table 1; Sch 2 Table 3",
+      "doc": "The Road Vehicles (Authorised Weight) Regulations 1998 (SI 1998/3111), as amended",
+      "ref": "Reg 4(1); Sch 1 Table 1; Sch 2 Table 3 (item 13 added by SI 2000/3224)",
       "url": "https://www.legislation.gov.uk/uksi/1998/3111/contents"
-    },
-    {
-      "doc": "The Road Vehicles (Authorised Weight) (Amendment) Regulations 2000 (SI 2000/3224)",
-      "ref": "Reg 6 (Sch 2 Table 3, item 13)",
-      "url": "https://www.legislation.gov.uk/uksi/2000/3224/contents"
-    },
-    {
-      "doc": "The Road Vehicles (Authorised Weight) (Amendment) Regulations 2001 (SI 2001/1125)",
-      "ref": "Reg 2(3) (Sch 2 para 1(4)-(5): conditions for item 13)",
-      "url": "https://www.legislation.gov.uk/uksi/2001/1125/contents"
     },
     {
       "doc": "GOV.UK: Securing loads on HGVs and goods vehicles",

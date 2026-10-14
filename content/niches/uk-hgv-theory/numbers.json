@@ -243,19 +243,24 @@
     {
       "key": "tyre-tread-large",
       "label": "Minimum tyre tread (large vehicles)",
-      "value": "1 mm across three-quarters of the tread breadth and all the way round",
+      "value": "1 mm across three-quarters of the tread breadth, in a continuous band all the way round",
       "jurisdiction": "great-britain",
       "sources": [
         {
           "doc": "The Highway Code",
           "ref": "Annex 6 (tyres)",
           "url": "https://www.gov.uk/guidance/the-highway-code/annex-6-vehicle-maintenance-safety-and-security"
+        },
+        {
+          "doc": "Road Vehicles (Construction and Use) Regulations 1986",
+          "ref": "Regulation 27(1)(g)",
+          "url": "https://www.legislation.gov.uk/uksi/1986/1078/regulation/27"
         }
       ],
       "review": {
         "status": "verified",
-        "checkedOn": "2026-10-13",
-        "checkedAgainst": "The Highway Code annex 6"
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "Highway Code annex 6; C&U Regulations 1986 reg 27(1)(g) on legislation.gov.uk"
       }
     },
     {
