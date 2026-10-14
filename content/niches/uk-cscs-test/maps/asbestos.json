@@ -33,19 +33,19 @@
     "items": [
       {
         "title": "Stop work",
-        "text": "Straight away. Don't drill, cut or break it any further."
+        "text": "Straight away. Don't drill, cut or break it any more."
       },
       {
         "title": "Keep people away",
-        "text": "Put up a warning sign and make sure nobody enters the area."
+        "text": "Put up a warning sign; make sure nobody enters the area."
       },
       {
         "title": "Report it",
-        "text": "Tell whoever is in charge. They check the asbestos register or survey."
+        "text": "Tell whoever is in charge; they check the asbestos register."
       },
       {
         "title": "Wait",
-        "text": "Don't restart until it's been decided how the work can be done safely."
+        "text": "Don't restart until it has been checked and the work made safe."
       }
     ]
   },

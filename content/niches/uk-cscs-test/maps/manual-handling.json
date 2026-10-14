@@ -20,7 +20,7 @@
       "law": true
     },
     {
-      "text": "Employers MUST give information on the weight of loads and their heaviest side, precise where reasonably practicable.",
+      "text": "Employers MUST say how heavy loads are and which side is heaviest, precisely where reasonably practicable.",
       "law": true
     },
     {
@@ -28,7 +28,7 @@
       "law": true
     },
     "The law sets no 'safe' weight limit. Risk depends on the load, the task, how often, and the conditions.",
-    "Even one bad lift can cause a lifetime of pain, but injuries more often build up from repeated handling."
+    "One bad lift can cause a lifetime of pain, but injuries more often build up from repeated handling."
   ],
   "visual": {
     "type": "steps",

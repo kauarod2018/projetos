@@ -16,7 +16,7 @@
       "law": true
     },
     {
-      "text": "At 85 dB(A), employers MUST cut exposure by planned noise control, provide protectors and mark Hearing Protection Zones.",
+      "text": "At 85 dB(A), employers MUST cut exposure by noise control, provide protectors and mark Hearing Protection Zones.",
       "law": true
     },
     {
@@ -102,7 +102,7 @@
         "Wear hearing protection before you go in"
       ],
       "answerIndex": 3,
-      "why": "Reg 7(3): employers must make sure no one enters a Hearing Protection Zone without hearing protectors. Reg 8(2): workers must use them properly."
+      "why": "Reg 7(3): employers must ensure no one enters a Hearing Protection Zone without protectors. Reg 8(2): wear them properly."
     }
   ],
   "traps": [

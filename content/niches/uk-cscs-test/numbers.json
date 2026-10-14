@@ -6,17 +6,281 @@
       "key": "test-format",
       "label": "HS&E test for operatives",
       "value": "50 questions in 45 minutes · pass mark 90% (45 out of 50)",
-      "jurisdiction": "great-britain",
       "sources": [
         {
           "doc": "CITB: Operatives test",
           "ref": "About the Operatives HS&E test; Structure of the tests",
-          "url": "https://www.citb.co.uk/courses-tests/health-safety-and-environment-hse-test/operatives-test/"
+          "url": "https://www.citb.co.uk/courses-tests/health-safety-and-environment-hse-test/operatives-test"
         }
       ],
       "review": {
-        "status": "draft"
-      }
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "CITB Operatives test page, 14 Oct 2026"
+      },
+      "jurisdiction": "great-britain"
+    },
+    {
+      "key": "test-cost",
+      "label": "Booking the test",
+      "value": "£23.50 · free reschedule online up to 72 hours before · full refund if you cancel online at least 72 hours before",
+      "sources": [
+        {
+          "doc": "CITB: About the HS&E test",
+          "ref": "Cost of the test; Cancelling or rescheduling a test",
+          "url": "https://www.citb.co.uk/courses-tests/health-safety-and-environment-hse-test/about-the-health-safety-and-environment-hse-test"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "CITB About the HS&E test page, 14 Oct 2026"
+      },
+      "jurisdiction": "great-britain"
+    },
+    {
+      "key": "riddor-deadlines",
+      "label": "RIDDOR reporting",
+      "value": "Death, specified injury, dangerous occurrence: notify without delay, report within 10 days · over-7-day injury: within 15 days · over-3-day: record only",
+      "sources": [
+        {
+          "doc": "RIDDOR 2013 (SI 2013/1471)",
+          "ref": "Regs 4, 12 and Schedule 1",
+          "url": "https://www.legislation.gov.uk/uksi/2013/1471/contents"
+        },
+        {
+          "doc": "HSE",
+          "ref": "When do I need to report?",
+          "url": "https://www.hse.gov.uk/riddor/when-do-i-report.htm"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "RIDDOR 2013 regs 4(2), 12(1)(c), Sch 1 para 1; HSE RIDDOR pages"
+      },
+      "jurisdiction": "great-britain"
+    },
+    {
+      "key": "riddor-records",
+      "label": "Accident records (RIDDOR)",
+      "value": "Kept for at least 3 years",
+      "sources": [
+        {
+          "doc": "RIDDOR 2013 (SI 2013/1471)",
+          "ref": "Regulation 12(2)",
+          "url": "https://www.legislation.gov.uk/uksi/2013/1471/regulation/12"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "RIDDOR 2013 reg 12(2)"
+      },
+      "jurisdiction": "great-britain"
+    },
+    {
+      "key": "cdm-notification",
+      "label": "Notifying HSE of a project (CDM)",
+      "value": "Over 30 working days with more than 20 workers at once, or over 500 person days",
+      "sources": [
+        {
+          "doc": "CDM Regulations 2015 (SI 2015/51)",
+          "ref": "Regulation 6(1)",
+          "url": "https://www.legislation.gov.uk/uksi/2015/51/regulation/6"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "CDM 2015 reg 6(1)"
+      },
+      "jurisdiction": "great-britain"
+    },
+    {
+      "key": "written-records",
+      "label": "Written safety policy and risk assessment",
+      "value": "Required when there are 5 or more employees",
+      "sources": [
+        {
+          "doc": "Health and Safety at Work etc. Act 1974",
+          "ref": "Section 2(3)",
+          "url": "https://www.legislation.gov.uk/ukpga/1974/37/section/2"
+        },
+        {
+          "doc": "Management of Health and Safety at Work Regulations 1999",
+          "ref": "Regulation 3(6)",
+          "url": "https://www.legislation.gov.uk/uksi/1999/3242/regulation/3"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "HSWA s2(3) with SI 1975/1584 reg 2; MHSWR reg 3(6)"
+      },
+      "jurisdiction": "great-britain"
+    },
+    {
+      "key": "first-aid-provision",
+      "label": "First aid on higher-hazard work (suggested)",
+      "value": "Under 5 workers: an appointed person · 5–50: at least 1 first-aider (EFAW or FAW) · over 50: 1 FAW first-aider per 50",
+      "sources": [
+        {
+          "doc": "HSE INDG214 First aid at work",
+          "ref": "Table 2",
+          "url": "https://www.hse.gov.uk/pubns/indg214.pdf"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "HSE INDG214 Table 2"
+      },
+      "jurisdiction": "great-britain"
+    },
+    {
+      "key": "fire-watch",
+      "label": "Fire watch after hot work",
+      "value": "Continuous for at least 1 hour after the work ends, then a further check 2 hours after",
+      "sources": [
+        {
+          "doc": "HSE HSG168 Fire safety in construction",
+          "ref": "Paragraph 122",
+          "url": "https://www.hse.gov.uk/pubns/priced/hsg168.pdf"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "HSE HSG168 para 122"
+      },
+      "jurisdiction": "great-britain"
+    },
+    {
+      "key": "waste-records",
+      "label": "Waste paperwork",
+      "value": "Waste transfer notes kept 2 years · hazardous waste consignment notes kept 3 years",
+      "sources": [
+        {
+          "doc": "Waste duty of care: code of practice",
+          "ref": "Section 3.6",
+          "url": "https://www.gov.uk/government/publications/waste-duty-of-care-code-of-practice"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "Waste duty of care code of practice, section 3.6"
+      },
+      "jurisdiction": "great-britain"
+    },
+    {
+      "key": "sign-colours",
+      "label": "Safety sign colours",
+      "value": "Prohibition: red, at least 35% of the sign · warning (yellow), mandatory (blue), safe condition (green), fire (red): at least 50%",
+      "sources": [
+        {
+          "doc": "HSE L64 Safety signs and signals",
+          "ref": "Schedule 1 intrinsic features",
+          "url": "https://www.hse.gov.uk/pubns/priced/l64.pdf"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "Safety Signs and Signals Regs 1996 Schedule 1 (HSE L64)"
+      },
+      "jurisdiction": "great-britain"
+    },
+    {
+      "key": "guard-rails",
+      "label": "Guard rails (work at height)",
+      "value": "Top rail at least 950 mm high · gap between rails no more than 470 mm",
+      "sources": [
+        {
+          "doc": "Work at Height Regulations 2005 (SI 2005/735)",
+          "ref": "Schedule 2 para 3",
+          "url": "https://www.legislation.gov.uk/uksi/2005/735/schedule/2"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "WAHR 2005 Schedule 2 para 3(a), (c)"
+      },
+      "jurisdiction": "great-britain"
+    },
+    {
+      "key": "platform-inspection",
+      "label": "Scaffold / working platform inspection",
+      "value": "Where you could fall 2 m or more: inspected within the previous 7 days, and after anything that could affect its safety",
+      "sources": [
+        {
+          "doc": "Work at Height Regulations 2005 (SI 2005/735)",
+          "ref": "Regulation 12(3)–(4)",
+          "url": "https://www.legislation.gov.uk/uksi/2005/735/regulation/12"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "WAHR 2005 reg 12(3)–(4)"
+      },
+      "jurisdiction": "great-britain"
+    },
+    {
+      "key": "excavation-inspection",
+      "label": "Excavation inspection",
+      "value": "At the start of each shift, after any event that may affect its strength or stability, and after any fall of material",
+      "sources": [
+        {
+          "doc": "CDM Regulations 2015 (SI 2015/51)",
+          "ref": "Regulation 22(4)",
+          "url": "https://www.legislation.gov.uk/uksi/2015/51/regulation/22"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "CDM 2015 reg 22(4)"
+      },
+      "jurisdiction": "great-britain"
+    },
+    {
+      "key": "loler-examination",
+      "label": "Thorough examination of lifting equipment",
+      "value": "Equipment for lifting people (e.g. MEWPs) and lifting accessories: every 6 months · other lifting equipment: every 12 months (or by an examination scheme)",
+      "sources": [
+        {
+          "doc": "LOLER 1998 (SI 1998/2307)",
+          "ref": "Regulation 9(3)",
+          "url": "https://www.legislation.gov.uk/uksi/1998/2307/regulation/9"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "LOLER 1998 reg 9(3)(a)"
+      },
+      "jurisdiction": "great-britain"
+    },
+    {
+      "key": "ladder-rules",
+      "label": "Ladders (HSE guidance)",
+      "value": "Angle 1 in 4 (75°) · don't work off the top three rungs · over 30 minutes at a time: use other equipment",
+      "sources": [
+        {
+          "doc": "HSE: Safe use of ladders and stepladders",
+          "ref": "Sections 2, 4 and 6",
+          "url": "https://www.hse.gov.uk/work-at-height/ladders/index.htm"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "HSE ladders guide (updated 5 June 2024)"
+      },
+      "jurisdiction": "great-britain"
     }
   ]
 }

@@ -13,10 +13,10 @@
   "keyFacts": [
     "Main health risks: back and joint injuries, vibration, dermatitis, hearing loss from noise, asbestos diseases.",
     "Asbestos is the biggest occupational disease risk to construction workers. Silica dust comes next.",
-    "Work-related cancers often appear more than 10 years after exposure, and up to 40 or 50 years later.",
+    "Work-related cancers often appear over 10 years after exposure, and up to 40 or 50 years later.",
     "Treat health like safety: Assess the risks, Control them, then Review the controls.",
     {
-      "text": "Health surveillance MUST be provided for some workers, depending on their exposure, e.g. to noise, asbestos or silica.",
+      "text": "Health surveillance MUST be provided for some workers, e.g. those exposed to noise, asbestos or silica.",
       "law": true
     },
     "Wash your hands and face before eating, drinking or smoking, and eat away from the work area."
