@@ -55,6 +55,223 @@
         "checkedOn": "2026-10-14",
         "checkedAgainst": "GOV.UK ADI part 1 test guide, 14 Oct 2026"
       }
+    },
+    {
+      "key": "stopping-distances",
+      "label": "Typical stopping distances",
+      "value": "20 mph: 12 m · 30 mph: 23 m · 40 mph: 36 m · 50 mph: 53 m · 60 mph: 73 m · 70 mph: 96 m",
+      "data": {
+        "unit": "m",
+        "segments": [
+          "thinking",
+          "braking"
+        ],
+        "rows": [
+          {
+            "label": "20 mph",
+            "values": [
+              6,
+              6
+            ],
+            "total": 12,
+            "totalFeet": 40
+          },
+          {
+            "label": "30 mph",
+            "values": [
+              9,
+              14
+            ],
+            "total": 23,
+            "totalFeet": 75
+          },
+          {
+            "label": "40 mph",
+            "values": [
+              12,
+              24
+            ],
+            "total": 36,
+            "totalFeet": 118
+          },
+          {
+            "label": "50 mph",
+            "values": [
+              15,
+              38
+            ],
+            "total": 53,
+            "totalFeet": 175
+          },
+          {
+            "label": "60 mph",
+            "values": [
+              18,
+              55
+            ],
+            "total": 73,
+            "totalFeet": 240
+          },
+          {
+            "label": "70 mph",
+            "values": [
+              21,
+              75
+            ],
+            "total": 96,
+            "totalFeet": 315
+          }
+        ]
+      },
+      "sources": [
+        {
+          "doc": "The Highway Code",
+          "ref": "Rule 126 and 'Typical stopping distances'",
+          "url": "https://www.gov.uk/guidance/the-highway-code"
+        },
+        {
+          "doc": "The Highway Code: Typical stopping distances (PDF)",
+          "ref": "Thinking + braking distance",
+          "url": "https://assets.publishing.service.gov.uk/media/65f97642aa9b760011fbda4e/the-highway-code-stopping-distances.pdf"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "Highway Code rule 126 and the typical stopping distances PDF"
+      },
+      "jurisdiction": "great-britain"
+    },
+    {
+      "key": "car-speed-limits",
+      "label": "Speed limits for cars (mph)",
+      "value": "30 in built-up areas (20 in Wales) · 60 single carriageway · 70 dual carriageway · 70 motorway · towing: 50 / 60 / 60",
+      "sources": [
+        {
+          "doc": "The Highway Code",
+          "ref": "Rule 124",
+          "url": "https://www.gov.uk/guidance/the-highway-code"
+        },
+        {
+          "doc": "GOV.UK",
+          "ref": "Speed limits",
+          "url": "https://www.gov.uk/speed-limits"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "Highway Code rule 124; GOV.UK speed limits"
+      },
+      "jurisdiction": "great-britain"
+    },
+    {
+      "key": "gaps",
+      "label": "Following gaps",
+      "value": "At least 2 seconds · at least double on wet roads · up to 10 times on icy roads · stopped in a tunnel: at least 5 m",
+      "sources": [
+        {
+          "doc": "The Highway Code",
+          "ref": "Rules 126, 227, 230",
+          "url": "https://www.gov.uk/guidance/the-highway-code"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "Highway Code rules 126, 227, 230"
+      },
+      "jurisdiction": "great-britain"
+    },
+    {
+      "key": "overtaking-clearances",
+      "label": "Passing vulnerable road users",
+      "value": "Cyclists: at least 1.5 m up to 30 mph · horses: under 10 mph and at least 2 m · pedestrians in the road: at least 2 m",
+      "sources": [
+        {
+          "doc": "The Highway Code",
+          "ref": "Rules 163 and 215",
+          "url": "https://www.gov.uk/guidance/the-highway-code"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "Highway Code rules 163, 215"
+      },
+      "jurisdiction": "great-britain"
+    },
+    {
+      "key": "tyre-tread",
+      "label": "Minimum tyre tread (cars)",
+      "value": "1.6 mm across the central three-quarters of the tread, all the way round",
+      "sources": [
+        {
+          "doc": "The Highway Code",
+          "ref": "Annex 6 (tyres)",
+          "url": "https://www.gov.uk/guidance/the-highway-code"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "Highway Code annex 6"
+      },
+      "jurisdiction": "great-britain"
+    },
+    {
+      "key": "mot",
+      "label": "MOT",
+      "value": "First by the 3rd anniversary of registration, then every year · no valid MOT: fine up to £1,000 · 'dangerous' fail: up to £2,500, a ban and 3 points",
+      "sources": [
+        {
+          "doc": "GOV.UK",
+          "ref": "Getting an MOT",
+          "url": "https://www.gov.uk/getting-an-mot"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "GOV.UK Getting an MOT"
+      },
+      "jurisdiction": "great-britain"
+    },
+    {
+      "key": "emergency-stop",
+      "label": "Emergency stop on the car test",
+      "value": "In 1 out of every 7 driving tests",
+      "sources": [
+        {
+          "doc": "DVSA: Carrying out driving tests (DT1)",
+          "ref": "1.26; 6.32",
+          "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-driving-tests-dt1"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "DT1 paragraphs 1.26 and 6.32"
+      },
+      "jurisdiction": "great-britain"
+    },
+    {
+      "key": "warning-triangle",
+      "label": "Warning triangle",
+      "value": "At least 45 metres behind, on the same side of the road · never on a motorway",
+      "sources": [
+        {
+          "doc": "The Highway Code",
+          "ref": "Rule 276",
+          "url": "https://www.gov.uk/guidance/the-highway-code"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "Highway Code rule 276"
+      },
+      "jurisdiction": "great-britain"
     }
   ]
 }
