@@ -112,12 +112,14 @@
     },
     {
       "doc": "HSE HSG150 Health and safety in construction",
-      "ref": "paras 102, 580-596",
+      "ref": "paras 102, 580-596 (five steps; method statements)",
       "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Management of Health and Safety at Work Regulations 1999 reg 3(1), (3), (6); HSG150 paras 102, 580-596"
   }
 }

@@ -8,11 +8,43 @@
   "kind": "document",
   "pages": [
     {
-      "heading": "Numbers to know",
+      "heading": "Qualifying, hours and working time",
       "blocks": [
         {
           "type": "numbers-table",
-          "title": "The numbers that come up most"
+          "title": "Tests, licences and drivers' hours",
+          "keys": [
+            "theory-test-pass-marks",
+            "periodic-training",
+            "licence-renewal",
+            "driving-limits",
+            "breaks",
+            "daily-rest",
+            "weekly-rest",
+            "gb-domestic-limits",
+            "working-time"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Speeds, weights, checks and incidents",
+      "blocks": [
+        {
+          "type": "numbers-table",
+          "title": "On the road and at the roadside",
+          "keys": [
+            "speed-limits-goods",
+            "speed-limiter-goods",
+            "motorway-lane-ban",
+            "max-weights",
+            "tyre-tread-large",
+            "defect-records",
+            "tunnel-gap-large",
+            "warning-triangle",
+            "collision-reporting",
+            "drink-drive-limits"
+          ]
         }
       ]
     }

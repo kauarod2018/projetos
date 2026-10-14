@@ -119,7 +119,10 @@ function renderBlock(b: BonusBlock, n: LoadedNiche, ctx: BonusContext): string {
         })
         .join('')}</div></section>`;
     case 'numbers-table':
-      return `<section class="block${span}">${head('hash', b.title)}<table class="tb numbers"><tbody>${ctx.numbers
+      return `<section class="block${span}">${head('hash', b.title)}<table class="tb numbers"><tbody>${(b.keys
+        ? b.keys.flatMap((k) => ctx.numbers.filter((i) => i.key === k))
+        : ctx.numbers
+      )
         .map(
           (i) =>
             `<tr><th>${esc(i.label)}${i.jurisdiction === 'great-britain' ? '' : ` <em>${esc(JURISDICTION[i.jurisdiction])}</em>`}</th><td>${esc(i.value)}</td></tr>`,

@@ -276,6 +276,11 @@ export function checkContent(content: LoadedContent, opts: CheckOptions): CheckR
               }
             }
           }
+          if (block.type === 'numbers-table') {
+            for (const k of block.keys ?? []) {
+              if (!n.numbers.items.some((i) => i.key === k)) errors.push(`${f} → pages.${pi}: numbers key "${k}" is not in numbers.json`);
+            }
+          }
           if (block.type === 'table' && block.numbersKey && !tableFromNumbers(n, block.numbersKey)) {
             errors.push(`${f} → pages.${pi}: numbersKey "${block.numbersKey}" has no table or bar data in numbers.json`);
           }

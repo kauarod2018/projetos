@@ -10,7 +10,7 @@
     "law-and-management"
   ],
   "title": "Inductions, Site Rules & Supervision",
-  "whatItIs": "Before you start on a site you get a site induction: its risks, rules, welfare and emergency arrangements. Site rules, briefings and supervision keep the work safe after that.",
+  "whatItIs": "Before you start on a site you get a site induction: its risks, rules, welfare, first aid and emergency arrangements. Briefings and supervision keep the work safe after that.",
   "keyFacts": [
     {
       "text": "The principal contractor MUST ensure every worker is given a suitable site induction.",
@@ -37,15 +37,15 @@
     "items": [
       {
         "title": "Report to the site office",
-        "text": "Sign in, so the site knows who is there."
+        "text": "Report your arrival, so there's a record of who is on site (it helps in an emergency)."
       },
       {
         "title": "Site induction",
-        "text": "Site risks, site rules, welfare, first aid, accident reporting and emergencies."
+        "text": "Site risks and controls, site rules, welfare, first aid, accident reporting, what to do in danger."
       },
       {
         "title": "Toolbox talks",
-        "text": "Ongoing briefings as the work and the risks change."
+        "text": "Ongoing briefings for workers, often given by your supervisor."
       }
     ]
   },
@@ -60,7 +60,7 @@
     "b": {
       "label": "Toolbox talk",
       "points": [
-        "Short briefings given throughout the job",
+        "Ongoing briefings given during the job",
         "Can be given by your supervisor"
       ]
     }
@@ -92,17 +92,22 @@
   "traps": [
     "Learning from workmates isn't proper training: you might just pick up their bad habits.",
     "Visitors get an induction too, in proportion to their visit; escorted visitors need the main hazards.",
-    "Site rules apply to everyone on the site, including subcontractors."
+    "Subcontractors aren't exempt: every contractor must follow the parts of the construction phase plan for its work."
   ],
   "sources": [
     {
+      "doc": "Construction (Design and Management) Regulations 2015",
+      "ref": "regs 12(2), 13(4), 15(3), 15(7)-(9)",
+      "url": "https://www.legislation.gov.uk/uksi/2015/51/contents"
+    },
+    {
       "doc": "HSE L153 Managing health and safety in construction (CDM 2015)",
-      "ref": "regs 8(5), 12(2), 13(4), 15(3), 15(7)-(9); paras 133-134, 170, 172",
+      "ref": "paras 133-134, 170, 172",
       "url": "https://www.hse.gov.uk/pubns/priced/l153.pdf"
     },
     {
       "doc": "HSE HSG150 Health and safety in construction",
-      "ref": "paras 100-101, 110-111, 602-603",
+      "ref": "paras 110-111, 602-603",
       "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
     },
     {
@@ -113,6 +118,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "CDM 2015 regs 12(2), 13(4), 15; L153 paras 133-134, 170-172; HSG150 paras 110-111, 602-603; HSG151 paras 51-52"
   }
 }

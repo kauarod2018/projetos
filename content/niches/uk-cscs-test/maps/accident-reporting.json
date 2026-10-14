@@ -35,7 +35,7 @@
     "data": {
       "columns": [
         "What happened",
-        "Report it?",
+        "Tell HSE",
         "Deadline"
       ],
       "rows": [
@@ -45,7 +45,7 @@
           "Report in 10 days"
         ],
         [
-          "Public taken to hospital",
+          "Public taken to hospital for treatment",
           "Without delay",
           "Report in 10 days"
         ],
@@ -55,17 +55,19 @@
           "Report in 10 days"
         ],
         [
-          "Over 7 days off work",
-          "Yes",
+          "Over 7 days off normal work",
+          "Report",
           "Within 15 days"
         ],
         [
-          "Over 3 days off work",
+          "Over 3 (up to 7) days off",
           "No",
           "Record it only"
         ]
       ],
-      "notes": []
+      "notes": [
+        "Days off are counted in a row, not counting the accident day but counting weekends and rest days."
+      ]
     }
   },
   "confused": {
@@ -73,7 +75,7 @@
       "label": "Specified injury",
       "points": [
         "Eg a fracture (not finger, thumb or toe)",
-        "Report within 10 days"
+        "Notify without delay; report within 10 days"
       ]
     },
     "b": {
@@ -115,23 +117,30 @@
   ],
   "sources": [
     {
-      "doc": "RIDDOR 2013",
-      "ref": "regs 4, 5, 12; Sch. 1 para 1",
+      "doc": "RIDDOR 2013 (SI 2013/1471)",
+      "ref": "regs 2, 4, 5, 6, 7, 12; Sch. 1 para 1",
       "url": "https://www.legislation.gov.uk/uksi/2013/1471/regulation/4"
     },
     {
       "doc": "HSE INDG453 Reporting accidents and incidents at work",
-      "ref": "Types of reportable injury; Recording requirements",
+      "ref": "Reportable dangerous occurrences; Recording requirements",
       "url": "https://www.hse.gov.uk/pubns/indg453.pdf"
     },
     {
-      "doc": "HSE: Types of reportable incidents; When do I report",
+      "doc": "HSE: Types of reportable incidents",
       "ref": "Over-7-day and over-3-day incapacitation; non-workers",
+      "url": "https://www.hse.gov.uk/riddor/types-of-reportable-incidents.htm"
+    },
+    {
+      "doc": "HSE: When do I need to report an incident?",
+      "ref": "Report received within 10 days; over-7-day within 15 days",
       "url": "https://www.hse.gov.uk/riddor/when-do-i-report.htm"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "RIDDOR 2013 regs 2, 4-7, 12 and Sch. 1 para 1 (legislation.gov.uk); INDG453; HSE pages Types of reportable incidents, When do I need to report"
   }
 }

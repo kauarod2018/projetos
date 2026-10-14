@@ -39,7 +39,13 @@ const block = z.discriminatedUnion('type', [
     pairs: z.array(z.object({ a: slug, b: slug, tell: z.string().min(1).max(160) })).min(1).max(4),
   }),
   /** every item of numbers.json, generated */
-  z.object({ ...base, type: z.literal('numbers-table'), title }),
+  z.object({
+    ...base,
+    type: z.literal('numbers-table'),
+    title,
+    /** only these numbers, in this order (default: all verified numbers); lets a long table run over two pages */
+    keys: z.array(z.string().min(1)).min(1).optional(),
+  }),
   /** a day-by-day plan generated from the maps that exist */
   z.object({ ...base, type: z.literal('revision-plan'), title, days: z.number().int().min(7).max(60) }),
   /** code → title of every map in the plan, generated */
