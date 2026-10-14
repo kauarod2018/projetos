@@ -5,13 +5,15 @@
   "area": "signs-control-mechanics",
   "order": 10,
   "tier": "complete",
-  "officialTopics": ["mechanical-knowledge"],
+  "officialTopics": [
+    "mechanical-knowledge"
+  ],
   "title": "Warning Lights, Faults & Breakdowns",
   "whatItIs": "Know what every warning display means and never ignore one: it could be a dangerous fault developing. If the car breaks down, protect yourself and warn others.",
   "keyFacts": [
     "Warning lights come on with the ignition and go out once the engine starts, except the handbrake light.",
     "A light that stays on, or comes on while driving: stop and investigate. It could be a serious fault.",
-    "Charge warning light while driving: the battery may not be charging. Get it checked soon.",
+    "Charge warning light while driving: the battery may not be charging. Get it checked as soon as possible.",
     "Low brake fluid may result in brake failure and a crash.",
     "Engine overheated? Wait until it has cooled naturally before removing the coolant filler cap."
   ],
@@ -19,32 +21,60 @@
     "type": "steps",
     "caption": "Breaking down (not on a motorway)",
     "items": [
-      { "title": "Get off the road", "text": "If possible. Stop in a place of relative safety." },
-      { "title": "Warn other traffic", "text": "Hazard lights if you're causing an obstruction." },
-      { "title": "Warning triangle", "text": "At least 45 m behind, same side of the road." },
-      { "title": "Stand clear", "text": "Never between your car and oncoming traffic." }
+      {
+        "title": "Get off the road",
+        "text": "If possible. Stop in a place of relative safety."
+      },
+      {
+        "title": "Warn other traffic",
+        "text": "Hazard lights if you're causing an obstruction."
+      },
+      {
+        "title": "Warning triangle",
+        "text": "At least 45 m behind, same side of the road."
+      },
+      {
+        "title": "Stand clear",
+        "text": "Never between your car and oncoming traffic."
+      }
     ]
   },
   "confused": {
     "a": {
       "label": "Tyre bursts while driving",
-      "points": ["Grip the steering wheel firmly", "Let the car roll to a stop at the side"]
+      "points": [
+        "Grip the steering wheel firmly",
+        "Let the car roll to a stop at the side"
+      ]
     },
     "b": {
       "label": "Flat tyre",
-      "points": ["Stop as soon as it's safe", "Change it only without risk; else call for help"]
+      "points": [
+        "Stop as soon as it's safe",
+        "Change it only without risk; else call for help"
+      ]
     }
   },
   "onTheTest": [
     {
       "question": "Your car catches fire in the engine compartment. What should you do?",
-      "options": ["Get everyone out and call the fire brigade", "Open the bonnet to tackle the fire", "Drive on to the nearest garage", "Pour water into the engine bay"],
+      "options": [
+        "Get everyone out and call the fire brigade",
+        "Open the bonnet to tackle the fire",
+        "Drive on to the nearest garage",
+        "Pour water into the engine bay"
+      ],
       "answerIndex": 0,
       "why": "Highway Code annex 6: get the occupants out quickly to a safe place. Don't try to put out an engine fire: opening the bonnet will make it flare."
     },
     {
       "question": "Where should a warning triangle go when a car breaks down on an ordinary road?",
-      "options": ["At least 45 metres behind, same side", "Right beside the car", "On the opposite side of the road", "At least 45 metres in front of the car"],
+      "options": [
+        "At least 45 metres behind, same side",
+        "Right beside the car",
+        "On the opposite side of the road",
+        "At least 45 metres in front of the car"
+      ],
       "answerIndex": 0,
       "why": "Rule 276: put a warning triangle on the road at least 45 metres (147 feet) behind your broken-down vehicle, on the same side of the road."
     }
@@ -55,10 +85,26 @@
     "ABS warning light on? There's a fault with the anti-lock braking system."
   ],
   "sources": [
-    { "doc": "The Highway Code", "ref": "Annex 6: warning displays, fluid levels, overheated engines or fire, tyres", "url": "https://www.gov.uk/guidance/the-highway-code/annex-6-vehicle-maintenance-safety-and-security" },
-    { "doc": "The Highway Code", "ref": "Rules 275–276 (place of relative safety; breakdowns)", "url": "https://www.gov.uk/guidance/the-highway-code/breakdowns-and-incidents-274-to-287" },
-    { "doc": "DVSA: Carrying out driving tests (DT1)", "ref": "13.01 Tell me question T6 (anti-lock braking system)", "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-driving-tests-dt1/13-vehicle-safety-check-questions" }
+    {
+      "doc": "The Highway Code",
+      "ref": "Annex 6: warning displays, fluid levels, overheated engines or fire, tyres",
+      "url": "https://www.gov.uk/guidance/the-highway-code/annex-6-vehicle-maintenance-safety-and-security"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 275–276 (place of relative safety; breakdowns)",
+      "url": "https://www.gov.uk/guidance/the-highway-code/breakdowns-and-incidents-274-to-287"
+    },
+    {
+      "doc": "DVSA: Carrying out driving tests (DT1)",
+      "ref": "13.01 Tell me question T6 (anti-lock braking system)",
+      "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-driving-tests-dt1/13-vehicle-safety-check-questions"
+    }
   ],
   "jurisdictionNotes": [],
-  "review": { "status": "draft" }
+  "review": {
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Highway Code annex 6 (warning displays, fluids, tyres, overheating, fire); rules 275–276; DT1 13.01 T6"
+  }
 }

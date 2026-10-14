@@ -16,11 +16,11 @@
       "law": true
     },
     {
-      "text": "At broken white lines across the road you MUST give way to traffic on the main road.",
+      "text": "Emerging at broken white lines across the road, you MUST give way to traffic on the main road.",
       "law": true
     },
     {
-      "text": "You MUST NOT enter a yellow box until your exit is clear (except right turns held by oncoming traffic).",
+      "text": "You MUST NOT enter a yellow box until your exit is clear (you may wait in it to turn right if held by oncoming traffic).",
       "law": true
     },
     "Give way to pedestrians crossing or waiting to cross the road you turn into or out of.",
@@ -93,12 +93,12 @@
   "traps": [
     "A car from the right signalling left may not turn: wait and make sure.",
     "Waiting when it's safe to go is a fault too (undue hesitation).",
-    "Lights out of order? Treat it as an unmarked junction: nobody has priority."
+    "Lights not working? Treat it as an unmarked junction and go with great care."
   ],
   "sources": [
     {
       "doc": "The Highway Code",
-      "ref": "Rules 146, 170–181, H2",
+      "ref": "Rules H2, 146, 170–181",
       "url": "https://www.gov.uk/guidance/the-highway-code"
     },
     {
@@ -108,12 +108,14 @@
     },
     {
       "doc": "DVSA: Carrying out driving tests: examiner guidance (DT1)",
-      "ref": "11.05, 11.11 Junctions; 12",
+      "ref": "11.05 (junction examples); 11.11 Junctions; 12 Signals, Avoiding undue hesitation",
       "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-driving-tests-dt1/11-guide-to-assessment-and-marking"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Highway Code rules H2, 146, 170–181; National standard for cars 3.1.3; DT1 11.05, 11.11 Junctions, 12 (Signals, Progress)"
   }
 }

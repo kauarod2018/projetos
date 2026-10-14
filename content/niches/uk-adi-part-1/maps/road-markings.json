@@ -98,8 +98,18 @@
   "sources": [
     {
       "doc": "The Highway Code",
-      "ref": "Rules 127–132 (lines, lane markings and road studs); Rule 174 (box junctions)",
+      "ref": "Rules 127–132 (lines, lane markings and road studs)",
       "url": "https://www.gov.uk/guidance/the-highway-code/general-rules-techniques-and-advice-for-all-drivers-and-riders-103-to-158"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 174 (box junctions)",
+      "url": "https://www.gov.uk/guidance/the-highway-code/using-the-road-159-to-203"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 240 (no stopping on double white lines)",
+      "url": "https://www.gov.uk/guidance/the-highway-code/waiting-and-parking-238-to-252"
     },
     {
       "doc": "The Highway Code",
@@ -114,6 +124,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Highway Code rules 127–132, 174, 240; Road markings (waiting restrictions, Red Routes); KYTS pp. 74–76, 80, 84"
   }
 }

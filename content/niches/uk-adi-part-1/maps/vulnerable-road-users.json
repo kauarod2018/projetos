@@ -106,6 +106,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Highway Code introduction (hierarchy of road users, H1–H3), rules 170, 195, 204–215, 220; National standard for cars 4.1.2"
   }
 }

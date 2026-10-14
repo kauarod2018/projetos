@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "id": "code-of-practice",
+  "niche": "uk-adi-part-1",
+  "area": "instructional-techniques",
+  "order": 9,
+  "tier": "basic",
+  "officialTopics": [
+    "national-standards"
+  ],
+  "title": "The ADI Code of Practice",
+  "whatItIs": "A voluntary code agreed between DVSA and the National Associations Strategic Partnership (NASP). It isn't law, but ADIs can show on their registration that they follow it.",
+  "keyFacts": [
+    "Phones: never use one while driving or supervising a client's driving; only when parked safely and legally.",
+    "On or before the first lesson, make clients aware of the code and of your terms of business.",
+    "Check entitlement to drive and the number plate eyesight check on the first lesson, then regularly.",
+    "Keep a record of the client's progress, including the number of lessons given.",
+    "Never cancel or rearrange a client's driving test without their knowledge and agreement.",
+    "Advertised pass rates mustn't be open to misinterpretation: make clear how they're worked out."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "The 4 sections of the current code",
+    "columns": 2,
+    "items": [
+      {
+        "icon": "user-check",
+        "title": "1 Personal conduct",
+        "text": "Be professional, comply with the law, keep clients safe and treat them with respect.",
+        "law": false
+      },
+      {
+        "icon": "briefcase",
+        "title": "2 Business dealings",
+        "text": "Account for money paid, record progress, and advise clients when to apply for tests.",
+        "law": false
+      },
+      {
+        "icon": "megaphone",
+        "title": "3 Advertising",
+        "text": "Clear, fair and not misleading; claims can be verified and meet the CAP codes.",
+        "law": false
+      },
+      {
+        "icon": "handshake",
+        "title": "4 Conciliation",
+        "text": "Deal with complaints promptly and aim for a speedy resolution.",
+        "law": false
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Unhappy with business service",
+      "points": [
+        "First: the instructor's complaints procedure",
+        "Then: local Citizens Advice for guidance"
+      ]
+    },
+    "b": {
+      "label": "Unhappy with professional service",
+      "points": [
+        "First: the instructor's complaints procedure",
+        "Then: the ADI Registrar at DVSA"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Under the ADI code of practice, which of these should your terms of business include?",
+      "options": [
+        "The procedure for making a complaint",
+        "Your pupils' recent test results",
+        "Your driving licence number",
+        "The name of the client's examiner"
+      ],
+      "answerIndex": 0,
+      "why": "Code section 2: terms of business should include your legal identity and contact details, lesson prices and durations, test car terms, cancellation and refund terms, and the complaints procedure."
+    },
+    {
+      "question": "Under the code of practice, when may an instructor use a mobile phone during a lesson?",
+      "options": [
+        "Only when parked in a safe and legal place",
+        "On a quiet straight road",
+        "Hands-free while supervising",
+        "While stopped at red lights"
+      ],
+      "answerIndex": 0,
+      "why": "Code section 1: instructors agree not to use mobile devices when driving or supervising a client's driving, and only when parked in a safe and legal place."
+    }
+  ],
+  "traps": [
+    "The current code is voluntary, not law. A new mandatory code is due between late 2026 and early 2027.",
+    "Keeping the school car back for a test? Give enough notice so the client doesn't lose the test fee.",
+    "Don't publish in-car footage of driving tests without permission from DVSA and the client.",
+    "If the client asks, go with them on their test and listen to the debrief."
+  ],
+  "sources": [
+    {
+      "doc": "DVSA: Approved driving instructor (ADI) code of practice",
+      "ref": "Changes to the code; About the code; 1 Personal conduct; 2 Business dealings; 3 Advertising; 4 Conciliation",
+      "url": "https://www.gov.uk/government/publications/driving-instructor-code-of-practice/approved-driving-instructor-adi-code-of-practice"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

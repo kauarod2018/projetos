@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "id": "learning-styles-barriers",
+  "niche": "uk-adi-part-1",
+  "area": "instructional-techniques",
+  "order": 6,
+  "tier": "complete",
+  "officialTopics": [
+    "instructional-techniques"
+  ],
+  "title": "How People Learn & Barriers to Learning",
+  "whatItIs": "DVSA guidance says pupils learn in different ways and at different speeds. Instructors must spot barriers to learning and help the learner find ways round them.",
+  "keyFacts": [
+    "Pupils prefer different approaches: some learn actively, others want time to reflect first.",
+    "Learners who aren't engaged or just receive information cope less well when driving alone.",
+    "Barriers can include delivery methods, times, location, lack of facilities or of special needs support.",
+    "Plan for literacy, numeracy and language issues, and for physical or cognitive disabilities.",
+    "Cultural factors matter, e.g. eye contact, or a belief that contradicting the teacher is 'bad manners'."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Ways to improve communication (element 6.3.1)",
+    "columns": 2,
+    "items": [
+      {
+        "icon": "eye",
+        "title": "Eye contact",
+        "text": "Use good eye contact, where this is culturally acceptable.",
+        "law": false
+      },
+      {
+        "icon": "languages",
+        "title": "Consistent language",
+        "text": "Use the same, consistent language throughout.",
+        "law": false
+      },
+      {
+        "icon": "puzzle",
+        "title": "Manageable pieces",
+        "text": "Break things down into manageable pieces.",
+        "law": false
+      },
+      {
+        "icon": "presentation",
+        "title": "Visual aids",
+        "text": "Use pictures and other visual aids to back up your words.",
+        "law": false
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Learns actively",
+      "points": [
+        "May solve a problem straight away in discussion",
+        "Can experiment, within safe bounds"
+      ]
+    },
+    "b": {
+      "label": "Reflects first",
+      "points": [
+        "May need to go away and think it over",
+        "May need pointing to reading or other inputs"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Which of these does the national standard list as a possible barrier to learning?",
+      "options": [
+        "The times of the lessons",
+        "Using a dual-control car",
+        "Learning in daylight",
+        "Having a full licence already"
+      ],
+      "answerIndex": 0,
+      "why": "Element 6.3.1: instructors must know how to identify and deal with barriers to learning, including delivery methods, times, location, lack of support for special needs and lack of facilities."
+    },
+    {
+      "question": "A pupil can't come up with an answer on the spot during a lesson. What does DVSA guidance suggest?",
+      "options": [
+        "Some pupils need time to reflect: allow it or suggest reading",
+        "Keep asking until they answer",
+        "Always give the answer and move on",
+        "Treat them as not ready for their test"
+      ],
+      "answerIndex": 0,
+      "why": "Examiner guidance 3.24: some pupils need to go away and reflect, or be pointed to reading; pushing a pupil to answer on the spot may be unproductive."
+    }
+  ],
+  "traps": [
+    "Hours of tuition don't show ability: different people learn in different ways at different speeds.",
+    "You can't force learning: the pupil sets the pace, so spot when they stop learning.",
+    "Your own assumptions about groups in society can affect how well you teach.",
+    "If a learner's needs exceed your competence, transfer them to an appropriate colleague."
+  ],
+  "sources": [
+    {
+      "doc": "DVSA: National standard for driver and rider training",
+      "ref": "Unit 6.2 Design learning programmes; elements 6.3.1 Create a climate that promotes learning and 6.3.2",
+      "url": "https://www.gov.uk/government/publications/national-standard-for-driver-and-rider-training/national-standard-for-driver-and-rider-training"
+    },
+    {
+      "doc": "DVSA: Carrying out instructor tests and checks (examiner guidance)",
+      "ref": "3.24 Teaching and learning strategies (teaching style; analysing problems)",
+      "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-instructor-tests-and-checks/3-the-instructional-ability-test-part-3"
+    },
+    {
+      "doc": "DVSA: Carrying out instructor tests and checks (examiner guidance)",
+      "ref": "4.6 ADI preparation for the standards check",
+      "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-instructor-tests-and-checks/4-the-test-of-continued-ability-to-instruct-standards-check"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

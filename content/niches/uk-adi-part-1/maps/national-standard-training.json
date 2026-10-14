@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "id": "national-standard-training",
+  "niche": "uk-adi-part-1",
+  "area": "instructional-techniques",
+  "order": 7,
+  "tier": "basic",
+  "officialTopics": [
+    "national-standards"
+  ],
+  "title": "National Standard for Driver & Rider Training",
+  "whatItIs": "DVSA's standard setting out the skills, knowledge and understanding needed to deliver driver and rider training. Part 3 and the standards check are assessed against it.",
+  "keyFacts": [
+    "It assumes trainers have mastered roles 1 to 4 of the driving standard and shown competence in role 5.",
+    "Candidates are expected to show at least level 3 competence.",
+    "Unit 1: confirm you're legal to train; display or carry your certificate as the law requires.",
+    "Unit 5: evaluate and develop yourself, e.g. keep a reflective log and know the standards check.",
+    "In the standard, 'learner' can mean a novice, partly trained, trained or experienced driver or rider."
+  ],
+  "visual": {
+    "type": "table",
+    "caption": "The 6 units and their elements",
+    "data": {
+      "columns": [
+        "Unit",
+        "Elements"
+      ],
+      "rows": [
+        [
+          "1 Legal requirements",
+          "6.1.1 You · 6.1.2 Training vehicle"
+        ],
+        [
+          "2 Design learning programmes",
+          "6.2 Needs, programme, lesson plans"
+        ],
+        [
+          "3 Safe, responsible driving",
+          "6.3.1 Climate · 6.3.2 Explain/demo · 6.3.3 Coach · 6.3.4 Groups"
+        ],
+        [
+          "4 Manage risk",
+          "6.4.1 On road · 6.4.2 Violence · 6.4.3 Classroom"
+        ],
+        [
+          "5 Evaluate and develop yourself",
+          "Self-evaluation, CPD, reflective log"
+        ],
+        [
+          "6 Role play for trainees",
+          "6.6.1 Develop · 6.6.2 Use role play"
+        ]
+      ],
+      "notes": []
+    }
+  },
+  "confused": {
+    "a": {
+      "label": "Driving standard (car, cat B)",
+      "points": [
+        "What a safe, responsible driver must do and know",
+        "5 roles, from preparing to lifelong learning"
+      ]
+    },
+    "b": {
+      "label": "Driver and rider training standard",
+      "points": [
+        "What an instructor must do and know to train",
+        "6 units, from legal checks to role play"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Which element of the National standard for driver and rider training is about coaching?",
+      "options": [
+        "6.3.3",
+        "6.1.2",
+        "6.4.2",
+        "6.6.1"
+      ],
+      "answerIndex": 0,
+      "why": "Unit 3 has 4 elements: 6.3.1 Create a climate that promotes learning, 6.3.2 Explain and demonstrate, 6.3.3 Coach, 6.3.4 Facilitate group-based learning."
+    },
+    {
+      "question": "Which unit of the training standard covers managing the risk of violence in the learning environment?",
+      "options": [
+        "Unit 4: manage risk",
+        "Unit 2: design learning programmes",
+        "Unit 5: evaluate and develop",
+        "Unit 6: role play"
+      ],
+      "answerIndex": 0,
+      "why": "Unit 4 Manage risk to instructor, learner and third parties: 6.4.1 on-road risk, 6.4.2 risk of violence, 6.4.3 health and safety in the classroom."
+    }
+  ],
+  "traps": [
+    "The first 3 elements of unit 3 are layers of one approach: client-centred learning.",
+    "Role play: simulate high-risk faults verbally where possible; never involve vulnerable road users.",
+    "Group (classroom) delivery is optional for car instructors, but a core skill for motorcycle instructors."
+  ],
+  "sources": [
+    {
+      "doc": "DVSA: National standard for driver and rider training",
+      "ref": "Introduction; Units 1 to 6 and their elements; glossary",
+      "url": "https://www.gov.uk/government/publications/national-standard-for-driver-and-rider-training/national-standard-for-driver-and-rider-training"
+    },
+    {
+      "doc": "DVSA: Carrying out instructor tests and checks (examiner guidance)",
+      "ref": "3.12 Completing the assessment; 4.1 Skills, knowledge and understanding required",
+      "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-instructor-tests-and-checks/4-the-test-of-continued-ability-to-instruct-standards-check"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

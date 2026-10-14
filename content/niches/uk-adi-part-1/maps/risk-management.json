@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "id": "risk-management",
+  "niche": "uk-adi-part-1",
+  "area": "instructional-techniques",
+  "order": 3,
+  "tier": "basic",
+  "officialTopics": [
+    "instructional-techniques"
+  ],
+  "title": "Managing Risk on a Lesson",
+  "whatItIs": "Risk management is the second marked area on part 3 and the standards check, with 5 competences. Scoring 7 or less in it is an automatic fail, whatever the total.",
+  "keyFacts": [
+    "The instructor is always responsible for their own safety, the pupil's and other road users'.",
+    "Make sure the pupil understands how responsibility for risk is shared, and keep managing it all lesson.",
+    "Explain when and how you may use verbal or physical interventions to keep everyone safe.",
+    "Give clear instructions in good time; late, confusing or too many directions add risk.",
+    "Be fit to teach, check the learner is fit to start, and take suitable action if not."
+  ],
+  "visual": {
+    "type": "table",
+    "caption": "The 5 risk management competences (examiner guidance 3.24)",
+    "data": {
+      "columns": [
+        "Competence",
+        "What examiners look for"
+      ],
+      "rows": [
+        [
+          "Shared responsibility",
+          "Pupil knows who does what, incl. dual controls"
+        ],
+        [
+          "Clear, timely directions",
+          "Concise, in time to respond"
+        ],
+        [
+          "Awareness",
+          "Watches the road and the pupil"
+        ],
+        [
+          "Intervention",
+          "Steps in only when the pupil can't cope"
+        ],
+        [
+          "Safety-critical feedback",
+          "Pupil helped to understand what happened"
+        ]
+      ],
+      "notes": []
+    }
+  },
+  "confused": {
+    "a": {
+      "label": "Early learner, dual-control car",
+      "points": [
+        "Instructor may take control in an emergency",
+        "Then you talk about what happened"
+      ]
+    },
+    "b": {
+      "label": "Full licence holder, own car",
+      "points": [
+        "Driver takes full responsibility",
+        "Instructor stays quiet but flags missed risks"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "On a part 3 test a PDI scores 38 in total, but only 7 in the risk management section. What is the result?",
+      "options": [
+        "Fail",
+        "Grade B",
+        "Grade A",
+        "Pass, with risk management to be retested"
+      ],
+      "answerIndex": 0,
+      "why": "GOV.UK part 3 test: you automatically fail if you score 7 or less in the risk management category, whatever your total score."
+    },
+    {
+      "question": "Under the training standard, what should an instructor do when they spot a hazard the learner doesn't seem aware of?",
+      "options": [
+        "Take suitable and timely action",
+        "Wait and discuss it at the end",
+        "Say nothing so the learner learns",
+        "Note it for the next lesson"
+      ],
+      "answerIndex": 0,
+      "why": "Element 6.4.1: take suitable and timely action where you identify a hazard the learner doesn't appear to be aware of, then use client-centred techniques so they cope better in future."
+    }
+  ],
+  "traps": [
+    "Intervening when the pupil is coping is also a fault, not just failing to step in.",
+    "Silence can be a coaching input: it can show the pupil you're confident in them.",
+    "As a supervising driver you're in control: no mobile phone and no alcohol, as if driving."
+  ],
+  "sources": [
+    {
+      "doc": "DVSA: Carrying out instructor tests and checks (examiner guidance)",
+      "ref": "3.24 Risk management (all 5 competences)",
+      "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-instructor-tests-and-checks/3-the-instructional-ability-test-part-3"
+    },
+    {
+      "doc": "DVSA: National standard for driver and rider training",
+      "ref": "Element 6.4.1 Manage the on-road environment to minimise risk",
+      "url": "https://www.gov.uk/government/publications/national-standard-for-driver-and-rider-training/national-standard-for-driver-and-rider-training"
+    },
+    {
+      "doc": "GOV.UK: Approved driving instructor (ADI) part 3 test",
+      "ref": "Your test result",
+      "url": "https://www.gov.uk/adi-part-3-test"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

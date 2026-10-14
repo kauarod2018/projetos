@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "id": "client-centred-learning",
+  "niche": "uk-adi-part-1",
+  "area": "instructional-techniques",
+  "order": 1,
+  "tier": "basic",
+  "officialTopics": [
+    "instructional-techniques"
+  ],
+  "title": "Client-Centred Learning",
+  "whatItIs": "The approach at the heart of the National standard for driver and rider training: a conversation between learner and instructor based on mutual respect.",
+  "keyFacts": [
+    "Client-centred is not client-led: the learner doesn't take charge and decide what happens.",
+    "People resist new ideas if the trainer doesn't respect them, isn't 'genuine' or lacks legitimate authority.",
+    "Just telling learners what to do may get them through the test, but they quickly forget it.",
+    "The goal is a safe, responsible method the learner applies consistently, not one set method.",
+    "Transfer responsibility for learning to the learner as soon as they're ready to take it."
+  ],
+  "visual": {
+    "type": "steps",
+    "caption": "What makes a long-lasting change more likely (standard, unit 3)",
+    "items": [
+      {
+        "title": "Present",
+        "text": "Share your knowledge and experience clearly and effectively."
+      },
+      {
+        "title": "Listen",
+        "text": "Listen to the learner's reactions to your input."
+      },
+      {
+        "title": "Find the obstacles",
+        "text": "Help the learner identify any obstacles to understanding and change."
+      },
+      {
+        "title": "Learner's own strategies",
+        "text": "Support them to find their own ways to overcome them."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Client-centred",
+      "points": [
+        "A conversation based on mutual respect",
+        "Instructor still brings expertise and puts safety first"
+      ]
+    },
+    "b": {
+      "label": "Client-led",
+      "points": [
+        "The learner takes charge and decides what happens",
+        "Not what the standard asks for"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "What does the National standard for driver and rider training mean by 'client-centred learning'?",
+      "options": [
+        "A conversation between learner and instructor based on mutual respect",
+        "The learner decides what happens on each lesson",
+        "The instructor follows a fixed syllabus for every pupil",
+        "The learner is coached and never told anything"
+      ],
+      "answerIndex": 0,
+      "why": "Unit 3: client-centred learning is not about the learner taking charge of the learning process. It is a conversation between learner and instructor based on mutual respect."
+    },
+    {
+      "question": "A pupil clearly needs help in a situation they can't handle, but the instructor gives none. What does DVSA guidance call this?",
+      "options": [
+        "Under instruction",
+        "Client-centred coaching",
+        "Transfer of responsibility",
+        "Over instruction"
+      ],
+      "answerIndex": 0,
+      "why": "Examiner guidance 3.24: if the pupil needs support and gets it, that's client-centred. If they need help and don't get it, that's not client-centred and is often called 'under instruction'."
+    }
+  ],
+  "traps": [
+    "Coaching doesn't replace instruction: direct instruction still suits new situations or a struggling pupil.",
+    "Elements 6.3.1 to 6.3.3 are layers of one approach: they can't really be shown in isolation.",
+    "'Client-centred', 'student-centred' and 'learner-centred' mean broadly the same in the standard."
+  ],
+  "sources": [
+    {
+      "doc": "DVSA: National standard for driver and rider training",
+      "ref": "Unit 3 Enable safe and responsible driving/riding (introduction); element 6.3.3 Coach; footnote 2",
+      "url": "https://www.gov.uk/government/publications/national-standard-for-driver-and-rider-training/national-standard-for-driver-and-rider-training"
+    },
+    {
+      "doc": "DVSA: Carrying out instructor tests and checks (examiner guidance)",
+      "ref": "3.15 Assessment; 3.24 Interpreting the assessment criteria (Planning; Teaching and learning strategies)",
+      "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-instructor-tests-and-checks/3-the-instructional-ability-test-part-3"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

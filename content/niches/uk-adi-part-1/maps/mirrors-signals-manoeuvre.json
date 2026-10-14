@@ -9,7 +9,7 @@
     "road-procedure"
   ],
   "title": "Mirrors, Signals & Manoeuvre (MSM/PSL)",
-  "whatItIs": "The routine examiners expect at every junction or hazard: Mirrors, Signal, Manoeuvre, where the manoeuvre is Position, Speed, Look.",
+  "whatItIs": "The routine DT1 gives for every junction or hazard: Mirrors, Signal, Manoeuvre, where the manoeuvre is Position, Speed, Look.",
   "keyFacts": [
     "Use the mirrors in good time before you signal, change direction or change speed.",
     "Mirrors have blind spots: look round to check them before you move.",
@@ -39,7 +39,7 @@
       },
       {
         "title": "L: Look",
-        "text": "Assess, then act accordingly."
+        "text": "Look, assess, act accordingly."
       }
     ]
   },
@@ -107,6 +107,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Highway Code rules 103, 161, 182; National standard for cars 2.2.5; DT1 11.03, 11.05, 11.11 (Use of mirrors, Signals), 12 (Use of mirrors, Signals)"
   }
 }

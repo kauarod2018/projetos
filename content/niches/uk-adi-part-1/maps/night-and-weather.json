@@ -32,7 +32,7 @@
   ],
   "visual": {
     "type": "table",
-    "caption": "Adjusting for conditions (Highway Code rules 115, 126, 227–235)",
+    "caption": "Adjusting for conditions (Highway Code rules 115, 163, 226–235)",
     "data": {
       "columns": [
         "Condition",
@@ -43,7 +43,7 @@
         [
           "Wet",
           "At least double",
-          "Light steering? Ease off, slow gently"
+          "Steering unresponsive? Ease off, slow gradually"
         ],
         [
           "Ice and snow",
@@ -52,17 +52,17 @@
         ],
         [
           "Fog",
-          "Well within what you see",
-          "Lights on; don't speed up"
+          "Stop well within what you see",
+          "Headlights; don't speed up to lose a tailgater"
         ],
         [
           "Strong wind",
-          "Keep back from riders",
-          "Gusts at bridges and gaps"
+          "Keep back from motorcyclists",
+          "Gusts at bridges and gaps in hedges"
         ],
         [
           "Night",
-          "Harder to judge",
+          "Speed and distance harder to judge",
           "Dipped until level to overtake"
         ]
       ],
@@ -81,7 +81,7 @@
       "label": "Dipped headlights",
       "points": [
         "At night in built-up areas and on dull days",
-        "MUST be used in seriously reduced visibility"
+        "Headlights MUST be used in seriously reduced visibility"
       ]
     }
   },
@@ -111,13 +111,13 @@
   ],
   "traps": [
     "In fog, rear lights ahead give a false sense of security: keep a safe gap.",
-    "On ice, tyres make virtually no noise: light steering may mean you're losing grip.",
+    "On ice, tyres make virtually no noise: unresponsive steering may mean you're losing grip.",
     "Don't wear tinted glasses, lenses or visors at night if they restrict your vision."
   ],
   "sources": [
     {
       "doc": "The Highway Code",
-      "ref": "Rules 94, 113–115, 126, 226–236",
+      "ref": "Rules 94, 113–115, 126, 163, 226–237",
       "url": "https://www.gov.uk/guidance/the-highway-code"
     },
     {
@@ -128,6 +128,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Highway Code rules 94, 113–115, 126, 163, 226–237; National standard for cars 2.2.1"
   }
 }

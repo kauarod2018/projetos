@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "id": "lesson-planning",
+  "niche": "uk-adi-part-1",
+  "area": "instructional-techniques",
+  "order": 2,
+  "tier": "basic",
+  "officialTopics": [
+    "instructional-techniques"
+  ],
+  "title": "Planning a Lesson Around the Pupil",
+  "whatItIs": "Lesson planning is one of the 3 areas marked on the ADI part 3 test and the standards check. Its 4 competences cover goals, structure, practice area and adapting the plan.",
+  "keyFacts": [
+    "Identify goals and needs: ask suitable questions, listen actively and notice body language.",
+    "Needs change during the lesson, so this can't be 'ticked off' at the start and forgotten.",
+    "Not taught this pupil before? An assessment drive before finalising the plan is fine.",
+    "Part 3 and standards check: agree goals and risk at the start in no more than 3 minutes.",
+    "Stretch the pupil without overwhelming them, but don't restrict them to very easy roads either."
+  ],
+  "visual": {
+    "type": "table",
+    "caption": "The 4 lesson planning competences (examiner guidance 3.24)",
+    "data": {
+      "columns": [
+        "Competence",
+        "Signs of competence"
+      ],
+      "rows": [
+        [
+          "Goals and needs identified",
+          "Pupil says what they want; understanding checked"
+        ],
+        [
+          "Structure suits the pupil",
+          "Plan agreed and based on the pupil's goals"
+        ],
+        [
+          "Practice areas suitable",
+          "Realistic challenge, focused on the plan"
+        ],
+        [
+          "Plan adapted when needed",
+          "Responds to performance and to concerns"
+        ]
+      ],
+      "notes": []
+    }
+  },
+  "confused": {
+    "a": {
+      "label": "Reasons to adapt the plan",
+      "points": [
+        "Pupil out of their depth or uncomfortable",
+        "Faults that undermine the plan",
+        "Pupil already competent at the task"
+      ]
+    },
+    "b": {
+      "label": "Wrong ways to change it",
+      "points": [
+        "Changing the plan without a reason",
+        "Not explaining the change to the pupil"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "The agreed lesson is roundabouts and the pupil is nervous about entering them. Which choice of area best fits DVSA guidance?",
+      "options": [
+        "Roundabouts that stretch them without overwhelming them",
+        "A fast-flowing multi-lane, multi-exit roundabout first",
+        "An area with no roundabouts, to build confidence",
+        "Only very quiet junctions, whatever their progress"
+      ],
+      "answerIndex": 0,
+      "why": "Examiner guidance 3.24: the structure should stretch the pupil without overwhelming them; not a fast multi-lane roundabout first, nor only very quiet junctions, and an area with no roundabouts is pointless."
+    },
+    {
+      "question": "You haven't worked with a pupil before. What does DVSA guidance say you can do before finalising the lesson plan?",
+      "options": [
+        "Ask them to do an assessment drive",
+        "Use your standard lesson for their hours",
+        "Ask the examiner what to teach",
+        "Spend the lesson on one manoeuvre"
+      ],
+      "answerIndex": 0,
+      "why": "Examiner guidance 3.10 and 3.24: with little or no experience of the pupil, the instructor can suggest an assessment drive before finalising the plan, leaving time for development and feedback."
+    }
+  ],
+  "traps": [
+    "A pupil doing well is also a reason to rethink the plan, not only a pupil who struggles.",
+    "Marking 'goals' 0 but 'structure' 2 or 3 is inconsistent: with no goals, no structure can be agreed.",
+    "Pupils whose needs exceed your competence should be transferred to an appropriate colleague."
+  ],
+  "sources": [
+    {
+      "doc": "DVSA: Carrying out instructor tests and checks (examiner guidance)",
+      "ref": "3.10 At the start of the test; 3.12 Completing the assessment (consistent marking); 3.24 Planning",
+      "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-instructor-tests-and-checks/3-the-instructional-ability-test-part-3"
+    },
+    {
+      "doc": "GOV.UK: Approved driving instructor (ADI) part 3 test",
+      "ref": "What happens during the test",
+      "url": "https://www.gov.uk/adi-part-3-test"
+    },
+    {
+      "doc": "GOV.UK: Approved driving instructor (ADI) standards check",
+      "ref": "What happens at the standards check",
+      "url": "https://www.gov.uk/adi-standards-check"
+    },
+    {
+      "doc": "DVSA: National standard for driver and rider training",
+      "ref": "Unit 6.2 Design learning programmes (performance standards)",
+      "url": "https://www.gov.uk/government/publications/national-standard-for-driver-and-rider-training/national-standard-for-driver-and-rider-training"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

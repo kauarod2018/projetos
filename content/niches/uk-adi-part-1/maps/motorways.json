@@ -12,7 +12,7 @@
   "whatItIs": "Fast roads with their own rules: who may use them, joining, lane discipline, red X closures, hard shoulders and emergency areas.",
   "keyFacts": [
     {
-      "text": "Learners MUST NOT use motorways unless with an ADI in a dual-controlled car with L (or D) plates.",
+      "text": "Provisional car licence holders MUST NOT use motorways unless with an ADI, in a dual-control car with red L/D plates.",
       "law": true
     },
     "Joining: give priority to traffic on the motorway and match your speed to the left lane.",
@@ -26,13 +26,13 @@
     },
     "Keep in the left lane unless overtaking; overtake only on the right.",
     {
-      "text": "You MUST NOT reverse, cross the central reservation or drive against the traffic.",
+      "text": "You MUST NOT reverse, cross the central reservation or drive against traffic, unless police or traffic officers direct.",
       "law": true
     }
   ],
   "visual": {
     "type": "cards",
-    "caption": "Smart motorway signals and lanes (rules 258, 265, 269, 270)",
+    "caption": "Smart motorway signals and lanes (rules 258, 265, 269, 270, 278)",
     "columns": 2,
     "items": [
       {
@@ -98,11 +98,11 @@
         "Switch on hazards"
       ],
       "answerIndex": 1,
-      "why": "Rule 258: a red X marks a closed lane where people or stopped vehicles may be. You MUST move to an open lane and MUST NOT drive in the closed one."
+      "why": "Rule 258: a red X marks a closed lane where people or stopped vehicles may be. You MUST follow the signs to move to an open lane and MUST NOT drive in the closed one."
     }
   ],
   "traps": [
-    "Missed your exit? Go on to the next one: never reverse on a slip road.",
+    "Missed your exit? Carry on to the next one: never reverse, even on a slip road.",
     "After leaving, 50 mph can feel like 30 mph: check the speedometer.",
     "Amber flashing lights: speed up only after a non-flashing signal or 'END'.",
     "Smart motorways change limits and lane use: the national standard says obeying them is vital."
@@ -110,7 +110,7 @@
   "sources": [
     {
       "doc": "The Highway Code",
-      "ref": "Rules 253–274, 278",
+      "ref": "Rules 253, 257–275, 278",
       "url": "https://www.gov.uk/guidance/the-highway-code"
     },
     {
@@ -120,12 +120,14 @@
     },
     {
       "doc": "GOV.UK: Learning to drive",
-      "ref": "Motorways",
+      "ref": "Motorways (with an ADI, dual controls; illegal with family or friends)",
       "url": "https://www.gov.uk/driving-lessons-learning-to-drive"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Highway Code rules 253, 257–275, 278; National standard for cars 3.1.4; GOV.UK Learning to drive (motorways)"
   }
 }

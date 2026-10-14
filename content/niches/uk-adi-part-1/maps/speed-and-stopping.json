@@ -16,15 +16,18 @@
       "law": true
     },
     {
-      "text": "Cars: 60 mph single carriageway, 70 mph dual carriageway and motorway.",
+      "text": "Cars MUST NOT exceed 60 mph on single carriageways, or 70 mph on dual carriageways and motorways.",
       "law": true
     },
-    "Towing: 50 mph single carriageway, 60 mph dual carriageway and motorway.",
-    "Gap: at least two seconds on fast roads; double it when wet, up to ten times on ice."
+    {
+      "text": "Towing a caravan or trailer: MUST NOT exceed 50 mph single, 60 mph dual carriageway and motorway.",
+      "law": true
+    },
+    "Gap: at least two seconds on high-speed roads; at least double it when wet, up to ten times on ice."
   ],
   "visual": {
     "type": "bar-scale",
-    "caption": "Typical stopping distances, dry road (rule 126)",
+    "caption": "Typical stopping distances: a general guide (rule 126)",
     "data": {
       "unit": "m",
       "segments": [
@@ -93,21 +96,21 @@
     "a": {
       "label": "Thinking distance",
       "points": [
-        "Grows in step with speed",
+        "Rises 3 m per 10 mph (6 m to 21 m)",
         "Depends on your attention"
       ]
     },
     "b": {
       "label": "Braking distance",
       "points": [
-        "Grows much faster",
-        "Depends on road, weather, vehicle"
+        "6 m at 20 mph, 75 m at 70 mph",
+        "Depends on road surface, weather, vehicle"
       ]
     }
   },
   "onTheTest": [
     {
-      "question": "Your pupil is at 60 mph on a dry road. Typical overall stopping distance?",
+      "question": "Your pupil is driving at 60 mph. What is the typical overall stopping distance in the Highway Code?",
       "options": [
         "36 m",
         "53 m",
@@ -126,13 +129,13 @@
         "70 mph"
       ],
       "answerIndex": 2,
-      "why": "Rule 124: 50 mph on single carriageways, 60 mph on dual carriageways and motorways."
+      "why": "Rule 124 table: cars towing caravans or trailers, 50 mph on single carriageways, 60 mph on dual carriageways and motorways."
     }
   ],
   "traps": [
     "Limits aren't targets: DT1 doesn't fault slowing for busy streets.",
     "Holding up traffic is a fault too (DT1 Progress).",
-    "ABS keeps steering control but may not shorten the stop."
+    "ABS should keep steering control, but don't assume it stops you in a shorter distance."
   ],
   "sources": [
     {
@@ -141,13 +144,18 @@
       "url": "https://www.gov.uk/guidance/the-highway-code"
     },
     {
+      "doc": "The Highway Code: Typical stopping distances",
+      "ref": "Stopping distances diagram (PDF)",
+      "url": "https://assets.publishing.service.gov.uk/media/65f97642aa9b760011fbda4e/the-highway-code-stopping-distances.pdf"
+    },
+    {
       "doc": "GOV.UK: Speed limits",
       "ref": "Speed limit tables",
       "url": "https://www.gov.uk/speed-limits"
     },
     {
       "doc": "DVSA: Carrying out driving tests: examiner guidance (DT1)",
-      "ref": "11.11, 12 Progress",
+      "ref": "11.11 Progress; 12 Progress (holding up following traffic)",
       "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-driving-tests-dt1/11-guide-to-assessment-and-marking"
     }
   ],
@@ -158,6 +166,8 @@
     }
   ],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Highway Code rules 120, 124 (speed limits table), 125, 126 and Typical stopping distances PDF; GOV.UK Speed limits; DT1 11.11 and 12 Progress"
   }
 }

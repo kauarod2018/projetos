@@ -24,7 +24,7 @@
       "law": true
     },
     {
-      "text": "You MUST NOT drive without a valid MOT, except to a pre-arranged test or to repairs for it.",
+      "text": "You MUST NOT drive without an MOT when one is needed, except to a pre-arranged test or to repairs for it.",
       "law": true
     },
     "Uneven tyre wear can mean faults in the brakes or suspension, or wheels out of alignment."
@@ -118,6 +118,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Highway Code annex 6 (maintenance, tyres, pressures, fluids, other problems); annex 3 (MOT); GOV.UK Getting an MOT"
   }
 }

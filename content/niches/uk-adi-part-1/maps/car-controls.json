@@ -87,7 +87,7 @@
   "traps": [
     "Moving off with the parking brake on, or with a left signal still on, is a recorded fault.",
     "Clutch coasting is marked under 'Gears' on the test report.",
-    "Never let an automatic 'creep': use the parking brake when needed."
+    "An automatic may 'creep': use the parking brake to prevent it. DT1 marks this at 'Handbrake'."
   ],
   "sources": [
     {
@@ -102,12 +102,14 @@
     },
     {
       "doc": "DVSA: Carrying out driving tests (DT1)",
-      "ref": "1.24–1.25; sections 11 and 12 (Control, Precautions, Move off)",
+      "ref": "1.24–1.25; 7.05 (automatics); 11.11 Control, Precautions, Move off; 12.02",
       "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-driving-tests-dt1"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "National standard (cars) elements 2.1.1–2.1.4, 2.2.5; Highway Code rules 122, 123, 159; DT1 1.24–1.25, 7.05, 11.11, 12.02"
   }
 }

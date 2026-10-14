@@ -78,7 +78,7 @@
   ],
   "traps": [
     "Blue rectangles are information signs, except on motorways, where blue is used for direction signs.",
-    "No upright GIVE WAY sign? At quiet junctions the sign (or the road triangle) may be left out: the give way lines still apply.",
+    "No upright GIVE WAY sign? On quiet junctions the sign, or both sign and road triangle, may be left out.",
     "A time plate under a 'no right turn' or 'no left turn' sign makes it a part-time ban: read the plate."
   ],
   "sources": [
@@ -100,6 +100,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "KYTS p. 9 (signing system), pp. 16, 19 (regulatory signs); Highway Code Traffic signs, rule 109; signs.json meanings"
   }
 }

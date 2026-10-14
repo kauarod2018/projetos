@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "id": "teaching-strategies",
+  "niche": "uk-adi-part-1",
+  "area": "instructional-techniques",
+  "order": 4,
+  "tier": "basic",
+  "officialTopics": [
+    "instructional-techniques"
+  ],
+  "title": "Teaching & Learning Strategies",
+  "whatItIs": "The third marked area, with 8 competences. It asks whether the instructor helps the pupil learn actively, choosing the right technique at the right time.",
+  "keyFacts": [
+    "Coaching extends the range of options; it isn't an automatic replacement for instruction.",
+    "Direct instruction helps early-stage pupils with new situations, or a pupil who is clearly struggling.",
+    "Technically incorrect information that might lead to a safety-critical situation is an automatic fail.",
+    "Good information is accurate, relevant and timely: failing any one makes the others redundant.",
+    "Use real situations on the lesson to show when, how and why to use a technique.",
+    "Allow enough uninterrupted time to practise new skills."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Explaining and demonstrating well (element 6.3.2)",
+    "columns": 2,
+    "items": [
+      {
+        "icon": "map-pin",
+        "title": "Choose the location",
+        "text": "Select a suitable place for the explanation or demonstration.",
+        "law": false
+      },
+      {
+        "icon": "lightbulb",
+        "title": "Explain the why",
+        "text": "Learning is helped when the learner knows why a skill is needed.",
+        "law": false
+      },
+      {
+        "icon": "message-circle",
+        "title": "Check understanding",
+        "text": "Encourage questions; repeat or rephrase until they understand.",
+        "law": false
+      },
+      {
+        "icon": "repeat",
+        "title": "Let them practise",
+        "text": "Give enough practice, then feedback on any obstacles.",
+        "law": false
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Direct instruction",
+      "points": [
+        "New situations early in training",
+        "A pupil clearly struggling"
+      ]
+    },
+    "b": {
+      "label": "Coaching",
+      "points": [
+        "Engaged pupil finds their own solutions",
+        "Pupil analyses and owns the learning"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "According to DVSA's examiner guidance, when is direct instruction most useful?",
+      "options": [
+        "Helping an early-stage pupil cope with a new situation",
+        "Never: coaching should always be used",
+        "Only once the pupil is ready for test",
+        "When the pupil is performing well"
+      ],
+      "answerIndex": 0,
+      "why": "Examiner guidance 3.24: direct instruction is useful for a pupil in the early stages facing new situations, or one clearly struggling. It becomes coaching if the pupil then analyses the problem."
+    },
+    {
+      "question": "An instructor says 'you're a bit close to these parked cars' and leaves it there. What's the main problem?",
+      "options": [
+        "It's unclear: how close is 'a bit', and does it matter?",
+        "It's too detailed for a learner",
+        "Instructors shouldn't comment on position",
+        "It should be said only after the lesson"
+      ],
+      "answerIndex": 0,
+      "why": "Examiner guidance 3.24: comments like this could introduce coaching on a weakness, but on their own they are of little use because they are unclear."
+    }
+  ],
+  "traps": [
+    "Frequent explanations and demonstrations support some learners but can demotivate others.",
+    "Focusing on teaching tools instead of learning outcomes shows a lack of competence.",
+    "Explaining while you drive is level 3; full 'commentary driving' is a level 4 competence."
+  ],
+  "sources": [
+    {
+      "doc": "DVSA: Carrying out instructor tests and checks (examiner guidance)",
+      "ref": "3.24 Teaching and learning strategies (introduction; technical information; examples)",
+      "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-instructor-tests-and-checks/3-the-instructional-ability-test-part-3"
+    },
+    {
+      "doc": "DVSA: National standard for driver and rider training",
+      "ref": "Element 6.3.2 Explain and demonstrate skills and techniques; footnote 4",
+      "url": "https://www.gov.uk/government/publications/national-standard-for-driver-and-rider-training/national-standard-for-driver-and-rider-training"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

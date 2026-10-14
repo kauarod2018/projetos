@@ -41,7 +41,7 @@
       {
         "icon": "truck",
         "title": "Large vehicle ahead",
-        "text": "It may need extra room to turn, or be dealing with a hazard you cannot see: hang back."
+        "text": "It may need extra room to turn, or to deal with a hazard you can't see: be prepared to stop and wait."
       }
     ]
   },
@@ -86,7 +86,7 @@
     }
   ],
   "traps": [
-    "Clicking continuously or in a pattern scores nothing for that clip.",
+    "Clicking continuously or in a pattern scores nothing; a wrong click loses no points.",
     "Driver aids don't replace looking: act on what is in front of you.",
     "A signal may not have been cancelled: wait to be sure.",
     "Eco-safe 'planning' (anticipation) is recorded on test but doesn't affect the result."
@@ -94,12 +94,12 @@
   "sources": [
     {
       "doc": "GOV.UK: ADI part 1 test",
-      "ref": "Hazard perception test",
+      "ref": "Hazard perception test; Pass mark and test result",
       "url": "https://www.gov.uk/adi-part-1-test"
     },
     {
       "doc": "The Highway Code",
-      "ref": "Rules 104, 126, 146, 206, 212, 221",
+      "ref": "Rules 104, 126, 146, 152, 206, 212, 221",
       "url": "https://www.gov.uk/guidance/the-highway-code"
     },
     {
@@ -109,12 +109,14 @@
     },
     {
       "doc": "DVSA: Carrying out driving tests: examiner guidance (DT1)",
-      "ref": "11.11 Awareness/planning",
+      "ref": "1.33 Fuel efficient driving; 11.11 Awareness/planning",
       "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-driving-tests-dt1/11-guide-to-assessment-and-marking"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "GOV.UK ADI part 1 test (hazard perception, pass mark); Highway Code rules 104, 126, 146, 152, 206, 212, 221; National standard for cars 2.2.1, 4.2.1; DT1 1.33, 11.11 Awareness/planning"
   }
 }

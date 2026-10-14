@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "id": "standards-check",
+  "niche": "uk-adi-part-1",
+  "area": "instructional-techniques",
+  "order": 10,
+  "tier": "complete",
+  "officialTopics": [
+    "adi-qualifying",
+    "instructional-techniques"
+  ],
+  "title": "The Standards Check & Part 3 Marking",
+  "whatItIs": "Part 3 and the standards check are marked the same way: 17 competences in 3 areas, each scored 0 to 3, for a total out of 51.",
+  "keyFacts": [
+    {
+      "text": "You MUST take a standards check when DVSA asks, even if you have no car or aren't working as an ADI.",
+      "law": true
+    },
+    "Usually every 4 years; you may be called sooner because of your pupils' driving test results.",
+    "About 45 minutes, with the pupil driving for about 40 minutes.",
+    "Fail 3 standards checks and you're removed from the ADI register and must retake the ADI tests.",
+    {
+      "text": "When giving lessons you MUST display your ADI registration at the passenger-side edge of the windscreen.",
+      "law": true
+    }
+  ],
+  "visual": {
+    "type": "table",
+    "caption": "Scores and grades out of 51 (GOV.UK)",
+    "data": {
+      "columns": [
+        "Total score",
+        "Part 3",
+        "Standards check"
+      ],
+      "rows": [
+        [
+          "0 to 30",
+          "Fail: you won't join the register",
+          "Fail: unsatisfactory"
+        ],
+        [
+          "31 to 42",
+          "Grade B: you can join the register",
+          "Grade B: you stay on the register"
+        ],
+        [
+          "43 to 51",
+          "Grade A: high standard of instruction",
+          "Grade A: high standard of instruction"
+        ]
+      ],
+      "notes": [
+        "Each competence: 0 no evidence · 1 a few elements · 2 most elements · 3 all elements.",
+        "Automatic fail: 7 or less in risk management, or the examiner stops the lesson for danger."
+      ]
+    }
+  },
+  "confused": {
+    "a": {
+      "label": "Part 3",
+      "points": [
+        "Last of the 3 qualifying tests",
+        "Bring a pupil, a car and trainee licence (or licence or passport)"
+      ]
+    },
+    "b": {
+      "label": "Standards check",
+      "points": [
+        "For qualified ADIs, usually every 4 years; free",
+        "Bring a pupil, a suitable car and your ADI certificate"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "An ADI scores 42 on a standards check, with 9 in risk management. What's the result?",
+      "options": [
+        "Grade B",
+        "Grade A",
+        "Fail",
+        "Automatic fail on risk management"
+      ],
+      "answerIndex": 0,
+      "why": "GOV.UK standards check: 31 to 42 is grade B; grade A starts at 43. The automatic fail applies only at 7 or less in risk management."
+    },
+    {
+      "question": "On part 3 and the standards check, what does a score of 2 for a competence mean?",
+      "options": [
+        "Competence shown in most elements",
+        "No evidence of competence",
+        "A few elements of competence shown",
+        "Competence shown in all elements"
+      ],
+      "answerIndex": 0,
+      "why": "Examiner guidance 3.12 and 4.10: 0 = no evidence, 1 = a few elements, 2 = most elements, 3 = all elements. A 2 is acceptable with clear areas to improve."
+    }
+  ],
+  "traps": [
+    "30 is still a fail: grade B starts at 31.",
+    "A high total can't save you: 7 or less in risk management is an automatic fail.",
+    "Your pupil can't be an ADI or someone preparing for their own part 3.",
+    "You can complain about how the check was run, but you can't appeal the examiner's decision."
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Approved driving instructor (ADI) standards check",
+      "ref": "Overview; What to take; What happens at the standards check; Your standards check result",
+      "url": "https://www.gov.uk/adi-standards-check"
+    },
+    {
+      "doc": "GOV.UK: Approved driving instructor (ADI) part 3 test",
+      "ref": "Booking your test; What to take; What happens during the test; Your test result",
+      "url": "https://www.gov.uk/adi-part-3-test"
+    },
+    {
+      "doc": "DVSA: Carrying out instructor tests and checks (examiner guidance)",
+      "ref": "3.12 Completing the assessment; 4.1; 4.5; 4.10 Completing the assessment (complaints procedure)",
+      "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-instructor-tests-and-checks/4-the-test-of-continued-ability-to-instruct-standards-check"
+    },
+    {
+      "doc": "GOV.UK: Manage your ADI registration",
+      "ref": "Renew or update your registration",
+      "url": "https://www.gov.uk/manage-approved-driving-instructor-registration"
+    },
+    {
+      "doc": "Road Traffic Act 1988",
+      "ref": "Section 128: the Registrar may remove a name for refusing to undergo, or failing, a test of continued ability",
+      "url": "https://www.legislation.gov.uk/ukpga/1988/52/section/128"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

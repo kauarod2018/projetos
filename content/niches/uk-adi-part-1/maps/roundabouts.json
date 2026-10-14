@@ -59,7 +59,9 @@
         "signalLeftAfterExit": 2
       }
     ],
-    "notes": []
+    "notes": [
+      "Unless signs or markings show otherwise (rule 186)"
+    ]
   },
   "confused": {
     "a": {
@@ -93,12 +95,12 @@
       "question": "A cyclist in the left lane of a roundabout is signalling right. What does it most likely mean?",
       "options": [
         "Moving to the right lane",
-        "Going around the roundabout",
+        "Continuing across or around it",
         "Leaving at the next exit",
         "A forgotten signal"
       ],
       "answerIndex": 1,
-      "why": "Rule 186: cyclists and horse riders may stay in the left lane, signalling right, to go around. Don't cut across them."
+      "why": "Rule 186: cyclists and horse riders may stay in the left lane, signalling right to show they are not leaving. Don't cut across them."
     }
   ],
   "traps": [
@@ -109,7 +111,7 @@
   "sources": [
     {
       "doc": "The Highway Code",
-      "ref": "Rules 184–190",
+      "ref": "Rules 184–188",
       "url": "https://www.gov.uk/guidance/the-highway-code"
     },
     {
@@ -119,17 +121,19 @@
     },
     {
       "doc": "DVSA: Carrying out driving tests: examiner guidance (DT1)",
-      "ref": "1.10 Definitions of recorded faults",
+      "ref": "1.10 Positioning: normal driving, lane discipline",
       "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-driving-tests-dt1/1-car-driving-test"
     },
     {
       "doc": "DVSA: Carrying out driving tests: examiner guidance (DT1)",
-      "ref": "12 Signals (late exit signals at roundabouts)",
+      "ref": "12 Signals (late exit signals at roundabouts), Lane discipline",
       "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-driving-tests-dt1/12-finding-and-recording-faults-on-the-digital-test-report"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Highway Code rules 184–188; Know Your Traffic Signs p. 81 (mini-roundabouts); DT1 1.10 (positioning), 12 (Signals, Lane discipline)"
   }
 }

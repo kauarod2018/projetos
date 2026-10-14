@@ -127,12 +127,14 @@
     },
     {
       "doc": "Know Your Traffic Signs",
-      "ref": "Traffic signals (pp. 140–141)",
+      "ref": "Traffic signals (p. 140: secondary signals, right-turn arrows)",
       "url": "https://www.gov.uk/government/publications/know-your-traffic-signs"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Highway Code Light signals controlling traffic; Signals by authorised persons; rules 105–109, 175–178; KYTS p. 140"
   }
 }

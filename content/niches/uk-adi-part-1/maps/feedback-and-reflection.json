@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "id": "feedback-and-reflection",
+  "niche": "uk-adi-part-1",
+  "area": "instructional-techniques",
+  "order": 5,
+  "tier": "complete",
+  "officialTopics": [
+    "instructional-techniques"
+  ],
+  "title": "Feedback, Questions & Reflection",
+  "whatItIs": "The standard asks instructors to give formative feedback, answer questions and help learners reflect. Part 3 and the standards check mark all three.",
+  "keyFacts": [
+    "Feedback should be relevant, positive and honest, never giving a false sense of ability.",
+    "Where possible, put a weakness as a learning opportunity; if something is dangerous, say so plainly.",
+    "Feedback is two-way: ideally prompted by the pupil, and how they felt is never ignored.",
+    "Deal with the pupil's questions as soon as possible, or point them to a suitable source.",
+    "End of lesson: the pupil reflects first; give a balanced overview if they miss strengths or weaknesses.",
+    "Instructors reflect too: unit 5 asks for a reflective log and non-defensive use of feedback."
+  ],
+  "visual": {
+    "type": "steps",
+    "caption": "After a safety-critical incident (examiner guidance 3.24)",
+    "items": [
+      {
+        "title": "Stop safely",
+        "text": "Find a safe place to examine the incident, soon after."
+      },
+      {
+        "title": "Let the pupil speak",
+        "text": "Give them time to express any fears or concerns the incident caused."
+      },
+      {
+        "title": "Reflect together",
+        "text": "Support them to reflect; clarify what they missed."
+      },
+      {
+        "title": "Agree a strategy",
+        "text": "Find strategies for next time; check they can use them."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Closed questions",
+      "points": [
+        "Useful to check knowledge",
+        "Of little use otherwise with an able pupil"
+      ]
+    },
+    "b": {
+      "label": "Open questions",
+      "points": [
+        "Encourage a higher level of thinking",
+        "May confuse a pupil who is struggling"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "At the end of a lesson an instructor simply asks 'what score would you give yourself?'. How does DVSA guidance see this?",
+      "options": [
+        "Meaningless on its own: a development need",
+        "Best practice for pupil reflection",
+        "Required at the end of every part 3",
+        "Only suitable for full licence holders"
+      ],
+      "answerIndex": 0,
+      "why": "Examiner guidance 3.24 (end of the session): simply asking 'what score would you give yourself' is meaningless and highlights a development need for the instructor."
+    },
+    {
+      "question": "A keen pupil keeps asking questions while approaching a busy junction. What's the best response?",
+      "options": [
+        "Praise the questions, focus on the hazard, answer when stopped",
+        "Answer each one fully straight away",
+        "Ban questions while driving",
+        "Ignore them until the next lesson"
+      ],
+      "answerIndex": 0,
+      "why": "Examiner guidance 3.24: manage the keenness without demotivating, e.g. 'good questions but hold onto them, let's focus on this hazard and we'll stop to cover them'."
+    }
+  ],
+  "traps": [
+    "Non-stop feedback, even accurate, can demotivate or be dangerous: silence can be powerful feedback.",
+    "Accepting a pupil's glowing self-assessment when there were risks isn't acceptable: honesty is key.",
+    "Feedback given long after an incident doesn't help: the pupil can't link it to what happened.",
+    "Refusing to hear reasonable feedback on your own performance shows a lack of competence."
+  ],
+  "sources": [
+    {
+      "doc": "DVSA: Carrying out instructor tests and checks (examiner guidance)",
+      "ref": "3.24 Teaching and learning strategies (teaching style; feedback; queries; end of the session); Risk management (safety-critical incidents)",
+      "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-instructor-tests-and-checks/3-the-instructional-ability-test-part-3"
+    },
+    {
+      "doc": "DVSA: National standard for driver and rider training",
+      "ref": "Elements 6.3.2 and 6.3.3; Unit 5 Evaluate and develop your knowledge, understanding and skills",
+      "url": "https://www.gov.uk/government/publications/national-standard-for-driver-and-rider-training/national-standard-for-driver-and-rider-training"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

@@ -11,7 +11,7 @@
   "title": "Lanes, Positioning & Lane Changes",
   "whatItIs": "Keep left unless overtaking or turning right, follow lane markings, and change lanes with MSM without forcing anyone to react.",
   "keyFacts": [
-    "Keep left unless signs say otherwise, or you're overtaking, turning right or passing an obstruction.",
+    "Keep left unless signs say otherwise, or you're overtaking, turning right or passing parked vehicles or pedestrians.",
     "Changing lane: mirrors, a sideways glance if needed, signal, then move when clear.",
     "Don't cut across cyclists when changing lane, including those in cycle lanes.",
     {
@@ -68,14 +68,14 @@
       "label": "Cycle lane: solid line",
       "points": [
         "You MUST NOT drive or park in it in its hours",
-        "Law: times are shown on the signs"
+        "Signs may show its hours of operation"
       ]
     },
     "b": {
       "label": "Cycle lane: broken line",
       "points": [
         "Don't drive or park in it unless unavoidable",
-        "Advice, but still give way to cyclists"
+        "Advice; give way to cyclists in any cycle lane"
       ]
     }
   },
@@ -107,7 +107,7 @@
     "Straddling marked lanes is a lane discipline fault.",
     "In slow traffic, don't move to a lane on your left to overtake.",
     "Keep well left on right-hand bends for a better view.",
-    "Outside its hours, use the bus lane: DT1 faults not using bus or cycle lanes when allowed."
+    "DT1 lists 'not using bus or cycle lanes when the times allow its use' as a positioning fault."
   ],
   "sources": [
     {
@@ -116,18 +116,25 @@
       "url": "https://www.gov.uk/guidance/the-highway-code"
     },
     {
+      "doc": "Know Your Traffic Signs",
+      "ref": "Bus and cycle signs (page 39): mandatory cycle lane",
+      "url": "https://www.gov.uk/government/publications/know-your-traffic-signs"
+    },
+    {
       "doc": "DVSA: National standard for driving cars and light vans (category B)",
       "ref": "Element 3.1.1",
       "url": "https://www.gov.uk/guidance/national-standard-for-driving-cars-and-light-vans-category-b"
     },
     {
       "doc": "DVSA: Carrying out driving tests: examiner guidance (DT1)",
-      "ref": "11.11, 12 Positioning",
+      "ref": "11.11 Positioning; 12 Positioning (normal driving, lane discipline)",
       "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-driving-tests-dt1/11-guide-to-assessment-and-marking"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Highway Code rules 133–143, 151, 160; Know Your Traffic Signs p. 39; National standard for cars 3.1.1; DT1 11.11 and 12 Positioning"
   }
 }

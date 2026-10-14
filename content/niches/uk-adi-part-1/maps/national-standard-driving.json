@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "id": "national-standard-driving",
+  "niche": "uk-adi-part-1",
+  "area": "instructional-techniques",
+  "order": 8,
+  "tier": "complete",
+  "officialTopics": [
+    "national-standards"
+  ],
+  "title": "National Standard for Driving Cars",
+  "whatItIs": "DVSA's standard for what you need to be a safe and responsible driver of a category B car or light van. It's split into roles, then units, then elements.",
+  "keyFacts": [
+    "Roles split into units; units into elements.",
+    "It applies to manual and automatic cat B vehicles, on any road, at any time, in any weather.",
+    "'May cause drowsiness' on a medicine means it's highly likely to cause drowsiness.",
+    "Whatever the legal limits, it's best to have no alcohol in your system.",
+    "Have an eyesight test at least every 2 years: eyesight gets worse over time.",
+    "Role 5 values regular driver development sessions with a competent instructor."
+  ],
+  "visual": {
+    "type": "table",
+    "caption": "The 5 roles and their units",
+    "data": {
+      "columns": [
+        "Role",
+        "Units"
+      ],
+      "rows": [
+        [
+          "1 Prepare for a journey",
+          "1.1 You, passengers · 1.2 Vehicle · 1.3 Plan"
+        ],
+        [
+          "2 Guide and control the vehicle",
+          "2.1 Start and stop · 2.2 Drive · 2.3 Towing"
+        ],
+        [
+          "3 Use the road (Highway Code)",
+          "3.1 Negotiate the road · 3.2 Signs"
+        ],
+        [
+          "4 Drive safely in traffic",
+          "4.1 Others · 4.2 Minimise risk · 4.3 Incidents"
+        ],
+        [
+          "5 Review over a lifetime",
+          "5.1 Experience · 5.2 Keep up to date"
+        ]
+      ],
+      "notes": []
+    }
+  },
+  "confused": {
+    "a": {
+      "label": "Performance standards",
+      "points": [
+        "What you must be able to do",
+        "e.g. scan the driving space, near and far"
+      ]
+    },
+    "b": {
+      "label": "Knowledge and understanding",
+      "points": [
+        "What you must know and understand",
+        "e.g. what aquaplaning is and when it happens"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Which role of the National standard for driving cars and light vans covers learning from experience and keeping up to date?",
+      "options": [
+        "Role 5",
+        "Role 1",
+        "Role 3",
+        "Role 4"
+      ],
+      "answerIndex": 0,
+      "why": "Role 5 'Review and adjust driving behaviour over lifetime' has unit 5.1 Learn from experience and unit 5.2 Keep up to date with changes."
+    },
+    {
+      "question": "Congestion makes you stop in a tunnel. What gap does the national standard say to leave to the vehicle in front?",
+      "options": [
+        "At least 5 metres",
+        "At least 2 metres",
+        "At least 10 metres",
+        "A 2-second gap"
+      ],
+      "answerIndex": 0,
+      "why": "Element 4.2.1: if congestion in a tunnel causes you to stop, leave at least a 5 metre gap between you and the vehicle in front."
+    }
+  ],
+  "traps": [
+    "Eco-safe driving never means reducing safety to improve economy.",
+    "Use an emergency roadside telephone rather than a mobile: the operator can find your exact position.",
+    "Any alcohol can make you more likely to fall asleep, even below the legal limit."
+  ],
+  "sources": [
+    {
+      "doc": "DVSA: National standard for driving cars and light vans (category B)",
+      "ref": "Introduction; Roles 1 to 5 (elements 1.1.2, 4.2.1, 4.2.3, 4.3.1, 5.1.1)",
+      "url": "https://www.gov.uk/guidance/national-standard-for-driving-cars-and-light-vans-category-b"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}
