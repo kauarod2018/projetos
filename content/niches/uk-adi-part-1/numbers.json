@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "niche": "uk-adi-part-1",
+  "items": [
+    {
+      "key": "test-format",
+      "label": "ADI part 1 multiple choice",
+      "value": "100 questions in 1 hour 30 minutes · 25 in each of 4 bands · pass: 85 overall and at least 20 in every band",
+      "jurisdiction": "great-britain",
+      "sources": [
+        {
+          "doc": "GOV.UK: Approved driving instructor (ADI) part 1 test",
+          "ref": "Multiple-choice questions; Pass mark and test result",
+          "url": "https://www.gov.uk/adi-part-1-test"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "GOV.UK ADI part 1 test guide, 14 Oct 2026"
+      }
+    },
+    {
+      "key": "hazard-perception",
+      "label": "ADI hazard perception",
+      "value": "14 clips, up to 5 points per developing hazard · pass: 57 out of 75",
+      "jurisdiction": "great-britain",
+      "sources": [
+        {
+          "doc": "GOV.UK: Approved driving instructor (ADI) part 1 test",
+          "ref": "Hazard perception test; Pass mark and test result",
+          "url": "https://www.gov.uk/adi-part-1-test"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "GOV.UK ADI part 1 test guide, 14 Oct 2026"
+      }
+    },
+    {
+      "key": "pass-certificate",
+      "label": "After passing part 1",
+      "value": "The pass certificate number lasts 2 years: qualify as an ADI in that time · resits: wait at least 3 working days",
+      "jurisdiction": "great-britain",
+      "sources": [
+        {
+          "doc": "GOV.UK: Approved driving instructor (ADI) part 1 test",
+          "ref": "Pass mark and test result; Booking your test",
+          "url": "https://www.gov.uk/adi-part-1-test"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "GOV.UK ADI part 1 test guide, 14 Oct 2026"
+      }
+    }
+  ]
+}

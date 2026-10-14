@@ -1,0 +1,223 @@
+{
+  "schemaVersion": 1,
+  "niche": "uk-adi-part-1",
+  "meta": {
+    "title": "{totalMaps} Visual Revision Maps for the {examName} | {brand}",
+    "description": "A4 visual revision maps for the DVSA approved driving instructor (ADI) part 1 theory test: all 4 question bands, with original practice questions."
+  },
+  "topBar": "Complete pack: {totalMaps} maps + {bonuses} bonuses · One-time payment",
+  "hero": {
+    "eyebrow": "ADI part 1 · DVSA driving instructor theory test {year}",
+    "h1": "{totalMaps} visual revision maps to pass ADI part 1",
+    "highlight": "visual revision maps",
+    "sub": "Illustrated A4 maps for the driving instructor theory test, organised by the 4 question bands: {areasList}. Ready to print or to revise on your phone.",
+    "primaryCta": "Get my maps now",
+    "secondaryCta": "See what's inside",
+    "bullets": [
+      "One topic per page, same layout every time",
+      "Checked against GOV.UK, The Highway Code and the DVSA standards",
+      "Download and keep forever, with free updates",
+      "{bonuses} bonuses in the Complete pack"
+    ]
+  },
+  "socialProof": null,
+  "pain": {
+    "eyebrow": "Why it's worth revising properly",
+    "stat": "37%",
+    "title": "Only 37% passed ADI part 1 last year",
+    "text": "DVSA figures for April 2025 to March 2026 show 31,081 ADI part 1 tests and a 37% pass rate. You need 85 out of 100 overall and at least 20 out of 25 in every band, so one weak band is enough to fail. Visual maps help you cover all four.",
+    "source": "DVSA ADI qualifying test data (DRT511A): 31,081 tests, 11,512 passes in 2025 to 2026 (provisional)."
+  },
+  "pages": {
+    "eyebrow": "Real pages",
+    "title": "Real pages from the material",
+    "text": "These are the actual maps you download: one topic per A4 page, same layout every time."
+  },
+  "areas": {
+    "eyebrow": "What's covered",
+    "title": "The 4 question bands",
+    "text": "Every map is checked against GOV.UK, The Highway Code or the DVSA standards, and the source is printed on the page."
+  },
+  "lookInside": {
+    "eyebrow": "Look inside",
+    "title": "Everything you need on one page",
+    "mapId": "client-centred-learning",
+    "points": [
+      {
+        "title": "One topic, one page",
+        "text": "A short definition, then the key facts in plain English."
+      },
+      {
+        "title": "The visual does the work",
+        "text": "Tables, steps and figures instead of long paragraphs."
+      },
+      {
+        "title": "LAW badge",
+        "text": "Shows what the law requires and what is guidance or good practice."
+      },
+      {
+        "title": "Practice questions explained",
+        "text": "Original questions in the style of the test, with the reason the answer is right."
+      },
+      {
+        "title": "Traps",
+        "text": "The mistakes that cost candidates marks, so you don't make them."
+      }
+    ]
+  },
+  "gallery": {
+    "maps": [
+      "mirrors-signals-manoeuvre",
+      "test-faults",
+      "client-centred-learning",
+      "show-me-tell-me",
+      "standards-check"
+    ],
+    "bonuses": []
+  },
+  "strategic": {
+    "eyebrow": "Strategic content",
+    "title": "Built around how ADI part 1 catches people out",
+    "cards": [
+      {
+        "icon": "hash",
+        "title": "Numbers to know",
+        "text": "Stopping distances, test fault limits, penalty points and qualifying deadlines in one table."
+      },
+      {
+        "icon": "graduation-cap",
+        "title": "Instructional techniques",
+        "text": "Client-centred learning, risk management and the national standards, made visual."
+      },
+      {
+        "icon": "eye",
+        "title": "Traps",
+        "text": "Every map ends with the mistakes candidates make most."
+      }
+    ]
+  },
+  "whoFor": {
+    "eyebrow": "Who it's for",
+    "title": "Made for future driving instructors",
+    "cards": [
+      {
+        "icon": "calendar-days",
+        "title": "Your part 1 is booked",
+        "text": "Revise all four bands in the time you have left, one page at a time."
+      },
+      {
+        "icon": "car",
+        "title": "Experienced drivers",
+        "text": "Turn years of driving habit into the exact rules the test asks about."
+      },
+      {
+        "icon": "rotate-ccw",
+        "title": "You need another go",
+        "text": "Your result letter shows the weak band: go straight to those maps."
+      }
+    ]
+  },
+  "bonuses": {
+    "eyebrow": "Bonuses",
+    "title": "{bonuses} bonuses included in the Complete pack",
+    "text": "Extra guides that cover what the maps don't: quick reference sheets, the day of the test and quick revision."
+  },
+  "access": {
+    "eyebrow": "How access works",
+    "title": "From payment to revising in minutes",
+    "steps": [
+      "Buy securely through Hotmart",
+      "Get your access email from Hotmart within minutes",
+      "Log in to the members area",
+      "Download your PDFs",
+      "Revise with confidence"
+    ]
+  },
+  "testimonials": [],
+  "pricing": {
+    "eyebrow": "Prices",
+    "title": "Choose your pack",
+    "sub": "One-time payment. No subscription. Download and keep forever.",
+    "priceNote": "One-time payment",
+    "vatNote": "Prices include VAT for UK buyers.",
+    "basic": {
+      "name": "Basic",
+      "desc": "{basicMaps} essential maps covering all 4 bands",
+      "features": [
+        "{basicMaps} essential A4 maps",
+        "All 4 question bands",
+        "Print or use on your phone"
+      ],
+      "missingTitle": "Basic version. Only Complete includes:",
+      "missing": [
+        "All {totalMaps} maps",
+        "The {bonuses} bonuses",
+        "The numbers table and flashcards"
+      ],
+      "cta": "Get Basic"
+    },
+    "complete": {
+      "name": "Complete",
+      "badge": "Recommended",
+      "desc": "All {totalMaps} maps + {bonuses} bonuses",
+      "features": [
+        "All {totalMaps} A4 maps",
+        "{bonuses} bonuses, including a numbers table and flashcards",
+        "Free updates when the rules change",
+        "Support by email"
+      ],
+      "cta": "Get Complete"
+    }
+  },
+  "guarantee": {
+    "title": "Risk-free for {guaranteeDays} days",
+    "text": "If the maps aren't right for you, ask for a refund within {guaranteeDays} days of buying and you'll get your money back in full. No questions asked."
+  },
+  "faq": {
+    "eyebrow": "Questions",
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "q": "Which test is it for?",
+        "a": "The DVSA approved driving instructor (ADI) part 1 theory test in Great Britain: the multiple-choice part with its 4 bands. It is not the learner driver theory test."
+      },
+      {
+        "q": "Is it up to date?",
+        "a": "This is version {version}. Each map is checked against GOV.UK guidance, The Highway Code or the DVSA national standards, and the date of the check is printed on every page ({checkedOn}). When the rules change, we update the PDFs and you get the new version free."
+      },
+      {
+        "q": "Is this official DVSA material?",
+        "a": "No. It's an independent revision guide based on the official sources DVSA lists for the test that are free on GOV.UK. All the practice questions are our own, not taken from the DVSA question bank."
+      },
+      {
+        "q": "Does it cover hazard perception?",
+        "a": "The maps cover the multiple-choice part. For hazard perception, practise with video clips, such as the official DVSA e-learning kit."
+      },
+      {
+        "q": "How do I receive it?",
+        "a": "Right after you pay, Hotmart emails you your access to the members area, where you download the PDFs."
+      },
+      {
+        "q": "Can I print it?",
+        "a": "Yes. Every map is an A4 page, made to print at home."
+      },
+      {
+        "q": "Does it work on my phone?",
+        "a": "Yes, the PDFs open on any device. They're designed for A4, so on a phone you zoom in. The flashcards also come in a phone version."
+      },
+      {
+        "q": "Are the files editable?",
+        "a": "No. They're high-resolution PDFs for your personal use."
+      },
+      {
+        "q": "Can I get a refund?",
+        "a": "Yes. You have {guaranteeDays} days from your purchase to ask for a full refund through Hotmart, no questions asked."
+      }
+    ]
+  },
+  "finalCta": {
+    "title": "Revise smarter for your CSCS test",
+    "text": "{totalMaps} visual maps, {bonuses} bonuses and {guaranteeDays} days to decide.",
+    "cta": "Get my maps now"
+  }
+}

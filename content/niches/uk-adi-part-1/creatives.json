@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "niche": "uk-adi-part-1",
+  "slides": [
+    {
+      "kind": "hook",
+      "eyebrow": "ADI part 1",
+      "title": "Only 37% passed last year",
+      "text": "Revise all 4 bands with visual maps, one page at a time.",
+      "source": "DVSA ADI qualifying test data, 2025 to 2026 (provisional)."
+    },
+    {
+      "kind": "page",
+      "mapId": "mirrors-signals-manoeuvre",
+      "title": "One topic. One page.",
+      "text": "Key facts, a clear visual, test questions and traps on a single A4 map.",
+      "focusY": 0,
+      "zoom": 1
+    },
+    {
+      "kind": "page",
+      "mapId": "test-faults",
+      "title": "See the rules",
+      "text": "Fault limits, deadlines and what each one means for your pupils.",
+      "focusY": 24,
+      "zoom": 1
+    },
+    {
+      "kind": "page",
+      "mapId": "mirrors-signals-manoeuvre",
+      "title": "Know the traps",
+      "text": "Every map ends with the mistakes that cost candidates marks.",
+      "focusY": 90,
+      "zoom": 1
+    },
+    {
+      "kind": "offer",
+      "title": "{totalMaps} visual maps + {bonuses} bonuses",
+      "text": "From {priceBasic}. One-time payment. {guaranteeDays}-day money-back guarantee.",
+      "cta": "Get my maps"
+    }
+  ]
+}

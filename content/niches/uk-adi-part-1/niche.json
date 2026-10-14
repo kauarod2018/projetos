@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "id": "uk-adi-part-1",
+  "examName": "ADI Part 1 Theory Test",
+  "published": false,
+  "filePrefix": "ADI-Part-1",
+  "store": {
+    "category": "Driving instructors",
+    "countryName": "United Kingdom",
+    "productName": "ADI Part 1: Visual Revision Maps",
+    "cardText": "One-page maps for the driving instructor theory test: all 4 question bands, with practice questions and traps.",
+    "format": "PDF · A4 · instant download",
+    "coverTagline": "Driving instructor theory revision maps",
+    "coverBadges": [
+      "{maps} one-page maps",
+      "{questions} practice questions",
+      "{bonuses} bonuses"
+    ],
+    "keywords": [
+      "ADI",
+      "ADI part 1",
+      "driving instructor",
+      "PDI",
+      "approved driving instructor",
+      "instructor theory test",
+      "DVSA",
+      "road procedure",
+      "instructional techniques",
+      "national standard",
+      "Highway Code",
+      "Great Britain"
+    ],
+    "badge": "New",
+    "rank": 2
+  },
+  "theme": {
+    "primary": "#0F3D5E",
+    "accent": "#F4B740"
+  },
+  "country": "GB",
+  "jurisdiction": "Great Britain (England, Scotland and Wales)",
+  "language": "en-GB",
+  "currency": "GBP",
+  "drivingSide": "left",
+  "primarySource": "GOV.UK guidance, The Highway Code and the DVSA national standards",
+  "areas": [
+    {
+      "slug": "road-procedure",
+      "name": "Road Procedure",
+      "colour": "#1D4ED8",
+      "icon": "route",
+      "officialTopics": [
+        "road-procedure",
+        "hazards-and-speed",
+        "vulnerable-road-users"
+      ]
+    },
+    {
+      "slug": "signs-control-mechanics",
+      "name": "Signs, Car Control, Pedestrians & Mechanics",
+      "colour": "#B45309",
+      "icon": "settings",
+      "officialTopics": [
+        "traffic-signs",
+        "car-control",
+        "mechanical-knowledge"
+      ]
+    },
+    {
+      "slug": "test-disabilities-law",
+      "name": "Driving Test, Disabilities & the Law",
+      "colour": "#7C3AED",
+      "icon": "scale",
+      "officialTopics": [
+        "driving-test",
+        "disabilities",
+        "law",
+        "adi-qualifying"
+      ]
+    },
+    {
+      "slug": "instructional-techniques",
+      "name": "Publications & Instructional Techniques",
+      "colour": "#047857",
+      "icon": "graduation-cap",
+      "officialTopics": [
+        "instructional-techniques",
+        "national-standards"
+      ]
+    }
+  ],
+  "officialTopics": {
+    "authority": "HelpTest syllabus for the DVSA ADI part 1 test",
+    "items": [
+      {
+        "slug": "road-procedure",
+        "name": "Road procedure: junctions, roundabouts, motorways, overtaking"
+      },
+      {
+        "slug": "hazards-and-speed",
+        "name": "Hazard awareness, speed and stopping"
+      },
+      {
+        "slug": "vulnerable-road-users",
+        "name": "Vulnerable road users and pedestrians"
+      },
+      {
+        "slug": "traffic-signs",
+        "name": "Traffic signs, road markings and signals"
+      },
+      {
+        "slug": "car-control",
+        "name": "Car control, skidding and eco-safe driving"
+      },
+      {
+        "slug": "mechanical-knowledge",
+        "name": "Mechanical knowledge and vehicle safety checks"
+      },
+      {
+        "slug": "driving-test",
+        "name": "The practical driving test and how it is marked"
+      },
+      {
+        "slug": "disabilities",
+        "name": "Disabilities, health and vehicle adaptations"
+      },
+      {
+        "slug": "law",
+        "name": "The law: licences, documents, offences and penalties"
+      },
+      {
+        "slug": "adi-qualifying",
+        "name": "Qualifying and staying registered as an ADI"
+      },
+      {
+        "slug": "instructional-techniques",
+        "name": "Instructional techniques and client-centred learning"
+      },
+      {
+        "slug": "national-standards",
+        "name": "The national standards and the ADI code of practice"
+      }
+    ]
+  },
+  "coverage": {
+    "minMapsPerTopicComplete": 1,
+    "minMapsPerTopicBasic": 1
+  },
+  "content": {
+    "version": "0.1.0",
+    "checkedOn": null
+  },
+  "pricing": {
+    "basic": 24,
+    "complete": 39,
+    "anchor": null,
+    "vatIncluded": true
+  },
+  "checkout": {
+    "basicUrl": "",
+    "completeUrl": ""
+  },
+  "guaranteeDays": 15,
+  "updatePolicy": "Free updated PDFs whenever The Highway Code, the DVSA guidance or the test changes, for as long as the product is on sale.",
+  "disclaimer": "This product is independent and is not affiliated with, endorsed by or connected to DVSA or any government body. It does not guarantee that you will pass the test.",
+  "attributions": [
+    "Contains public sector information published by GOV.UK and the Driver and Vehicle Standards Agency, licensed under the Open Government Licence v3.0.",
+    "All practice questions are original and are not taken from the DVSA question bank or revision materials."
+  ]
+}

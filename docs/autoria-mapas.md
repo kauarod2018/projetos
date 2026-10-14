@@ -111,3 +111,34 @@ SI 1992/2966; Control of Noise at Work Regulations 2005, SI 2005/1643). Cite the
 `LAW` in this product = a duty in the Act or regulations (or "must" in an HSE text that states the legal duty). HSE
 advice ("should") is never `law`. Safety signs: never draw sign pictograms; use `cards` with a colour `swatch` and
 words for shapes and colours.
+
+## Sources for the ADI part 1 product (`uk-adi-part-1`)
+
+The DVSA approved driving instructor (ADI) part 1 test has 100 multiple-choice questions, 25 in each of 4 bands
+(the 4 areas of this product): road procedure; traffic signs and signals, car control, pedestrians and mechanical
+knowledge; driving test, disabilities and the law; publications and instructional techniques. DVSA lists the source
+books on https://www.gov.uk/adi-part-1-test (Revision and practice). We use only the ones that are free on GOV.UK.
+Texts in `$SP/adi/` and `$SP/hgv/`:
+
+| File | What it is | URL to cite |
+|---|---|---|
+| `$SP/hgv/highway-code/*.txt` (also `adi/govuk/guidance_the-highway-code.txt`, all in one) | The Highway Code, by section | https://www.gov.uk/guidance/the-highway-code |
+| `kyts.txt` via `python3 $SP/tools/kyts.py grep "<regex>" 150` | Know Your Traffic Signs | https://www.gov.uk/government/publications/know-your-traffic-signs |
+| `adi/national-standard-cars.txt` | National standard for driving cars and light vans (category B) | https://www.gov.uk/guidance/national-standard-for-driving-cars-and-light-vans-category-b |
+| `adi/national-standard-for-driver-and-rider-training.txt` | National standard for driver and rider training | https://www.gov.uk/government/publications/national-standard-for-driver-and-rider-training/national-standard-for-driver-and-rider-training |
+| `adi/approved-driving-instructor-adi-code-of-practice.txt` | ADI code of practice (current) | https://www.gov.uk/government/publications/driving-instructor-code-of-practice/approved-driving-instructor-adi-code-of-practice |
+| `adi/driving-instructor-code-of-practice-effective-date-to-be-confirmed.txt` | The new code, not yet in force: mention only as "a new code has been published, date to be confirmed" if at all | same publication page |
+| `adi/dt1.txt` | Carrying out driving tests: examiner guidance (DT1). Use sections 1, 6–14 only (DVSA excludes 2, 3, 4, 5 and 15 from the test) | https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-driving-tests-dt1 |
+| `adi/instructor-tests.txt` | Carrying out instructor tests and checks: examiner guidance (ADI parts 2, 3, standards check) | https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-instructor-tests-and-checks |
+| `adi/adi-part1.txt` | The ADI part 1 test itself | https://www.gov.uk/adi-part-1-test |
+| `adi/govuk/*.txt` | GOV.UK pages: learning to drive, driving test, penalty points, disqualification, eyesight, medical conditions, seat belts, child seats, insurance, MOT, vehicle tax, phones, drink-drive, speed limits, ADI parts 2 and 3, standards check, trainee licence, ADI registration, becoming an instructor | https://www.gov.uk/<file name with _ as /> |
+
+More GOV.UK pages: `python3 $SP/govuk.py /path out.txt`. Law: legislation.gov.uk (e.g. Road Traffic Act 1988, Motor
+Vehicles (Driving Licences) Regulations 1999 SI 1999/2864, Road Traffic (New Drivers) Act 1995). The paid books on
+the DVSA list (Driving: the essential skills, the Driving Instructor's Handbook, Practical Teaching Skills) are not
+used: never write facts "from" them.
+
+`LAW` in this product = MUST / MUST NOT in The Highway Code, or a duty set by law (an Act or regulations, or "must"
+on GOV.UK where it states the legal rule). The national standards and the code of practice are standards, not law:
+never `law` (the code of practice is voluntary). Signs: only official images from `content/assets/signs/gb/signs.json`
+in a `sign-grid`; never draw a sign.

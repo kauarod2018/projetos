@@ -1,0 +1,409 @@
+{
+  "schemaVersion": 1,
+  "niche": "uk-adi-part-1",
+  "maps": [
+    {
+      "id": "mirrors-signals-manoeuvre",
+      "area": "road-procedure",
+      "order": 1,
+      "tier": "basic",
+      "title": "Mirrors, Signals & Manoeuvre (MSM/PSL)",
+      "officialTopics": [
+        "road-procedure"
+      ]
+    },
+    {
+      "id": "junctions",
+      "area": "road-procedure",
+      "order": 2,
+      "tier": "basic",
+      "title": "Junctions: Emerging, Turning & Priorities",
+      "officialTopics": [
+        "road-procedure"
+      ]
+    },
+    {
+      "id": "roundabouts",
+      "area": "road-procedure",
+      "order": 3,
+      "tier": "basic",
+      "title": "Roundabouts & Mini-Roundabouts",
+      "officialTopics": [
+        "road-procedure"
+      ]
+    },
+    {
+      "id": "lane-discipline",
+      "area": "road-procedure",
+      "order": 4,
+      "tier": "complete",
+      "title": "Lanes, Positioning & Lane Changes",
+      "officialTopics": [
+        "road-procedure"
+      ]
+    },
+    {
+      "id": "overtaking",
+      "area": "road-procedure",
+      "order": 5,
+      "tier": "basic",
+      "title": "Overtaking & Being Overtaken",
+      "officialTopics": [
+        "road-procedure"
+      ]
+    },
+    {
+      "id": "motorways",
+      "area": "road-procedure",
+      "order": 6,
+      "tier": "basic",
+      "title": "Motorways & Smart Motorways",
+      "officialTopics": [
+        "road-procedure"
+      ]
+    },
+    {
+      "id": "speed-and-stopping",
+      "area": "road-procedure",
+      "order": 7,
+      "tier": "basic",
+      "title": "Speed Limits & Stopping Distances",
+      "officialTopics": [
+        "hazards-and-speed"
+      ]
+    },
+    {
+      "id": "hazard-awareness",
+      "area": "road-procedure",
+      "order": 8,
+      "tier": "complete",
+      "title": "Hazard Awareness & Anticipation",
+      "officialTopics": [
+        "hazards-and-speed"
+      ]
+    },
+    {
+      "id": "vulnerable-road-users",
+      "area": "road-procedure",
+      "order": 9,
+      "tier": "basic",
+      "title": "Hierarchy of Road Users & Vulnerable Users",
+      "officialTopics": [
+        "vulnerable-road-users"
+      ]
+    },
+    {
+      "id": "night-and-weather",
+      "area": "road-procedure",
+      "order": 10,
+      "tier": "complete",
+      "title": "Night Driving & Bad Weather",
+      "officialTopics": [
+        "hazards-and-speed"
+      ]
+    },
+    {
+      "id": "sign-shapes",
+      "area": "signs-control-mechanics",
+      "order": 1,
+      "tier": "basic",
+      "title": "Traffic Signs: Shapes, Colours & Meanings",
+      "officialTopics": [
+        "traffic-signs"
+      ]
+    },
+    {
+      "id": "road-markings",
+      "area": "signs-control-mechanics",
+      "order": 2,
+      "tier": "basic",
+      "title": "Road Markings & Studs",
+      "officialTopics": [
+        "traffic-signs"
+      ]
+    },
+    {
+      "id": "signals-and-lights",
+      "area": "signs-control-mechanics",
+      "order": 3,
+      "tier": "complete",
+      "title": "Traffic Lights, Signals & Authorised Signals",
+      "officialTopics": [
+        "traffic-signs"
+      ]
+    },
+    {
+      "id": "pedestrian-crossings",
+      "area": "signs-control-mechanics",
+      "order": 4,
+      "tier": "basic",
+      "title": "Pedestrian Crossings",
+      "officialTopics": [
+        "vulnerable-road-users",
+        "traffic-signs"
+      ]
+    },
+    {
+      "id": "car-controls",
+      "area": "signs-control-mechanics",
+      "order": 5,
+      "tier": "basic",
+      "title": "Car Controls & Moving Off Safely",
+      "officialTopics": [
+        "car-control"
+      ]
+    },
+    {
+      "id": "skids-and-braking",
+      "area": "signs-control-mechanics",
+      "order": 6,
+      "tier": "complete",
+      "title": "Braking, Skidding & ABS",
+      "officialTopics": [
+        "car-control"
+      ]
+    },
+    {
+      "id": "eco-safe-driving",
+      "area": "signs-control-mechanics",
+      "order": 7,
+      "tier": "complete",
+      "title": "Eco-Safe Driving",
+      "officialTopics": [
+        "car-control"
+      ]
+    },
+    {
+      "id": "show-me-tell-me",
+      "area": "signs-control-mechanics",
+      "order": 8,
+      "tier": "basic",
+      "title": "Vehicle Safety Checks: Show Me, Tell Me",
+      "officialTopics": [
+        "mechanical-knowledge"
+      ]
+    },
+    {
+      "id": "tyres-and-maintenance",
+      "area": "signs-control-mechanics",
+      "order": 9,
+      "tier": "basic",
+      "title": "Tyres, Lights & Vehicle Condition",
+      "officialTopics": [
+        "mechanical-knowledge"
+      ]
+    },
+    {
+      "id": "warning-lights-and-faults",
+      "area": "signs-control-mechanics",
+      "order": 10,
+      "tier": "complete",
+      "title": "Warning Lights, Faults & Breakdowns",
+      "officialTopics": [
+        "mechanical-knowledge"
+      ]
+    },
+    {
+      "id": "learner-rules",
+      "area": "test-disabilities-law",
+      "order": 1,
+      "tier": "basic",
+      "title": "Learner Drivers: Licence, Supervisor & L Plates",
+      "officialTopics": [
+        "law"
+      ]
+    },
+    {
+      "id": "practical-test-format",
+      "area": "test-disabilities-law",
+      "order": 2,
+      "tier": "basic",
+      "title": "The Car Driving Test: How It Works",
+      "officialTopics": [
+        "driving-test"
+      ]
+    },
+    {
+      "id": "test-faults",
+      "area": "test-disabilities-law",
+      "order": 3,
+      "tier": "basic",
+      "title": "Driving, Serious & Dangerous Faults",
+      "officialTopics": [
+        "driving-test"
+      ]
+    },
+    {
+      "id": "eyesight-and-health",
+      "area": "test-disabilities-law",
+      "order": 4,
+      "tier": "complete",
+      "title": "Eyesight Rules & Medical Conditions",
+      "officialTopics": [
+        "disabilities",
+        "law"
+      ]
+    },
+    {
+      "id": "disabilities-adaptations",
+      "area": "test-disabilities-law",
+      "order": 5,
+      "tier": "basic",
+      "title": "Disabilities, Adaptations & Test Support",
+      "officialTopics": [
+        "disabilities"
+      ]
+    },
+    {
+      "id": "documents",
+      "area": "test-disabilities-law",
+      "order": 6,
+      "tier": "basic",
+      "title": "Licence, Insurance, MOT & Vehicle Tax",
+      "officialTopics": [
+        "law"
+      ]
+    },
+    {
+      "id": "penalties",
+      "area": "test-disabilities-law",
+      "order": 7,
+      "tier": "basic",
+      "title": "Penalty Points, New Drivers & Disqualification",
+      "officialTopics": [
+        "law"
+      ]
+    },
+    {
+      "id": "drink-drugs-phones",
+      "area": "test-disabilities-law",
+      "order": 8,
+      "tier": "complete",
+      "title": "Drink, Drugs, Phones & Distraction",
+      "officialTopics": [
+        "law"
+      ]
+    },
+    {
+      "id": "seat-belts-children",
+      "area": "test-disabilities-law",
+      "order": 9,
+      "tier": "complete",
+      "title": "Seat Belts & Child Restraints",
+      "officialTopics": [
+        "law"
+      ]
+    },
+    {
+      "id": "becoming-an-adi",
+      "area": "test-disabilities-law",
+      "order": 10,
+      "tier": "basic",
+      "title": "Becoming an ADI: Parts 1, 2, 3 & the Register",
+      "officialTopics": [
+        "adi-qualifying"
+      ]
+    },
+    {
+      "id": "client-centred-learning",
+      "area": "instructional-techniques",
+      "order": 1,
+      "tier": "basic",
+      "title": "Client-Centred Learning",
+      "officialTopics": [
+        "instructional-techniques"
+      ]
+    },
+    {
+      "id": "lesson-planning",
+      "area": "instructional-techniques",
+      "order": 2,
+      "tier": "basic",
+      "title": "Planning a Lesson Around the Pupil",
+      "officialTopics": [
+        "instructional-techniques"
+      ]
+    },
+    {
+      "id": "risk-management",
+      "area": "instructional-techniques",
+      "order": 3,
+      "tier": "basic",
+      "title": "Managing Risk on a Lesson",
+      "officialTopics": [
+        "instructional-techniques"
+      ]
+    },
+    {
+      "id": "teaching-strategies",
+      "area": "instructional-techniques",
+      "order": 4,
+      "tier": "basic",
+      "title": "Teaching & Learning Strategies",
+      "officialTopics": [
+        "instructional-techniques"
+      ]
+    },
+    {
+      "id": "feedback-and-reflection",
+      "area": "instructional-techniques",
+      "order": 5,
+      "tier": "complete",
+      "title": "Feedback, Questions & Reflection",
+      "officialTopics": [
+        "instructional-techniques"
+      ]
+    },
+    {
+      "id": "learning-styles-barriers",
+      "area": "instructional-techniques",
+      "order": 6,
+      "tier": "complete",
+      "title": "How People Learn & Barriers to Learning",
+      "officialTopics": [
+        "instructional-techniques"
+      ]
+    },
+    {
+      "id": "national-standard-training",
+      "area": "instructional-techniques",
+      "order": 7,
+      "tier": "basic",
+      "title": "National Standard for Driver & Rider Training",
+      "officialTopics": [
+        "national-standards"
+      ]
+    },
+    {
+      "id": "national-standard-driving",
+      "area": "instructional-techniques",
+      "order": 8,
+      "tier": "complete",
+      "title": "National Standard for Driving Cars",
+      "officialTopics": [
+        "national-standards"
+      ]
+    },
+    {
+      "id": "code-of-practice",
+      "area": "instructional-techniques",
+      "order": 9,
+      "tier": "basic",
+      "title": "The ADI Code of Practice",
+      "officialTopics": [
+        "national-standards"
+      ]
+    },
+    {
+      "id": "standards-check",
+      "area": "instructional-techniques",
+      "order": 10,
+      "tier": "complete",
+      "title": "The Standards Check & Part 3 Marking",
+      "officialTopics": [
+        "adi-qualifying",
+        "instructional-techniques"
+      ]
+    }
+  ]
+}
