@@ -40,7 +40,7 @@
             "Book through the official GOV.UK service: £26 for multiple choice and £11 for hazard perception.",
             "Questions are based on The Highway Code, Know Your Traffic Signs and the DVSA guide to driving goods vehicles.",
             "Read the traps on your maps one last time, especially drivers' hours and loads.",
-            "Practise hazard perception clips: they're a separate skill."
+            "Practise hazard perception with the official DVSA guide to hazard perception."
           ]
         }
       ]
@@ -116,6 +116,8 @@
     }
   ],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "GOV.UK Become a qualified lorry or bus driver: Driver CPC part 1 theory test and test costs"
   }
 }

@@ -58,7 +58,7 @@
               ],
               [
                 "Two-week driving",
-                "90 hours in any two consecutive fixed weeks"
+                "90 hours in any two-weekly period"
               ],
               [
                 "Daily rest",
@@ -166,7 +166,7 @@
           "type": "callout",
           "tone": "tip",
           "title": "Duty isn't driving",
-          "text": "Under GB domestic rules, the 10-hour limit counts only driving, while the 11-hour limit counts all duty, including loading and other work."
+          "text": "Under GB domestic rules, the 10-hour limit counts only driving. The 11-hour limit counts all duty: driving and all other work, but not rest or breaks."
         }
       ]
     }
@@ -179,6 +179,8 @@
     }
   ],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "GOV.UK GV262 Drivers' hours: goods vehicles, sections 1.4–1.6, 2.2–2.3 and annex 2"
   }
 }

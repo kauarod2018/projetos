@@ -17,7 +17,7 @@
         {
           "type": "checklist",
           "span": 1,
-          "title": "In the cab (1–5)",
+          "title": "In the cab (checks 1–4)",
           "items": [
             "Front view: nothing in the swept area of the wipers; windscreen not cracked, scratched, discoloured or over-tinted.",
             "Mirrors in place, not damaged, obscured or insecure. Camera instead of a mirror? Check it works and the view is right.",
@@ -29,7 +29,7 @@
         {
           "type": "checklist",
           "span": 1,
-          "title": "In the cab (6–9)",
+          "title": "In the cab (checks 5–9)",
           "items": [
             "Horn works and is easy to reach from the driver's seat.",
             "Air builds up and the warning system works; no air leaks; footwell clear.",
@@ -53,7 +53,7 @@
         {
           "type": "checklist",
           "span": 1,
-          "title": "All round (10–18)",
+          "title": "All round (checks 10–18)",
           "items": [
             "All lights and indicators work; lenses fitted, clean and the right colour; stop lamps on with the brake; marker lights work.",
             "Fuel cap fitted; no fuel or oil leaks under the vehicle (engine on).",
@@ -68,15 +68,16 @@
         {
           "type": "checklist",
           "span": 1,
-          "title": "Wheels, coupling and load (19–27)",
+          "title": "Wheels, coupling and load (checks 19–27)",
           "items": [
-            "Tyres and wheels secure; tread at least 1 mm; correctly inflated; no deep sidewall cuts or visible cord.",
+            "Tyres and wheels secure; tread at least 1 mm; correctly inflated; no deep sidewall cuts; no cord visible.",
             "Wheel nuts tight (check wheel nut indicators if fitted); nothing trapped between twin wheels.",
             "Brake lines: couplings clean and in place, no leaks, damage or wear; trailer parking brake works.",
-            "Electrical wiring insulated and safe; trailer electrical couplings connected securely.",
+            "Wiring insulated and not likely to get caught; trailer electrical couplings secure; switches work.",
             "Trailer located correctly in the fifth wheel or coupling; secondary locking devices in position.",
             "Load doesn't move and isn't likely to move, with the right securing system.",
-            "Number plate, reflectors, markings and hazard panels: present, correct, secure and clean."
+            "Number plate, reflectors and markings correct, secure and clean; hazard panels right for dangerous goods.",
+            "Other equipment specific to the vehicle, for example loading or specialised equipment."
           ]
         },
         {
@@ -104,6 +105,8 @@
     }
   ],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "GOV.UK Carry out HGV daily walkaround checks (updated 21 September 2023): checks 1–27; record and report"
   }
 }
