@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "id": "ladders",
+  "niche": "uk-cscs-test",
+  "area": "high-risk-activities",
+  "order": 2,
+  "tier": "basic",
+  "officialTopics": [
+    "work-at-height"
+  ],
+  "title": "Ladders & Stepladders",
+  "whatItIs": "Ladders aren't banned, but they don't prevent or mitigate a fall. Use one only when a risk assessment shows better equipment isn't justified because the risk is low and the job short.",
+  "keyFacts": [
+    {
+      "text": "A ladder MUST only be used if a risk assessment shows better kit isn't justified: low risk, short use.",
+      "law": true
+    },
+    {
+      "text": "A secure handhold and secure support MUST always be available to the person on the ladder.",
+      "law": true
+    },
+    {
+      "text": "A portable ladder MUST be stopped from slipping: secure the stiles or use a stability device.",
+      "law": true
+    },
+    "Use the 1-in-4 rule: one unit out for every four units up (a 75° angle).",
+    "Maintain three points of contact when climbing and wherever possible at the work position.",
+    "As a guide, if you'd be up a ladder for more than 30 minutes at a time, use other equipment."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Leaning ladder rules (HSE: Safe use of ladders and stepladders)",
+    "columns": 2,
+    "items": [
+      {
+        "icon": "ruler",
+        "title": "1 in 4",
+        "text": "One unit out at the base for every four units up: a 75° angle.",
+        "law": false
+      },
+      {
+        "icon": "ban",
+        "title": "Not the top three rungs",
+        "text": "Don't work off them. Extend at least 1 m or three rungs above where you work.",
+        "law": false
+      },
+      {
+        "icon": "arrow-up-from-line",
+        "title": "1 m above the landing",
+        "text": "A ladder used for access to another level: tied, and at least 1 m above the landing point.",
+        "law": false
+      },
+      {
+        "icon": "zap",
+        "title": "6 m from power lines",
+        "text": "Not within 6 m horizontally of an overhead line unless it's dead or insulated.",
+        "law": false
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Leaning ladder",
+      "points": [
+        "Don't work off the top three rungs",
+        "Secure it: tie both stiles; footing is the last resort"
+      ]
+    },
+    "b": {
+      "label": "Stepladder",
+      "points": [
+        "Not the top three steps unless there's a suitable handhold",
+        "Face the work; avoid side-on loads such as side drilling"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You are putting up a leaning ladder. What angle does HSE guidance recommend?",
+      "options": [
+        "1 unit out for every 4 units up",
+        "1 unit out for every 2 units up",
+        "1 unit out for every 1 unit up",
+        "Flat against the wall with no gap"
+      ],
+      "answerIndex": 0,
+      "why": "HSE ladder guidance: use the 1-in-4 rule, one space or unit of measurement out for every four up, which is a 75° angle."
+    },
+    {
+      "question": "Which way of stopping a leaning ladder from slipping is the LAST resort?",
+      "options": [
+        "Tying both stiles to a suitable point",
+        "Using an effective stability device",
+        "Wedging the stiles against a wall",
+        "Someone footing the ladder"
+      ],
+      "answerIndex": 3,
+      "why": "HSE: tie both stiles; if that isn't practical use a stability device; if not, securely wedge it. Footing is the last resort."
+    }
+  ],
+  "traps": [
+    "Footing a ladder is the last resort, not the normal way to secure it.",
+    "Never stand a ladder on pallets, bricks, vans, towers or MEWPs: use firm, level ground.",
+    "Don't overreach: keep your belt buckle (or navel) within the stiles.",
+    "Found a defect in your pre-use check? Don't use the ladder: tell the person in charge."
+  ],
+  "sources": [
+    {
+      "doc": "Work at Height Regulations 2005 (SI 2005/735)",
+      "ref": "Schedule 6, paras 1, 5, 10",
+      "url": "https://www.legislation.gov.uk/uksi/2005/735/schedule/6"
+    },
+    {
+      "doc": "HSE: Safe use of ladders and stepladders",
+      "ref": "sections 2-7",
+      "url": "https://www.hse.gov.uk/work-at-height/ladders/index.htm"
+    },
+    {
+      "doc": "HSE HSG150 Health and safety in construction",
+      "ref": "paras 123, 218-228",
+      "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

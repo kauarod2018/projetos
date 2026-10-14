@@ -77,7 +77,7 @@
   },
   "onTheTest": [
     {
-      "question": "Extension leads for temporary lighting run along a busy corridor. What is the best way to stop people tripping?",
+      "question": "Extension leads for temporary lighting run along a busy corridor. What is the best way to stop trips?",
       "options": [
         "Tape the leads flat to the floor",
         "Put a warning sign at each end",
@@ -85,7 +85,7 @@
         "Tell everyone to watch where they walk"
       ],
       "answerIndex": 2,
-      "why": "HSG150 para 504: where cables are needed for temporary lighting or mains tools, run them at high level, particularly along corridors. Use cordless tools when possible."
+      "why": "HSG150 para 504: run cables for temporary lighting or mains tools at high level, especially along corridors."
     },
     {
       "question": "According to HSE's HSG150, what is the single largest cause of injuries on construction sites?",

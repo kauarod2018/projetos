@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "id": "work-at-height",
+  "niche": "uk-cscs-test",
+  "area": "high-risk-activities",
+  "order": 1,
+  "tier": "basic",
+  "officialTopics": [
+    "work-at-height"
+  ],
+  "title": "Working at Height: The Basics",
+  "whatItIs": "Work at height is work anywhere you could fall a distance liable to cause injury, even at or below ground level. Falls are the largest cause of death in construction.",
+  "keyFacts": [
+    {
+      "text": "Work at height MUST be avoided where the job can reasonably be done safely another way.",
+      "law": true
+    },
+    {
+      "text": "Collective protection (eg guard rails) MUST come before personal protection (eg a harness).",
+      "law": true
+    },
+    {
+      "text": "Work at height MUST only go ahead when the weather doesn't put people's safety at risk.",
+      "law": true
+    },
+    {
+      "text": "You MUST report any defect or activity at height that could endanger anyone.",
+      "law": true
+    },
+    "HSE makes no distinction between low and high falls: any work at height needs precautions.",
+    "If harnesses are used, plan how to rescue someone left hanging: don't rely on the emergency services."
+  ],
+  "visual": {
+    "type": "steps",
+    "caption": "Avoid, prevent, minimise: move on only when the step before isn't reasonably practicable",
+    "items": [
+      {
+        "title": "Avoid",
+        "text": "Do as much as possible from the ground, eg with extending tools."
+      },
+      {
+        "title": "Prevent a fall",
+        "text": "Existing safe place, then guarded scaffolds, towers or MEWPs, then work restraint."
+      },
+      {
+        "title": "Minimise the fall",
+        "text": "Nets or air bags close under the work; a fall arrest harness comes last."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Work restraint",
+      "points": [
+        "Short lanyard stops you reaching the edge",
+        "Prevents the fall happening at all"
+      ]
+    },
+    "b": {
+      "label": "Fall arrest",
+      "points": [
+        "Stops you after you have fallen",
+        "Last resort: needs a high anchor and a rescue plan"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You are planning a job at height. What must be considered first?",
+      "options": [
+        "Which harness and lanyard to use",
+        "How many ladders are needed",
+        "Whether the work can be done without working at height",
+        "Whether a net can go underneath"
+      ],
+      "answerIndex": 2,
+      "why": "Work at Height Regs reg 6(2): don't work at height where the job can reasonably be done safely another way. Avoid comes first."
+    },
+    {
+      "question": "Which of these protects everyone on a platform, not just one person?",
+      "options": [
+        "A harness and lanyard",
+        "A work restraint system",
+        "A boatswain's chair",
+        "A guard rail"
+      ],
+      "answerIndex": 3,
+      "why": "INDG401: a guard rail is collective protection and works without the worker acting. A harness is personal protection. Collective comes first (reg 7)."
+    }
+  ],
+  "traps": [
+    "There is no 'safe' low height: HSE draws no distinction between low and high falls.",
+    "A harness is not a first choice: picking it before options higher up the hierarchy isn't acceptable.",
+    "Ladders aren't banned, but they don't prevent a fall: use them only for low-risk, short jobs.",
+    "Falling into a hole in the ground counts as a fall from height too."
+  ],
+  "sources": [
+    {
+      "doc": "Work at Height Regulations 2005 (SI 2005/735)",
+      "ref": "regs 2, 4(3), 6, 7(1)(a), 14",
+      "url": "https://www.legislation.gov.uk/uksi/2005/735/regulation/6"
+    },
+    {
+      "doc": "HSE HSG150 Health and safety in construction",
+      "ref": "paras 116-128, 205-206, 215",
+      "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
+    },
+    {
+      "doc": "HSE INDG401 Working at height: A brief guide",
+      "ref": "Introduction; collective and personal protection; Figure 1",
+      "url": "https://www.hse.gov.uk/pubns/indg401.pdf"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

@@ -26,19 +26,19 @@
     "caption": "If plant or equipment touches an overhead line (HSE GS6)",
     "items": [
       {
-        "title": "Never touch the wires",
-        "text": "Assume they are live. Dead lines can be switched back on automatically."
+        "title": "Don't touch the wires",
+        "text": "Assume they are live: dead lines can be switched back on."
       },
       {
-        "title": "Call emergency services",
-        "text": "Say power lines are involved; ask them to contact the line's owner."
+        "title": "Get help",
+        "text": "Call the emergency services; say power lines are involved."
       },
       {
-        "title": "In a vehicle? Stay in it",
+        "title": "Stay in the vehicle",
         "text": "Or jump well clear. Never touch vehicle and ground together."
       },
       {
-        "title": "Keep everyone away",
+        "title": "Keep away",
         "text": "Ground near a fallen wire may be live. Wait for the owner's all-clear."
       }
     ]
@@ -65,13 +65,13 @@
     {
       "question": "A tipper lorry's raised body has touched an overhead power line. The driver is unhurt. What is the safest advice?",
       "options": [
-        "Climb down carefully, holding the handrail",
+        "Climb down holding the handrail",
         "Stay in the cab, or jump clear without touching cab and ground",
         "Lower the tipper body, then walk away",
         "Ask a workmate to pull you out of the cab"
       ],
       "answerIndex": 1,
-      "why": "GS6 para 31: stay in the vehicle or, if you must get out, jump as far as you can. Don't touch the vehicle while standing on the ground."
+      "why": "GS6 para 31: stay in the vehicle or, if you must get out, jump as far as you can. Don't touch the vehicle from the ground."
     },
     {
       "question": "Plant must work near, but not under, an overhead line. How far from the nearest wire should the ground-level safety zone extend?",
@@ -82,7 +82,7 @@
         "20 m"
       ],
       "answerIndex": 2,
-      "why": "GS6 para 19: the safety zone should extend 6 m horizontally from the nearest wire on either side. HSG150 para 499 also says barriers at least 6 m away."
+      "why": "GS6 para 19: the safety zone should extend 6 m horizontally either side of the nearest wire. HSG150 para 499 agrees."
     }
   ],
   "traps": [

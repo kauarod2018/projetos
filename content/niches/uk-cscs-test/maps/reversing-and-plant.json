@@ -26,20 +26,16 @@
     "caption": "Controlling reversing: most effective first (HSG144 Table 3)",
     "items": [
       {
-        "title": "Remove the need to reverse",
-        "text": "One-way systems, turning areas, drive-through loading."
-      },
-      {
-        "title": "Reverse less",
-        "text": "Fewer vehicle movements; reverse only if really needed."
+        "title": "Remove or reduce reversing",
+        "text": "One-way systems, turning areas, fewer vehicle movements."
       },
       {
         "title": "Keep people out",
-        "text": "Marked reversing areas with no pedestrians and physical stops."
+        "text": "Marked reversing areas, no pedestrians, physical stops."
       },
       {
         "title": "Safe system of work",
-        "text": "CCTV, mirrors, sensors, signallers in constant contact."
+        "text": "CCTV, mirrors, sensors; signaller in constant contact."
       },
       {
         "title": "Warnings",
@@ -51,31 +47,31 @@
     "a": {
       "label": "Signaller (banksman)",
       "points": [
-        "Trained and authorised by site management",
-        "Must see the driver and be seen at all times",
-        "Keeps pedestrians away from the vehicle"
+        "Trained and authorised",
+        "Sees the driver and is seen",
+        "Keeps pedestrians away"
       ]
     },
     "b": {
       "label": "Driver",
       "points": [
         "Checks behind before reversing",
-        "Uses visibility aids or a signaller",
-        "Stops if the signaller goes out of sight"
+        "Uses vision aids or a signaller",
+        "Stops if the signaller is out of sight"
       ]
     }
   },
   "onTheTest": [
     {
-      "question": "You are guiding a reversing lorry and step out of the driver's view. What should happen?",
+      "question": "You are guiding a reversing lorry and step out of the driver's view. What should the driver do?",
       "options": [
-        "The driver carries on slowly using the mirrors",
-        "The driver sounds the horn and keeps reversing",
-        "The vehicle stops until driver and signaller can see each other",
-        "Another worker shouts directions instead"
+        "Carry on slowly using the mirrors",
+        "Sound the horn and keep reversing",
+        "Stop until driver and signaller can see each other",
+        "Another worker shouts directions"
       ],
       "answerIndex": 2,
-      "why": "HSG144 Table 5: signaller and driver must be visible to each other; if not, stop the vehicle. HSG150 para 303: drivers who can't see the signaller stop immediately."
+      "why": "HSG150 para 303: drivers who can't see the signaller should stop immediately. HSG144 Table 5: if not visible to each other, stop the vehicle."
     },
     {
       "question": "What is the most effective way to cut the risk from reversing vehicles on site?",
@@ -86,14 +82,14 @@
         "Put up more warning signs"
       ],
       "answerIndex": 1,
-      "why": "HSG144 para 39 and INDG199: the most effective way is to avoid the need to reverse with one-way systems, turning areas and drive-through areas."
+      "why": "HSG144 para 39, INDG199: the most effective way is to avoid reversing, with one-way systems and turning areas."
     }
   ],
   "traps": [
-    "A reversing alarm is not enough on its own: warnings are the last line of protection.",
+    "A reversing alarm alone is not enough: warnings are the last line of protection.",
     "Telehandlers can have a big blind spot at the front right with the boom raised.",
-    "Over 60% of dumper deaths involve overturning: keep to safe gradients and off stockpiles.",
-    "Slewing plant needs more than 0.5 m clearance from obstructions, or the area fenced off."
+    "Over 60% of dumper deaths involve overturning: keep to safe gradients.",
+    "Slewing plant needs over 0.5 m clearance from obstructions, or fence the area."
   ],
   "sources": [
     {
@@ -103,12 +99,12 @@
     },
     {
       "doc": "HSE HSG144 The safe use of vehicles on construction sites",
-      "ref": "paras 39-40, Table 3, Tables 4-5, paras 52, 54, 57, 59",
+      "ref": "paras 39-40, 52, 57, 59; Tables 3-5",
       "url": "https://www.hse.gov.uk/pubns/priced/hsg144.pdf"
     },
     {
       "doc": "HSE HSG150 Health and safety in construction",
-      "ref": "paras 269-270, 276, 286, 301-303",
+      "ref": "paras 276, 286, 301-303",
       "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
     },
     {

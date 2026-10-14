@@ -27,8 +27,8 @@
       "text": "Steps MUST be taken to stop vehicles falling into excavations, pits or water, e.g. stop blocks.",
       "law": true
     },
-    "Only competent drivers authorised for that vehicle should drive site plant. Keys stay with them.",
-    "Leaving a vehicle? Park on level ground, turn the engine off and take the key."
+    "Only trained drivers authorised for that vehicle should drive site plant.",
+    "Leaving a vehicle? Turn the engine off and take the key."
   ],
   "visual": {
     "type": "cards",
@@ -36,39 +36,21 @@
     "columns": 3,
     "items": [
       {
-        "icon": "door-open",
-        "title": "Separate gates",
-        "text": "Separate ways in and out for vehicles and pedestrians.",
-        "law": false
-      },
-      {
         "icon": "footprints",
-        "title": "Walkways",
-        "text": "Firm, level and kept clear of obstructions.",
+        "title": "Separate gates and walkways",
+        "text": "Separate ways in for vehicles and people. Firm walkways kept clear.",
         "law": false
       },
       {
         "icon": "traffic-cone",
         "title": "Crossing points",
-        "text": "Signed and lit, with clear views both ways.",
+        "text": "Signed and well lit, where drivers and pedestrians see each other.",
         "law": false
       },
       {
         "icon": "route",
         "title": "One-way systems",
-        "text": "Plus turning areas, to cut reversing.",
-        "law": false
-      },
-      {
-        "icon": "gauge",
-        "title": "Speed limits",
-        "text": "Set for each route and clearly signed.",
-        "law": false
-      },
-      {
-        "icon": "parking-square",
-        "title": "Parking away from work",
-        "text": "Cars and vans parked away from the work area.",
+        "text": "Plus turning areas and signed speed limits, to cut reversing.",
         "law": false
       }
     ]
@@ -93,24 +75,24 @@
     {
       "question": "A pedestrian walkway has to cross a site haul road. What should be provided?",
       "options": [
-        "Nothing, as long as everyone wears hi-vis",
+        "Nothing, if everyone wears hi-vis",
         "A clearly signed, well-lit crossing point with clear views",
-        "A sign telling drivers to sound their horn",
+        "A sign telling drivers to use the horn",
         "A rule that pedestrians run across quickly"
       ],
       "answerIndex": 1,
-      "why": "HSG150 para 271: where walkways cross vehicle routes, provide a clearly signed, well-lit crossing point where drivers and pedestrians can easily see each other."
+      "why": "HSG150 para 271: where walkways cross vehicle routes, provide a clearly signed, well-lit crossing point where both can see each other."
     },
     {
       "question": "You need to speak to the driver of a working excavator. What should you do?",
       "options": [
-        "Walk up behind it and tap on the cab",
+        "Walk up behind it and tap the cab",
         "Stand in front of the bucket and wave",
         "Get the driver's attention and wait until the machine is at rest",
-        "Climb onto the tracks so the driver can see you"
+        "Climb onto the tracks to be seen"
       ],
       "answerIndex": 2,
-      "why": "HSG150 para 306: make the driver aware you want to approach, and make sure the machine is safely at rest before you approach."
+      "why": "HSG150 para 306: make the driver aware you want to approach and make sure the machine is safely at rest first."
     }
   ],
   "traps": [

@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "id": "scaffolds",
+  "niche": "uk-cscs-test",
+  "area": "high-risk-activities",
+  "order": 3,
+  "tier": "basic",
+  "officialTopics": [
+    "work-at-height"
+  ],
+  "title": "Scaffolds & Tower Scaffolds",
+  "whatItIs": "Scaffolds and tower scaffolds give a guarded working platform that prevents falls. Only trained, competent people may put them up, alter or take them down, and they must be inspected.",
+  "keyFacts": [
+    {
+      "text": "The top guard rail MUST be at least 950 mm high; gaps between rails MUST NOT exceed 470 mm.",
+      "law": true
+    },
+    {
+      "text": "Platforms 2 m or more up MUST be inspected after assembly, after any event affecting them, and every 7 days.",
+      "law": true
+    },
+    {
+      "text": "Scaffolds MUST only be put up, altered or taken down by trained people, supervised by a competent person.",
+      "law": true
+    },
+    {
+      "text": "A scaffold not ready for use MUST carry warning signs and be physically blocked off.",
+      "law": true
+    },
+    "Platforms should be fully boarded, usually at least 600 mm wide, with toe boards where things could fall.",
+    "Moving a mobile tower: lower it to 4 m at most and check for power lines and potholes first."
+  ],
+  "visual": {
+    "type": "stats",
+    "caption": "Scaffold numbers to remember (Work at Height Regs; HSG150 para 164)",
+    "items": [
+      {
+        "value": "950 mm",
+        "label": "Minimum top guard rail height"
+      },
+      {
+        "value": "470 mm",
+        "label": "Max gap between guard rails"
+      },
+      {
+        "value": "7 days",
+        "label": "Max gap between inspections (2 m+)"
+      },
+      {
+        "value": "4 m",
+        "label": "Max tower height while moving"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Guard rails and toe boards",
+      "points": [
+        "Stop people falling from the edge",
+        "Toe boards stop objects rolling or being kicked off"
+      ]
+    },
+    "b": {
+      "label": "Brick guards",
+      "points": [
+        "Stop materials falling through gaps in the rails",
+        "Not designed to stop people falling"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "A scaffold platform is 4 m high. How often must it be inspected while it stays in use?",
+      "options": [
+        "At least every 7 days",
+        "At least every 14 days",
+        "Once a month",
+        "Only when it is first put up"
+      ],
+      "answerIndex": 0,
+      "why": "Work at Height Regs reg 12(4): a platform you could fall 2 m or more from must have been inspected in the previous 7 days."
+    },
+    {
+      "question": "A scaffold still being built has warning signs and a barrier at the access point. What should you do?",
+      "options": [
+        "Use it if the lift you need looks finished",
+        "Keep off it until it's complete and inspected",
+        "Use it if you wear a harness",
+        "Move the barrier and check it yourself"
+      ],
+      "answerIndex": 1,
+      "why": "Work at Height Regs Sch 3 para 11: a scaffold not available for use must carry warning signs and access must be physically blocked."
+    }
+  ],
+  "traps": [
+    "Brick guards don't stop people falling: guard rails and toe boards are still needed.",
+    "Don't sheet a scaffold or fit debris netting without telling the supplier: it must be designed for it.",
+    "Don't climb a tower's end frames unless the rungs are designed for getting to the platform.",
+    "Never move a tower with people or materials on it, and never prop it on bricks or blocks."
+  ],
+  "sources": [
+    {
+      "doc": "Work at Height Regulations 2005 (SI 2005/735)",
+      "ref": "reg 12; Schedule 2 para 3; Schedule 3 paras 11-12",
+      "url": "https://www.legislation.gov.uk/uksi/2005/735/schedule/2"
+    },
+    {
+      "doc": "HSE HSG150 Health and safety in construction",
+      "ref": "paras 131, 140-151, 154-166",
+      "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
+    },
+    {
+      "doc": "HSE INDG401 Working at height: A brief guide",
+      "ref": "How do you make sure the equipment itself is in good condition?",
+      "url": "https://www.hse.gov.uk/pubns/indg401.pdf"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

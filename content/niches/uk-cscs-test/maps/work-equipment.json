@@ -39,15 +39,15 @@
         "text": "Enclose dangerous parts wherever practicable."
       },
       {
-        "title": "Other guards or devices",
-        "text": "e.g. interlocked guards: the machine can't start until closed."
+        "title": "Other guards",
+        "text": "e.g. interlocks: the machine can't start until closed."
       },
       {
-        "title": "Jigs, holders, push-sticks",
-        "text": "Where guards can't give full protection."
+        "title": "Jigs and holders",
+        "text": "Or push-sticks, where guards can't fully protect."
       },
       {
-        "title": "Information and training",
+        "title": "Training",
         "text": "Instruction, training and supervision for any risk left."
       }
     ]
@@ -80,7 +80,7 @@
         "Use the tool without the guard if you're careful"
       ],
       "answerIndex": 1,
-      "why": "INDG291: never remove safeguards, even if they make the job harder. HSW Act s8: you must not interfere with things provided for safety."
+      "why": "INDG291: never remove safeguards, even if they make the job harder. HSW Act s8: don't misuse safety equipment."
     },
     {
       "question": "Under PUWER, who must make sure that people who use work equipment have had adequate training?",
@@ -113,7 +113,7 @@
     },
     {
       "doc": "HSE INDG291 Providing and using work equipment safely",
-      "ref": "What equipment is covered; Before you start; Preventing access to dangerous parts; Dos and don'ts; Safe isolation",
+      "ref": "Equipment covered; Before you start; Dangerous parts; Dos and don'ts",
       "url": "https://www.hse.gov.uk/pubns/indg291.pdf"
     }
   ],

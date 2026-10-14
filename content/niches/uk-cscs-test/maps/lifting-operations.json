@@ -23,9 +23,9 @@
       "text": "Kit with a dangerous defect found at a thorough examination MUST NOT be used until it is fixed.",
       "law": true
     },
-    "Never stand under a load. Plan load routes so loads are not lifted over people.",
+    "Never stand under a load; loads must not be lifted over people.",
     "The crane supervisor should not be the crane operator, and can stop the lift if it is unsafe.",
-    "Never ride on a goods-only hoist. Hoists are marked for goods only or for passengers."
+    "Never ride on a goods-only hoist."
   ],
   "visual": {
     "type": "table",
@@ -49,7 +49,7 @@
           "At least every 12 months"
         ],
         [
-          "After exceptional events that could affect safety",
+          "Exceptional events affecting safety",
           "Each time"
         ]
       ],
@@ -63,20 +63,20 @@
       "label": "Crane hire",
       "points": [
         "Operator works to your instructions",
-        "You plan, supervise and run the lift safely"
+        "You plan and supervise the lift"
       ]
     },
     "b": {
       "label": "Contract lift",
       "points": [
-        "Crane hire company plans and supervises",
-        "Hire company is responsible for a safe lift"
+        "Hire company plans and supervises",
+        "Hire company is responsible for safety"
       ]
     }
   },
   "onTheTest": [
     {
-      "question": "Unless an examination scheme says otherwise, how often must lifting accessories such as slings and chains be thoroughly examined?",
+      "question": "Unless an examination scheme says otherwise, how often must slings and chains be thoroughly examined?",
       "options": [
         "Every week",
         "At least every 6 months",
@@ -84,22 +84,22 @@
         "Every 2 years"
       ],
       "answerIndex": 1,
-      "why": "LOLER reg 9(3): equipment for lifting persons and accessories for lifting at least every 6 months; other lifting equipment at least every 12 months."
+      "why": "LOLER reg 9(3): accessories and kit for lifting people at least every 6 months; other lifting equipment every 12 months."
     },
     {
       "question": "A crane is lifting a bundle of steel across the site. Where should you be?",
       "options": [
         "Underneath it, ready to steady it",
-        "Out of its path, never under the load",
-        "Next to the crane's counterweight",
-        "On the load, to guide the operator"
+        "Out of its path, never under it",
+        "Beside the crane's counterweight",
+        "Riding on the load to guide it"
       ],
       "answerIndex": 1,
-      "why": "HSG150 paras 311 and 332: do not stand under loads; set load routes so loads are not lifted over people; keep clear of the load and counterweight."
+      "why": "HSG150 paras 311, 332: do not stand under loads; plan load routes so loads are not lifted over people."
     }
   ],
   "traps": [
-    "No lift is too small to plan: every lift needs planning by competent people.",
+    "No lift is too small to plan.",
     "Wider sling angles mean more load in each leg, not less.",
     "Never use makeshift hooks such as bent reinforcing bar.",
     "Doubt the load's weight or the kit? Don't lift."
@@ -112,7 +112,7 @@
     },
     {
       "doc": "HSE INDG290 Lifting equipment at work",
-      "ref": "What equipment is covered; What do the Regulations require; Dos and don'ts of lifting safely",
+      "ref": "Equipment covered; What the Regulations require; Dos and don'ts",
       "url": "https://www.hse.gov.uk/pubns/indg290.pdf"
     },
     {
@@ -122,7 +122,7 @@
     },
     {
       "doc": "HSE: Lifting operations (construction)",
-      "ref": "What you need to do; Supervision of lifting; Hoists",
+      "ref": "What you need to do; Supervision; Hoists",
       "url": "https://www.hse.gov.uk/construction/safetytopics/lifting-operations.htm"
     }
   ],
