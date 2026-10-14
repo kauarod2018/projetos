@@ -13,7 +13,7 @@
   "keyFacts": [
     "You're responsible for making sure your vehicle is safe to drive. Check it before your journey.",
     {
-      "text": "A driver or responsible person MUST do a walkaround check before the vehicle is used: at least once in every 24 hours.",
+      "text": "A driver or responsible person MUST do a walkaround check before use: at least once in every 24-hour period it's used.",
       "law": true
     },
     "Check the tyres have at least 1 mm of tread, no deep sidewall cuts and no cord visible anywhere.",
@@ -42,7 +42,7 @@
       {
         "icon": "link",
         "title": "Brake lines, coupling",
-        "text": "No air leaks or worn lines. Trailer locked in."
+        "text": "No leaks, damage or wear. Trailer seated correctly, locks in place."
       },
       {
         "icon": "package",
@@ -93,7 +93,7 @@
         "Check the new trailer before using it"
       ],
       "answerIndex": 3,
-      "why": "Where trailers are changed during the day, a check should be made on each trailer being used."
+      "why": "DVSA's guide says that where trailers are changed, a check should be made on each trailer being used."
     }
   ],
   "traps": [
@@ -109,12 +109,14 @@
     },
     {
       "doc": "DVSA: Guide to maintaining roadworthiness",
-      "ref": "1.4 Types of inspections and checks; 3. Daily walkaround checks",
+      "ref": "1.1 Best practice (must = legal requirement); 1.4 Types of inspections and checks; 3. Daily walkaround checks",
       "url": "https://www.gov.uk/government/publications/guide-to-maintaining-roadworthiness/guide-to-maintaining-roadworthiness-commercial-goods-and-passenger-carrying-vehicles"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "GOV.UK Carry out HGV daily walkaround checks (items 10 to 27, 19 tyres, 20 brake lines); DVSA Guide to maintaining roadworthiness 1.1, 1.4 (daily walkaround checks, safety inspection), 3 (daily walkaround checks)"
   }
 }

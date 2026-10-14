@@ -12,9 +12,9 @@
   "whatItIs": "Start the walkaround check in the cab: your view, mirrors, wipers, warning lights, steering, horn, air brakes, height marker, seatbelts, and the cab, doors and steps.",
   "keyFacts": [
     "Nothing should be in the area the wipers sweep. Some official stickers, like the operator licence disc, are allowed.",
-    "Warning lights must work, including the engine, emissions, ABS and EBS warning lights.",
+    "Check all warning lights and gauges work, including the engine, emissions, ABS and EBS warning lights.",
     {
-      "text": "The windscreen and front side windows MUST NOT have excessively dark tinting.",
+      "text": "You MUST NOT use a vehicle with excessively dark tinting on the windscreen or the front side windows.",
       "law": true
     }
   ],
@@ -81,7 +81,7 @@
         "The air warning system works"
       ],
       "answerIndex": 2,
-      "why": "The service brake pedal must not have excessive side play or missing, loose or incomplete anti-slip tread."
+      "why": "Check that the service brake pedal does not have excessive side play or missing, loose or incomplete anti-slip tread."
     },
     {
       "question": "You turn the ignition key and the warning lights come on. When should they go out?",
@@ -114,6 +114,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "GOV.UK Carry out HGV daily walkaround checks (check inside the vehicle, items 1 to 9); Highway Code annex 6 (warning displays; window tints, RTA 1988 s42 and CUR reg 32)"
   }
 }

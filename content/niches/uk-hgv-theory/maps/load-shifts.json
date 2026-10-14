@@ -10,7 +10,7 @@
     "incidents-and-emergencies"
   ],
   "title": "If a Load Shifts on a Journey",
-  "whatItIs": "If your load moves, slow down, stop safely and resecure it. If it falls into the road or is dangerously unstable, stop, call 999 and wait for help.",
+  "whatItIs": "If your load moves, slow down, stop safely and resecure it if it's safe. If it falls into the road or is dangerously unstable, stop, call 999 and wait for help.",
   "keyFacts": [
     {
       "text": "If the load has shifted but is still on the vehicle, you MUST slow down and avoid heavy braking and steering.",
@@ -107,6 +107,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "GOV.UK DVSA code of practice Securing loads on HGVs and goods vehicles: 3 What to do if a load becomes unstable during a journey; 1 Driver responsibilities (during the journey)"
   }
 }

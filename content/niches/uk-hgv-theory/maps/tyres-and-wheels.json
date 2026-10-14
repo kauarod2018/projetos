@@ -12,7 +12,7 @@
   "whatItIs": "Check tyres and wheel fixings every day. Large vehicles need at least 1 mm of tread, the right pressures, no deep cuts or visible cord, and tight wheel nuts.",
   "keyFacts": [
     {
-      "text": "Large vehicles MUST have at least 1 mm of tread across three-quarters of the breadth, all the way round.",
+      "text": "Large vehicles MUST have at least 1 mm of tread across 3/4 of the breadth, in a continuous band all the way round.",
       "law": true
     },
     {
@@ -36,11 +36,11 @@
       {
         "value": "1 mm",
         "label": "minimum tread depth for large vehicles",
-        "note": "Across 3/4 of the breadth, all the way round"
+        "note": "Across 3/4 of the breadth, in a continuous band all the way round"
       },
       {
         "value": "10 years",
-        "label": "older tyres can't go on front axles",
+        "label": "tyres older than this: not on front axles",
         "note": "Goods vehicles over 3.5 tonnes"
       },
       {
@@ -87,7 +87,7 @@
         "Pressures matching the handbook for the load"
       ],
       "answerIndex": 1,
-      "why": "There must be no cord visible anywhere on the tyre and no deep cuts in the sidewall."
+      "why": "Check there's no cord visible anywhere on the tyre and no deep cuts in the sidewall. Visible cord is a defect to report."
     }
   ],
   "traps": [
@@ -102,18 +102,25 @@
       "url": "https://www.gov.uk/guidance/the-highway-code"
     },
     {
+      "doc": "The Road Vehicles (Construction and Use) Regulations 1986",
+      "ref": "Reg 27(1)(g) (1 mm tread depth)",
+      "url": "https://www.legislation.gov.uk/uksi/1986/1078/regulation/27"
+    },
+    {
       "doc": "GOV.UK: Carry out HGV daily walkaround checks",
       "ref": "19. Tyres and wheel fixing",
       "url": "https://www.gov.uk/guidance/carry-out-daily-heavy-goods-vehicle-hgv-walkaround-checks"
     },
     {
       "doc": "DVSA: Guide to maintaining roadworthiness",
-      "ref": "5.1 Wheels and tyres; 5.2 Tyre management system",
+      "ref": "5.1 Wheels and tyres (re-torque checks); 5.2 Tyre management system",
       "url": "https://www.gov.uk/government/publications/guide-to-maintaining-roadworthiness/guide-to-maintaining-roadworthiness-commercial-goods-and-passenger-carrying-vehicles"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Highway Code annex 6 (tyres, tyre age, tyre pressures; CUR reg 27); C&U Regulations 1986 reg 27(1)(g); GOV.UK HGV daily walkaround checks 19 (tyres and wheel fixing); DVSA Guide to maintaining roadworthiness 5.1 wheels and tyres, 5.2 tyre management"
   }
 }

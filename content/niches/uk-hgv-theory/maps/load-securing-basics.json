@@ -9,7 +9,7 @@
     "vehicle-loading"
   ],
   "title": "Load Securing: The Basics",
-  "whatItIs": "All loads must be secure, whatever the vehicle, the load or the length of the journey. The securing system has to hold the load when you brake, corner or swerve.",
+  "whatItIs": "All loads must be secure, whatever the vehicle, the load or the length of the journey. A system meeting the minimum standard should hold the load in an emergency stop or swerve.",
   "keyFacts": [
     {
       "text": "Operators, drivers and consignors MUST secure all loads and make sure they're loaded, carried and unloaded safely.",
@@ -28,7 +28,7 @@
   ],
   "visual": {
     "type": "stats",
-    "caption": "What a load securing system must withstand (minimum)",
+    "caption": "Minimum forces a securing system must withstand, and the default friction value",
     "items": [
       {
         "value": "100%",
@@ -44,7 +44,7 @@
       },
       {
         "value": "0.2",
-        "label": "friction coefficient if no tested value"
+        "label": "friction value to use if none tested or certified"
       }
     ]
   },
@@ -107,6 +107,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "GOV.UK DVSA code of practice Securing loads on HGVs and goods vehicles: About (must = compulsory); 1 Responsibility for load security; 2 Load securing: the basics (what a system needs to do, friction, covering, where to put the load, stacking)"
   }
 }

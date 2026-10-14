@@ -21,7 +21,7 @@
     },
     "Secure stacked pallets by the stack's weight: two 300 kg pallets stacked count as 600 kg.",
     {
-      "text": "Tippers: you MUST NOT use a net if the load is above the sides, or rely on the load settling below them.",
+      "text": "Tippers needing a cover: you MUST NOT use a net if the load is above the sides, or rely on it settling below them.",
       "law": true
     }
   ],
@@ -126,6 +126,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "GOV.UK DVSA code of practice Securing loads on HGVs and goods vehicles: 4 Buckle straps, positive fit; 5 Bulk tippers, standard and XL curtainsiders, multi-deck trailers; 6 Construction products, gas cylinders, IBCs, pallets, plant, scaffolding"
   }
 }

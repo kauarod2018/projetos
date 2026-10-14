@@ -36,7 +36,7 @@
       {
         "icon": "link",
         "title": "Chains",
-        "text": "Stronger than straps. Heavy plant by direct lashing: at least 4 chains.",
+        "text": "Usually stronger than straps. Heavy plant by direct lashing: at least 4 chains.",
         "law": true
       },
       {
@@ -48,7 +48,7 @@
       {
         "icon": "grip-horizontal",
         "title": "Friction matting",
-        "text": "At least 0.6 to be effective. Never used on its own.",
+        "text": "Never use it on its own. Should have a coefficient of friction of at least 0.6.",
         "law": true
       },
       {
@@ -127,6 +127,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "GOV.UK DVSA code of practice Securing loads on HGVs and goods vehicles: 4 Ways to secure a load (attachment and anchorage points, sheeting hooks, chains, chocks, friction matting, headboards, lashing straps, lashing method, strap label, ropes); 2 British Standards"
   }
 }
