@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "id": "hazardous-substances",
+  "niche": "uk-cscs-test",
+  "area": "occupational-health",
+  "order": 3,
+  "tier": "basic",
+  "officialTopics": [
+    "hazardous-substances"
+  ],
+  "title": "Hazardous Substances & COSHH",
+  "whatItIs": "The COSHH Regulations 2002 cover substances that can harm health, such as cement, solvents, paints and dusts. They get in by breathing, skin contact, swallowing or the eyes.",
+  "keyFacts": [
+    {
+      "text": "Employers MUST NOT start work that may expose employees to a hazardous substance without a suitable risk assessment.",
+      "law": true
+    },
+    {
+      "text": "Exposure MUST be prevented or, where that's not reasonably practicable, adequately controlled.",
+      "law": true
+    },
+    {
+      "text": "Where reasonably practicable, a safer substance or process MUST be used instead, e.g. water-based paint.",
+      "law": true
+    },
+    {
+      "text": "Other controls MUST come first. PPE is added only where they can't give adequate control.",
+      "law": true
+    },
+    {
+      "text": "Employees MUST use the control measures provided and report any defect straight away.",
+      "law": true
+    },
+    "Read the label and the safety data sheet: they tell you the dangers and how to handle the product."
+  ],
+  "visual": {
+    "type": "steps",
+    "caption": "Controlling a hazardous substance, in order of priority",
+    "items": [
+      {
+        "title": "Eliminate or substitute",
+        "text": "Use a safer substance, form or method, e.g. paste not powder."
+      },
+      {
+        "title": "Enclose or extract",
+        "text": "Stop it escaping; extract dust or fumes at the source."
+      },
+      {
+        "title": "Fewer people",
+        "text": "Keep anyone not doing the job out of the area."
+      },
+      {
+        "title": "PPE last",
+        "text": "Gloves, coveralls, respirator. It must fit the wearer."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Safety data sheet",
+      "points": [
+        "Written by the supplier of the product",
+        "Says what the dangers are and how to store and handle it"
+      ]
+    },
+    "b": {
+      "label": "COSHH assessment",
+      "points": [
+        "Made by the employer for the actual job",
+        "Decides how exposure will be controlled"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Under COSHH, when should PPE such as gloves or a respirator be used?",
+      "options": [
+        "Always, as the first control",
+        "Only when the supervisor is on site",
+        "When exposure can't be adequately controlled by other means",
+        "Instead of ventilation, to save money"
+      ],
+      "answerIndex": 2,
+      "why": "COSHH reg 7(3): process and engineering controls come first. PPE is added where adequate control can't be achieved by other means."
+    },
+    {
+      "question": "Where should you look first for a new product's hazards and safe handling?",
+      "options": [
+        "The delivery note",
+        "The label and the safety data sheet",
+        "The accident book",
+        "The site fire plan"
+      ],
+      "answerIndex": 1,
+      "why": "HSG150: suppliers have a legal duty to provide information. Read the label and the safety data sheet."
+    }
+  ],
+  "traps": [
+    "'We've always done it this way' isn't a control: some diseases take years to show.",
+    "Natural doesn't mean harmless: wood dust can cause asthma.",
+    "A dust mask may not stop vapours: the respirator must suit the substance."
+  ],
+  "sources": [
+    {
+      "doc": "Control of Substances Hazardous to Health Regulations 2002 (SI 2002/2677)",
+      "ref": "regs 6(1), 7(1)-(3), 8(2)",
+      "url": "https://www.legislation.gov.uk/uksi/2002/2677/regulation/7"
+    },
+    {
+      "doc": "HSE INDG136 Working with substances hazardous to health: A brief guide to COSHH",
+      "ref": "Think about the task; Safety data sheets; Choosing control measures",
+      "url": "https://www.hse.gov.uk/pubns/indg136.pdf"
+    },
+    {
+      "doc": "HSE HSG150 Health and safety in construction",
+      "ref": "paras 401-414",
+      "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
+    },
+    {
+      "doc": "HSE: Construction hazardous substances: Solvents",
+      "ref": "Control: RPE",
+      "url": "https://www.hse.gov.uk/construction/healthrisks/hazardous-substances/solvents.htm"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

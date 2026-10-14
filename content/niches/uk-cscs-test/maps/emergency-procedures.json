@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "id": "emergency-procedures",
+  "niche": "uk-cscs-test",
+  "area": "working-environment",
+  "order": 8,
+  "tier": "complete",
+  "officialTopics": [
+    "accidents-and-emergencies"
+  ],
+  "title": "Emergency Procedures & Evacuation",
+  "whatItIs": "Every site plans for foreseeable emergencies, such as fire, flooding, toxic gas or a rescue. Everyone must know the alarm, the escape routes and where to assemble.",
+  "keyFacts": [
+    {
+      "text": "Arrangements for foreseeable emergencies MUST include procedures to evacuate the site or part of it.",
+      "law": true
+    },
+    {
+      "text": "Everyone MUST be made familiar with the arrangements, and they MUST be tested at suitable intervals.",
+      "law": true
+    },
+    {
+      "text": "Emergency routes MUST lead as directly as possible to a safe area, be kept clear and be signed.",
+      "law": true
+    },
+    "In serious and imminent danger: stop work, report it and go to a place of safety.",
+    "When the alarm sounds, leave without delay. Don't assume it's a drill or a false alarm.",
+    "In an emergency, someone should meet and direct the emergency services at the site entrance."
+  ],
+  "visual": {
+    "type": "steps",
+    "caption": "Fire or emergency: what happens",
+    "items": [
+      {
+        "title": "Raise the alarm and leave",
+        "text": "Use the site alarm, then leave by the signed escape route without delay."
+      },
+      {
+        "title": "Go to the assembly point",
+        "text": "A place of safety where everyone can be accounted for."
+      },
+      {
+        "title": "Meet the emergency services",
+        "text": "Tell them about hazards such as gas cylinders, and anyone missing."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Fire alarm test",
+      "points": [
+        "Weekly, at the same time each week",
+        "People are told it's a test"
+      ]
+    },
+    "b": {
+      "label": "Fire drill",
+      "points": [
+        "The whole workforce evacuates the site",
+        "Checks people know what to do; finds bottlenecks"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "The fire alarm sounds while you're at a critical stage of a job. What should you do?",
+      "options": [
+        "Stop and leave by the escape route at once",
+        "Finish the job, then leave",
+        "Wait to see if it's a drill",
+        "Phone the site office to check"
+      ],
+      "answerIndex": 0,
+      "why": "HSG168: when the alarm is raised, everyone must escape without delay. Workers may be reluctant to leave at a critical stage or if they think it's a drill, which delays evacuation."
+    },
+    {
+      "question": "Why does a site keep a record of who is on site?",
+      "options": [
+        "So everyone can be accounted for in an emergency",
+        "To work out overtime pay",
+        "To decide who gets a site induction",
+        "To show the client how busy the site is"
+      ],
+      "answerIndex": 0,
+      "why": "HSG151: a record of who is on site, and when they arrive and leave, helps keep track of people and helps the emergency services in a fire or accident."
+    }
+  ],
+  "traps": [
+    "Emergency routes and exits must be kept clear so they can be used at any time.",
+    "Don't assume someone else has called the emergency services: the plan says who does it.",
+    "Visitors and contractors on site for only a few hours must also know the alarm and what to do."
+  ],
+  "sources": [
+    {
+      "doc": "HSE L153 Managing health and safety in construction (CDM 2015)",
+      "ref": "regs 30, 31; para 173(b)",
+      "url": "https://www.hse.gov.uk/pubns/priced/l153.pdf"
+    },
+    {
+      "doc": "HSE HSG168 Fire safety in construction",
+      "ref": "paras 250, 286, 304-325",
+      "url": "https://www.hse.gov.uk/pubns/priced/hsg168.pdf"
+    },
+    {
+      "doc": "HSE HSG150 Health and safety in construction",
+      "ref": "paras 79-82, 87-88",
+      "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
+    },
+    {
+      "doc": "HSE HSG151 Protecting the public",
+      "ref": "para 52",
+      "url": "https://www.hse.gov.uk/pubns/priced/hsg151.pdf"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "id": "site-inductions-rules",
+  "niche": "uk-cscs-test",
+  "area": "working-environment",
+  "order": 3,
+  "tier": "basic",
+  "officialTopics": [
+    "site-rules-and-welfare",
+    "law-and-management"
+  ],
+  "title": "Inductions, Site Rules & Supervision",
+  "whatItIs": "Before you start on a site you get a site induction: its risks, rules, welfare and emergency arrangements. Site rules, briefings and supervision keep the work safe after that.",
+  "keyFacts": [
+    {
+      "text": "The principal contractor MUST ensure every worker is given a suitable site induction.",
+      "law": true
+    },
+    {
+      "text": "Contractors MUST give workers supervision, instructions and information, including what to do in serious danger.",
+      "law": true
+    },
+    {
+      "text": "Contractors MUST only put people on site who have, or are getting, the skills, training and experience needed.",
+      "law": true
+    },
+    {
+      "text": "The construction phase plan MUST set out the site's health and safety arrangements and site rules.",
+      "law": true
+    },
+    "Many people are killed or seriously injured during their first few days on a site.",
+    "Young, inexperienced or new-to-the-task workers need closer supervision."
+  ],
+  "visual": {
+    "type": "steps",
+    "caption": "Your first day on a new site",
+    "items": [
+      {
+        "title": "Report to the site office",
+        "text": "Sign in, so the site knows who is there."
+      },
+      {
+        "title": "Site induction",
+        "text": "Site risks, site rules, welfare, first aid, accident reporting and emergencies."
+      },
+      {
+        "title": "Toolbox talks",
+        "text": "Ongoing briefings as the work and the risks change."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Site induction",
+      "points": [
+        "Given when you first come to the site",
+        "Site-specific risks, rules, welfare and emergencies"
+      ]
+    },
+    "b": {
+      "label": "Toolbox talk",
+      "points": [
+        "Short briefings given throughout the job",
+        "Can be given by your supervisor"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "What is the main purpose of a site induction?",
+      "options": [
+        "To tell you about the site's risks, rules and welfare",
+        "To agree your pay rate",
+        "To test your trade skills",
+        "To issue your CSCS card"
+      ],
+      "answerIndex": 0,
+      "why": "An induction should be site specific: it highlights the particular risks and control measures, site rules, welfare and first-aid, accident reporting and emergency arrangements."
+    },
+    {
+      "question": "You're new to a task and unsure how to do it safely. Your supervisor isn't on site. What should you do?",
+      "options": [
+        "Get supervisory help before you start",
+        "Copy what your workmates do",
+        "Start and work it out as you go",
+        "Leave the site for the day"
+      ],
+      "answerIndex": 0,
+      "why": "Workers should always know how to get supervisory help, even when a supervisor isn't present. Picking things up from workmates can mean learning their bad habits."
+    }
+  ],
+  "traps": [
+    "Learning from workmates isn't proper training: you might just pick up their bad habits.",
+    "Visitors get an induction too, in proportion to their visit; escorted visitors need the main hazards.",
+    "Site rules apply to everyone on the site, including subcontractors."
+  ],
+  "sources": [
+    {
+      "doc": "HSE L153 Managing health and safety in construction (CDM 2015)",
+      "ref": "regs 8(5), 12(2), 13(4), 15(3), 15(7)-(9); paras 133-134, 170, 172",
+      "url": "https://www.hse.gov.uk/pubns/priced/l153.pdf"
+    },
+    {
+      "doc": "HSE HSG150 Health and safety in construction",
+      "ref": "paras 100-101, 110-111, 602-603",
+      "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
+    },
+    {
+      "doc": "HSE HSG151 Protecting the public",
+      "ref": "paras 51-52",
+      "url": "https://www.hse.gov.uk/pubns/priced/hsg151.pdf"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

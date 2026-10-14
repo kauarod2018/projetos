@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "id": "ppe",
+  "niche": "uk-cscs-test",
+  "area": "occupational-health",
+  "order": 8,
+  "tier": "basic",
+  "officialTopics": [
+    "ppe"
+  ],
+  "title": "Personal Protective Equipment",
+  "whatItIs": "PPE is equipment you wear or hold to protect you at work: hard hats, gloves, eye and hearing protection, hi-vis, safety boots and respirators. It is the last line of protection.",
+  "keyFacts": [
+    {
+      "text": "Employers MUST provide suitable PPE where a risk isn't adequately controlled by other means.",
+      "law": true
+    },
+    {
+      "text": "Employers MUST NOT charge workers for PPE the law requires them to provide.",
+      "law": true
+    },
+    {
+      "text": "Since 6 April 2022 these duties cover casual 'limb (b)' workers as well as employees.",
+      "law": true
+    },
+    {
+      "text": "Workers MUST use PPE as trained and instructed, and return it to its storage after use.",
+      "law": true
+    },
+    {
+      "text": "Workers MUST report any loss of, or obvious defect in, their PPE to the employer at once.",
+      "law": true
+    },
+    "PPE must fit the wearer and work with other PPE, e.g. ear defenders that fit onto a hard hat."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Common site PPE and what it protects against",
+    "columns": 3,
+    "items": [
+      {
+        "icon": "hard-hat",
+        "title": "Hard hat",
+        "text": "Against falling materials and head bumps.",
+        "law": false
+      },
+      {
+        "icon": "footprints",
+        "title": "Safety footwear",
+        "text": "Toecaps and midsoles: drops and nails.",
+        "law": false
+      },
+      {
+        "icon": "glasses",
+        "title": "Eye protection",
+        "text": "Flying bits, sparks and splashes.",
+        "law": false
+      },
+      {
+        "icon": "hand",
+        "title": "Gloves",
+        "text": "The right type for the job and hazard.",
+        "law": false
+      },
+      {
+        "icon": "shirt",
+        "title": "Hi-vis clothing",
+        "text": "Where vehicles could hit you. Keep clean.",
+        "law": false
+      },
+      {
+        "icon": "wind",
+        "title": "Respirator (RPE)",
+        "text": "Right type for the hazard; good face seal.",
+        "law": false
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Employer's duties",
+      "points": [
+        "Assess and provide suitable PPE, free",
+        "Give information, instruction and training",
+        "Maintain, clean and replace it"
+      ]
+    },
+    "b": {
+      "label": "Worker's duties",
+      "points": [
+        "Use it as trained and instructed",
+        "Return it to its storage after use",
+        "Report loss or defects at once"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Your safety boots have split across the sole. What should you do?",
+      "options": [
+        "Carry on until the job is finished",
+        "Report it to your employer straight away",
+        "Tape over the split",
+        "Swap boots with a workmate"
+      ],
+      "answerIndex": 1,
+      "why": "PPE Regulations reg 11: every worker given PPE must report any loss or obvious defect to their employer straight away."
+    },
+    {
+      "question": "Who pays for PPE that a worker needs to do the job safely?",
+      "options": [
+        "The worker, out of their wages",
+        "Half each",
+        "The employer: it must be free of charge",
+        "The client"
+      ],
+      "answerIndex": 2,
+      "why": "HSE: employers must provide PPE free of charge where it's needed. HSWA s9: no charge for anything the law requires."
+    }
+  ],
+  "traps": [
+    "PPE is the last resort: removing or controlling the hazard comes first.",
+    "Casual 'limb (b)' workers get free PPE too, not only employees.",
+    "Dirty hi-vis doesn't do its job: badly soiled garments should be replaced.",
+    "A respirator won't seal over a beard: you need another type, e.g. an air-fed visor."
+  ],
+  "sources": [
+    {
+      "doc": "Personal Protective Equipment at Work Regulations 1992 (SI 1992/2966), as amended 2022",
+      "ref": "regs 2, 4, 6, 7, 9-11",
+      "url": "https://www.legislation.gov.uk/uksi/1992/2966/regulation/4"
+    },
+    {
+      "doc": "Health and Safety at Work etc. Act 1974",
+      "ref": "s. 9",
+      "url": "https://www.legislation.gov.uk/ukpga/1974/37/section/9"
+    },
+    {
+      "doc": "HSE: Using PPE to control risks at work",
+      "ref": "1. Overview",
+      "url": "https://www.hse.gov.uk/ppe/overview.htm"
+    },
+    {
+      "doc": "HSE: Extended scope of the PPE at Work Regulations",
+      "ref": "Amended regulations; limb (b) workers",
+      "url": "https://www.hse.gov.uk/ppe/ppe-regulations-2022.htm"
+    },
+    {
+      "doc": "HSE HSG150 Health and safety in construction",
+      "ref": "paras 416, 461, 531-546",
+      "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

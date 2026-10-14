@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "id": "fire-safety",
+  "niche": "uk-cscs-test",
+  "area": "working-environment",
+  "order": 9,
+  "tier": "basic",
+  "officialTopics": [
+    "accidents-and-emergencies"
+  ],
+  "title": "Fire Safety on Site",
+  "whatItIs": "A fire needs heat, fuel and oxygen: if one is missing, it can't start. On site that means controlling hot work, flammable materials, waste and smoking, and knowing the right extinguisher.",
+  "keyFacts": [
+    {
+      "text": "Steps MUST be taken to prevent the risk of injury from fire or explosion, so far as reasonably practicable.",
+      "law": true
+    },
+    {
+      "text": "You MUST NOT do work with a particular fire risk unless you've been suitably instructed.",
+      "law": true
+    },
+    {
+      "text": "Fire-fighting equipment MUST be easily accessible, signed, and tested and maintained.",
+      "law": true
+    },
+    "Keep a fire watch during hot work and for at least an hour after, then check again at 2 hours.",
+    "Extinguishers are for small fires or to aid escape. Don't delay calling the fire and rescue service.",
+    "Indoor areas of a construction site must be no smoking; smoke only in designated areas."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Which extinguisher? All are red, with a coloured zone showing the contents",
+    "columns": 2,
+    "items": [
+      {
+        "icon": "fire-extinguisher",
+        "title": "Water",
+        "text": "Wood, paper, textiles, solids. NOT on liquid, electrical or metal fires."
+      },
+      {
+        "icon": "fire-extinguisher",
+        "title": "Foam",
+        "text": "Liquid fires; also wood and paper. NOT on electrical or metal fires."
+      },
+      {
+        "icon": "fire-extinguisher",
+        "title": "Dry powder (blue zone)",
+        "text": "Liquid and electrical fires (multi-purpose: solids too). NOT on metal."
+      },
+      {
+        "icon": "fire-extinguisher",
+        "title": "Carbon dioxide (CO2)",
+        "text": "Liquid and electrical fires. NOT on metal fires."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Water extinguisher",
+      "points": [
+        "For wood, paper, cloth and solids",
+        "Never on electrical or liquid fires"
+      ]
+    },
+    "b": {
+      "label": "CO2 extinguisher",
+      "points": [
+        "For electrical and liquid fires",
+        "Not for metal fires"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "A fire starts in an electrical distribution board. Which extinguisher should you use?",
+      "options": [
+        "Carbon dioxide (CO2)",
+        "Water",
+        "Foam",
+        "Wet sacking"
+      ],
+      "answerIndex": 0,
+      "why": "HSG168: for electrical items use a carbon dioxide (CO2) or dry powder extinguisher. Water and foam must not be used on electrical fires."
+    },
+    {
+      "question": "You've finished welding for the day. What does HSE guidance say about a fire watch?",
+      "options": [
+        "Watch for at least an hour, then check again at two hours",
+        "No watch is needed once the torch is off",
+        "Take a quick look before you go home",
+        "Check the area the next morning"
+      ],
+      "answerIndex": 0,
+      "why": "HSG168: keep a continuous fire watch of the hot work area for at least an hour after hot work ends, then at least one more check two hours after it ends."
+    }
+  ],
+  "traps": [
+    "Never use water on electrical or burning liquid fires.",
+    "Don't tackle a large fire: putting out larger fires is the fire and rescue service's job.",
+    "Never wedge open, lock or remove a fire door.",
+    "Keep the fire watch during breaks in hot work too, not just at the end."
+  ],
+  "sources": [
+    {
+      "doc": "HSE L153 Managing health and safety in construction (CDM 2015)",
+      "ref": "regs 29, 32",
+      "url": "https://www.hse.gov.uk/pubns/priced/l153.pdf"
+    },
+    {
+      "doc": "HSE HSG168 Fire safety in construction",
+      "ref": "paras 34-35, 101, 122, 245, 291-293; Figure 17; Appendix 3",
+      "url": "https://www.hse.gov.uk/pubns/priced/hsg168.pdf"
+    },
+    {
+      "doc": "HSE HSG150 Health and safety in construction",
+      "ref": "para 92",
+      "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

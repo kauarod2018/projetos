@@ -1,0 +1,124 @@
+{
+  "schemaVersion": 1,
+  "id": "cdm-roles",
+  "niche": "uk-cscs-test",
+  "area": "working-environment",
+  "order": 2,
+  "tier": "basic",
+  "officialTopics": [
+    "law-and-management"
+  ],
+  "title": "CDM 2015: Clients, Contractors & Workers",
+  "whatItIs": "The Construction (Design and Management) Regulations 2015 apply to every construction project, notifiable or not. They say who must plan, manage and coordinate health and safety.",
+  "keyFacts": [
+    {
+      "text": "With more than one contractor, the client MUST appoint a principal designer and a principal contractor in writing.",
+      "law": true
+    },
+    {
+      "text": "A construction phase plan MUST be drawn up before the construction site is set up.",
+      "law": true
+    },
+    {
+      "text": "The principal contractor MUST ensure site inductions, welfare facilities and no unauthorised access.",
+      "law": true
+    },
+    {
+      "text": "Anyone working under another's control MUST report anything likely to endanger themselves or others.",
+      "law": true
+    },
+    {
+      "text": "The client MUST notify HSE if work lasts over 30 working days with over 20 workers at once, or exceeds 500 person days.",
+      "law": true
+    }
+  ],
+  "visual": {
+    "type": "table",
+    "caption": "Who does what under CDM 2015",
+    "data": {
+      "columns": [
+        "Dutyholder",
+        "Main job"
+      ],
+      "rows": [
+        [
+          "Client",
+          "Arranges the project; appoints dutyholders"
+        ],
+        [
+          "Principal designer",
+          "Coordinates the pre-construction phase"
+        ],
+        [
+          "Principal contractor",
+          "Coordinates the construction phase"
+        ],
+        [
+          "Contractor",
+          "Plans, manages and monitors own work"
+        ],
+        [
+          "Worker",
+          "Takes care, cooperates, reports danger"
+        ]
+      ],
+      "notes": []
+    }
+  },
+  "confused": {
+    "a": {
+      "label": "Principal designer",
+      "points": [
+        "In charge of the pre-construction phase",
+        "Prepares the health and safety file"
+      ]
+    },
+    "b": {
+      "label": "Principal contractor",
+      "points": [
+        "In charge of the construction phase",
+        "Draws up the construction phase plan"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "A project will have three contractors on site. Under CDM 2015, who must appoint the principal contractor?",
+      "options": [
+        "The client",
+        "HSE",
+        "The principal designer",
+        "The biggest subcontractor"
+      ],
+      "answerIndex": 0,
+      "why": "Regulation 5: where there is more than one contractor, the client must appoint a principal designer and a principal contractor in writing, before the construction phase begins."
+    },
+    {
+      "question": "You notice that some scaffold ties have been removed. What does CDM 2015 require you to do?",
+      "options": [
+        "Report it to the person in control of your work",
+        "Carry on: it's the scaffolder's problem",
+        "Refit the ties yourself",
+        "Wait until the end of the shift"
+      ],
+      "answerIndex": 0,
+      "why": "Regulation 8(5): anyone working under another's control must report anything likely to endanger their own or others' health or safety to that person."
+    }
+  ],
+  "traps": [
+    "CDM applies to every construction project, not only to notifiable ones.",
+    "Domestic clients are covered too: their duties pass to the contractor or principal contractor.",
+    "The principal designer prepares the health and safety file; the principal contractor writes the construction phase plan."
+  ],
+  "sources": [
+    {
+      "doc": "HSE L153 Managing health and safety in construction (CDM 2015)",
+      "ref": "Table 1; regs 4-8, 12, 13, 15; paras 52, 68",
+      "url": "https://www.hse.gov.uk/pubns/priced/l153.pdf"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

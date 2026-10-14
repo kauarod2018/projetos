@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "noise",
+  "niche": "uk-cscs-test",
+  "area": "occupational-health",
+  "order": 6,
+  "tier": "basic",
+  "officialTopics": [
+    "noise-and-vibration"
+  ],
+  "title": "Noise & Hearing Protection",
+  "whatItIs": "Loud noise can permanently damage hearing and cause tinnitus. The Control of Noise at Work Regulations 2005 set action values and limits for daily exposure.",
+  "keyFacts": [
+    {
+      "text": "From 80 dB(A) a day, employers MUST assess the risk and give hearing protection to anyone who asks.",
+      "law": true
+    },
+    {
+      "text": "From 85 dB(A), employers MUST cut noise by other means, provide protection and mark Hearing Protection Zones.",
+      "law": true
+    },
+    {
+      "text": "Exposure MUST NOT go above 87 dB(A), counting any hearing protection worn.",
+      "law": true
+    },
+    {
+      "text": "Workers MUST use the hearing protection provided and report any defects in it.",
+      "law": true
+    },
+    "Rule of thumb: if you have to raise your voice to talk to someone about 2 m away, noise is a problem.",
+    "Hearing protection doesn't replace cutting noise at source: it can easily fail or be misused."
+  ],
+  "visual": {
+    "type": "table",
+    "caption": "Noise action values and limits (Noise Regulations, reg 4)",
+    "data": {
+      "columns": [
+        "Level",
+        "Daily or weekly",
+        "Peak",
+        "What happens"
+      ],
+      "rows": [
+        [
+          "Lower action value",
+          "80 dB(A)",
+          "135 dB(C)",
+          "Assess the risk; protectors on request"
+        ],
+        [
+          "Upper action value",
+          "85 dB(A)",
+          "137 dB(C)",
+          "Planned noise control; protectors worn; Hearing Protection Zones"
+        ],
+        [
+          "Exposure limit",
+          "87 dB(A)",
+          "140 dB(C)",
+          "Must not be exceeded"
+        ]
+      ],
+      "notes": [
+        "Action values ignore hearing protection. The limit takes account of the protection it gives."
+      ]
+    }
+  },
+  "confused": {
+    "a": {
+      "label": "Action values (80 and 85)",
+      "points": [
+        "Trigger things the employer must do",
+        "Worked out without counting ear protection"
+      ]
+    },
+    "b": {
+      "label": "Exposure limit (87)",
+      "points": [
+        "Must never be exceeded",
+        "Takes account of the protection from ear protectors worn"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "What is the upper exposure action value for daily noise exposure?",
+      "options": [
+        "80 dB(A)",
+        "85 dB(A)",
+        "87 dB(A)",
+        "90 dB(A)"
+      ],
+      "answerIndex": 1,
+      "why": "Noise Regulations reg 4: lower action value 80 dB(A), upper action value 85 dB(A), exposure limit 87 dB(A)."
+    },
+    {
+      "question": "An area of the site is marked as a Hearing Protection Zone. What must you do?",
+      "options": [
+        "Wear it only if the noise hurts",
+        "Take it off when you need to talk",
+        "Stay no longer than 10 minutes",
+        "Wear hearing protection before you go in"
+      ],
+      "answerIndex": 3,
+      "why": "Reg 7(3): nobody should enter a Hearing Protection Zone without hearing protectors. Reg 8(2): workers must use them properly."
+    }
+  ],
+  "traps": [
+    "Noise damage is permanent: lost hearing doesn't come back.",
+    "Ear protection is not the first control: noise must be reduced at source first.",
+    "Too much protection is risky too: you still need to hear warnings and people around you.",
+    "Protectors only work if worn all the time they're needed, and fitted properly."
+  ],
+  "sources": [
+    {
+      "doc": "Control of Noise at Work Regulations 2005 (SI 2005/1643)",
+      "ref": "regs 4, 5, 6, 7, 8",
+      "url": "https://www.legislation.gov.uk/uksi/2005/1643/regulation/4"
+    },
+    {
+      "doc": "HSE INDG362 Noise at work: A brief guide to controlling the risks",
+      "ref": "Exposure action values; Exposure limits; Hearing protection",
+      "url": "https://www.hse.gov.uk/pubns/indg362.pdf"
+    },
+    {
+      "doc": "HSE: Construction physical ill health risks: Noise",
+      "ref": "Assess; Control; What you should know",
+      "url": "https://www.hse.gov.uk/construction/healthrisks/physical-ill-health-risks/noise.htm"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "id": "asbestos",
+  "niche": "uk-cscs-test",
+  "area": "occupational-health",
+  "order": 5,
+  "tier": "basic",
+  "officialTopics": [
+    "hazardous-substances"
+  ],
+  "title": "Asbestos: Find It, Stop, Report",
+  "whatItIs": "Asbestos was used in buildings until 1999. Left alone in good condition the risk is low, but disturbing it releases fibres you can't see, smell or feel.",
+  "keyFacts": [
+    "Asbestos is the greatest cause of work-related deaths in Great Britain: around 5,000 people die every year.",
+    "It causes mesothelioma, lung cancer and asbestosis. Symptoms take 15 to 60 years to appear, and there's no cure.",
+    "Any building built or refurbished before 2000 could contain asbestos.",
+    {
+      "text": "Employers MUST NOT start work that could disturb asbestos without finding out if it's there, or assuming it is.",
+      "law": true
+    },
+    {
+      "text": "Higher-risk work, like removing pipe lagging or sprayed coating, MUST be done by an HSE-licensed contractor.",
+      "law": true
+    },
+    {
+      "text": "Employers MUST give asbestos training to anyone who is, or may be, exposed to it.",
+      "law": true
+    }
+  ],
+  "visual": {
+    "type": "steps",
+    "caption": "If you find something you think is asbestos",
+    "items": [
+      {
+        "title": "Stop work",
+        "text": "Straight away. Don't drill, cut or break it any further."
+      },
+      {
+        "title": "Keep people away",
+        "text": "Clear the area and protect the material from more damage."
+      },
+      {
+        "title": "Report it",
+        "text": "Tell your supervisor or employer, who checks the asbestos register or survey."
+      },
+      {
+        "title": "Wait",
+        "text": "Don't restart until it's been decided how the work can be done safely."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Licensed work",
+      "points": [
+        "Higher risk: pipe lagging, sprayed coating, loose fill",
+        "Most work on asbestos insulating board",
+        "Only by a contractor licensed by HSE"
+      ]
+    },
+    "b": {
+      "label": "Non-licensed work",
+      "points": [
+        "Lower risk, e.g. drilling a hole in asbestos cement",
+        "Still needs a risk assessment, a plan and controls",
+        "Only by workers trained for it"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "While drilling a wall you uncover material you think may contain asbestos. What should you do first?",
+      "options": [
+        "Wet it and carry on carefully",
+        "Stop work and tell your supervisor",
+        "Sweep up the dust and bag it",
+        "Put on a dust mask and finish the hole"
+      ],
+      "answerIndex": 1,
+      "why": "HSE: if you come across material you think may contain asbestos, stop work and speak to your employer. Don't continue until it's been checked."
+    },
+    {
+      "question": "Which job must only be done by an HSE-licensed asbestos contractor?",
+      "options": [
+        "Removing asbestos pipe lagging",
+        "Drilling a hole in asbestos cement",
+        "Painting undamaged asbestos cement",
+        "Cleaning debris from an asbestos cement gutter"
+      ],
+      "answerIndex": 0,
+      "why": "HSE lists pre-formed insulation such as pipe lagging as licensed work. The other jobs are lower-risk tasks covered by HSE's Asbestos essentials sheets."
+    }
+  ],
+  "traps": [
+    "Asbestos awareness training doesn't allow you to work on asbestos.",
+    "Never sweep asbestos dust: use a Type H vacuum cleaner or wet rags.",
+    "A survey may not find everything: asbestos can still be hidden in the building.",
+    "Smoking makes lung cancer from asbestos much more likely."
+  ],
+  "sources": [
+    {
+      "doc": "HSE: A worker's guide to asbestos safety",
+      "ref": "Why asbestos is dangerous; If you think you have found asbestos; What your employer must do; Licensed work; What you must do",
+      "url": "https://www.hse.gov.uk/asbestos/workers.htm"
+    },
+    {
+      "doc": "HSE: Cancer and construction: Asbestos",
+      "ref": "What is it?; What is the risk to construction workers?",
+      "url": "https://www.hse.gov.uk/construction/healthrisks/cancer-and-construction/asbestos.htm"
+    },
+    {
+      "doc": "Control of Asbestos Regulations 2012 (SI 2012/632)",
+      "ref": "regs 5, 8, 10",
+      "url": "https://www.legislation.gov.uk/uksi/2012/632/regulation/5"
+    },
+    {
+      "doc": "HSE: Asbestos essentials task sheets",
+      "ref": "A9, A10, A16 (non-licensed asbestos cement work)",
+      "url": "https://www.hse.gov.uk/asbestos/essentials/index.htm"
+    },
+    {
+      "doc": "HSE HSG150 Health and safety in construction",
+      "ref": "para 442",
+      "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

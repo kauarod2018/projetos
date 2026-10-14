@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "id": "skin-and-infections",
+  "niche": "uk-cscs-test",
+  "area": "occupational-health",
+  "order": 9,
+  "tier": "complete",
+  "officialTopics": [
+    "health-risks"
+  ],
+  "title": "Skin, Sun & Infections",
+  "whatItIs": "Cement, paints, solvents, resins and oils can cause dermatitis. Outdoor work brings sun damage and skin cancer. Rats, sewage, old water systems and needles can spread infections.",
+  "keyFacts": [
+    "Wet cement is highly alkaline: trapped against the skin, it can quickly cause a serious burn or ulcer.",
+    "Dermatitis can be irritant or allergic. Once you're sensitised, any future contact can set it off.",
+    "Wash cement or other products off your skin as soon as possible, and wash at breaks and after work.",
+    "In the sun: keep your top on, wear a hat with a neck flap, use SPF30 or more and check moles for changes.",
+    "Weil's disease comes from rat urine getting into cuts or the eyes, mouth or throat. It starts like flu.",
+    "Cover cuts with waterproof dressings, and wash your hands before eating, drinking or smoking."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Skin and infection risks on site",
+    "columns": 3,
+    "items": [
+      {
+        "icon": "hand",
+        "title": "Dermatitis",
+        "text": "Cement, paint, solvents, resins, oils.",
+        "law": false
+      },
+      {
+        "icon": "flame",
+        "title": "Cement burns",
+        "text": "Waterproof gloves, wellies, trousers over boots.",
+        "law": false
+      },
+      {
+        "icon": "sun",
+        "title": "Sun (UV)",
+        "text": "Sunburn and skin cancer, even when cloudy.",
+        "law": false
+      },
+      {
+        "icon": "rat",
+        "title": "Weil's disease",
+        "text": "Rat urine or contaminated water.",
+        "law": false
+      },
+      {
+        "icon": "droplets",
+        "title": "Legionella",
+        "text": "Spray from stagnant water at 20-45 °C.",
+        "law": false
+      },
+      {
+        "icon": "syringe",
+        "title": "Needles",
+        "text": "Treat all as infected. Use tongs and a sharps box.",
+        "law": false
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Irritant dermatitis",
+      "points": [
+        "Caused by contact with an irritant",
+        "Anyone can get it"
+      ]
+    },
+    "b": {
+      "label": "Allergic dermatitis",
+      "points": [
+        "An allergy that can start after months or years of use",
+        "Once you have it, any future contact causes a reaction"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "How do people usually catch Weil's disease (leptospirosis) at work?",
+      "options": [
+        "From rat urine getting into cuts, eyes or mouth",
+        "From breathing in cement dust",
+        "From using vibrating tools",
+        "From working in strong sunlight"
+      ],
+      "answerIndex": 0,
+      "why": "HSE: Weil's disease comes from infected rat urine, entering through cuts or the lining of the mouth, throat and eyes."
+    },
+    {
+      "question": "Wet concrete has got inside your boot. What is the main risk?",
+      "options": [
+        "Hand-arm vibration syndrome",
+        "Weil's disease",
+        "A chemical burn, as wet cement is highly alkaline",
+        "Noise-induced hearing loss"
+      ],
+      "answerIndex": 2,
+      "why": "HSE: wet cement is highly alkaline, and a serious burn or ulcer can develop quickly if it's trapped against the skin."
+    }
+  ],
+  "traps": [
+    "A tan isn't healthy: it's a sign that UV has damaged your skin.",
+    "Years of using cement without trouble don't make you safe: an allergy can still develop.",
+    "Never use solvents to clean paint or grease off your skin.",
+    "Gloves only help if no cement or chemical gets inside them."
+  ],
+  "sources": [
+    {
+      "doc": "HSE: Construction hazardous substances: Cement",
+      "ref": "Control; What you should know",
+      "url": "https://www.hse.gov.uk/construction/healthrisks/hazardous-substances/cement.htm"
+    },
+    {
+      "doc": "HSE HSG150 Health and safety in construction",
+      "ref": "paras 419-425, 538",
+      "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
+    },
+    {
+      "doc": "HSE: Skin at work: Outdoor workers and sun exposure",
+      "ref": "What are the harmful effects?; What can you do?",
+      "url": "https://www.hse.gov.uk/skin/sunprotect.htm"
+    },
+    {
+      "doc": "HSE: Cancer and construction: Skin cancers",
+      "ref": "What is it?",
+      "url": "https://www.hse.gov.uk/construction/healthrisks/cancer-and-construction/skin-cancers.htm"
+    },
+    {
+      "doc": "HSE: Construction harmful micro-organisms (general; Weil's disease; Legionella; needles)",
+      "ref": "Control; What you should know",
+      "url": "https://www.hse.gov.uk/construction/healthrisks/hazardous-substances/harmful-micro-organisms.htm"
+    },
+    {
+      "doc": "HSE: Construction hazardous substances: Solvents",
+      "ref": "Reduce harmful emissions",
+      "url": "https://www.hse.gov.uk/construction/healthrisks/hazardous-substances/solvents.htm"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

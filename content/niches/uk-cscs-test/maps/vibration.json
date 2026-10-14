@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "id": "vibration",
+  "niche": "uk-cscs-test",
+  "area": "occupational-health",
+  "order": 7,
+  "tier": "complete",
+  "officialTopics": [
+    "noise-and-vibration"
+  ],
+  "title": "Hand-Arm Vibration",
+  "whatItIs": "Regular use of vibrating tools like breakers, grinders and sanders can cause hand-arm vibration syndrome (HAVS) and carpal tunnel syndrome. The damage is largely permanent.",
+  "keyFacts": [
+    "HAVS signs: tingling and numbness in the fingers, weaker grip, fingers going white then red and painful.",
+    {
+      "text": "At or above the action value of 2.5 m/s² A(8), employers MUST reduce exposure as low as reasonably practicable.",
+      "law": true
+    },
+    {
+      "text": "Employers MUST NOT let anyone's daily exposure go above the limit value of 5 m/s² A(8).",
+      "law": true
+    },
+    {
+      "text": "Employers MUST provide health surveillance for workers exposed at or above the action value.",
+      "law": true
+    },
+    "Gloves and warm clothing help blood flow, but gloves give no protection from vibration itself.",
+    "Keep tools maintained: blunt, worn or loose parts make more vibration and jobs take longer."
+  ],
+  "visual": {
+    "type": "table",
+    "caption": "Vibration values and rough times to reach them (regular daily use)",
+    "data": {
+      "columns": [
+        "Item",
+        "Action value (EAV)",
+        "Limit value (ELV)"
+      ],
+      "rows": [
+        [
+          "Daily exposure",
+          "2.5 m/s² A(8)",
+          "5 m/s² A(8)"
+        ],
+        [
+          "Meaning",
+          "Clear risk: must be managed and reduced",
+          "High risk: must not be exceeded"
+        ],
+        [
+          "Hammer-action tool, e.g. breaker",
+          "about 15 minutes",
+          "about 1 hour"
+        ],
+        [
+          "Other tools, e.g. sander",
+          "about 1 hour",
+          "about 4 hours"
+        ]
+      ],
+      "notes": [
+        "HSE's rough guide for modern, well-maintained tools. Old or damaged tools can be worse."
+      ]
+    }
+  },
+  "confused": {
+    "a": {
+      "label": "Hand-arm vibration syndrome",
+      "points": [
+        "Tingling and numbness in the fingers",
+        "Fingers go white, then red and painful"
+      ]
+    },
+    "b": {
+      "label": "Carpal tunnel syndrome",
+      "points": [
+        "Tingling, numbness, pain and weakness in the hand",
+        "Can also be caused by vibration"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Which is an early sign of hand-arm vibration syndrome?",
+      "options": [
+        "Ringing in the ears",
+        "Tingling and numbness in the fingers",
+        "A red, itchy rash on the forearms",
+        "Pain in the lower back"
+      ],
+      "answerIndex": 1,
+      "why": "HSE INDG175: HAVS symptoms include tingling and numbness in the fingers, loss of grip strength and fingers going white."
+    },
+    {
+      "question": "What is the daily exposure limit value for hand-arm vibration?",
+      "options": [
+        "1.15 m/s² A(8)",
+        "2.5 m/s² A(8)",
+        "5 m/s² A(8)",
+        "10 m/s² A(8)"
+      ],
+      "answerIndex": 2,
+      "why": "Vibration Regulations reg 4(1): for hand-arm vibration the daily limit value is 5 m/s² A(8) and the action value is 2.5 m/s² A(8)."
+    }
+  ],
+  "traps": [
+    "Gloves keep your hands warm but don't stop vibration.",
+    "A tighter grip passes more vibration into your hands.",
+    "Cold and smoking make it worse: they reduce blood flow to the fingers.",
+    "Don't ignore tingling: the damage is largely irreversible, so report it early."
+  ],
+  "sources": [
+    {
+      "doc": "Control of Vibration at Work Regulations 2005 (SI 2005/1093)",
+      "ref": "regs 4(1), 6, 7",
+      "url": "https://www.legislation.gov.uk/uksi/2005/1093/regulation/4"
+    },
+    {
+      "doc": "HSE INDG175 Hand-arm vibration at work: A brief guide",
+      "ref": "Why is it an issue?; What the law says; Which tools?",
+      "url": "https://www.hse.gov.uk/pubns/indg175.pdf"
+    },
+    {
+      "doc": "HSE: Construction physical ill health risks: Vibration",
+      "ref": "Control; Review; What you should know",
+      "url": "https://www.hse.gov.uk/construction/healthrisks/physical-ill-health-risks/vibration.htm"
+    },
+    {
+      "doc": "HSE HSG150 Health and safety in construction",
+      "ref": "paras 463-465, 473",
+      "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

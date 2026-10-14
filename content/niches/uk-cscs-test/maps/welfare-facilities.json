@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "id": "welfare-facilities",
+  "niche": "uk-cscs-test",
+  "area": "working-environment",
+  "order": 5,
+  "tier": "basic",
+  "officialTopics": [
+    "site-rules-and-welfare"
+  ],
+  "title": "Welfare Facilities on Site",
+  "whatItIs": "Every construction site needs toilets, washing facilities, drinking water, somewhere to change and keep clothing, and a place to rest and eat. Schedule 2 of CDM 2015 sets the minimum.",
+  "keyFacts": [
+    {
+      "text": "Suitable and sufficient toilets MUST be provided or made available at readily accessible places.",
+      "law": true
+    },
+    {
+      "text": "Washbasins MUST be next to toilets, with hot and cold or warm water, soap and towels or other drying.",
+      "law": true
+    },
+    {
+      "text": "Rest areas MUST have tables, seats with backs, a way to boil water and to prepare and eat meals.",
+      "law": true
+    },
+    {
+      "text": "Welfare facilities MUST be available before any construction work starts.",
+      "law": true
+    },
+    "A cold water tap and a chemical toilet on their own are not adequate facilities."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "The minimum welfare facilities (CDM 2015, Schedule 2)",
+    "columns": 3,
+    "items": [
+      {
+        "icon": "toilet",
+        "title": "Toilets",
+        "text": "Readily accessible, lit, ventilated and clean.",
+        "law": true
+      },
+      {
+        "icon": "droplets",
+        "title": "Washing",
+        "text": "Next to toilets: hot and cold or warm water, soap, towels.",
+        "law": true
+      },
+      {
+        "icon": "glass-water",
+        "title": "Drinking water",
+        "text": "Wholesome, with cups unless it's an upward jet.",
+        "law": true
+      },
+      {
+        "icon": "shirt",
+        "title": "Changing and lockers",
+        "text": "Where special clothing is worn, with lockers and drying.",
+        "law": true
+      },
+      {
+        "icon": "coffee",
+        "title": "Rest facilities",
+        "text": "Tables, seats with backs, a way to boil water.",
+        "law": true
+      },
+      {
+        "icon": "flame",
+        "title": "Heaters",
+        "text": "Never dry clothing directly on a heater: it causes fires.",
+        "law": false
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Toilets",
+      "points": [
+        "Men and women can share one in its own lockable room",
+        "Otherwise, separate toilets"
+      ]
+    },
+    "b": {
+      "label": "Washbasins and showers",
+      "points": [
+        "Basins for hands, face and forearms can be shared",
+        "Showers: shared only in a separate lockable room"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Where must washing facilities be provided on a construction site?",
+      "options": [
+        "Next to toilets and near changing rooms",
+        "Only inside the site office",
+        "Only where showers are needed",
+        "Only at the site entrance"
+      ],
+      "answerIndex": 0,
+      "why": "CDM 2015, Schedule 2: washing facilities must be in the immediate vicinity of every toilet and near any changing rooms, whether or not provided elsewhere."
+    },
+    {
+      "question": "Bags of cement are being kept in the only rest area on site. Is this acceptable?",
+      "options": [
+        "No: rest areas aren't for storing materials",
+        "Yes, if the bags are sealed",
+        "Yes, on small sites only",
+        "Yes, if the workers agree"
+      ],
+      "answerIndex": 0,
+      "why": "HSE CIS59: rest facilities should give shelter, tables, seats with backs and a way to heat water and food. Rest areas are not to be used to store plant, equipment or materials."
+    }
+  ],
+  "traps": [
+    "Short jobs still need welfare. Mobile gangs can use facilities at a central place within reasonable reach.",
+    "Public toilets are acceptable only where it's impractical to provide other facilities.",
+    "Drinking water taps must be clearly marked if they could be confused with water that isn't fit to drink."
+  ],
+  "sources": [
+    {
+      "doc": "HSE L153 Managing health and safety in construction (CDM 2015)",
+      "ref": "Schedule 2, paras 1-5; para 137",
+      "url": "https://www.hse.gov.uk/pubns/priced/l153.pdf"
+    },
+    {
+      "doc": "HSE CIS59 Provision of welfare facilities during construction work",
+      "ref": "Introduction; Rest facilities; Table 1",
+      "url": "https://www.hse.gov.uk/pubns/cis59.pdf"
+    },
+    {
+      "doc": "HSE HSG150 Health and safety in construction",
+      "ref": "paras 41-68",
+      "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

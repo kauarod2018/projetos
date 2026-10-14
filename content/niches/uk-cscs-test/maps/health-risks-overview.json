@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "id": "health-risks-overview",
+  "niche": "uk-cscs-test",
+  "area": "occupational-health",
+  "order": 1,
+  "tier": "basic",
+  "officialTopics": [
+    "health-risks"
+  ],
+  "title": "Health Risks in Construction",
+  "whatItIs": "Construction is high-risk for ill health, not just accidents. Dust, asbestos, noise, vibration, lifting and chemicals can all cause disease, often slowly.",
+  "keyFacts": [
+    "Main health risks: back and joint injuries, vibration, dermatitis, hearing loss from noise, asbestos diseases.",
+    "Asbestos is the biggest occupational disease risk to construction workers. Silica dust comes next.",
+    "Work-related cancers often appear more than 10 years after exposure, and up to 40 or 50 years later.",
+    "Treat health like safety: Assess the risks, Control them, then Review the controls.",
+    {
+      "text": "The law requires health surveillance for some workers, depending on exposure to things like noise, asbestos or silica.",
+      "law": true
+    },
+    "Wash your hands and face before eating, drinking or smoking, and eat away from the work area."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "The main causes of work-related ill health on site",
+    "columns": 3,
+    "items": [
+      {
+        "icon": "cloud-fog",
+        "title": "Dust",
+        "text": "Lung cancer, silicosis, COPD, asthma.",
+        "law": false
+      },
+      {
+        "icon": "skull",
+        "title": "Asbestos",
+        "text": "Mesothelioma, lung cancer, asbestosis.",
+        "law": false
+      },
+      {
+        "icon": "ear",
+        "title": "Noise",
+        "text": "Permanent hearing loss and tinnitus.",
+        "law": false
+      },
+      {
+        "icon": "vibrate",
+        "title": "Vibration",
+        "text": "Numb, tingling, white fingers (HAVS).",
+        "law": false
+      },
+      {
+        "icon": "package",
+        "title": "Manual handling",
+        "text": "Back, muscle and joint injuries.",
+        "law": false
+      },
+      {
+        "icon": "hand",
+        "title": "Chemicals and skin",
+        "text": "Dermatitis from cement and solvents.",
+        "law": false
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Health surveillance",
+      "points": [
+        "Ongoing checks for workers exposed to things that can harm them",
+        "Legally required for some exposures, e.g. noise, asbestos, silica",
+        "Finds early signs so the controls can be improved"
+      ]
+    },
+    "b": {
+      "label": "Wellbeing check",
+      "points": [
+        "e.g. a blood pressure check",
+        "Not required by law and not linked to your work"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Why are health risks on site often ignored, compared with accidents?",
+      "options": [
+        "The harm can take many years to show",
+        "Health law does not apply to construction",
+        "They only affect office staff",
+        "Wearing PPE removes them completely"
+      ],
+      "answerIndex": 0,
+      "why": "HSE: serious ill health can take many years to develop, so harmful exposures get dismissed next to the instant impact of accidents."
+    },
+    {
+      "question": "According to HSE, what is the biggest occupational disease risk to construction workers?",
+      "options": [
+        "Noise",
+        "Asbestos",
+        "Sunburn",
+        "Hand-arm vibration"
+      ],
+      "answerIndex": 1,
+      "why": "HSE: asbestos is the biggest occupational disease risk to construction workers; silica comes next."
+    }
+  ],
+  "traps": [
+    "Health checks alone don't protect you: the first priority is to stop the exposure.",
+    "Feeling fine now proves nothing: dust and asbestos diseases can take decades to appear.",
+    "Substances on your hands can get into your mouth when you eat or smoke: wash first."
+  ],
+  "sources": [
+    {
+      "doc": "HSE HSG150 Health and safety in construction",
+      "ref": "paras 11, 398, 405, 425, 430",
+      "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
+    },
+    {
+      "doc": "HSE: Construction health risks: Key points",
+      "ref": "The big picture; Underlying causes; Common principles",
+      "url": "https://www.hse.gov.uk/construction/healthrisks/key-points.htm"
+    },
+    {
+      "doc": "HSE: Cancer and construction",
+      "ref": "Key points; Asbestos; Silica",
+      "url": "https://www.hse.gov.uk/construction/healthrisks/cancer-and-construction/key-points.htm"
+    },
+    {
+      "doc": "HSE: Managing construction health risks: Health surveillance",
+      "ref": "What",
+      "url": "https://www.hse.gov.uk/construction/healthrisks/managing-essentials/health-surveillance.htm"
+    },
+    {
+      "doc": "HSE CIS36 Construction dust",
+      "ref": "Health risks",
+      "url": "https://www.hse.gov.uk/pubns/cis36.pdf"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

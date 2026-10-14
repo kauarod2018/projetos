@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "id": "construction-dust",
+  "niche": "uk-cscs-test",
+  "area": "occupational-health",
+  "order": 4,
+  "tier": "basic",
+  "officialTopics": [
+    "hazardous-substances",
+    "health-risks"
+  ],
+  "title": "Construction Dust & Silica",
+  "whatItIs": "Cutting, drilling, grinding and sanding make fine dust that damages the lungs. The three main types are silica dust, wood dust and general dust, such as gypsum from plasterboard.",
+  "keyFacts": [
+    "Silica dust comes from concrete, mortar, sandstone, bricks and tiles. The finest dust is too fine to see.",
+    "Dust causes lung cancer, silicosis, COPD and asthma. Silica is believed to kill over 500 construction workers a year.",
+    {
+      "text": "COSHH applies to construction dust: employers MUST prevent exposure or adequately control it.",
+      "law": true
+    },
+    "First stop or reduce the dust: right-size materials, or a block splitter instead of a cut-off saw.",
+    "Then stop dust getting into the air: water suppression or on-tool extraction.",
+    "RPE is the last line of protection. The general level for construction dust is APF 20."
+  ],
+  "visual": {
+    "type": "table",
+    "caption": "Controls for common high-risk dust tasks (HSE CIS36)",
+    "data": {
+      "columns": [
+        "Task",
+        "Control the dust with",
+        "Plus RPE"
+      ],
+      "rows": [
+        [
+          "Cutting kerbs or paving (cut-off saw)",
+          "Water suppression",
+          "APF 20"
+        ],
+        [
+          "Chasing concrete, raking mortar",
+          "On-tool extraction (H or M class)",
+          "APF 20"
+        ],
+        [
+          "Cutting roof tiles (cut-off saw)",
+          "Water suppression",
+          "APF 20"
+        ],
+        [
+          "Abrasive blasting",
+          "Wet or vacuum blasting",
+          "APF 40 (most cases)"
+        ]
+      ],
+      "notes": [
+        "APF 20: e.g. an FFP3 disposable mask, or a half mask with a P3 filter."
+      ]
+    }
+  },
+  "confused": {
+    "a": {
+      "label": "Water suppression",
+      "points": [
+        "Damps down dust clouds as you cut",
+        "Needs enough water for the whole time you work"
+      ]
+    },
+    "b": {
+      "label": "On-tool extraction",
+      "points": [
+        "Removes dust at the tool as it's made",
+        "Needs an H, M or L class unit, not a general vacuum",
+        "Examined and tested at least every 14 months"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You're cutting kerbs with a cut-off saw. Which controls does HSE guidance give?",
+      "options": [
+        "Wet the kerb once before cutting",
+        "Cut quickly so there's less dust",
+        "Water suppression plus RPE with an APF of 20",
+        "Work outdoors, so no controls are needed"
+      ],
+      "answerIndex": 2,
+      "why": "HSE CIS36 Table 1: cutting kerbs, blocks and paving with a cut-off saw needs water suppression plus RPE with an APF of 20."
+    },
+    {
+      "question": "Why must someone wearing a tight-fitting dust mask be clean-shaven?",
+      "options": [
+        "Hair clogs the filter",
+        "Stubble or a beard stops the mask sealing to the face",
+        "It's a site dress code rule",
+        "It makes the face fit test quicker"
+      ],
+      "answerIndex": 1,
+      "why": "HSG150: respirators don't seal well against a beard. CIS36: tight-fitting masks need face fit testing and a clean-shaven wearer."
+    }
+  ],
+  "traps": [
+    "Just wetting the material first doesn't work: water must flow all through the cut.",
+    "Working outside doesn't make it safe: high-energy tools still make a lot of dust.",
+    "Damage builds up slowly: by the time you notice, it may be serious.",
+    "Don't rely on a mask alone: RPE is the last line of protection."
+  ],
+  "sources": [
+    {
+      "doc": "HSE CIS36 Construction dust",
+      "ref": "Construction dust; Health risks; The law; Control; RPE; Review; Tables 1 and 2",
+      "url": "https://www.hse.gov.uk/pubns/cis36.pdf"
+    },
+    {
+      "doc": "HSE: Cancer and construction: Silica",
+      "ref": "What is it?; What is the risk?",
+      "url": "https://www.hse.gov.uk/construction/healthrisks/cancer-and-construction/silica-dust.htm"
+    },
+    {
+      "doc": "HSE: Construction dust",
+      "ref": "What you must do",
+      "url": "https://www.hse.gov.uk/construction/healthrisks/hazardous-substances/construction-dust.htm"
+    },
+    {
+      "doc": "Control of Substances Hazardous to Health Regulations 2002 (SI 2002/2677)",
+      "ref": "reg 7(1)",
+      "url": "https://www.legislation.gov.uk/uksi/2002/2677/regulation/7"
+    },
+    {
+      "doc": "HSE HSG150 Health and safety in construction",
+      "ref": "para 416",
+      "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

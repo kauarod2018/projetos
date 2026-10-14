@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "id": "manual-handling",
+  "niche": "uk-cscs-test",
+  "area": "occupational-health",
+  "order": 2,
+  "tier": "basic",
+  "officialTopics": [
+    "manual-handling"
+  ],
+  "title": "Manual Handling: Lifting Safely",
+  "whatItIs": "Manual handling means moving or supporting a load by hand or bodily force: lifting, putting down, pushing, pulling or carrying. It is a major cause of back and joint injuries on site.",
+  "keyFacts": [
+    {
+      "text": "Employers MUST avoid manual handling that risks injury, so far as is reasonably practicable.",
+      "law": true
+    },
+    {
+      "text": "If it can't be avoided, employers MUST assess it and reduce the risk to the lowest level reasonably practicable.",
+      "law": true
+    },
+    {
+      "text": "Where reasonably practicable, employers MUST say how heavy each load is and which side is heaviest.",
+      "law": true
+    },
+    {
+      "text": "Employees MUST make full and proper use of the safe system of work provided for handling.",
+      "law": true
+    },
+    "The law sets no 'safe' weight limit. Risk depends on the load, the task, how often, and the conditions.",
+    "One bad lift can cause a lifetime of pain, but most injuries build up from repeated handling."
+  ],
+  "visual": {
+    "type": "steps",
+    "caption": "The legal order: avoid, assess, reduce",
+    "items": [
+      {
+        "title": "Avoid",
+        "text": "Don't move it, deliver to point of use, or use a hoist, telehandler or pallet truck."
+      },
+      {
+        "title": "Assess",
+        "text": "Look at the task, the load, the working environment and the person doing it."
+      },
+      {
+        "title": "Reduce",
+        "text": "Lighter or smaller loads, handling aids, better layout, team lifts planned with care."
+      },
+      {
+        "title": "Train",
+        "text": "Good handling technique adds to these controls. It never replaces them."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Lifting technique training",
+      "points": [
+        "A useful extra once the risk has been reduced",
+        "Can't make up for bad tasks, unsuitable loads or no lifting aids"
+      ]
+    },
+    "b": {
+      "label": "Avoiding or mechanising the lift",
+      "points": [
+        "The first step the law requires",
+        "e.g. hoists, conveyors, materials delivered to where they're used"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Under the Manual Handling Operations Regulations, what must an employer try to do first?",
+      "options": [
+        "Train everyone in lifting technique",
+        "Avoid hazardous manual handling where reasonably practicable",
+        "Set a 25 kg limit for every load",
+        "Make workers sign a lifting declaration"
+      ],
+      "answerIndex": 1,
+      "why": "Regulation 4: avoid hazardous manual handling so far as reasonably practicable; if it can't be avoided, assess it and reduce the risk."
+    },
+    {
+      "question": "Two workers are going to share a heavy, awkward load. Which of these increases the risk?",
+      "options": [
+        "They plan the lift before starting",
+        "The route has been cleared",
+        "They are very different in size and strength",
+        "They've been trained in team lifts"
+      ],
+      "answerIndex": 2,
+      "why": "HSG150: plan shared lifts carefully. Hazards arise when people are not equally matched in size and strength, or not trained in team lifts."
+    }
+  ],
+  "traps": [
+    "There's no legal 'safe' weight: even a light load can injure if handled badly or too often.",
+    "Training alone won't make a badly designed task safe: avoid or mechanise first.",
+    "Pushing and pulling are manual handling too, not just lifting.",
+    "Hurt your back? Get early medical advice and return to heavy handling gradually."
+  ],
+  "sources": [
+    {
+      "doc": "Manual Handling Operations Regulations 1992 (SI 1992/2793)",
+      "ref": "regs 2, 4, 5",
+      "url": "https://www.legislation.gov.uk/uksi/1992/2793/regulation/4"
+    },
+    {
+      "doc": "HSE INDG143 Manual handling at work: A brief guide",
+      "ref": "What does the law say?; Simple filters; Training; Table 1",
+      "url": "https://www.hse.gov.uk/pubns/indg143.pdf"
+    },
+    {
+      "doc": "HSE: Manual handling at work",
+      "ref": "1. Overview",
+      "url": "https://www.hse.gov.uk/msd/manual-handling/index.htm"
+    },
+    {
+      "doc": "HSE: Construction physical ill health risks: Manual handling",
+      "ref": "Control; Train",
+      "url": "https://www.hse.gov.uk/construction/healthrisks/physical-ill-health-risks/manual-handling.htm"
+    },
+    {
+      "doc": "HSE HSG150 Health and safety in construction",
+      "ref": "paras 11, 312-315",
+      "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}
