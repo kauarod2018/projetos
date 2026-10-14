@@ -16,7 +16,7 @@
       "text": "A vehicle MUST NOT be used or loaded in a way that endangers people in it or other road users.",
       "law": true
     },
-    "Projecting more than 2 m at the front or rear: end and side projection markers are needed.",
+    "Over 2 m at the front or rear: projection marker boards are needed. Forward ones also need an attendant.",
     "Over 3.05 m at the front or rear: 2 clear working days' notice to the police, an attendant and marker boards.",
     {
       "text": "Vehicles with projecting loads MUST NOT be left on a road at night without lights.",
@@ -107,12 +107,12 @@
   "sources": [
     {
       "doc": "DfT: Overhanging loads (information sheet)",
-      "ref": "1. Front or rear; 2. Side; 3. C&U Schedule 12; 6. Safety of loads",
+      "ref": "1. Front or rear; 2. Side; 3. C&U Schedule 12 (paras 1 to 3); 6. Safety of loads",
       "url": "https://www.gov.uk/government/publications/overhanging-loads-on-vehicles/overhanging-loads"
     },
     {
       "doc": "The Highway Code",
-      "ref": "Vehicle markings (projection markers); rule 249",
+      "ref": "Rule 250 (parking at night)",
       "url": "https://www.gov.uk/guidance/the-highway-code"
     },
     {
@@ -123,6 +123,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "DfT information sheet Overhanging loads (C&U regs 81, 82, 100 and Sch 12 summary); Highway Code rule 250; Know Your Traffic Signs p. 18 (width and length limits)"
   }
 }

@@ -51,7 +51,7 @@
         ]
       ],
       "notes": [
-        "*If conditions in the regulations are met. Your vehicle's plate shows its own legal limits."
+        "*Only if the conditions in the regulations are met. Axle spacing or the vehicle's plate can set a lower limit."
       ]
     }
   },
@@ -67,7 +67,7 @@
       "label": "Gross train weight",
       "points": [
         "Maximum permitted weight of the vehicle plus any trailer",
-        "Includes the trailer and the load it carries"
+        "Also includes the trailer, as well as the load, driver and passengers"
       ]
     }
   },
@@ -117,6 +117,11 @@
       "url": "https://www.legislation.gov.uk/uksi/2000/3224/contents"
     },
     {
+      "doc": "The Road Vehicles (Authorised Weight) (Amendment) Regulations 2001 (SI 2001/1125)",
+      "ref": "Reg 2(3) (Sch 2 para 1(4)-(5): conditions for item 13)",
+      "url": "https://www.legislation.gov.uk/uksi/2001/1125/contents"
+    },
+    {
       "doc": "GOV.UK: Securing loads on HGVs and goods vehicles",
       "ref": "2. Load securing: the basics",
       "url": "https://www.gov.uk/guidance/securing-loads-on-hgvs-and-goods-vehicles/2-load-securing-the-basics"
@@ -129,6 +134,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "GOV.UK HGV overloading: the basics; SI 1998/3111 reg 4(1), Sch 1 Table 1, Sch 2 Table 3 (as amended by SI 2000/3224, 2001/1125, 2017/881, 2023/760); DVSA load securing code 2 (What to check before loading); GOV.UK Roadside checks: overloading prohibitions"
   }
 }

@@ -87,7 +87,7 @@
         "From working in strong sunlight"
       ],
       "answerIndex": 0,
-      "why": "HSE: Weil's disease comes from infected rat urine, entering through cuts or the lining of the mouth, throat and eyes."
+      "why": "HSE: it comes from infected rat urine, entering through cuts or the lining of the mouth, throat and eyes."
     },
     {
       "question": "Wet concrete has got inside your boot. What is the main risk?",
@@ -98,12 +98,12 @@
         "Noise-induced hearing loss"
       ],
       "answerIndex": 2,
-      "why": "HSE: wet cement is highly alkaline, and a serious burn or ulcer can develop quickly if it's trapped against the skin."
+      "why": "HSE: wet cement is highly alkaline; trapped against skin it can quickly cause a serious burn or ulcer."
     }
   ],
   "traps": [
     "A tan isn't healthy: it's a sign that UV has damaged your skin.",
-    "Years of using cement without trouble don't make you safe: an allergy can still develop.",
+    "Years of using cement without trouble don't make you safe: allergy can develop.",
     "Never use solvents to clean paint or grease off your skin.",
     "Gloves only help if no cement or chemical gets inside them."
   ],
@@ -114,13 +114,13 @@
       "url": "https://www.hse.gov.uk/construction/healthrisks/hazardous-substances/cement.htm"
     },
     {
-      "doc": "HSE HSG150 Health and safety in construction",
+      "doc": "HSE HSG150",
       "ref": "paras 419-425, 538",
       "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
     },
     {
-      "doc": "HSE: Skin at work: Outdoor workers and sun exposure",
-      "ref": "What are the harmful effects?; What can you do?",
+      "doc": "HSE: Skin at work: sun exposure",
+      "ref": "Harmful effects; Protect yourself",
       "url": "https://www.hse.gov.uk/skin/sunprotect.htm"
     },
     {
@@ -129,12 +129,12 @@
       "url": "https://www.hse.gov.uk/construction/healthrisks/cancer-and-construction/skin-cancers.htm"
     },
     {
-      "doc": "HSE: Construction harmful micro-organisms (general; Weil's disease; Legionella; needles)",
+      "doc": "HSE: Harmful micro-organisms (Weil's disease, Legionella, needles)",
       "ref": "Control; What you should know",
       "url": "https://www.hse.gov.uk/construction/healthrisks/hazardous-substances/harmful-micro-organisms.htm"
     },
     {
-      "doc": "HSE: Construction hazardous substances: Solvents",
+      "doc": "HSE: Solvents",
       "ref": "Reduce harmful emissions",
       "url": "https://www.hse.gov.uk/construction/healthrisks/hazardous-substances/solvents.htm"
     }

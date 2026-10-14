@@ -9,25 +9,25 @@
     "accidents-and-emergencies"
   ],
   "title": "Accidents, Near Misses & RIDDOR",
-  "whatItIs": "RIDDOR 2013 is the law that makes employers and people in control of work premises report and record certain work-related accidents, diseases and dangerous occurrences (near misses).",
+  "whatItIs": "RIDDOR 2013 is the law that requires certain work-related accidents, diseases and dangerous occurrences (near misses) to be reported and recorded.",
   "keyFacts": [
     {
-      "text": "Deaths and specified injuries MUST be notified without delay, with a report received within 10 days.",
+      "text": "Deaths and specified injuries MUST be notified without delay; report within 10 days.",
       "law": true
     },
     {
-      "text": "An injury that keeps a worker off normal work for over 7 days in a row MUST be reported within 15 days.",
+      "text": "Over-7-day injuries to workers MUST be reported within 15 days of the accident.",
       "law": true
     },
     {
-      "text": "Injuries causing over 3 days off normal work MUST be recorded, but needn't be reported.",
+      "text": "Over-3-day injuries MUST be recorded, but needn't be reported.",
       "law": true
     },
     {
-      "text": "A member of the public hurt and taken from the scene to hospital for treatment MUST be reported.",
+      "text": "A member of the public taken from the scene to hospital for treatment MUST be reported.",
       "law": true
     },
-    "The 7 days don't count the day of the accident, but do count weekends and rest days."
+    "The 7 days don't count the accident day, but do count weekends and rest days."
   ],
   "visual": {
     "type": "table",
@@ -72,15 +72,15 @@
     "a": {
       "label": "Specified injury",
       "points": [
-        "Eg a fracture (not finger, thumb or toe), amputation, loss of consciousness",
-        "Notify without delay; report within 10 days"
+        "Eg a fracture (not finger, thumb or toe)",
+        "Report within 10 days"
       ]
     },
     "b": {
       "label": "Over-7-day injury",
       "points": [
-        "Off work or unable to do normal duties for over 7 days in a row",
-        "Report within 15 days of the accident"
+        "Off normal work over 7 days in a row",
+        "Report within 15 days"
       ]
     }
   },
@@ -88,16 +88,16 @@
     {
       "question": "A worker breaks his arm in a fall from a trestle. When must this be reported under RIDDOR?",
       "options": [
-        "Without delay, with a report received within 10 days",
-        "Only if he's off work for over 7 days",
-        "Within 15 days of the accident",
-        "Only if he stays in hospital overnight"
+        "Without delay; report within 10 days",
+        "Only if he's off work over 7 days",
+        "Within 15 days",
+        "Only if kept in hospital overnight"
       ],
       "answerIndex": 0,
-      "why": "A fracture other than to a finger, thumb or toe is a specified injury. The enforcing authority must be notified without delay and a report received within 10 days."
+      "why": "A fracture other than to a finger, thumb or toe is a specified injury: notify without delay, with a report received within 10 days."
     },
     {
-      "question": "A labourer strains her back at work and can't do her normal job for 5 days. What does RIDDOR require?",
+      "question": "A labourer hurts her back and can't do her normal job for 5 days. What does RIDDOR require?",
       "options": [
         "Record it, but it doesn't need reporting",
         "Report it within 15 days",
@@ -105,28 +105,28 @@
         "Nothing at all"
       ],
       "answerIndex": 0,
-      "why": "Over-3-day injuries must be recorded (the accident book is enough). They only have to be reported if the incapacity goes on to exceed 7 days."
+      "why": "Over-3-day injuries must be recorded (the accident book is enough). They're reported only if the incapacity goes on past 7 days."
     }
   ],
   "traps": [
-    "Count weekends: the 7 days exclude the day of the accident but include rest days.",
-    "A broken finger, thumb or toe isn't a specified injury, but it may still be an over-7-day injury.",
+    "A precautionary hospital trip with no injury apparent isn't reportable.",
+    "A broken finger, thumb or toe isn't a specified injury, but may be an over-7-day injury.",
     "Near misses count: some dangerous occurrences must be reported even if no one is hurt."
   ],
   "sources": [
     {
-      "doc": "Reporting of Injuries, Diseases and Dangerous Occurrences Regulations 2013",
-      "ref": "regs 4, 5, 12; Schedule 1 para 1",
+      "doc": "RIDDOR 2013",
+      "ref": "regs 4, 5, 12; Sch. 1 para 1",
       "url": "https://www.legislation.gov.uk/uksi/2013/1471/regulation/4"
     },
     {
       "doc": "HSE INDG453 Reporting accidents and incidents at work",
-      "ref": "Types of reportable injury; Reportable dangerous occurrences; Recording requirements",
+      "ref": "Types of reportable injury; Recording requirements",
       "url": "https://www.hse.gov.uk/pubns/indg453.pdf"
     },
     {
-      "doc": "HSE: RIDDOR, when do I need to report / types of reportable incidents",
-      "ref": "Over-7-day incapacitation; Over-3-day incapacitation; Non-fatal accidents to non-workers",
+      "doc": "HSE: Types of reportable incidents; When do I report",
+      "ref": "Over-7-day and over-3-day incapacitation; non-workers",
       "url": "https://www.hse.gov.uk/riddor/when-do-i-report.htm"
     }
   ],

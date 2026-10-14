@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "id": "protecting-public",
+  "niche": "uk-cscs-test",
+  "area": "working-environment",
+  "order": 13,
+  "tier": "complete",
+  "officialTopics": ["environment", "site-rules-and-welfare"],
+  "title": "Protecting the Public",
+  "whatItIs": "Construction work kills and injures people who aren't part of it, including children. Sites must keep the public out and keep the risks inside the perimeter.",
+  "keyFacts": [
+    { "text": "Employers MUST run their work so that people they don't employ aren't put at risk, so far as reasonably practicable.", "law": true },
+    { "text": "A contractor MUST NOT start work until reasonable steps are taken to keep unauthorised people off site.", "law": true },
+    "A 2 m high fence that's hard to climb is an effective barrier for most sites.",
+    "Plan deliveries to avoid busy times for pedestrians, such as the school run.",
+    "Barriers should preferably be at least 1 m back from the edge of an excavation."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Keeping the public safe",
+    "columns": 3,
+    "items": [
+      { "icon": "fence", "title": "Perimeter", "text": "Close-mesh fence, gates locked when the site is empty." },
+      { "icon": "id-card", "title": "Visitors", "text": "Report in, sign in, get information and PPE; escorted if needed." },
+      { "icon": "lock", "title": "Out of hours", "text": "Remove ladders, immobilise plant, lower buckets and forks." },
+      { "icon": "shovel", "title": "Excavations", "text": "Barriers or covers; backfill soon; don't pile spoil on pavements." },
+      { "icon": "hard-hat", "title": "Falling objects", "text": "Double-board platforms; fans, crash decks or tunnels over the public." },
+      { "icon": "school", "title": "Children", "text": "Sites attract them. Liaise with schools; no children leaving lorry cabs." }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Escorted visitor",
+      "points": ["Accompanied at all times", "Told the main hazards and controls"]
+    },
+    "b": {
+      "label": "Unescorted visitor",
+      "points": ["Must know the site and its risks", "Needs a fuller induction"]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Work stops for the day. What should happen to ladders on the scaffold?",
+      "options": ["Remove them and lock them away", "Leave them tied in for the morning", "Lay them flat on the platform", "Lean them against the fence"],
+      "answerIndex": 0,
+      "why": "HSG151: out of hours, remove ladders from the scaffold and secure them in a compound or storage container, so children and others can't climb up."
+    },
+    {
+      "question": "A passer-by is hit by debris from your scaffold and taken to hospital for treatment. Must this be reported?",
+      "options": ["Yes, under RIDDOR", "No: RIDDOR only covers workers", "Only if they stay in overnight", "Only if they're off work 7 days"],
+      "answerIndex": 0,
+      "why": "RIDDOR reg 5: an injury to a person not at work must be reported if they're taken from the scene of the accident to hospital for treatment."
+    }
+  ],
+  "traps": [
+    "Children see sites as playgrounds: if people can still get in, add more measures.",
+    "Don't pile materials or spoil on pavements, forcing pedestrians into the road.",
+    "Lock away cartridge tools and clear up used and misfired cartridges at least daily."
+  ],
+  "sources": [
+    { "doc": "Health and Safety at Work etc. Act 1974", "ref": "s. 3(1)", "url": "https://www.legislation.gov.uk/ukpga/1974/37/section/3" },
+    { "doc": "HSE L153 Managing health and safety in construction (CDM 2015)", "ref": "reg 15(10); para 134", "url": "https://www.hse.gov.uk/pubns/priced/l153.pdf" },
+    { "doc": "HSE HSG151 Protecting the public", "ref": "paras 29, 37-44, 51-56, 60-68, 85-88", "url": "https://www.hse.gov.uk/pubns/priced/hsg151.pdf" },
+    { "doc": "RIDDOR 2013", "ref": "reg 5", "url": "https://www.legislation.gov.uk/uksi/2013/1471/regulation/5" }
+  ],
+  "jurisdictionNotes": [],
+  "review": { "status": "draft" }
+}

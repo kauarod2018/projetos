@@ -102,12 +102,14 @@
     },
     {
       "doc": "GOV.UK: Securing loads on HGVs and goods vehicles",
-      "ref": "6. Plant equipment: securing heavy plant",
+      "ref": "6. Securing heavy plant (boom arm facing away from direction of travel)",
       "url": "https://www.gov.uk/guidance/securing-loads-on-hgvs-and-goods-vehicles/6-how-to-carry-different-types-of-load-in-hgvs-and-goods-vehicles"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "C&U Regulations 1986 reg 10; GOV.UK HGV daily walkaround checks 7 (height marker); Guide to maintaining roadworthiness: bridge strike prevention; Know Your Traffic Signs pp. 24 to 28 (low bridge signs); DVSA load securing code 6 (securing heavy plant)"
   }
 }

@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "environment-waste",
+  "niche": "uk-cscs-test",
+  "area": "working-environment",
+  "order": 12,
+  "tier": "basic",
+  "officialTopics": [
+    "environment"
+  ],
+  "title": "Waste, Pollution & the Environment",
+  "whatItIs": "Construction can pollute air, water and land. You must not cause or allow pollution, and anyone who produces or handles waste has a legal duty of care for it.",
+  "keyFacts": [
+    {
+      "text": "You MUST NOT cause or allow pollution of the air, water or ground.",
+      "law": true
+    },
+    {
+      "text": "Contaminated water MUST NOT go into surface water drains: they discharge straight to the environment.",
+      "law": true
+    },
+    {
+      "text": "Waste MUST only be passed to someone authorised to take it, such as a registered waste carrier.",
+      "law": true
+    },
+    {
+      "text": "Hazardous and non-hazardous waste MUST be stored separately.",
+      "law": true
+    },
+    "If pollution enters, or could enter, a watercourse or the ground, call the pollution hotline immediately."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Drains, storage and spills on site",
+    "columns": 3,
+    "items": [
+      {
+        "swatch": "#2563EB",
+        "title": "Blue manhole cover",
+        "text": "Surface water drain: clean water only."
+      },
+      {
+        "swatch": "#DC2626",
+        "title": "Red manhole cover",
+        "text": "Foul water drain, to a sewer."
+      },
+      {
+        "icon": "droplets",
+        "title": "Drip trays and bunds",
+        "text": "Catch leaks and spills; keep them clear of other materials."
+      },
+      {
+        "icon": "shield-alert",
+        "title": "Spill kit",
+        "text": "Near storage and loading areas."
+      },
+      {
+        "icon": "truck",
+        "title": "Concrete and washout",
+        "text": "In a set area where run-off is caught."
+      },
+      {
+        "icon": "trash-2",
+        "title": "Fly-tipping",
+        "text": "Dumping waste unlawfully is illegal."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Waste transfer note",
+      "points": [
+        "For non-hazardous waste",
+        "Keep a copy for 2 years"
+      ]
+    },
+    "b": {
+      "label": "Consignment note",
+      "points": [
+        "For hazardous waste",
+        "Keep a copy for 3 years"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Where can water from washing out a concrete mixer go?",
+      "options": [
+        "Collected for reuse or treatment",
+        "Into the nearest surface water drain",
+        "Down a drain with a blue manhole cover",
+        "Onto open ground to soak away"
+      ],
+      "answerIndex": 0,
+      "why": "Contaminated water must not go into surface water drains or the ground. Collect it for reuse or treatment, or use a registered waste carrier."
+    },
+    {
+      "question": "A man offers to take your site waste away cheaply. What must you check first?",
+      "options": [
+        "That he's authorised to take waste",
+        "That his van is big enough",
+        "That he can take it today",
+        "That he'll give you a receipt"
+      ],
+      "answerIndex": 0,
+      "why": "Waste duty of care: only transfer waste to an authorised person, eg a registered carrier. Check the public register."
+    }
+  ],
+  "traps": [
+    "Blue manhole cover = surface water: never put anything but clean water down it.",
+    "Concrete slurry and detergents pollute too, not just oil and chemicals.",
+    "Your duty of care doesn't end at the gate: check where the waste is going."
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK Pollution prevention for businesses",
+      "ref": "Correct use of drains; manhole covers; storage; construction",
+      "url": "https://www.gov.uk/guidance/pollution-prevention-for-businesses"
+    },
+    {
+      "doc": "GOV.UK Waste duty of care: code of practice",
+      "ref": "sections 2.4, 3.1-3.5, 3.7",
+      "url": "https://www.gov.uk/government/publications/waste-duty-of-care-code-of-practice"
+    }
+  ],
+  "jurisdictionNotes": [
+    {
+      "jurisdiction": "scotland",
+      "text": "The waste duty of care code shown covers England and Wales; Scotland has its own code."
+    }
+  ],
+  "review": {
+    "status": "draft"
+  }
+}

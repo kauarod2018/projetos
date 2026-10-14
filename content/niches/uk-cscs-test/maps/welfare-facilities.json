@@ -98,7 +98,7 @@
         "Only at the site entrance"
       ],
       "answerIndex": 0,
-      "why": "CDM 2015, Schedule 2: washing facilities must be in the immediate vicinity of every toilet and near any changing rooms, whether or not provided elsewhere."
+      "why": "CDM 2015, Schedule 2: washing facilities must be in the immediate vicinity of every toilet and near any changing rooms."
     },
     {
       "question": "Bags of cement are being kept in the only rest area on site. Is this acceptable?",
@@ -109,7 +109,7 @@
         "Yes, if the workers agree"
       ],
       "answerIndex": 0,
-      "why": "HSE CIS59: rest facilities should give shelter, tables, seats with backs and a way to heat water and food. Rest areas are not to be used to store plant, equipment or materials."
+      "why": "HSE CIS59: rest areas are not to be used to store plant, equipment or materials."
     }
   ],
   "traps": [

@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "id": "signals-and-markings",
+  "niche": "uk-cscs-test",
+  "area": "working-environment",
+  "order": 11,
+  "tier": "complete",
+  "officialTopics": ["safety-signs"],
+  "title": "Hand Signals, Acoustic Signals & Markings",
+  "whatItIs": "Not every safety sign is a board. Hand signals guide crane and vehicle moves, alarms and lights warn of danger, and stripes and lines mark hazards and routes.",
+  "keyFacts": [
+    { "text": "The signaller MUST be able to see all the manoeuvres without being put in danger.", "law": true },
+    { "text": "The signaller's duties MUST be only directing the manoeuvre and keeping nearby workers safe.", "law": true },
+    { "text": "An operator who can't carry on safely MUST stop and ask the signaller for new instructions.", "law": true },
+    { "text": "The acoustic signal for evacuation MUST be continuous.", "law": true },
+    "Obstacles and drops: yellow-and-black or red-and-white stripes at about 45°. Traffic routes: white or yellow lines."
+  ],
+  "visual": {
+    "type": "table",
+    "caption": "Standard hand signals (Safety Signs and Signals Regulations)",
+    "data": {
+      "columns": ["Signal", "How it's given"],
+      "rows": [
+        ["START", "Both arms out horizontally, palms forward"],
+        ["STOP", "Right arm pointing up, palm forward"],
+        ["END", "Both hands clasped at chest height"],
+        ["RAISE", "Right arm up, palm forward, slowly circling"],
+        ["LOWER", "Right arm down, palm in, slowly circling"],
+        ["DANGER (emergency stop)", "Both arms pointing up, palms forward"]
+      ],
+      "notes": []
+    }
+  },
+  "confused": {
+    "a": {
+      "label": "STOP",
+      "points": ["Right arm up, palm forward", "Interrupts or ends a movement"]
+    },
+    "b": {
+      "label": "DANGER",
+      "points": ["Both arms up, palms forward", "Emergency stop"]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "A signaller raises both arms above their head with the palms facing forwards. What does this mean?",
+      "options": ["Danger: emergency stop", "Start", "Raise the load", "End of the operation"],
+      "answerIndex": 0,
+      "why": "In the standard code, DANGER (emergency stop) is both arms pointing upwards, palms forward. STOP uses the right arm only."
+    },
+    {
+      "question": "How must an acoustic signal for evacuation sound?",
+      "options": ["Continuous", "Short pulses", "Three long blasts", "Rising and falling"],
+      "answerIndex": 0,
+      "why": "Safety Signs and Signals Regulations, Schedule 1 Part VII: the signal for evacuation must be continuous."
+    }
+  ],
+  "traps": [
+    "Take signals from one signaller only, unless special arrangements have been made.",
+    "A flashing light means greater danger or more urgency than a steady one.",
+    "The signaller should be easy to spot: a distinctive bright jacket, helmet, armbands or bats."
+  ],
+  "sources": [
+    { "doc": "HSE L64 Safety signs and signals", "ref": "Schedule 1 Parts V-IX; paras 79, 87-96", "url": "https://www.hse.gov.uk/pubns/priced/l64.pdf" }
+  ],
+  "jurisdictionNotes": [],
+  "review": { "status": "draft" }
+}

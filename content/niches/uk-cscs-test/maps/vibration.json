@@ -89,7 +89,7 @@
         "Pain in the lower back"
       ],
       "answerIndex": 1,
-      "why": "HSE INDG175: HAVS symptoms include tingling and numbness in the fingers, loss of grip strength and fingers going white."
+      "why": "HSE INDG175: HAVS symptoms include tingling and numbness in the fingers, weaker grip and white fingers."
     },
     {
       "question": "What is the daily exposure limit value for hand-arm vibration?",
@@ -100,14 +100,14 @@
         "10 m/s² A(8)"
       ],
       "answerIndex": 2,
-      "why": "Vibration Regulations reg 4(1): for hand-arm vibration the daily limit value is 5 m/s² A(8) and the action value is 2.5 m/s² A(8)."
+      "why": "Vibration Regulations reg 4(1): daily limit value 5 m/s² A(8); action value 2.5 m/s² A(8)."
     }
   ],
   "traps": [
     "Gloves keep your hands warm but don't stop vibration.",
     "A tighter grip passes more vibration into your hands.",
     "Cold and smoking make it worse: they reduce blood flow to the fingers.",
-    "Don't ignore tingling: the damage is largely irreversible, so report it early."
+    "Don't ignore tingling: the damage is largely irreversible."
   ],
   "sources": [
     {
@@ -116,7 +116,7 @@
       "url": "https://www.legislation.gov.uk/uksi/2005/1093/regulation/4"
     },
     {
-      "doc": "HSE INDG175 Hand-arm vibration at work: A brief guide",
+      "doc": "HSE INDG175 Hand-arm vibration at work",
       "ref": "Why is it an issue?; What the law says; Which tools?",
       "url": "https://www.hse.gov.uk/pubns/indg175.pdf"
     },
@@ -126,7 +126,7 @@
       "url": "https://www.hse.gov.uk/construction/healthrisks/physical-ill-health-risks/vibration.htm"
     },
     {
-      "doc": "HSE HSG150 Health and safety in construction",
+      "doc": "HSE HSG150",
       "ref": "paras 463-465, 473",
       "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
     }

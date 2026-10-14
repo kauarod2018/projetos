@@ -16,7 +16,7 @@
       "law": true
     },
     {
-      "text": "From 85 dB(A), employers MUST cut noise by other means, provide protection and mark Hearing Protection Zones.",
+      "text": "From 85 dB(A), employers MUST reduce noise, provide protectors and set Hearing Protection Zones.",
       "law": true
     },
     {
@@ -27,8 +27,8 @@
       "text": "Workers MUST use the hearing protection provided and report any defects in it.",
       "law": true
     },
-    "Rule of thumb: if you have to raise your voice to talk to someone about 2 m away, noise is a problem.",
-    "Hearing protection doesn't replace cutting noise at source: it can easily fail or be misused."
+    "If you must raise your voice to talk to someone about 2 m away, noise is a problem.",
+    "Hearing protection doesn't replace cutting noise at source: it can fail or be misused."
   ],
   "visual": {
     "type": "table",
@@ -36,32 +36,32 @@
     "data": {
       "columns": [
         "Level",
-        "Daily or weekly",
-        "Peak",
+        "Daily or weekly, dB(A)",
+        "Peak, dB(C)",
         "What happens"
       ],
       "rows": [
         [
           "Lower action value",
-          "80 dB(A)",
-          "135 dB(C)",
+          "80",
+          "135",
           "Assess the risk; protectors on request"
         ],
         [
           "Upper action value",
-          "85 dB(A)",
-          "137 dB(C)",
+          "85",
+          "137",
           "Planned noise control; protectors worn; Hearing Protection Zones"
         ],
         [
           "Exposure limit",
-          "87 dB(A)",
-          "140 dB(C)",
+          "87",
+          "140",
           "Must not be exceeded"
         ]
       ],
       "notes": [
-        "Action values ignore hearing protection. The limit takes account of the protection it gives."
+        "Action values ignore hearing protection; the limit counts it."
       ]
     }
   },
@@ -77,7 +77,7 @@
       "label": "Exposure limit (87)",
       "points": [
         "Must never be exceeded",
-        "Takes account of the protection from ear protectors worn"
+        "Counts the protection from ear protectors worn"
       ]
     }
   },
@@ -102,14 +102,14 @@
         "Wear hearing protection before you go in"
       ],
       "answerIndex": 3,
-      "why": "Reg 7(3): nobody should enter a Hearing Protection Zone without hearing protectors. Reg 8(2): workers must use them properly."
+      "why": "Reg 7(3): no one should enter a Hearing Protection Zone without protectors. Reg 8(2): use them properly."
     }
   ],
   "traps": [
     "Noise damage is permanent: lost hearing doesn't come back.",
     "Ear protection is not the first control: noise must be reduced at source first.",
-    "Too much protection is risky too: you still need to hear warnings and people around you.",
-    "Protectors only work if worn all the time they're needed, and fitted properly."
+    "Too much protection is risky too: you still need to hear warnings.",
+    "Protectors only work if worn the whole time and fitted properly."
   ],
   "sources": [
     {
@@ -118,7 +118,7 @@
       "url": "https://www.legislation.gov.uk/uksi/2005/1643/regulation/4"
     },
     {
-      "doc": "HSE INDG362 Noise at work: A brief guide to controlling the risks",
+      "doc": "HSE INDG362 Noise at work",
       "ref": "Exposure action values; Exposure limits; Hearing protection",
       "url": "https://www.hse.gov.uk/pubns/indg362.pdf"
     },

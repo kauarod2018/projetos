@@ -29,7 +29,7 @@
   ],
   "visual": {
     "type": "cards",
-    "caption": "Which extinguisher? All are red, with a coloured zone showing the contents",
+    "caption": "Which extinguisher? A coloured zone on the red body shows the contents",
     "columns": 2,
     "items": [
       {
@@ -83,15 +83,15 @@
       "why": "HSG168: for electrical items use a carbon dioxide (CO2) or dry powder extinguisher. Water and foam must not be used on electrical fires."
     },
     {
-      "question": "You've finished welding for the day. What does HSE guidance say about a fire watch?",
+      "question": "You've finished welding for the day. What fire watch does HSE guidance advise?",
       "options": [
-        "Watch for at least an hour, then check again at two hours",
-        "No watch is needed once the torch is off",
-        "Take a quick look before you go home",
-        "Check the area the next morning"
+        "An hour's watch, then a check at 2 hours",
+        "None once the torch is off",
+        "A quick look before you go",
+        "A check the next morning"
       ],
       "answerIndex": 0,
-      "why": "HSG168: keep a continuous fire watch of the hot work area for at least an hour after hot work ends, then at least one more check two hours after it ends."
+      "why": "HSG168: keep a continuous fire watch for at least an hour after hot work ends, then at least one more check two hours after it ends."
     }
   ],
   "traps": [
