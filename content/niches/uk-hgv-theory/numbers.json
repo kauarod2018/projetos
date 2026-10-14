@@ -200,6 +200,29 @@
       }
     },
     {
+      "key": "speed-limiter-goods",
+      "label": "Speed limiter (goods vehicles over 3.5 t)",
+      "value": "Set so the vehicle cannot exceed 90 km/h (about 56 mph), even on a motorway",
+      "jurisdiction": "great-britain",
+      "sources": [
+        {
+          "doc": "Road Vehicles (Construction and Use) Regulations 1986",
+          "ref": "Regulation 36B(1A), (2) and (9)",
+          "url": "https://www.legislation.gov.uk/uksi/1986/1078/regulation/36B"
+        },
+        {
+          "doc": "The Highway Code",
+          "ref": "Rule 222",
+          "url": "https://www.gov.uk/guidance/the-highway-code/road-users-requiring-extra-care-204-to-225"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "C&U Regulations 1986 reg 36B(1A), (2), (9) on legislation.gov.uk; Highway Code rule 222"
+      }
+    },
+    {
       "key": "motorway-lane-ban",
       "label": "Motorway right-hand lane",
       "value": "Goods vehicles over 7.5 t (and lighter ones that must have a speed limiter) MUST NOT use the right-hand lane of a motorway with 3 or more lanes",
