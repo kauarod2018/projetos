@@ -53,7 +53,7 @@
       "label": "Learns actively",
       "points": [
         "May solve a problem straight away in discussion",
-        "Can experiment, within safe bounds"
+        "Very willing to learn actively"
       ]
     },
     "b": {
@@ -97,7 +97,7 @@
   "sources": [
     {
       "doc": "DVSA: National standard for driver and rider training",
-      "ref": "Unit 6.2 Design learning programmes; elements 6.3.1 Create a climate that promotes learning and 6.3.2",
+      "ref": "Unit 6.2 Design learning programmes (knowledge requirements); element 6.3.1 Create a climate that promotes learning",
       "url": "https://www.gov.uk/government/publications/national-standard-for-driver-and-rider-training/national-standard-for-driver-and-rider-training"
     },
     {
@@ -113,6 +113,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "National standard for driver and rider training unit 6.2, element 6.3.1; examiner guidance (instructor tests) 3.24 Teaching and learning strategies, 4.6"
   }
 }

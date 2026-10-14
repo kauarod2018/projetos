@@ -133,6 +133,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Highway Code rules 90, 92; GOV.UK Driving eyesight rules; GOV.UK Medical conditions, disabilities and driving; GOV.UK Driving test: cars (reading difficulties); DT1 6.17"
   }
 }

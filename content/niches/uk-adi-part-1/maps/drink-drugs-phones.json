@@ -27,7 +27,7 @@
       "text": "You MUST keep proper control at all times, including with sat nav or driver assistance systems.",
       "law": true
     },
-    "Hand-held device offence: 6 points and a £200 fine. New drivers lose their licence."
+    "Hand-held phone: 6 points and £200 (court: up to £1,000). Passed within 2 years: licence lost."
   ],
   "visual": {
     "type": "table",
@@ -84,7 +84,7 @@
         "Only the pupil, as the driver, can be prosecuted"
       ],
       "answerIndex": 0,
-      "why": "Rule 149: you must not use a hand-held phone when driving or supervising a learner. The law applies when stopped at lights or offline."
+      "why": "Rule 149: you must not use a hand-held phone when driving or supervising a learner. GOV.UK: this applies at traffic lights and offline too."
     },
     {
       "question": "An examiner has good reason to think a candidate is under the influence of drink. What does DT1 say to do?",
@@ -95,13 +95,13 @@
         "Ask the candidate to take a breath test"
       ],
       "answerIndex": 2,
-      "why": "DT1 6.49: the examiner says the candidate appears to be ill and the test cannot go ahead, avoiding any reference to drink or drugs."
+      "why": "DT1 6.49: the examiner says the candidate appears ill and the test cannot go ahead, with no reference to drink or drugs."
     }
   ],
   "traps": [
     "Below the limit is not safe: alcohol reduces driving ability even under the legal limit.",
     "You may still be unfit to drive the morning after drinking the previous evening.",
-    "Hands-free is legal but still distracting; it is far safer not to use any phone while driving.",
+    "Hands-free is legal but still distracting: it is far safer not to use any phone.",
     "A prescribed medicine over its limit: there is a medical defence only if driving was not impaired."
   ],
   "sources": [
@@ -117,17 +117,17 @@
     },
     {
       "doc": "GOV.UK: The drink drive limit",
-      "ref": "Limits table",
+      "ref": "Limits",
       "url": "https://www.gov.uk/drink-drive-limit"
     },
     {
       "doc": "GOV.UK: Using a phone, sat nav or other device when driving",
-      "ref": "Exceptions; Using devices hands-free; Penalties",
+      "ref": "Exceptions; Hands-free; Penalties",
       "url": "https://www.gov.uk/using-mobile-phones-when-driving-the-law"
     },
     {
       "doc": "DVSA: Carrying out driving tests (DT1)",
-      "ref": "6.49 Candidate suspected of being under the influence of drink or drugs",
+      "ref": "6.49",
       "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-driving-tests-dt1/6-general-technical-matters"
     }
   ],
@@ -138,6 +138,8 @@
     }
   ],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Highway Code rules 95, 96, 149, 150; GOV.UK The drink drive limit; GOV.UK Using a phone, sat nav or other device when driving (incl. penalties); DT1 6.49"
   }
 }

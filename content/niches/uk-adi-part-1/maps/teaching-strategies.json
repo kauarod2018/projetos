@@ -9,7 +9,7 @@
     "instructional-techniques"
   ],
   "title": "Teaching & Learning Strategies",
-  "whatItIs": "The third marked area, with 8 competences. It asks whether the instructor helps the pupil learn actively, choosing the right technique at the right time.",
+  "whatItIs": "Teaching and learning strategies is the third marked area, with 8 competences: does the instructor help the pupil learn actively, using the right technique at the right time?",
   "keyFacts": [
     "Coaching extends the range of options; it isn't an automatic replacement for instruction.",
     "Direct instruction helps early-stage pupils with new situations, or a pupil who is clearly struggling.",
@@ -92,7 +92,7 @@
   "traps": [
     "Frequent explanations and demonstrations support some learners but can demotivate others.",
     "Focusing on teaching tools instead of learning outcomes shows a lack of competence.",
-    "Explaining while you drive is level 3; full 'commentary driving' is a level 4 competence."
+    "Explaining what you're doing as you drive is level 3; the more complex 'commentary driving' is level 4."
   ],
   "sources": [
     {
@@ -108,6 +108,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Examiner guidance (instructor tests) 3.24 Teaching and learning strategies; national standard for driver and rider training element 6.3.2 and footnote 4"
   }
 }

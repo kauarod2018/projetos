@@ -9,7 +9,7 @@
     "law"
   ],
   "title": "Licence, Insurance, MOT & Vehicle Tax",
-  "whatItIs": "To use a car on the road you need a valid licence, insurance, an MOT once the car is old enough, and vehicle tax. They apply to your school car and to any pupil's car.",
+  "whatItIs": "To drive a car on the road you need a valid licence, insurance, vehicle tax and, once the car is 3 years old, an MOT. Police can ask to see the documents.",
   "keyFacts": [
     {
       "text": "You MUST hold a valid licence for the vehicle category and tell DVLA if you change your name or address.",
@@ -59,7 +59,7 @@
         ]
       ],
       "notes": [
-        "No insurance: police can also give a £300 fixed penalty and 6 points, and seize the vehicle."
+        "GOV.UK: for no insurance the police can also give a £300 fixed penalty and 6 points, and can seize the vehicle."
       ]
     }
   },
@@ -134,6 +134,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Highway Code annex 3 (documents) and annex 5 (penalty table); GOV.UK Vehicle insurance (overview, driving without insurance); GOV.UK Getting an MOT"
   }
 }

@@ -9,14 +9,14 @@
     "national-standards"
   ],
   "title": "The ADI Code of Practice",
-  "whatItIs": "A voluntary code agreed between DVSA and the National Associations Strategic Partnership (NASP). It isn't law, but ADIs can show on their registration that they follow it.",
+  "whatItIs": "A voluntary code agreed between DVSA and the National Associations Strategic Partnership (NASP). ADIs who agree to follow it can show this on their registration.",
   "keyFacts": [
     "Phones: never use one while driving or supervising a client's driving; only when parked safely and legally.",
     "On or before the first lesson, make clients aware of the code and of your terms of business.",
-    "Check entitlement to drive and the number plate eyesight check on the first lesson, then regularly.",
+    "Check entitlement to drive and ability to read a number plate at the statutory distance: first lesson, then regularly.",
     "Keep a record of the client's progress, including the number of lessons given.",
     "Never cancel or rearrange a client's driving test without their knowledge and agreement.",
-    "Advertised pass rates mustn't be open to misinterpretation: make clear how they're worked out."
+    "Advertised pass rates shouldn't be open to misinterpretation: make clear how they're worked out."
   ],
   "visual": {
     "type": "cards",
@@ -90,7 +90,7 @@
     }
   ],
   "traps": [
-    "The current code is voluntary, not law. A new mandatory code is due between late 2026 and early 2027.",
+    "The current code is voluntary. A new mandatory code is due between late 2026 and early 2027 (date to be confirmed).",
     "Keeping the school car back for a test? Give enough notice so the client doesn't lose the test fee.",
     "Don't publish in-car footage of driving tests without permission from DVSA and the client.",
     "If the client asks, go with them on their test and listen to the debrief."
@@ -100,10 +100,17 @@
       "doc": "DVSA: Approved driving instructor (ADI) code of practice",
       "ref": "Changes to the code; About the code; 1 Personal conduct; 2 Business dealings; 3 Advertising; 4 Conciliation",
       "url": "https://www.gov.uk/government/publications/driving-instructor-code-of-practice/approved-driving-instructor-adi-code-of-practice"
+    },
+    {
+      "doc": "GOV.UK: Driving instructor code of practice (publication page)",
+      "ref": "Summary (the code is voluntary); new code, effective date to be confirmed",
+      "url": "https://www.gov.uk/government/publications/driving-instructor-code-of-practice"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "ADI code of practice (current): changes, about the code, sections 1-4; GOV.UK code of practice publication page; new code (effective date to be confirmed) timing"
   }
 }

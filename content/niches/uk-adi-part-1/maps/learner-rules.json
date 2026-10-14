@@ -91,7 +91,7 @@
     }
   ],
   "traps": [
-    "Learner speed limits in Great Britain are the same as after the test, day or night.",
+    "Learners in Great Britain have the same speed limits as after the test and can drive day or night.",
     "There is no minimum number of lessons or hours of practice.",
     "No proper supervision: fine up to £1,000 and up to 6 points.",
     "A provisional car licence holder must not drive while towing a trailer."
@@ -119,7 +119,12 @@
     },
     {
       "doc": "Motor Vehicles (Driving Licences) Regulations 1999",
-      "ref": "Regs 16(2) and 17(1)",
+      "ref": "Reg 16(2)(a)-(c) and 16(4): supervision, L/D plates, no trailer",
+      "url": "https://www.legislation.gov.uk/uksi/1999/2864/regulation/16"
+    },
+    {
+      "doc": "Motor Vehicles (Driving Licences) Regulations 1999",
+      "ref": "Reg 17(1) and 17(3)(e): qualified driver (21, 3 years' licence)",
       "url": "https://www.legislation.gov.uk/uksi/1999/2864/regulation/17"
     }
   ],
@@ -130,6 +135,8 @@
     }
   ],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "GOV.UK Driving lessons and learning to drive (all sections); Highway Code annex 3 (learner drivers), rules 149, 253; MV(DL) Regs 1999 regs 16(2), 16(4), 17(1)"
   }
 }

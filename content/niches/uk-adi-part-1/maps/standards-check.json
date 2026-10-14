@@ -13,14 +13,14 @@
   "whatItIs": "Part 3 and the standards check are marked the same way: 17 competences in 3 areas, each scored 0 to 3, for a total out of 51.",
   "keyFacts": [
     {
-      "text": "You MUST take a standards check when DVSA asks, even if you have no car or aren't working as an ADI.",
+      "text": "Registration condition: you MUST take a standards check when the Registrar requires it, even with no car or not working.",
       "law": true
     },
-    "Usually every 4 years; you may be called sooner because of your pupils' driving test results.",
+    "Usually every 4 years; you might also be asked to book one based on your pupils' driving test results.",
     "About 45 minutes, with the pupil driving for about 40 minutes.",
     "Fail 3 standards checks and you're removed from the ADI register and must retake the ADI tests.",
     {
-      "text": "When giving lessons you MUST display your ADI registration at the passenger-side edge of the windscreen.",
+      "text": "When giving paid lessons you MUST display your ADI certificate at the passenger-side edge of the windscreen.",
       "law": true
     }
   ],
@@ -100,12 +100,12 @@
     "30 is still a fail: grade B starts at 31.",
     "A high total can't save you: 7 or less in risk management is an automatic fail.",
     "Your pupil can't be an ADI or someone preparing for their own part 3.",
-    "You can complain about how the check was run, but you can't appeal the examiner's decision."
+    "A complaint upheld by DVSA may get you another check, but your original result can't be changed."
   ],
   "sources": [
     {
       "doc": "GOV.UK: Approved driving instructor (ADI) standards check",
-      "ref": "Overview; What to take; What happens at the standards check; Your standards check result",
+      "ref": "Overview; Book; What to take; What happens at the standards check; Your standards check result; Complain",
       "url": "https://www.gov.uk/adi-standards-check"
     },
     {
@@ -115,22 +115,34 @@
     },
     {
       "doc": "DVSA: Carrying out instructor tests and checks (examiner guidance)",
-      "ref": "3.12 Completing the assessment; 4.1; 4.5; 4.10 Completing the assessment (complaints procedure)",
+      "ref": "3.12 Completing the assessment (scores 0-3, maximum 51)",
+      "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-instructor-tests-and-checks/3-the-instructional-ability-test-part-3"
+    },
+    {
+      "doc": "DVSA: Carrying out instructor tests and checks (examiner guidance)",
+      "ref": "4.5 Format; 4.10 Completing the assessment",
       "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-instructor-tests-and-checks/4-the-test-of-continued-ability-to-instruct-standards-check"
     },
     {
       "doc": "GOV.UK: Manage your ADI registration",
-      "ref": "Renew or update your registration",
+      "ref": "Renew or update your registration (display in the windscreen)",
       "url": "https://www.gov.uk/manage-approved-driving-instructor-registration"
     },
     {
       "doc": "Road Traffic Act 1988",
-      "ref": "Section 128: the Registrar may remove a name for refusing to undergo, or failing, a test of continued ability",
-      "url": "https://www.legislation.gov.uk/ukpga/1988/52/section/128"
+      "ref": "s.123(2) certificate exhibited for paid instruction; s.125(5)(a)(i) test of continued ability; s.128(2)(c)-(d) removal",
+      "url": "https://www.legislation.gov.uk/ukpga/1988/52/part/V"
+    },
+    {
+      "doc": "Motor Cars (Driving Instruction) Regulations 2005",
+      "ref": "Reg 20: certificate fixed behind the front windscreen on its nearside edge",
+      "url": "https://www.legislation.gov.uk/uksi/2005/1902/regulation/20"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "GOV.UK ADI standards check, ADI part 3 test, manage ADI registration; examiner guidance 3.12, 4.5, 4.10; RTA 1988 ss.123(2), 125(5), 128(2); SI 2005/1902 reg 20"
   }
 }

@@ -14,7 +14,7 @@
     "The instructor is always responsible for their own safety, the pupil's and other road users'.",
     "Make sure the pupil understands how responsibility for risk is shared, and keep managing it all lesson.",
     "Explain when and how you may use verbal or physical interventions to keep everyone safe.",
-    "Give clear instructions in good time; late, confusing or too many directions add risk.",
+    "Give clear directions in good time: late or confusing ones can make weaknesses worse; too many create a hazard.",
     "Be fit to teach, check the learner is fit to start, and take suitable action if not."
   ],
   "visual": {
@@ -40,7 +40,7 @@
         ],
         [
           "Intervention",
-          "Steps in only when the pupil can't cope"
+          "Timely; lets the pupil cope, takes control if out of depth"
         ],
         [
           "Safety-critical feedback",
@@ -62,7 +62,7 @@
       "label": "Full licence holder, own car",
       "points": [
         "Driver takes full responsibility",
-        "Instructor stays quiet but flags missed risks"
+        "Instructor talks little but flags missed risks"
       ]
     }
   },
@@ -92,8 +92,8 @@
   ],
   "traps": [
     "Intervening when the pupil is coping is also a fault, not just failing to step in.",
-    "Silence can be a coaching input: it can show the pupil you're confident in them.",
-    "As a supervising driver you're in control: no mobile phone and no alcohol, as if driving."
+    "Silence, with body language showing confidence in the pupil, is as much a coaching input as questions.",
+    "Supervising, you're treated as in control: obey the rules as if driving, e.g. no phone, not under the influence."
   ],
   "sources": [
     {
@@ -114,6 +114,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Examiner guidance (instructor tests) 3.12, 3.24 Risk management; national standard for driver and rider training element 6.4.1; GOV.UK ADI part 3 test (test result)"
   }
 }

@@ -85,7 +85,7 @@
     "The new driver rule applies even if the offences were paid by fixed penalty.",
     "Passing a test for another category (e.g. a lorry) does not start a new 2-year period.",
     "Every offence with points also gives the court a discretionary power to disqualify.",
-    "A second ban within 3 years can last 12 months; a third, 2 years."
+    "Totting-up ban: 6 months; 12 months if it is a second ban within 3 years; 2 years if a third."
   ],
   "sources": [
     {
@@ -105,12 +105,14 @@
     },
     {
       "doc": "Road Traffic (New Drivers) Act 1995",
-      "ref": "Section 1 (2-year probationary period); section 2 (6 or more points)",
+      "ref": "s.1 (2-year probationary period); s.2 (6 or more points, incl. fixed penalties)",
       "url": "https://www.legislation.gov.uk/ukpga/1995/13/section/2"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Highway Code annex 5 (points and disqualification, new drivers); GOV.UK Penalty points (endorsements); GOV.UK Driving disqualifications; Road Traffic (New Drivers) Act 1995 ss.1-2"
   }
 }

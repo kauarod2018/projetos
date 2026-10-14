@@ -9,10 +9,10 @@
     "instructional-techniques"
   ],
   "title": "Client-Centred Learning",
-  "whatItIs": "The approach at the heart of the National standard for driver and rider training: a conversation between learner and instructor based on mutual respect.",
+  "whatItIs": "The approach used in the National standard for driver and rider training: a conversation between learner and instructor based on mutual respect.",
   "keyFacts": [
     "Client-centred is not client-led: the learner doesn't take charge and decide what happens.",
-    "People resist new ideas if the trainer doesn't respect them, isn't 'genuine' or lacks legitimate authority.",
+    "People resist change if the trainer doesn't respect who they are, or isn't seen as genuine or legitimate authority.",
     "Just telling learners what to do may get them through the test, but they quickly forget it.",
     "The goal is a safe, responsible method the learner applies consistently, not one set method.",
     "Transfer responsibility for learning to the learner as soon as they're ready to take it."
@@ -92,12 +92,14 @@
     },
     {
       "doc": "DVSA: Carrying out instructor tests and checks (examiner guidance)",
-      "ref": "3.15 Assessment; 3.24 Interpreting the assessment criteria (Planning; Teaching and learning strategies)",
+      "ref": "3.24 Interpreting the assessment criteria (Planning introduction; Teaching and learning strategies)",
       "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-instructor-tests-and-checks/3-the-instructional-ability-test-part-3"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "National standard for driver and rider training: unit 3 introduction, element 6.3.3, footnote 2; examiner guidance (instructor tests) 3.24"
   }
 }

@@ -51,7 +51,7 @@
       "label": "Trainee licence (pink badge)",
       "points": [
         "After part 2 and 40 hours' training; lasts 6 months",
-        "20% of lessons supervised, or 20 hours' extra training"
+        "20% of lessons supervised, or at least 20 hours' extra training"
       ]
     },
     "b": {
@@ -126,6 +126,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "GOV.UK Become a car driving instructor step by step; ADI part 1, part 2, part 3 test pages; trainee driving instructor licence rules; ADI standards check; Manage ADI registration"
   }
 }

@@ -13,14 +13,14 @@
   "keyFacts": [
     "4 parts: eyesight check, 'show me, tell me' questions, general driving (with independent driving) and reversing.",
     "Around 35 minutes of driving. The regulations require at least 30 minutes on the road for a car test.",
-    "Independent driving lasts 20 to 35 minutes, following a sat nav or traffic signs. The examiner sets the sat nav.",
+    "Independent driving lasts 20 to 35 minutes, following a sat nav, traffic signs or both. The examiner sets the sat nav.",
     "The 'tell me' question comes before driving; the 'show me' question is asked while driving.",
     "An emergency stop is carried out in 1 in every 7 car tests.",
     "The test includes a normal stop, pulling out from behind a parked vehicle and a hill start."
   ],
   "visual": {
     "type": "steps",
-    "caption": "The car test in order",
+    "caption": "The 4 parts of the car test",
     "items": [
       {
         "title": "Eyesight check",
@@ -90,7 +90,7 @@
   "sources": [
     {
       "doc": "GOV.UK: Driving test: cars",
-      "ref": "Using your own car for your test; What happens during the test; If you do not pass",
+      "ref": "Using your own car; What happens during the test (length, eyesight, show me tell me, pulling over, reversing, going off route); If you do not pass",
       "url": "https://www.gov.uk/driving-test"
     },
     {
@@ -101,6 +101,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "GOV.UK Driving test: cars (using your own car, what happens during the test, faults and result); DT1 1.03, 1.04, 1.06, 1.26"
   }
 }

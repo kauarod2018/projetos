@@ -14,8 +14,8 @@
     "Identify goals and needs: ask suitable questions, listen actively and notice body language.",
     "Needs change during the lesson, so this can't be 'ticked off' at the start and forgotten.",
     "Not taught this pupil before? An assessment drive before finalising the plan is fine.",
-    "Part 3 and standards check: agree goals and risk at the start in no more than 3 minutes.",
-    "Stretch the pupil without overwhelming them, but don't restrict them to very easy roads either."
+    "Part 3 and standards check: discuss goals and risk management at the start, in no more than 3 minutes.",
+    "Stretch the pupil without overwhelming them; don't keep them to very quiet junctions without a risk reason."
   ],
   "visual": {
     "type": "table",
@@ -95,7 +95,7 @@
   "sources": [
     {
       "doc": "DVSA: Carrying out instructor tests and checks (examiner guidance)",
-      "ref": "3.10 At the start of the test; 3.12 Completing the assessment (consistent marking); 3.24 Planning",
+      "ref": "3.10 At the start of the test; 3.12 Completing the assessment (elements; consistent marking); 3.24 Planning",
       "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-instructor-tests-and-checks/3-the-instructional-ability-test-part-3"
     },
     {
@@ -116,6 +116,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Examiner guidance (instructor tests) 3.10, 3.12, 3.24 Planning; GOV.UK ADI part 3 test and standards check (what happens); national standard for driver and rider training unit 6.2"
   }
 }

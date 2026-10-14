@@ -103,12 +103,14 @@
     },
     {
       "doc": "DVSA: Carrying out driving tests (DT1)",
-      "ref": "1.33 Fuel efficient driving",
+      "ref": "1.10 (ETA verbal/physical); 1.33 Fuel efficient driving",
       "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-driving-tests-dt1/1-car-driving-test"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "GOV.UK Driving test: cars (faults and result, pass mark); DT1 1.10, 1.33, 11.02 to 11.08, 11.10, 11.11 (show me/tell me)"
   }
 }

@@ -16,7 +16,7 @@
     "'May cause drowsiness' on a medicine means it's highly likely to cause drowsiness.",
     "Whatever the legal limits, it's best to have no alcohol in your system.",
     "Have an eyesight test at least every 2 years: eyesight gets worse over time.",
-    "Role 5 values regular driver development sessions with a competent instructor."
+    "Role 5: know the advantages of regular driver development sessions with a competent instructor."
   ],
   "visual": {
     "type": "table",
@@ -63,7 +63,7 @@
       "label": "Knowledge and understanding",
       "points": [
         "What you must know and understand",
-        "e.g. what aquaplaning is and when it happens"
+        "e.g. what aquaplaning is and when it might happen"
       ]
     }
   },
@@ -105,6 +105,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "National standard for driving cars and light vans (category B): introduction; roles 1-5 unit titles; elements 1.1.2, 4.2.1, 4.2.3, 4.3.1, 5.1.1"
   }
 }

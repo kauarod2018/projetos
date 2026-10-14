@@ -28,11 +28,11 @@
       "rows": [
         [
           "1 Legal requirements",
-          "6.1.1 You · 6.1.2 Training vehicle"
+          "6.1.1 You comply with the law · 6.1.2 Vehicle fit for purpose"
         ],
         [
           "2 Design learning programmes",
-          "6.2 Needs, programme, lesson plans"
+          "6.2 (no separate elements): needs, programme, lesson plans"
         ],
         [
           "3 Safe, responsible driving",
@@ -44,11 +44,11 @@
         ],
         [
           "5 Evaluate and develop yourself",
-          "Self-evaluation, CPD, reflective log"
+          "No numbered elements: self-evaluation, CPD, reflective log"
         ],
         [
           "6 Role play for trainees",
-          "6.6.1 Develop · 6.6.2 Use role play"
+          "6.6.1 Develop · 6.6.2 Implement (use) role play"
         ]
       ],
       "notes": []
@@ -59,7 +59,7 @@
       "label": "Driving standard (car, cat B)",
       "points": [
         "What a safe, responsible driver must do and know",
-        "5 roles, from preparing to lifelong learning"
+        "5 roles, from preparing for a journey to lifelong review"
       ]
     },
     "b": {
@@ -96,8 +96,8 @@
   ],
   "traps": [
     "The first 3 elements of unit 3 are layers of one approach: client-centred learning.",
-    "Role play: simulate high-risk faults verbally where possible; never involve vulnerable road users.",
-    "Group (classroom) delivery is optional for car instructors, but a core skill for motorcycle instructors."
+    "Role play: simulate high-risk faults verbally where possible; never commit faults involving vulnerable road users.",
+    "Not all instructors choose classroom group delivery, but for motorcycle instructors it's a core skill."
   ],
   "sources": [
     {
@@ -106,13 +106,25 @@
       "url": "https://www.gov.uk/government/publications/national-standard-for-driver-and-rider-training/national-standard-for-driver-and-rider-training"
     },
     {
-      "doc": "DVSA: Carrying out instructor tests and checks (examiner guidance)",
-      "ref": "4.1 Skills, knowledge and understanding required; 4.14 Assessment",
-      "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-instructor-tests-and-checks/4-the-test-of-continued-ability-to-instruct-standards-check"
+      "doc": "GOV.UK: Approved driving instructor (ADI) part 3 test",
+      "ref": "What happens during the test",
+      "url": "https://www.gov.uk/adi-part-3-test"
+    },
+    {
+      "doc": "GOV.UK: Approved driving instructor (ADI) standards check",
+      "ref": "What happens at the standards check",
+      "url": "https://www.gov.uk/adi-standards-check"
+    },
+    {
+      "doc": "DVSA: National standard for driving cars and light vans (category B)",
+      "ref": "Introduction (roles, units, elements)",
+      "url": "https://www.gov.uk/guidance/national-standard-for-driving-cars-and-light-vans-category-b"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "National standard for driver and rider training (introduction, units 1-6, elements, glossary); GOV.UK ADI part 3 test and standards check (what happens); national standard for driving cars (roles)"
   }
 }

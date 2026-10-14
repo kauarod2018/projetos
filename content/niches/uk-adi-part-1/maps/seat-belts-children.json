@@ -20,7 +20,7 @@
       "law": true
     },
     {
-      "text": "Under 1.35 m: a child restraint suitable for the child's weight MUST be used.",
+      "text": "Until 1.35 m tall or age 12 (first reached), the correct child restraint MUST be used, with few exceptions.",
       "law": true
     },
     {
@@ -81,10 +81,10 @@
         "An adult seat belt is enough",
         "Nothing, as rear seats are exempt",
         "A child restraint only if they sit in the front",
-        "The correct child restraint for their weight"
+        "The correct child restraint for their height or weight"
       ],
       "answerIndex": 3,
-      "why": "Rule 100: a child under 1.35 m must use a baby seat, child seat, booster seat or booster cushion suitable for their weight. The driver is responsible."
+      "why": "Rules 99 and 100: a child under 1.35 m (and under 12) must use the correct child restraint, e.g. a booster seat, chosen for height or weight (GOV.UK). The driver is responsible."
     },
     {
       "question": "You want to sit in the back during your pupil's test but refuse to wear the rear seat belt. What happens?",
@@ -128,6 +128,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Highway Code rules 99 to 101; GOV.UK Seat belts: the law; GOV.UK Child car seats: the law; DT1 6.29"
   }
 }

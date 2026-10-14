@@ -308,6 +308,175 @@
         "checkedAgainst": "GOV.UK Become a car driving instructor: step by step (updated 24 Feb 2026)"
       },
       "jurisdiction": "great-britain"
+    },
+    {
+      "key": "car-test-pass",
+      "label": "Car driving test",
+      "value": "Pass: 15 driving faults or fewer and no serious or dangerous faults · about 35 minutes of driving · independent driving 20 to 35 minutes",
+      "sources": [
+        {
+          "doc": "GOV.UK",
+          "ref": "Driving test: cars",
+          "url": "https://www.gov.uk/driving-test"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "GOV.UK Driving test: cars"
+      },
+      "jurisdiction": "great-britain"
+    },
+    {
+      "key": "eyesight",
+      "label": "Eyesight check",
+      "value": "Read a number plate from 20 metres (20.5 m for an old-style plate) · ADI part 2: 27 m (27.5 m)",
+      "sources": [
+        {
+          "doc": "GOV.UK",
+          "ref": "Driving test: cars",
+          "url": "https://www.gov.uk/driving-test"
+        },
+        {
+          "doc": "GOV.UK",
+          "ref": "ADI part 2 test",
+          "url": "https://www.gov.uk/adi-part-2-test"
+        },
+        {
+          "doc": "The Highway Code",
+          "ref": "Rule 92",
+          "url": "https://www.gov.uk/guidance/the-highway-code"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "GOV.UK driving test and ADI part 2 pages; Highway Code rule 92"
+      },
+      "jurisdiction": "great-britain"
+    },
+    {
+      "key": "supervising-learners",
+      "label": "Supervising a learner",
+      "value": "Supervisor at least 21 and has held a full licence for that type of car for 3 years · no proper supervision: up to £1,000 and up to 6 points",
+      "sources": [
+        {
+          "doc": "GOV.UK",
+          "ref": "Driving lessons and learning to drive",
+          "url": "https://www.gov.uk/driving-lessons-learning-to-drive"
+        },
+        {
+          "doc": "Motor Vehicles (Driving Licences) Regulations 1999",
+          "ref": "Regulation 17",
+          "url": "https://www.legislation.gov.uk/uksi/1999/2864/regulation/17"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "GOV.UK learning to drive; MV(DL) Regs 1999 reg 17"
+      },
+      "jurisdiction": "great-britain"
+    },
+    {
+      "key": "penalty-points",
+      "label": "Penalty points and bans",
+      "value": "12 points in 3 years: at least 6 months' ban · new drivers: 6 points within 2 years of passing and the licence is revoked",
+      "sources": [
+        {
+          "doc": "The Highway Code",
+          "ref": "Annex 5",
+          "url": "https://www.gov.uk/guidance/the-highway-code/annex-5-penalties"
+        },
+        {
+          "doc": "Road Traffic (New Drivers) Act 1995",
+          "ref": "Sections 1–2",
+          "url": "https://www.legislation.gov.uk/ukpga/1995/13/contents"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "Highway Code annex 5; RT(ND)A 1995 ss.1–2"
+      },
+      "jurisdiction": "great-britain"
+    },
+    {
+      "key": "drink-drive",
+      "label": "Drink-drive limits",
+      "value": "England, Wales and NI: 35 µg breath, 80 mg blood, 107 mg urine · Scotland: 22, 50, 67",
+      "sources": [
+        {
+          "doc": "GOV.UK",
+          "ref": "The drink drive limit",
+          "url": "https://www.gov.uk/drink-drive-limit"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "GOV.UK drink drive limit"
+      },
+      "jurisdiction": "great-britain"
+    },
+    {
+      "key": "phone-penalty",
+      "label": "Hand-held phone",
+      "value": "6 points and a £200 fine (up to £1,000 in court) · passed in the last 2 years: you lose your licence",
+      "sources": [
+        {
+          "doc": "GOV.UK",
+          "ref": "Using your phone while driving: the law",
+          "url": "https://www.gov.uk/using-mobile-phones-when-driving-the-law"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "GOV.UK phones and driving; Highway Code annex 5"
+      },
+      "jurisdiction": "great-britain"
+    },
+    {
+      "key": "part-3-grades",
+      "label": "Part 3 and standards check marking",
+      "value": "17 competences scored 0–3 (max 51) · 0–30 fail · 31–42 grade B · 43–51 grade A · 7 or less in risk management: fail",
+      "sources": [
+        {
+          "doc": "GOV.UK",
+          "ref": "ADI part 3 test",
+          "url": "https://www.gov.uk/adi-part-3-test"
+        },
+        {
+          "doc": "GOV.UK",
+          "ref": "ADI standards check",
+          "url": "https://www.gov.uk/adi-standards-check"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "GOV.UK ADI part 3 test and standards check pages"
+      },
+      "jurisdiction": "great-britain"
+    },
+    {
+      "key": "trainee-licence",
+      "label": "Trainee instructor licence",
+      "value": "Lasts 6 months · at least 40 hours of training first (10 in a car) · 20% of lessons supervised, or at least 20 hours of extra training",
+      "sources": [
+        {
+          "doc": "GOV.UK",
+          "ref": "Get a trainee driving instructor licence",
+          "url": "https://www.gov.uk/trainee-driving-instructor-licence-the-rules"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "GOV.UK trainee licence rules"
+      },
+      "jurisdiction": "great-britain"
     }
   ]
 }

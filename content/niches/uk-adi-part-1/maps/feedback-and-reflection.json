@@ -13,10 +13,10 @@
   "keyFacts": [
     "Feedback should be relevant, positive and honest, never giving a false sense of ability.",
     "Where possible, put a weakness as a learning opportunity; if something is dangerous, say so plainly.",
-    "Feedback is two-way: ideally prompted by the pupil, and how they felt is never ignored.",
+    "Feedback is two-way, ideally prompted by the pupil; their feedback, especially how they felt, is never ignored.",
     "Deal with the pupil's questions as soon as possible, or point them to a suitable source.",
-    "End of lesson: the pupil reflects first; give a balanced overview if they miss strengths or weaknesses.",
-    "Instructors reflect too: unit 5 asks for a reflective log and non-defensive use of feedback."
+    "End of lesson: encourage the pupil to reflect; give a balanced overview of strengths and weaknesses if they don't.",
+    "Instructors reflect too: unit 5 asks for a reflective log and getting feedback in a non-defensive way."
   ],
   "visual": {
     "type": "steps",
@@ -45,14 +45,14 @@
       "label": "Closed questions",
       "points": [
         "Useful to check knowledge",
-        "Of little use otherwise with an able pupil"
+        "Of little use otherwise with a highly able pupil"
       ]
     },
     "b": {
       "label": "Open questions",
       "points": [
-        "Encourage a higher level of thinking",
-        "May confuse a pupil who is struggling"
+        "May confuse a struggling pupil of limited ability",
+        "Match any question to the pupil's level of ability"
       ]
     }
   },
@@ -100,6 +100,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Examiner guidance (instructor tests) 3.24 (teaching style, feedback, queries, end of session, safety-critical incidents); national standard for driver and rider training 6.3.2, 6.3.3, unit 5"
   }
 }
