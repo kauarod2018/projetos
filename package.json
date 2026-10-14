@@ -19,7 +19,8 @@
     "site:package": "npm run site:build && mkdir -p entrega && rm -f entrega/helptest-site-*.zip && cd out && zip -qrX ../entrega/helptest-site-$(date +%F).zip index.html . -x 'index.txt' '*/index.txt' '*__next*'",
     "site:check": "tsx scripts/check-site.ts",
     "creatives": "tsx scripts/build-creatives.ts",
-    "creatives:release": "tsx scripts/build-creatives.ts --release"
+    "creatives:release": "tsx scripts/build-creatives.ts --release",
+    "hotmart": "tsx scripts/build-hotmart.ts"
   },
   "engines": {
     "node": ">=20"
