@@ -5,12 +5,20 @@
   "area": "working-environment",
   "order": 7,
   "tier": "complete",
-  "officialTopics": ["accidents-and-emergencies"],
+  "officialTopics": [
+    "accidents-and-emergencies"
+  ],
   "title": "First Aid at Work",
-  "whatItIs": "Employers must have first-aid equipment, facilities and people ready so that anyone injured or taken ill at work gets immediate help, and an ambulance is called in serious cases.",
+  "whatItIs": "Employers must provide first-aid equipment, facilities and people, so employees injured or taken ill at work get immediate help, and an ambulance in serious cases.",
   "keyFacts": [
-    { "text": "Employers MUST provide adequate and appropriate first-aid equipment, facilities and suitable people.", "law": true },
-    { "text": "Employers MUST tell employees the first-aid arrangements, including where equipment and people are.", "law": true },
+    {
+      "text": "Employers MUST provide adequate and appropriate first-aid equipment, facilities and suitable people.",
+      "law": true
+    },
+    {
+      "text": "Employers MUST tell employees the first-aid arrangements, including where equipment and people are.",
+      "law": true
+    },
     "The minimum on any site: a stocked first-aid kit, an appointed person and information for workers.",
     "An appointed person takes charge and calls the emergency services. They don't need first-aid training.",
     "First-aid cover is needed whenever people are at work, including shifts, nights and weekends.",
@@ -20,11 +28,23 @@
     "type": "table",
     "caption": "Suggested first-aid cover for higher-hazard work such as construction",
     "data": {
-      "columns": ["Employees", "First-aid personnel to have available"],
+      "columns": [
+        "Employees",
+        "First-aid personnel to have available"
+      ],
       "rows": [
-        ["Fewer than 5", "At least one appointed person"],
-        ["5 to 50", "At least one first-aider trained in EFAW or FAW, depending on the likely injuries"],
-        ["More than 50", "At least one FAW-trained first-aider for every 50 employed (or part of 50)"]
+        [
+          "Fewer than 5",
+          "At least one appointed person"
+        ],
+        [
+          "5 to 50",
+          "At least one first-aider trained in EFAW or FAW, depending on the likely injuries"
+        ],
+        [
+          "More than 50",
+          "At least one FAW-trained first-aider for every 50 employed (or part of 50)"
+        ]
       ],
       "notes": [
         "These numbers are suggestions only: base cover on your first-aid needs assessment.",
@@ -35,23 +55,39 @@
   "confused": {
     "a": {
       "label": "Appointed person",
-      "points": ["Takes charge and calls an ambulance", "No training needed: gives no first aid beyond it"]
+      "points": [
+        "Takes charge and calls an ambulance",
+        "No first-aid training needed; gives no first aid untrained"
+      ]
     },
     "b": {
       "label": "First-aider",
-      "points": ["Trained in FAW, EFAW or another suitable level", "Gives first aid and can act as appointed person"]
+      "points": [
+        "Trained in FAW, EFAW or another suitable level",
+        "Gives first aid and can act as appointed person"
+      ]
     }
   },
   "onTheTest": [
     {
       "question": "A construction contractor has 30 workers on site. What first-aid cover does HSE suggest as a minimum?",
-      "options": ["At least one trained first-aider", "A first-aid box only", "An appointed person only", "A nurse on site at all times"],
+      "options": [
+        "At least one trained first-aider",
+        "A first-aid box only",
+        "An appointed person only",
+        "A nurse on site at all times"
+      ],
       "answerIndex": 0,
       "why": "INDG214 Table 2: for higher-hazard work such as construction, with 5 to 50 employees, have at least one first-aider trained in EFAW or FAW."
     },
     {
       "question": "What is the role of an appointed person?",
-      "options": ["Take charge of first aid and call an ambulance", "Give advanced first aid", "Hand out medicines from the kit", "Report every cut to HSE"],
+      "options": [
+        "Take charge of first aid and call an ambulance",
+        "Give advanced first aid",
+        "Hand out medicines from the kit",
+        "Report every cut to HSE"
+      ],
       "answerIndex": 0,
       "why": "An appointed person takes charge of first-aid arrangements, looks after the equipment and calls the emergency services. They shouldn't give first aid they aren't trained for."
     }
@@ -59,13 +95,30 @@
   "traps": [
     "An appointed person is not a first-aider and shouldn't give first aid they aren't trained for.",
     "There's no compulsory list of first-aid box contents: it depends on the needs assessment.",
-    "Plan cover for first-aiders' annual leave: an appointed person only covers unforeseen absences."
+    "Plan cover for first-aiders' annual leave: an appointed person only covers unforeseen absences.",
+    "The First-Aid Regulations don't cover the public, but HSE strongly recommends including them in your provision."
   ],
   "sources": [
-    { "doc": "Health and Safety (First-Aid) Regulations 1981", "ref": "regs 3, 4", "url": "https://www.legislation.gov.uk/uksi/1981/917/regulation/3" },
-    { "doc": "HSE INDG214 First aid at work: your questions answered", "ref": "Q1-Q6, Q9; Tables 1 and 2", "url": "https://www.hse.gov.uk/pubns/indg214.pdf" },
-    { "doc": "HSE HSG150 Health and safety in construction", "ref": "paras 94-97", "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf" }
+    {
+      "doc": "Health and Safety (First-Aid) Regulations 1981",
+      "ref": "regs 3, 4",
+      "url": "https://www.legislation.gov.uk/uksi/1981/917/regulation/3"
+    },
+    {
+      "doc": "HSE INDG214 First aid at work: your questions answered",
+      "ref": "Q1-Q6, Q8, Q9; Tables 1 and 2",
+      "url": "https://www.hse.gov.uk/pubns/indg214.pdf"
+    },
+    {
+      "doc": "HSE HSG150 Health and safety in construction",
+      "ref": "paras 94-97",
+      "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
+    }
   ],
   "jurisdictionNotes": [],
-  "review": { "status": "draft" }
+  "review": {
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Health and Safety (First-Aid) Regulations 1981 regs 3, 4; INDG214 Q1-Q9, Tables 1-2; HSG150 paras 94-97"
+  }
 }

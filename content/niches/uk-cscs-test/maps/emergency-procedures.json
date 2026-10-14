@@ -9,7 +9,7 @@
     "accidents-and-emergencies"
   ],
   "title": "Emergency Procedures & Evacuation",
-  "whatItIs": "Every site plans for foreseeable emergencies, such as fire, flooding, toxic gas or a rescue. Everyone must know the alarm, the escape routes and where to assemble.",
+  "whatItIs": "Sites plan for foreseeable emergencies, such as fire, flooding, toxic gas or a rescue, before work begins. Everyone must know the alarm, the escape routes and where to assemble.",
   "keyFacts": [
     {
       "text": "Arrangements for foreseeable emergencies MUST include procedures to evacuate the site or part of it.",
@@ -92,18 +92,23 @@
   ],
   "sources": [
     {
+      "doc": "Construction (Design and Management) Regulations 2015",
+      "ref": "regs 30, 31",
+      "url": "https://www.legislation.gov.uk/uksi/2015/51/regulation/30"
+    },
+    {
       "doc": "HSE L153 Managing health and safety in construction (CDM 2015)",
-      "ref": "regs 30, 31; para 173(b)",
+      "ref": "para 173(b) (serious and imminent danger)",
       "url": "https://www.hse.gov.uk/pubns/priced/l153.pdf"
     },
     {
       "doc": "HSE HSG168 Fire safety in construction",
-      "ref": "paras 250, 286, 304-325",
+      "ref": "paras 250, 286, 308, 310, 319-320, 324-325",
       "url": "https://www.hse.gov.uk/pubns/priced/hsg168.pdf"
     },
     {
       "doc": "HSE HSG150 Health and safety in construction",
-      "ref": "paras 79-82, 87-88",
+      "ref": "paras 79-82",
       "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
     },
     {
@@ -114,6 +119,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "CDM 2015 regs 30, 31; L153 para 173(b); HSG168 paras 250, 286, 308-310, 319-325; HSG150 paras 79-82; HSG151 para 52"
   }
 }

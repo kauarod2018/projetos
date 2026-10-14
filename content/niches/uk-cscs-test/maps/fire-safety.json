@@ -20,12 +20,12 @@
       "law": true
     },
     {
-      "text": "Fire-fighting equipment MUST be easily accessible, signed, and tested and maintained.",
+      "text": "Fire-fighting equipment MUST be easy to get to, signed, examined and tested at suitable intervals, and maintained.",
       "law": true
     },
     "Keep a fire watch during hot work and for at least an hour after, then check again at 2 hours.",
     "Extinguishers are for small fires or to aid escape. Don't delay calling the fire and rescue service.",
-    "Indoor areas of a construction site must be no smoking; smoke only in designated areas."
+    "No smoking on site except in designated smoking areas, away from buildings and flammables."
   ],
   "visual": {
     "type": "cards",
@@ -97,28 +97,25 @@
   "traps": [
     "Never use water on electrical or burning liquid fires.",
     "Don't tackle a large fire: putting out larger fires is the fire and rescue service's job.",
-    "Never wedge open, lock or remove a fire door.",
+    "Keep fire doors closed: never wedge them open.",
     "Keep the fire watch during breaks in hot work too, not just at the end."
   ],
   "sources": [
     {
-      "doc": "HSE L153 Managing health and safety in construction (CDM 2015)",
+      "doc": "Construction (Design and Management) Regulations 2015",
       "ref": "regs 29, 32",
-      "url": "https://www.hse.gov.uk/pubns/priced/l153.pdf"
+      "url": "https://www.legislation.gov.uk/uksi/2015/51/regulation/32"
     },
     {
       "doc": "HSE HSG168 Fire safety in construction",
-      "ref": "paras 34-35, 101, 122, 245, 291-293; Figure 17; Appendix 3",
+      "ref": "paras 34-35, 101, 122, 245, 292-293; Figure 17; Appendix 3",
       "url": "https://www.hse.gov.uk/pubns/priced/hsg168.pdf"
-    },
-    {
-      "doc": "HSE HSG150 Health and safety in construction",
-      "ref": "para 92",
-      "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "CDM 2015 regs 29, 32; HSG168 paras 34-35, 101, 122, 245, 292-293, Figure 17 (extinguisher types; blue = dry powder), Appendix 3 (fire watch)"
   }
 }

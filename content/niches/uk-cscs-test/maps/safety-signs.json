@@ -5,7 +5,9 @@
   "area": "working-environment",
   "order": 10,
   "tier": "basic",
-  "officialTopics": ["safety-signs"],
+  "officialTopics": [
+    "safety-signs"
+  ],
   "title": "Safety Signs: Shapes & Colours",
   "whatItIs": "Safety signs use shape and colour to tell you what's banned, what's dangerous, what you must do, and where exits, first aid and fire equipment are.",
   "keyFacts": [
@@ -13,41 +15,84 @@
     "Yellow triangle with black edging = warning: be careful, there's a hazard.",
     "Blue circle with a white pictogram = mandatory: you must do it, eg wear PPE.",
     "Green rectangle or square = escape routes, exits and first aid. Red rectangle = fire-fighting equipment.",
-    { "text": "Employers MUST provide and maintain safety signs where a risk can't be avoided or reduced in other ways.", "law": true }
+    {
+      "text": "Employers MUST provide and maintain safety signs where a risk can't be avoided or reduced in other ways.",
+      "law": true
+    }
   ],
   "visual": {
     "type": "cards",
     "caption": "The five kinds of safety signboard",
     "columns": 3,
     "items": [
-      { "swatch": "#DC2626", "title": "Prohibition: red circle and bar", "text": "Black pictogram on white. Don't do it, eg No smoking." },
-      { "swatch": "#FACC15", "title": "Warning: yellow triangle", "text": "Black pictogram and black edge. Be careful, eg Danger: electricity." },
-      { "swatch": "#2563EB", "title": "Mandatory: blue circle", "text": "White pictogram on blue. You must, eg Safety helmet must be worn." },
-      { "swatch": "#16A34A", "title": "Escape or first aid: green rectangle", "text": "White pictogram on green. Exits, escape routes, first aid." },
-      { "swatch": "#B91C1C", "title": "Fire-fighting: red rectangle", "text": "White pictogram on red. Extinguishers, hoses, fire alarms." },
-      { "icon": "type", "title": "Words on signs", "text": "Text can be added, but a fire exit sign with words only isn't acceptable." }
+      {
+        "swatch": "#DC2626",
+        "title": "Prohibition: red circle and bar",
+        "text": "Black pictogram on white. Don't do it, eg No smoking."
+      },
+      {
+        "swatch": "#FACC15",
+        "title": "Warning: yellow triangle",
+        "text": "Black pictogram and black edge. Be careful, eg Danger: electricity."
+      },
+      {
+        "swatch": "#2563EB",
+        "title": "Mandatory: blue circle",
+        "text": "White pictogram on blue. You must, eg Safety helmet must be worn."
+      },
+      {
+        "swatch": "#16A34A",
+        "title": "Escape or first aid: green rectangle",
+        "text": "White pictogram on green. Exits, escape routes, first aid."
+      },
+      {
+        "swatch": "#B91C1C",
+        "title": "Fire-fighting: red rectangle",
+        "text": "White pictogram on red. Extinguishers, hoses, fire alarms."
+      },
+      {
+        "icon": "type",
+        "title": "Words on signs",
+        "text": "Text can be added, but a fire exit sign with words only isn't acceptable."
+      }
     ]
   },
   "confused": {
     "a": {
       "label": "Prohibition (red circle)",
-      "points": ["Red edge and diagonal bar on white", "Tells you what you must NOT do"]
+      "points": [
+        "Red edge and diagonal bar on white",
+        "Tells you what you must NOT do"
+      ]
     },
     "b": {
       "label": "Mandatory (blue circle)",
-      "points": ["Solid blue disc, white pictogram", "Tells you what you MUST do"]
+      "points": [
+        "White pictogram on a blue background",
+        "Tells you what you MUST do"
+      ]
     }
   },
   "onTheTest": [
     {
       "question": "What does a round blue sign with a white picture of a safety helmet mean?",
-      "options": ["Safety helmets must be worn", "Safety helmets are not allowed", "Danger: falling objects", "Safety helmets are stored here"],
+      "options": [
+        "Safety helmets must be worn",
+        "Safety helmets are not allowed",
+        "Danger: falling objects",
+        "Safety helmets are stored here"
+      ],
       "answerIndex": 0,
       "why": "Mandatory signs are round, with a white pictogram on blue. They prescribe specific behaviour, such as wearing PPE."
     },
     {
       "question": "Which sign shows the way to an emergency exit?",
-      "options": ["White pictogram on a green rectangle", "Black pictogram on a yellow triangle", "White pictogram on a blue circle", "White pictogram on a red square"],
+      "options": [
+        "White pictogram on a green rectangle",
+        "Black pictogram on a yellow triangle",
+        "White pictogram on a blue circle",
+        "White pictogram on a red square"
+      ],
       "answerIndex": 0,
       "why": "Emergency escape and first-aid signs are rectangular or square, with a white pictogram on green."
     }
@@ -58,8 +103,21 @@
     "Signs don't replace other controls: they're used where risks can't be avoided or reduced otherwise."
   ],
   "sources": [
-    { "doc": "HSE L64 Safety signs and signals", "ref": "paras 19, 36, 47-50, 104, 106; Table 1; reg 4", "url": "https://www.hse.gov.uk/pubns/priced/l64.pdf" }
+    {
+      "doc": "Health and Safety (Safety Signs and Signals) Regulations 1996",
+      "ref": "reg 4; Schedule 1 Parts I-II",
+      "url": "https://www.legislation.gov.uk/uksi/1996/341/regulation/4"
+    },
+    {
+      "doc": "HSE L64 Safety signs and signals",
+      "ref": "Table 1; paras 45-48, 106 (signboard intrinsic features)",
+      "url": "https://www.hse.gov.uk/pubns/priced/l64.pdf"
+    }
   ],
   "jurisdictionNotes": [],
-  "review": { "status": "draft" }
+  "review": {
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Safety Signs and Signals Regulations 1996 reg 4 and Schedule 1 Parts I-II; L64 Table 1, paras 45-48 and 106 (shapes, colours, text-only fire signs)"
+  }
 }
