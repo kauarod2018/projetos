@@ -16,18 +16,18 @@
       "law": true
     },
     {
-      "text": "Contaminated water MUST NOT go into surface water drains: they discharge straight to the environment.",
+      "text": "Contaminated water MUST NOT go into surface water drains.",
       "law": true
     },
     {
-      "text": "Waste MUST only be passed to someone authorised to take it, such as a registered waste carrier.",
+      "text": "Waste MUST only go to someone authorised to take it.",
       "law": true
     },
     {
       "text": "Hazardous and non-hazardous waste MUST be stored separately.",
       "law": true
     },
-    "If pollution enters, or could enter, a watercourse or the ground, call the pollution hotline immediately."
+    "Pollution entering, or about to enter, water or the ground? Call the pollution hotline at once."
   ],
   "visual": {
     "type": "cards",
@@ -46,7 +46,7 @@
       },
       {
         "icon": "droplets",
-        "title": "Drip trays and bunds",
+        "title": "Bunds",
         "text": "Catch leaks and spills; keep them clear of other materials."
       },
       {
@@ -56,7 +56,7 @@
       },
       {
         "icon": "truck",
-        "title": "Concrete and washout",
+        "title": "Concrete washout",
         "text": "In a set area where run-off is caught."
       },
       {
@@ -119,7 +119,7 @@
     },
     {
       "doc": "GOV.UK Waste duty of care: code of practice",
-      "ref": "sections 2.4, 3.1-3.5, 3.7",
+      "ref": "sections 2.4, 3.1-3.6",
       "url": "https://www.gov.uk/government/publications/waste-duty-of-care-code-of-practice"
     }
   ],
