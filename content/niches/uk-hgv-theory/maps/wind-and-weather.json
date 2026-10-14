@@ -92,7 +92,7 @@
     }
   ],
   "traps": [
-    "Wind doesn't only affect you: your lorry's turbulence can push motorcyclists off course.",
+    "Wind doesn't only affect you: turbulence from large vehicles particularly affects motorcyclists.",
     "Fog lights left on after the fog clears dazzle others and can hide your brake lights.",
     "On ice, tyres make virtually no noise: quiet tyres and unresponsive steering are warning signs."
   ],
@@ -115,6 +115,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Highway Code rules 163, 212, 226, 227, 229, 230, 231, 232, 233, 235, 236"
   }
 }

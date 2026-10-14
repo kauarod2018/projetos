@@ -23,7 +23,7 @@
       "text": "Goods vehicles over 7.5 t MUST NOT exceed 60 mph on a motorway.",
       "law": true
     },
-    "Many large vehicles have speed limiters that restrict them to 56 mph (90 km/h), even on a motorway.",
+    "Many large vehicles have speed limiters that restrict them to 90 km/h (56 mph), even on a motorway.",
     "Keep in the left lane unless overtaking. Overtake only on the right, and don't cut in on the vehicle you've passed."
   ],
   "visual": {
@@ -119,6 +119,11 @@
       "doc": "Know Your Traffic Signs (DfT)",
       "ref": "Motorway signs, signals and road markings (page 91)",
       "url": "https://assets.publishing.service.gov.uk/media/656ef4271104cf0013fa74ef/know-your-traffic-signs-dft.pdf"
+    },
+    {
+      "doc": "The Road Vehicles (Construction and Use) Regulations 1986",
+      "ref": "Reg 36B (speed limiters set at 90 km/h)",
+      "url": "https://www.legislation.gov.uk/uksi/1986/1078/regulation/36B"
     }
   ],
   "jurisdictionNotes": [
@@ -128,6 +133,8 @@
     }
   ],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Highway Code rules 124 (speed limits table), 222, 263, 264, 265, 267, 268; GOV.UK speed limits page; KYTS p91 (motorway lane restriction); C&U Regulations 1986 reg 36B"
   }
 }

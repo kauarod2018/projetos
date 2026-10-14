@@ -115,6 +115,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Highway Code rules 126, 155, 291 to 294, 299; KYTS pp30-31 (level crossings: steady amber, 3-minute rule, parking place for large or slow vehicles)"
   }
 }

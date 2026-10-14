@@ -14,12 +14,12 @@
     "Before moving off: check all mirrors, look round into the blind spots, signal if needed, then take a final look round.",
     "Use your mirrors frequently, and in good time before you signal or change direction or speed.",
     "Mirrors don't cover all areas: there will be blind spots, so you need to look round and check.",
-    "Before turning, check mirrors and blind spot again, and watch for traffic coming up on your left in a large vehicle.",
+    "Before turning right, check mirrors and blind spot again. Before turning left, watch for traffic coming up on your left.",
     {
       "text": "You MUST NOT reverse your vehicle further than necessary.",
       "law": true
     },
-    "Daily check: mirrors in place, not damaged, obscured or insecure; cameras working with the correct view."
+    "Daily check: mirrors in place, not damaged, obscured or insecure; any camera used instead works with the correct view."
   ],
   "visual": {
     "type": "cards",
@@ -39,7 +39,7 @@
       {
         "icon": "car-front",
         "title": "Close behind you",
-        "text": "A driver following too closely may not be visible in your mirrors."
+        "text": "Vehicles following a large vehicle may not be visible in its mirrors."
       },
       {
         "icon": "eye-off",
@@ -60,7 +60,7 @@
       "label": "Looking round (blind spots)",
       "points": [
         "Before moving off, plus a final look before you go",
-        "Before turning, to make sure you are not being overtaken"
+        "Before turning right, to make sure you are not being overtaken"
       ]
     }
   },
@@ -117,6 +117,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Highway Code rules 159, 161, 178, 180, 182, 202, 203 (CUR reg 106), 211, 221, 267; GOV.UK HGV daily walkaround checks 1 (mirrors, cameras and glass)"
   }
 }

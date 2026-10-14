@@ -94,7 +94,7 @@
         "Leave the dipped headlights on"
       ],
       "answerIndex": 0,
-      "why": "Only cars and goods vehicles up to 2,500 kg may park without lights on a 30 mph road."
+      "why": "Only cars, goods vehicles up to 2,500 kg laden and a few others may park without lights on a road of 30 mph or less. Other vehicles MUST NOT be left there at night without lights."
     }
   ],
   "traps": [
@@ -130,6 +130,8 @@
     }
   ],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Highway Code rules 156, 239, 243, 244, 246 (RTA 1988 s19), 247, 249, 250; annex 6 vehicle security; rule 291"
   }
 }

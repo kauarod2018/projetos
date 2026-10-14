@@ -107,10 +107,17 @@
       "doc": "Home Office: Level of penalty code of practice",
       "ref": "Maximum level of penalty",
       "url": "https://www.gov.uk/government/publications/level-of-penalty-code-of-practice/level-of-penalty-code-of-practice-accessible"
+    },
+    {
+      "doc": "The Carriers' Liability Regulations 2002 (as amended by SI 2023/29)",
+      "ref": "Regs 2D(5) (must not take vehicle to control if someone hiding), 2F (£6,000) and 3 (£10,000)",
+      "url": "https://www.legislation.gov.uk/uksi/2023/29/made"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "GOV.UK Clandestine entrant civil penalty scheme (fines; at UK border control); Home Office How to secure your vehicle (updated 15 Jul 2026) steps 1-10; Check and secure your vehicle; Level of penalty code of practice (Dec 2023); Carriers' Liability (Amendment) Regulations 2023 (SI 2023/29) regs 2D, 2F, 3; IAA 1999 s31A"
   }
 }

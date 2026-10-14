@@ -98,7 +98,7 @@
     },
     {
       "doc": "The Highway Code",
-      "ref": "Rules 160, 163, 167, 170, 182 and 183",
+      "ref": "Rules 160, 163, 167, 170, 182, 183 and 195",
       "url": "https://www.gov.uk/guidance/the-highway-code/using-the-road-159-to-203"
     },
     {
@@ -114,6 +114,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Highway Code rules H1, H2, H3, 140, 160, 163, 167, 170, 182, 183, 195, 211 to 213"
   }
 }

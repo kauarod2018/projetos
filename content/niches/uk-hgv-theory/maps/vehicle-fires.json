@@ -12,7 +12,7 @@
   "whatItIs": "If your vehicle catches fire, get everyone out to a safe place and call the fire brigade. Don't open a burning engine compartment. In tunnels, keep your distance.",
   "keyFacts": [
     "Don't try to put out an engine compartment fire: opening it will make the fire flare.",
-    "Smell burning rubber, fuel or an electrical fault? Investigate straight away: do not risk a fire.",
+    "Smell burning rubber, petrol or an electrical fault? Investigate immediately: do not risk a fire.",
     "Never smoke or use a mobile phone on a fuel station forecourt: both are major fire risks.",
     "Large vehicle in a tunnel: allow a four-second gap. If you stop, leave at least 5 metres.",
     "Signs in road tunnels show the direction and distance to an emergency exit."
@@ -113,6 +113,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Highway Code annex 6 (other problems; overheated engines or fire; petrol stations/fuel leaks), annex 7 (1. deal with danger, 2. get help), rules 126, 275, 283; KYTS p137 (tunnel emergency exit sign)"
   }
 }

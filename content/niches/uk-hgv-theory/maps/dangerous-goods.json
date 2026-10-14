@@ -15,7 +15,7 @@
     "Vehicles carrying dangerous goods in packages are marked with plain orange reflective plates.",
     "Road tankers and vehicles carrying tank containers of dangerous goods have hazard warning plates.",
     {
-      "text": "Drivers carrying dangerous goods MUST hold an ADR training certificate, unless an exemption applies.",
+      "text": "Drivers carrying dangerous goods MUST have an ADR training certificate, unless an exemption applies (e.g. small loads).",
       "law": true
     },
     "On ADR journeys, carry the transport documents, emergency instructions in writing and photo ID for each crew member.",
@@ -85,7 +85,7 @@
   ],
   "traps": [
     "Don't use a mobile phone close to a vehicle carrying flammable loads.",
-    "Below certain amounts, many parts of ADR may not apply, or apply in a modified form: not none at all.",
+    "Small loads aren't automatically free of ADR: below certain amounts, many parts may not apply, or apply in a modified form.",
     "Emergency instructions must be in a language every crew member understands."
   ],
   "sources": [
@@ -112,6 +112,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Highway Code rules 283, 284, 285 and vehicle markings (hazard warning plates); GOV.UK Driving dangerous goods and special loads (ADR, exemptions, documentation, emergency instructions in writing); KYTS p18 (tunnel categories)"
   }
 }

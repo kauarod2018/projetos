@@ -27,28 +27,24 @@
       "text": "A scaffold not ready for use MUST carry warning signs and be physically blocked off.",
       "law": true
     },
-    "Platforms should be fully boarded, usually at least 600 mm wide, with toe boards where things could fall.",
+    "Platforms should be fully boarded, with toe boards where objects could roll or be kicked off.",
     "Moving a mobile tower: lower it to 4 m at most and check for power lines and potholes first."
   ],
   "visual": {
     "type": "stats",
-    "caption": "Scaffold numbers to remember (Work at Height Regs; HSG150 para 164)",
+    "caption": "Scaffold numbers to remember (Work at Height Regulations)",
     "items": [
       {
-        "value": "950 mm",
-        "label": "Minimum top guard rail height"
+        "value": "950 mm",
+        "label": "Minimum height of the top guard rail"
       },
       {
-        "value": "470 mm",
-        "label": "Max gap between guard rails"
+        "value": "470 mm",
+        "label": "Maximum gap between guard rails"
       },
       {
-        "value": "7 days",
-        "label": "Max gap between inspections (2 m+)"
-      },
-      {
-        "value": "4 m",
-        "label": "Max tower height while moving"
+        "value": "7 days",
+        "label": "Maximum time between inspections (2 m or more)"
       }
     ]
   },
@@ -111,7 +107,7 @@
     },
     {
       "doc": "HSE INDG401 Working at height: A brief guide",
-      "ref": "How do you make sure the equipment itself is in good condition?",
+      "ref": "Inspection of work equipment",
       "url": "https://www.hse.gov.uk/pubns/indg401.pdf"
     }
   ],

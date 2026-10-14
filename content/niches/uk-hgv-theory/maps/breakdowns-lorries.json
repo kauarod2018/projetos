@@ -93,6 +93,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Highway Code rules 275, 276, 277 (incl. location table), 278, 280"
   }
 }

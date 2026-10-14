@@ -9,7 +9,7 @@
     "environment"
   ],
   "title": "Fuel-Efficient Driving & Emissions",
-  "whatItIs": "Using less fuel cuts costs and harmful emissions. Don't leave the engine running unnecessarily, keep tyres correctly inflated and report emission control faults straight away.",
+  "whatItIs": "Using less fuel cuts costs and harmful emissions. Don't leave the engine running unnecessarily, keep tyres correctly inflated and get emission control faults fixed quickly.",
   "keyFacts": [
     {
       "text": "You MUST NOT leave an engine running unnecessarily while your vehicle is stationary on a public road.",
@@ -86,7 +86,7 @@
         "A 20% drop in pressure can raise fuel use by 2%",
         "Lower pressure always reduces fuel use",
         "Tyre pressure has no effect on fuel use",
-        "Over-inflating tyres by 20% saves 2% fuel"
+        "A 20% drop in pressure can raise fuel use by 20%"
       ],
       "answerIndex": 0,
       "why": "DVSA guidance: a 20% drop in tyre pressure can result in a 2% increase in fuel consumption. Correctly inflated tyres help reduce fuel use."
@@ -94,8 +94,8 @@
   ],
   "traps": [
     "Idling while stationary on a public road can be an offence, not just a waste of fuel.",
-    "Coasting is not fuel-efficient driving: it removes engine braking and reduces your control.",
-    "Removing or tampering with an emission control system is an offence and puts the operator licence at risk."
+    "Coasting (in neutral or with the clutch down) removes engine braking and reduces your control.",
+    "Modifying, removing or failing to maintain an emission control system can be an offence and risks the operator licence."
   ],
   "sources": [
     {
@@ -116,6 +116,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Highway Code rules 122, 123 (CUR regs 98, 107), annex 6 (exhaust emissions); DVSA Guide to maintaining roadworthiness 5.5 and annex 2, 2.3 (SAFED)"
   }
 }

@@ -12,11 +12,11 @@
   "whatItIs": "At an incident, warn traffic, call 999 and be ready to give first aid. If your lorry is in a collision that causes damage or injury, you must stop and give your details.",
   "keyFacts": [
     {
-      "text": "In a collision causing damage or injury, you MUST stop and give your details to anyone who reasonably asks.",
+      "text": "Collision causing damage or injury: you MUST stop and give your details to anyone with reasonable grounds to ask.",
       "law": true
     },
     {
-      "text": "If you don't give your details at the time, you MUST report it to the police as soon as possible, within 24 hours.",
+      "text": "Details not given at the time? You MUST report it to the police as soon as reasonably practicable, within 24 hours.",
       "law": true
     },
     {
@@ -49,7 +49,7 @@
         ],
         [
           "B: Breathing",
-          "No normal breathing? Start CPR: press hard and fast, 5 to 6 cm, about twice a second."
+          "No signs of breathing? Start CPR: press hard and fast, 5 to 6 cm, about twice a second."
         ],
         [
           "C: Circulation",
@@ -96,7 +96,7 @@
         "Tell your transport manager only"
       ],
       "answerIndex": 0,
-      "why": "If you don't give your details at the time, report it to the police as soon as possible, and within 24 hours."
+      "why": "If you don't give your details at the time, report it to the police as soon as reasonably practicable, and in any case within 24 hours."
     }
   ],
   "traps": [
@@ -118,6 +118,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Highway Code rules 283, 286, 287 (RTA 1988 s170); annex 7 first aid on the road (sections 1 to 4, burns)"
   }
 }

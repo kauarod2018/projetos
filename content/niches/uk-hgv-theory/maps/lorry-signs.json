@@ -87,12 +87,14 @@
     },
     {
       "doc": "The Highway Code",
-      "ref": "Signs giving orders; Warning signs",
+      "ref": "Rule 109; Signs giving orders; Warning signs",
       "url": "https://www.gov.uk/guidance/the-highway-code/traffic-signs"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "KYTS p9 (signing system), pp17-18 (regulatory signs, exemption plates), pp24-26 (low bridge signs); signs.json ids and meanings; Highway Code rule 109 and traffic signs"
   }
 }
