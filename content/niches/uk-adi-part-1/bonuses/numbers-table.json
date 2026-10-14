@@ -8,11 +8,45 @@
   "kind": "document",
   "pages": [
     {
-      "heading": "Numbers to know",
+      "heading": "The test, the instructor route and the law",
       "blocks": [
         {
           "type": "numbers-table",
-          "title": "The numbers that come up most"
+          "title": "Tests, qualifying and the law",
+          "keys": [
+            "test-format",
+            "hazard-perception",
+            "pass-certificate",
+            "qualifying-fees",
+            "qualifying-deadlines",
+            "part-3-grades",
+            "trainee-licence",
+            "car-test-pass",
+            "eyesight",
+            "emergency-stop",
+            "supervising-learners",
+            "penalty-points"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "On the road",
+      "blocks": [
+        {
+          "type": "numbers-table",
+          "title": "Speeds, distances and the vehicle",
+          "keys": [
+            "car-speed-limits",
+            "stopping-distances",
+            "gaps",
+            "overtaking-clearances",
+            "drink-drive",
+            "phone-penalty",
+            "tyre-tread",
+            "mot",
+            "warning-triangle"
+          ]
         }
       ]
     }
