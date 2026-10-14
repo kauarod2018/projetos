@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "revision-plan",
+  "niche": "uk-adi-part-1",
+  "number": 3,
+  "title": "28-Day Revision Plan",
+  "summary": "A day-by-day schedule through every map, with review days and full mock tests before the big day.",
+  "kind": "document",
+  "pages": [
+    {
+      "heading": "Your 28-day plan",
+      "blocks": [
+        {
+          "type": "lead",
+          "text": "About 30 minutes a day. Study the maps listed for the day, cover the answers and try the test questions. Review days go back over the traps. Watch every band: you need 20 out of 25 in each one."
+        },
+        {
+          "type": "revision-plan",
+          "title": "Day by day",
+          "days": 28
+        }
+      ]
+    },
+    {
+      "heading": "Map index",
+      "blocks": [
+        {
+          "type": "map-index",
+          "title": "Every map by code"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Approved driving instructor (ADI) part 1 test",
+      "ref": "All sections",
+      "url": "https://www.gov.uk/adi-part-1-test"
+    }
+  ],
+  "review": {
+    "status": "draft"
+  }
+}

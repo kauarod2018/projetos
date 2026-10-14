@@ -73,7 +73,9 @@
       "show-me-tell-me",
       "standards-check"
     ],
-    "bonuses": []
+    "bonuses": [
+      "qualifying-roadmap"
+    ]
   },
   "strategic": {
     "eyebrow": "Strategic content",

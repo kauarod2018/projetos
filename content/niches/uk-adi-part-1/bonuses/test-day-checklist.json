@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "id": "test-day-checklist",
+  "niche": "uk-adi-part-1",
+  "number": 4,
+  "title": "Test Day Checklist",
+  "summary": "What to bring, what happens at the test centre and how both parts of ADI part 1 work.",
+  "kind": "document",
+  "pages": [
+    {
+      "heading": "Before the test",
+      "blocks": [
+        {
+          "type": "checklist",
+          "span": 1,
+          "title": "Bring with you",
+          "items": [
+            "Your UK photocard driving licence.",
+            "Northern Ireland licence: the photocard and paper counterpart.",
+            "Paper licence: bring a valid passport too.",
+            "Changed your name? Bring proof, like a marriage certificate or deed poll."
+          ]
+        },
+        {
+          "type": "callout",
+          "span": 1,
+          "tone": "warning",
+          "title": "No licence, no test",
+          "text": "Your test will be cancelled and you won't get your money back if you don't take the right things with you."
+        },
+        {
+          "type": "checklist",
+          "title": "At the test centre",
+          "items": [
+            "Arrive 15 minutes before the test starts: late means cancelled.",
+            "Turn off phones, smart watches and fitness trackers before you go in.",
+            "Put your belongings in a locker (or the clear box you're given).",
+            "Expect identity and security checks: empty pockets, roll up sleeves, metal detector.",
+            "There's no waiting area for anyone who comes with you."
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "During the test",
+      "blocks": [
+        {
+          "type": "facts",
+          "span": 1,
+          "title": "Multiple choice",
+          "items": [
+            "100 questions in 1 hour 30 minutes, 25 in each of 4 bands.",
+            "Instructions and a practice question first.",
+            "You can flag questions and change any answer.",
+            "You can take a break of up to 3 minutes before hazard perception."
+          ]
+        },
+        {
+          "type": "facts",
+          "span": 1,
+          "title": "Hazard perception",
+          "items": [
+            "14 clips: each has at least one developing hazard, one has two.",
+            "Up to 5 points per developing hazard: click as soon as it starts.",
+            "Clicking continuously or in a pattern scores nothing.",
+            "One attempt per clip. Pass mark: 57 out of 75."
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Reading difficulty?",
+          "text": "Say so when you book. You can ask for an English voiceover, and send proof to DVSA to ask for more time on the multiple-choice part."
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Approved driving instructor (ADI) part 1 test",
+      "ref": "All sections",
+      "url": "https://www.gov.uk/adi-part-1-test"
+    }
+  ],
+  "review": {
+    "status": "draft"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "numbers-table",
+  "niche": "uk-adi-part-1",
+  "number": 2,
+  "title": "Numbers Table",
+  "summary": "Every distance, limit, deadline and score you need for ADI part 1, in one table.",
+  "kind": "document",
+  "pages": [
+    {
+      "heading": "Numbers to know",
+      "blocks": [
+        {
+          "type": "numbers-table",
+          "title": "The numbers that come up most"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Approved driving instructor (ADI) part 1 test",
+      "ref": "All sections",
+      "url": "https://www.gov.uk/adi-part-1-test"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 124, 126, 163, 215, 276; annex 6",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "GOV.UK",
+      "ref": "Getting an MOT; Become a car driving instructor",
+      "url": "https://www.gov.uk/getting-an-mot"
+    }
+  ],
+  "review": {
+    "status": "draft"
+  }
+}

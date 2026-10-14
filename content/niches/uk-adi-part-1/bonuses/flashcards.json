@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "id": "flashcards",
+  "niche": "uk-adi-part-1",
+  "number": 5,
+  "title": "Flashcards: Signs & Numbers",
+  "summary": "Print-and-cut cards (double-sided A4) plus a phone version to test yourself on signs and numbers.",
+  "kind": "flashcards",
+  "flashcards": {
+    "signs": true,
+    "numbers": true,
+    "signIds": [
+      "crossroads",
+      "t-junction",
+      "roundabout-ahead",
+      "give-way",
+      "stop",
+      "mini-roundabout",
+      "no-entry",
+      "no-overtaking",
+      "national-speed-limit",
+      "maximum-speed",
+      "one-way-traffic",
+      "no-right-turn",
+      "no-u-turns",
+      "turn-left-ahead",
+      "keep-left",
+      "children-school",
+      "pedestrians-crossing",
+      "level-crossing-barrier",
+      "level-crossing-no-barrier",
+      "traffic-signals-ahead",
+      "slippery-road",
+      "no-through-road",
+      "pedal-cycles-only",
+      "road-narrows-both-sides"
+    ]
+  },
+  "sources": [
+    {
+      "doc": "Know Your Traffic Signs (DfT)",
+      "ref": "Sign meanings",
+      "url": "https://www.gov.uk/government/publications/know-your-traffic-signs"
+    }
+  ],
+  "review": {
+    "status": "draft"
+  }
+}

@@ -272,6 +272,42 @@
         "checkedAgainst": "Highway Code rule 276"
       },
       "jurisdiction": "great-britain"
+    },
+    {
+      "key": "qualifying-fees",
+      "label": "Qualifying fees",
+      "value": "Part 1 £81 · part 2 £111 · trainee licence £140 · part 3 £111 · first ADI certificate £300",
+      "sources": [
+        {
+          "doc": "GOV.UK",
+          "ref": "Become a car driving instructor: step by step",
+          "url": "https://www.gov.uk/become-car-driving-instructor"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "GOV.UK Become a car driving instructor: step by step (updated 24 Feb 2026)"
+      },
+      "jurisdiction": "great-britain"
+    },
+    {
+      "key": "qualifying-deadlines",
+      "label": "Qualifying deadlines",
+      "value": "Pass parts 2 and 3 within 2 years of part 1 · register within 12 months of passing · standards check, registration and DBS check every 4 years",
+      "sources": [
+        {
+          "doc": "GOV.UK",
+          "ref": "Become a car driving instructor: step by step",
+          "url": "https://www.gov.uk/become-car-driving-instructor"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "GOV.UK Become a car driving instructor: step by step (updated 24 Feb 2026)"
+      },
+      "jurisdiction": "great-britain"
     }
   ]
 }

@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "id": "qualifying-roadmap",
+  "niche": "uk-adi-part-1",
+  "number": 1,
+  "title": "ADI Qualifying Roadmap",
+  "summary": "Every step from application to your first ADI certificate, with fees and deadlines, on two pages.",
+  "kind": "document",
+  "pages": [
+    {
+      "heading": "From application to qualified instructor",
+      "blocks": [
+        {
+          "type": "lead",
+          "text": "Becoming an approved driving instructor (ADI) takes 3 tests. Part 1 is the theory test: pass it and the clock starts for the other two."
+        },
+        {
+          "type": "steps",
+          "title": "The route, step by step",
+          "items": [
+            {
+              "title": "Apply and get a DBS check",
+              "text": "You need a new Disclosure and Barring Service check to start your application, even if you already have one."
+            },
+            {
+              "title": "ADI part 1: theory (£81)",
+              "text": "Multiple choice and hazard perception, booked and taken as a single test."
+            },
+            {
+              "title": "ADI part 2: driving ability (£111)",
+              "text": "Pass parts 2 and 3 within 2 years of passing part 1, or you start the whole process again."
+            },
+            {
+              "title": "Optional trainee licence (£140)",
+              "text": "After part 2 you can apply for a 6-month trainee licence to get teaching experience."
+            },
+            {
+              "title": "ADI part 3: instructional ability (£111)",
+              "text": "A lesson with a real pupil, marked against 17 competences."
+            },
+            {
+              "title": "Register (£300)",
+              "text": "Register within 12 months of passing. Then you can charge for lessons."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warning",
+          "title": "The 2-year clock",
+          "text": "Once you pass part 1, you must pass the other parts within 2 years or you'll have to start the whole process again."
+        }
+      ]
+    },
+    {
+      "heading": "How part 1 is scored",
+      "blocks": [
+        {
+          "type": "stat-row",
+          "items": [
+            {
+              "value": "100",
+              "label": "questions"
+            },
+            {
+              "value": "1h 30",
+              "label": "to answer them"
+            },
+            {
+              "value": "85",
+              "label": "overall to pass"
+            },
+            {
+              "value": "20/25",
+              "label": "in every band"
+            },
+            {
+              "value": "57/75",
+              "label": "hazard perception"
+            }
+          ]
+        },
+        {
+          "type": "table",
+          "title": "The 4 bands (25 questions each)",
+          "data": {
+            "columns": [
+              "Band",
+              "What it covers"
+            ],
+            "rows": [
+              [
+                "1",
+                "Road procedure"
+              ],
+              [
+                "2",
+                "Traffic signs and signals, car control, pedestrians and mechanical knowledge"
+              ],
+              [
+                "3",
+                "Driving test, disabilities, and the law"
+              ],
+              [
+                "4",
+                "Publications and instructional techniques"
+              ]
+            ],
+            "notes": [
+              "You fail if you score 85 or more overall but less than 20 in any band."
+            ]
+          }
+        },
+        {
+          "type": "facts",
+          "title": "After the test",
+          "items": [
+            "You get the result at the test centre. You must pass both parts.",
+            "Pass: you get a pass certificate letter, needed to book part 2.",
+            "Fail: the letter shows which parts you didn't score enough on.",
+            "Fail: book and take the full test again, at least 3 working days later.",
+            "Once qualified: a standards check, registration renewal and a new DBS check every 4 years."
+          ]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Approved driving instructor (ADI) part 1 test",
+      "ref": "All sections",
+      "url": "https://www.gov.uk/adi-part-1-test"
+    },
+    {
+      "doc": "GOV.UK",
+      "ref": "Become a car driving instructor: step by step",
+      "url": "https://www.gov.uk/become-car-driving-instructor"
+    }
+  ],
+  "review": {
+    "status": "draft"
+  }
+}
