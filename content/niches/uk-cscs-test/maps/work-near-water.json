@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "id": "work-near-water",
+  "niche": "uk-cscs-test",
+  "area": "high-risk-activities",
+  "order": 10,
+  "tier": "complete",
+  "officialTopics": [
+    "work-at-height",
+    "health-risks"
+  ],
+  "title": "Work On or Near Water",
+  "whatItIs": "There is a risk of drowning when you work beside or above water, or cross it to get to work. People can also drown in slurry lagoons, open vats and other liquids.",
+  "keyFacts": [
+    {
+      "text": "Steps MUST be taken to stop falls into water, minimise the risk of drowning and provide rescue equipment.",
+      "law": true
+    },
+    {
+      "text": "Boats taking people to or from work MUST NOT be overcrowded or overloaded.",
+      "law": true
+    },
+    "Guard rails and toe boards, or a similar barrier, at open edges stop people falling in.",
+    "There should be a way to raise the alarm. Whistles and lights help find people in the water.",
+    "Life jackets should ideally be auto-inflating and always worn, by people trained to use them.",
+    "Cold water shock, waterlogged clothing, injury and hypothermia all add to the risk of drowning."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Four lines of defence (HSG150 paras 520-527; CDM 2015 reg 26)",
+    "columns": 2,
+    "items": [
+      {
+        "icon": "fence",
+        "title": "Prevent the fall",
+        "text": "Guard rails and toe boards at open edges; reduce the water flow where possible.",
+        "law": false
+      },
+      {
+        "icon": "siren",
+        "title": "Raise the alarm",
+        "text": "A way to raise the alarm; whistles and lights to locate people.",
+        "law": false
+      },
+      {
+        "icon": "life-buoy",
+        "title": "Keep afloat",
+        "text": "Life jackets, always worn, that turn an unconscious person face up.",
+        "law": false
+      },
+      {
+        "icon": "ship",
+        "title": "Rescue",
+        "text": "Grab lines, throw lines and, where needed, a rescue boat with a competent operator.",
+        "law": false
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Life jacket",
+      "points": [
+        "Supports an unconscious person face up",
+        "Ideally auto-inflating; always worn"
+      ]
+    },
+    "b": {
+      "label": "Buoyancy aid",
+      "points": [
+        "Helps a conscious person stay afloat",
+        "May not turn an unconscious person face up"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Why is a life jacket chosen over a buoyancy aid for work over water?",
+      "options": [
+        "It doesn't need any training",
+        "It turns an unconscious person face up",
+        "It is warmer to wear",
+        "It can be left off in calm water"
+      ],
+      "answerIndex": 1,
+      "why": "HSG150 paras 523-524: life jackets support an unconscious person and turn them face up. A buoyancy aid may not. Wearers must be trained."
+    },
+    {
+      "question": "You work from a MEWP over a river, and drowning is the greater risk. What should you wear?",
+      "options": [
+        "A harness clipped to the basket",
+        "A life jacket, not a harness",
+        "Nothing extra",
+        "A harness and a hard hat"
+      ],
+      "answerIndex": 1,
+      "why": "HSE GEIS6: life jackets, not harnesses, should be worn where there is a risk of drowning."
+    }
+  ],
+  "traps": [
+    "Never tie a throw line to anything: in fast water a tied line can hold the person under.",
+    "A grab line goes across the river at 45° to the flow, not at 90°.",
+    "Rescue kit must be ready: the law requires that someone who falls in can be promptly rescued.",
+    "Drowning isn't only rivers and the sea: slurry lagoons and open vats count too."
+  ],
+  "sources": [
+    {
+      "doc": "Construction (Design and Management) Regulations 2015 (SI 2015/51)",
+      "ref": "reg 26",
+      "url": "https://www.legislation.gov.uk/uksi/2015/51/regulation/26"
+    },
+    {
+      "doc": "HSE HSG150 Health and safety in construction",
+      "ref": "paras 516-529",
+      "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
+    },
+    {
+      "doc": "HSE GEIS6 The selection, management and use of MEWPs",
+      "ref": "Falling from the platform (work over water)",
+      "url": "https://www.hse.gov.uk/pubns/geis6.pdf"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

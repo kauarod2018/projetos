@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "id": "mewps",
+  "niche": "uk-cscs-test",
+  "area": "high-risk-activities",
+  "order": 4,
+  "tier": "complete",
+  "officialTopics": [
+    "work-at-height"
+  ],
+  "title": "Mobile Elevating Work Platforms",
+  "whatItIs": "A MEWP, such as a scissor lift or a boom 'cherry picker', lifts people in a guarded platform. It prevents falls, but it can overturn, or throw out or trap the person in it.",
+  "keyFacts": [
+    {
+      "text": "A MEWP MUST be thoroughly examined by a competent person at least every 6 months.",
+      "law": true
+    },
+    "Only trained operators who know that model should use it. The operator does the daily pre-use check.",
+    "Use it on firm, level ground; extend and chock any outriggers before raising the platform.",
+    "Boom MEWP: wear a harness on a short restraint lanyard, clipped to the anchor point in the basket.",
+    "Don't climb out of the basket at height or stand on the guard rails to reach the work.",
+    "Have trained people on the ground who can lower the platform in an emergency."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Main MEWP dangers and how they're controlled (HSG150; HSE GEIS6)",
+    "columns": 2,
+    "items": [
+      {
+        "icon": "triangle-alert",
+        "title": "Overturning",
+        "text": "Firm, level ground; outriggers out; watch for trenches, manholes and soft ground.",
+        "law": false
+      },
+      {
+        "icon": "user-x",
+        "title": "Being thrown out",
+        "text": "Work-restraint harness in the basket. Don't overreach or stand on the guard rails.",
+        "law": false
+      },
+      {
+        "icon": "square-stack",
+        "title": "Trapping and crushing",
+        "text": "Take care near overhead structures: the controls can 'run on' briefly.",
+        "law": false
+      },
+      {
+        "icon": "zap",
+        "title": "Overhead power lines",
+        "text": "Don't operate close to overhead cables. Check the clearance before you start.",
+        "law": false
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Scissor lift",
+      "points": [
+        "Vertical lift only",
+        "Usually a bigger platform and more lift capacity"
+      ]
+    },
+    "b": {
+      "label": "Boom ('cherry picker')",
+      "points": [
+        "Lifts up and reaches out",
+        "Risk of being thrown out if the boom jolts or tilts"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Working from a boom MEWP, what personal fall protection does HSE prefer?",
+      "options": [
+        "A harness on a short restraint lanyard clipped in the basket",
+        "A harness clipped to a nearby building",
+        "A harness with a long lanyard so you can reach",
+        "A life jacket at all times"
+      ],
+      "answerIndex": 0,
+      "why": "GEIS6 and HSG150 para 177: work restraint, with a lanyard short enough to stop you reaching a fall position, fixed to an anchor in the basket."
+    },
+    {
+      "question": "How often must a MEWP be thoroughly examined, unless a scheme sets more often?",
+      "options": [
+        "Every 7 days",
+        "At least every 6 months",
+        "Every 12 months",
+        "Only when it is new"
+      ],
+      "answerIndex": 1,
+      "why": "HSE GEIS6: MEWPs must be thoroughly examined at least every six months by a competent person, or more often under an examination scheme."
+    }
+  ],
+  "traps": [
+    "A MEWP isn't for getting off at height: leaving the basket needs a rigorous risk assessment first.",
+    "Never balance materials on the handrails, and never disable the overload system.",
+    "Don't drive it with the platform raised unless the maker says it's designed for that.",
+    "Over water, if drowning is the bigger risk, wear a life jacket, not a harness."
+  ],
+  "sources": [
+    {
+      "doc": "HSE HSG150 Health and safety in construction",
+      "ref": "paras 169-177",
+      "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
+    },
+    {
+      "doc": "HSE GEIS6 The selection, management and use of MEWPs",
+      "ref": "Falling from the platform; Overhead hazards; Handling materials; Exiting the platform; Thorough examination; Emergency and rescue",
+      "url": "https://www.hse.gov.uk/pubns/geis6.pdf"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

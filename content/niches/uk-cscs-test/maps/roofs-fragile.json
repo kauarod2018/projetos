@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "id": "roofs-fragile",
+  "niche": "uk-cscs-test",
+  "area": "high-risk-activities",
+  "order": 5,
+  "tier": "complete",
+  "officialTopics": [
+    "work-at-height"
+  ],
+  "title": "Roof Work & Fragile Surfaces",
+  "whatItIs": "Almost one in five workers killed in construction are doing roof work. Most fall from roof edges, or through holes, roof lights and other fragile surfaces.",
+  "keyFacts": [
+    {
+      "text": "You MUST NOT work on or near a fragile surface if the job can reasonably be done safely without it.",
+      "law": true
+    },
+    {
+      "text": "If you must, platforms, coverings or guard rails MUST be used to take your weight.",
+      "law": true
+    },
+    {
+      "text": "Prominent warning notices MUST be fixed at the approach to a fragile surface.",
+      "law": true
+    },
+    {
+      "text": "Materials MUST NOT be thrown or tipped from height where they could injure anyone.",
+      "law": true
+    },
+    "Don't trust any sheeted roof and don't stand on it. Never walk along the bolt lines or the ridge.",
+    "Roof lights can be hard to see or painted over: cover them, or put barriers round them."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Likely to be fragile (INDG401). Approach a fragile roof as if the sheets weren't there",
+    "columns": 2,
+    "items": [
+      {
+        "icon": "square-dashed",
+        "title": "Roof lights",
+        "text": "Some are hard to see in certain light; others are hidden by paint.",
+        "law": false
+      },
+      {
+        "icon": "layers",
+        "title": "Fibre cement sheets",
+        "text": "Non-reinforced sheets. Asbestos cement gets more fragile with age.",
+        "law": false
+      },
+      {
+        "icon": "sheet",
+        "title": "Metal sheets and liner panels",
+        "text": "Corroded metal sheets; liner panels on built-up sheeted roofs.",
+        "law": false
+      },
+      {
+        "icon": "house",
+        "title": "Glass, chipboard, slates, tiles",
+        "text": "Glass (including wired glass), rotted chipboard, slates and tiles.",
+        "law": false
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Sloping roof",
+      "points": [
+        "Edge protection at eaves level",
+        "Roof ladder hooked over the ridge; don't walk on tiles"
+      ]
+    },
+    "b": {
+      "label": "Flat roof",
+      "points": [
+        "Edge protection around the edges",
+        "Short job: harness, secure anchor, short lanyard"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You need to cross an old cement-sheet roof to reach a gutter. What is the safe approach?",
+      "options": [
+        "Walk along the line of the roof bolts",
+        "Walk along the ridge",
+        "Use staging and protection, or avoid going on it",
+        "Step only where the sheets look solid"
+      ],
+      "answerIndex": 2,
+      "why": "HSG150 paras 240-242: don't trust or stand on any sheeted roof, or walk on the bolt lines or ridge. Work from below or a MEWP, or use staging with protection."
+    },
+    {
+      "question": "What is the most HSG150 says should be carried up a ladder onto a roof?",
+      "options": [
+        "5 kg",
+        "10 kg",
+        "20 kg",
+        "25 kg"
+      ],
+      "answerIndex": 1,
+      "why": "HSG150 para 235: the maximum load that should be carried up a ladder is 10 kg. A safe way of lifting materials to roof level must be provided."
+    }
+  ],
+  "traps": [
+    "A quick job on a roof is still dangerous: even short work needs safe access and a safe way to work.",
+    "Walking on the bolt lines or the ridge doesn't make a fragile roof safe: the sheets can still crack.",
+    "Don't throw old slates or tiles down: use an enclosed chute or lower them in containers.",
+    "A pack of roof sheets is not a safe working platform."
+  ],
+  "sources": [
+    {
+      "doc": "Work at Height Regulations 2005 (SI 2005/735)",
+      "ref": "regs 2, 9, 10(3)",
+      "url": "https://www.legislation.gov.uk/uksi/2005/735/regulation/9"
+    },
+    {
+      "doc": "HSE HSG150 Health and safety in construction",
+      "ref": "paras 230-248",
+      "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
+    },
+    {
+      "doc": "HSE INDG401 Working at height: A brief guide",
+      "ref": "What are the most common causes of accidents?",
+      "url": "https://www.hse.gov.uk/pubns/indg401.pdf"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

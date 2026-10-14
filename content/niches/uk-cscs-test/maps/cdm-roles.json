@@ -9,7 +9,7 @@
     "law-and-management"
   ],
   "title": "CDM 2015: Clients, Contractors & Workers",
-  "whatItIs": "The Construction (Design and Management) Regulations 2015 apply to every construction project, notifiable or not. They say who must plan, manage and coordinate health and safety.",
+  "whatItIs": "The Construction (Design and Management) Regulations 2015 apply to all construction projects in Great Britain, notifiable or not. They say who must plan, manage and coordinate health and safety.",
   "keyFacts": [
     {
       "text": "With more than one contractor, the client MUST appoint a principal designer and a principal contractor in writing.",
@@ -20,7 +20,7 @@
       "law": true
     },
     {
-      "text": "The principal contractor MUST ensure site inductions, welfare facilities and no unauthorised access.",
+      "text": "The principal contractor MUST ensure a site induction, steps to stop unauthorised access, and welfare facilities.",
       "law": true
     },
     {
@@ -28,7 +28,7 @@
       "law": true
     },
     {
-      "text": "The client MUST notify HSE if work lasts over 30 working days with over 20 workers at once, or exceeds 500 person days.",
+      "text": "The client MUST notify HSE if work will last over 30 working days with over 20 at once, or exceed 500 person days.",
       "law": true
     }
   ],
@@ -107,18 +107,25 @@
   ],
   "traps": [
     "CDM applies to every construction project, not only to notifiable ones.",
-    "Domestic clients are covered too: their duties pass to the contractor or principal contractor.",
+    "Domestic clients are covered too: their duties pass to the contractor or principal contractor (or principal designer by agreement).",
     "The principal designer prepares the health and safety file; the principal contractor writes the construction phase plan."
   ],
   "sources": [
     {
+      "doc": "Construction (Design and Management) Regulations 2015",
+      "ref": "regs 4, 5, 6, 7, 8(5), 11, 12, 13(4), 15",
+      "url": "https://www.legislation.gov.uk/uksi/2015/51/contents"
+    },
+    {
       "doc": "HSE L153 Managing health and safety in construction (CDM 2015)",
-      "ref": "Table 1; regs 4-8, 12, 13, 15; paras 52, 68",
+      "ref": "Table 1 (roles and duties); para 21 (all projects)",
       "url": "https://www.hse.gov.uk/pubns/priced/l153.pdf"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "CDM 2015 regs 4, 5, 6, 7, 8, 11, 12, 13, 15 (legislation.gov.uk revised text); L153 Table 1 and para 21"
   }
 }

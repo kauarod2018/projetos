@@ -37,7 +37,7 @@
       {
         "icon": "lightbulb",
         "title": "At night",
-        "text": "Goods vehicles over 2,500 kg laden MUST NOT be left on a road at night without lights.",
+        "text": "Over 2,500 kg laden: MUST NOT be left on a road at night without lights.",
         "law": true
       },
       {
@@ -53,7 +53,7 @@
       {
         "icon": "lock",
         "title": "Security",
-        "text": "Remove the key, lock the vehicle and never leave vehicle documents in it."
+        "text": "Remove the key, lock up and never leave vehicle documents inside."
       }
     ]
   },

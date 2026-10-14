@@ -271,20 +271,20 @@
       "sources": [
         {
           "doc": "The Highway Code",
-          "ref": "Rules 274 and 276",
+          "ref": "Rule 276",
           "url": "https://www.gov.uk/guidance/the-highway-code/breakdowns-and-incidents-274-to-287"
         }
       ],
       "review": {
         "status": "verified",
-        "checkedOn": "2026-10-13",
-        "checkedAgainst": "The Highway Code rule 274"
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "Highway Code rule 276"
       }
     },
     {
       "key": "collision-reporting",
       "label": "After a collision",
-      "value": "Report to the police within 24 hours · produce insurance within 7 days",
+      "value": "Details not given at the scene: tell the police within 24 hours · someone injured, no insurance shown: produce it within 7 days",
       "jurisdiction": "great-britain",
       "sources": [
         {
@@ -295,8 +295,8 @@
       ],
       "review": {
         "status": "verified",
-        "checkedOn": "2026-10-13",
-        "checkedAgainst": "The Highway Code rules 286–287"
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "Highway Code rules 286–287"
       }
     },
     {

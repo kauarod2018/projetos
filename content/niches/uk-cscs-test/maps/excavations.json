@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "id": "excavations",
+  "niche": "uk-cscs-test",
+  "area": "high-risk-activities",
+  "order": 6,
+  "tier": "basic",
+  "officialTopics": [
+    "excavations-and-services"
+  ],
+  "title": "Excavations",
+  "whatItIs": "Every year people are killed or seriously injured in excavations: by collapsing sides, falling materials, falls into the hole and contact with buried or overhead services.",
+  "keyFacts": [
+    {
+      "text": "All practicable steps MUST be taken, with supports or battering where needed, so no one is buried or trapped.",
+      "law": true
+    },
+    {
+      "text": "A competent person MUST inspect a supported excavation at the start of each shift and after any fall or event.",
+      "law": true
+    },
+    {
+      "text": "Steps MUST be taken to stop people, work equipment and materials falling into an excavation.",
+      "law": true
+    },
+    "Keep spoil, plant and vehicles back from the edge: the extra load can make the sides collapse.",
+    "Access ladders must be secured, on a firm base, and extend at least 1 m above the landing place.",
+    "Don't run petrol or diesel engines in or near an excavation: exhaust fumes can collect in it."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Plan for these before digging starts (HSG150 para 341)",
+    "columns": 2,
+    "items": [
+      {
+        "icon": "layers",
+        "title": "Collapse of the sides",
+        "text": "Support with trench sheets, boxes or props, or batter the sides back to a safe angle.",
+        "law": false
+      },
+      {
+        "icon": "fence",
+        "title": "Falls into the excavation",
+        "text": "Guard rails and toe boards, or trench sheets or box sides above ground level.",
+        "law": false
+      },
+      {
+        "icon": "truck",
+        "title": "Vehicles and materials",
+        "text": "Keep them back; use stop blocks set well back from the edge for tipping.",
+        "law": false
+      },
+      {
+        "icon": "droplets",
+        "title": "Services and water",
+        "text": "Find buried services first; pump water to sumps; keep clear of power lines.",
+        "law": false
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Inspection (CDM reg 22)",
+      "points": [
+        "Start of every shift, by a competent person",
+        "After any event or fall of material"
+      ]
+    },
+    "b": {
+      "label": "Report (CDM reg 24)",
+      "points": [
+        "Needed when the inspector isn't satisfied it's safe",
+        "Copy within 24 hours; no work until it's fixed"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "When must a supported trench be inspected by a competent person?",
+      "options": [
+        "Once a week",
+        "Only when it is first dug",
+        "At the start of every shift and after any event affecting it",
+        "Only after heavy rain"
+      ],
+      "answerIndex": 2,
+      "why": "CDM 2015 reg 22(4): at the start of the shift, after any event likely to affect its strength or stability, and after any material falls or is dislodged."
+    },
+    {
+      "question": "Where should excavated spoil be kept?",
+      "options": [
+        "Right at the edge to save time",
+        "Back from the edge, so it can't overload the sides or fall in",
+        "In the bottom of the trench",
+        "Next to the access ladder"
+      ],
+      "answerIndex": 1,
+      "why": "HSG150 para 350: don't store spoil close to the sides. The extra load can collapse them, and loose material can fall on the people below."
+    }
+  ],
+  "traps": [
+    "Don't trust the ground: almost no ground can be relied on to stand unsupported in all conditions.",
+    "A 'small' fall of soil isn't small: HSE says a cubic metre can weigh over 1.5 tonnes.",
+    "Never work ahead of the support or take it out early.",
+    "Exposed pipes and cables are not handholds or footholds for climbing out."
+  ],
+  "sources": [
+    {
+      "doc": "Construction (Design and Management) Regulations 2015 (SI 2015/51)",
+      "ref": "regs 22, 24",
+      "url": "https://www.legislation.gov.uk/uksi/2015/51/regulation/22"
+    },
+    {
+      "doc": "HSE HSG150 Health and safety in construction",
+      "ref": "paras 338-358, 379",
+      "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
+    },
+    {
+      "doc": "HSE: Excavations",
+      "ref": "What you need to know; Inspection",
+      "url": "https://www.hse.gov.uk/construction/safetytopics/excavations.htm"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

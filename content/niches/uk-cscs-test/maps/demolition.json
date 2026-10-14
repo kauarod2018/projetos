@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "id": "demolition",
+  "niche": "uk-cscs-test",
+  "area": "high-risk-activities",
+  "order": 9,
+  "tier": "basic",
+  "officialTopics": [
+    "demolition"
+  ],
+  "title": "Demolition & Structural Alteration",
+  "whatItIs": "Demolition, dismantling and structural alteration are high-risk work. Workers and passers-by can be hurt by falls, flying debris and the early, uncontrolled collapse of a structure.",
+  "keyFacts": [
+    {
+      "text": "Demolition MUST be planned and done to prevent danger, or reduce it as far as reasonably practicable.",
+      "law": true
+    },
+    {
+      "text": "The arrangements for demolition MUST be put in writing before the work begins.",
+      "law": true
+    },
+    {
+      "text": "All practicable steps MUST be taken to stop a structure collapsing if the work makes it unstable.",
+      "law": true
+    },
+    "Work is done by trained demolition operatives, supervised by someone who knows the demolition sequence.",
+    "Gas, electricity, water and telecoms services are isolated or disconnected first, or clearly marked.",
+    "The client must make sure asbestos is surveyed for and removed before demolition starts."
+  ],
+  "visual": {
+    "type": "steps",
+    "caption": "Before the work starts (HSG150 paras 392-395; CDM 2015 reg 20)",
+    "items": [
+      {
+        "title": "Survey",
+        "text": "The client has the structure surveyed for hazardous materials and structural condition."
+      },
+      {
+        "title": "Plan in writing",
+        "text": "Record the arrangements in writing. Choose a method that keeps people away, eg a high-reach machine."
+      },
+      {
+        "title": "Exclusion zone",
+        "text": "Barriers or hoardings keep out anyone not involved in the work."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Structural engineer",
+      "points": [
+        "Used where there's doubt about stability or the method",
+        "Designs façade retention schemes"
+      ]
+    },
+    "b": {
+      "label": "Demolition supervisor",
+      "points": [
+        "Knows the type of demolition and its hazards",
+        "Follows the method statement and sequence"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "When must the arrangements for a demolition job be put in writing?",
+      "options": [
+        "Within 7 days of starting",
+        "Only if HSE asks for them",
+        "Before the demolition work begins",
+        "After the work is finished"
+      ],
+      "answerIndex": 2,
+      "why": "CDM 2015 reg 20(2): the arrangements for demolition or dismantling must be recorded in writing before the work begins."
+    },
+    {
+      "question": "Why is an exclusion zone set up around demolition work?",
+      "options": [
+        "To keep people not involved away from falling material",
+        "To store reclaimed materials",
+        "To give plant somewhere to park",
+        "To mark the welfare area"
+      ],
+      "answerIndex": 0,
+      "why": "HSG150 para 395: keep anyone not involved away with an exclusion zone marked by barriers or hoardings. Don't let materials fall where people work or pass."
+    }
+  ],
+  "traps": [
+    "Follow the set sequence: working out of order can cause an accidental collapse.",
+    "Floors may not take the weight of debris or machines: get expert advice first.",
+    "An empty building can still have live services: isolate or mark them first.",
+    "Collapse isn't the only risk: dust, noise and vibration need controlling too."
+  ],
+  "sources": [
+    {
+      "doc": "Construction (Design and Management) Regulations 2015 (SI 2015/51)",
+      "ref": "regs 19, 20",
+      "url": "https://www.legislation.gov.uk/uksi/2015/51/regulation/20"
+    },
+    {
+      "doc": "HSE HSG150 Health and safety in construction",
+      "ref": "paras 382-395",
+      "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

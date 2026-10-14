@@ -9,7 +9,7 @@
     "law-and-management"
   ],
   "title": "Health & Safety Law: Who Must Do What",
-  "whatItIs": "The Health and Safety at Work etc. Act 1974 covers all work. It puts duties on employers, the self-employed and employees. HSE inspectors enforce it.",
+  "whatItIs": "The Health and Safety at Work etc. Act 1974 puts general duties on employers, the self-employed and employees. On construction sites it is usually enforced by HSE inspectors.",
   "keyFacts": [
     {
       "text": "Employers MUST ensure, so far as is reasonably practicable, the health, safety and welfare of all employees.",
@@ -46,13 +46,13 @@
       {
         "icon": "users",
         "title": "Employer to others",
-        "text": "Don't put others, like the public, at risk (s. 3).",
+        "text": "Not put others, like the public, at risk, so far as reasonably practicable (s. 3).",
         "law": true
       },
       {
         "icon": "file-text",
         "title": "Safety policy",
-        "text": "Written, and brought to all employees' notice (s. 2(3)).",
+        "text": "Written and brought to employees' notice; not needed under 5 employees (s. 2(3)).",
         "law": true
       },
       {
@@ -87,7 +87,7 @@
       "label": "Prohibition notice",
       "points": [
         "Stops a process or dangerous equipment: risk of serious injury",
-        "Still applies during an appeal"
+        "Not suspended by an appeal unless the tribunal directs"
       ]
     }
   },
@@ -118,27 +118,39 @@
   "traps": [
     "Safety isn't only the employer's job: employees have legal duties too.",
     "Paying your own tax doesn't automatically make you self-employed under health and safety law.",
-    "A prohibition notice still applies during an appeal; an improvement notice is suspended."
+    "A prohibition notice stays in force during an appeal unless the tribunal directs; an improvement notice is suspended."
   ],
   "sources": [
     {
       "doc": "Health and Safety at Work etc. Act 1974",
-      "ref": "ss. 2, 3",
+      "ref": "ss. 2, 3 (employers' duties, safety policy)",
       "url": "https://www.legislation.gov.uk/ukpga/1974/37/section/2"
     },
     {
       "doc": "Health and Safety at Work etc. Act 1974",
-      "ref": "ss. 7, 8, 9",
+      "ref": "ss. 7, 8, 9 (employees; misuse; no charges)",
       "url": "https://www.legislation.gov.uk/ukpga/1974/37/section/7"
     },
     {
+      "doc": "Health and Safety at Work etc. Act 1974",
+      "ref": "ss. 21, 22, 24 (notices and appeals)",
+      "url": "https://www.legislation.gov.uk/ukpga/1974/37/section/24"
+    },
+    {
+      "doc": "Employers' Health and Safety Policy Statements (Exception) Regulations 1975",
+      "ref": "reg 2 (fewer than five employees)",
+      "url": "https://www.legislation.gov.uk/uksi/1975/1584/regulation/2"
+    },
+    {
       "doc": "HSE HSG150 Health and safety in construction",
-      "ref": "paras 574-577, 663-666, 674-680",
+      "ref": "paras 663, 666, 674-681",
       "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "HSWA 1974 ss. 2, 3, 7, 8, 9, 21, 22, 24; SI 1975/1584 reg 2; HSG150 paras 663-681 (employment status, inspectors, notices)"
   }
 }

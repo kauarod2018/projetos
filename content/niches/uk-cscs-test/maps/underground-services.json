@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "id": "underground-services",
+  "niche": "uk-cscs-test",
+  "area": "high-risk-activities",
+  "order": 7,
+  "tier": "complete",
+  "officialTopics": [
+    "excavations-and-services",
+    "electricity"
+  ],
+  "title": "Buried Services: Cables & Pipes",
+  "whatItIs": "Hitting a buried electricity cable can cause an explosion and severe burns; gas from a damaged pipe can ignite. Find services before you dig, then dig with care.",
+  "keyFacts": [
+    {
+      "text": "Work that could disturb an underground service MUST NOT go ahead until steps are taken to prevent the risk.",
+      "law": true
+    },
+    "Service plans are only a guide: they may be wrong or incomplete. Use a locator (CAT) as well.",
+    "Hand dig trial holes to find the exact position and depth. Plastic pipes can't be found by normal locators.",
+    "No hand-held power tools within 0.5 m of a cable's marked line; no excavator within 0.5 m of a gas pipe.",
+    "Treat every pipe or cable as live until known otherwise. A black plastic service? Assume a live cable.",
+    "If an excavator hits a cable, the driver should stay in the cab. Keep everyone else away."
+  ],
+  "visual": {
+    "type": "steps",
+    "caption": "Locate, then dig safely (HSG150 paras 371-379; HSG47)",
+    "items": [
+      {
+        "title": "Plans",
+        "text": "Get plans from the utilities and landowner. Look for manholes, valve covers, street lights."
+      },
+      {
+        "title": "Locate and mark",
+        "text": "A trained person traces services with a CAT; mark with paint or wooden pegs, not spikes."
+      },
+      {
+        "title": "Dig with care",
+        "text": "Hand dig trial holes; dig alongside, not over, a service; recheck with the locator."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Hand-held power tools",
+      "points": [
+        "Greater danger near electricity cables",
+        "Not within 0.5 m of a cable's marked line"
+      ]
+    },
+    "b": {
+      "label": "Excavators",
+      "points": [
+        "Greater danger near gas pipes",
+        "Not within 0.5 m of a gas pipe"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You have the service plans for the area. What should happen before you dig?",
+      "options": [
+        "Nothing: the plans show exact positions",
+        "Trace services with a locator and hand dig trial holes",
+        "Dig a test hole with the excavator",
+        "Probe the ground with a steel spike"
+      ],
+      "answerIndex": 1,
+      "why": "HSG150 paras 372-375: plans are only a guide. Trained people use a locator (CAT), then trial holes are dug by hand to find the exact position and depth."
+    },
+    {
+      "question": "You uncover an unmarked black plastic service. How should you treat it?",
+      "options": [
+        "As a disused water pipe",
+        "As a live electricity cable",
+        "As a telecoms cable that's safe to cut",
+        "As an empty duct"
+      ],
+      "answerIndex": 1,
+      "why": "HSG47 para 122: if any black plastic service is found, assume it is a live electricity cable. Treat all services as live until proved otherwise."
+    }
+  ],
+  "traps": [
+    "Locators can miss things: plastic pipes, and cables carrying little or no current.",
+    "Two trial holes don't prove a service runs in a straight line between them.",
+    "Cables can be shallow: most injuries involve 415-volt cables within 0.5 m of the surface.",
+    "Use spades and shovels, not picks or forks, which are more likely to pierce cables."
+  ],
+  "sources": [
+    {
+      "doc": "Construction (Design and Management) Regulations 2015 (SI 2015/51)",
+      "ref": "reg 25(4)",
+      "url": "https://www.legislation.gov.uk/uksi/2015/51/regulation/25"
+    },
+    {
+      "doc": "HSE HSG150 Health and safety in construction",
+      "ref": "paras 352, 366-379",
+      "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
+    },
+    {
+      "doc": "HSE HSG47 Avoiding danger from underground services",
+      "ref": "paras 85-122",
+      "url": "https://www.hse.gov.uk/pubns/priced/hsg47.pdf"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

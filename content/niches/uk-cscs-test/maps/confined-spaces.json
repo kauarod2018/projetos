@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "id": "confined-spaces",
+  "niche": "uk-cscs-test",
+  "area": "high-risk-activities",
+  "order": 8,
+  "tier": "basic",
+  "officialTopics": [
+    "confined-spaces"
+  ],
+  "title": "Confined Spaces",
+  "whatItIs": "A confined space is any enclosed place, such as a tank, sewer, pit or trench, where there is a foreseeable risk of serious injury from gas, fumes, lack of oxygen, fire or flooding.",
+  "keyFacts": [
+    {
+      "text": "You MUST NOT enter a confined space if the job can reasonably be done without going in.",
+      "law": true
+    },
+    {
+      "text": "If entry is unavoidable, the work MUST follow a safe system of work.",
+      "law": true
+    },
+    {
+      "text": "Rescue arrangements MUST be in place before anyone enters or starts work.",
+      "law": true
+    },
+    "Ventilate and test the air before entry, and only go in if it's safe. Keep testing once inside.",
+    "If the air can't be made fit to breathe, workers must wear breathing apparatus.",
+    "Never 'sweeten' the air with oxygen: it greatly increases the risk of fire or explosion."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "What makes a confined space dangerous (HSE INDG258; HSG150)",
+    "columns": 2,
+    "items": [
+      {
+        "icon": "wind",
+        "title": "Lack of oxygen",
+        "text": "Rust in steel tanks, some soils, or groundwater on chalk and limestone.",
+        "law": false
+      },
+      {
+        "icon": "skull",
+        "title": "Poisonous gas, fume or vapour",
+        "text": "Builds up in sewers and manholes; leaks in from contaminated land.",
+        "law": false
+      },
+      {
+        "icon": "waves",
+        "title": "Liquids and solids",
+        "text": "Can suddenly fill the space, or release gas when disturbed.",
+        "law": false
+      },
+      {
+        "icon": "flame",
+        "title": "Fire and explosion",
+        "text": "From flammable vapours, or from too much oxygen.",
+        "law": false
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Obvious confined spaces",
+      "points": [
+        "Storage tanks, silos, vessels",
+        "Sewers and enclosed drains"
+      ]
+    },
+    "b": {
+      "label": "Less obvious ones",
+      "points": [
+        "Open-topped tanks and chambers, vats",
+        "Deep excavations, basements, poorly ventilated rooms"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "A workmate collapses at the bottom of a manhole. What should you do?",
+      "options": [
+        "Climb straight in to pull them out",
+        "Pour oxygen into the manhole",
+        "Raise the alarm and follow the rescue plan",
+        "Wait to see if they recover"
+      ],
+      "answerIndex": 2,
+      "why": "HSG150 para 505: many people killed in confined spaces were trying to rescue someone without the right equipment. Use the planned rescue arrangements (CSR reg 5)."
+    },
+    {
+      "question": "The air in a confined space can't be made fit to breathe. What must workers wear to go in?",
+      "options": [
+        "A dust mask",
+        "Breathing apparatus",
+        "A hard hat and goggles",
+        "A high-visibility vest"
+      ],
+      "answerIndex": 1,
+      "why": "HSG150 para 514: if the air can't be made fit to breathe because of a toxic risk or lack of oxygen, workers must wear breathing apparatus."
+    }
+  ],
+  "traps": [
+    "Untrained rescuers die too: never go in after someone without proper equipment.",
+    "An open-topped tank or a deep trench can still be a confined space.",
+    "Never use petrol engines inside: the carbon monoxide in their exhaust is too dangerous.",
+    "The person outside has a job: keep watch, talk to those inside and raise the alarm."
+  ],
+  "sources": [
+    {
+      "doc": "Confined Spaces Regulations 1997 (SI 1997/1713)",
+      "ref": "regs 1, 4, 5",
+      "url": "https://www.legislation.gov.uk/uksi/1997/1713/regulation/4"
+    },
+    {
+      "doc": "HSE HSG150 Health and safety in construction",
+      "ref": "paras 505-514",
+      "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
+    },
+    {
+      "doc": "HSE INDG258 Confined spaces: A brief guide to working safely",
+      "ref": "What is a confined space?; dangers; safe systems of work",
+      "url": "https://www.hse.gov.uk/pubns/indg258.pdf"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}
