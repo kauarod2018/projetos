@@ -63,9 +63,7 @@
           "Both arms pointing up, palms forward"
         ]
       ],
-      "notes": [
-        "Hand signals from the Schedule 2 codes (eg BS 7121 for cranes) may be used instead."
-      ]
+      "notes": []
     }
   },
   "confused": {
@@ -111,7 +109,8 @@
   "traps": [
     "Take signals from one signaller only, unless special arrangements have been made.",
     "A flashing light means greater danger or more urgency than a steady one.",
-    "The signaller should be easy to spot: a distinctive bright jacket, helmet, armbands or bats."
+    "The signaller should be easy to spot: a distinctive bright jacket, helmet, armbands or bats.",
+    "Other recognised codes (eg BS 7121 for cranes) may use their own hand signals."
   ],
   "sources": [
     {

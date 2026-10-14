@@ -37,7 +37,7 @@
       {
         "icon": "id-card",
         "title": "Visitors",
-        "text": "Report in, sign in, get information and PPE; escorted if needed."
+        "text": "Report in, get information and PPE; escorted if needed."
       },
       {
         "icon": "lock",
@@ -52,12 +52,12 @@
       {
         "icon": "hard-hat",
         "title": "Falling objects",
-        "text": "Double-board platforms; fans, crash decks or tunnels over the public."
+        "text": "Double-board platforms; fans, crash decks or tunnels."
       },
       {
         "icon": "school",
         "title": "Children",
-        "text": "Sites attract them. Liaise with schools; brief drivers on the rules."
+        "text": "Sites attract them. Liaise with schools; brief drivers."
       }
     ]
   },
