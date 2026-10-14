@@ -100,7 +100,7 @@
     }
   ],
   "traps": [
-    "Just wetting the material first doesn't work: water must flow all through the cut.",
+    "Just wetting the material first doesn't work: water is needed for the whole time you cut.",
     "Working outside doesn't make it safe: high-energy tools still make a lot of dust.",
     "Damage builds up slowly: by the time you notice, it may be serious.",
     "Don't rely on a mask alone: RPE is the last line of protection."
@@ -128,12 +128,14 @@
     },
     {
       "doc": "HSE HSG150 Health and safety in construction",
-      "ref": "para 416",
+      "ref": "para 416 (beards and face seal)",
       "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "CIS36 rev3 (Construction dust; Health risks; The law; Control; RPE; Review; Tables 1-2); HSE Construction dust page; Cancer and construction: Silica; COSHH reg 7(1); HSG150 para 416"
   }
 }

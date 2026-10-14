@@ -50,7 +50,7 @@
       {
         "icon": "route",
         "title": "One-way systems",
-        "text": "Plus turning areas and signed speed limits, to cut reversing.",
+        "text": "One-way systems and turning areas cut reversing. Speed limits clearly signed.",
         "law": false
       }
     ]
@@ -109,7 +109,7 @@
     },
     {
       "doc": "HSE HSG150 Health and safety in construction",
-      "ref": "Site traffic and mobile plant, paras 264-307",
+      "ref": "paras 264, 268-271, 276-277, 295-296, 305-307",
       "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
     },
     {
@@ -125,6 +125,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "CDM 2015 regs 27(1), 27(2), 27(4), 28(4), 28(6); HSG150 paras 264-271, 276-277, 295-296, 305-307; HSE Traffic management on site page; INDG199"
   }
 }

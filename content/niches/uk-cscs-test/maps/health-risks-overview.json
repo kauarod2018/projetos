@@ -13,10 +13,10 @@
   "keyFacts": [
     "Main health risks: back and joint injuries, vibration, dermatitis, hearing loss from noise, asbestos diseases.",
     "Asbestos is the biggest occupational disease risk to construction workers. Silica dust comes next.",
-    "Work-related cancers often appear over 10 years after exposure, even 40 or 50 years later.",
+    "Work-related cancers often appear more than 10 years after exposure, and up to 40 or 50 years later.",
     "Treat health like safety: Assess the risks, Control them, then Review the controls.",
     {
-      "text": "The law requires health surveillance for some workers, e.g. those exposed to noise, asbestos or silica.",
+      "text": "Health surveillance MUST be provided for some workers, depending on their exposure, e.g. to noise, asbestos or silica.",
       "law": true
     },
     "Wash your hands and face before eating, drinking or smoking, and eat away from the work area."
@@ -76,8 +76,8 @@
     "b": {
       "label": "Wellbeing check",
       "points": [
-        "e.g. a blood pressure check",
-        "Not required by law and not linked to your work"
+        "Not legally required and not work related",
+        "Some employers offer it for its benefits"
       ]
     }
   },
@@ -107,13 +107,13 @@
   ],
   "traps": [
     "Health checks alone don't protect you: first stop the exposure.",
-    "Feeling fine proves nothing: dust and asbestos diseases take decades to show.",
+    "Feeling fine proves nothing: many dust and asbestos diseases take years to show.",
     "Substances on your hands can get into your mouth when you eat or smoke: wash first."
   ],
   "sources": [
     {
       "doc": "HSE HSG150",
-      "ref": "paras 11, 398, 405, 425, 430",
+      "ref": "paras 11, 398, 425, 430",
       "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
     },
     {
@@ -139,6 +139,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "HSE Construction health risks: Key points (Underlying causes; Common principles); Cancer and construction: key points, asbestos, silica; Health surveillance page (What); HSG150 paras 11, 398, 425; CIS36 Health risks"
   }
 }

@@ -20,10 +20,10 @@
       "law": true
     },
     {
-      "text": "Kit with a dangerous defect found at a thorough examination MUST NOT be used until it is fixed.",
+      "text": "If a thorough examination finds a dangerous defect, the kit MUST NOT be used until the defect is put right.",
       "law": true
     },
-    "Never stand under a load; loads must not be lifted over people.",
+    "Never stand under a load. Plan load routes so loads are not lifted over people.",
     "The crane supervisor should not be the crane operator, and can stop the lift if it is unsafe.",
     "Never ride on a goods-only hoist."
   ],
@@ -117,7 +117,7 @@
     },
     {
       "doc": "HSE HSG150 Health and safety in construction",
-      "ref": "Moving goods safely, paras 311, 316, 318, 325-335",
+      "ref": "paras 311, 316, 325-336",
       "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
     },
     {
@@ -128,6 +128,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "LOLER 1998 regs 7, 8, 9(3), 10(3); INDG290 rev1 (Equipment covered; What the Regulations require; Dos and don'ts); HSG150 paras 311, 316, 325-336; HSE lifting operations page"
   }
 }

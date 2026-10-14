@@ -12,15 +12,15 @@
   "whatItIs": "Construction can pollute air, water and land. You must not cause or allow pollution, and anyone who produces or handles waste has a legal duty of care for it.",
   "keyFacts": [
     {
-      "text": "You MUST NOT cause or allow pollution of the air, water or ground.",
+      "text": "You MUST NOT cause or allow pollution of air, water or ground.",
       "law": true
     },
     {
-      "text": "Contaminated water MUST NOT go into surface water drains.",
+      "text": "Contaminated water MUST go to the foul drain, be recycled or go with a registered carrier.",
       "law": true
     },
     {
-      "text": "Waste MUST only go to someone authorised to take it.",
+      "text": "Waste holders MUST take reasonable steps to make sure waste only goes to an authorised person.",
       "law": true
     },
     {
@@ -42,12 +42,12 @@
       {
         "swatch": "#DC2626",
         "title": "Red manhole cover",
-        "text": "Foul water drain, to a sewer."
+        "text": "Foul water drain (red 'C' = combined)."
       },
       {
         "icon": "droplets",
         "title": "Bunds",
-        "text": "Catch leaks and spills; keep them clear of other materials."
+        "text": "Catch leaks and spills; store nothing else in them."
       },
       {
         "icon": "shield-alert",
@@ -62,7 +62,7 @@
       {
         "icon": "trash-2",
         "title": "Fly-tipping",
-        "text": "Dumping waste unlawfully is illegal."
+        "text": "Unlawful dumping. Never use fly-tippers."
       }
     ]
   },
@@ -88,11 +88,11 @@
       "options": [
         "Collected for reuse or treatment",
         "Into the nearest surface water drain",
-        "Down a drain with a blue manhole cover",
+        "Down a blue-covered drain",
         "Onto open ground to soak away"
       ],
       "answerIndex": 0,
-      "why": "Contaminated water must not go into surface water drains or the ground. Collect it for reuse or treatment, or use a registered waste carrier."
+      "why": "Contaminated water mustn't reach surface drains or the ground. Collect it for reuse or treatment, or use a registered waste carrier."
     },
     {
       "question": "A man offers to take your site waste away cheaply. What must you check first?",
@@ -100,36 +100,43 @@
         "That he's authorised to take waste",
         "That his van is big enough",
         "That he can take it today",
-        "That he'll give you a receipt"
+        "That he'll take it all in one trip"
       ],
       "answerIndex": 0,
-      "why": "Waste duty of care: only transfer waste to an authorised person, eg a registered carrier. Check the public register."
+      "why": "Waste duty of care: only transfer waste to an authorised person, eg a registered carrier, checked on the public register."
     }
   ],
   "traps": [
     "Blue manhole cover = surface water: never put anything but clean water down it.",
     "Concrete slurry and detergents pollute too, not just oil and chemicals.",
-    "Your duty of care doesn't end at the gate: check where the waste is going."
+    "Your duty of care covers who takes the waste: check they're authorised on the public register."
   ],
   "sources": [
     {
       "doc": "GOV.UK Pollution prevention for businesses",
-      "ref": "Correct use of drains; manhole covers; storage; construction",
+      "ref": "Intro; Correct use of drains; Mark your manhole covers; Storage; Spills; Construction",
       "url": "https://www.gov.uk/guidance/pollution-prevention-for-businesses"
     },
     {
+      "doc": "Environmental Protection Act 1990",
+      "ref": "s. 34(1) (waste duty of care)",
+      "url": "https://www.legislation.gov.uk/ukpga/1990/43/section/34"
+    },
+    {
       "doc": "GOV.UK Waste duty of care: code of practice",
-      "ref": "sections 2.4, 3.1-3.6",
+      "ref": "sections 3.1, 3.4-3.6",
       "url": "https://www.gov.uk/government/publications/waste-duty-of-care-code-of-practice"
     }
   ],
   "jurisdictionNotes": [
     {
       "jurisdiction": "scotland",
-      "text": "The waste duty of care code shown covers England and Wales; Scotland has its own code."
+      "text": "Guidance shown is for England (waste code: England and Wales). Scotland has its own code."
     }
   ],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "GOV.UK Pollution prevention for businesses (drains, manhole covers, storage, spills, construction); EPA 1990 s. 34(1); Waste duty of care code of practice 3.1, 3.4-3.6"
   }
 }

@@ -21,7 +21,7 @@
       "law": true
     },
     {
-      "text": "Employers MUST provide health surveillance for workers exposed at or above the action value.",
+      "text": "Employers MUST provide suitable health surveillance for workers likely to be exposed at or above the action value.",
       "law": true
     },
     "Gloves and warm clothing help blood flow, but gloves give no protection from vibration itself.",
@@ -133,6 +133,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Control of Vibration at Work Regs 2005 regs 4(1), 6(2), 6(4), 7(1); INDG175 rev3 (Why is it an issue?; What the law says; Which tools?; Health surveillance); HSE construction vibration page; HSG150 paras 463-465, 472-473"
   }
 }

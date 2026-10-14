@@ -9,7 +9,7 @@
     "slips-trips-housekeeping"
   ],
   "title": "Slips, Trips & Good Housekeeping",
-  "whatItIs": "HSE's HSG150 calls slips and trips the single largest cause of injuries on construction sites. Most are easily avoided by keeping walkways, stairs and work areas tidy.",
+  "whatItIs": "HSE says around 1,000 slips and trips a year on construction sites cause broken bones or dislocations. Many happen because something is in the way.",
   "keyFacts": [
     {
       "text": "Every part of a site MUST be kept in good order, and work areas reasonably clean.",
@@ -88,15 +88,15 @@
       "why": "HSG150 para 504: run cables for temporary lighting or mains tools at high level, especially along corridors."
     },
     {
-      "question": "According to HSE's HSG150, what is the single largest cause of injuries on construction sites?",
+      "question": "According to HSE, what causes many slips and trips on construction sites?",
       "options": [
-        "Slips and trips",
-        "Falling objects",
-        "Electric shocks",
-        "Hand-arm vibration"
+        "Something in the way, such as materials or waste",
+        "Wearing hi-vis clothing",
+        "Using cordless tools",
+        "Working outside daylight hours"
       ],
       "answerIndex": 0,
-      "why": "HSG150 para 501: a slip or trip is the single largest cause of injuries on construction sites, with more than 1000 major injuries reported each year."
+      "why": "HSE: around 1,000 slips and trips a year on sites cause fractures or dislocations. Many happen simply because something, such as materials or waste, is in the way."
     }
   ],
   "traps": [
@@ -118,12 +118,14 @@
     },
     {
       "doc": "HSE: Materials storage and waste management (construction)",
-      "ref": "What you need to do; Materials storage",
+      "ref": "What you need to know; Materials storage",
       "url": "https://www.hse.gov.uk/construction/safetytopics/storage.htm"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "CDM 2015 regs 17(1), 18(1), 18(3), 35(1); HSG150 paras 502-504; HSE Materials storage and waste management page (2025)"
   }
 }

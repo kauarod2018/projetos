@@ -83,7 +83,7 @@
   "traps": [
     "Locators can miss things: plastic pipes, and cables carrying little or no current.",
     "Two trial holes don't prove a service runs in a straight line between them.",
-    "Cables can be shallow: most injuries involve 415-volt cables within 0.5 m of the surface.",
+    "Depths on plans can be wrong: re-grading of the surface may mean the depths shown are now incorrect.",
     "Use spades and shovels, not picks or forks, which are more likely to pierce cables."
   ],
   "sources": [
@@ -99,12 +99,14 @@
     },
     {
       "doc": "HSE HSG47 Avoiding danger from underground services",
-      "ref": "paras 85-122",
+      "ref": "paras 41, 85, 91, 101-102, 108, 115, 118, 122, 150",
       "url": "https://www.hse.gov.uk/pubns/priced/hsg47.pdf"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "CDM 2015 reg 25(4); HSG150 paras 352, 366-379; HSG47 (3rd edn) paras 41, 85, 91, 101-102, 108, 115, 118, 122, 150"
   }
 }

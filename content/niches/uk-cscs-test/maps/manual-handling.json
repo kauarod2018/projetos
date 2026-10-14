@@ -20,7 +20,7 @@
       "law": true
     },
     {
-      "text": "Where reasonably practicable, employers MUST say how heavy each load is and which side is heaviest.",
+      "text": "Employers MUST give information on the weight of loads and their heaviest side, precise where reasonably practicable.",
       "law": true
     },
     {
@@ -28,7 +28,7 @@
       "law": true
     },
     "The law sets no 'safe' weight limit. Risk depends on the load, the task, how often, and the conditions.",
-    "One bad lift can cause a lifetime of pain, but most injuries build up from repeated handling."
+    "Even one bad lift can cause a lifetime of pain, but injuries more often build up from repeated handling."
   ],
   "visual": {
     "type": "steps",
@@ -127,6 +127,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Manual Handling Operations Regs 1992 regs 2, 4(1), 5; INDG143 (What does the law say?; Simple filters; Training); HSE construction manual handling page (Control; Train); HSG150 paras 11, 312-315"
   }
 }

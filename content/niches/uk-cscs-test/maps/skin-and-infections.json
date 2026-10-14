@@ -72,7 +72,7 @@
     "b": {
       "label": "Allergic dermatitis",
       "points": [
-        "An allergy that can start after months or years of use",
+        "An allergy that can start after weeks, months or years of use",
         "Once you have it, any future contact causes a reaction"
       ]
     }
@@ -115,7 +115,7 @@
     },
     {
       "doc": "HSE HSG150",
-      "ref": "paras 419-425, 538",
+      "ref": "paras 419-425, 538, 542",
       "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
     },
     {
@@ -141,6 +141,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "HSE construction pages: Cement; Solvents; Harmful micro-organisms (general, Weil's disease, Legionella, blood-borne viruses); Skin cancers; HSE Skin at work: sun exposure; HSG150 paras 419-425, 542"
   }
 }

@@ -9,7 +9,7 @@
     "electricity"
   ],
   "title": "Overhead Power Lines",
-  "whatItIs": "Contact with live overhead lines kills and injures people every year. Cranes, tippers, excavators, MEWPs and long items such as scaffold tubes and ladders are the usual causes.",
+  "whatItIs": "Contact with live overhead lines kills and injures people every year. Cranes, tippers, excavators, MEWPs and long items such as scaffold tubes and ladders are a high risk.",
   "keyFacts": [
     {
       "text": "By law, work near overhead power lines MUST be carefully planned to avoid accidental contact.",
@@ -104,17 +104,19 @@
     },
     {
       "doc": "HSE HSG150 Health and safety in construction",
-      "ref": "Overhead power lines, paras 493-499",
+      "ref": "Overhead power lines, paras 497-499",
       "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
     },
     {
       "doc": "HSE HSG141 Electrical safety on construction sites (2023)",
-      "ref": "paras 17-19",
+      "ref": "para 26 (responsibility of those managing the work)",
       "url": "https://www.hse.gov.uk/pubns/priced/hsg141.pdf"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "HSE GS6 4th ed paras 1-4, 11-14, 18-22, 25, 31; HSE construction overhead power lines page; HSG150 paras 498-499; HSG141 para 26"
   }
 }

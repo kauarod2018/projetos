@@ -16,7 +16,7 @@
       "law": true
     },
     {
-      "text": "Platforms 2 m or more up MUST be inspected after assembly, after any event affecting them, and every 7 days.",
+      "text": "A platform you could fall 2 m or more from MUST be inspected after assembly, after events affecting it and every 7 days.",
       "law": true
     },
     {
@@ -97,7 +97,7 @@
   "sources": [
     {
       "doc": "Work at Height Regulations 2005 (SI 2005/735)",
-      "ref": "reg 12; Schedule 2 para 3; Schedule 3 paras 11-12",
+      "ref": "reg 12(2)-(4); Schedule 2 para 3; Schedule 3 paras 11-12",
       "url": "https://www.legislation.gov.uk/uksi/2005/735/schedule/2"
     },
     {
@@ -113,6 +113,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "WAHR 2005 reg 12, Sch 2 para 3, Sch 3 paras 11-12; HSG150 paras 131, 140-166; INDG401 inspection section"
   }
 }

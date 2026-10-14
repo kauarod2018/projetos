@@ -113,17 +113,14 @@
     },
     {
       "doc": "HSE HSG150 Health and safety in construction",
-      "ref": "paras 401-414",
+      "ref": "paras 401-403, 409-414",
       "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
-    },
-    {
-      "doc": "HSE: Construction hazardous substances: Solvents",
-      "ref": "Control: RPE",
-      "url": "https://www.hse.gov.uk/construction/healthrisks/hazardous-substances/solvents.htm"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "COSHH 2002 regs 6(1), 7(1)-(3), 8(2); INDG136 (Think about the task; Safety data sheets; Choosing control measures; myths); HSG150 paras 401-403, 409-414"
   }
 }

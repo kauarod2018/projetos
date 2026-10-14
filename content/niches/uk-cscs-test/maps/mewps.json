@@ -12,13 +12,13 @@
   "whatItIs": "A MEWP, such as a scissor lift or a boom 'cherry picker', lifts people in a guarded platform. It prevents falls, but it can overturn, or throw out or trap the person in it.",
   "keyFacts": [
     {
-      "text": "A MEWP MUST be thoroughly examined by a competent person at least every 6 months.",
+      "text": "A MEWP MUST be thoroughly examined at least every 6 months, or as an examination scheme sets.",
       "law": true
     },
     "Only trained operators who know that model should use it. The operator does the daily pre-use check.",
     "Use it on firm, level ground; extend and chock any outriggers before raising the platform.",
-    "Boom MEWP: wear a harness on a short restraint lanyard, clipped to the anchor point in the basket.",
-    "Don't climb out of the basket at height or stand on the guard rails to reach the work.",
+    "Boom MEWP with a fall risk: harness on a short restraint lanyard to the basket anchor.",
+    "Don't climb out of the basket at height or stand on the guard rails.",
     "Have trained people on the ground who can lower the platform in an emergency."
   ],
   "visual": {
@@ -29,7 +29,7 @@
       {
         "icon": "triangle-alert",
         "title": "Overturning",
-        "text": "Firm, level ground; outriggers out; watch for trenches, manholes and soft ground.",
+        "text": "Firm, level ground; outriggers out; watch for trenches and manholes.",
         "law": false
       },
       {
@@ -81,24 +81,29 @@
       "why": "GEIS6 and HSG150 para 177: work restraint, with a lanyard short enough to stop you reaching a fall position, fixed to an anchor in the basket."
     },
     {
-      "question": "How often must a MEWP be thoroughly examined, unless a scheme sets more often?",
+      "question": "Without an examination scheme, how often must a MEWP be thoroughly examined?",
       "options": [
-        "Every 7 days",
-        "At least every 6 months",
         "Every 12 months",
-        "Only when it is new"
+        "At least every 6 months",
+        "Every 2 years",
+        "Only when new"
       ],
       "answerIndex": 1,
-      "why": "HSE GEIS6: MEWPs must be thoroughly examined at least every six months by a competent person, or more often under an examination scheme."
+      "why": "LOLER reg 9(3)(a): kit for lifting people, at least every 6 months (or per an examination scheme). 12 months is for other lifting kit."
     }
   ],
   "traps": [
     "A MEWP isn't for getting off at height: leaving the basket needs a rigorous risk assessment first.",
     "Never balance materials on the handrails, and never disable the overload system.",
-    "Don't drive it with the platform raised unless the maker says it's designed for that.",
+    "Don't drive with the platform raised unless the maker says it's designed for that.",
     "Over water, if drowning is the bigger risk, wear a life jacket, not a harness."
   ],
   "sources": [
+    {
+      "doc": "LOLER 1998 (SI 1998/2307)",
+      "ref": "reg 9(3)(a)",
+      "url": "https://www.legislation.gov.uk/uksi/1998/2307/regulation/9"
+    },
     {
       "doc": "HSE HSG150 Health and safety in construction",
       "ref": "paras 169-177",
@@ -106,12 +111,14 @@
     },
     {
       "doc": "HSE GEIS6 The selection, management and use of MEWPs",
-      "ref": "Falling from the platform; Overhead hazards; Handling materials; Exiting the platform; Thorough examination; Emergency and rescue",
+      "ref": "all sections",
       "url": "https://www.hse.gov.uk/pubns/geis6.pdf"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "LOLER 1998 regs 2, 9(3)(a); HSE GEIS6 (10/14) all sections; HSG150 paras 168-177"
   }
 }

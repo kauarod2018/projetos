@@ -9,7 +9,7 @@
     "law-and-management"
   ],
   "title": "CDM 2015: Clients, Contractors & Workers",
-  "whatItIs": "The Construction (Design and Management) Regulations 2015 apply to all construction projects in Great Britain, notifiable or not. They say who must plan, manage and coordinate health and safety.",
+  "whatItIs": "The Construction (Design and Management) Regulations 2015 apply to all construction projects in Great Britain. They say who must plan, manage and coordinate health and safety.",
   "keyFacts": [
     {
       "text": "With more than one contractor, the client MUST appoint a principal designer and a principal contractor in writing.",
@@ -112,13 +112,13 @@
   ],
   "sources": [
     {
-      "doc": "Construction (Design and Management) Regulations 2015",
-      "ref": "regs 4, 5, 6, 7, 8(5), 11, 12, 13(4), 15",
+      "doc": "CDM Regulations 2015",
+      "ref": "regs 4-8, 11-13, 15",
       "url": "https://www.legislation.gov.uk/uksi/2015/51/contents"
     },
     {
-      "doc": "HSE L153 Managing health and safety in construction (CDM 2015)",
-      "ref": "Table 1 (roles and duties); para 21 (all projects)",
+      "doc": "HSE L153",
+      "ref": "Table 1; para 21",
       "url": "https://www.hse.gov.uk/pubns/priced/l153.pdf"
     }
   ],

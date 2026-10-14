@@ -9,7 +9,7 @@
     "confined-spaces"
   ],
   "title": "Confined Spaces",
-  "whatItIs": "A confined space is any enclosed place, such as a tank, sewer, pit or trench, where there is a foreseeable risk of serious injury from gas, fumes, lack of oxygen, fire or flooding.",
+  "whatItIs": "A confined space is a place such as a tank, sewer, pit or trench where, because it's enclosed, there's a foreseeable risk from gas, fumes, lack of oxygen, fire or rising liquid.",
   "keyFacts": [
     {
       "text": "You MUST NOT enter a confined space if the job can reasonably be done without going in.",
@@ -24,7 +24,7 @@
       "law": true
     },
     "Ventilate and test the air before entry, and only go in if it's safe. Keep testing once inside.",
-    "If the air can't be made fit to breathe, workers must wear breathing apparatus.",
+    "If the air can't be made fit to breathe, breathing apparatus is essential.",
     "Never 'sweeten' the air with oxygen: it greatly increases the risk of fire or explosion."
   ],
   "visual": {
@@ -107,7 +107,7 @@
   "sources": [
     {
       "doc": "Confined Spaces Regulations 1997 (SI 1997/1713)",
-      "ref": "regs 1, 4, 5",
+      "ref": "regs 1(2) (definition), 4, 5",
       "url": "https://www.legislation.gov.uk/uksi/1997/1713/regulation/4"
     },
     {
@@ -117,12 +117,14 @@
     },
     {
       "doc": "HSE INDG258 Confined spaces: A brief guide to working safely",
-      "ref": "What is a confined space?; dangers; safe systems of work",
+      "ref": "What is a confined space?; dangers; key duties; ventilation; breathing apparatus",
       "url": "https://www.hse.gov.uk/pubns/indg258.pdf"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Confined Spaces Regs 1997 regs 1(2), 4, 5; HSE INDG258 (rev1); HSG150 paras 505-514"
   }
 }

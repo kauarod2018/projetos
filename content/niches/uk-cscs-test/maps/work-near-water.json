@@ -121,6 +121,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "CDM 2015 reg 26; HSG150 paras 516-529; HSE GEIS6 Falling from the platform (work next to or over water)"
   }
 }

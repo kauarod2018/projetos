@@ -9,7 +9,7 @@
     "site-rules-and-welfare"
   ],
   "title": "Welfare Facilities on Site",
-  "whatItIs": "Every construction site needs toilets, washing facilities, drinking water and a place to rest and eat, plus changing rooms and lockers where needed. CDM 2015 Schedule 2 sets the minimum.",
+  "whatItIs": "Every site needs toilets, washing, drinking water and a rest area, plus changing rooms and lockers where needed. CDM 2015 Schedule 2 sets the minimum.",
   "keyFacts": [
     {
       "text": "Suitable and sufficient toilets MUST be provided or made available at readily accessible places.",
@@ -55,7 +55,7 @@
       {
         "icon": "shirt",
         "title": "Changing and lockers",
-        "text": "Where special clothing is worn: seating, lockers, a way to dry clothing.",
+        "text": "Where special clothing is worn; seats, lockers, drying.",
         "law": true
       },
       {
@@ -67,7 +67,7 @@
       {
         "icon": "flame",
         "title": "Heaters",
-        "text": "Don't put clothing directly on heaters to dry it: there's a risk of fire.",
+        "text": "Don't dry clothing directly on heaters: fire risk.",
         "law": false
       }
     ]
@@ -119,22 +119,22 @@
   ],
   "sources": [
     {
-      "doc": "Construction (Design and Management) Regulations 2015",
-      "ref": "Schedule 2, paras 1-5; reg 13(4)(c)",
+      "doc": "CDM Regulations 2015",
+      "ref": "Schedule 2; reg 13(4)",
       "url": "https://www.legislation.gov.uk/uksi/2015/51/schedule/2"
     },
     {
-      "doc": "HSE L153 Managing health and safety in construction (CDM 2015)",
+      "doc": "HSE L153",
       "ref": "paras 137, 176",
       "url": "https://www.hse.gov.uk/pubns/priced/l153.pdf"
     },
     {
-      "doc": "HSE CIS59 Provision of welfare facilities during construction work",
-      "ref": "Introduction; Changing rooms; Rest facilities; Table 1",
+      "doc": "HSE CIS59",
+      "ref": "welfare facilities; Table 1",
       "url": "https://www.hse.gov.uk/pubns/cis59.pdf"
     },
     {
-      "doc": "HSE HSG150 Health and safety in construction",
+      "doc": "HSE HSG150",
       "ref": "paras 43-46",
       "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
     }

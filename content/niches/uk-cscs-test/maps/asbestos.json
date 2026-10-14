@@ -37,11 +37,11 @@
       },
       {
         "title": "Keep people away",
-        "text": "Clear the area and protect the material from more damage."
+        "text": "Put up a warning sign and make sure nobody enters the area."
       },
       {
         "title": "Report it",
-        "text": "Tell your supervisor or employer, who checks the asbestos register or survey."
+        "text": "Tell whoever is in charge. They check the asbestos register or survey."
       },
       {
         "title": "Wait",
@@ -110,7 +110,7 @@
     },
     {
       "doc": "Control of Asbestos Regulations 2012 (SI 2012/632)",
-      "ref": "regs 5, 8, 10",
+      "ref": "regs 5, 8(1), 10(1)",
       "url": "https://www.legislation.gov.uk/uksi/2012/632/regulation/5"
     },
     {
@@ -119,13 +119,15 @@
       "url": "https://www.hse.gov.uk/asbestos/essentials/index.htm"
     },
     {
-      "doc": "HSE HSG150 Health and safety in construction",
-      "ref": "para 442",
-      "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
+      "doc": "HSE Asbestos essentials EM1: What to do if you discover or accidentally disturb asbestos",
+      "ref": "Unexpected discovery of asbestos",
+      "url": "https://www.hse.gov.uk/pubns/guidance/em1.pdf"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "HSE A worker's guide to asbestos safety (live page); Cancer and construction: Asbestos; Control of Asbestos Regs 2012 regs 5, 8(1), 10(1); Asbestos essentials index (A9, A10, A16) and EM1"
   }
 }

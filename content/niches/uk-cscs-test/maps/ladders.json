@@ -12,7 +12,7 @@
   "whatItIs": "Ladders aren't banned, but they don't prevent or mitigate a fall. Use one only when a risk assessment shows better equipment isn't justified because the risk is low and the job short.",
   "keyFacts": [
     {
-      "text": "A ladder MUST only be used if a risk assessment shows better kit isn't justified: low risk, short use.",
+      "text": "Ladder use MUST be justified by a risk assessment: low risk, and short use or site features you can't alter.",
       "law": true
     },
     {
@@ -112,17 +112,19 @@
     },
     {
       "doc": "HSE: Safe use of ladders and stepladders",
-      "ref": "sections 2-7",
+      "ref": "sections 1-7",
       "url": "https://www.hse.gov.uk/work-at-height/ladders/index.htm"
     },
     {
       "doc": "HSE HSG150 Health and safety in construction",
-      "ref": "paras 123, 218-228",
+      "ref": "para 123",
       "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "WAHR 2005 Sch 6 paras 1, 5, 10; HSE web guide Safe use of ladders and stepladders sections 1-7 (updated 2024-06-05); HSG150 para 123"
   }
 }

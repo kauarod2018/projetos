@@ -25,7 +25,10 @@
     },
     "Work is done by trained demolition operatives, supervised by someone who knows the demolition sequence.",
     "Gas, electricity, water and telecoms services are isolated or disconnected first, or clearly marked.",
-    "The client must make sure asbestos is surveyed for and removed before demolition starts."
+    {
+      "text": "Demolition: the asbestos plan of work MUST say asbestos goes before other major works, so far as reasonably practicable.",
+      "law": true
+    }
   ],
   "visual": {
     "type": "steps",
@@ -33,7 +36,7 @@
     "items": [
       {
         "title": "Survey",
-        "text": "The client has the structure surveyed for hazardous materials and structural condition."
+        "text": "Survey for hazardous materials and structural condition. The client provides the information."
       },
       {
         "title": "Plan in writing",
@@ -94,17 +97,29 @@
   "sources": [
     {
       "doc": "Construction (Design and Management) Regulations 2015 (SI 2015/51)",
-      "ref": "regs 19, 20",
+      "ref": "regs 19(1), 20",
       "url": "https://www.legislation.gov.uk/uksi/2015/51/regulation/20"
+    },
+    {
+      "doc": "Control of Asbestos Regulations 2012 (SI 2012/632)",
+      "ref": "reg 7(3)",
+      "url": "https://www.legislation.gov.uk/uksi/2012/632/regulation/7"
     },
     {
       "doc": "HSE HSG150 Health and safety in construction",
       "ref": "paras 382-395",
       "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
+    },
+    {
+      "doc": "HSE L153 Managing health and safety in construction",
+      "ref": "para 42; Appendix 2 para 8 (pre-construction information, surveys)",
+      "url": "https://www.hse.gov.uk/pubns/priced/l153.pdf"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "CDM 2015 regs 19(1), 20; Control of Asbestos Regs 2012 reg 7(3); HSG150 paras 382-395; L153 pre-construction information"
   }
 }

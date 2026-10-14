@@ -9,7 +9,7 @@
     "site-traffic"
   ],
   "title": "Reversing, Signallers & Plant Safety",
-  "whatItIs": "Reversing is a major cause of deaths on site: HSG144 says about a third of fatal construction transport accidents. Plant also kills by striking people and overturning.",
+  "whatItIs": "HSE says reversing is a major cause of fatal accidents on site. Plant also kills by striking people and by overturning.",
   "keyFacts": [
     {
       "text": "Where a vehicle could endanger people, they MUST be warned, by the driver or the person directing it.",
@@ -104,7 +104,7 @@
     },
     {
       "doc": "HSE HSG150 Health and safety in construction",
-      "ref": "paras 276, 286, 301-303",
+      "ref": "paras 264, 276, 301-303",
       "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
     },
     {
@@ -121,10 +121,17 @@
       "doc": "HSE: Telescopic handlers (construction)",
       "ref": "Controlling the risk",
       "url": "https://www.hse.gov.uk/construction/safetytopics/telescopic.htm"
+    },
+    {
+      "doc": "HSE: Traffic management on site",
+      "ref": "Turning vehicles",
+      "url": "https://www.hse.gov.uk/construction/safetytopics/vehiclestrafficmanagement.htm"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "CDM 2015 reg 28(2); HSG144 paras 39-40, 52, 59, Tables 3 and 5; HSG150 paras 264, 276, 301-303; INDG199 (Reversing; Signalling; seat belts); HSE pages: Traffic management, Dumpers, Telescopic handlers"
   }
 }

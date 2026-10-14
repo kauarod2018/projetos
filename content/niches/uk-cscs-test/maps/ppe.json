@@ -20,7 +20,7 @@
       "law": true
     },
     {
-      "text": "Since 6 April 2022 these duties cover casual 'limb (b)' workers as well as employees.",
+      "text": "Since 6 April 2022 employers MUST meet these PPE duties for casual 'limb (b)' workers as well as employees.",
       "law": true
     },
     {
@@ -153,6 +153,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "PPE at Work Regs 1992 as amended 2022, regs 2, 4, 6, 7, 9-11; HSWA 1974 s9; HSE PPE overview; HSE Extended scope of PPE Regs (2022); HSG150 paras 416, 461, 531-546"
   }
 }

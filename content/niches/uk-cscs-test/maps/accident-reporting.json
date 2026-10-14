@@ -117,23 +117,23 @@
   ],
   "sources": [
     {
-      "doc": "RIDDOR 2013 (SI 2013/1471)",
-      "ref": "regs 2, 4, 5, 6, 7, 12; Sch. 1 para 1",
-      "url": "https://www.legislation.gov.uk/uksi/2013/1471/regulation/4"
+      "doc": "RIDDOR 2013",
+      "ref": "regs 2, 4-7, 12; Sch. 1 para 1",
+      "url": "https://www.legislation.gov.uk/uksi/2013/1471/contents"
     },
     {
-      "doc": "HSE INDG453 Reporting accidents and incidents at work",
-      "ref": "Reportable dangerous occurrences; Recording requirements",
+      "doc": "HSE INDG453",
+      "ref": "dangerous occurrences; recording",
       "url": "https://www.hse.gov.uk/pubns/indg453.pdf"
     },
     {
       "doc": "HSE: Types of reportable incidents",
-      "ref": "Over-7-day and over-3-day incapacitation; non-workers",
+      "ref": "over-7-day, over-3-day, non-workers",
       "url": "https://www.hse.gov.uk/riddor/types-of-reportable-incidents.htm"
     },
     {
-      "doc": "HSE: When do I need to report an incident?",
-      "ref": "Report received within 10 days; over-7-day within 15 days",
+      "doc": "HSE: When do I need to report?",
+      "ref": "deadlines",
       "url": "https://www.hse.gov.uk/riddor/when-do-i-report.htm"
     }
   ],

@@ -16,7 +16,7 @@
       "law": true
     },
     {
-      "text": "A competent person MUST inspect a supported excavation at the start of each shift and after any fall or event.",
+      "text": "A competent person MUST inspect a supported or battered excavation each shift and after any fall or event.",
       "law": true
     },
     {
@@ -24,7 +24,7 @@
       "law": true
     },
     "Keep spoil, plant and vehicles back from the edge: the extra load can make the sides collapse.",
-    "Access ladders must be secured, on a firm base, and extend at least 1 m above the landing place.",
+    "Access ladders: on a firm level base, secured against slipping, and at least 1 m above the landing.",
     "Don't run petrol or diesel engines in or near an excavation: exhaust fumes can collect in it."
   ],
   "visual": {
@@ -47,7 +47,7 @@
       {
         "icon": "truck",
         "title": "Vehicles and materials",
-        "text": "Keep them back; use stop blocks set well back from the edge for tipping.",
+        "text": "Keep them back from the edge; for tipping, use secured stop blocks a safe distance back.",
         "law": false
       },
       {
@@ -99,8 +99,8 @@
     }
   ],
   "traps": [
-    "Don't trust the ground: almost no ground can be relied on to stand unsupported in all conditions.",
-    "A 'small' fall of soil isn't small: HSE says a cubic metre can weigh over 1.5 tonnes.",
+    "Don't trust the ground: HSE says no ground can be relied on to stand unsupported in all circumstances.",
+    "A 'small' fall of soil isn't small: depending on conditions, a cubic metre can weigh over 1.5 tonnes.",
     "Never work ahead of the support or take it out early.",
     "Exposed pipes and cables are not handholds or footholds for climbing out."
   ],
@@ -112,17 +112,19 @@
     },
     {
       "doc": "HSE HSG150 Health and safety in construction",
-      "ref": "paras 338-358, 379",
+      "ref": "paras 338-357, 379",
       "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
     },
     {
       "doc": "HSE: Excavations",
-      "ref": "What you need to know; Inspection",
+      "ref": "What you need to know; Collapse; Falling into excavations; Other aspects; Inspection",
       "url": "https://www.hse.gov.uk/construction/safetytopics/excavations.htm"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "CDM 2015 regs 22, 24; HSE web page Excavations (2022-02-10); HSG150 paras 338-357, 379"
   }
 }

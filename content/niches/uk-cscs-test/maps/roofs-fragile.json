@@ -9,10 +9,10 @@
     "work-at-height"
   ],
   "title": "Roof Work & Fragile Surfaces",
-  "whatItIs": "Almost one in five workers killed in construction are doing roof work. Most fall from roof edges, or through holes, roof lights and other fragile surfaces.",
+  "whatItIs": "Roof work is high risk. Falls from roofs and through fragile roofs and roof lights are one of the most common causes of workplace death and serious injury.",
   "keyFacts": [
     {
-      "text": "You MUST NOT work on or near a fragile surface if the job can reasonably be done safely without it.",
+      "text": "You MUST NOT pass across, or work on or near, a fragile surface if the job can reasonably be done safely without it.",
       "law": true
     },
     {
@@ -120,12 +120,14 @@
     },
     {
       "doc": "HSE INDG401 Working at height: A brief guide",
-      "ref": "What are the most common causes of accidents?",
+      "ref": "What are the most common causes of accidents when working at height?",
       "url": "https://www.hse.gov.uk/pubns/indg401.pdf"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "WAHR 2005 regs 2, 9, 10(3); HSG150 paras 230-248; INDG401 (rev2) most common causes of accidents and fragile materials list"
   }
 }

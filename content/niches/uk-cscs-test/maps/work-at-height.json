@@ -9,7 +9,7 @@
     "work-at-height"
   ],
   "title": "Working at Height: The Basics",
-  "whatItIs": "Work at height is work anywhere you could fall a distance liable to cause injury, even at or below ground level. Falls are the largest cause of death in construction.",
+  "whatItIs": "Work at height is work anywhere you could fall a distance liable to cause injury, even at or below ground level. It remains one of the biggest causes of deaths at work.",
   "keyFacts": [
     {
       "text": "Work at height MUST be avoided where the job can reasonably be done safely another way.",
@@ -24,10 +24,10 @@
       "law": true
     },
     {
-      "text": "You MUST report any defect or activity at height that could endanger anyone.",
+      "text": "You MUST report any activity or defect at height that you know is likely to endanger anyone.",
       "law": true
     },
-    "HSE makes no distinction between low and high falls: any work at height needs precautions.",
+    "HSG150: there's no distinction between low and high falls. Any work at height needs precautions.",
     "If harnesses are used, plan how to rescue someone left hanging: don't rely on the emergency services."
   ],
   "visual": {
@@ -44,7 +44,7 @@
       },
       {
         "title": "Minimise the fall",
-        "text": "Nets or air bags close under the work; a fall arrest harness comes last."
+        "text": "Nets or air bags close under the work (collective) before a fall-arrest harness (personal)."
       }
     ]
   },
@@ -59,8 +59,8 @@
     "b": {
       "label": "Fall arrest",
       "points": [
-        "Stops you after you have fallen",
-        "Last resort: needs a high anchor and a rescue plan"
+        "Minimises the distance and consequences of a fall",
+        "Needs a high anchor point and a rescue plan"
       ]
     }
   },
@@ -97,22 +97,29 @@
   "sources": [
     {
       "doc": "Work at Height Regulations 2005 (SI 2005/735)",
-      "ref": "regs 2, 4(3), 6, 7(1)(a), 14",
+      "ref": "regs 2, 4(3), 6(2)-(5), 7(1)(a), 14(1)",
       "url": "https://www.legislation.gov.uk/uksi/2005/735/regulation/6"
     },
     {
       "doc": "HSE HSG150 Health and safety in construction",
-      "ref": "paras 116-128, 205-206, 215",
+      "ref": "paras 116-128",
       "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
     },
     {
       "doc": "HSE INDG401 Working at height: A brief guide",
       "ref": "Introduction; collective and personal protection; Figure 1",
       "url": "https://www.hse.gov.uk/pubns/indg401.pdf"
+    },
+    {
+      "doc": "HSE: Introduction to working at height safely",
+      "ref": "Introduction; what to do and not do",
+      "url": "https://www.hse.gov.uk/work-at-height/introduction.htm"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "WAHR 2005 regs 2, 4(3), 6, 7(1)(a), 14(1); HSG150 paras 116-128; INDG401 (rev2) incl. Figure 1; HSE web: Introduction to working at height safely"
   }
 }

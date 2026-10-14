@@ -101,7 +101,7 @@
     },
     {
       "doc": "HSE HSG141 Electrical safety on construction sites (2023)",
-      "ref": "paras 29, 36, 54, 64, 68, 70; case studies p9",
+      "ref": "paras 26-29, 36, 54, 59, 64, 68, 70; case studies",
       "url": "https://www.hse.gov.uk/pubns/priced/hsg141.pdf"
     },
     {
@@ -117,6 +117,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Electricity at Work Regs 1989 regs 4(2), 12, 13, 16; HSG141 (2023) paras 29, 36, 54, 59, 64, 68 and case studies; HSG150 paras 475-486; INDG231 (Reduce the voltage; Provide a safety device)"
   }
 }
