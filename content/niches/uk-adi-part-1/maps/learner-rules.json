@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "learner-rules",
+  "niche": "uk-adi-part-1",
+  "area": "test-disabilities-law",
+  "order": 1,
+  "tier": "basic",
+  "officialTopics": [
+    "law"
+  ],
+  "title": "Learner Drivers: Licence, Supervisor & L Plates",
+  "whatItIs": "A learner needs a provisional licence (apply from 15 years 9 months), a qualified supervisor and L plates. Only an ADI can take a learner on a motorway.",
+  "keyFacts": [
+    {
+      "text": "Learners MUST hold a valid provisional licence and pass the practical test before driving unaccompanied.",
+      "law": true
+    },
+    {
+      "text": "The supervisor MUST be 21+ and have held a full licence for that type of car (manual or automatic) for 3 years.",
+      "law": true
+    },
+    {
+      "text": "Red L plates MUST be clearly visible from the front and the back. In Wales, D plates can be used.",
+      "law": true
+    },
+    {
+      "text": "Learners MUST NOT use a motorway unless with an ADI, in a car with dual controls and L (or D) plates.",
+      "law": true
+    },
+    {
+      "text": "A supervisor MUST NOT use a hand-held phone while supervising.",
+      "law": true
+    }
+  ],
+  "visual": {
+    "type": "stats",
+    "caption": "Supervising a learner: the numbers",
+    "items": [
+      {
+        "value": "21",
+        "label": "Minimum age of the supervisor"
+      },
+      {
+        "value": "3 yrs",
+        "label": "Full licence held by the supervisor"
+      },
+      {
+        "value": "£1,000",
+        "label": "Maximum fine for no proper supervision"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Unpaid supervisor (family, friends)",
+      "points": [
+        "Over 21, full licence for that type of car held 3 years",
+        "Cannot take the learner on a motorway"
+      ]
+    },
+    "b": {
+      "label": "Paid teacher",
+      "points": [
+        "Must be an ADI (green badge) or a trainee (pink badge)",
+        "Only an ADI, in a dual-control car, can take a learner on a motorway"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "A pupil's relative wants to supervise private practice in the pupil's manual car. Who meets the legal requirements?",
+      "options": [
+        "Aged 24, full manual car licence held for 4 years",
+        "Aged 20, full manual car licence held for 3 years",
+        "Aged 30, full manual car licence held for 2 years",
+        "Aged 45, full automatic-only licence held for 20 years"
+      ],
+      "answerIndex": 0,
+      "why": "The supervisor must be at least 21 and have held a full licence for that type of car (manual or automatic) for 3 years."
+    },
+    {
+      "question": "A provisional car licence holder wants motorway experience in Great Britain. When is this allowed?",
+      "options": [
+        "With any supervisor who has held a full licence for 3 years",
+        "Only once they have passed the theory test",
+        "With an ADI, in a car with dual controls and L plates",
+        "Never, until they pass the practical driving test"
+      ],
+      "answerIndex": 2,
+      "why": "Rule 253: provisional car licence holders must not use a motorway unless with an ADI in a dual-control car with L plates."
+    }
+  ],
+  "traps": [
+    "Learner speed limits in Great Britain are the same as after the test, day or night.",
+    "There is no minimum number of lessons or hours of practice.",
+    "No proper supervision: fine up to £1,000 and up to 6 points.",
+    "A provisional car licence holder must not drive while towing a trailer."
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Driving lessons and learning to drive",
+      "ref": "Rules for learning; Practising with family or friends; L plates",
+      "url": "https://www.gov.uk/driving-lessons-learning-to-drive"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Annex 3: Learner drivers",
+      "url": "https://www.gov.uk/guidance/the-highway-code/annex-3-motor-vehicle-documentation-and-learner-driver-requirements"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 253",
+      "url": "https://www.gov.uk/guidance/the-highway-code/motorways-253-to-273"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 149",
+      "url": "https://www.gov.uk/guidance/the-highway-code/general-rules-techniques-and-advice-for-all-drivers-and-riders-103-to-158"
+    },
+    {
+      "doc": "Motor Vehicles (Driving Licences) Regulations 1999",
+      "ref": "Regs 16(2) and 17(1)",
+      "url": "https://www.legislation.gov.uk/uksi/1999/2864/regulation/17"
+    }
+  ],
+  "jurisdictionNotes": [
+    {
+      "jurisdiction": "wales",
+      "text": "Learners can display red D plates, red L plates, or both."
+    }
+  ],
+  "review": {
+    "status": "draft"
+  }
+}

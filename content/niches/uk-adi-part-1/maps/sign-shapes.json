@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "id": "sign-shapes",
+  "niche": "uk-adi-part-1",
+  "area": "signs-control-mechanics",
+  "order": 1,
+  "tier": "basic",
+  "officialTopics": [
+    "traffic-signs"
+  ],
+  "title": "Traffic Signs: Shapes, Colours & Meanings",
+  "whatItIs": "Three basic types of sign: circles give orders, triangles warn, rectangles inform. Colour is a further guide. STOP and GIVE WAY break the shape rules so they stand out.",
+  "keyFacts": [
+    "A red ring or red circle shows a prohibition: what you must not do.",
+    "A blue circle (no red border) mostly gives a positive instruction, or marks a route for certain vehicles only.",
+    {
+      "text": "You MUST obey traffic signs giving orders, including temporary signs.",
+      "law": true
+    },
+    {
+      "text": "At a STOP sign you MUST stop before the line and make sure the way is clear before entering the major road.",
+      "law": true
+    },
+    "All triangular signs are red. Plates below a sign qualify its message, e.g. a time plate.",
+    "Direction signs: blue on motorways, green on primary routes, white on other routes, brown for tourist sites."
+  ],
+  "visual": {
+    "type": "sign-grid",
+    "caption": "Circle = order · triangle = warning · rectangle = information",
+    "signs": [
+      "no-entry",
+      "turn-left-ahead",
+      "crossroads",
+      "no-through-road",
+      "stop"
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Red ring or circle",
+      "points": [
+        "Prohibition: what you must not do",
+        "e.g. no entry, maximum speed, no U-turns"
+      ]
+    },
+    "b": {
+      "label": "Blue circle",
+      "points": [
+        "Mandatory: what you must do",
+        "e.g. turn left ahead, mini-roundabout",
+        "Or a route only for some traffic, e.g. cycles"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "A pupil asks what a blue circular sign with no red border generally tells them. Which answer is correct?",
+      "options": [
+        "Something they must do",
+        "A hazard on the road ahead",
+        "Directions to a primary route",
+        "A restriction that applies only at certain times"
+      ],
+      "answerIndex": 0,
+      "why": "Know Your Traffic Signs: blue circles generally give a mandatory instruction, such as 'turn left', or show a route only for particular classes of traffic, such as buses and cycles."
+    },
+    {
+      "question": "Why do the STOP and GIVE WAY signs not follow the normal shape and colour rules?",
+      "options": [
+        "To give them greater prominence",
+        "Because they are information signs",
+        "Because they are only temporary",
+        "Because they only apply at night"
+      ],
+      "answerIndex": 0,
+      "why": "Know Your Traffic Signs says there are a few exceptions to the shape and colour rules, to give certain signs greater prominence. The STOP and GIVE WAY signs are the examples."
+    }
+  ],
+  "traps": [
+    "Blue rectangles are information signs, except on motorways, where blue is used for direction signs.",
+    "No upright GIVE WAY sign? At quiet junctions the sign (or the road triangle) may be left out: the give way lines still apply.",
+    "A time plate under a 'no right turn' or 'no left turn' sign makes it a part-time ban: read the plate."
+  ],
+  "sources": [
+    {
+      "doc": "Know Your Traffic Signs",
+      "ref": "The signing system (p. 9); Regulatory signs (pp. 16, 19)",
+      "url": "https://www.gov.uk/government/publications/know-your-traffic-signs"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Traffic signs (signs giving orders, warning signs, direction signs)",
+      "url": "https://www.gov.uk/guidance/the-highway-code/traffic-signs"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rule 109",
+      "url": "https://www.gov.uk/guidance/the-highway-code/general-rules-techniques-and-advice-for-all-drivers-and-riders-103-to-158"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

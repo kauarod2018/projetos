@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "id": "test-faults",
+  "niche": "uk-adi-part-1",
+  "area": "test-disabilities-law",
+  "order": 3,
+  "tier": "basic",
+  "officialTopics": [
+    "driving-test"
+  ],
+  "title": "Driving, Serious & Dangerous Faults",
+  "whatItIs": "Examiners judge each fault against a defined outcome of safe driving and record it as a driving, serious or dangerous fault, or not at all.",
+  "keyFacts": [
+    "To pass: no more than 15 driving faults and no serious or dangerous faults.",
+    "One driving fault does not fail the test, but a fault repeated throughout can be marked as serious.",
+    "Serious fault: potentially dangerous, or a breach of the law (e.g. ignoring a red light or a stop sign).",
+    "Dangerous fault: actual danger to the examiner, candidate, public or property, marked even if the examiner acts.",
+    "One or both 'show me, tell me' questions answered wrongly = one driving fault.",
+    "Fuel-efficient driving is assessed and debriefed but does not count towards the result."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "How examiners grade a fault (DT1 11.05)",
+    "columns": 2,
+    "items": [
+      {
+        "icon": "circle-check",
+        "title": "Not worthy of recording",
+        "text": "Insignificant, e.g. dry steering."
+      },
+      {
+        "icon": "circle-alert",
+        "title": "Driving fault: low risk",
+        "text": "Not a fail alone, e.g. another car must slow."
+      },
+      {
+        "icon": "circle-x",
+        "title": "Serious fault: high risk",
+        "text": "Fail, e.g. emerging without proper observation."
+      },
+      {
+        "icon": "siren",
+        "title": "Dangerous fault: actual danger",
+        "text": "Fail, e.g. examiner acts to avoid a collision."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Examiner gives advice",
+      "points": [
+        "A fault is seen but there is no immediate danger",
+        "No urgent action is needed"
+      ]
+    },
+    "b": {
+      "label": "Examiner takes action (ETA)",
+      "points": [
+        "Immediate intervention needed to stop it becoming dangerous",
+        "Verbal, or physical (dual controls or steering)"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Your pupil's test ends with 14 driving faults and 1 serious fault. What is the result?",
+      "options": [
+        "Pass, because there are fewer than 16 driving faults",
+        "Fail, because of the serious fault",
+        "Pass, if the serious fault was during a manoeuvre",
+        "Fail, because 14 driving faults is over the limit"
+      ],
+      "answerIndex": 1,
+      "why": "To pass you need no more than 15 driving faults and no serious or dangerous faults. One serious fault is an immediate fail."
+    },
+    {
+      "question": "Which DT1 principle asks: 'If the drive was perfect before and after this fault, would this fault alone cause a fail?'",
+      "options": [
+        "The 16th driving fault rule",
+        "Adding and taking away",
+        "The first rule of assessment",
+        "The defined outcome"
+      ],
+      "answerIndex": 2,
+      "why": "The first rule of assessment (DT1 11.06) makes the examiner judge each fault in isolation, on its own effect on safety, the law or control."
+    }
+  ],
+  "traps": [
+    "The '16th fault' rule is about whether to record a fault at all: could you justify failing on it if it were the 16th?",
+    "A fault is never double-marked, but marking both control and observation on a manoeuvre is not double marking.",
+    "Experienced drivers on an extended test should not be penalised for driving to a higher standard than learners."
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Driving test: cars",
+      "ref": "Driving test faults and your result: Pass mark",
+      "url": "https://www.gov.uk/driving-test/driving-test-faults-result"
+    },
+    {
+      "doc": "DVSA: Carrying out driving tests (DT1)",
+      "ref": "11.02, 11.04 to 11.08, 11.10; 11.11 Vehicle safety check questions",
+      "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-driving-tests-dt1/11-guide-to-assessment-and-marking"
+    },
+    {
+      "doc": "DVSA: Carrying out driving tests (DT1)",
+      "ref": "1.33 Fuel efficient driving",
+      "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-driving-tests-dt1/1-car-driving-test"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

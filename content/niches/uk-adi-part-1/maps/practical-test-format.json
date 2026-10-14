@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "id": "practical-test-format",
+  "niche": "uk-adi-part-1",
+  "area": "test-disabilities-law",
+  "order": 2,
+  "tier": "basic",
+  "officialTopics": [
+    "driving-test"
+  ],
+  "title": "The Car Driving Test: How It Works",
+  "whatItIs": "The car test checks that a pupil can drive safely in different road and traffic conditions and shows knowledge of The Highway Code by the way they drive.",
+  "keyFacts": [
+    "4 parts: eyesight check, 'show me, tell me' questions, general driving (with independent driving) and reversing.",
+    "Around 35 minutes of driving. The regulations require at least 30 minutes on the road for a car test.",
+    "Independent driving lasts 20 to 35 minutes, following a sat nav or traffic signs. The examiner sets the sat nav.",
+    "The 'tell me' question comes before driving; the 'show me' question is asked while driving.",
+    "An emergency stop is carried out in 1 in every 7 car tests.",
+    "The test includes a normal stop, pulling out from behind a parked vehicle and a hill start."
+  ],
+  "visual": {
+    "type": "steps",
+    "caption": "The car test in order",
+    "items": [
+      {
+        "title": "Eyesight check",
+        "text": "Read a number plate from 20 m (20.5 m, old-style plate). Fail and the test ends."
+      },
+      {
+        "title": "'Tell me' question",
+        "text": "Asked at the start, before the pupil drives."
+      },
+      {
+        "title": "General driving",
+        "text": "No motorways. Includes independent driving and the 'show me' question."
+      },
+      {
+        "title": "Reversing",
+        "text": "Parallel park, bay park, or pull up on the right and reverse about 2 car lengths."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Pupil's own car",
+      "points": [
+        "Does not need dual controls",
+        "Extra interior mirror and passenger head restraint for the examiner",
+        "L plates front and rear; taxed, MOT if needed, insured for a test"
+      ]
+    },
+    "b": {
+      "label": "Hire car",
+      "points": [
+        "Must be fitted with dual controls",
+        "Must meet all the other rules for test cars"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "A pupil wants to take the test in their own car. Which of these must the car have?",
+      "options": [
+        "Dual controls for the examiner",
+        "An extra interior rear-view mirror for the examiner",
+        "A dashcam that records inside the car",
+        "A space-saver spare tyre fitted"
+      ],
+      "answerIndex": 1,
+      "why": "A test car must have an extra interior rear-view mirror for the examiner. Your own car does not need dual controls, and a space-saver spare must not be fitted."
+    },
+    {
+      "question": "During independent driving your pupil takes a wrong turning but drives safely. How does the examiner deal with this?",
+      "options": [
+        "A driving fault is recorded",
+        "A serious fault is recorded",
+        "No fault; the examiner helps them back on the route",
+        "The independent section is ended and the test fails"
+      ],
+      "answerIndex": 2,
+      "why": "The examiner will not give a fault for a wrong turning and will help the candidate back on route (GOV.UK; DT1 1.03)."
+    }
+  ],
+  "traps": [
+    "A pass in a semi-automatic car only lets you drive automatic and semi-automatic cars.",
+    "The candidate cannot use their own sat nav, self-parking or autopilot on the test.",
+    "Failed? The next test must be at least 10 working days away.",
+    "An extended test (after a ban) means around 65 minutes of driving."
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Driving test: cars",
+      "ref": "Using your own car for your test; What happens during the test; If you do not pass",
+      "url": "https://www.gov.uk/driving-test"
+    },
+    {
+      "doc": "DVSA: Carrying out driving tests (DT1)",
+      "ref": "1.03 Test control; 1.04 Car driving test requirements; 1.06 Minimum test time; 1.26 Emergency stop",
+      "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-driving-tests-dt1/1-car-driving-test"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}
