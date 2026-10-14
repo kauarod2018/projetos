@@ -15,8 +15,14 @@
       "text": "At the roadside you MUST produce records for today and the previous 28 days (56 for UK–EU journeys).",
       "law": true
     },
-    "Keep a record of your whole working day, including work away from the vehicle.",
-    "Carry enough print roll for a printout if an officer asks.",
+    {
+      "text": "You MUST keep a record of your whole working day, including work away from the vehicle.",
+      "law": true
+    },
+    {
+      "text": "You MUST carry enough type-approved print roll to make a printout if an officer asks.",
+      "law": true
+    },
     {
       "text": "With an analogue tachograph, you MUST return used charts to your operator within 42 days.",
       "law": true
@@ -117,6 +123,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "GOV.UK GV262 Drivers' hours and tachographs: goods vehicles: 4.1 Analogue tachographs (charts, centrefield, manual entries); 4.2 Digital tachographs (driver duties, lost cards, manual records); 4.3 Recording other work; 5. Operators (downloading, breakdown)"
   }
 }

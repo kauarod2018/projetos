@@ -126,6 +126,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "GOV.UK GV262 Drivers' hours and tachographs: goods vehicles: 1.6 Weekly rest periods (incl. Sleeping facilities); 1.11 Summary of assimilated limits"
   }
 }

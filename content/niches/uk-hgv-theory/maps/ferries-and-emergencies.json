@@ -14,7 +14,7 @@
   "keyFacts": [
     "Ferry or train: a regular daily rest can be interrupted twice, 1 hour in total.",
     "You need a sleeper cabin, bunk or couchette, and the rest must still total 11 hours (12 if split).",
-    "A regular weekly rest: only on a crossing of 8 hours or more, with a sleeper cabin.",
+    "Interrupt a regular weekly rest only if the ferry or train leg is 8 hours or more and you have a sleeper cabin.",
     {
       "text": "On a digital tachograph you MUST select ferry mode as well as rest mode when using this rule.",
       "law": true
@@ -43,12 +43,12 @@
       {
         "icon": "route",
         "title": "Reaching base or home",
-        "text": "Up to 1 hour extra, or 2 hours after a 30-minute break."
+        "text": "Up to 1 h extra for a weekly rest, or 2 h for a regular weekly rest after a 30-min break."
       },
       {
         "icon": "siren",
         "title": "Emergency",
-        "text": "Vehicles in emergency or rescue operations are exempt."
+        "text": "Vehicles in emergency or rescue operations are exempt for the duration of the emergency."
       }
     ]
   },
@@ -105,12 +105,14 @@
     },
     {
       "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
-      "ref": "4.2 (ferry mode, manual records)",
+      "ref": "4.1 and 4.2 (driver duties: ferry mode; manual records)",
       "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/4-tachograph-rules"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "GOV.UK GV262 Drivers' hours and tachographs: goods vehicles: 1.7 Journeys involving a ferry or train; 1.8 Emergencies; 1.10 Unforeseen events; 1.11 Summary; 4.2 Digital tachographs (ferry mode, manual records)"
   }
 }

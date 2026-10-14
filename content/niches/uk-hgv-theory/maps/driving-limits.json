@@ -86,6 +86,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "GOV.UK GV262 Drivers' hours and tachographs: goods vehicles: 1.4 Breaks and driving limits (daily, weekly, two-weekly driving limits); 1.11 Summary of assimilated limits"
   }
 }

@@ -104,11 +104,13 @@
     {
       "doc": "GOV.UK: Become a qualified HGV or bus driver",
       "ref": "Returning to be an HGV or bus driver",
-      "url": "https://www.gov.uk/become-lorry-bus-driver"
+      "url": "https://www.gov.uk/become-lorry-bus-driver/requalifying"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "GOV.UK Driver CPC training for qualified drivers: how much training, when to take it, finding courses, taking a course, getting your card; GOV.UK Become a qualified HGV or bus driver: Returning to be an HGV or bus driver"
   }
 }

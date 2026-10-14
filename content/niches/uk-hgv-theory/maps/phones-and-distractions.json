@@ -109,7 +109,7 @@
   "traps": [
     "Stopped in a queue or at lights still counts: the hand-held ban applies.",
     "Flight mode doesn't help: the ban covers devices that are offline.",
-    "6 points within 2 years of your first test: your licence is revoked."
+    "6 points within 2 years of passing your first driving test: your licence is revoked."
   ],
   "sources": [
     {
@@ -130,6 +130,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Highway Code rules 148 to 150 and annex 5 (penalty table; new drivers); GOV.UK Using a phone, sat nav or other device when driving (exceptions, hands-free, penalties)"
   }
 }

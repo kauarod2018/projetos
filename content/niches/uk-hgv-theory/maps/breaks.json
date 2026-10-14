@@ -9,7 +9,7 @@
     "drivers-hours"
   ],
   "title": "Breaks: 4.5 Hours Then 45 Minutes",
-  "whatItIs": "Under the assimilated (GB) drivers' hours rules, you can drive for no more than 4.5 hours before a break of at least 45 minutes. The break can be split 15 + 30.",
+  "whatItIs": "Under the assimilated drivers' hours rules, you can drive for no more than 4.5 hours before a break of at least 45 minutes. The break can be split 15 + 30.",
   "keyFacts": [
     {
       "text": "After no more than 4.5 hours of driving, you MUST take a break of at least 45 minutes, unless you start a rest period.",
@@ -114,7 +114,7 @@
       "label": "Rest",
       "points": [
         "Long period you can spend as you like",
-        "Daily: 9 to 11 hours · Weekly: 24 to 45 hours"
+        "Daily: 11 h (9 h reduced) · Weekly: 45 h (24 h reduced)"
       ]
     }
   },
@@ -150,12 +150,14 @@
   "sources": [
     {
       "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
-      "ref": "1.4 Breaks and driving limits; 1.5 Daily rest periods",
+      "ref": "1.4 to 1.6; 4.3 Recording other work; Annex 2",
       "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/1-assimilated-and-aetr-rules-on-drivers-hours"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "GOV.UK GV262 Drivers' hours and tachographs: goods vehicles: 1.4 Breaks, 1.5 Daily rest, 1.6 Weekly rest, 1.11 Summary; 4.3 Recording other work; Annex 2 Working time rules"
   }
 }

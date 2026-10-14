@@ -9,7 +9,7 @@
     "licences-and-qualifications"
   ],
   "title": "Getting Qualified: Driver CPC Parts 1 to 4",
-  "whatItIs": "To drive a lorry professionally you need a full car licence, a provisional lorry licence and the full Driver CPC: 5 tests in 4 parts. Then 35 hours of training every 5 years.",
+  "whatItIs": "To drive a lorry as your main job you need a full car licence, a provisional lorry licence and the full Driver CPC: 5 tests in 4 parts. Then 35 hours of training every 5 years.",
   "keyFacts": [
     {
       "text": "You MUST have the full Driver CPC if driving a lorry is your main job.",
@@ -46,7 +46,7 @@
       },
       {
         "title": "Part 3b: on-road driving",
-        "text": "1 hour of driving. Pass: 12 or fewer driving faults, no serious ones."
+        "text": "1 hour of road driving. Pass: 12 or fewer driving faults, no serious or dangerous faults."
       },
       {
         "title": "Part 4: demonstration",
@@ -112,6 +112,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "GOV.UK Become a qualified HGV or bus driver: Getting qualified; When you don't need Driver CPC; Applying for a provisional licence; Driver CPC part 1, 2, 3a, 3b and 4 tests; After you've qualified"
   }
 }

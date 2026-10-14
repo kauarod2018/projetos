@@ -127,6 +127,8 @@
     }
   ],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Highway Code rules 90 to 96 and 262; GOV.UK The drink drive limit (limits table); GOV.UK GV262 Drivers' hours and tachographs: goods vehicles, 1.4 Breaks and driving limits"
   }
 }

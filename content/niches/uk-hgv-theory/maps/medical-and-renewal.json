@@ -96,7 +96,7 @@
   ],
   "traps": [
     "Renewing is free, but the doctor, optician or optometrist may charge for the D4.",
-    "Your licence and your Driver CPC are separate: renewing one does not renew the other.",
+    "Staying qualified needs both: 35 hours of Driver CPC training and renewing your licence.",
     "No forms through the post? Get a pack from a Post Office that offers DVLA services."
   ],
   "sources": [
@@ -118,6 +118,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "GOV.UK Renew or change a lorry or bus licence (under 45; 45 or over); GOV.UK Become a qualified HGV or bus driver: Getting qualified, provisional licence, Stay qualified; Highway Code rule 90"
   }
 }

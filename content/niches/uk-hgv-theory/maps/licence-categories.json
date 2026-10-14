@@ -109,11 +109,13 @@
     {
       "doc": "GOV.UK: Become a qualified HGV or bus driver",
       "ref": "Applying for a provisional licence (form D2 table); Part 3a test; Upgrade your licence to tow heavier trailers",
-      "url": "https://www.gov.uk/become-lorry-bus-driver/qualify-heavier-trailers"
+      "url": "https://www.gov.uk/become-lorry-bus-driver"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "GOV.UK Driving licence categories (C1, C1E, C, CE); GOV.UK Become a qualified HGV or bus driver: Applying for a provisional licence (D2 table), Part 3a test, Upgrade your licence to tow heavier trailers"
   }
 }

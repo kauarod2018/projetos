@@ -18,8 +18,8 @@
     "Regular daily rest: at least 11 continuous hours.",
     "Split daily rest: at least 3 hours, then at least 9 hours: 12 hours in total.",
     "Reduced daily rest: 9 to under 11 hours, up to 3 times between weekly rests.",
-    "Work for another employer is never rest.",
-    "You may rest in the vehicle only if it is stationary and has suitable sleeping facilities, e.g. a bunk."
+    "Work in other employment never counts as rest.",
+    "Rest in the vehicle only if it's stationary, with suitable sleeping facilities (e.g. a bunk)."
   ],
   "visual": {
     "type": "timeline",
@@ -210,6 +210,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "GOV.UK GV262 Drivers' hours and tachographs: goods vehicles: 1.5 Daily rest periods (incl. multi-manning: split rest is a regular rest); 1.11 Summary of assimilated limits"
   }
 }

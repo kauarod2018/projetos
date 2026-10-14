@@ -10,7 +10,7 @@
     "licences-and-qualifications"
   ],
   "title": "Speed Limits for Goods Vehicles",
-  "whatItIs": "Lorries have lower limits than cars. Over 7.5 tonnes in England and Wales: 50 mph on single carriageways and 60 mph on dual carriageways and motorways. Scotland is lower.",
+  "whatItIs": "Lorries have lower limits than cars. Over 7.5 t in England and Wales: 50 mph single carriageway, 60 mph dual carriageway and motorway. Scotland: 40 and 50 mph off motorways.",
   "keyFacts": [
     {
       "text": "You MUST NOT go over the speed limit for the road, or the limit for your vehicle.",
@@ -18,11 +18,11 @@
     },
     "Up to 7.5 t: 70 mph on motorways, or 60 mph if articulated or towing.",
     {
-      "text": "Over 7.5 t, you MUST NOT use the right-hand lane of a motorway with 3 or more lanes.",
+      "text": "Over 7.5 t, you MUST NOT use the right-hand lane of a motorway with 3 or more lanes (except prescribed cases).",
       "law": true
     },
     {
-      "text": "Goods vehicles over 12 t first used from 1988, or over 3.5 t from 2005, MUST be speed-limited to 90 km/h.",
+      "text": "Goods vehicles over 12 t first used from 1988, or over 3.5 t from 2005, MUST have a limiter set at 90 km/h (56 mph).",
       "law": true
     },
     "A limit is a maximum, not a target: slow down for hazards, bad weather and at night."
@@ -71,7 +71,7 @@
       "label": "Goods vehicle up to 7.5 t",
       "points": [
         "Motorway: 70 mph, or 60 mph if articulated or towing",
-        "No right-hand lane on 3+ lanes if it must have a speed limiter"
+        "No right-hand lane of a 3+ lane motorway if towing or speed-limited"
       ]
     },
     "b": {
@@ -108,22 +108,23 @@
   ],
   "traps": [
     "Over 7.5 t, the motorway limit is 60 mph, not 70.",
-    "Up to 7.5 t but articulated or towing? The motorway limit is 60 mph, not 70."
+    "Up to 7.5 t but articulated or towing? The motorway limit is 60 mph, not 70.",
+    "A speed limiter may stop you reaching the limit: many lorries are limited to 56 mph (90 km/h)."
   ],
   "sources": [
     {
       "doc": "The Highway Code",
-      "ref": "Rules 124 (speed limits table) and 125",
+      "ref": "Rules 124, 125, 222 and 265",
       "url": "https://www.gov.uk/guidance/the-highway-code/general-rules-techniques-and-advice-for-all-drivers-and-riders-103-to-158"
     },
     {
-      "doc": "The Highway Code",
-      "ref": "Rule 265",
-      "url": "https://www.gov.uk/guidance/the-highway-code/motorways-253-to-273"
+      "doc": "GOV.UK: Speed limits",
+      "ref": "Table; Speed limiters",
+      "url": "https://www.gov.uk/speed-limits"
     },
     {
-      "doc": "The Road Vehicles (Construction and Use) Regulations 1986",
-      "ref": "Regulation 36B(1A), (2) and (9): speed limiters on goods vehicles",
+      "doc": "Road Vehicles (Construction and Use) Regulations 1986",
+      "ref": "Reg. 36B(1A), (2), (6), (9)",
       "url": "https://www.legislation.gov.uk/uksi/1986/1078/regulation/36B"
     }
   ],
@@ -138,6 +139,8 @@
     }
   ],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Highway Code rules 124, 125, 222, 265; GOV.UK Speed limits (table, speed limiters); Road Vehicles (Construction and Use) Regulations 1986 reg 36B(1A), (2), (6), (9)"
   }
 }

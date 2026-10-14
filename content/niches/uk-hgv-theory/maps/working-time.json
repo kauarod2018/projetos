@@ -108,6 +108,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "GOV.UK GV262 Drivers' hours and tachographs: goods vehicles: Annex 2 Working time rules (2005 Regulations: working time, 48/60 hours, night work, breaks, POAs, opt-out; 1998 Regulations); 4.3 Recording other work"
   }
 }

@@ -15,7 +15,7 @@
     "You can flag questions, go back and change any answer, and finish early once all are answered.",
     "Hazard perception: 19 clips, each with at least one developing hazard. One clip has 2.",
     "You score up to 5 points for each developing hazard. The pass mark is 67 out of 100.",
-    "The questions are based on The Highway Code, Know your traffic signs and the DVSA guide to driving goods vehicles.",
+    "Multiple-choice questions are based on The Highway Code, Know your traffic signs and the DVSA goods vehicles guide.",
     "Your theory certificate is valid for 2 years from when you passed the first part."
   ],
   "visual": {
@@ -97,6 +97,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "GOV.UK Become a qualified HGV or bus driver: Driver CPC part 1 test (theory): multiple-choice and hazard perception parts, scoring, results, if you fail"
   }
 }

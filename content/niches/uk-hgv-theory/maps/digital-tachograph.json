@@ -114,6 +114,8 @@
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "GOV.UK GV262 Drivers' hours and tachographs: goods vehicles: 4. Tachograph rules (overview; 4.2 driver cards and records, lost/stolen cards, UTC; 4.3 mode button); 5. Operators (downloading, company cards)"
   }
 }

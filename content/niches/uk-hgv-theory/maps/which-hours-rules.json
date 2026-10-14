@@ -90,7 +90,7 @@
   "traps": [
     "An empty lorry is still in scope: it does not need to be carrying goods.",
     "UK to Norway or Iceland isn't a UK–EU journey: AETR rules apply.",
-    "National derogations only work in the UK. Abroad, only true exemptions apply."
+    "National derogations apply only to journeys wholly within the UK; exemptions also cover UK–EU journeys."
   ],
   "sources": [
     {
@@ -100,12 +100,14 @@
     },
     {
       "doc": "GOV.UK: Drivers' hours and tachographs: goods vehicles (GV262)",
-      "ref": "1. Overview; 1.1 Exemptions and derogations; 1.2",
+      "ref": "1. Overview; 1.1 Exemptions and national derogations; 1.2 Driving",
       "url": "https://www.gov.uk/guidance/drivers-hours-goods-vehicles/1-assimilated-and-aetr-rules-on-drivers-hours"
     }
   ],
   "jurisdictionNotes": [],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "GOV.UK GV262 Drivers' hours and tachographs: goods vehicles: Introduction (Which rules apply; EU and AETR countries), 1. Overview, 1.1 Exemptions and national derogations, 1.2 Driving, 1.12 AETR rules"
   }
 }
