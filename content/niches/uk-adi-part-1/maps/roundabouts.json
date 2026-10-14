@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "id": "roundabouts",
+  "niche": "uk-adi-part-1",
+  "area": "road-procedure",
+  "order": 3,
+  "tier": "basic",
+  "officialTopics": [
+    "road-procedure"
+  ],
+  "title": "Roundabouts & Mini-Roundabouts",
+  "whatItIs": "Approach with MSM at every stage, give priority to traffic from the right unless signs, markings or lights say otherwise, and pick lane and signals by your exit.",
+  "keyFacts": [
+    "Decide your exit early, use MSM at all stages and time your signals so they don't confuse others.",
+    "Give priority to traffic approaching from your right, unless signs, road markings or lights direct otherwise.",
+    {
+      "text": "At a mini-roundabout all vehicles MUST pass round the central markings, except large vehicles that can't.",
+      "law": true
+    },
+    "Mini-roundabouts are normally on roads with a 30 mph limit or less. Avoid U-turns at them.",
+    "Give priority to cyclists on the roundabout and don't try to overtake them within their lane.",
+    "Double or multiple mini-roundabouts: treat each one separately and give way to traffic from the right."
+  ],
+  "visual": {
+    "type": "road-diagram",
+    "diagram": "roundabout-exits",
+    "caption": "Lanes and signals at a four-way roundabout (Highway Code rule 186)",
+    "routes": [
+      {
+        "exit": 1,
+        "label": "1st exit · turning left",
+        "steps": [
+          "Signal left and approach in the left lane",
+          "Keep left and keep signalling left to leave"
+        ],
+        "approachLane": "left",
+        "signalOnApproach": "left",
+        "signalLeftAfterExit": null
+      },
+      {
+        "exit": 2,
+        "label": "2nd exit · going ahead",
+        "steps": [
+          "Select the appropriate lane: normally no signal",
+          "Signal left after passing the 1st exit"
+        ],
+        "approachLane": "left",
+        "signalOnApproach": "none",
+        "signalLeftAfterExit": 1
+      },
+      {
+        "exit": 3,
+        "label": "3rd exit · turning right",
+        "steps": [
+          "Signal right and approach in the right lane",
+          "Keep right until you need to change lanes",
+          "Signal left after passing the 2nd exit"
+        ],
+        "approachLane": "right",
+        "signalOnApproach": "right",
+        "signalLeftAfterExit": 2
+      }
+    ],
+    "notes": [
+      "Unless signs or markings show otherwise"
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Positioning: normal driving",
+      "points": [
+        "Going ahead at a roundabout without lane markings",
+        "Fault: cutting across the normal road position"
+      ]
+    },
+    "b": {
+      "label": "Positioning: lane discipline",
+      "points": [
+        "Going ahead at a roundabout with lane markings",
+        "Fault: not keeping to the marked lane, or straddling lanes"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Your pupil is taking the 3rd exit (to the right) at a roundabout with no signs or markings saying otherwise. When should they signal left?",
+      "options": [
+        "On the approach to the roundabout",
+        "As they enter the roundabout",
+        "After passing the exit before the one they want",
+        "Only when they reach their exit"
+      ],
+      "answerIndex": 2,
+      "why": "Rule 186: signal right and approach in the right-hand lane, then signal left after you have passed the exit before the one you want. DT1 records late exit signals at roundabouts."
+    },
+    {
+      "question": "A cyclist in the left-hand lane of a roundabout is signalling right. What is this most likely to mean?",
+      "options": [
+        "They are about to move into the right-hand lane",
+        "They are continuing across or around the roundabout",
+        "They are leaving at the next exit",
+        "They have forgotten to cancel their signal"
+      ],
+      "answerIndex": 1,
+      "why": "Rule 186: cyclists, horse riders and horse-drawn vehicles may stay in the left lane when continuing around, signalling right. Don't cut across them as you enter."
+    }
+  ],
+  "traps": [
+    "Late exit signals are a DT1 timing fault: signal left once you have passed the exit before yours.",
+    "Even where markings let you enter without giving way, still look right before you join.",
+    "Others on the roundabout may not signal correctly or at all: watch their speed and position.",
+    "Long vehicles may straddle lanes or take a different course: give them plenty of room."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 184–190 (Roundabouts)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "Know Your Traffic Signs (DfT)",
+      "ref": "Road markings: roundabouts and mini-roundabouts (printed page 81)",
+      "url": "https://www.gov.uk/government/publications/know-your-traffic-signs"
+    },
+    {
+      "doc": "DVSA: Carrying out driving tests: examiner guidance (DT1)",
+      "ref": "1.10 Definitions of recorded faults (positioning); 12 Signals, Positioning",
+      "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-driving-tests-dt1/1-car-driving-test"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

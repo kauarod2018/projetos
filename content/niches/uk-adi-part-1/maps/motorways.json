@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "id": "motorways",
+  "niche": "uk-adi-part-1",
+  "area": "road-procedure",
+  "order": 6,
+  "tier": "basic",
+  "officialTopics": [
+    "road-procedure"
+  ],
+  "title": "Motorways & Smart Motorways",
+  "whatItIs": "Fast roads with their own rules: who may use them, joining and leaving, lane discipline, red X lane closures, hard shoulders and emergency areas.",
+  "keyFacts": [
+    {
+      "text": "Learners MUST NOT drive on a motorway unless with an ADI, in a dual-controlled car with L (or D) plates.",
+      "law": true
+    },
+    "Joining: give priority to traffic already on the motorway and match your speed to the left lane.",
+    {
+      "text": "You MUST NOT drive in a lane closed by a red X or red flashing lights.",
+      "law": true
+    },
+    {
+      "text": "You MUST NOT use a hard shoulder except in an emergency, or when directed by police, traffic officers or a sign.",
+      "law": true
+    },
+    "Keep in the left lane unless overtaking, and overtake only on the right.",
+    {
+      "text": "You MUST NOT reverse, cross the central reservation or drive against the traffic flow.",
+      "law": true
+    }
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "Smart motorway signals and lanes (Highway Code rules 258, 265, 269, 270)",
+    "columns": 2,
+    "items": [
+      {
+        "icon": "octagon-x",
+        "title": "Red X or red flashing lights",
+        "text": "The lane is closed: you MUST NOT drive in it. A speed limit or 'END' shows it has reopened.",
+        "law": true
+      },
+      {
+        "icon": "arrow-left-to-line",
+        "title": "Hard shoulder used as a lane",
+        "text": "Only when a speed limit shows above it. A red X or blank sign: emergencies only.",
+        "law": true
+      },
+      {
+        "icon": "phone",
+        "title": "Emergency areas",
+        "text": "Blue signs with an orange SOS phone. Emergency use only; use the phone before you rejoin.",
+        "law": true
+      },
+      {
+        "icon": "ban",
+        "title": "Right-hand lane bans",
+        "text": "On 3+ lanes, vehicles towing trailers and larger goods or passenger vehicles MUST NOT use it.",
+        "law": true
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Hard shoulder",
+      "points": [
+        "Emergencies only, unless directed or a speed limit shows above it",
+        "Less protection: very close to high-speed traffic"
+      ]
+    },
+    "b": {
+      "label": "Emergency area",
+      "points": [
+        "Blue sign with an orange SOS phone; may have orange surfacing",
+        "You MUST use the emergency phone before rejoining"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Your pupil holds a provisional car licence and wants motorway experience. Which is required?",
+      "options": [
+        "Any qualified driver aged 21+ in the passenger seat",
+        "An ADI, a car with dual controls and L (or D) plates",
+        "A theory test pass and a supervisor",
+        "Daylight and dry weather only"
+      ],
+      "answerIndex": 1,
+      "why": "Rule 253: provisional car licence holders MUST NOT drive on the motorway unless accompanied by an ADI in a car with dual controls displaying red L plates (D plates in Wales)."
+    },
+    {
+      "question": "A sign above the left lane shows a red X. What must your pupil do?",
+      "options": [
+        "Slow down and stay in the lane",
+        "Move to an open lane in good time and not drive in the closed lane",
+        "Use the hard shoulder to pass the closure",
+        "Switch on hazard lights and carry on"
+      ],
+      "answerIndex": 1,
+      "why": "Rule 258: a red X identifies a closed lane where people, stopped vehicles or hazards may be. You MUST follow the signs to an open lane and MUST NOT drive in the closed lane."
+    }
+  ],
+  "traps": [
+    "Missed your exit? Carry on to the next one: never reverse on any part of a motorway, including slip roads.",
+    "After leaving, 50 mph can feel like 30 mph: check the speedometer and slow for sharp bends.",
+    "Amber flashing lights: only speed up after a signal that isn't flashing, a national limit or 'END'.",
+    "Smart motorways can change limits and lane use: the national standard says obeying them is vital."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 253–274, 275, 278",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "DVSA: National standard for driving cars and light vans (category B)",
+      "ref": "Element 3.1.4 (Drive on motorways and dual carriageways)",
+      "url": "https://www.gov.uk/guidance/national-standard-for-driving-cars-and-light-vans-category-b"
+    },
+    {
+      "doc": "GOV.UK: Driving lessons and learning to drive",
+      "ref": "Driving on motorways",
+      "url": "https://www.gov.uk/driving-lessons-learning-to-drive"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

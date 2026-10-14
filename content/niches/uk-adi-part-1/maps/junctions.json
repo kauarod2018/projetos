@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "id": "junctions",
+  "niche": "uk-adi-part-1",
+  "area": "road-procedure",
+  "order": 2,
+  "tier": "basic",
+  "officialTopics": [
+    "road-procedure"
+  ],
+  "title": "Junctions: Emerging, Turning & Priorities",
+  "whatItIs": "How to approach, turn at and emerge from junctions: who has priority, where to position, and the faults examiners record most often.",
+  "keyFacts": [
+    {
+      "text": "At a 'Stop' sign with a solid white line, you MUST stop behind the line, then wait for a safe gap.",
+      "law": true
+    },
+    {
+      "text": "At broken white lines across the road, you MUST give way to traffic on the main road.",
+      "law": true
+    },
+    {
+      "text": "You MUST NOT enter a yellow box until your exit is clear, unless turning right and held only by oncoming traffic.",
+      "law": true
+    },
+    "Give way to pedestrians crossing or waiting to cross the road you're turning into or out of.",
+    "Turning right: position just left of the middle of the road, wait for a safe gap and don't cut the corner.",
+    "Dual carriageway: wait in the central reservation only if it's deep enough to protect your whole vehicle."
+  ],
+  "visual": {
+    "type": "markings",
+    "caption": "Junction markings you MUST obey (Highway Code rules 171, 172, 174)",
+    "items": [
+      {
+        "pattern": "stop-line",
+        "label": "Stop line (with 'Stop' sign)",
+        "meaning": "Stop behind the line, then go only when there is a safe gap.",
+        "law": true
+      },
+      {
+        "pattern": "give-way",
+        "label": "Give way lines",
+        "meaning": "Give way to traffic on the main road.",
+        "law": true
+      },
+      {
+        "pattern": "box-junction",
+        "label": "Yellow box junction",
+        "meaning": "Don't enter until your exit is clear (except right turns held by oncoming traffic).",
+        "law": true
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Right side to right side",
+      "points": [
+        "Keep the other vehicle on your right and turn behind it",
+        "Generally safer: clear view of approaching traffic"
+      ]
+    },
+    "b": {
+      "label": "Left side to left side",
+      "points": [
+        "Turn in front of each other",
+        "Can block your view: cyclists and motorcyclists may be hidden",
+        "Layout, markings or the other vehicle may decide the method"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Your pupil is turning left into a side road. A pedestrian is waiting to cross that side road. What should the pupil do?",
+      "options": [
+        "Give way to the pedestrian",
+        "Turn first: the pedestrian must wait",
+        "Sound the horn and continue the turn",
+        "Wave the pedestrian across"
+      ],
+      "answerIndex": 0,
+      "why": "Rule H2 and rule 170: at a junction, give way to pedestrians crossing or waiting to cross a road into which or from which you are turning. Beckoning pedestrians is recorded as a fault."
+    },
+    {
+      "question": "On test, a candidate looks before emerging but misjudges an approaching car, which has to slow down. Safety was not compromised. How does DT1 class this?",
+      "options": [
+        "Not worthy of recording",
+        "A driving fault",
+        "A serious fault",
+        "A dangerous fault"
+      ],
+      "answerIndex": 1,
+      "why": "DT1 11.05 uses this example for a low-risk driving fault. Not taking effective observation and emerging into the path of other vehicles would be serious."
+    }
+  ],
+  "traps": [
+    "A car from the right signalling left may not turn: wait and make sure before you emerge.",
+    "Approaching too slowly or waiting when it's safe to go is also a fault (undue hesitation), not just going too fast.",
+    "Traffic lights out of order? Treat it as an unmarked junction, where nobody has priority, and take great care.",
+    "Stay behind cyclists, horse riders and motorcyclists at junctions, even if they wait close to the kerb."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 146, 170–183, H2",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "DVSA: National standard for driving cars and light vans (category B)",
+      "ref": "Element 3.1.3 (Negotiate all types of junctions, including roundabouts, and all types of crossings)",
+      "url": "https://www.gov.uk/guidance/national-standard-for-driving-cars-and-light-vans-category-b"
+    },
+    {
+      "doc": "DVSA: Carrying out driving tests: examiner guidance (DT1)",
+      "ref": "11.05 Low and high risk; 11.11 Junctions; 12 Junctions, Progress, Signals",
+      "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-driving-tests-dt1/11-guide-to-assessment-and-marking"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

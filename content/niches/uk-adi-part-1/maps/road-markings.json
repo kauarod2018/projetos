@@ -5,12 +5,20 @@
   "area": "signs-control-mechanics",
   "order": 2,
   "tier": "basic",
-  "officialTopics": ["traffic-signs"],
+  "officialTopics": [
+    "traffic-signs"
+  ],
   "title": "Road Markings & Studs",
   "whatItIs": "Lines along the road tell you where you may cross, overtake and stop. As a rule, the more paint and the more solid the line, the stronger the message.",
   "keyFacts": [
-    { "text": "Chevrons bordered by a solid white line: you MUST NOT enter except in an emergency.", "law": true },
-    "Hatching bordered by a broken line: don't enter unless it's necessary and you can see it's safe.",
+    {
+      "text": "Chevrons bordered by a solid white line: you MUST NOT enter except in an emergency.",
+      "law": true
+    },
+    {
+      "text": "Yellow box: you MUST NOT enter until your exit road or lane is clear.",
+      "law": true
+    },
     "No stopping on roads with double white lines, even if your side is broken, except to drop off, pick up or load.",
     "Double yellow lines: no waiting at any time, unless signs show seasonal restrictions.",
     "A double red line ALWAYS means no stopping at any time.",
@@ -18,35 +26,67 @@
   ],
   "visual": {
     "type": "markings",
-    "caption": "Lines along the road, viewed in your direction of travel",
+    "caption": "Double white lines: read the line nearest you",
     "items": [
-      { "pattern": "centre-line", "label": "Centre line", "meaning": "Short lines, long gaps. Cross only if the road is clear and you want to overtake or turn off." },
-      { "pattern": "hazard-line", "label": "Hazard warning line", "meaning": "Lines longer, gaps shorter: a hazard ahead, such as a bend or junction." },
-      { "pattern": "double-broken-near", "label": "Double white lines: broken near you", "meaning": "You may cross to overtake if safe and you can finish before a solid line on your side." },
-      { "pattern": "double-solid-near", "label": "Double white lines: solid near you", "meaning": "MUST NOT cross or straddle, except to turn off, pass a stopped vehicle, or overtake slow traffic (see Q1).", "law": true },
-      { "pattern": "box-junction", "label": "Yellow box junction", "meaning": "MUST NOT enter until your exit road or lane is clear. Turning right? See Q2.", "law": true }
+      {
+        "pattern": "centre-line",
+        "label": "Centre line",
+        "meaning": "Short lines, long gaps. Cross only to overtake or turn off, if clear."
+      },
+      {
+        "pattern": "hazard-line",
+        "label": "Hazard warning line",
+        "meaning": "Longer lines, shorter gaps: a hazard ahead."
+      },
+      {
+        "pattern": "double-broken-near",
+        "label": "Broken line nearest you",
+        "meaning": "May cross to overtake if safe and you can finish before a solid line."
+      },
+      {
+        "pattern": "double-solid-near",
+        "label": "Solid line nearest you",
+        "meaning": "MUST NOT cross or straddle it, except in the cases in Q1.",
+        "law": true
+      }
     ]
   },
   "confused": {
     "a": {
       "label": "Hatching, broken border",
-      "points": ["Don't enter unless necessary and safe", "Separates lanes or protects traffic turning right"]
+      "points": [
+        "Don't enter unless necessary and safe",
+        "Separates lanes or protects traffic turning right"
+      ]
     },
     "b": {
       "label": "Chevrons, solid border",
-      "points": ["MUST NOT enter except in an emergency", "Used where slip roads leave and join motorways"]
+      "points": [
+        "MUST NOT enter except in an emergency",
+        "Used where slip roads leave and join motorways"
+      ]
     }
   },
   "onTheTest": [
     {
       "question": "The line nearest you in a set of double white lines is solid. When may you cross it, if the road is clear?",
-      "options": ["To overtake a cyclist travelling at 10 mph or less", "To overtake a tractor travelling at 20 mph", "To overtake any vehicle if you can see far ahead", "To get a better view of the road ahead"],
+      "options": [
+        "To overtake a cyclist travelling at 10 mph or less",
+        "To overtake a tractor travelling at 20 mph",
+        "To overtake any vehicle if you can see far ahead",
+        "To get a better view of the road ahead"
+      ],
       "answerIndex": 0,
       "why": "Rule 129: you may cross to pass a stationary vehicle, or to overtake a pedal cycle, horse or road maintenance vehicle travelling at 10 mph or less, if the road is clear."
     },
     {
       "question": "You want to turn right at a yellow box junction. When may you enter the box and wait?",
-      "options": ["When your exit is clear and only oncoming traffic stops you", "Whenever the traffic lights are green", "Only when the whole box is empty", "Never: you must wait behind the box"],
+      "options": [
+        "When your exit is clear and only oncoming traffic stops you",
+        "Whenever the traffic lights are green",
+        "Only when the whole box is empty",
+        "Never: you must wait behind the box"
+      ],
       "answerIndex": 0,
       "why": "Rule 174: you may wait in the box to turn right when only oncoming traffic, or vehicles waiting to turn right, stop you. Know Your Traffic Signs adds: only if the right-turn exit is clear."
     }
@@ -57,10 +97,24 @@
     "Red and single yellow lines are only a guide: check the signs. No days shown? It applies every day."
   ],
   "sources": [
-    { "doc": "The Highway Code", "ref": "Rules 127–132 (lines, lane markings and road studs); Rule 174 (box junctions)", "url": "https://www.gov.uk/guidance/the-highway-code/general-rules-techniques-and-advice-for-all-drivers-and-riders-103-to-158" },
-    { "doc": "The Highway Code", "ref": "Road markings (waiting restrictions; Red Route stopping controls)", "url": "https://www.gov.uk/guidance/the-highway-code/road-markings" },
-    { "doc": "Know Your Traffic Signs", "ref": "Road markings (pp. 74–76, 80, 84: hatching, chevrons, double white lines, yellow box, road studs)", "url": "https://www.gov.uk/government/publications/know-your-traffic-signs" }
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 127–132 (lines, lane markings and road studs); Rule 174 (box junctions)",
+      "url": "https://www.gov.uk/guidance/the-highway-code/general-rules-techniques-and-advice-for-all-drivers-and-riders-103-to-158"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Road markings (waiting restrictions; Red Route stopping controls)",
+      "url": "https://www.gov.uk/guidance/the-highway-code/road-markings"
+    },
+    {
+      "doc": "Know Your Traffic Signs",
+      "ref": "Road markings (pp. 74–76, 80, 84: hatching, chevrons, double white lines, yellow box, road studs)",
+      "url": "https://www.gov.uk/government/publications/know-your-traffic-signs"
+    }
   ],
   "jurisdictionNotes": [],
-  "review": { "status": "draft" }
+  "review": {
+    "status": "draft"
+  }
 }

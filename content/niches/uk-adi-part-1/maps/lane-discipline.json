@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "id": "lane-discipline",
+  "niche": "uk-adi-part-1",
+  "area": "road-procedure",
+  "order": 4,
+  "tier": "complete",
+  "officialTopics": [
+    "road-procedure"
+  ],
+  "title": "Lanes, Positioning & Lane Changes",
+  "whatItIs": "Keep left unless overtaking or turning right, follow lane signs and markings, and change lanes with MSM without forcing anyone to change course or speed.",
+  "keyFacts": [
+    "Keep left unless signs or markings say otherwise, or you're overtaking, turning right or passing an obstruction.",
+    "To change lane: mirrors, a quick sideways glance if needed, signal, and move only when it's clear.",
+    "Give way to cyclists when changing direction or lane: don't cut across them, including in cycle lanes.",
+    {
+      "text": "You MUST NOT drive or park in a cycle lane marked by a solid white line during its times of operation.",
+      "law": true
+    },
+    "In congested traffic don't change lanes unnecessarily. Merging in turn is only for very low speeds.",
+    {
+      "text": "In a one-way street, traffic MUST travel in the direction shown by the signs.",
+      "law": true
+    }
+  ],
+  "visual": {
+    "type": "table",
+    "caption": "Which lane to use (Highway Code rules 135–139 and 143)",
+    "data": {
+      "columns": [
+        "Road",
+        "Lane use",
+        "Rule"
+      ],
+      "rows": [
+        [
+          "Two-lane dual carriageway",
+          "Stay in the left lane; right lane to overtake or turn right",
+          "137"
+        ],
+        [
+          "Dual carriageway, 3+ lanes",
+          "Middle or right lanes to overtake, then back to the middle and the left",
+          "138"
+        ],
+        [
+          "Single carriageway, 3 lanes",
+          "Middle lane only to overtake or turn right; never the right lane",
+          "135"
+        ],
+        [
+          "Single carriageway, 4+ lanes",
+          "Only the lanes that signs or markings show",
+          "136"
+        ],
+        [
+          "One-way street",
+          "Left lane to go left, right lane to go right, best lane ahead",
+          "143"
+        ],
+        [
+          "Hill with a crawler lane",
+          "Use it if you are slow or others want to overtake",
+          "139"
+        ]
+      ],
+      "notes": [
+        "Signs and road markings take priority over these general rules."
+      ]
+    }
+  },
+  "confused": {
+    "a": {
+      "label": "Cycle lane: solid white line",
+      "points": [
+        "You MUST NOT drive or park in it during its times of operation",
+        "Times are shown on the signs"
+      ]
+    },
+    "b": {
+      "label": "Cycle lane: broken white line",
+      "points": [
+        "Don't drive or park in it unless it's unavoidable",
+        "Advice, not a MUST: but still give way to cyclists"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "On a three-lane single carriageway with no priority markings, how should your pupil use the middle lane?",
+      "options": [
+        "As a normal driving lane",
+        "Only for overtaking or turning right",
+        "Only when traffic in their direction is heavy",
+        "Never: it is reserved for emergency vehicles"
+      ],
+      "answerIndex": 1,
+      "why": "Rule 135: use the middle lane only for overtaking or turning right. You have no more right to it than a driver coming the other way, and don't use the right-hand lane."
+    },
+    {
+      "question": "After passing a lorry on a two-lane dual carriageway, a candidate stays in the right lane with the left lane clear. Where does DT1 record this?",
+      "options": [
+        "It isn't recorded: it's legal",
+        "Positioning: normal driving",
+        "Judgement: overtaking",
+        "Use of speed"
+      ],
+      "answerIndex": 1,
+      "why": "Rule 137: after overtaking, move back to the left-hand lane when it's safe. DT1 section 12 lists driving in the right-hand lane of a dual carriageway under Positioning: normal driving."
+    }
+  ],
+  "traps": [
+    "Where lanes are marked, keep to the middle of your lane: straddling lane markings is a lane discipline fault.",
+    "In slow-moving traffic, don't change to a lane on your left to overtake.",
+    "A bus or cycle lane outside its hours can be used: DT1 records not using it when allowed as a positioning fault.",
+    "Keep well to the left on right-hand bends: a better view and less risk from oncoming traffic."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 133–143, 151, 160, H3",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "DVSA: National standard for driving cars and light vans (category B)",
+      "ref": "Element 3.1.1 (Maintain a suitable position on the road)",
+      "url": "https://www.gov.uk/guidance/national-standard-for-driving-cars-and-light-vans-category-b"
+    },
+    {
+      "doc": "DVSA: Carrying out driving tests: examiner guidance (DT1)",
+      "ref": "11.11 Positioning; 12 Positioning (normal driving, lane discipline)",
+      "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-driving-tests-dt1/11-guide-to-assessment-and-marking"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

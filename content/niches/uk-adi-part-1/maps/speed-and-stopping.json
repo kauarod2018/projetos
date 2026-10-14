@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 1,
+  "id": "speed-and-stopping",
+  "niche": "uk-adi-part-1",
+  "area": "road-procedure",
+  "order": 7,
+  "tier": "basic",
+  "officialTopics": [
+    "hazards-and-speed"
+  ],
+  "title": "Speed Limits & Stopping Distances",
+  "whatItIs": "A speed limit is the absolute maximum, not a target. Drive at a speed that lets you stop well within the distance you can see to be clear.",
+  "keyFacts": [
+    {
+      "text": "You MUST NOT exceed the limit for the road or your vehicle. Roads with street lights: usually 30 mph (20 in Wales).",
+      "law": true
+    },
+    {
+      "text": "Cars MUST NOT exceed 60 mph on single carriageways, or 70 mph on dual carriageways and motorways.",
+      "law": true
+    },
+    {
+      "text": "Cars towing a caravan or trailer: 50 mph on single carriageways, 60 mph on dual carriageways and motorways.",
+      "law": true
+    },
+    "Overall stopping distance = thinking distance + braking distance. Never get closer than that.",
+    "Leave at least a two-second gap on fast roads: double it in the wet, up to ten times on ice.",
+    "Stopped in a tunnel? Leave at least a 5-metre gap to the vehicle in front."
+  ],
+  "visual": {
+    "type": "bar-scale",
+    "caption": "Typical stopping distances on a dry road (Highway Code rule 126)",
+    "data": {
+      "unit": "m",
+      "segments": [
+        "thinking",
+        "braking"
+      ],
+      "rows": [
+        {
+          "label": "20 mph",
+          "values": [
+            6,
+            6
+          ],
+          "total": 12,
+          "totalFeet": 40
+        },
+        {
+          "label": "30 mph",
+          "values": [
+            9,
+            14
+          ],
+          "total": 23,
+          "totalFeet": 75
+        },
+        {
+          "label": "40 mph",
+          "values": [
+            12,
+            24
+          ],
+          "total": 36,
+          "totalFeet": 118
+        },
+        {
+          "label": "50 mph",
+          "values": [
+            15,
+            38
+          ],
+          "total": 53,
+          "totalFeet": 175
+        },
+        {
+          "label": "60 mph",
+          "values": [
+            18,
+            55
+          ],
+          "total": 73,
+          "totalFeet": 240
+        },
+        {
+          "label": "70 mph",
+          "values": [
+            21,
+            75
+          ],
+          "total": 96,
+          "totalFeet": 315
+        }
+      ]
+    }
+  },
+  "confused": {
+    "a": {
+      "label": "Thinking distance",
+      "points": [
+        "9 m at 30 mph, 18 m at 60 mph: grows in step with speed",
+        "Depends on your attention"
+      ]
+    },
+    "b": {
+      "label": "Braking distance",
+      "points": [
+        "14 m at 30 mph, 55 m at 60 mph: grows much faster",
+        "Depends on the road surface, weather and the vehicle"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Your pupil is driving at 60 mph on a dry road. Using the Highway Code figures, what is the typical overall stopping distance?",
+      "options": [
+        "36 metres (118 feet)",
+        "53 metres (175 feet)",
+        "73 metres (240 feet)",
+        "96 metres (315 feet)"
+      ],
+      "answerIndex": 2,
+      "why": "Rule 126 diagram: at 60 mph, 18 m thinking + 55 m braking = 73 metres (240 feet), about eighteen car lengths."
+    },
+    {
+      "question": "What is the national speed limit for a car towing a caravan on a motorway?",
+      "options": [
+        "50 mph",
+        "56 mph",
+        "60 mph",
+        "70 mph"
+      ],
+      "answerIndex": 2,
+      "why": "Rule 124 table: cars towing caravans or trailers are limited to 50 mph on single carriageways and 60 mph on dual carriageways and motorways."
+    }
+  ],
+  "traps": [
+    "Limits aren't targets: DT1 says slowing for narrow or busy streets should not be marked as a fault.",
+    "Too slow is a fault too: DT1 records holding up following traffic under Progress.",
+    "Double the speed is far more than double the distance: 30 mph is 23 m, but 60 mph is 73 m.",
+    "ABS helps you keep steering control, but don't assume it stops you in a shorter distance."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 120, 124–126, 227, 230",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "The Highway Code: Typical stopping distances (diagram, rule 126)",
+      "ref": "Typical stopping distances (PDF)",
+      "url": "https://assets.publishing.service.gov.uk/media/65f97642aa9b760011fbda4e/the-highway-code-stopping-distances.pdf"
+    },
+    {
+      "doc": "GOV.UK: Speed limits",
+      "ref": "National speed limits; speed limit tables",
+      "url": "https://www.gov.uk/speed-limits"
+    },
+    {
+      "doc": "DVSA: National standard for driving cars and light vans (category B)",
+      "ref": "Element 4.2.1 (5 m gap in tunnels); Element 4.2.2 (stop in the distance you can see to be clear)",
+      "url": "https://www.gov.uk/guidance/national-standard-for-driving-cars-and-light-vans-category-b"
+    },
+    {
+      "doc": "DVSA: Carrying out driving tests: examiner guidance (DT1)",
+      "ref": "11.11 Use of speed, Progress; 12 Progress",
+      "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-driving-tests-dt1/11-guide-to-assessment-and-marking"
+    }
+  ],
+  "jurisdictionNotes": [
+    {
+      "jurisdiction": "wales",
+      "text": "Roads with street lights in Wales generally have a 20 mph limit (30 mph in England and Scotland), unless signs show otherwise."
+    }
+  ],
+  "review": {
+    "status": "draft"
+  }
+}

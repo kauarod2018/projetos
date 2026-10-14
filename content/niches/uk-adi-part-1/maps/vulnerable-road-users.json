@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "id": "vulnerable-road-users",
+  "niche": "uk-adi-part-1",
+  "area": "road-procedure",
+  "order": 9,
+  "tier": "basic",
+  "officialTopics": [
+    "vulnerable-road-users"
+  ],
+  "title": "Hierarchy of Road Users & Vulnerable Users",
+  "whatItIs": "The hierarchy puts those most at risk in a collision at the top. Those who can cause the greatest harm carry the greatest responsibility to reduce danger.",
+  "keyFacts": [
+    "Most at risk: pedestrians, cyclists, horse riders and motorcyclists; children, older and disabled people even more.",
+    "H1: drivers of vehicles that can cause the greatest harm bear the greatest responsibility to take care.",
+    "H2: at a junction, give way to pedestrians crossing or waiting to cross the road you turn into or out of.",
+    {
+      "text": "You MUST give way to pedestrians on a zebra crossing, and to pedestrians and cyclists on a parallel crossing.",
+      "law": true
+    },
+    "H3: don't cut across cyclists, horse riders or horse-drawn vehicles going ahead when you turn or change lane.",
+    {
+      "text": "You MUST stop when a school crossing patrol shows a 'Stop for children' sign.",
+      "law": true
+    }
+  ],
+  "visual": {
+    "type": "stats",
+    "caption": "Numbers that protect vulnerable road users (rules 207, 215, 220)",
+    "items": [
+      {
+        "value": "40 mph",
+        "label": "Will probably kill any pedestrian it hits"
+      },
+      {
+        "value": "20 mph",
+        "label": "Only a 1 in 20 chance the pedestrian is killed"
+      },
+      {
+        "value": "10 mph",
+        "label": "Maximum speed when you see a horse on the road"
+      },
+      {
+        "value": "8 mph",
+        "label": "Top speed of powered wheelchairs and scooters"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Pedestrian waiting at a zebra",
+      "points": [
+        "You should give way (advice)",
+        "Be ready to slow down or stop"
+      ]
+    },
+    "b": {
+      "label": "Pedestrian on a zebra",
+      "points": [
+        "You MUST give way (law)",
+        "Don't wave, flash or sound the horn to invite them"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Your pupil is turning left. A cyclist is going straight ahead in a cycle lane alongside the car. What should the pupil do?",
+      "options": [
+        "Turn ahead of the cyclist, signalling clearly",
+        "Wait for the cyclist to pass the junction",
+        "Sound the horn and then turn",
+        "Speed up to get clear of the cyclist first"
+      ],
+      "answerIndex": 1,
+      "why": "Rule H3: don't cut across cyclists going ahead when turning, whether in a cycle lane, a cycle track or on the road. Don't turn if they would have to stop or swerve."
+    },
+    {
+      "question": "A pedestrian waiting to cross is carrying a white cane with a red band. What does this tell you?",
+      "options": [
+        "They are partially sighted only",
+        "They may be deafblind",
+        "They are training a guide dog",
+        "They have a walking difficulty"
+      ],
+      "answerIndex": 1,
+      "why": "Rule 207: deafblind people may carry a white cane with a red band or use a dog with a red and white harness. They may not see or hear instructions or signals."
+    }
+  ],
+  "traps": [
+    "The hierarchy doesn't remove anyone's duty: every road user must still behave responsibly.",
+    "Pedestrians who have started to cross at a junction have priority: wait, whether turning left or right.",
+    "Cyclists may ride in the centre of the lane, or two abreast, on narrow or quiet roads: allow it.",
+    "Turning right across queuing traffic? Look for cyclists or motorcyclists on the inside."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Introduction: Hierarchy of road users, rules H1–H3; rules 170, 195, 204–215, 220",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "DVSA: National standard for driving cars and light vans (category B)",
+      "ref": "Element 4.1.2 (Co-operate with other road users); Element 4.2.1",
+      "url": "https://www.gov.uk/guidance/national-standard-for-driving-cars-and-light-vans-category-b"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}
