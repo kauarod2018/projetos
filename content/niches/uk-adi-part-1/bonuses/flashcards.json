@@ -44,6 +44,8 @@
     }
   ],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Know Your Traffic Signs meanings in signs.json; verified numbers table"
   }
 }

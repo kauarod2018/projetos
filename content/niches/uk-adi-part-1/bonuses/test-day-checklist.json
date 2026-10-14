@@ -83,6 +83,8 @@
     }
   ],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "GOV.UK ADI part 1 test: what to take, arriving, both parts, reading difficulties (14 Oct 2026)"
   }
 }

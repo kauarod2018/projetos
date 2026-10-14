@@ -39,6 +39,8 @@
     }
   ],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Built from the verified maps; GOV.UK ADI part 1 test"
   }
 }

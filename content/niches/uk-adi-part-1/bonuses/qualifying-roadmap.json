@@ -36,7 +36,7 @@
             },
             {
               "title": "ADI part 3: instructional ability (£111)",
-              "text": "A lesson with a real pupil, marked against 17 competences."
+              "text": "A client-centred lesson with one of your pupils, about 45 minutes, marked on 17 areas of competence."
             },
             {
               "title": "Register (£300)",
@@ -138,6 +138,8 @@
     }
   ],
   "review": {
-    "status": "draft"
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "GOV.UK ADI part 1 test; Become a car driving instructor; ADI part 3 test (14 Oct 2026)"
   }
 }
