@@ -104,39 +104,29 @@
   ],
   "sources": [
     {
-      "doc": "GOV.UK: Approved driving instructor (ADI) standards check",
-      "ref": "Overview; Book; What to take; What happens at the standards check; Your standards check result; Complain",
+      "doc": "GOV.UK: ADI standards check",
+      "ref": "Overview; What to take; What happens; Result; Complain",
       "url": "https://www.gov.uk/adi-standards-check"
     },
     {
-      "doc": "GOV.UK: Approved driving instructor (ADI) part 3 test",
-      "ref": "Booking your test; What to take; What happens during the test; Your test result",
+      "doc": "GOV.UK: ADI part 3 test",
+      "ref": "Booking; What to take; What happens; Result",
       "url": "https://www.gov.uk/adi-part-3-test"
     },
     {
-      "doc": "DVSA: Carrying out instructor tests and checks (examiner guidance)",
-      "ref": "3.12 Completing the assessment (scores 0-3, maximum 51)",
-      "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-instructor-tests-and-checks/3-the-instructional-ability-test-part-3"
-    },
-    {
-      "doc": "DVSA: Carrying out instructor tests and checks (examiner guidance)",
-      "ref": "4.5 Format; 4.10 Completing the assessment",
-      "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-instructor-tests-and-checks/4-the-test-of-continued-ability-to-instruct-standards-check"
+      "doc": "DVSA examiner guidance: instructor tests and checks",
+      "ref": "3.12; 4.5; 4.10",
+      "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-instructor-tests-and-checks"
     },
     {
       "doc": "GOV.UK: Manage your ADI registration",
-      "ref": "Renew or update your registration (display in the windscreen)",
+      "ref": "Renew or update your registration",
       "url": "https://www.gov.uk/manage-approved-driving-instructor-registration"
     },
     {
-      "doc": "Road Traffic Act 1988",
-      "ref": "s.123(2) certificate exhibited for paid instruction; s.125(5)(a)(i) test of continued ability; s.128(2)(c)-(d) removal",
+      "doc": "Road Traffic Act 1988; SI 2005/1902",
+      "ref": "ss.123(2), 125(5)(a), 128(2); reg 20 (windscreen)",
       "url": "https://www.legislation.gov.uk/ukpga/1988/52/part/V"
-    },
-    {
-      "doc": "Motor Cars (Driving Instruction) Regulations 2005",
-      "ref": "Reg 20: certificate fixed behind the front windscreen on its nearside edge",
-      "url": "https://www.legislation.gov.uk/uksi/2005/1902/regulation/20"
     }
   ],
   "jurisdictionNotes": [],
