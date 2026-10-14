@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "id": "signs-and-signals",
+  "niche": "uk-cscs-test",
+  "number": 1,
+  "title": "Safety Signs & Signals Cheat Sheet",
+  "summary": "Every kind of safety sign by shape and colour, plus the hand and acoustic signals, on two pages.",
+  "kind": "document",
+  "pages": [
+    {
+      "heading": "Safety signs: shape and colour tell you the type",
+      "blocks": [
+        {
+          "type": "lead",
+          "text": "You can tell what a safety sign means from its shape and colour before you read it. Learn the five kinds and the test questions on signs become easy."
+        },
+        {
+          "type": "table",
+          "title": "The five kinds of safety sign",
+          "data": {
+            "columns": [
+              "Kind",
+              "Shape and colour",
+              "What it tells you",
+              "Example"
+            ],
+            "rows": [
+              [
+                "Prohibition",
+                "Red circle and diagonal bar, black pictogram on white",
+                "You must not do it",
+                "No smoking"
+              ],
+              [
+                "Warning",
+                "Yellow triangle, black edge and black pictogram",
+                "Be careful: there's a hazard",
+                "Danger: electricity"
+              ],
+              [
+                "Mandatory",
+                "Blue circle, white pictogram",
+                "You must do it",
+                "Safety helmet must be worn"
+              ],
+              [
+                "Escape and first aid",
+                "Green rectangle or square, white pictogram",
+                "Exits, escape routes, first aid",
+                "Fire exit"
+              ],
+              [
+                "Fire-fighting",
+                "Red rectangle or square, white pictogram",
+                "Where fire-fighting equipment is",
+                "Fire extinguisher"
+              ]
+            ],
+            "notes": [
+              "Prohibition: red is at least 35% of the sign. Warning, mandatory, escape and fire signs: the colour is at least 50%."
+            ]
+          }
+        },
+        {
+          "type": "facts",
+          "title": "Rules to remember",
+          "items": [
+            {
+              "text": "Employers MUST provide and maintain safety signs where a risk can't be avoided or reduced in other ways.",
+              "law": true
+            },
+            "Words can be added to a sign, but a fire safety sign with words only isn't acceptable.",
+            "Obstacles and drops: yellow and black, or red and white, stripes at about 45°.",
+            "Vehicle routes: clearly visible lines, preferably white or yellow."
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "Quick memory aid",
+          "text": "Red circle = don't. Yellow triangle = watch out. Blue circle = do. Green = safe way out or first aid. Red rectangle = fire equipment."
+        }
+      ]
+    },
+    {
+      "heading": "Hand signals and acoustic signals",
+      "blocks": [
+        {
+          "type": "table",
+          "title": "Standard hand signals",
+          "data": {
+            "columns": [
+              "Signal",
+              "How it's given"
+            ],
+            "rows": [
+              [
+                "START",
+                "Both arms out horizontally, palms forward"
+              ],
+              [
+                "STOP",
+                "Right arm pointing up, palm forward"
+              ],
+              [
+                "END",
+                "Both hands clasped at chest height"
+              ],
+              [
+                "RAISE",
+                "Right arm up, palm forward, slowly circling"
+              ],
+              [
+                "LOWER",
+                "Right arm down, palm in, slowly circling"
+              ],
+              [
+                "DANGER (emergency stop)",
+                "Both arms pointing up, palms forward"
+              ]
+            ],
+            "notes": [
+              "Hand signals from recognised codes (eg BS 7121 for cranes) may be used instead."
+            ]
+          }
+        },
+        {
+          "type": "facts",
+          "title": "The signaller and the operator",
+          "items": [
+            {
+              "text": "The signaller MUST be able to see all the manoeuvres without being put in danger.",
+              "law": true
+            },
+            {
+              "text": "The signaller's duties MUST be only directing the manoeuvre and keeping nearby workers safe.",
+              "law": true
+            },
+            {
+              "text": "An operator who can't carry on safely MUST stop and ask the signaller for new instructions.",
+              "law": true
+            },
+            {
+              "text": "The acoustic signal for evacuation MUST be continuous.",
+              "law": true
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "doc": "Health and Safety (Safety Signs and Signals) Regulations 1996",
+      "ref": "Regulation 4; Schedule 1",
+      "url": "https://www.legislation.gov.uk/uksi/1996/341/contents"
+    },
+    {
+      "doc": "HSE L64 Safety signs and signals",
+      "ref": "Table 1; paragraphs 45–48, 79, 87–96, 106",
+      "url": "https://www.hse.gov.uk/pubns/priced/l64.pdf"
+    }
+  ],
+  "review": {
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Safety Signs and Signals Regs 1996 reg 4 and Schedule 1; HSE L64"
+  }
+}

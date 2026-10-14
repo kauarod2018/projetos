@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "id": "test-day-checklist",
+  "niche": "uk-cscs-test",
+  "number": 4,
+  "title": "Test Day Checklist",
+  "summary": "How to book, what to bring, how the test works and what to keep after it.",
+  "kind": "document",
+  "pages": [
+    {
+      "heading": "Booking the test",
+      "blocks": [
+        {
+          "type": "lead",
+          "text": "The CITB health, safety and environment test for operatives is the test for general site workers and a key part of getting a CSCS card. You book it online or by phone, and take it at a test centre."
+        },
+        {
+          "type": "checklist",
+          "span": 1,
+          "title": "Have this ready when you book",
+          "items": [
+            "Your personal email address, for the confirmation.",
+            "Your full UK postal address.",
+            "The type of test: Operatives.",
+            "The test centre you want.",
+            "Your CITB registration number, if you've taken a test before or applied for a card.",
+            "A debit or credit card (or a CITB voucher)."
+          ]
+        },
+        {
+          "type": "facts",
+          "span": 1,
+          "title": "Cost and changes",
+          "items": [
+            "The test costs £23.50.",
+            "Online: reschedule free up to 72 hours before the test.",
+            "Online: cancel at least 72 hours before for a full refund.",
+            "By phone: £5 to reschedule; cancelling costs a £10 fee.",
+            "No changes are possible within 72 hours of the test."
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "title": "See the screens first",
+          "text": "CITB has a free demo test that shows the question styles. It isn't scored, but it helps you get used to how the test looks."
+        }
+      ]
+    },
+    {
+      "heading": "On the day",
+      "blocks": [
+        {
+          "type": "stat-row",
+          "items": [
+            {
+              "value": "50",
+              "label": "questions"
+            },
+            {
+              "value": "45 min",
+              "label": "to answer them"
+            },
+            {
+              "value": "45/50",
+              "label": "correct to pass"
+            },
+            {
+              "value": "90%",
+              "label": "pass mark"
+            }
+          ]
+        },
+        {
+          "type": "checklist",
+          "span": 1,
+          "title": "Before you go in",
+          "items": [
+            "Arrive at least 15 minutes before your test starts.",
+            "Bring your booking confirmation email or letter.",
+            "Bring ID with your photo and signature.",
+            "Under 16? Bring a completed parental consent form too."
+          ]
+        },
+        {
+          "type": "checklist",
+          "span": 1,
+          "title": "After the test",
+          "items": [
+            "Keep your score report safe: it has information you need for your card application.",
+            "Use your maps to go back over any topic you found hard."
+          ]
+        },
+        {
+          "type": "facts",
+          "title": "What the operatives test covers",
+          "items": [
+            "Working environment",
+            "Occupational health",
+            "Safety",
+            "High risk activities",
+            "Specialist"
+          ]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "doc": "CITB: Operatives test",
+      "ref": "About the test; Structure of the tests; Demo test",
+      "url": "https://www.citb.co.uk/courses-tests/health-safety-and-environment-hse-test/operatives-test"
+    },
+    {
+      "doc": "CITB: About the HS&E test",
+      "ref": "Cost; Cancelling or rescheduling a test",
+      "url": "https://www.citb.co.uk/courses-tests/health-safety-and-environment-hse-test/about-the-health-safety-and-environment-hse-test"
+    },
+    {
+      "doc": "CITB: Booking your HS&E test",
+      "ref": "Information you need; What to do on the day",
+      "url": "https://www.citb.co.uk/courses-tests/health-safety-and-environment-hse-test/booking-your-hse-test"
+    }
+  ],
+  "review": {
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "CITB Operatives test, About the HS&E test and Booking your HS&E test pages, 14 Oct 2026"
+  }
+}

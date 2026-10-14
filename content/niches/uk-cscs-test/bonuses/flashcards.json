@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "flashcards",
+  "niche": "uk-cscs-test",
+  "number": 5,
+  "title": "Flashcards: Numbers to Know",
+  "summary": "Print-and-cut cards (double-sided A4) plus a phone version to test yourself on every number.",
+  "kind": "flashcards",
+  "flashcards": {
+    "signs": false,
+    "numbers": true
+  },
+  "sources": [
+    {
+      "doc": "Numbers table",
+      "ref": "Every verified number, with its source",
+      "url": "https://www.legislation.gov.uk/"
+    }
+  ],
+  "review": {
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Every card from the verified numbers table"
+  }
+}

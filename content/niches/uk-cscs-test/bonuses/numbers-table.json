@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "id": "numbers-table",
+  "niche": "uk-cscs-test",
+  "number": 2,
+  "title": "Numbers Table",
+  "summary": "Every deadline, height, interval and threshold you need for the CSCS test, in one table.",
+  "kind": "document",
+  "pages": [
+    {
+      "heading": "The test, records and reporting",
+      "blocks": [
+        {
+          "type": "numbers-table",
+          "title": "Paperwork, reporting and people",
+          "keys": [
+            "test-format",
+            "test-cost",
+            "riddor-deadlines",
+            "riddor-records",
+            "cdm-notification",
+            "written-records",
+            "first-aid-provision",
+            "waste-records"
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "On site",
+      "blocks": [
+        {
+          "type": "numbers-table",
+          "title": "Heights, inspections and safety checks",
+          "keys": [
+            "guard-rails",
+            "platform-inspection",
+            "excavation-inspection",
+            "ladder-rules",
+            "loler-examination",
+            "site-electrics",
+            "overhead-lines",
+            "noise-values",
+            "vibration-values",
+            "fire-watch",
+            "sign-colours"
+          ]
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "doc": "Legislation (legislation.gov.uk)",
+      "ref": "RIDDOR 2013; CDM 2015; Work at Height Regs 2005; LOLER 1998; HSWA 1974; MHSWR 1999",
+      "url": "https://www.legislation.gov.uk/"
+    },
+    {
+      "doc": "HSE guidance",
+      "ref": "INDG214; HSG168; L64; ladders guide",
+      "url": "https://www.hse.gov.uk/"
+    },
+    {
+      "doc": "CITB",
+      "ref": "Operatives test; About the HS&E test",
+      "url": "https://www.citb.co.uk/courses-tests/health-safety-and-environment-hse-test/operatives-test"
+    }
+  ],
+  "review": {
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Every row from the verified numbers table (legislation, HSE guidance, CITB)"
+  }
+}

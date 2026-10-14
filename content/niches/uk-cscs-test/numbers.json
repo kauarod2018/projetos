@@ -281,6 +281,83 @@
         "checkedAgainst": "HSE ladders guide (updated 5 June 2024)"
       },
       "jurisdiction": "great-britain"
+    },
+    {
+      "key": "noise-values",
+      "label": "Noise at work",
+      "value": "80 dB(A): assess and offer protectors · 85 dB(A): reduce noise, protectors must be worn, hearing protection zones · 87 dB(A): limit",
+      "sources": [
+        {
+          "doc": "Control of Noise at Work Regulations 2005 (SI 2005/1643)",
+          "ref": "Regulations 4–7",
+          "url": "https://www.legislation.gov.uk/uksi/2005/1643/regulation/4"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "Noise Regs 2005 regs 4(1)–(3), 5–7"
+      },
+      "jurisdiction": "great-britain"
+    },
+    {
+      "key": "vibration-values",
+      "label": "Hand-arm vibration",
+      "value": "Exposure action value 2.5 m/s² A(8) · exposure limit value 5 m/s² A(8)",
+      "sources": [
+        {
+          "doc": "Control of Vibration at Work Regulations 2005 (SI 2005/1093)",
+          "ref": "Regulation 4(1)",
+          "url": "https://www.legislation.gov.uk/uksi/2005/1093/regulation/4"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "Vibration Regs 2005 reg 4(1)"
+      },
+      "jurisdiction": "great-britain"
+    },
+    {
+      "key": "site-electrics",
+      "label": "Site electrics",
+      "value": "110 V centre-tapped to earth: no more than 55 V to earth · RCD on 230 V: trips at 30 mA or less, checked daily with its test button",
+      "sources": [
+        {
+          "doc": "HSE HSG150 Health and safety in construction",
+          "ref": "Paragraphs 479–481",
+          "url": "https://www.hse.gov.uk/pubns/priced/hsg150.pdf"
+        },
+        {
+          "doc": "HSE INDG231 Electrical safety and you",
+          "ref": "Provide a safety device",
+          "url": "https://www.hse.gov.uk/pubns/indg231.pdf"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "HSE HSG150 paras 479–481; INDG231"
+      },
+      "jurisdiction": "great-britain"
+    },
+    {
+      "key": "overhead-lines",
+      "label": "Overhead power lines",
+      "value": "Plan the work if it's within 10 m of the line · barriers mark a safety zone 6 m either side of the nearest wire",
+      "sources": [
+        {
+          "doc": "HSE GS6 Avoiding danger from overhead power lines",
+          "ref": "Paragraphs 11 and 19",
+          "url": "https://www.hse.gov.uk/pubns/gs6.pdf"
+        }
+      ],
+      "review": {
+        "status": "verified",
+        "checkedOn": "2026-10-14",
+        "checkedAgainst": "HSE GS6 (4th edition) paras 11, 19"
+      },
+      "jurisdiction": "great-britain"
     }
   ]
 }

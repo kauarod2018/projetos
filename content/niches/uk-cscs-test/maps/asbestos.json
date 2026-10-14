@@ -100,7 +100,7 @@
   "sources": [
     {
       "doc": "HSE: A worker's guide to asbestos safety",
-      "ref": "Why asbestos is dangerous; If you think you have found asbestos; What your employer must do; Licensed work; What you must do",
+      "ref": "Why dangerous; If you find asbestos; Employer duties; Licensed work",
       "url": "https://www.hse.gov.uk/asbestos/workers.htm"
     },
     {
@@ -115,12 +115,12 @@
     },
     {
       "doc": "HSE: Asbestos essentials task sheets",
-      "ref": "A9, A10, A16 (non-licensed asbestos cement work)",
+      "ref": "A9, A10, A16",
       "url": "https://www.hse.gov.uk/asbestos/essentials/index.htm"
     },
     {
-      "doc": "HSE Asbestos essentials EM1: What to do if you discover or accidentally disturb asbestos",
-      "ref": "Unexpected discovery of asbestos",
+      "doc": "HSE Asbestos essentials sheet EM1",
+      "ref": "Unexpected discovery",
       "url": "https://www.hse.gov.uk/pubns/guidance/em1.pdf"
     }
   ],

@@ -35,7 +35,7 @@
   },
   "areas": {
     "eyebrow": "What's covered",
-    "title": "4 areas of the operatives test",
+    "title": "4 areas, one page per topic",
     "text": "Every map is checked against HSE guidance or the law, and the source is printed on the page."
   },
   "lookInside": {
@@ -73,7 +73,9 @@
       "asbestos",
       "excavations"
     ],
-    "bonuses": []
+    "bonuses": [
+      "signs-and-signals"
+    ]
   },
   "strategic": {
     "eyebrow": "Strategic content",
@@ -145,7 +147,7 @@
       "desc": "{basicMaps} essential maps covering all 4 areas",
       "features": [
         "{basicMaps} essential A4 maps",
-        "All 4 areas of the test",
+        "All 4 areas of the maps",
         "Print or use on your phone"
       ],
       "missingTitle": "Basic version. Only Complete includes:",
@@ -179,7 +181,7 @@
     "items": [
       {
         "q": "Which test is it for?",
-        "a": "The CITB health, safety and environment (HS&E) test for operatives, the one most people take to get a CSCS card in Great Britain. It is not for the managers and professionals test."
+        "a": "The CITB health, safety and environment (HS&E) test for operatives: the CITB test for general site workers, and a key part of getting a CSCS card. It is not for the managers and professionals test."
       },
       {
         "q": "Is it up to date?",

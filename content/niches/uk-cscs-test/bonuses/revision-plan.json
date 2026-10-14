@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "revision-plan",
+  "niche": "uk-cscs-test",
+  "number": 3,
+  "title": "21-Day Revision Plan",
+  "summary": "A day-by-day schedule through every map, with review days and a practice test before the big day.",
+  "kind": "document",
+  "pages": [
+    {
+      "heading": "Your 21-day plan",
+      "blocks": [
+        {
+          "type": "lead",
+          "text": "About 20–30 minutes a day. Study the maps listed for the day, cover the answers and try the test questions. Review days go back over the traps."
+        },
+        {
+          "type": "revision-plan",
+          "title": "Day by day",
+          "days": 21
+        }
+      ]
+    },
+    {
+      "heading": "Map index",
+      "blocks": [
+        {
+          "type": "map-index",
+          "title": "Every map by code"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "doc": "CITB: Prepare for the test",
+      "ref": "HS&E revision materials",
+      "url": "https://www.citb.co.uk/courses-tests/health-safety-and-environment-hse-test/prepare-for-the-test"
+    }
+  ],
+  "review": {
+    "status": "verified",
+    "checkedOn": "2026-10-14",
+    "checkedAgainst": "Built from the verified maps; CITB Prepare for the test"
+  }
+}
