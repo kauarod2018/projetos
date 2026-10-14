@@ -9,65 +9,61 @@
     "road-procedure"
   ],
   "title": "Overtaking & Being Overtaken",
-  "whatItIs": "Overtake only when it's safe and legal, give vulnerable road users at least as much room as a car, and never obstruct someone who is overtaking you.",
+  "whatItIs": "Overtake only when safe and legal, give vulnerable road users at least as much room as a car, and never obstruct someone overtaking you.",
   "keyFacts": [
-    "Before overtaking, check the road ahead is clear, nobody is starting to overtake you and there's a gap to return to.",
-    "Mirrors, signal, a quick glance into the blind spot, then move out. Pass quickly and don't cut in.",
+    "Before overtaking: road clear ahead, nobody overtaking you, and a gap to return to.",
+    "Mirrors, signal, blind-spot glance, then move out. Pass quickly; don't cut in.",
     {
-      "text": "You MUST NOT overtake if you would cross or straddle double white lines with the solid line nearest you.",
+      "text": "You MUST NOT overtake across double white lines with the solid line nearest you.",
       "law": true
     },
     {
-      "text": "You MUST NOT overtake after a 'No Overtaking' sign, or the vehicle nearest a pedestrian crossing.",
+      "text": "You MUST NOT overtake after a 'No Overtaking' sign, or the vehicle nearest a crossing.",
       "law": true
     },
-    "Overtake on the left only if the vehicle in front is signalling to turn right and there's room.",
-    "Being overtaken: keep a steady course and speed. If they cut in, drop back to a two-second gap."
+    "Overtake on the left only if the vehicle ahead is signalling right and there's room.",
+    "Being overtaken: steady course and speed; if they cut in, drop back to a two-second gap."
   ],
   "visual": {
     "type": "stats",
-    "caption": "Guide clearances (rule 163): if you can't give them, wait behind",
+    "caption": "Guide clearances (rule 163): if you can't give them, wait",
     "items": [
       {
         "value": "1.5 m",
-        "label": "Overtaking cyclists at up to 30 mph",
-        "note": "Give more space at higher speeds"
+        "label": "Cyclists, at up to 30 mph",
+        "note": "More at higher speeds"
       },
       {
         "value": "2 m",
-        "label": "Horse riders and horse-drawn vehicles",
-        "note": "Pass at under 10 mph"
+        "label": "Horse riders, under 10 mph"
       },
       {
         "value": "2 m",
-        "label": "Pedestrians walking in the road",
-        "note": "Keep to a low speed"
+        "label": "Pedestrians in the road"
       }
     ]
   },
   "confused": {
     "a": {
-      "label": "Law: MUST NOT overtake (rule 165)",
+      "label": "MUST NOT overtake (165)",
       "points": [
-        "Double white lines with the solid line nearest you",
-        "Into a bus, tram or cycle lane during its hours",
-        "After a 'No Overtaking' sign, until the end sign",
-        "Into a hatched area bordered by a solid white line"
+        "Double white lines, solid line nearest you",
+        "Into a bus, tram or cycle lane in its hours",
+        "After a 'No Overtaking' sign"
       ]
     },
     "b": {
-      "label": "Advice: do not overtake (166–167)",
+      "label": "Do not overtake (166–167)",
       "points": [
-        "Approaching a bend, hump bridge or brow of a hill",
-        "At or approaching a junction on either side",
-        "When a road user is signalling right",
-        "Where you would force someone to swerve or slow"
+        "Approaching a bend, hump bridge or brow",
+        "At or approaching a junction",
+        "When a road user is signalling right"
       ]
     }
   },
   "onTheTest": [
     {
-      "question": "Your pupil is following a cyclist on a 30 mph road. As a guide, what is the minimum space to leave when overtaking?",
+      "question": "Your pupil is behind a cyclist on a 30 mph road. As a guide, the minimum space when overtaking is:",
       "options": [
         "0.5 metres",
         "1 metre",
@@ -75,40 +71,40 @@
         "2 metres"
       ],
       "answerIndex": 2,
-      "why": "Rule 163: leave at least 1.5 metres when overtaking cyclists at speeds of up to 30 mph, and more at higher speeds. If you can't, wait behind."
+      "why": "Rule 163: leave at least 1.5 m when overtaking cyclists at up to 30 mph, and more at higher speeds. If you can't, wait behind."
     },
     {
-      "question": "Double white lines are solid on your side. A horse rider ahead is going at 8 mph and the road is clear. What does the Highway Code allow?",
+      "question": "Solid double white lines on your side; a horse rider ahead at 8 mph; road clear. May you cross to pass?",
       "options": [
-        "You may never cross a solid white line",
-        "You may cross the lines to pass, if it's safe",
-        "You may cross only if the rider waves you on",
-        "You may cross only on a straight road"
+        "Never",
+        "Yes, if safe",
+        "Only if waved on",
+        "Only on a straight"
       ],
       "answerIndex": 1,
-      "why": "Rule 129: you may cross to overtake a pedal cycle, horse or road maintenance vehicle at 10 mph or less, if the road is clear. Pass wide and slow: at least 2 m (rule 215)."
+      "why": "Rule 129: you may cross to pass a cycle, horse or road works vehicle at 10 mph or less. Pass wide and slow (rule 215)."
     }
   ],
   "traps": [
-    "Don't just follow a vehicle that is overtaking: there may only be room for one.",
-    "A right signal ahead that 'should have been cancelled'? Don't overtake: wait for it to be cancelled.",
-    "Cutting in after overtaking is a DT1 judgement fault: move back left as soon as you can, but don't cut in.",
-    "Large vehicles: drop back to see ahead and so the driver can see you in their mirrors."
+    "Don't follow a vehicle that is overtaking: there may be room for only one.",
+    "A right signal that 'should have been cancelled'? Wait: don't overtake.",
+    "Cutting in after overtaking is a DT1 judgement fault.",
+    "Large vehicles: drop back to see ahead and so the driver can see you."
   ],
   "sources": [
     {
       "doc": "The Highway Code",
-      "ref": "Rules 129, 162–169, 215",
+      "ref": "Rules 129, 162–168, 215",
       "url": "https://www.gov.uk/guidance/the-highway-code"
     },
     {
       "doc": "DVSA: National standard for driving cars and light vans (category B)",
-      "ref": "Element 3.1.1 (overtake legally, safely and responsibly); Element 4.1.2 (Co-operate with other road users)",
+      "ref": "Element 3.1.1",
       "url": "https://www.gov.uk/guidance/national-standard-for-driving-cars-and-light-vans-category-b"
     },
     {
       "doc": "DVSA: Carrying out driving tests: examiner guidance (DT1)",
-      "ref": "11.11 Judgement; 12 Judgement (overtaking)",
+      "ref": "11.11, 12 Judgement",
       "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-driving-tests-dt1/11-guide-to-assessment-and-marking"
     }
   ],

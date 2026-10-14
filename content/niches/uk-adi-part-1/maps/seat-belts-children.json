@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "id": "seat-belts-children",
+  "niche": "uk-adi-part-1",
+  "area": "test-disabilities-law",
+  "order": 9,
+  "tier": "complete",
+  "officialTopics": [
+    "law"
+  ],
+  "title": "Seat Belts & Child Restraints",
+  "whatItIs": "Seat belts must be worn where fitted. The driver is responsible for every child under 14; passengers aged 14 and over are responsible for themselves.",
+  "keyFacts": [
+    {
+      "text": "You MUST wear a seat belt in a car if one is fitted, unless you are exempt.",
+      "law": true
+    },
+    {
+      "text": "The driver MUST make sure every child under 14 is properly belted or restrained.",
+      "law": true
+    },
+    {
+      "text": "Under 1.35 m: a child restraint suitable for the child's weight MUST be used.",
+      "law": true
+    },
+    {
+      "text": "A rear-facing baby seat MUST NOT be fitted in a seat protected by an active frontal airbag.",
+      "law": true
+    },
+    "No seat belt, or a child under 14 not properly restrained: fine of up to £500."
+  ],
+  "visual": {
+    "type": "table",
+    "caption": "Who must use what, and who is responsible (Rule 99)",
+    "data": {
+      "columns": [
+        "Who",
+        "Must use",
+        "Responsible"
+      ],
+      "rows": [
+        [
+          "Child up to 1.35 m or 12th birthday (first reached)",
+          "Correct child restraint",
+          "Driver"
+        ],
+        [
+          "Child 12 or 13, or over 1.35 m",
+          "Seat belt",
+          "Driver"
+        ],
+        [
+          "Passenger aged 14 or over",
+          "Seat belt",
+          "Passenger"
+        ]
+      ],
+      "notes": []
+    }
+  },
+  "confused": {
+    "a": {
+      "label": "Candidate on test",
+      "points": [
+        "Must wear the belt unless medically exempt",
+        "May take it off for a manoeuvre that includes reversing"
+      ]
+    },
+    "b": {
+      "label": "ADI in the back on test",
+      "points": [
+        "Must wear a rear seat belt",
+        "Refuses? Cannot accompany, even with an exemption certificate"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "You are driving your 10-year-old, who is 1.30 m tall, in the back of your car. What does the law require?",
+      "options": [
+        "An adult seat belt is enough",
+        "Nothing, as rear seats are exempt",
+        "A child restraint only if they sit in the front",
+        "The correct child restraint for their weight"
+      ],
+      "answerIndex": 3,
+      "why": "Rule 100: a child under 1.35 m must use a baby seat, child seat, booster seat or booster cushion suitable for their weight. The driver is responsible."
+    },
+    {
+      "question": "You want to sit in the back during your pupil's test but refuse to wear the rear seat belt. What happens?",
+      "options": [
+        "You cannot accompany the test; if you won't leave, it is ended",
+        "You can stay if you hold a seat belt exemption certificate",
+        "The examiner records a fault against your pupil",
+        "You can stay, as only front seat belts are compulsory"
+      ],
+      "answerIndex": 0,
+      "why": "DT1 6.29: a rear-seat passenger who refuses a seat belt, even with an exemption certificate, cannot accompany the test. If they refuse to leave, the test is terminated."
+    }
+  ],
+  "traps": [
+    "A driver who is reversing, or supervising a learner who is reversing, does not need a seat belt.",
+    "Height-based child seats must face backwards until the child is over 15 months old.",
+    "Unexpected, necessary, short journey with no child seat: a child aged 3 or over can use an adult belt.",
+    "Deactivate front airbags before fitting a rear-facing baby seat in a front seat."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 99 to 101",
+      "url": "https://www.gov.uk/guidance/the-highway-code/rules-for-drivers-and-motorcyclists-89-to-102"
+    },
+    {
+      "doc": "GOV.UK: Seat belts: the law",
+      "ref": "Overview; When you do not need to wear a seat belt",
+      "url": "https://www.gov.uk/seat-belts-law"
+    },
+    {
+      "doc": "GOV.UK: Child car seats: the law",
+      "ref": "Height-based seats; Fitting a child car seat; Unexpected journeys",
+      "url": "https://www.gov.uk/child-car-seats-the-rules"
+    },
+    {
+      "doc": "DVSA: Carrying out driving tests (DT1)",
+      "ref": "6.29 Wearing of seat belts by candidates and third parties",
+      "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-driving-tests-dt1/6-general-technical-matters"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

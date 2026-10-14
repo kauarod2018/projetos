@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "id": "car-controls",
+  "niche": "uk-adi-part-1",
+  "area": "signs-control-mechanics",
+  "order": 5,
+  "tier": "basic",
+  "officialTopics": [
+    "car-control"
+  ],
+  "title": "Car Controls & Moving Off Safely",
+  "whatItIs": "Smooth, co-ordinated use of the controls, with a safe routine for starting and moving off.",
+  "keyFacts": [
+    "The biting point is where the clutch plate and flywheel come into firm contact and start to transmit drive.",
+    "Push the clutch down before the car stops. Use the footbrake smoothly and progressively.",
+    "Coasting (in neutral or clutch down) removes engine braking and lets speed build quickly downhill.",
+    {
+      "text": "You MUST NOT leave a parked vehicle unattended with the engine running.",
+      "law": true
+    },
+    "The car test always includes moving off at an angle from behind a stationary vehicle."
+  ],
+  "visual": {
+    "type": "steps",
+    "caption": "Starting and moving off",
+    "items": [
+      {
+        "title": "Pre-start checks",
+        "text": "Doors, parking brake, seat, steering, seat belt, mirrors."
+      },
+      {
+        "title": "Start safely",
+        "text": "Parking brake on; neutral (P or N in an automatic)."
+      },
+      {
+        "title": "Look, then signal",
+        "text": "Mirrors and blind spots; signal if necessary; final look round."
+      },
+      {
+        "title": "Move off smoothly",
+        "text": "Accelerator and clutch together; no rollback on a hill."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Manual",
+      "points": [
+        "Neutral before starting",
+        "Find the biting point to move off",
+        "When parked, a gear helps hold the car"
+      ]
+    },
+    "b": {
+      "label": "Automatic",
+      "points": [
+        "P or N before starting",
+        "Footbrake on before selecting drive",
+        "When parked, leave the lever in P"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "After stalling at a junction, a pupil restarts the engine while still in gear. Which test heading covers this?",
+      "options": [
+        "Precautions",
+        "Junctions",
+        "Move off",
+        "Ancillary controls"
+      ],
+      "answerIndex": 0,
+      "why": "DT1 section 11 uses this example under 'Precautions' (a driving fault). Starting in gear so the car enters the road would be serious."
+    },
+    {
+      "question": "Why should a learner understand coasting?",
+      "options": [
+        "It reduces control of the car",
+        "It saves fuel on long hills",
+        "It protects the clutch",
+        "It is needed for smooth stops"
+      ],
+      "answerIndex": 0,
+      "why": "Rule 122: coasting removes engine braking, speed builds downhill, footbrake use rises, and steering and gear selection suffer."
+    }
+  ],
+  "traps": [
+    "Moving off with the parking brake on, or with a left signal still on, is a recorded fault.",
+    "Clutch coasting is marked under 'Gears' on the test report.",
+    "Never let an automatic 'creep': use the parking brake when needed."
+  ],
+  "sources": [
+    {
+      "doc": "National standard for driving cars and light vans",
+      "ref": "Role 2: elements 2.1.1–2.1.4 and 2.2.5",
+      "url": "https://www.gov.uk/guidance/national-standard-for-driving-cars-and-light-vans-category-b"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 122, 123 (control of the vehicle); Rule 159 (moving off)",
+      "url": "https://www.gov.uk/guidance/the-highway-code"
+    },
+    {
+      "doc": "DVSA: Carrying out driving tests (DT1)",
+      "ref": "1.24–1.25; sections 11 and 12 (Control, Precautions, Move off)",
+      "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-driving-tests-dt1"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

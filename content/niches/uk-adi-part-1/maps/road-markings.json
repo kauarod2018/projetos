@@ -9,7 +9,7 @@
     "traffic-signs"
   ],
   "title": "Road Markings & Studs",
-  "whatItIs": "Lines along the road tell you where you may cross, overtake and stop. As a rule, the more paint and the more solid the line, the stronger the message.",
+  "whatItIs": "Lines along the road show where you may cross, overtake and stop. Coloured studs help at night, especially on wet roads.",
   "keyFacts": [
     {
       "text": "Chevrons bordered by a solid white line: you MUST NOT enter except in an emergency.",
@@ -20,7 +20,6 @@
       "law": true
     },
     "No stopping on roads with double white lines, even if your side is broken, except to drop off, pick up or load.",
-    "Double yellow lines: no waiting at any time, unless signs show seasonal restrictions.",
     "A double red line ALWAYS means no stopping at any time.",
     "Studs: white = lanes or centre, red = left edge, amber = central reservation, green = lay-bys and slip roads."
   ],
@@ -31,22 +30,22 @@
       {
         "pattern": "centre-line",
         "label": "Centre line",
-        "meaning": "Short lines, long gaps. Cross only to overtake or turn off, if clear."
+        "meaning": "Cross only to overtake or turn off, if clear."
       },
       {
         "pattern": "hazard-line",
         "label": "Hazard warning line",
-        "meaning": "Longer lines, shorter gaps: a hazard ahead."
+        "meaning": "Longer lines, shorter gaps: hazard ahead."
       },
       {
         "pattern": "double-broken-near",
-        "label": "Broken line nearest you",
-        "meaning": "May cross to overtake if safe and you can finish before a solid line."
+        "label": "Broken line near you",
+        "meaning": "May cross to overtake if safe."
       },
       {
         "pattern": "double-solid-near",
-        "label": "Solid line nearest you",
-        "meaning": "MUST NOT cross or straddle it, except in the cases in Q1.",
+        "label": "Solid line near you",
+        "meaning": "MUST NOT cross or straddle (exceptions: Q1).",
         "law": true
       }
     ]
@@ -71,28 +70,28 @@
     {
       "question": "The line nearest you in a set of double white lines is solid. When may you cross it, if the road is clear?",
       "options": [
-        "To overtake a cyclist travelling at 10 mph or less",
-        "To overtake a tractor travelling at 20 mph",
-        "To overtake any vehicle if you can see far ahead",
-        "To get a better view of the road ahead"
+        "To overtake a cyclist doing 10 mph or less",
+        "To overtake a tractor doing 20 mph",
+        "To overtake any vehicle if you can see ahead",
+        "To get a better view ahead"
       ],
       "answerIndex": 0,
-      "why": "Rule 129: you may cross to pass a stationary vehicle, or to overtake a pedal cycle, horse or road maintenance vehicle travelling at 10 mph or less, if the road is clear."
+      "why": "Rule 129: if the road is clear you may cross to pass a stationary vehicle, or a pedal cycle, horse or road maintenance vehicle at 10 mph or less."
     },
     {
       "question": "You want to turn right at a yellow box junction. When may you enter the box and wait?",
       "options": [
         "When your exit is clear and only oncoming traffic stops you",
-        "Whenever the traffic lights are green",
-        "Only when the whole box is empty",
-        "Never: you must wait behind the box"
+        "Whenever the lights are green",
+        "Only when the box is empty",
+        "Never"
       ],
       "answerIndex": 0,
-      "why": "Rule 174: you may wait in the box to turn right when only oncoming traffic, or vehicles waiting to turn right, stop you. Know Your Traffic Signs adds: only if the right-turn exit is clear."
+      "why": "Rule 174: you may wait in the box to turn right when only oncoming traffic, or others waiting to turn right, stop you. KYTS: only if your exit is clear."
     }
   ],
   "traps": [
-    "The 10 mph exception only covers pedal cycles, horses and road maintenance vehicles, not slow cars or tractors.",
+    "The 10 mph exception covers only pedal cycles, horses and road maintenance vehicles, not slow cars.",
     "At a signalled roundabout you MUST NOT enter the box unless you can cross it completely without stopping.",
     "Red and single yellow lines are only a guide: check the signs. No days shown? It applies every day."
   ],

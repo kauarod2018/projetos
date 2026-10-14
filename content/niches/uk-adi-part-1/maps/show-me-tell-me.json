@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "id": "show-me-tell-me",
+  "niche": "uk-adi-part-1",
+  "area": "signs-control-mechanics",
+  "order": 8,
+  "tier": "basic",
+  "officialTopics": ["mechanical-knowledge"],
+  "title": "Vehicle Safety Checks: Show Me, Tell Me",
+  "whatItIs": "On the car test the examiner asks one 'tell me' question before the drive and one 'show me' question on the move, from the list in DT1. Basic knowledge is enough.",
+  "keyFacts": [
+    "One 'tell me' before moving away; one 'show me' while driving, on a suitable road.",
+    "One or both answered wrongly = one driving fault on a car test.",
+    "A serious or dangerous loss of control during the 'show me' is marked at 'Vehicle checks'.",
+    "Show me: washers and wipers, dipped headlights, rear demister, horn, front demist, side window.",
+    "No touching a hot engine or physically checking fluids. The car's information display may be used."
+  ],
+  "visual": {
+    "type": "table",
+    "caption": "Tell me: what a good answer includes",
+    "data": {
+      "columns": ["Question about", "Key points of the answer"],
+      "rows": [
+        ["Brakes", "Not spongy or slack; test as you set off; no pulling to one side"],
+        ["Tyre pressures", "Manufacturer's guide; reliable gauge; check cold; spare; refit valve caps"],
+        ["Tread and condition", "No cuts or bulges; 1.6 mm across the central 3/4, all the way round"],
+        ["Head restraint", "Rigid part at least as high as the eye or top of the ears; close to the head"],
+        ["Power steering", "Gentle pressure on the wheel as the engine starts, or turn just after moving off"],
+        ["Brake lights", "Press the pedal; use reflections in windows or doors, or ask a helper"],
+        ["Oil, coolant, brake fluid", "Dipstick min/max; header tank high/low marks; reservoir high/low marks"]
+      ],
+      "notes": []
+    }
+  },
+  "confused": {
+    "a": {
+      "label": "Tell me",
+      "points": ["Asked before moving away", "Explain the check: no need to do it"]
+    },
+    "b": {
+      "label": "Show me",
+      "points": ["Asked on the move", "Operate the control without losing control"]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "How should a head restraint be adjusted to give the best protection in a crash?",
+      "options": ["Rigid part at least as high as the eye or top of the ears", "Level with the base of the neck", "As far from the head as possible", "Rigid part level with the shoulders"],
+      "answerIndex": 0,
+      "why": "DT1 13.01 (T3): the rigid part should be at least as high as the eye or top of the ears, and as close to the back of the head as is comfortable."
+    },
+    {
+      "question": "A candidate answers the 'tell me' wrongly, then does the 'show me' correctly with no loss of control. What's recorded?",
+      "options": ["One driving fault", "Two driving faults", "A serious fault", "Nothing"],
+      "answerIndex": 0,
+      "why": "DT1 section 11: on a car test, one or both questions answered incorrectly results in one driving fault."
+    }
+  ],
+  "traps": [
+    "Two wrong answers is still only one driving fault on a car test.",
+    "ABS warning light comes on? That shows a fault with the anti-lock braking system.",
+    "Opening the bonnet isn't a test competence, but instructors are expected to teach it."
+  ],
+  "sources": [
+    { "doc": "DVSA: Carrying out driving tests (DT1)", "ref": "13.01 Safety check questions – cars (T1–T14, S1–S7)", "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-driving-tests-dt1/13-vehicle-safety-check-questions" },
+    { "doc": "DVSA: Carrying out driving tests (DT1)", "ref": "6.19 Vehicle safety check questions; 11.11 Vehicle safety check questions and Vehicle checks", "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-driving-tests-dt1" }
+  ],
+  "jurisdictionNotes": [],
+  "review": { "status": "draft" }
+}

@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "id": "becoming-an-adi",
+  "niche": "uk-adi-part-1",
+  "area": "test-disabilities-law",
+  "order": 10,
+  "tier": "basic",
+  "officialTopics": [
+    "adi-qualifying"
+  ],
+  "title": "Becoming an ADI: Parts 1, 2, 3 & the Register",
+  "whatItIs": "To join the ADI register you pass 3 tests: theory (part 1), driving ability (part 2) and instructional ability (part 3), all within 2 years of passing part 1.",
+  "keyFacts": [
+    "Start with a new DBS check. Parts 2 and 3 must be passed within 2 years of passing part 1.",
+    "You get 3 attempts each at parts 2 and 3.",
+    "Part 3 grades: 31 to 42 = grade B, 43 to 51 = grade A.",
+    "After passing part 3, apply for your first ADI badge within 12 months, or take all 3 tests again.",
+    "Renew your registration and DBS check every 4 years, with at least one standards check every 4 years."
+  ],
+  "visual": {
+    "type": "table",
+    "caption": "The 3 qualifying tests and their pass marks",
+    "data": {
+      "columns": [
+        "Test",
+        "Format",
+        "To pass"
+      ],
+      "rows": [
+        [
+          "Part 1: theory",
+          "100 questions, then hazard perception",
+          "85/100 and 20/25 per band; 57/75"
+        ],
+        [
+          "Part 2: driving",
+          "About 1 hour; eyesight at 27 m",
+          "6 driving faults at most; no serious or dangerous"
+        ],
+        [
+          "Part 3: teaching",
+          "About 45-minute lesson; 17 competencies",
+          "31 or more out of 51; over 7 in risk management"
+        ]
+      ],
+      "notes": []
+    }
+  },
+  "confused": {
+    "a": {
+      "label": "Trainee licence (pink badge)",
+      "points": [
+        "After part 2 and 40 hours' training; lasts 6 months",
+        "20% of lessons supervised, or 20 hours of extra training",
+        "Only from your training establishment"
+      ]
+    },
+    "b": {
+      "label": "ADI registration (green badge)",
+      "points": [
+        "After passing part 3",
+        "Renew every 4 years; standards checks"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "On ADI part 3 a trainee scores 33 overall but only 7 in the risk management category. What is the result?",
+      "options": [
+        "Grade B pass",
+        "Fail: 7 or less in risk management is an automatic fail",
+        "Grade A pass",
+        "Fail, because the total is below 43"
+      ],
+      "answerIndex": 1,
+      "why": "You automatically fail ADI part 3 if you score 7 or less in the risk management category, whatever your total. 31 to 42 would otherwise be grade B."
+    },
+    {
+      "question": "A trainee licence holder chooses option 1 (supervision). What must they do?",
+      "options": [
+        "Be supervised for every lesson they give",
+        "Be supervised for 40 hours in total",
+        "Do 20 hours of extra training within 6 months",
+        "Be supervised by their sponsoring ADI for 20% of all lessons"
+      ],
+      "answerIndex": 3,
+      "why": "Option 1 means supervision by the sponsoring ADI for 20% of all lessons given, recorded on form ADI 21S. Option 2 is at least 20 hours of extra training."
+    }
+  ],
+  "traps": [
+    "Part 2 eyesight is 27 m (27.5 m old-style), not 20 m, and failing it uses one of the 3 attempts.",
+    "It is illegal to give paid lessons after failing part 3 for the third time.",
+    "An ADI must tell DVSA in writing within 7 days of any caution or conviction, including penalty points.",
+    "Trainees must advertise as 'trainee driving instructor', not 'PDI', and give only the school's contact details."
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Become a car driving instructor: step by step",
+      "ref": "All steps",
+      "url": "https://www.gov.uk/become-car-driving-instructor"
+    },
+    {
+      "doc": "GOV.UK: ADI part 1 test",
+      "ref": "Multiple-choice questions; Pass mark and test result",
+      "url": "https://www.gov.uk/adi-part-1-test"
+    },
+    {
+      "doc": "GOV.UK: ADI part 2 test",
+      "ref": "What happens during the test; Faults and test result",
+      "url": "https://www.gov.uk/adi-part-2-test"
+    },
+    {
+      "doc": "GOV.UK: ADI part 3 test",
+      "ref": "What happens during the test; Your test result",
+      "url": "https://www.gov.uk/adi-part-3-test"
+    },
+    {
+      "doc": "GOV.UK: Get a trainee driving instructor licence",
+      "ref": "Overview; Options; Rules for using your trainee licence",
+      "url": "https://www.gov.uk/trainee-driving-instructor-licence-the-rules"
+    },
+    {
+      "doc": "GOV.UK: Manage your ADI registration",
+      "ref": "Renew or update your registration; Report cautions or convictions",
+      "url": "https://www.gov.uk/manage-approved-driving-instructor-registration"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

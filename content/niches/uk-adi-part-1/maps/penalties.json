@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "id": "penalties",
+  "niche": "uk-adi-part-1",
+  "area": "test-disabilities-law",
+  "order": 7,
+  "tier": "basic",
+  "officialTopics": [
+    "law"
+  ],
+  "title": "Penalty Points, New Drivers & Disqualification",
+  "whatItIs": "Courts endorse a driving record with penalty points (1 to 11 per offence). Too many points means a ban, and new drivers face a lower limit for 2 years after their first test.",
+  "keyFacts": [
+    {
+      "text": "A driver with 12 or more points within 3 years MUST be disqualified, for at least 6 months.",
+      "law": true
+    },
+    {
+      "text": "For dangerous driving and drink-driving the court MUST disqualify: at least 12 months.",
+      "law": true
+    },
+    "New drivers: 6 or more points within 2 years of passing the first test and the licence is revoked.",
+    "Unexpired points on a provisional licence carry over and count towards the new driver's 6.",
+    "Endorsements stay on the record for 4 years, or 11 years for drink or drug driving."
+  ],
+  "visual": {
+    "type": "stats",
+    "caption": "The numbers that lead to a ban",
+    "items": [
+      {
+        "value": "12 points",
+        "label": "Within 3 years: totting-up ban"
+      },
+      {
+        "value": "6 points",
+        "label": "Within 2 years of passing: licence revoked"
+      },
+      {
+        "value": "56 days",
+        "label": "Ban this long or more: apply for a new licence"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Totting up (all drivers)",
+      "points": [
+        "12 or more points within 3 years",
+        "Disqualified for at least 6 months"
+      ]
+    },
+    "b": {
+      "label": "New drivers (first 2 years)",
+      "points": [
+        "6 or more points, including points carried over",
+        "Licence revoked: new provisional, then theory and practical tests again"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "A pupil passed 18 months ago with 3 unexpired points from their provisional licence. They now get 3 more. What happens?",
+      "options": [
+        "Nothing until they reach 12 points",
+        "They must take an extended test only",
+        "Their licence is revoked; they must pass theory and practical tests again",
+        "DVLA sends a warning letter"
+      ],
+      "answerIndex": 2,
+      "why": "Unexpired provisional points carry over. 6 or more points within 2 years of passing means the licence is cancelled; they need a new provisional licence and must pass both tests again."
+    },
+    {
+      "question": "What is the minimum disqualification for a second drink-drive offence within 10 years?",
+      "options": [
+        "6 months",
+        "12 months",
+        "2 years",
+        "3 years"
+      ],
+      "answerIndex": 3,
+      "why": "Highway Code annex 5: a second drink-drive offence in the space of 10 years results in a minimum of 3 years' disqualification."
+    }
+  ],
+  "traps": [
+    "The new driver rule applies even if the offences were paid by fixed penalty.",
+    "Passing a test for another category (e.g. a lorry) does not start a new 2-year period.",
+    "Every offence with points also gives the court a discretionary power to disqualify.",
+    "A second ban within 3 years can last 12 months; a third, 2 years."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Annex 5: Penalty points and disqualification; New drivers",
+      "url": "https://www.gov.uk/guidance/the-highway-code/annex-5-penalties"
+    },
+    {
+      "doc": "GOV.UK: Penalty points (endorsements)",
+      "ref": "Overview; How long endorsements stay on your driving record; New drivers",
+      "url": "https://www.gov.uk/penalty-points-endorsements"
+    },
+    {
+      "doc": "GOV.UK: Driving disqualifications",
+      "ref": "Overview: How long a driving ban will last; Disqualified for 56 days or more",
+      "url": "https://www.gov.uk/driving-disqualifications"
+    },
+    {
+      "doc": "Road Traffic (New Drivers) Act 1995",
+      "ref": "Section 1 (2-year probationary period); section 2 (6 or more points)",
+      "url": "https://www.legislation.gov.uk/ukpga/1995/13/section/2"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

@@ -9,38 +9,38 @@
     "hazards-and-speed"
   ],
   "title": "Hazard Awareness & Anticipation",
-  "whatItIs": "Scan near and far, read the clues, predict what others will do and act early, so you never have to react at the last moment.",
+  "whatItIs": "Scan near and far, read the clues, predict what others will do and act early, so you never react at the last moment.",
   "keyFacts": [
-    "The national standard: scan near and far, use visual clues to predict hazards, then judge and prioritise them.",
-    "Drive at a speed that lets you stop safely within the distance you can see to be clear.",
-    "In side roads and country lanes, look out for unmarked junctions where nobody has priority.",
-    "Pedestrians, especially children, who are looking the other way may step out without seeing you.",
-    "Residential streets: expect car doors opening, vehicles moving off and children between parked cars.",
-    "ADI hazard perception: 14 clips, up to 5 points per developing hazard, pass mark 57 out of 75."
+    "Scan near and far, use visual clues to predict hazards, then judge and prioritise them.",
+    "Drive so you can always stop within the distance you can see to be clear.",
+    "In side roads and country lanes, watch for unmarked junctions: nobody has priority.",
+    "Children looking the other way may step out without seeing you.",
+    "Residential streets: expect doors opening, cars moving off, children between parked cars.",
+    "ADI hazard perception: 14 clips, up to 5 points per hazard, pass mark 57/75."
   ],
   "visual": {
     "type": "cards",
-    "caption": "Clues that a hazard may be developing",
+    "caption": "Clues that a hazard is developing",
     "columns": 2,
     "items": [
       {
         "icon": "car",
-        "title": "Parked car, indicator starts to flash",
-        "text": "Now it's moving off and you'd need to slow down: it has become a developing hazard."
+        "title": "Parked car starts to signal",
+        "text": "Now it is moving away and you'd need to slow down: it has become a developing hazard."
       },
       {
         "icon": "bus",
-        "title": "Bus stops and ice cream vans",
-        "text": "People may emerge suddenly; children may run into the road. Drive carefully and slowly."
+        "title": "Bus stops, ice cream vans",
+        "text": "Pedestrians may emerge suddenly; children may run into the road. Drive slowly."
       },
       {
         "icon": "bike",
-        "title": "A rider looks over their shoulder",
-        "text": "They may be about to pull out, turn right or change direction: give them time and space."
+        "title": "Rider looks over shoulder",
+        "text": "They may intend to pull out, turn right or change direction: give time and space."
       },
       {
         "icon": "truck",
-        "title": "A large vehicle ahead",
+        "title": "Large vehicle ahead",
         "text": "It may need extra room to turn, or be dealing with a hazard you cannot see: hang back."
       }
     ]
@@ -49,67 +49,67 @@
     "a": {
       "label": "Not a developing hazard",
       "points": [
-        "A parked car at the roadside that is doing nothing",
-        "It wouldn't make you change speed or direction"
+        "Parked car doing nothing",
+        "Wouldn't make you act"
       ]
     },
     "b": {
       "label": "Developing hazard",
       "points": [
-        "Something that would make you act: change speed or direction",
-        "Click as soon as it starts to develop to score highly"
+        "Makes you change speed or direction",
+        "Click as it starts"
       ]
     }
   },
   "onTheTest": [
     {
-      "question": "In the ADI hazard perception test, what makes something a 'developing hazard'?",
+      "question": "In the ADI hazard perception test, what makes a hazard 'developing'?",
       "options": [
-        "It is visible anywhere in the clip",
-        "It would cause you to take action, like changing speed or direction",
-        "It involves a pedestrian or cyclist",
-        "It appears in the last 10 seconds of the clip"
+        "It's in the clip",
+        "It would make you act",
+        "It involves a pedestrian",
+        "It appears late"
       ],
       "answerIndex": 1,
-      "why": "GOV.UK ADI part 1: a developing hazard is something that would cause you to take action, like changing speed or direction. You score up to 5 points for each one."
+      "why": "GOV.UK ADI part 1: something that would cause you to take action, like changing speed or direction."
     },
     {
-      "question": "On test, a candidate notices a cyclist late and reacts suddenly at the last minute, compromising the cyclist's safety. How does DT1 mark this?",
+      "question": "A candidate reacts suddenly at the last minute to a cyclist, compromising their safety. DT1 fault?",
       "options": [
-        "Not worthy of recording",
-        "A driving fault",
-        "A serious fault",
-        "An eco-safe fault only"
+        "Not worthy",
+        "Driving fault",
+        "Serious fault",
+        "Eco-safe only"
       ],
       "answerIndex": 2,
-      "why": "DT1 11.11 Awareness/planning: a late reaction to other road users is a driving fault; a last-minute, sudden reaction that compromises their safety is a serious fault."
+      "why": "DT1 11.11 Awareness/planning: a late reaction is a driving fault; a last-minute reaction compromising safety is serious."
     }
   ],
   "traps": [
-    "In the hazard perception test, clicking continuously or in a pattern scores nothing for that clip.",
-    "Eco-safe 'planning' (hazard awareness, anticipation) is recorded on the driving test but doesn't affect the result.",
-    "Driver aids don't replace looking: act on what is in front of you, not just the sat nav or sensors.",
-    "A vehicle signalling may not turn: an indicator may not have been cancelled."
+    "Clicking continuously or in a pattern scores nothing for that clip.",
+    "Driver aids don't replace looking: act on what is in front of you.",
+    "A signal may not have been cancelled: wait to be sure.",
+    "Eco-safe 'planning' (anticipation) is recorded on test but doesn't affect the result."
   ],
   "sources": [
     {
-      "doc": "GOV.UK: Approved driving instructor (ADI) part 1 test",
-      "ref": "Hazard perception test; Pass mark and test result",
+      "doc": "GOV.UK: ADI part 1 test",
+      "ref": "Hazard perception test",
       "url": "https://www.gov.uk/adi-part-1-test"
     },
     {
       "doc": "The Highway Code",
-      "ref": "Rules 104, 126, 146, 150, 152, 206, 212, 221",
+      "ref": "Rules 104, 126, 146, 206, 212, 221",
       "url": "https://www.gov.uk/guidance/the-highway-code"
     },
     {
       "doc": "DVSA: National standard for driving cars and light vans (category B)",
-      "ref": "Element 2.2.1 (act on what is in front of you); Element 4.2.1 (Identify and respond to hazards); Element 4.2.2",
+      "ref": "Elements 2.2.1, 4.2.1",
       "url": "https://www.gov.uk/guidance/national-standard-for-driving-cars-and-light-vans-category-b"
     },
     {
       "doc": "DVSA: Carrying out driving tests: examiner guidance (DT1)",
-      "ref": "1.10 Eco-safe driving; 1.33 Fuel efficient driving; 11.11 Awareness/planning",
+      "ref": "11.11 Awareness/planning",
       "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-driving-tests-dt1/11-guide-to-assessment-and-marking"
     }
   ],

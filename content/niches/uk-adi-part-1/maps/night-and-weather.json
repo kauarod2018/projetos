@@ -9,24 +9,24 @@
     "hazards-and-speed"
   ],
   "title": "Night Driving & Bad Weather",
-  "whatItIs": "Darkness, rain, ice, fog, wind and low sun cut visibility or grip. The answer: see and be seen, slow down and leave far bigger gaps.",
+  "whatItIs": "Darkness, rain, ice, fog, wind and low sun cut visibility or grip. See and be seen, slow down and leave far bigger gaps.",
   "keyFacts": [
     {
       "text": "You MUST use headlights at night, except on roads with lit street lights.",
       "law": true
     },
-    "Night (the hours of darkness) runs from half an hour after sunset to half an hour before sunrise.",
+    "Night (the hours of darkness): half an hour after sunset to half an hour before sunrise.",
     {
-      "text": "You MUST use headlights when visibility is seriously reduced: generally when you can't see beyond 100 m.",
+      "text": "You MUST use headlights when visibility is seriously reduced: generally under 100 metres.",
       "law": true
     },
     {
-      "text": "You MUST NOT use fog lights unless visibility is seriously reduced, and MUST switch them off when it improves.",
+      "text": "You MUST NOT use fog lights unless visibility is seriously reduced, and MUST switch them off after.",
       "law": true
     },
-    "Dazzled by oncoming headlights or bright sunlight? Slow down and, if necessary, stop.",
+    "Dazzled by oncoming headlights or bright sun? Slow down and, if necessary, stop.",
     {
-      "text": "Before driving in snow or ice you MUST clear all windows and keep lights clean and number plates legible.",
+      "text": "In snow or ice you MUST clear all windows, and keep lights clean and number plates legible.",
       "law": true
     }
   ],
@@ -42,28 +42,28 @@
       "rows": [
         [
           "Wet",
-          "At least double: keep well back",
-          "If steering goes light, ease off and slow gradually"
+          "At least double",
+          "Light steering? Ease off, slow gently"
         ],
         [
           "Ice and snow",
-          "Can be ten times longer",
-          "Slow, high gear, gentle braking; brake before bends"
+          "Up to ten times",
+          "High gear, gentle; brake before bends"
         ],
         [
           "Fog",
-          "Stop well within what you can see",
-          "Use lights; don't speed up to lose a tailgater"
+          "Well within what you see",
+          "Lights on; don't speed up"
         ],
         [
           "Strong wind",
-          "Keep well back from riders",
-          "Gusts at gaps and bridges; motorcyclists most affected"
+          "Keep back from riders",
+          "Gusts at bridges and gaps"
         ],
         [
           "Night",
-          "Harder to judge speed and distance",
-          "Stay dipped until level when overtaking"
+          "Harder to judge",
+          "Dipped until level to overtake"
         ]
       ],
       "notes": []
@@ -74,56 +74,55 @@
       "label": "Fog lights",
       "points": [
         "Only when visibility is seriously reduced",
-        "Can dazzle others and hide your brake lights"
+        "Can dazzle and hide your brake lights"
       ]
     },
     "b": {
       "label": "Dipped headlights",
       "points": [
-        "At night in built-up areas and in dull daytime weather",
-        "MUST be used when visibility is seriously reduced"
+        "At night in built-up areas and on dull days",
+        "MUST be used in seriously reduced visibility"
       ]
     }
   },
   "onTheTest": [
     {
-      "question": "Your pupil switched on the rear fog lights in thick fog. Visibility has now improved to well over 100 metres. What must they do?",
+      "question": "The fog has cleared and visibility is well over 100 metres. Your pupil's rear fog lights are on. What now?",
       "options": [
-        "Leave them on until the end of the journey",
+        "Leave them on to the end of the trip",
         "Switch them off",
-        "Switch to the front fog lights only",
-        "Use the hazard warning lights instead"
+        "Use the front fog lights only",
+        "Use hazard lights instead"
       ],
       "answerIndex": 1,
-      "why": "Rule 236: you MUST NOT use fog lights unless visibility is seriously reduced, and you MUST switch them off when it improves. They dazzle others and can hide brake lights."
+      "why": "Rule 236: you MUST switch fog lights off when visibility improves. They dazzle others and can hide your brake lights."
     },
     {
       "question": "On an icy road, how much longer can stopping distances be than on a dry road?",
       "options": [
-        "About twice as long",
+        "About twice",
         "Up to five times",
         "Up to ten times",
-        "No longer if the car has ABS"
+        "No longer with ABS"
       ],
       "answerIndex": 2,
-      "why": "Rules 126 and 230: on icy roads the gap should be up to ten times greater, because stopping distances can be ten times greater than on dry roads."
+      "why": "Rules 126 and 230: stopping distances can be ten times greater on ice, so leave a gap up to ten times bigger."
     }
   ],
   "traps": [
-    "In fog, rear lights ahead give a false sense of security: keep a safe distance.",
-    "On ice, tyres make virtually no noise: light, unresponsive steering may mean you're losing grip.",
-    "Don't wear tinted glasses, lenses or visors at night or in poor visibility if they restrict your vision.",
-    "Queuing at night? Use the parking brake and release the footbrake once traffic behind has stopped."
+    "In fog, rear lights ahead give a false sense of security: keep a safe gap.",
+    "On ice, tyres make virtually no noise: light steering may mean you're losing grip.",
+    "Don't wear tinted glasses, lenses or visors at night if they restrict your vision."
   ],
   "sources": [
     {
       "doc": "The Highway Code",
-      "ref": "Rules 93, 94, 113–115, 126, 163, 226–237",
+      "ref": "Rules 94, 113–115, 126, 226–236",
       "url": "https://www.gov.uk/guidance/the-highway-code"
     },
     {
       "doc": "DVSA: National standard for driving cars and light vans (category B)",
-      "ref": "Element 2.2.1 (fog lights, dipped headlights); Element 4.2.2 (dipped headlights in daylight)",
+      "ref": "Element 2.2.1 (fog lights, dipped headlights)",
       "url": "https://www.gov.uk/guidance/national-standard-for-driving-cars-and-light-vans-category-b"
     }
   ],

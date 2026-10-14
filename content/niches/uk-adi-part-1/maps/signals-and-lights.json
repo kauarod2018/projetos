@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "id": "signals-and-lights",
+  "niche": "uk-adi-part-1",
+  "area": "signs-control-mechanics",
+  "order": 3,
+  "tier": "complete",
+  "officialTopics": [
+    "traffic-signs"
+  ],
+  "title": "Traffic Lights, Signals & Authorised Signals",
+  "whatItIs": "Traffic lights, flashing red lights and signals from authorised people are orders you must obey.",
+  "keyFacts": [
+    {
+      "text": "You MUST obey traffic lights and signals from police, traffic officers, wardens and DVSA officers.",
+      "law": true
+    },
+    {
+      "text": "If the primary signal isn't working, you MUST obey the secondary signal across the junction.",
+      "law": true
+    },
+    {
+      "text": "Alternately flashing red lights mean you MUST stop (e.g. level crossings, fire stations).",
+      "law": true
+    },
+    {
+      "text": "Advanced stop line: you MUST stop at the first white line if the lights are amber or red.",
+      "law": true
+    },
+    "Lights out of order? Treat it as an unmarked junction."
+  ],
+  "visual": {
+    "type": "light-sequence",
+    "caption": "The sequence at traffic lights",
+    "items": [
+      {
+        "lamps": [
+          "red"
+        ],
+        "label": "Red",
+        "meaning": "Stop. Wait behind the stop line."
+      },
+      {
+        "lamps": [
+          "red",
+          "amber"
+        ],
+        "label": "Red and amber",
+        "meaning": "Still stop. Don't go until green shows."
+      },
+      {
+        "lamps": [
+          "green"
+        ],
+        "label": "Green",
+        "meaning": "Go if clear. Give way to pedestrians crossing."
+      },
+      {
+        "lamps": [
+          "amber"
+        ],
+        "label": "Amber",
+        "meaning": "Stop, unless past the line or too close to stop safely."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "DVSA officers",
+      "points": [
+        "Can stop vehicles on all roads",
+        "Flashing amber lights, front or behind"
+      ]
+    },
+    "b": {
+      "label": "Traffic officers",
+      "points": [
+        "Most motorways, some A roads (England and Wales)",
+        "Flashing amber lights, usually from behind"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "A green 'ahead' arrow replaces the full green. You want to turn right. What should you do?",
+      "options": [
+        "Wait for the right-turn arrow",
+        "Turn right if it looks clear",
+        "Go ahead and turn later",
+        "Turn right if no one is behind"
+      ],
+      "answerIndex": 0,
+      "why": "Know Your Traffic Signs: if the full green is replaced by an ahead or left-turn arrow, wait until the right-turn arrow shows."
+    },
+    {
+      "question": "You've just crossed the first line of an advanced stop line when the lights turn red. What must you do?",
+      "options": [
+        "Stop at the second line",
+        "Stop in the cyclists' area",
+        "Reverse behind the first line",
+        "Carry on through"
+      ],
+      "answerIndex": 0,
+      "why": "Rule 178: past the first line when the signal goes red? Stop as soon as possible: you MUST stop at the second white line."
+    }
+  ],
+  "traps": [
+    "Red and amber together still means STOP.",
+    "Green filter arrow: a filter lane only. Don't enter it unless you're going that way.",
+    "A green arrow with a red light lets you go, but only in the arrow's direction."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Light signals controlling traffic; Signals by authorised persons",
+      "url": "https://www.gov.uk/guidance/the-highway-code/light-signals-controlling-traffic"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 105–111 (authorised persons, stopping procedures, flashing headlights)",
+      "url": "https://www.gov.uk/guidance/the-highway-code/general-rules-techniques-and-advice-for-all-drivers-and-riders-103-to-158"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 175–178 (junctions controlled by traffic lights)",
+      "url": "https://www.gov.uk/guidance/the-highway-code/using-the-road-159-to-203"
+    },
+    {
+      "doc": "Know Your Traffic Signs",
+      "ref": "Traffic signals (pp. 140–141)",
+      "url": "https://www.gov.uk/government/publications/know-your-traffic-signs"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

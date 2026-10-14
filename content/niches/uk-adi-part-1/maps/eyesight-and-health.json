@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "id": "eyesight-and-health",
+  "niche": "uk-adi-part-1",
+  "area": "test-disabilities-law",
+  "order": 4,
+  "tier": "complete",
+  "officialTopics": [
+    "disabilities",
+    "law"
+  ],
+  "title": "Eyesight Rules & Medical Conditions",
+  "whatItIs": "Every driver must meet the standards of vision for driving and tell DVLA about conditions that could affect safe driving. The eyesight check opens every driving test.",
+  "keyFacts": [
+    {
+      "text": "You MUST be able to read a number plate in good daylight from 20 m (20.5 m for an old-style plate).",
+      "law": true
+    },
+    {
+      "text": "If you need glasses or contact lenses to read the plate, you MUST wear them at all times while driving.",
+      "law": true
+    },
+    {
+      "text": "You MUST also have visual acuity of at least decimal 0.5 (6/12) on the Snellen scale and an adequate field of vision.",
+      "law": true
+    },
+    {
+      "text": "You MUST report to DVLA any health condition likely to affect your driving.",
+      "law": true
+    },
+    {
+      "text": "You MUST surrender your licence if your doctor tells you to stop driving for 3 months or more.",
+      "law": true
+    },
+    "Not telling DVLA about a condition: fine of up to £1,000, and prosecution if you have an accident."
+  ],
+  "visual": {
+    "type": "steps",
+    "caption": "The eyesight check on test (DT1 6.17)",
+    "items": [
+      {
+        "title": "First plate",
+        "text": "Clearly more than 20 m away, in good daylight."
+      },
+      {
+        "title": "Second plate",
+        "text": "If misread; the candidate may walk to just over the distance."
+      },
+      {
+        "title": "Third plate",
+        "text": "Exact distance measured with the official tape."
+      },
+      {
+        "title": "Still misread",
+        "text": "Test ends as a fail. DVLA is told; licence revoked."
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Must tell DVLA (car licence)",
+      "points": [
+        "Eyesight problem affecting both eyes, or the only eye",
+        "Notifiable conditions, e.g. epilepsy, sleep apnoea, glaucoma",
+        "A condition that has got worse since the licence was issued"
+      ]
+    },
+    "b": {
+      "label": "No need to tell DVLA",
+      "points": [
+        "Being short or long sighted",
+        "Colour blindness",
+        "Surgery for short sight, if you meet the standards"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Your pupil reads the number plate wearing glasses, then takes them off to drive. What should the examiner do?",
+      "options": [
+        "Let them drive, as the eyesight check is passed",
+        "Explain the glasses must be worn to drive, or the test ends",
+        "Record a serious fault and carry on",
+        "Ask them to read a plate at 15 m without glasses"
+      ],
+      "answerIndex": 1,
+      "why": "DT1 6.17: if the plate can only be read with glasses, the law requires them to be worn whenever driving. Unless they are worn, the test will be terminated."
+    },
+    {
+      "question": "A pupil asks which eyesight issue they do NOT have to report to DVLA. What do you tell them?",
+      "options": [
+        "Glaucoma",
+        "A problem affecting both eyes",
+        "A problem with their only working eye",
+        "Colour blindness"
+      ],
+      "answerIndex": 3,
+      "why": "You must tell DVLA about an eyesight problem affecting both eyes (or the remaining eye). This does not include being short or long sighted or colour blind."
+    }
+  ],
+  "traps": [
+    "An examiner must never ask a candidate to read a plate at less than 20 metres.",
+    "Bioptic (telescope) spectacles are not accepted for driving in Great Britain.",
+    "A candidate with reading difficulties can write the number plate down instead of reading it aloud.",
+    "From 70, notifiable conditions are declared on the licence renewal form."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 90 and 92",
+      "url": "https://www.gov.uk/guidance/the-highway-code/rules-for-drivers-and-motorcyclists-89-to-102"
+    },
+    {
+      "doc": "GOV.UK: Driving eyesight rules",
+      "ref": "Standards of vision for driving; The practical driving test eyesight test",
+      "url": "https://www.gov.uk/driving-eyesight-rules"
+    },
+    {
+      "doc": "GOV.UK: Medical conditions, disabilities and driving",
+      "ref": "Telling DVLA about a medical condition or disability; Surrendering your licence",
+      "url": "https://www.gov.uk/driving-medical-conditions"
+    },
+    {
+      "doc": "DVSA: Carrying out driving tests (DT1)",
+      "ref": "6.17 Eyesight (incl. bioptic spectacles)",
+      "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-driving-tests-dt1/6-general-technical-matters"
+    },
+    {
+      "doc": "GOV.UK: Driving test: cars",
+      "ref": "You have reading difficulties",
+      "url": "https://www.gov.uk/driving-test/disability-health-condition-or-learning-difficulty"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

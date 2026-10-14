@@ -1,0 +1,123 @@
+{
+  "schemaVersion": 1,
+  "id": "tyres-and-maintenance",
+  "niche": "uk-adi-part-1",
+  "area": "signs-control-mechanics",
+  "order": 9,
+  "tier": "basic",
+  "officialTopics": [
+    "mechanical-knowledge"
+  ],
+  "title": "Tyres, Lights & Vehicle Condition",
+  "whatItIs": "A car must be roadworthy every time it's used: legal tyres, clean working lights and, from 3 years old, a valid MOT.",
+  "keyFacts": [
+    {
+      "text": "Car tyres MUST have at least 1.6 mm of tread across the central 3/4 of the breadth, all the way round.",
+      "law": true
+    },
+    {
+      "text": "Tyres MUST be inflated to the manufacturer's specification for the load being carried.",
+      "law": true
+    },
+    {
+      "text": "Lights, indicators, reflectors and number plates MUST be kept clean and clear.",
+      "law": true
+    },
+    {
+      "text": "You MUST NOT drive without a valid MOT, except to a pre-arranged test or to repairs for it.",
+      "law": true
+    },
+    "Uneven tyre wear can mean faults in the brakes or suspension, or wheels out of alignment."
+  ],
+  "visual": {
+    "type": "stats",
+    "caption": "Numbers to remember",
+    "items": [
+      {
+        "value": "1.6 mm",
+        "label": "minimum tread for cars",
+        "note": "Central 3/4 of the breadth, all the way round"
+      },
+      {
+        "value": "Weekly",
+        "label": "check tyre pressures and fluid levels",
+        "note": "Pressures when tyres are cold"
+      },
+      {
+        "value": "3 years",
+        "label": "a car's first MOT is due",
+        "note": "Then every year"
+      },
+      {
+        "value": "£1,000",
+        "label": "maximum fine: no valid MOT"
+      }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Cars, light vans, light trailers",
+      "points": [
+        "At least 1.6 mm of tread",
+        "Across the central 3/4 of the breadth"
+      ]
+    },
+    "b": {
+      "label": "Motorcycles, large vehicles, PCVs",
+      "points": [
+        "At least 1 mm of tread",
+        "Across 3/4 of the breadth, continuous band"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Your car pulls to one side when you brake. What is the most likely cause?",
+      "options": [
+        "A brake fault or wrongly inflated tyres",
+        "Worn shock absorbers",
+        "Low engine oil",
+        "A faulty charging system"
+      ],
+      "answerIndex": 0,
+      "why": "Highway Code annex 6: pulling to one side when braking is most likely a brake fault or incorrectly inflated tyres."
+    },
+    {
+      "question": "A car failed its MOT with a 'dangerous' problem. What can happen if it's driven before repair?",
+      "options": [
+        "A fine of up to £2,500, a ban and 3 points",
+        "Nothing while the old MOT is valid",
+        "A warning letter only",
+        "A £100 fixed penalty only"
+      ],
+      "answerIndex": 0,
+      "why": "GOV.UK: you can be fined up to £2,500, banned and get 3 penalty points for driving a vehicle that failed its MOT with a 'dangerous' problem."
+    }
+  ],
+  "traps": [
+    "1 mm is for motorcycles and large vehicles. For cars it's 1.6 mm.",
+    "Check pressures cold: warm tyres can give a misleading reading.",
+    "Car keeps bouncing after you push down on it? Worn shock absorbers."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Annex 6: vehicle maintenance, tyres, tyre pressures, other problems",
+      "url": "https://www.gov.uk/guidance/the-highway-code/annex-6-vehicle-maintenance-safety-and-security"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Annex 3: MOT",
+      "url": "https://www.gov.uk/guidance/the-highway-code/annex-3-motor-vehicle-documentation-and-learner-driver-requirements"
+    },
+    {
+      "doc": "GOV.UK: Getting an MOT",
+      "ref": "When to get an MOT; MOT test result (driving a vehicle that's failed)",
+      "url": "https://www.gov.uk/getting-an-mot"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "id": "documents",
+  "niche": "uk-adi-part-1",
+  "area": "test-disabilities-law",
+  "order": 6,
+  "tier": "basic",
+  "officialTopics": [
+    "law"
+  ],
+  "title": "Licence, Insurance, MOT & Vehicle Tax",
+  "whatItIs": "To use a car on the road you need a valid licence, insurance, an MOT once the car is old enough, and vehicle tax. They apply to your school car and to any pupil's car.",
+  "keyFacts": [
+    {
+      "text": "You MUST hold a valid licence for the vehicle category and tell DVLA if you change your name or address.",
+      "law": true
+    },
+    {
+      "text": "You MUST have insurance covering at least injury or damage to third parties.",
+      "law": true
+    },
+    {
+      "text": "Cars MUST normally pass an MOT 3 years from first registration, then every year.",
+      "law": true
+    },
+    {
+      "text": "Vehicle tax MUST be paid on vehicles used or kept on public roads. Untaxed and off the road: you MUST declare SORN.",
+      "law": true
+    },
+    {
+      "text": "You MUST produce your licence, insurance and MOT certificate if a police officer asks.",
+      "law": true
+    }
+  ],
+  "visual": {
+    "type": "table",
+    "caption": "Maximum penalties (Highway Code annex 5)",
+    "data": {
+      "columns": [
+        "Offence",
+        "Maximum penalty",
+        "Points"
+      ],
+      "rows": [
+        [
+          "Driving without insurance",
+          "Unlimited fine, discretionary ban",
+          "6 to 8"
+        ],
+        [
+          "Driving not in line with your licence",
+          "£1,000 fine, discretionary ban",
+          "3 to 6"
+        ],
+        [
+          "No MOT certificate",
+          "£1,000 fine",
+          "None"
+        ]
+      ],
+      "notes": [
+        "No insurance: police can also give a £300 fixed penalty and 6 points, and seize the vehicle."
+      ]
+    }
+  },
+  "confused": {
+    "a": {
+      "label": "Third-party insurance",
+      "points": [
+        "The legal minimum",
+        "Covers injury or damage to other people and property",
+        "Does not cover your own car or injury to you"
+      ]
+    },
+    "b": {
+      "label": "Comprehensive insurance",
+      "points": [
+        "Covers third parties too",
+        "Also your own car (up to its market value) and injury to you"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "A pupil's 4-year-old car has no current MOT certificate. When can it legally be driven on the road?",
+      "options": [
+        "Within 7 days of the old MOT running out",
+        "On lessons, if a qualified supervisor is present",
+        "To a pre-arranged MOT test, or to repairs needed for it",
+        "At any time, as long as it is taxed and insured"
+      ],
+      "answerIndex": 2,
+      "why": "You must not drive a car without an MOT certificate when it should have one. Exceptionally, you may drive to a pre-arranged test or to a garage for repairs needed for the test."
+    },
+    {
+      "question": "A police officer asks your pupil for their documents, which they do not have with them. What can happen?",
+      "options": [
+        "They get an automatic £100 fine",
+        "They may be asked to take them to a police station within 7 days",
+        "They must show them within 24 hours",
+        "Their provisional licence is revoked"
+      ],
+      "answerIndex": 1,
+      "why": "Highway Code annex 3: if you cannot produce your licence, insurance and MOT certificate when asked, you may be asked to take them to a police station within seven days."
+    }
+  ],
+  "traps": [
+    "An unused car kept off the road MUST have either a SORN or valid insurance.",
+    "You can get an MOT up to a month (minus a day) early and keep the same renewal date.",
+    "Driving an unroadworthy car may invalidate your insurance.",
+    "Uninsured drivers can be detected by roadside cameras; the car can be seized and crushed."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Annex 3: Documents (licence, MOT, insurance, VED, SORN, production of documents)",
+      "url": "https://www.gov.uk/guidance/the-highway-code/annex-3-motor-vehicle-documentation-and-learner-driver-requirements"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Annex 5: Penalty table",
+      "url": "https://www.gov.uk/guidance/the-highway-code/annex-5-penalties"
+    },
+    {
+      "doc": "GOV.UK: Vehicle insurance",
+      "ref": "Overview; Driving without insurance",
+      "url": "https://www.gov.uk/vehicle-insurance"
+    },
+    {
+      "doc": "GOV.UK: Getting an MOT",
+      "ref": "When to get an MOT",
+      "url": "https://www.gov.uk/getting-an-mot"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

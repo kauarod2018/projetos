@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "id": "eco-safe-driving",
+  "niche": "uk-adi-part-1",
+  "area": "signs-control-mechanics",
+  "order": 7,
+  "tier": "complete",
+  "officialTopics": ["car-control"],
+  "title": "Eco-Safe Driving",
+  "whatItIs": "Driving with economy and the environment in mind: plan ahead, keep moving smoothly and use the highest suitable gear, without ever reducing safety.",
+  "keyFacts": [
+    "Never reduce safety to improve economy.",
+    { "text": "You MUST NOT leave an engine running unnecessarily while stationary on a public road.", "law": true },
+    "Stopped for more than a couple of minutes? Apply the parking brake and switch off (you may leave it running in traffic).",
+    "Fuel use goes up with extra load, wrongly inflated tyres and wind resistance, e.g. a loaded roof rack.",
+    "On the test, eco-safe driving is assessed over the whole drive but doesn't affect the result."
+  ],
+  "visual": {
+    "type": "cards",
+    "caption": "The four habits to teach",
+    "columns": 2,
+    "items": [
+      { "icon": "route", "title": "Plan ahead", "text": "Look well ahead for lights, signs and hazards, and adjust speed smoothly." },
+      { "icon": "gauge", "title": "Highest responsive gear", "text": "Use the highest gear that won't labour the engine. Avoid high revs." },
+      { "icon": "timer", "title": "Slow down early", "text": "Foresee stops and decelerate smoothly: less fuel used, less wear." },
+      { "icon": "weight", "title": "Cut weight and drag", "text": "Remove load you don't need. Keep tyres at the right pressure." }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Fuel-efficient",
+      "points": ["Keep moving when it's safe to", "Scan ahead and adjust speed smoothly", "Highest gear without labouring"]
+    },
+    "b": {
+      "label": "Wasteful",
+      "points": ["Stopping and moving off needlessly", "Harsh acceleration, high revs", "Braking late"]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "A candidate has a fault marked in the 'Eco-safe driving' boxes. How does it affect the test result?",
+      "options": ["It doesn't, but the examiner will debrief it", "It counts as one driving fault", "It counts as a serious fault", "It's only recorded on a fail"],
+      "answerIndex": 0,
+      "why": "DT1 1.33: fuel-efficient driving does not contribute to the test result. If an eco-safe fault is recorded, pass or fail, the examiner debriefs the candidate."
+    },
+    {
+      "question": "A pupil asks if rolling downhill in neutral saves fuel safely. What's the best reply?",
+      "options": ["No: coasting reduces your control of the car", "Yes, on long straight hills", "Yes, if the clutch is held down", "Only in an automatic"],
+      "answerIndex": 0,
+      "why": "Rule 122: coasting removes engine braking, lets speed build quickly downhill and can affect steering and gear selection."
+    }
+  ],
+  "traps": [
+    "Choosing safety over an eco technique is correct: the examiner takes that into account.",
+    "Changing down when road speed is too high wastes fuel with no gain in safety.",
+    "Eco-safe driving has two headings on the report: control and planning."
+  ],
+  "sources": [
+    { "doc": "National standard for driving cars and light vans", "ref": "Element 4.2.3 (drive in an eco-safe way)", "url": "https://www.gov.uk/guidance/national-standard-for-driving-cars-and-light-vans-category-b" },
+    { "doc": "DVSA: Carrying out driving tests (DT1)", "ref": "1.33 Fuel efficient driving (control; planning)", "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-driving-tests-dt1" },
+    { "doc": "The Highway Code", "ref": "Rules 122 (coasting) and 123 (the driver and the environment)", "url": "https://www.gov.uk/guidance/the-highway-code/general-rules-techniques-and-advice-for-all-drivers-and-riders-103-to-158" }
+  ],
+  "jurisdictionNotes": [],
+  "review": { "status": "draft" }
+}

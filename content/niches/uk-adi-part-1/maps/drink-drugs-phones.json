@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "id": "drink-drugs-phones",
+  "niche": "uk-adi-part-1",
+  "area": "test-disabilities-law",
+  "order": 8,
+  "tier": "complete",
+  "officialTopics": [
+    "law"
+  ],
+  "title": "Drink, Drugs, Phones & Distraction",
+  "whatItIs": "Alcohol, drugs and hand-held devices all reduce a driver's control. The law sets limits and bans, and the phone ban also covers anyone supervising a learner.",
+  "keyFacts": [
+    {
+      "text": "You MUST NOT drive with alcohol above the legal limit. The limits in Scotland are lower.",
+      "law": true
+    },
+    {
+      "text": "You MUST NOT drive under the influence of drugs or medicine, or above set drug limits.",
+      "law": true
+    },
+    {
+      "text": "You MUST NOT use a hand-held phone when driving or supervising a learner, even when stopped in traffic.",
+      "law": true
+    },
+    {
+      "text": "You MUST keep proper control at all times, including with sat nav or driver assistance systems.",
+      "law": true
+    },
+    "Hand-held device offence: 6 points and a £200 fine. New drivers lose their licence."
+  ],
+  "visual": {
+    "type": "table",
+    "caption": "Drink-drive limits",
+    "data": {
+      "columns": [
+        "Alcohol measured in",
+        "England and Wales",
+        "Scotland"
+      ],
+      "rows": [
+        [
+          "Breath (microgrammes per 100 ml)",
+          "35",
+          "22"
+        ],
+        [
+          "Blood (milligrammes per 100 ml)",
+          "80",
+          "50"
+        ],
+        [
+          "Urine (milligrammes per 100 ml)",
+          "107",
+          "67"
+        ]
+      ],
+      "notes": []
+    }
+  },
+  "confused": {
+    "a": {
+      "label": "Illegal: hand-held use",
+      "points": [
+        "Calls, texts, photos, browsing, even offline or in flight mode",
+        "Also at traffic lights or queuing in traffic"
+      ]
+    },
+    "b": {
+      "label": "Allowed",
+      "points": [
+        "Hands-free (headset, voice, mount) if never held",
+        "Hand-held to call 999 or 112 when unsafe to stop, or when safely parked"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "Your pupil is waiting at a red light. You read a text on your hand-held phone. Which is correct?",
+      "options": [
+        "Illegal: the ban covers supervising a learner, even when stopped",
+        "Legal, because the car is stationary",
+        "Legal, if the phone is in flight mode",
+        "Only the pupil, as the driver, can be prosecuted"
+      ],
+      "answerIndex": 0,
+      "why": "Rule 149: you must not use a hand-held phone when driving or supervising a learner. The law applies when stopped at lights or offline."
+    },
+    {
+      "question": "An examiner has good reason to think a candidate is under the influence of drink. What does DT1 say to do?",
+      "options": [
+        "Call the police and end the test",
+        "Carry on and record a dangerous fault",
+        "Say they appear ill and the test can't go ahead, not mentioning drink",
+        "Ask the candidate to take a breath test"
+      ],
+      "answerIndex": 2,
+      "why": "DT1 6.49: the examiner says the candidate appears to be ill and the test cannot go ahead, avoiding any reference to drink or drugs."
+    }
+  ],
+  "traps": [
+    "Below the limit is not safe: alcohol reduces driving ability even under the legal limit.",
+    "You may still be unfit to drive the morning after drinking the previous evening.",
+    "Hands-free is legal but still distracting; it is far safer not to use any phone while driving.",
+    "A prescribed medicine over its limit: there is a medical defence only if driving was not impaired."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 95 and 96",
+      "url": "https://www.gov.uk/guidance/the-highway-code/rules-for-drivers-and-motorcyclists-89-to-102"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 149 and 150",
+      "url": "https://www.gov.uk/guidance/the-highway-code/general-rules-techniques-and-advice-for-all-drivers-and-riders-103-to-158"
+    },
+    {
+      "doc": "GOV.UK: The drink drive limit",
+      "ref": "Limits table",
+      "url": "https://www.gov.uk/drink-drive-limit"
+    },
+    {
+      "doc": "GOV.UK: Using a phone, sat nav or other device when driving",
+      "ref": "Exceptions; Using devices hands-free; Penalties",
+      "url": "https://www.gov.uk/using-mobile-phones-when-driving-the-law"
+    },
+    {
+      "doc": "DVSA: Carrying out driving tests (DT1)",
+      "ref": "6.49 Candidate suspected of being under the influence of drink or drugs",
+      "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-driving-tests-dt1/6-general-technical-matters"
+    }
+  ],
+  "jurisdictionNotes": [
+    {
+      "jurisdiction": "scotland",
+      "text": "Lower drink-drive limits: 22 microgrammes per 100 ml of breath, 50 mg per 100 ml of blood."
+    }
+  ],
+  "review": {
+    "status": "draft"
+  }
+}

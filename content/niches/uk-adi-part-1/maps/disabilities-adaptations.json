@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "id": "disabilities-adaptations",
+  "niche": "uk-adi-part-1",
+  "area": "test-disabilities-law",
+  "order": 5,
+  "tier": "basic",
+  "officialTopics": [
+    "disabilities"
+  ],
+  "title": "Disabilities, Adaptations & Test Support",
+  "whatItIs": "Candidates should declare a disability when booking. They drive to the same standard to pass, but the examiner adapts and can restrict the licence to adapted cars.",
+  "keyFacts": [
+    "Examiners ask about adaptations and how they work, and complete form D255, pass or fail.",
+    "If the pupil can only drive with adaptations, restriction codes go on the pass certificate.",
+    "With a code on the licence, driving without that adaptation breaks the law.",
+    "Deaf candidates: written notes at the start, directions usually by hand signals.",
+    "Electric and semi-automatic cars count as automatics for test and licence."
+  ],
+  "visual": {
+    "type": "table",
+    "caption": "Common licence restriction codes for adapted cars (DT1 8.07)",
+    "data": {
+      "columns": [
+        "Code",
+        "Adaptation",
+        "Example"
+      ],
+      "rows": [
+        [
+          "10",
+          "Modified transmission",
+          "Automatic selection of gear ratio"
+        ],
+        [
+          "15",
+          "Modified clutch",
+          "Hand lever on the gearstick"
+        ],
+        [
+          "20",
+          "Modified braking",
+          "Hand or knee operated brake"
+        ],
+        [
+          "40",
+          "Modified steering",
+          "Steering ball or other device"
+        ]
+      ],
+      "notes": []
+    }
+  },
+  "confused": {
+    "a": {
+      "label": "Code 10: modified transmission",
+      "points": [
+        "The driver needs automatic gear selection because of a disability",
+        "A restriction linked to the disability"
+      ]
+    },
+    "b": {
+      "label": "Code 78: automatic",
+      "points": [
+        "Administrative code",
+        "The driver simply passed the test in an automatic car"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "A disabled pupil passes their test in a car with a hand-operated brake and accelerator. What happens to the pass?",
+      "options": [
+        "A normal pass, with no restrictions",
+        "No pass until they test in an unadapted car",
+        "A pass for automatic cars only",
+        "Restriction codes for the adaptations go on the pass certificate"
+      ],
+      "answerIndex": 3,
+      "why": "DT1 8.05: if the examiner considers the candidate can only drive a vehicle with suitable adaptations, the restriction code is entered on the pass certificate (DVSA10)."
+    },
+    {
+      "question": "A deaf pupil wants a British Sign Language interpreter on their car test. What is correct?",
+      "options": [
+        "They must be at least 16 and can be the pupil's ADI",
+        "DVSA provides and pays for the interpreter",
+        "Interpreters are not allowed on the car test",
+        "They must be at least 21 and hold a full licence"
+      ],
+      "answerIndex": 0,
+      "why": "A BSL interpreter must be at least 16 and the driving instructor can be the interpreter. The candidate arranges and pays, and can claim the cost back."
+    }
+  ],
+  "traps": [
+    "Foreign language interpreters are not allowed on test; special needs interpreters for deaf candidates are.",
+    "Being very tall or very short is not in itself a disability: no restriction and no D255.",
+    "Pregnant candidates can test at any stage, but must be able and willing to do an emergency stop.",
+    "Left-foot braking in an automatic is only a fault if the footbrake is used against the accelerator."
+  ],
+  "sources": [
+    {
+      "doc": "GOV.UK: Driving test: cars",
+      "ref": "If you have a disability, health condition or learning difficulty",
+      "url": "https://www.gov.uk/driving-test/disability-health-condition-or-learning-difficulty"
+    },
+    {
+      "doc": "DVSA: Carrying out driving tests (DT1)",
+      "ref": "8.01, 8.05, 8.07 to 8.09, 8.15, 8.16 (important note)",
+      "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-driving-tests-dt1/8-candidates-with-a-disability-health-condition-or-learning-difficulty"
+    },
+    {
+      "doc": "DVSA: Carrying out driving tests (DT1)",
+      "ref": "7.05, 7.06 and 7.09 (automatic transmission, electric vehicles)",
+      "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-driving-tests-dt1/7-particular-types-of-vehicle-and-adaptations"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}

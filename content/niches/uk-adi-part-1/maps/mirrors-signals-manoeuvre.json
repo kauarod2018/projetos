@@ -9,38 +9,37 @@
     "road-procedure"
   ],
   "title": "Mirrors, Signals & Manoeuvre (MSM/PSL)",
-  "whatItIs": "The structured routine examiners expect at every junction or hazard: Mirrors, Signal, Manoeuvre, where the manoeuvre itself is Position, Speed, Look.",
+  "whatItIs": "The routine examiners expect at every junction or hazard: Mirrors, Signal, Manoeuvre, where the manoeuvre is Position, Speed, Look.",
   "keyFacts": [
-    "Use your mirrors in good time before you signal, change direction or change speed.",
-    "Mirrors don't cover every area: look round to check the blind spots before you move.",
-    "Signal only when it helps other road users (including pedestrians), give it in good time and cancel it after use.",
-    "A signal never gives you priority. To stop just after a side road, don't signal until you're passing it.",
-    "The national standard asks for a safe, systematic routine such as 'mirrors, signal, manoeuvre, position, speed, look'.",
-    "Habitually missing mirror checks can be judged serious: one repeated driving fault can fail a test."
+    "Use the mirrors in good time before you signal, change direction or change speed.",
+    "Mirrors have blind spots: look round to check them before you move.",
+    "Signal only if it helps others (pedestrians too), in good time, and cancel it after use.",
+    "A signal never gives you priority. Stopping just after a side road? Signal as you pass it.",
+    "Habitually missing mirror checks can be judged serious: a repeated fault can fail a test."
   ],
   "visual": {
     "type": "steps",
-    "caption": "The MSM/PSL routine as DT1 defines it (the 'manoeuvre' is P-S-L)",
+    "caption": "The MSM/PSL routine as DT1 defines it",
     "items": [
       {
         "title": "M: Mirrors",
-        "text": "Check the mirrors to assess the speed and position of vehicles behind."
+        "text": "Speed and position of traffic behind."
       },
       {
         "title": "S: Signal",
-        "text": "Signal clearly and in good time, if it would help another road user."
+        "text": "Clearly, in good time, if it helps."
       },
       {
         "title": "P: Position",
-        "text": "Position the vehicle correctly and in good time."
+        "text": "Correctly and in good time."
       },
       {
         "title": "S: Speed",
-        "text": "Adjust your speed as necessary."
+        "text": "Adjust it as necessary."
       },
       {
         "title": "L: Look",
-        "text": "Look for other traffic, assess the situation and act accordingly."
+        "text": "Assess, then act accordingly."
       }
     ]
   },
@@ -48,68 +47,62 @@
     "a": {
       "label": "Driving fault (DT1 examples)",
       "points": [
-        "Late use of the exterior mirror before changing direction",
-        "Signal cancelled before the change of direction was complete"
+        "Late exterior mirror check before changing direction",
+        "Signal cancelled before the turn was complete"
       ]
     },
     "b": {
       "label": "Serious fault (DT1 examples)",
       "points": [
-        "No exterior mirror check before a significant change of direction",
-        "An essential signal left out when changing direction"
+        "No exterior mirror check before a big change of direction",
+        "An essential signal left out"
       ]
     }
   },
   "onTheTest": [
     {
-      "question": "A pupil turning left checks only the interior mirror, signals and turns. A cyclist was coming up on the left. What should they have done?",
+      "question": "A pupil turning left checks only the interior mirror and misses a cyclist on the left. What was missing?",
       "options": [
-        "Checked the left mirror before signalling and watched the left before turning",
-        "Signalled earlier and then turned without checking again",
-        "Sounded the horn as they started to turn",
-        "Checked the mirrors after completing the turn"
+        "The left mirror and the left side",
+        "An earlier signal",
+        "The horn",
+        "Mirrors after turning"
       ],
       "answerIndex": 0,
-      "why": "Rule 161: use mirrors in good time before you signal or change direction. Rule 182: watch for traffic coming up on your left before turning left; cyclists may be hidden from view."
+      "why": "Rules 161 and 182: mirrors before signalling or turning, and watch for traffic coming up on your left."
     },
     {
-      "question": "Your pupil wants to pull up just after a side road on the left. When should they signal left?",
+      "question": "Your pupil wants to stop just after a side road on the left. When should they signal?",
       "options": [
-        "Well before reaching the side road",
-        "As they are passing the side road",
-        "Only once they have stopped",
-        "Never: a signal is not needed to stop"
+        "Well before the side road",
+        "As they pass the side road",
+        "Once stopped",
+        "Never"
       ],
       "answerIndex": 1,
-      "why": "Rule 103: if you want to stop after a side road, don't signal until you are passing it. An earlier signal may suggest you are turning into it."
+      "why": "Rule 103: don't signal until you are passing the side road, or others may think you're turning into it."
     }
   ],
   "traps": [
-    "Signalling isn't automatic: DT1 lists 'signalling unnecessarily' as a fault. Signal when it would help someone.",
-    "Mirrors before signal: arriving at a junction and then signalling, or signalling after starting to move, is mistimed.",
-    "Looking isn't enough: DT1 records 'using the mirrors but not reacting to the information'.",
-    "Never beckon pedestrians or flash headlights to invite others to go: both are faults on test."
+    "DT1 lists 'signalling unnecessarily' as a fault: signal when it would help someone.",
+    "Mirrors before signal: signalling on arrival at a junction, or after starting the manoeuvre, is mistimed.",
+    "DT1 also records 'using the mirrors but not reacting to the information'."
   ],
   "sources": [
     {
       "doc": "The Highway Code",
-      "ref": "Rules 103, 110, 161, 182",
+      "ref": "Rules 103, 161, 182",
       "url": "https://www.gov.uk/guidance/the-highway-code"
     },
     {
       "doc": "DVSA: National standard for driving cars and light vans (category B)",
-      "ref": "Element 2.2.5 (Manoeuvre the vehicle); Element 4.1.1 (Communicate intentions)",
+      "ref": "Element 2.2.5",
       "url": "https://www.gov.uk/guidance/national-standard-for-driving-cars-and-light-vans-category-b"
     },
     {
       "doc": "DVSA: Carrying out driving tests: examiner guidance (DT1)",
-      "ref": "11.03 Defined outcome (MSM/PSL); 11.05 Low and high risk; 11.11 Use of mirrors, Signals",
+      "ref": "11.03, 11.05, 11.11; 12 Use of mirrors, Signals",
       "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-driving-tests-dt1/11-guide-to-assessment-and-marking"
-    },
-    {
-      "doc": "DVSA: Carrying out driving tests: examiner guidance (DT1)",
-      "ref": "12 Use of mirrors; Signals (correctly, properly timed)",
-      "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-driving-tests-dt1/12-finding-and-recording-faults-on-the-digital-test-report"
     }
   ],
   "jurisdictionNotes": [],

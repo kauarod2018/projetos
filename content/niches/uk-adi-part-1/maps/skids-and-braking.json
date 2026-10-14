@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "id": "skids-and-braking",
+  "niche": "uk-adi-part-1",
+  "area": "signs-control-mechanics",
+  "order": 6,
+  "tier": "complete",
+  "officialTopics": ["car-control"],
+  "title": "Braking, Skidding & ABS",
+  "whatItIs": "Brake early and lightly, firmer as you stop. Skids are usually caused by the driver: remove the cause, then steer to recover.",
+  "keyFacts": [
+    "Normal braking: early and light, firmer as you stop, easing off just before the car comes to rest.",
+    "Skids usually come from harsh braking, accelerating or steering, or a speed too fast for the conditions.",
+    "In a skid, release the brake or ease off the accelerator, and steer into it: rear goes right, steer right.",
+    "ABS emergency: brake firmly and hold the pressure until you've slowed. ABS helps you keep steering.",
+    "After deep water, test the brakes gently. If weak, apply light pressure while driving slowly to dry them."
+  ],
+  "visual": {
+    "type": "stats",
+    "caption": "Gaps and stopping",
+    "items": [
+      { "value": "2 sec", "label": "minimum gap on high-speed roads", "note": "And in tunnels with reduced visibility" },
+      { "value": "× 2", "label": "gap on wet roads (at least)", "note": "Stopping distances at least double" },
+      { "value": "× 10", "label": "gap on icy roads (up to)", "note": "Stopping distances can be ten times greater" },
+      { "value": "1 in 7", "label": "car tests with an emergency stop", "note": "Chosen at random" }
+    ]
+  },
+  "confused": {
+    "a": {
+      "label": "Emergency stop, no ABS",
+      "points": ["Brake immediately", "Avoid braking so harshly the wheels lock"]
+    },
+    "b": {
+      "label": "Emergency stop with ABS",
+      "points": ["Brake firmly; keep the pressure on", "Steering kept, but not always a shorter stop"]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "The rear of your car skids to the left. What should you do?",
+      "options": ["Ease off the cause and steer left", "Brake harder and steer right", "Steer right and accelerate", "Pull the parking brake"],
+      "answerIndex": 0,
+      "why": "Rule 119: remove the cause by releasing the brake or easing off the accelerator, and turn the steering wheel in the direction of the skid."
+    },
+    {
+      "question": "On a car test, the wheels lock briefly in the emergency stop, but the candidate regains control. How is this assessed?",
+      "options": ["A driving fault", "Not recorded", "A serious fault", "A dangerous fault"],
+      "answerIndex": 0,
+      "why": "DT1 section 11 (Controlled stop): locking the wheels and skidding a short distance while regaining control is a driving fault."
+    }
+  ],
+  "traps": [
+    "ABS doesn't promise a shorter stop: don't assume it.",
+    "Applying the handbrake before stopping in the emergency stop is a recorded fault.",
+    "Steering unresponsive in the wet? Water may be stopping grip: ease off and slow gradually."
+  ],
+  "sources": [
+    { "doc": "The Highway Code", "ref": "Rules 117–121 (braking, skids, ABS, water); Rule 126 (stopping distances)", "url": "https://www.gov.uk/guidance/the-highway-code/general-rules-techniques-and-advice-for-all-drivers-and-riders-103-to-158" },
+    { "doc": "The Highway Code", "ref": "Rules 227, 230–231 (wet, icy and snowy weather)", "url": "https://www.gov.uk/guidance/the-highway-code/driving-in-adverse-weather-conditions-226-to-237" },
+    { "doc": "DVSA: Carrying out driving tests (DT1)", "ref": "1.26 Emergency stop; 11.11 Controlled stop; 12.02 Controlled stop", "url": "https://www.gov.uk/guidance/guidance-for-driving-examiners-carrying-out-driving-tests-dt1" },
+    { "doc": "National standard for driving cars and light vans", "ref": "Elements 2.1.3 and 2.2.5 (ABS, skids)", "url": "https://www.gov.uk/guidance/national-standard-for-driving-cars-and-light-vans-category-b" }
+  ],
+  "jurisdictionNotes": [],
+  "review": { "status": "draft" }
+}

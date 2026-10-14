@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "id": "pedestrian-crossings",
+  "niche": "uk-adi-part-1",
+  "area": "signs-control-mechanics",
+  "order": 4,
+  "tier": "basic",
+  "officialTopics": [
+    "vulnerable-road-users",
+    "traffic-signs"
+  ],
+  "title": "Pedestrian Crossings",
+  "whatItIs": "Zebra and parallel crossings have no lights for traffic; the others are signal-controlled.",
+  "keyFacts": [
+    {
+      "text": "You MUST NOT park on a crossing or in the zig-zag area, before or after it.",
+      "law": true
+    },
+    {
+      "text": "You MUST NOT overtake the moving vehicle nearest the crossing, or one stopped to give way.",
+      "law": true
+    },
+    {
+      "text": "A straight-across pelican is one crossing even with an island: you MUST wait for people coming from the far side.",
+      "law": true
+    },
+    "A zebra with a central island, or a staggered signal crossing, is two separate crossings.",
+    "Give way to anyone still crossing after your signal changes to green, at any crossing."
+  ],
+  "visual": {
+    "type": "table",
+    "caption": "What traffic sees at each crossing",
+    "data": {
+      "columns": [
+        "Crossing",
+        "Signals for traffic",
+        "Your duty"
+      ],
+      "rows": [
+        [
+          "Zebra",
+          "None: flashing beacons",
+          "MUST give way once a pedestrian is on it"
+        ],
+        [
+          "Parallel",
+          "None: zebra plus cycle route",
+          "MUST give way to pedestrians and cyclists on it"
+        ],
+        [
+          "Pelican",
+          "Red, then flashing amber",
+          "Flashing amber: MUST give way to anyone on it"
+        ],
+        [
+          "Puffin",
+          "Normal sequence, no flashing amber",
+          "Sensors vary the crossing time"
+        ],
+        [
+          "Toucan",
+          "Normal sequence",
+          "Pedestrians and cyclists cross together"
+        ],
+        [
+          "Equestrian",
+          "Normal sequence",
+          "For horse riders: wider crossing space"
+        ]
+      ],
+      "notes": []
+    }
+  },
+  "confused": {
+    "a": {
+      "label": "Pelican",
+      "points": [
+        "Flashing amber follows the red",
+        "Green figure flashes before red",
+        "No longer installed, many remain"
+      ]
+    },
+    "b": {
+      "label": "Puffin",
+      "points": [
+        "No flashing amber: normal lights",
+        "Signals above the button, on the near side"
+      ]
+    }
+  },
+  "onTheTest": [
+    {
+      "question": "At a pelican crossing the amber light is flashing and a pedestrian is still crossing. What must you do?",
+      "options": [
+        "Give way to the pedestrian",
+        "Drive on carefully behind them",
+        "Sound the horn to warn them",
+        "Move off as the amber starts"
+      ],
+      "answerIndex": 0,
+      "why": "Rule 196: when the amber is flashing you MUST give way to any pedestrians on the crossing. Go on with caution only if it's clear."
+    },
+    {
+      "question": "Your pupil waves a pedestrian across a zebra crossing. How should you explain why this is wrong?",
+      "options": [
+        "Another vehicle may come and not stop",
+        "Only police may wave people over",
+        "Pedestrians must wait for a gap",
+        "Waving is only allowed at night"
+      ],
+      "answerIndex": 0,
+      "why": "Rule 195: don't wave, flash your lights or sound your horn to invite people across: it could be dangerous if another vehicle is approaching."
+    }
+  ],
+  "traps": [
+    "Zebra: traffic must stop once someone is on it, but you should give way to people waiting.",
+    "Toucan, puffin and equestrian crossings have no flashing amber phase.",
+    "Don't rev your engine or edge forward to hurry pedestrians."
+  ],
+  "sources": [
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 191–199 (pedestrian crossings)",
+      "url": "https://www.gov.uk/guidance/the-highway-code/using-the-road-159-to-203"
+    },
+    {
+      "doc": "The Highway Code",
+      "ref": "Rules 19–28 (crossings, pedestrians); Rule H2",
+      "url": "https://www.gov.uk/guidance/the-highway-code/rules-for-pedestrians-1-to-35"
+    },
+    {
+      "doc": "Know Your Traffic Signs",
+      "ref": "Pedestrian, cycle and equestrian crossings (pp. 143–149)",
+      "url": "https://www.gov.uk/government/publications/know-your-traffic-signs"
+    }
+  ],
+  "jurisdictionNotes": [],
+  "review": {
+    "status": "draft"
+  }
+}
