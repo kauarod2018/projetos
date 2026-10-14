@@ -29,18 +29,18 @@
       "rows": [
         [
           "Part 1: theory",
-          "100 questions, then hazard perception",
-          "85/100 and 20/25 per band; 57/75"
+          "100 questions + hazard perception",
+          "85/100, 20/25 per band; HP 57/75"
         ],
         [
           "Part 2: driving",
           "About 1 hour; eyesight at 27 m",
-          "6 driving faults at most; no serious or dangerous"
+          "Max 6 driving faults; no serious/dangerous"
         ],
         [
           "Part 3: teaching",
-          "About 45-minute lesson; 17 competencies",
-          "31 or more out of 51; over 7 in risk management"
+          "About 45-minute lesson",
+          "31+ of 51; 8+ in risk management"
         ]
       ],
       "notes": []
@@ -51,8 +51,7 @@
       "label": "Trainee licence (pink badge)",
       "points": [
         "After part 2 and 40 hours' training; lasts 6 months",
-        "20% of lessons supervised, or 20 hours of extra training",
-        "Only from your training establishment"
+        "20% of lessons supervised, or 20 hours' extra training"
       ]
     },
     "b": {
@@ -73,7 +72,7 @@
         "Fail, because the total is below 43"
       ],
       "answerIndex": 1,
-      "why": "You automatically fail ADI part 3 if you score 7 or less in the risk management category, whatever your total. 31 to 42 would otherwise be grade B."
+      "why": "Scoring 7 or less in risk management is an automatic fail, whatever the total. Otherwise 31 to 42 would be grade B."
     },
     {
       "question": "A trainee licence holder chooses option 1 (supervision). What must they do?",
@@ -84,7 +83,7 @@
         "Be supervised by their sponsoring ADI for 20% of all lessons"
       ],
       "answerIndex": 3,
-      "why": "Option 1 means supervision by the sponsoring ADI for 20% of all lessons given, recorded on form ADI 21S. Option 2 is at least 20 hours of extra training."
+      "why": "Option 1 is supervision by the sponsoring ADI for 20% of all lessons given, recorded on form ADI 21S. Option 2 is at least 20 hours of extra training."
     }
   ],
   "traps": [
