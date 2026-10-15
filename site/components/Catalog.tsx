@@ -34,6 +34,8 @@ export function Catalog({ items, categories, countries, labels, tail }: Props) {
   const shown = items.filter((i) => matches(f, i));
   const shelves = categories.map((c) => ({ ...c, items: shown.filter((i) => i.cat === c.slug) })).filter((c) => c.items.length);
   const filtered = Boolean(f.q.trim() || f.country || f.cat);
+  // while every category holds only one or two guides, one grid reads better than near-empty shelves
+  const oneGrid = shelves.length > 0 && shelves.every((s) => s.items.length < 3);
   const set = (next: Partial<ShopFilter>) => applyFilter({ ...f, ...next }, { scroll: false });
   const country = countries.find((c) => c.code === f.country);
 
@@ -72,7 +74,16 @@ export function Catalog({ items, categories, countries, labels, tail }: Props) {
         </div>
       ) : null}
 
-      {shelves.map((s, i) => (
+      {oneGrid ? (
+        <ul className="pgrid">
+          {shelves.flatMap((s) => s.items).map((it) => (
+            <li key={it.id}>{it.card}</li>
+          ))}
+          <li>{tail}</li>
+        </ul>
+      ) : null}
+
+      {(oneGrid ? [] : shelves).map((s, i) => (
         <section className="shelf" key={s.slug} aria-labelledby={`shelf-${s.slug}`}>
           <header className="shelf-head">
             <h3 id={`shelf-${s.slug}`}>{s.name}</h3>

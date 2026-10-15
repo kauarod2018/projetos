@@ -2515,3 +2515,8 @@ input:focus-visible + .plan-text {
     transition: none !important;
   }
 }
+
+/* single grid (few guides per category): keep the chips off the cards */
+.catalog > .pgrid {
+  margin-top: 24px;
+}

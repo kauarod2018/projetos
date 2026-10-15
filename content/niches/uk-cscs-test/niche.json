@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "uk-cscs-test",
   "examName": "CSCS Health, Safety & Environment Test",
-  "published": false,
+  "published": true,
   "filePrefix": "CSCS-HSE-Test",
   "store": {
     "category": "Construction",
@@ -30,7 +30,7 @@
       "Great Britain"
     ],
     "badge": "New",
-    "rank": 3
+    "rank": 4
   },
   "theme": {
     "primary": "#7C2D12",

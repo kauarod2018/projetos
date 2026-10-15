@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "uk-adi-part-1",
   "examName": "ADI Part 1 Theory Test",
-  "published": false,
+  "published": true,
   "filePrefix": "ADI-Part-1",
   "store": {
     "category": "Driving instructors",

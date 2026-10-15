@@ -32,7 +32,7 @@
       "Great Britain"
     ],
     "badge": "New",
-    "rank": 2
+    "rank": 3
   },
   "theme": {
     "primary": "#1F2937",
@@ -194,5 +194,5 @@
     "Contains public sector information licensed under the Open Government Licence v3.0 (The Highway Code; Know Your Traffic Signs; GOV.UK guidance; legislation.gov.uk).",
     "All practice questions are original and are not taken from the official DVSA question bank."
   ],
-  "published": false
+  "published": true
 }
