@@ -1,31 +1,27 @@
-# Mente Ativa — Kit de Jogos Recortáveis para Idosos
+# Mente Ativa — Coleção de Jogos e Desafios para Imprimir
 
-Produto digital low ticket: um PDF de 31 páginas, para imprimir e recortar, feito para filhos e cuidadores jogarem junto com idosos.
-
-## O que tem aqui
+Produto digital low ticket para filhos e cuidadores de idosos: um PDF de 45 páginas, com visual adulto, dividido em 5 partes.
 
 | Caminho | O quê |
 |---|---|
-| `dist/Kit-Mente-Ativa-Jogos-Recortaveis.pdf` | **O produto** (é o arquivo que o cliente recebe) |
-| `pagina-de-vendas/index.html` | Página de vendas pronta (responsiva) |
-| `pagina-de-vendas/img/` | Prévias das páginas do kit, geradas automaticamente |
-| `src/conteudo.mjs` | Todas as figuras, palavras, ditados e perguntas |
-| `src/cenas.mjs` | Ilustrações dos quebra-cabeças (SVG) |
-| `src/build.mjs` | Gera o PDF e as prévias |
+| `dist/Kit-Mente-Ativa.pdf` | **O produto** (é o arquivo que o cliente recebe) |
+| `pagina-de-vendas/` | Página de vendas (ainda descreve a versão anterior do kit) |
+| `src/conteudo.mjs` | Textos: sequências, enigmas, temas, ditados, problemas de xadrez, palitos |
+| `src/geradores.mjs` | Sudoku (solução única), caça-palavras, pirâmides e cortes de encaixe |
+| `src/tangram.mjs` | Peças e figuras do tangram, com validação geométrica |
+| `src/cenas.mjs` | Ilustrações dos quebra-cabeças |
+| `src/build.mjs` | Layout e geração do PDF |
 
-## Conteúdo do kit
+## Conteúdo
 
-1. Jogo da Memória (12 pares)
-2. Dominó de Figuras (28 peças)
-3. Bingo das Lembranças (6 cartelas + 24 fichas)
-4. O que combina com o quê? (12 pares de associação)
-5. Sequências do Dia a Dia (4 histórias de 4 passos)
-6. Complete o Ditado (12 ditados populares)
-7. Quebra-cabeças (6 e 12 peças)
-8. Cartas de Conversa (24 perguntas de memória afetiva)
+- **Parte I · Raciocínio:** 6 sudokus (fácil, médio, difícil), 16 sequências lógicas, 4 pirâmides de soma, 10 enigmas
+- **Parte II · Palavras:** 4 caça-palavras temáticos, 20 anagramas, 15 ditados para completar
+- **Parte III · Quebra-cabeças:** 3 ilustrações com cortes de encaixe (12, 20 e 30 peças)
+- **Parte IV · Desafios:** tangram (7 peças + 6 figuras), torre de Hanói, desafios com palitos
+- **Parte V · Jogos de tabuleiro:** dominó (28 peças), xadrez (regras, tabuleiro, 32 peças, 6 problemas de mate em 1), damas brasileiras, trilha
 
-Além disso: boas-vindas com guia para o cuidador, sumário, ficha de acompanhamento e gabarito.
-Cada jogo tem uma página de instruções com níveis "para facilitar" e "para desafiar".
+Além disso: apresentação com guia para quem acompanha, sumário, registro de atividades e respostas de tudo.
+Os problemas de xadrez e o tangram são conferidos automaticamente no build (o build falha se algum estiver errado).
 
 ## Como editar e gerar de novo
 
@@ -34,7 +30,7 @@ npm install
 npm run build
 ```
 
-Edite `src/conteudo.mjs` para trocar figuras ou textos. O build recria o PDF em `dist/` e as imagens em `pagina-de-vendas/img/`.
+Edite `src/conteudo.mjs` para trocar figuras ou textos. O build recria o PDF em `dist/`.
 
 ## Antes de publicar a página de vendas
 
