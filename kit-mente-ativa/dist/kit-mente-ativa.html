@@ -1,0 +1,730 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">
+<title>Mente Ativa – Kit de Jogos Recortáveis para Idosos</title><style>
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { font-family: 'Inter', 'DejaVu Sans', sans-serif; color: #2B2522; background: #fff; }
+.emo, .selo, .capa-emojis, .sum-e, .dicas-grid span { font-family: 'Noto Color Emoji', sans-serif; }
+.page { width: 210mm; height: 297mm; padding: 11mm 11mm 14mm; position: relative; overflow: hidden;
+  page-break-after: always; display: flex; flex-direction: column; background: #FFFCF7; }
+footer { position: absolute; left: 11mm; right: 11mm; bottom: 6mm; display: flex; justify-content: space-between;
+  font-size: 8.5pt; color: #9A8F87; }
+
+/* capa */
+.pag-capa { padding: 0; background: #FFF4E6; }
+.capa { height: 100%; display: flex; flex-direction: column; }
+.capa-emojis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 7mm; padding: 18mm 18mm 8mm; font-size: 64px; text-align: center; }
+.capa-emojis span { background: #fff; border-radius: 22px; padding: 6mm 0; box-shadow: 0 2px 0 #F1D9BF; }
+.capa-emojis span:nth-child(3n+1) { transform: rotate(-4deg); } .capa-emojis span:nth-child(3n+2) { transform: rotate(3deg); }
+.capa-texto { flex: 1; background: #E4572E; color: #fff; padding: 14mm 18mm; border-radius: 40px 40px 0 0; }
+.capa-kicker { text-transform: uppercase; letter-spacing: .14em; font-size: 12pt; font-weight: 700; opacity: .85; }
+.capa h1 { font-family: 'Inter Display', 'Inter'; font-weight: 900; font-size: 66pt; line-height: 1; margin: 3mm 0 2mm; }
+.capa h2 { font-weight: 700; font-size: 22pt; line-height: 1.2; }
+.capa-chamada { font-size: 15pt; margin-top: 5mm; max-width: 150mm; line-height: 1.4; }
+.capa-lista { list-style: none; display: flex; gap: 4mm; margin-top: 9mm; flex-wrap: wrap; }
+.capa-lista li { background: #fff; color: #C2401C; font-weight: 800; padding: 3mm 5mm; border-radius: 99px; font-size: 12pt; }
+
+/* páginas de texto */
+.titulo-pag { font-family: 'Inter Display', 'Inter'; font-size: 30pt; font-weight: 900; color: #C2401C; margin-bottom: 5mm; }
+.lead { font-size: 14pt; line-height: 1.45; margin-bottom: 3mm; }
+.lead.pequeno { font-size: 12pt; margin-bottom: 5mm; }
+.page > p { font-size: 12pt; line-height: 1.5; }
+.sub { font-size: 16pt; margin: 7mm 0 3mm; color: #2B2522; }
+.passos { padding-left: 0; list-style: none; counter-reset: p; }
+.passos li { counter-increment: p; position: relative; padding-left: 11mm; margin-bottom: 3mm; font-size: 13pt; line-height: 1.45; }
+.passos li::before { content: counter(p); position: absolute; left: 0; top: -.5mm; width: 7.5mm; height: 7.5mm; border-radius: 50%;
+  background: var(--cor, #E4572E); color: #fff; font-weight: 800; display: grid; place-items: center; font-size: 11pt; }
+.dicas-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5mm; }
+.dicas-grid div { display: flex; gap: 3mm; align-items: flex-start; background: #fff; border: 1px solid #F0E2D2; border-radius: 12px; padding: 3mm 4mm; }
+.dicas-grid span { font-size: 22pt; line-height: 1; }
+.dicas-grid p { font-size: 11pt; line-height: 1.4; }
+.aviso { margin-top: auto; font-size: 9.5pt !important; color: #7A6F68; border-top: 1px solid #E8DCCD; padding-top: 3mm; }
+
+.sumario { display: grid; gap: 3.5mm; }
+.item-sum { display: flex; align-items: center; gap: 5mm; background: #fff; border-radius: 14px; padding: 4mm 6mm; border-left: 8px solid var(--cor); }
+.sum-n { font-size: 20pt; font-weight: 900; color: var(--cor); width: 9mm; }
+.sum-e { font-size: 26pt; }
+.sum-t { font-size: 16pt; font-weight: 800; display: flex; flex-direction: column; }
+.sum-t small { font-size: 10.5pt; font-weight: 600; color: #8A7F78; }
+.extras { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; margin-top: 6mm; }
+.extras div { background: #FFF1E3; border-radius: 14px; padding: 4mm 5mm; font-size: 11pt; line-height: 1.4; }
+.extras b { font-size: 12.5pt; }
+
+/* aberturas */
+.abertura { background: var(--cor); color: #fff; border-radius: 20px; padding: 8mm 9mm 7mm; position: relative; margin-bottom: 6mm; }
+.abertura .num { text-transform: uppercase; letter-spacing: .15em; font-weight: 800; font-size: 11pt; opacity: .85; }
+.abertura h1 { font-family: 'Inter Display', 'Inter'; font-size: 30pt; font-weight: 900; line-height: 1.1; margin: 1mm 0 5mm; max-width: 130mm; }
+.selo { position: absolute; right: 8mm; top: 7mm; font-size: 56px; background: #fff; border-radius: 50%; width: 30mm; height: 30mm; display: grid; place-items: center; }
+.info { list-style: none; display: flex; gap: 3mm; }
+.info li { background: rgba(255,255,255,.18); border-radius: 10px; padding: 2mm 4mm; font-size: 11.5pt; display: flex; flex-direction: column; }
+.info b { font-size: 8.5pt; text-transform: uppercase; letter-spacing: .08em; opacity: .85; }
+.corpo { display: flex; flex-direction: column; gap: 4mm; flex: 1; }
+.duas { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+.bloco { background: #fff; border: 1px solid #EFE4D8; border-radius: 14px; padding: 4mm 5mm; }
+.bloco h3 { color: var(--cor); font-size: 13.5pt; margin-bottom: 2.5mm; }
+.bloco ul { padding-left: 5mm; } .bloco li { font-size: 12.5pt; line-height: 1.45; margin-bottom: 1mm; }
+.bloco p { font-size: 12.5pt; line-height: 1.45; }
+.dica { background: #FFF5D6; border-radius: 14px; padding: 4mm 5mm; margin-top: auto; }
+.dica b { font-size: 13.5pt; } .dica p { font-size: 12.5pt; line-height: 1.45; margin-top: 1.5mm; }
+.refs { display: flex; gap: 6mm; justify-content: center; }
+.mini { height: 52mm; border-radius: 8px; box-shadow: 0 0 0 1px #E8DCCD; }
+
+/* cartas */
+.topo-cartas { display: flex; align-items: baseline; gap: 4mm; margin-bottom: 4mm; padding-bottom: 2mm; border-bottom: 3px solid var(--cor); }
+.topo-cartas strong { font-size: 15pt; color: var(--cor); }
+.topo-cartas span { font-size: 11pt; color: #7A6F68; }
+.topo-cartas em { margin-left: auto; font-style: normal; font-size: 10pt; color: #7A6F68; }
+.grade { flex: 1; display: grid; grid-template-columns: repeat(var(--cols), 1fr); grid-template-rows: repeat(var(--rows), 1fr); }
+.carta { outline: 1.3px dashed #8F8680; outline-offset: -0.65px; background: #fff; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 2mm; padding: 3mm; text-align: center; position: relative; }
+.grade > .carta::after { content: ''; position: absolute; inset: 3.5mm; border: 2.5px solid var(--cor); border-radius: 12px; opacity: .55; pointer-events: none; }
+.carta .emo { font-size: 74px; line-height: 1; }
+.carta .pal { font-size: 17pt; font-weight: 800; }
+.carta.pequena .emo { font-size: 44px; } .carta.pequena .pal { font-size: 12pt; }
+.carta.seq { padding: 6mm 4mm; } .carta.seq::after { border-color: var(--borda) !important; border-width: 4px !important; opacity: 1 !important; }
+.carta.seq small { font-size: 9pt; font-weight: 700; color: var(--borda); text-transform: uppercase; letter-spacing: .05em; }
+.carta.seq .emo { font-size: 58px; } .carta.seq .pal { font-size: 13.5pt; line-height: 1.2; }
+.carta.texto span { font-size: 18pt; font-weight: 800; line-height: 1.25; padding: 0 5mm; }
+.carta.texto.final { background: #E3F4EF; }
+.carta.conversa { justify-content: flex-start; align-items: flex-start; text-align: left; padding: 8mm 9mm; }
+.carta.conversa .cat { font-size: 11pt; font-weight: 800; color: var(--cor); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 3mm; }
+.carta.conversa p { font-size: 17pt; font-weight: 700; line-height: 1.3; }
+
+.grade-domino { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(7, 1fr); }
+.peca { outline: 1.3px dashed #8F8680; outline-offset: -0.65px; display: flex; align-items: stretch; padding: 3mm; background: #fff; }
+.peca > div { flex: 1; display: flex; }
+.peca > div > .carta { flex: 1; outline: none; padding: 0; gap: 0; }
+.peca .carta .emo { font-size: 52px; } .peca .carta .pal { font-size: 10pt; font-weight: 700; color: #7A6F68; }
+.peca { position: relative; } .peca::after { content: ''; position: absolute; inset: 3mm; border: 3px solid var(--cor); border-radius: 12px; }
+.peca i { width: 3px; background: var(--cor); margin: 2mm 0; }
+
+.cartelas { flex: 1; display: grid; grid-template-rows: 1fr 1fr; gap: 6mm; }
+.cartela { outline: 1.3px dashed #8F8680; padding: 4mm; display: flex; flex-direction: column; background: #fff; }
+.cartela-topo { background: var(--cor); color: #fff; font-weight: 900; font-size: 20pt; letter-spacing: .2em; text-align: center; border-radius: 10px 10px 0 0; padding: 1.5mm; }
+.cartela-topo span { font-size: 10pt; letter-spacing: .05em; font-weight: 700; opacity: .9; margin-left: 3mm; }
+.cartela-grade { flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr); border: 3px solid var(--cor); border-top: 0; }
+.cartela-grade .carta { outline: none; border: 1.5px solid #F1D9A8; gap: 1mm; padding: 1mm; }
+.cartela-grade .emo { font-size: 46px; } .cartela-grade .pal { font-size: 13pt; }
+
+.quebra { flex: 1; display: flex; }
+.quebra svg { width: 100%; height: 100%; }
+.corte line { stroke: #333; stroke-width: 1; stroke-dasharray: 5 3; }
+.corte-branco line { stroke: #fff; stroke-width: 3; opacity: .9; }
+
+/* ficha e respostas */
+.ficha { width: 100%; border-collapse: collapse; font-size: 11pt; flex: 1; }
+.ficha th { background: #E4572E; color: #fff; padding: 2.5mm; text-align: left; }
+.ficha td { border: 1px solid #E2D5C6; height: 15mm; padding: 2mm; background: #fff; }
+.ficha td.carinhas { font-family: 'Noto Color Emoji'; font-size: 15pt; white-space: nowrap; letter-spacing: 2px; }
+.ficha th:nth-child(1) { width: 18mm; } .ficha th:nth-child(3) { width: 18mm; } .ficha th:nth-child(4) { width: 30mm; }
+.nota { margin-top: 4mm; font-size: 10.5pt !important; color: #7A6F68; }
+.respostas { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm; }
+.respostas .largo { grid-column: 1 / -1; }
+.respostas li, .respostas p { font-size: 11pt; line-height: 1.5; }
+.respostas p { margin-bottom: 2mm; }
+.cols2 { columns: 2; column-gap: 8mm; }
+.fim { margin-top: auto; text-align: center; background: #FFF1E3; border-radius: 16px; padding: 6mm; }
+.fim p { font-size: 15pt; font-weight: 800; color: #C2401C; margin-bottom: 2mm; }
+.fim small { font-size: 9.5pt; color: #7A6F68; }
+</style></head>
+<body><section class="page pag-capa">
+  <div class="capa">
+    <div class="capa-emojis"><span>🍎</span><span>🌻</span><span>☕</span><span>📻</span><span>🐓</span><span>🧩</span><span>🎲</span><span>🐈</span><span>🍰</span><span>🚲</span><span>🌹</span><span>🎸</span></div>
+    <div class="capa-texto">
+      <p class="capa-kicker">Kit para imprimir e recortar</p>
+      <h1>Mente Ativa</h1>
+      <h2>Kit de Jogos Recortáveis para Idosos</h2>
+      <p class="capa-chamada">Atividades para cuidadores e filhos jogarem junto com quem amam</p>
+      <ul class="capa-lista">
+        <li>8 jogos completos</li><li>31 páginas</li><li>Letras e figuras grandes</li><li>Guia para o cuidador</li>
+      </ul>
+    </div>
+  </div></section>
+<section class="page ">
+  <h1 class="titulo-pag">Seja bem-vindo(a)!</h1>
+  <p class="lead">Este kit foi feito para quem cuida de alguém especial: filhos, netos, cuidadores e familiares que
+  querem transformar o tempo junto em momentos leves, divertidos e cheios de conversa.</p>
+  <p>Os jogos estimulam memória, atenção, linguagem, coordenação das mãos e — principalmente — a convivência.
+  Não existe certo ou errado: o objetivo é estar junto, rir e relembrar.</p>
+  <h2 class="sub">Como preparar o material</h2>
+  <ol class="passos grandes">
+    <li><b>Imprima</b> em papel mais grosso (180g ou mais) ou cole as folhas em papelão fino ou cartolina.</li>
+    <li><b>Recorte</b> nas linhas tracejadas. Peça ajuda na hora de recortar: isso também é atividade!</li>
+    <li><b>Proteja</b> as cartas com plástico adesivo (contact) ou plastificação para durarem muito mais.</li>
+    <li><b>Guarde</b> cada jogo num envelope ou saquinho com o nome escrito.</li>
+  </ol>
+  <h2 class="sub">7 dicas para jogar bem</h2>
+  <div class="dicas-grid">
+    <div><span>⏰</span><p><b>Sessões curtas.</b> De 15 a 30 minutos é o ideal. Pare antes de cansar.</p></div>
+    <div><span>🌤️</span><p><b>Escolha o melhor horário.</b> Aquele em que a pessoa está mais disposta.</p></div>
+    <div><span>💡</span><p><b>Boa luz e mesa livre.</b> Sem TV ligada e com os óculos por perto.</p></div>
+    <div><span>🤝</span><p><b>Jogue junto, não teste.</b> Evite “você não lembra?”. Prefira “vamos ver juntos?”.</p></div>
+    <div><span>👏</span><p><b>Elogie o esforço,</b> não só o acerto.</p></div>
+    <div><span>🎚️</span><p><b>Ajuste o nível.</b> Comece fácil e aumente aos poucos. Cada jogo traz sugestões.</p></div>
+    <div><span>📝</span><p><b>Anote os momentos.</b> Use a ficha de acompanhamento no final do kit.</p></div>
+  </div>
+  <p class="aviso">Este material é de lazer e estímulo. Ele não substitui o acompanhamento de médicos, terapeutas
+  ocupacionais, fonoaudiólogos ou outros profissionais de saúde.</p><footer><span>Mente Ativa · Kit de Jogos Recortáveis para Idosos</span><span>2</span></footer></section>
+<section class="page ">
+  <h1 class="titulo-pag">O que tem neste kit</h1>
+  <div class="sumario">
+    <div class="item-sum" style="--cor:#E4572E">
+      <span class="sum-n">1</span><span class="sum-e">🃏</span>
+      <span class="sum-t">Jogo da Memória<small>Fácil a médio</small></span></div><div class="item-sum" style="--cor:#2D7DD2">
+      <span class="sum-n">2</span><span class="sum-e">🎲</span>
+      <span class="sum-t">Dominó de Figuras<small>Fácil</small></span></div><div class="item-sum" style="--cor:#E9A03B">
+      <span class="sum-n">3</span><span class="sum-e">🎯</span>
+      <span class="sum-t">Bingo das Lembranças<small>Fácil</small></span></div><div class="item-sum" style="--cor:#4E8F4A">
+      <span class="sum-n">4</span><span class="sum-e">🔗</span>
+      <span class="sum-t">O que combina com o quê?<small>Fácil</small></span></div><div class="item-sum" style="--cor:#7B4FB8">
+      <span class="sum-n">5</span><span class="sum-e">🔢</span>
+      <span class="sum-t">Sequências do Dia a Dia<small>Médio</small></span></div><div class="item-sum" style="--cor:#178C8C">
+      <span class="sum-n">6</span><span class="sum-e">💬</span>
+      <span class="sum-t">Complete o Ditado<small>Médio</small></span></div><div class="item-sum" style="--cor:#D2557A">
+      <span class="sum-n">7</span><span class="sum-e">🧩</span>
+      <span class="sum-t">Quebra-cabeças<small>Fácil a médio</small></span></div><div class="item-sum" style="--cor:#B5651D">
+      <span class="sum-n">8</span><span class="sum-e">☕</span>
+      <span class="sum-t">Cartas de Conversa<small>Livre</small></span></div>
+  </div>
+  <div class="extras">
+    <div><b>📋 Ficha de acompanhamento</b><p>Para anotar os jogos, o humor e as conquistas de cada dia.</p></div>
+    <div><b>✅ Respostas</b><p>Gabarito dos pares, sequências e ditados no final do kit.</p></div>
+  </div><footer><span>Mente Ativa · Kit de Jogos Recortáveis para Idosos</span><span>3</span></footer></section>
+<section class="page ">
+  <header class="abertura" style="--cor:#E4572E">
+    <div class="num">Jogo 1</div>
+    <h1>Jogo da Memória</h1>
+    <div class="selo">🃏</div>
+    <ul class="info">
+      <li><b>Nível</b>Fácil a médio</li><li><b>Jogadores</b>1 a 4</li><li><b>Tempo</b>15 a 25 min</li>
+    </ul>
+  </header>
+  <div class="corpo" style="--cor:#E4572E">
+    <div class="duas">
+      <div class="bloco"><h3>Para que serve</h3><ul><li>Memória de curto prazo</li><li>Atenção e concentração</li><li>Nomear objetos e frutas</li></ul></div>
+      <div class="bloco"><h3>Você vai precisar</h3><ul><li>As 24 cartas recortadas (12 pares)</li><li>Uma mesa livre</li></ul></div>
+    </div>
+    <div class="bloco"><h3>Como jogar</h3><ol class="passos"><li>Embaralhe as cartas e coloque todas viradas para baixo.</li><li>Cada pessoa, na sua vez, vira duas cartas e diz o nome das figuras em voz alta.</li><li>Se forem iguais, guarda o par e joga de novo. Se não, desvira as cartas no mesmo lugar.</li><li>Ganha quem juntar mais pares — mas o melhor é comemorar cada acerto!</li></ol></div>
+    <div class="duas">
+      <div class="bloco"><h3>Para facilitar</h3><p>Comece com 4 ou 6 pares e as cartas viradas para cima: a pessoa só precisa encontrar as iguais.</p></div>
+      <div class="bloco"><h3>Para desafiar</h3><p>Use os 12 pares. Ao formar um par, peça para contar uma lembrança ligada à figura.</p></div>
+    </div>
+    
+    <div class="dica"><b>💛 Dica para quem cuida</b><p>Se a pessoa esquecer onde estava uma carta, aponte a região da mesa em vez de dar a resposta. Dar pistas mantém a autoestima em alta.</p></div>
+  </div><footer><span>Mente Ativa · Kit de Jogos Recortáveis para Idosos</span><span>4</span></footer></section>
+<section class="page "><div class="topo-cartas" style="--cor:#E4572E">
+    <strong>Jogo da Memória</strong><span>Folha 1 de 2</span>
+    <em>✂ Recorte nas linhas tracejadas</em></div><div class="grade" style="--cols:3;--rows:4;--cor:#E4572E"><div class="carta "><span class="emo">🍎</span><span class="pal">Maçã</span></div><div class="carta "><span class="emo">🍌</span><span class="pal">Banana</span></div><div class="carta "><span class="emo">🍇</span><span class="pal">Uva</span></div><div class="carta "><span class="emo">🍉</span><span class="pal">Melancia</span></div><div class="carta "><span class="emo">🌻</span><span class="pal">Girassol</span></div><div class="carta "><span class="emo">🐈</span><span class="pal">Gato</span></div><div class="carta "><span class="emo">🐕</span><span class="pal">Cachorro</span></div><div class="carta "><span class="emo">🐓</span><span class="pal">Galo</span></div><div class="carta "><span class="emo">☕</span><span class="pal">Café</span></div><div class="carta "><span class="emo">📻</span><span class="pal">Rádio</span></div><div class="carta "><span class="emo">🚲</span><span class="pal">Bicicleta</span></div><div class="carta "><span class="emo">🏠</span><span class="pal">Casa</span></div></div><footer><span>Mente Ativa · Kit de Jogos Recortáveis para Idosos</span><span>5</span></footer></section>
+<section class="page "><div class="topo-cartas" style="--cor:#E4572E">
+    <strong>Jogo da Memória</strong><span>Folha 2 de 2</span>
+    <em>✂ Recorte nas linhas tracejadas</em></div><div class="grade" style="--cols:3;--rows:4;--cor:#E4572E"><div class="carta "><span class="emo">🍎</span><span class="pal">Maçã</span></div><div class="carta "><span class="emo">🍌</span><span class="pal">Banana</span></div><div class="carta "><span class="emo">🍇</span><span class="pal">Uva</span></div><div class="carta "><span class="emo">🍉</span><span class="pal">Melancia</span></div><div class="carta "><span class="emo">🌻</span><span class="pal">Girassol</span></div><div class="carta "><span class="emo">🐈</span><span class="pal">Gato</span></div><div class="carta "><span class="emo">🐕</span><span class="pal">Cachorro</span></div><div class="carta "><span class="emo">🐓</span><span class="pal">Galo</span></div><div class="carta "><span class="emo">☕</span><span class="pal">Café</span></div><div class="carta "><span class="emo">📻</span><span class="pal">Rádio</span></div><div class="carta "><span class="emo">🚲</span><span class="pal">Bicicleta</span></div><div class="carta "><span class="emo">🏠</span><span class="pal">Casa</span></div></div><footer><span>Mente Ativa · Kit de Jogos Recortáveis para Idosos</span><span>6</span></footer></section>
+<section class="page ">
+  <header class="abertura" style="--cor:#2D7DD2">
+    <div class="num">Jogo 2</div>
+    <h1>Dominó de Figuras</h1>
+    <div class="selo">🎲</div>
+    <ul class="info">
+      <li><b>Nível</b>Fácil</li><li><b>Jogadores</b>2 a 4</li><li><b>Tempo</b>15 a 30 min</li>
+    </ul>
+  </header>
+  <div class="corpo" style="--cor:#2D7DD2">
+    <div class="duas">
+      <div class="bloco"><h3>Para que serve</h3><ul><li>Comparar e reconhecer figuras</li><li>Raciocínio e planejamento</li><li>Coordenação das mãos</li></ul></div>
+      <div class="bloco"><h3>Você vai precisar</h3><ul><li>As 28 peças recortadas</li><li>Uma mesa livre</li></ul></div>
+    </div>
+    <div class="bloco"><h3>Como jogar</h3><ol class="passos"><li>Vire as peças para baixo e misture. Cada jogador pega 7 peças (com 2 jogadores, 7 cada e o resto fica no “monte”).</li><li>Quem tiver a peça com duas maçãs começa.</li><li>Na sua vez, encaixe uma peça que tenha a mesma figura de uma das pontas da fila.</li><li>Se não tiver, compre do monte. Ganha quem terminar as peças primeiro.</li></ol></div>
+    <div class="duas">
+      <div class="bloco"><h3>Para facilitar</h3><p>Jogue com as peças abertas na mesa e ajude a procurar o encaixe. Diga o nome da figura em voz alta.</p></div>
+      <div class="bloco"><h3>Para desafiar</h3><p>Esconda as peças dos outros jogadores e conte os pontos de quem ficou com peças na mão.</p></div>
+    </div>
+    
+    <div class="dica"><b>💛 Dica para quem cuida</b><p>O dominó costuma ser um jogo conhecido. Pergunte se a pessoa jogava antigamente e com quem — é uma ótima ponte para a conversa.</p></div>
+  </div><footer><span>Mente Ativa · Kit de Jogos Recortáveis para Idosos</span><span>7</span></footer></section>
+<section class="page "><div class="topo-cartas" style="--cor:#2D7DD2">
+    <strong>Dominó de Figuras</strong><span>Folha 1 de 2</span>
+    <em>✂ Recorte nas linhas tracejadas</em></div><div class="grade grade-domino" style="--cor:#2D7DD2"><div class="peca"><div><div class="carta "><span class="emo">🍎</span><span class="pal">Maçã</span></div></div><i></i><div><div class="carta "><span class="emo">🍎</span><span class="pal">Maçã</span></div></div></div><div class="peca"><div><div class="carta "><span class="emo">🍎</span><span class="pal">Maçã</span></div></div><i></i><div><div class="carta "><span class="emo">🌻</span><span class="pal">Girassol</span></div></div></div><div class="peca"><div><div class="carta "><span class="emo">🍎</span><span class="pal">Maçã</span></div></div><i></i><div><div class="carta "><span class="emo">🐟</span><span class="pal">Peixe</span></div></div></div><div class="peca"><div><div class="carta "><span class="emo">🍎</span><span class="pal">Maçã</span></div></div><i></i><div><div class="carta "><span class="emo">⭐</span><span class="pal">Estrela</span></div></div></div><div class="peca"><div><div class="carta "><span class="emo">🍎</span><span class="pal">Maçã</span></div></div><i></i><div><div class="carta "><span class="emo">🏠</span><span class="pal">Casa</span></div></div></div><div class="peca"><div><div class="carta "><span class="emo">🍎</span><span class="pal">Maçã</span></div></div><i></i><div><div class="carta "><span class="emo">❤️</span><span class="pal">Coração</span></div></div></div><div class="peca"><div><div class="carta "><span class="emo">🍎</span><span class="pal">Maçã</span></div></div><i></i><div><div class="carta "><span class="emo">🚗</span><span class="pal">Carro</span></div></div></div><div class="peca"><div><div class="carta "><span class="emo">🌻</span><span class="pal">Girassol</span></div></div><i></i><div><div class="carta "><span class="emo">🌻</span><span class="pal">Girassol</span></div></div></div><div class="peca"><div><div class="carta "><span class="emo">🌻</span><span class="pal">Girassol</span></div></div><i></i><div><div class="carta "><span class="emo">🐟</span><span class="pal">Peixe</span></div></div></div><div class="peca"><div><div class="carta "><span class="emo">🌻</span><span class="pal">Girassol</span></div></div><i></i><div><div class="carta "><span class="emo">⭐</span><span class="pal">Estrela</span></div></div></div><div class="peca"><div><div class="carta "><span class="emo">🌻</span><span class="pal">Girassol</span></div></div><i></i><div><div class="carta "><span class="emo">🏠</span><span class="pal">Casa</span></div></div></div><div class="peca"><div><div class="carta "><span class="emo">🌻</span><span class="pal">Girassol</span></div></div><i></i><div><div class="carta "><span class="emo">❤️</span><span class="pal">Coração</span></div></div></div><div class="peca"><div><div class="carta "><span class="emo">🌻</span><span class="pal">Girassol</span></div></div><i></i><div><div class="carta "><span class="emo">🚗</span><span class="pal">Carro</span></div></div></div><div class="peca"><div><div class="carta "><span class="emo">🐟</span><span class="pal">Peixe</span></div></div><i></i><div><div class="carta "><span class="emo">🐟</span><span class="pal">Peixe</span></div></div></div></div><footer><span>Mente Ativa · Kit de Jogos Recortáveis para Idosos</span><span>8</span></footer></section>
+<section class="page "><div class="topo-cartas" style="--cor:#2D7DD2">
+    <strong>Dominó de Figuras</strong><span>Folha 2 de 2</span>
+    <em>✂ Recorte nas linhas tracejadas</em></div><div class="grade grade-domino" style="--cor:#2D7DD2"><div class="peca"><div><div class="carta "><span class="emo">🐟</span><span class="pal">Peixe</span></div></div><i></i><div><div class="carta "><span class="emo">⭐</span><span class="pal">Estrela</span></div></div></div><div class="peca"><div><div class="carta "><span class="emo">🐟</span><span class="pal">Peixe</span></div></div><i></i><div><div class="carta "><span class="emo">🏠</span><span class="pal">Casa</span></div></div></div><div class="peca"><div><div class="carta "><span class="emo">🐟</span><span class="pal">Peixe</span></div></div><i></i><div><div class="carta "><span class="emo">❤️</span><span class="pal">Coração</span></div></div></div><div class="peca"><div><div class="carta "><span class="emo">🐟</span><span class="pal">Peixe</span></div></div><i></i><div><div class="carta "><span class="emo">🚗</span><span class="pal">Carro</span></div></div></div><div class="peca"><div><div class="carta "><span class="emo">⭐</span><span class="pal">Estrela</span></div></div><i></i><div><div class="carta "><span class="emo">⭐</span><span class="pal">Estrela</span></div></div></div><div class="peca"><div><div class="carta "><span class="emo">⭐</span><span class="pal">Estrela</span></div></div><i></i><div><div class="carta "><span class="emo">🏠</span><span class="pal">Casa</span></div></div></div><div class="peca"><div><div class="carta "><span class="emo">⭐</span><span class="pal">Estrela</span></div></div><i></i><div><div class="carta "><span class="emo">❤️</span><span class="pal">Coração</span></div></div></div><div class="peca"><div><div class="carta "><span class="emo">⭐</span><span class="pal">Estrela</span></div></div><i></i><div><div class="carta "><span class="emo">🚗</span><span class="pal">Carro</span></div></div></div><div class="peca"><div><div class="carta "><span class="emo">🏠</span><span class="pal">Casa</span></div></div><i></i><div><div class="carta "><span class="emo">🏠</span><span class="pal">Casa</span></div></div></div><div class="peca"><div><div class="carta "><span class="emo">🏠</span><span class="pal">Casa</span></div></div><i></i><div><div class="carta "><span class="emo">❤️</span><span class="pal">Coração</span></div></div></div><div class="peca"><div><div class="carta "><span class="emo">🏠</span><span class="pal">Casa</span></div></div><i></i><div><div class="carta "><span class="emo">🚗</span><span class="pal">Carro</span></div></div></div><div class="peca"><div><div class="carta "><span class="emo">❤️</span><span class="pal">Coração</span></div></div><i></i><div><div class="carta "><span class="emo">❤️</span><span class="pal">Coração</span></div></div></div><div class="peca"><div><div class="carta "><span class="emo">❤️</span><span class="pal">Coração</span></div></div><i></i><div><div class="carta "><span class="emo">🚗</span><span class="pal">Carro</span></div></div></div><div class="peca"><div><div class="carta "><span class="emo">🚗</span><span class="pal">Carro</span></div></div><i></i><div><div class="carta "><span class="emo">🚗</span><span class="pal">Carro</span></div></div></div></div><footer><span>Mente Ativa · Kit de Jogos Recortáveis para Idosos</span><span>9</span></footer></section>
+<section class="page ">
+  <header class="abertura" style="--cor:#E9A03B">
+    <div class="num">Jogo 3</div>
+    <h1>Bingo das Lembranças</h1>
+    <div class="selo">🎯</div>
+    <ul class="info">
+      <li><b>Nível</b>Fácil</li><li><b>Jogadores</b>2 a 7</li><li><b>Tempo</b>20 a 30 min</li>
+    </ul>
+  </header>
+  <div class="corpo" style="--cor:#E9A03B">
+    <div class="duas">
+      <div class="bloco"><h3>Para que serve</h3><ul><li>Atenção e escuta</li><li>Reconhecer figuras e palavras</li><li>Socialização em grupo</li></ul></div>
+      <div class="bloco"><h3>Você vai precisar</h3><ul><li>6 cartelas e 24 fichas de sorteio</li><li>Grãos de feijão, milho ou botões para marcar</li><li>Um saquinho ou pote para as fichas</li></ul></div>
+    </div>
+    <div class="bloco"><h3>Como jogar</h3><ol class="passos"><li>Cada jogador pega uma cartela. Quem não joga vira o “cantor” do bingo.</li><li>O cantor tira uma ficha do pote e fala o nome da figura em voz alta.</li><li>Quem tiver a figura na cartela marca com um feijão.</li><li>Quem completar uma linha (ou a cartela cheia) grita “BINGO!”.</li></ol></div>
+    <div class="duas">
+      <div class="bloco"><h3>Para facilitar</h3><p>Mostre a ficha sorteada além de falar o nome. Jogue valendo uma linha só.</p></div>
+      <div class="bloco"><h3>Para desafiar</h3><p>Fale só uma pista (“é amarela e o macaco adora”) sem dizer o nome nem mostrar a ficha.</p></div>
+    </div>
+    
+    <div class="dica"><b>💛 Dica para quem cuida</b><p>O bingo é perfeito para reunir a família no fim de semana. Um pequeno prêmio — um bombom, uma fruta — deixa tudo mais animado.</p></div>
+  </div><footer><span>Mente Ativa · Kit de Jogos Recortáveis para Idosos</span><span>10</span></footer></section>
+<section class="page "><div class="topo-cartas" style="--cor:#E9A03B">
+    <strong>Bingo das Lembranças</strong><span>Cartelas 1 e 2</span>
+    <em>✂ Recorte nas linhas tracejadas</em></div><div class="cartelas"><div class="cartela" style="--cor:#E9A03B">
+    <div class="cartela-topo">BINGO <span>Cartela 1</span></div>
+    <div class="cartela-grade"><div class="carta "><span class="emo">🌹</span><span class="pal">Rosa</span></div><div class="carta "><span class="emo">🥛</span><span class="pal">Leite</span></div><div class="carta "><span class="emo">🐕</span><span class="pal">Cachorro</span></div><div class="carta "><span class="emo">🌳</span><span class="pal">Árvore</span></div><div class="carta "><span class="emo">📻</span><span class="pal">Rádio</span></div><div class="carta "><span class="emo">☎️</span><span class="pal">Telefone</span></div><div class="carta "><span class="emo">🌽</span><span class="pal">Milho</span></div><div class="carta "><span class="emo">🐓</span><span class="pal">Galo</span></div><div class="carta "><span class="emo">🍎</span><span class="pal">Maçã</span></div></div></div><div class="cartela" style="--cor:#E9A03B">
+    <div class="cartela-topo">BINGO <span>Cartela 2</span></div>
+    <div class="cartela-grade"><div class="carta "><span class="emo">📻</span><span class="pal">Rádio</span></div><div class="carta "><span class="emo">🐄</span><span class="pal">Vaca</span></div><div class="carta "><span class="emo">🥛</span><span class="pal">Leite</span></div><div class="carta "><span class="emo">🍞</span><span class="pal">Pão</span></div><div class="carta "><span class="emo">☎️</span><span class="pal">Telefone</span></div><div class="carta "><span class="emo">🌳</span><span class="pal">Árvore</span></div><div class="carta "><span class="emo">⛪</span><span class="pal">Igreja</span></div><div class="carta "><span class="emo">🌽</span><span class="pal">Milho</span></div><div class="carta "><span class="emo">🐦</span><span class="pal">Passarinho</span></div></div></div></div><footer><span>Mente Ativa · Kit de Jogos Recortáveis para Idosos</span><span>11</span></footer></section>
+<section class="page "><div class="topo-cartas" style="--cor:#E9A03B">
+    <strong>Bingo das Lembranças</strong><span>Cartelas 3 e 4</span>
+    <em>✂ Recorte nas linhas tracejadas</em></div><div class="cartelas"><div class="cartela" style="--cor:#E9A03B">
+    <div class="cartela-topo">BINGO <span>Cartela 3</span></div>
+    <div class="cartela-grade"><div class="carta "><span class="emo">🌹</span><span class="pal">Rosa</span></div><div class="carta "><span class="emo">🍌</span><span class="pal">Banana</span></div><div class="carta "><span class="emo">🐎</span><span class="pal">Cavalo</span></div><div class="carta "><span class="emo">🌙</span><span class="pal">Lua</span></div><div class="carta "><span class="emo">🌽</span><span class="pal">Milho</span></div><div class="carta "><span class="emo">🐄</span><span class="pal">Vaca</span></div><div class="carta "><span class="emo">🚂</span><span class="pal">Trem</span></div><div class="carta "><span class="emo">🥕</span><span class="pal">Cenoura</span></div><div class="carta "><span class="emo">🍞</span><span class="pal">Pão</span></div></div></div><div class="cartela" style="--cor:#E9A03B">
+    <div class="cartela-topo">BINGO <span>Cartela 4</span></div>
+    <div class="cartela-grade"><div class="carta "><span class="emo">🐦</span><span class="pal">Passarinho</span></div><div class="carta "><span class="emo">🌽</span><span class="pal">Milho</span></div><div class="carta "><span class="emo">🐕</span><span class="pal">Cachorro</span></div><div class="carta "><span class="emo">🥕</span><span class="pal">Cenoura</span></div><div class="carta "><span class="emo">📻</span><span class="pal">Rádio</span></div><div class="carta "><span class="emo">🌳</span><span class="pal">Árvore</span></div><div class="carta "><span class="emo">☕</span><span class="pal">Café</span></div><div class="carta "><span class="emo">🐓</span><span class="pal">Galo</span></div><div class="carta "><span class="emo">🐈</span><span class="pal">Gato</span></div></div></div></div><footer><span>Mente Ativa · Kit de Jogos Recortáveis para Idosos</span><span>12</span></footer></section>
+<section class="page "><div class="topo-cartas" style="--cor:#E9A03B">
+    <strong>Bingo das Lembranças</strong><span>Cartelas 5 e 6</span>
+    <em>✂ Recorte nas linhas tracejadas</em></div><div class="cartelas"><div class="cartela" style="--cor:#E9A03B">
+    <div class="cartela-topo">BINGO <span>Cartela 5</span></div>
+    <div class="cartela-grade"><div class="carta "><span class="emo">🌽</span><span class="pal">Milho</span></div><div class="carta "><span class="emo">🐕</span><span class="pal">Cachorro</span></div><div class="carta "><span class="emo">🌙</span><span class="pal">Lua</span></div><div class="carta "><span class="emo">🐦</span><span class="pal">Passarinho</span></div><div class="carta "><span class="emo">🍰</span><span class="pal">Bolo</span></div><div class="carta "><span class="emo">🍎</span><span class="pal">Maçã</span></div><div class="carta "><span class="emo">⛪</span><span class="pal">Igreja</span></div><div class="carta "><span class="emo">☀️</span><span class="pal">Sol</span></div><div class="carta "><span class="emo">☎️</span><span class="pal">Telefone</span></div></div></div><div class="cartela" style="--cor:#E9A03B">
+    <div class="cartela-topo">BINGO <span>Cartela 6</span></div>
+    <div class="cartela-grade"><div class="carta "><span class="emo">⛪</span><span class="pal">Igreja</span></div><div class="carta "><span class="emo">🌙</span><span class="pal">Lua</span></div><div class="carta "><span class="emo">🥛</span><span class="pal">Leite</span></div><div class="carta "><span class="emo">🚲</span><span class="pal">Bicicleta</span></div><div class="carta "><span class="emo">🌽</span><span class="pal">Milho</span></div><div class="carta "><span class="emo">🚂</span><span class="pal">Trem</span></div><div class="carta "><span class="emo">🍌</span><span class="pal">Banana</span></div><div class="carta "><span class="emo">🥕</span><span class="pal">Cenoura</span></div><div class="carta "><span class="emo">🍰</span><span class="pal">Bolo</span></div></div></div></div><footer><span>Mente Ativa · Kit de Jogos Recortáveis para Idosos</span><span>13</span></footer></section>
+<section class="page "><div class="topo-cartas" style="--cor:#E9A03B">
+    <strong>Bingo das Lembranças</strong><span>Fichas de sorteio</span>
+    <em>✂ Recorte nas linhas tracejadas</em></div><div class="grade" style="--cols:4;--rows:6;--cor:#E9A03B"><div class="carta pequena"><span class="emo">🍎</span><span class="pal">Maçã</span></div><div class="carta pequena"><span class="emo">🍌</span><span class="pal">Banana</span></div><div class="carta pequena"><span class="emo">🌽</span><span class="pal">Milho</span></div><div class="carta pequena"><span class="emo">🥕</span><span class="pal">Cenoura</span></div><div class="carta pequena"><span class="emo">🍞</span><span class="pal">Pão</span></div><div class="carta pequena"><span class="emo">☕</span><span class="pal">Café</span></div><div class="carta pequena"><span class="emo">🥛</span><span class="pal">Leite</span></div><div class="carta pequena"><span class="emo">🍰</span><span class="pal">Bolo</span></div><div class="carta pequena"><span class="emo">🐓</span><span class="pal">Galo</span></div><div class="carta pequena"><span class="emo">🐄</span><span class="pal">Vaca</span></div><div class="carta pequena"><span class="emo">🐎</span><span class="pal">Cavalo</span></div><div class="carta pequena"><span class="emo">🐈</span><span class="pal">Gato</span></div><div class="carta pequena"><span class="emo">🐕</span><span class="pal">Cachorro</span></div><div class="carta pequena"><span class="emo">🐦</span><span class="pal">Passarinho</span></div><div class="carta pequena"><span class="emo">🌹</span><span class="pal">Rosa</span></div><div class="carta pequena"><span class="emo">🌳</span><span class="pal">Árvore</span></div><div class="carta pequena"><span class="emo">☀️</span><span class="pal">Sol</span></div><div class="carta pequena"><span class="emo">🌙</span><span class="pal">Lua</span></div><div class="carta pequena"><span class="emo">📻</span><span class="pal">Rádio</span></div><div class="carta pequena"><span class="emo">☎️</span><span class="pal">Telefone</span></div><div class="carta pequena"><span class="emo">🚲</span><span class="pal">Bicicleta</span></div><div class="carta pequena"><span class="emo">🚂</span><span class="pal">Trem</span></div><div class="carta pequena"><span class="emo">⛪</span><span class="pal">Igreja</span></div><div class="carta pequena"><span class="emo">🎸</span><span class="pal">Violão</span></div></div><footer><span>Mente Ativa · Kit de Jogos Recortáveis para Idosos</span><span>14</span></footer></section>
+<section class="page ">
+  <header class="abertura" style="--cor:#4E8F4A">
+    <div class="num">Jogo 4</div>
+    <h1>O que combina com o quê?</h1>
+    <div class="selo">🔗</div>
+    <ul class="info">
+      <li><b>Nível</b>Fácil</li><li><b>Jogadores</b>1 a 3</li><li><b>Tempo</b>10 a 20 min</li>
+    </ul>
+  </header>
+  <div class="corpo" style="--cor:#4E8F4A">
+    <div class="duas">
+      <div class="bloco"><h3>Para que serve</h3><ul><li>Raciocínio e associação de ideias</li><li>Vocabulário</li><li>Conversa sobre o dia a dia</li></ul></div>
+      <div class="bloco"><h3>Você vai precisar</h3><ul><li>As 24 cartas recortadas (12 pares)</li></ul></div>
+    </div>
+    <div class="bloco"><h3>Como jogar</h3><ol class="passos"><li>Espalhe as cartas viradas para cima na mesa.</li><li>Peça para a pessoa encontrar duas cartas que “combinam” — como a abelha e o mel.</li><li>Ao formar um par, pergunte: “por que essas duas combinam?”.</li><li>Continue até formar todos os pares. As respostas estão no final do kit.</li></ol></div>
+    <div class="duas">
+      <div class="bloco"><h3>Para facilitar</h3><p>Comece com 4 pares. Você pode segurar uma carta e oferecer duas opções para a outra.</p></div>
+      <div class="bloco"><h3>Para desafiar</h3><p>Misture com as cartas da memória e do bingo. Aceite outras combinações, desde que a pessoa explique!</p></div>
+    </div>
+    
+    <div class="dica"><b>💛 Dica para quem cuida</b><p>Não existe uma única resposta certa. Se a pessoa juntar o pão com o leite e explicar que é café da manhã, comemore o raciocínio.</p></div>
+  </div><footer><span>Mente Ativa · Kit de Jogos Recortáveis para Idosos</span><span>15</span></footer></section>
+<section class="page "><div class="topo-cartas" style="--cor:#4E8F4A">
+    <strong>O que combina com o quê?</strong><span>Folha 1 de 2</span>
+    <em>✂ Recorte nas linhas tracejadas</em></div><div class="grade" style="--cols:3;--rows:4;--cor:#4E8F4A"><div class="carta "><span class="emo">🪥</span><span class="pal">Escova</span></div><div class="carta "><span class="emo">🔑</span><span class="pal">Chave</span></div><div class="carta "><span class="emo">🍞</span><span class="pal">Pão</span></div><div class="carta "><span class="emo">📮</span><span class="pal">Correio</span></div><div class="carta "><span class="emo">🎣</span><span class="pal">Vara de pescar</span></div><div class="carta "><span class="emo">👟</span><span class="pal">Sapato</span></div><div class="carta "><span class="emo">📒</span><span class="pal">Caderno</span></div><div class="carta "><span class="emo">🌧️</span><span class="pal">Chuva</span></div><div class="carta "><span class="emo">☂️</span><span class="pal">Guarda-chuva</span></div><div class="carta "><span class="emo">✉️</span><span class="pal">Carta</span></div><div class="carta "><span class="emo">🥚</span><span class="pal">Ovo</span></div><div class="carta "><span class="emo">🫖</span><span class="pal">Bule</span></div></div><footer><span>Mente Ativa · Kit de Jogos Recortáveis para Idosos</span><span>16</span></footer></section>
+<section class="page "><div class="topo-cartas" style="--cor:#4E8F4A">
+    <strong>O que combina com o quê?</strong><span>Folha 2 de 2</span>
+    <em>✂ Recorte nas linhas tracejadas</em></div><div class="grade" style="--cols:3;--rows:4;--cor:#4E8F4A"><div class="carta "><span class="emo">🐄</span><span class="pal">Vaca</span></div><div class="carta "><span class="emo">🥛</span><span class="pal">Leite</span></div><div class="carta "><span class="emo">🧈</span><span class="pal">Manteiga</span></div><div class="carta "><span class="emo">🐟</span><span class="pal">Peixe</span></div><div class="carta "><span class="emo">🐓</span><span class="pal">Galinha</span></div><div class="carta "><span class="emo">☕</span><span class="pal">Xícara</span></div><div class="carta "><span class="emo">🔒</span><span class="pal">Cadeado</span></div><div class="carta "><span class="emo">🧦</span><span class="pal">Meia</span></div><div class="carta "><span class="emo">✏️</span><span class="pal">Lápis</span></div><div class="carta "><span class="emo">🦷</span><span class="pal">Dente</span></div><div class="carta "><span class="emo">🍯</span><span class="pal">Mel</span></div><div class="carta "><span class="emo">🐝</span><span class="pal">Abelha</span></div></div><footer><span>Mente Ativa · Kit de Jogos Recortáveis para Idosos</span><span>17</span></footer></section>
+<section class="page ">
+  <header class="abertura" style="--cor:#7B4FB8">
+    <div class="num">Jogo 5</div>
+    <h1>Sequências do Dia a Dia</h1>
+    <div class="selo">🔢</div>
+    <ul class="info">
+      <li><b>Nível</b>Médio</li><li><b>Jogadores</b>1 a 2</li><li><b>Tempo</b>10 a 20 min</li>
+    </ul>
+  </header>
+  <div class="corpo" style="--cor:#7B4FB8">
+    <div class="duas">
+      <div class="bloco"><h3>Para que serve</h3><ul><li>Planejamento e organização</li><li>Noção de ordem e tempo</li><li>Lembrar tarefas da rotina</li></ul></div>
+      <div class="bloco"><h3>Você vai precisar</h3><ul><li>As 16 cartas recortadas (4 histórias de 4 passos)</li></ul></div>
+    </div>
+    <div class="bloco"><h3>Como jogar</h3><ol class="passos"><li>Separe as cartas pela cor da borda: cada cor é uma história.</li><li>Entregue as 4 cartas de uma história, misturadas.</li><li>Peça para colocar em ordem: o que vem primeiro, depois, e no final?</li><li>Com as cartas em ordem, peça para contar a história em voz alta.</li></ol></div>
+    <div class="duas">
+      <div class="bloco"><h3>Para facilitar</h3><p>Use só 3 cartas por história, ou coloque a primeira carta já no lugar.</p></div>
+      <div class="bloco"><h3>Para desafiar</h3><p>Misture duas histórias e peça para separar e ordenar as duas ao mesmo tempo.</p></div>
+    </div>
+    
+    <div class="dica"><b>💛 Dica para quem cuida</b><p>Aproveite para fazer a atividade de verdade depois: passar um café ou regar uma planta juntos dá sentido ao jogo.</p></div>
+  </div><footer><span>Mente Ativa · Kit de Jogos Recortáveis para Idosos</span><span>18</span></footer></section>
+<section class="page "><div class="topo-cartas" style="--cor:#7B4FB8">
+    <strong>Sequências do Dia a Dia</strong><span>4 histórias</span>
+    <em>✂ Recorte nas linhas tracejadas</em></div><div class="grade" style="--cols:4;--rows:4;--cor:#7B4FB8"><div class="carta seq" style="--borda:#D2557A"><small>Fazer um bolo</small><span class="emo">🎂</span><span class="pal">Bolo pronto!</span></div><div class="carta seq" style="--borda:#B5651D"><small>Passar um café</small><span class="emo">🫖</span><span class="pal">Ferver a água</span></div><div class="carta seq" style="--borda:#3D6FB6"><small>Lavar a roupa</small><span class="emo">🧺</span><span class="pal">Juntar a roupa</span></div><div class="carta seq" style="--borda:#B5651D"><small>Passar um café</small><span class="emo">💧</span><span class="pal">Despejar a água</span></div><div class="carta seq" style="--borda:#3D6FB6"><small>Lavar a roupa</small><span class="emo">☀️</span><span class="pal">Secar no varal</span></div><div class="carta seq" style="--borda:#B5651D"><small>Passar um café</small><span class="emo">🥄</span><span class="pal">Pôr o pó no coador</span></div><div class="carta seq" style="--borda:#4E8F4A"><small>Plantar uma flor</small><span class="emo">🌻</span><span class="pal">A flor nasceu</span></div><div class="carta seq" style="--borda:#4E8F4A"><small>Plantar uma flor</small><span class="emo">💦</span><span class="pal">Regar todo dia</span></div><div class="carta seq" style="--borda:#3D6FB6"><small>Lavar a roupa</small><span class="emo">🫧</span><span class="pal">Lavar com sabão</span></div><div class="carta seq" style="--borda:#4E8F4A"><small>Plantar uma flor</small><span class="emo">🪴</span><span class="pal">Preparar o vaso</span></div><div class="carta seq" style="--borda:#4E8F4A"><small>Plantar uma flor</small><span class="emo">🌰</span><span class="pal">Plantar a semente</span></div><div class="carta seq" style="--borda:#D2557A"><small>Fazer um bolo</small><span class="emo">🥣</span><span class="pal">Misturar a massa</span></div><div class="carta seq" style="--borda:#D2557A"><small>Fazer um bolo</small><span class="emo">🥚</span><span class="pal">Separar os ingredientes</span></div><div class="carta seq" style="--borda:#B5651D"><small>Passar um café</small><span class="emo">☕</span><span class="pal">Servir na xícara</span></div><div class="carta seq" style="--borda:#3D6FB6"><small>Lavar a roupa</small><span class="emo">👕</span><span class="pal">Dobrar e guardar</span></div><div class="carta seq" style="--borda:#D2557A"><small>Fazer um bolo</small><span class="emo">🔥</span><span class="pal">Assar no forno</span></div></div><footer><span>Mente Ativa · Kit de Jogos Recortáveis para Idosos</span><span>19</span></footer></section>
+<section class="page ">
+  <header class="abertura" style="--cor:#178C8C">
+    <div class="num">Jogo 6</div>
+    <h1>Complete o Ditado</h1>
+    <div class="selo">💬</div>
+    <ul class="info">
+      <li><b>Nível</b>Médio</li><li><b>Jogadores</b>1 a 4</li><li><b>Tempo</b>10 a 20 min</li>
+    </ul>
+  </header>
+  <div class="corpo" style="--cor:#178C8C">
+    <div class="duas">
+      <div class="bloco"><h3>Para que serve</h3><ul><li>Memória de longo prazo</li><li>Linguagem e leitura</li><li>Relembrar a sabedoria popular</li></ul></div>
+      <div class="bloco"><h3>Você vai precisar</h3><ul><li>12 cartas de começo (bege) e 12 de final (verde)</li></ul></div>
+    </div>
+    <div class="bloco"><h3>Como jogar</h3><ol class="passos"><li>Separe as cartas de começo e de final em dois montes.</li><li>Leia em voz alta uma carta de começo: “Quem espera…”.</li><li>Peça para completar de memória ou encontrar a carta de final certa.</li><li>Junte as duas partes e leia o ditado inteiro juntos.</li></ol></div>
+    <div class="duas">
+      <div class="bloco"><h3>Para facilitar</h3><p>Deixe só 3 opções de final na mesa para a pessoa escolher.</p></div>
+      <div class="bloco"><h3>Para desafiar</h3><p>Peça para explicar o que o ditado quer dizer e lembrar de alguém que costumava falar isso.</p></div>
+    </div>
+    
+    <div class="dica"><b>💛 Dica para quem cuida</b><p>Ditados ficam guardados na memória mais antiga, que costuma ser preservada por mais tempo. Muitas vezes a pessoa completa sem esforço — e se sente muito bem com isso.</p></div>
+  </div><footer><span>Mente Ativa · Kit de Jogos Recortáveis para Idosos</span><span>20</span></footer></section>
+<section class="page "><div class="topo-cartas" style="--cor:#178C8C">
+    <strong>Complete o Ditado</strong><span>Começos</span>
+    <em>✂ Recorte nas linhas tracejadas</em></div><div class="grade" style="--cols:3;--rows:4;--cor:#178C8C"><div class="carta texto inicio"><span>Quem espera…</span></div><div class="carta texto inicio"><span>Água mole em pedra dura…</span></div><div class="carta texto inicio"><span>Quem não tem cão…</span></div><div class="carta texto inicio"><span>Mais vale um pássaro na mão…</span></div><div class="carta texto inicio"><span>De grão em grão…</span></div><div class="carta texto inicio"><span>Em casa de ferreiro…</span></div><div class="carta texto inicio"><span>Quem semeia vento…</span></div><div class="carta texto inicio"><span>Cavalo dado…</span></div><div class="carta texto inicio"><span>Deus ajuda…</span></div><div class="carta texto inicio"><span>Antes tarde…</span></div><div class="carta texto inicio"><span>Filho de peixe…</span></div><div class="carta texto inicio"><span>A pressa é inimiga…</span></div></div><footer><span>Mente Ativa · Kit de Jogos Recortáveis para Idosos</span><span>21</span></footer></section>
+<section class="page "><div class="topo-cartas" style="--cor:#178C8C">
+    <strong>Complete o Ditado</strong><span>Finais</span>
+    <em>✂ Recorte nas linhas tracejadas</em></div><div class="grade" style="--cols:3;--rows:4;--cor:#178C8C"><div class="carta texto final"><span>…peixinho é</span></div><div class="carta texto final"><span>…tanto bate até que fura</span></div><div class="carta texto final"><span>…não se olham os dentes</span></div><div class="carta texto final"><span>…do que dois voando</span></div><div class="carta texto final"><span>…do que nunca</span></div><div class="carta texto final"><span>…colhe tempestade</span></div><div class="carta texto final"><span>…a galinha enche o papo</span></div><div class="carta texto final"><span>…sempre alcança</span></div><div class="carta texto final"><span>…o espeto é de pau</span></div><div class="carta texto final"><span>…caça com gato</span></div><div class="carta texto final"><span>…da perfeição</span></div><div class="carta texto final"><span>…quem cedo madruga</span></div></div><footer><span>Mente Ativa · Kit de Jogos Recortáveis para Idosos</span><span>22</span></footer></section>
+<section class="page ">
+  <header class="abertura" style="--cor:#D2557A">
+    <div class="num">Jogo 7</div>
+    <h1>Quebra-cabeças</h1>
+    <div class="selo">🧩</div>
+    <ul class="info">
+      <li><b>Nível</b>Fácil a médio</li><li><b>Jogadores</b>1 a 2</li><li><b>Tempo</b>10 a 20 min</li>
+    </ul>
+  </header>
+  <div class="corpo" style="--cor:#D2557A">
+    <div class="duas">
+      <div class="bloco"><h3>Para que serve</h3><ul><li>Percepção visual e de espaço</li><li>Coordenação fina das mãos</li><li>Paciência e concentração</li></ul></div>
+      <div class="bloco"><h3>Você vai precisar</h3><ul><li>Casa no Campo: 6 peças</li><li>Dia de Praia: 12 peças</li><li>Cole a folha em papelão antes de recortar</li></ul></div>
+    </div>
+    <div class="bloco"><h3>Como jogar</h3><ol class="passos"><li>Mostre a figura pronta (abaixo) e converse sobre o que aparece nela.</li><li>Misture as peças com a figura virada para cima.</li><li>Comece pelos cantos e pelas partes fáceis: o sol, o céu, a casa.</li><li>Monte até completar a figura. Deixe montado na mesa para admirar!</li></ol></div>
+    <div class="duas">
+      <div class="bloco"><h3>Para facilitar</h3><p>Comece pela Casa no Campo (6 peças) e deixe a figura de referência ao lado.</p></div>
+      <div class="bloco"><h3>Para desafiar</h3><p>Monte o Dia de Praia (12 peças) sem olhar a figura de referência.</p></div>
+    </div>
+    <div class="refs"><svg viewBox="0 0 300 400" class="mini">
+<defs>
+  <linearGradient id="ceuA" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#7EC8F2"/><stop offset="1" stop-color="#D6F0FF"/>
+  </linearGradient>
+</defs>
+<rect width="300" height="400" fill="url(#ceuA)"/>
+<circle cx="245" cy="62" r="34" fill="#FFD23F"/>
+<g stroke="#FFD23F" stroke-width="5" stroke-linecap="round">
+  <line x1="245" y1="10" x2="245" y2="20"/><line x1="290" y1="62" x2="300" y2="62"/>
+  <line x1="200" y1="62" x2="190" y2="62"/><line x1="245" y1="104" x2="245" y2="114"/>
+  <line x1="214" y1="31" x2="207" y2="24"/><line x1="276" y1="93" x2="283" y2="100"/>
+  <line x1="276" y1="31" x2="283" y2="24"/><line x1="214" y1="93" x2="207" y2="100"/>
+</g>
+<g fill="#fff">
+  <ellipse cx="62" cy="58" rx="36" ry="16"/><ellipse cx="88" cy="48" rx="24" ry="18"/><ellipse cx="40" cy="50" rx="18" ry="13"/>
+  <ellipse cx="150" cy="105" rx="26" ry="11"/><ellipse cx="168" cy="98" rx="18" ry="12"/>
+</g>
+<ellipse cx="60" cy="250" rx="140" ry="60" fill="#8CCB5E"/>
+<ellipse cx="250" cy="245" rx="130" ry="55" fill="#79BD4F"/>
+<rect y="240" width="300" height="160" fill="#6DB33F"/>
+<!-- casa -->
+<rect x="100" y="98" width="20" height="46" fill="#8B4A3B"/>
+<rect x="55" y="160" width="150" height="110" fill="#F7E1A0"/>
+<polygon points="40,165 130,95 220,165" fill="#D64933"/>
+<polygon points="40,165 130,95 220,165" fill="none" stroke="#A8321F" stroke-width="4"/>
+<rect x="115" y="205" width="32" height="65" rx="3" fill="#8B5A2B"/>
+<circle cx="140" cy="240" r="3" fill="#F2C14E"/>
+<g fill="#9FD8F5" stroke="#fff" stroke-width="4">
+  <rect x="70" y="185" width="32" height="32"/><rect x="160" y="185" width="32" height="32"/>
+</g>
+<g stroke="#fff" stroke-width="3">
+  <line x1="86" y1="185" x2="86" y2="217"/><line x1="70" y1="201" x2="102" y2="201"/>
+  <line x1="176" y1="185" x2="176" y2="217"/><line x1="160" y1="201" x2="192" y2="201"/>
+</g>
+<circle cx="130" cy="140" r="11" fill="#9FD8F5" stroke="#fff" stroke-width="3"/>
+<!-- caminho -->
+<polygon points="118,270 144,270 175,400 85,400" fill="#E3C38B"/>
+<!-- árvore -->
+<rect x="243" y="200" width="18" height="80" fill="#7A4B27"/>
+<circle cx="252" cy="185" r="42" fill="#3E8E41"/>
+<circle cx="228" cy="200" r="26" fill="#3E8E41"/><circle cx="276" cy="202" r="26" fill="#3E8E41"/>
+<g fill="#E63946">
+  <circle cx="238" cy="175" r="6"/><circle cx="265" cy="168" r="6"/><circle cx="252" cy="200" r="6"/>
+  <circle cx="276" cy="195" r="6"/><circle cx="228" cy="205" r="6"/>
+</g>
+<!-- cerca -->
+<g fill="#FFFFFF" stroke="#C9B48A" stroke-width="2">
+  <rect x="5" y="285" width="10" height="40"/><rect x="25" y="285" width="10" height="40"/>
+  <rect x="45" y="285" width="10" height="40"/><rect x="65" y="285" width="10" height="40"/>
+  <rect y="295" width="80" height="7"/><rect y="312" width="80" height="7"/>
+  <rect x="190" y="290" width="10" height="40"/><rect x="210" y="290" width="10" height="40"/>
+  <rect x="230" y="290" width="10" height="40"/><rect x="250" y="290" width="10" height="40"/>
+  <rect x="270" y="290" width="10" height="40"/><rect x="290" y="290" width="10" height="40"/>
+  <rect x="185" y="300" width="115" height="7"/><rect x="185" y="317" width="115" height="7"/>
+</g>
+<!-- flores -->
+<g>
+  <line x1="25" y1="360" x2="25" y2="378" stroke="#2D6A2F" stroke-width="3"/>
+  <g fill="#FF6FA5"><circle cx="19" cy="360" r="6"/><circle cx="31" cy="360" r="6"/>
+  <circle cx="25" cy="354" r="6"/><circle cx="25" cy="366" r="6"/></g>
+  <circle cx="25" cy="360" r="4" fill="#FFF3B0"/><line x1="60" y1="375" x2="60" y2="393" stroke="#2D6A2F" stroke-width="3"/>
+  <g fill="#FFD23F"><circle cx="54" cy="375" r="6"/><circle cx="66" cy="375" r="6"/>
+  <circle cx="60" cy="369" r="6"/><circle cx="60" cy="381" r="6"/></g>
+  <circle cx="60" cy="375" r="4" fill="#FFF3B0"/><line x1="40" y1="390" x2="40" y2="408" stroke="#2D6A2F" stroke-width="3"/>
+  <g fill="#9B5DE5"><circle cx="34" cy="390" r="6"/><circle cx="46" cy="390" r="6"/>
+  <circle cx="40" cy="384" r="6"/><circle cx="40" cy="396" r="6"/></g>
+  <circle cx="40" cy="390" r="4" fill="#FFF3B0"/>
+  <line x1="215" y1="360" x2="215" y2="378" stroke="#2D6A2F" stroke-width="3"/>
+  <g fill="#FFD23F"><circle cx="209" cy="360" r="6"/><circle cx="221" cy="360" r="6"/>
+  <circle cx="215" cy="354" r="6"/><circle cx="215" cy="366" r="6"/></g>
+  <circle cx="215" cy="360" r="4" fill="#FFF3B0"/><line x1="250" y1="378" x2="250" y2="396" stroke="#2D6A2F" stroke-width="3"/>
+  <g fill="#FF6FA5"><circle cx="244" cy="378" r="6"/><circle cx="256" cy="378" r="6"/>
+  <circle cx="250" cy="372" r="6"/><circle cx="250" cy="384" r="6"/></g>
+  <circle cx="250" cy="378" r="4" fill="#FFF3B0"/><line x1="280" y1="355" x2="280" y2="373" stroke="#2D6A2F" stroke-width="3"/>
+  <g fill="#F15BB5"><circle cx="274" cy="355" r="6"/><circle cx="286" cy="355" r="6"/>
+  <circle cx="280" cy="349" r="6"/><circle cx="280" cy="361" r="6"/></g>
+  <circle cx="280" cy="355" r="4" fill="#FFF3B0"/><line x1="270" y1="392" x2="270" y2="410" stroke="#2D6A2F" stroke-width="3"/>
+  <g fill="#9B5DE5"><circle cx="264" cy="392" r="6"/><circle cx="276" cy="392" r="6"/>
+  <circle cx="270" cy="386" r="6"/><circle cx="270" cy="398" r="6"/></g>
+  <circle cx="270" cy="392" r="4" fill="#FFF3B0"/>
+</g>
+<!-- gato -->
+<text x="70" y="262" font-size="30">🐈</text>
+</svg><svg viewBox="0 0 300 400" class="mini">
+<defs>
+  <linearGradient id="ceuB" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FF9E6D"/><stop offset=".55" stop-color="#FFD39A"/><stop offset="1" stop-color="#FFEFD1"/>
+  </linearGradient>
+  <linearGradient id="marB" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#1F7FBF"/><stop offset="1" stop-color="#4FC3E8"/>
+  </linearGradient>
+</defs>
+<rect width="300" height="400" fill="url(#ceuB)"/>
+<circle cx="90" cy="150" r="48" fill="#FF6B35"/>
+<circle cx="90" cy="150" r="38" fill="#FF8C42"/>
+<g fill="none" stroke="#5B3A29" stroke-width="3" stroke-linecap="round">
+  <path d="M190 60 q8 -8 16 0 q8 -8 16 0"/><path d="M230 90 q6 -6 12 0 q6 -6 12 0"/><path d="M160 95 q5 -5 10 0 q5 -5 10 0"/>
+</g>
+<rect y="170" width="300" height="120" fill="url(#marB)"/>
+<g fill="none" stroke="#E6F7FF" stroke-width="3" stroke-linecap="round" opacity=".9">
+  <path d="M10 200 q15 -8 30 0 t30 0"/><path d="M150 215 q15 -8 30 0 t30 0"/>
+  <path d="M60 245 q15 -8 30 0 t30 0"/><path d="M200 262 q15 -8 30 0 t30 0"/>
+</g>
+<!-- barco -->
+<polygon points="175,195 255,195 240,212 190,212" fill="#8B4A3B"/>
+<line x1="215" y1="120" x2="215" y2="195" stroke="#5B3A29" stroke-width="4"/>
+<polygon points="219,124 219,188 262,188" fill="#FFFFFF"/>
+<polygon points="211,132 211,188 178,188" fill="#E63946"/>
+<!-- areia -->
+<path d="M0 285 Q150 262 300 285 L300 400 L0 400 Z" fill="#F4D58D"/>
+<path d="M0 285 Q150 262 300 285" fill="none" stroke="#FFFFFF" stroke-width="5" opacity=".8"/>
+<!-- coqueiro -->
+<path d="M262 400 Q250 320 268 240" stroke="#8B5A2B" stroke-width="14" fill="none"/>
+<g fill="#2E8B57">
+  <path d="M268 240 Q230 225 200 250 Q235 235 268 244 Z"/>
+  <path d="M268 240 Q300 220 300 258 Q290 240 268 244 Z"/>
+  <path d="M268 240 Q250 200 220 205 Q252 215 266 246 Z"/>
+  <path d="M268 240 Q290 205 300 210 Q285 222 270 246 Z"/>
+</g>
+<circle cx="262" cy="248" r="7" fill="#7A4B27"/><circle cx="273" cy="250" r="7" fill="#7A4B27"/>
+<!-- guarda-sol -->
+<line x1="95" y1="300" x2="110" y2="385" stroke="#5B3A29" stroke-width="5"/>
+<path d="M30 315 Q90 240 160 290 Z" fill="#FFD23F"/>
+<path d="M30 315 Q55 275 75 268 L95 300 Z" fill="#E63946"/>
+<path d="M112 262 Q140 268 160 290 L95 300 Z" fill="#E63946"/>
+<!-- toalha e objetos -->
+<rect x="140" y="345" width="90" height="40" rx="4" fill="#3D6FB6" transform="rotate(-6 185 365)"/>
+<rect x="140" y="355" width="90" height="8" fill="#FFFFFF" transform="rotate(-6 185 365)"/>
+<text x="20" y="390" font-size="30">🐚</text>
+<text x="235" y="330" font-size="26">⭐</text>
+<text x="40" y="350" font-size="26">🦀</text>
+<text x="160" y="320" font-size="28">🏐</text>
+</svg></div>
+    <div class="dica"><b>💛 Dica para quem cuida</b><p>Se puder, imprima duas vezes: uma para recortar e outra inteira, para servir de “tampa da caixa”.</p></div>
+  </div><footer><span>Mente Ativa · Kit de Jogos Recortáveis para Idosos</span><span>23</span></footer></section>
+<section class="page "><div class="topo-cartas" style="--cor:#D2557A">
+    <strong>Quebra-cabeça</strong><span>Casa no Campo · 6 peças</span>
+    <em>✂ Recorte nas linhas tracejadas</em></div>
+    <div class="quebra"><svg viewBox="0 0 300 400" preserveAspectRatio="none">
+<defs>
+  <linearGradient id="ceuA" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#7EC8F2"/><stop offset="1" stop-color="#D6F0FF"/>
+  </linearGradient>
+</defs>
+<rect width="300" height="400" fill="url(#ceuA)"/>
+<circle cx="245" cy="62" r="34" fill="#FFD23F"/>
+<g stroke="#FFD23F" stroke-width="5" stroke-linecap="round">
+  <line x1="245" y1="10" x2="245" y2="20"/><line x1="290" y1="62" x2="300" y2="62"/>
+  <line x1="200" y1="62" x2="190" y2="62"/><line x1="245" y1="104" x2="245" y2="114"/>
+  <line x1="214" y1="31" x2="207" y2="24"/><line x1="276" y1="93" x2="283" y2="100"/>
+  <line x1="276" y1="31" x2="283" y2="24"/><line x1="214" y1="93" x2="207" y2="100"/>
+</g>
+<g fill="#fff">
+  <ellipse cx="62" cy="58" rx="36" ry="16"/><ellipse cx="88" cy="48" rx="24" ry="18"/><ellipse cx="40" cy="50" rx="18" ry="13"/>
+  <ellipse cx="150" cy="105" rx="26" ry="11"/><ellipse cx="168" cy="98" rx="18" ry="12"/>
+</g>
+<ellipse cx="60" cy="250" rx="140" ry="60" fill="#8CCB5E"/>
+<ellipse cx="250" cy="245" rx="130" ry="55" fill="#79BD4F"/>
+<rect y="240" width="300" height="160" fill="#6DB33F"/>
+<!-- casa -->
+<rect x="100" y="98" width="20" height="46" fill="#8B4A3B"/>
+<rect x="55" y="160" width="150" height="110" fill="#F7E1A0"/>
+<polygon points="40,165 130,95 220,165" fill="#D64933"/>
+<polygon points="40,165 130,95 220,165" fill="none" stroke="#A8321F" stroke-width="4"/>
+<rect x="115" y="205" width="32" height="65" rx="3" fill="#8B5A2B"/>
+<circle cx="140" cy="240" r="3" fill="#F2C14E"/>
+<g fill="#9FD8F5" stroke="#fff" stroke-width="4">
+  <rect x="70" y="185" width="32" height="32"/><rect x="160" y="185" width="32" height="32"/>
+</g>
+<g stroke="#fff" stroke-width="3">
+  <line x1="86" y1="185" x2="86" y2="217"/><line x1="70" y1="201" x2="102" y2="201"/>
+  <line x1="176" y1="185" x2="176" y2="217"/><line x1="160" y1="201" x2="192" y2="201"/>
+</g>
+<circle cx="130" cy="140" r="11" fill="#9FD8F5" stroke="#fff" stroke-width="3"/>
+<!-- caminho -->
+<polygon points="118,270 144,270 175,400 85,400" fill="#E3C38B"/>
+<!-- árvore -->
+<rect x="243" y="200" width="18" height="80" fill="#7A4B27"/>
+<circle cx="252" cy="185" r="42" fill="#3E8E41"/>
+<circle cx="228" cy="200" r="26" fill="#3E8E41"/><circle cx="276" cy="202" r="26" fill="#3E8E41"/>
+<g fill="#E63946">
+  <circle cx="238" cy="175" r="6"/><circle cx="265" cy="168" r="6"/><circle cx="252" cy="200" r="6"/>
+  <circle cx="276" cy="195" r="6"/><circle cx="228" cy="205" r="6"/>
+</g>
+<!-- cerca -->
+<g fill="#FFFFFF" stroke="#C9B48A" stroke-width="2">
+  <rect x="5" y="285" width="10" height="40"/><rect x="25" y="285" width="10" height="40"/>
+  <rect x="45" y="285" width="10" height="40"/><rect x="65" y="285" width="10" height="40"/>
+  <rect y="295" width="80" height="7"/><rect y="312" width="80" height="7"/>
+  <rect x="190" y="290" width="10" height="40"/><rect x="210" y="290" width="10" height="40"/>
+  <rect x="230" y="290" width="10" height="40"/><rect x="250" y="290" width="10" height="40"/>
+  <rect x="270" y="290" width="10" height="40"/><rect x="290" y="290" width="10" height="40"/>
+  <rect x="185" y="300" width="115" height="7"/><rect x="185" y="317" width="115" height="7"/>
+</g>
+<!-- flores -->
+<g>
+  <line x1="25" y1="360" x2="25" y2="378" stroke="#2D6A2F" stroke-width="3"/>
+  <g fill="#FF6FA5"><circle cx="19" cy="360" r="6"/><circle cx="31" cy="360" r="6"/>
+  <circle cx="25" cy="354" r="6"/><circle cx="25" cy="366" r="6"/></g>
+  <circle cx="25" cy="360" r="4" fill="#FFF3B0"/><line x1="60" y1="375" x2="60" y2="393" stroke="#2D6A2F" stroke-width="3"/>
+  <g fill="#FFD23F"><circle cx="54" cy="375" r="6"/><circle cx="66" cy="375" r="6"/>
+  <circle cx="60" cy="369" r="6"/><circle cx="60" cy="381" r="6"/></g>
+  <circle cx="60" cy="375" r="4" fill="#FFF3B0"/><line x1="40" y1="390" x2="40" y2="408" stroke="#2D6A2F" stroke-width="3"/>
+  <g fill="#9B5DE5"><circle cx="34" cy="390" r="6"/><circle cx="46" cy="390" r="6"/>
+  <circle cx="40" cy="384" r="6"/><circle cx="40" cy="396" r="6"/></g>
+  <circle cx="40" cy="390" r="4" fill="#FFF3B0"/>
+  <line x1="215" y1="360" x2="215" y2="378" stroke="#2D6A2F" stroke-width="3"/>
+  <g fill="#FFD23F"><circle cx="209" cy="360" r="6"/><circle cx="221" cy="360" r="6"/>
+  <circle cx="215" cy="354" r="6"/><circle cx="215" cy="366" r="6"/></g>
+  <circle cx="215" cy="360" r="4" fill="#FFF3B0"/><line x1="250" y1="378" x2="250" y2="396" stroke="#2D6A2F" stroke-width="3"/>
+  <g fill="#FF6FA5"><circle cx="244" cy="378" r="6"/><circle cx="256" cy="378" r="6"/>
+  <circle cx="250" cy="372" r="6"/><circle cx="250" cy="384" r="6"/></g>
+  <circle cx="250" cy="378" r="4" fill="#FFF3B0"/><line x1="280" y1="355" x2="280" y2="373" stroke="#2D6A2F" stroke-width="3"/>
+  <g fill="#F15BB5"><circle cx="274" cy="355" r="6"/><circle cx="286" cy="355" r="6"/>
+  <circle cx="280" cy="349" r="6"/><circle cx="280" cy="361" r="6"/></g>
+  <circle cx="280" cy="355" r="4" fill="#FFF3B0"/><line x1="270" y1="392" x2="270" y2="410" stroke="#2D6A2F" stroke-width="3"/>
+  <g fill="#9B5DE5"><circle cx="264" cy="392" r="6"/><circle cx="276" cy="392" r="6"/>
+  <circle cx="270" cy="386" r="6"/><circle cx="270" cy="398" r="6"/></g>
+  <circle cx="270" cy="392" r="4" fill="#FFF3B0"/>
+</g>
+<!-- gato -->
+<text x="70" y="262" font-size="30">🐈</text>
+
+      <g class="corte-branco"><line x1="150" y1="0" x2="150" y2="400"/><line x1="0" y1="133.33333333333334" x2="300" y2="133.33333333333334"/><line x1="0" y1="266.6666666666667" x2="300" y2="266.6666666666667"/></g><g class="corte"><line x1="150" y1="0" x2="150" y2="400"/><line x1="0" y1="133.33333333333334" x2="300" y2="133.33333333333334"/><line x1="0" y1="266.6666666666667" x2="300" y2="266.6666666666667"/></g>
+      <rect x="0.5" y="0.5" width="299" height="399" fill="none" stroke="#555" stroke-width="1" stroke-dasharray="4 3"/>
+    </svg></div><footer><span>Mente Ativa · Kit de Jogos Recortáveis para Idosos</span><span>24</span></footer></section>
+<section class="page "><div class="topo-cartas" style="--cor:#D2557A">
+    <strong>Quebra-cabeça</strong><span>Dia de Praia · 12 peças</span>
+    <em>✂ Recorte nas linhas tracejadas</em></div>
+    <div class="quebra"><svg viewBox="0 0 300 400" preserveAspectRatio="none">
+<defs>
+  <linearGradient id="ceuB" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FF9E6D"/><stop offset=".55" stop-color="#FFD39A"/><stop offset="1" stop-color="#FFEFD1"/>
+  </linearGradient>
+  <linearGradient id="marB" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#1F7FBF"/><stop offset="1" stop-color="#4FC3E8"/>
+  </linearGradient>
+</defs>
+<rect width="300" height="400" fill="url(#ceuB)"/>
+<circle cx="90" cy="150" r="48" fill="#FF6B35"/>
+<circle cx="90" cy="150" r="38" fill="#FF8C42"/>
+<g fill="none" stroke="#5B3A29" stroke-width="3" stroke-linecap="round">
+  <path d="M190 60 q8 -8 16 0 q8 -8 16 0"/><path d="M230 90 q6 -6 12 0 q6 -6 12 0"/><path d="M160 95 q5 -5 10 0 q5 -5 10 0"/>
+</g>
+<rect y="170" width="300" height="120" fill="url(#marB)"/>
+<g fill="none" stroke="#E6F7FF" stroke-width="3" stroke-linecap="round" opacity=".9">
+  <path d="M10 200 q15 -8 30 0 t30 0"/><path d="M150 215 q15 -8 30 0 t30 0"/>
+  <path d="M60 245 q15 -8 30 0 t30 0"/><path d="M200 262 q15 -8 30 0 t30 0"/>
+</g>
+<!-- barco -->
+<polygon points="175,195 255,195 240,212 190,212" fill="#8B4A3B"/>
+<line x1="215" y1="120" x2="215" y2="195" stroke="#5B3A29" stroke-width="4"/>
+<polygon points="219,124 219,188 262,188" fill="#FFFFFF"/>
+<polygon points="211,132 211,188 178,188" fill="#E63946"/>
+<!-- areia -->
+<path d="M0 285 Q150 262 300 285 L300 400 L0 400 Z" fill="#F4D58D"/>
+<path d="M0 285 Q150 262 300 285" fill="none" stroke="#FFFFFF" stroke-width="5" opacity=".8"/>
+<!-- coqueiro -->
+<path d="M262 400 Q250 320 268 240" stroke="#8B5A2B" stroke-width="14" fill="none"/>
+<g fill="#2E8B57">
+  <path d="M268 240 Q230 225 200 250 Q235 235 268 244 Z"/>
+  <path d="M268 240 Q300 220 300 258 Q290 240 268 244 Z"/>
+  <path d="M268 240 Q250 200 220 205 Q252 215 266 246 Z"/>
+  <path d="M268 240 Q290 205 300 210 Q285 222 270 246 Z"/>
+</g>
+<circle cx="262" cy="248" r="7" fill="#7A4B27"/><circle cx="273" cy="250" r="7" fill="#7A4B27"/>
+<!-- guarda-sol -->
+<line x1="95" y1="300" x2="110" y2="385" stroke="#5B3A29" stroke-width="5"/>
+<path d="M30 315 Q90 240 160 290 Z" fill="#FFD23F"/>
+<path d="M30 315 Q55 275 75 268 L95 300 Z" fill="#E63946"/>
+<path d="M112 262 Q140 268 160 290 L95 300 Z" fill="#E63946"/>
+<!-- toalha e objetos -->
+<rect x="140" y="345" width="90" height="40" rx="4" fill="#3D6FB6" transform="rotate(-6 185 365)"/>
+<rect x="140" y="355" width="90" height="8" fill="#FFFFFF" transform="rotate(-6 185 365)"/>
+<text x="20" y="390" font-size="30">🐚</text>
+<text x="235" y="330" font-size="26">⭐</text>
+<text x="40" y="350" font-size="26">🦀</text>
+<text x="160" y="320" font-size="28">🏐</text>
+
+      <g class="corte-branco"><line x1="100" y1="0" x2="100" y2="400"/><line x1="200" y1="0" x2="200" y2="400"/><line x1="0" y1="100" x2="300" y2="100"/><line x1="0" y1="200" x2="300" y2="200"/><line x1="0" y1="300" x2="300" y2="300"/></g><g class="corte"><line x1="100" y1="0" x2="100" y2="400"/><line x1="200" y1="0" x2="200" y2="400"/><line x1="0" y1="100" x2="300" y2="100"/><line x1="0" y1="200" x2="300" y2="200"/><line x1="0" y1="300" x2="300" y2="300"/></g>
+      <rect x="0.5" y="0.5" width="299" height="399" fill="none" stroke="#555" stroke-width="1" stroke-dasharray="4 3"/>
+    </svg></div><footer><span>Mente Ativa · Kit de Jogos Recortáveis para Idosos</span><span>25</span></footer></section>
+<section class="page ">
+  <header class="abertura" style="--cor:#B5651D">
+    <div class="num">Jogo 8</div>
+    <h1>Cartas de Conversa</h1>
+    <div class="selo">☕</div>
+    <ul class="info">
+      <li><b>Nível</b>Livre</li><li><b>Jogadores</b>2 ou mais</li><li><b>Tempo</b>Quanto quiserem</li>
+    </ul>
+  </header>
+  <div class="corpo" style="--cor:#B5651D">
+    <div class="duas">
+      <div class="bloco"><h3>Para que serve</h3><ul><li>Memória afetiva e autobiográfica</li><li>Fala e expressão</li><li>Fortalecer o vínculo familiar</li></ul></div>
+      <div class="bloco"><h3>Você vai precisar</h3><ul><li>As 24 cartas de perguntas</li><li>Um cafezinho, se possível 🙂</li></ul></div>
+    </div>
+    <div class="bloco"><h3>Como jogar</h3><ol class="passos"><li>Coloque as cartas viradas para baixo, num montinho.</li><li>Cada um tira uma carta e lê a pergunta em voz alta.</li><li>Quem tirou responde — e todos podem fazer mais perguntas sobre a história.</li><li>Vale trocar de carta se a pergunta não agradar.</li></ol></div>
+    <div class="duas">
+      <div class="bloco"><h3>Para facilitar</h3><p>Você lê e responde primeiro, contando uma história sua. Isso dá exemplo e deixa a pessoa à vontade.</p></div>
+      <div class="bloco"><h3>Para desafiar</h3><p>Grave as respostas no celular ou anote num caderno: vira um livro de memórias da família.</p></div>
+    </div>
+    
+    <div class="dica"><b>💛 Dica para quem cuida</b><p>Algumas lembranças podem trazer saudade ou tristeza. Tudo bem: acolha, escute sem pressa e, se for o caso, mude de assunto com carinho.</p></div>
+  </div><footer><span>Mente Ativa · Kit de Jogos Recortáveis para Idosos</span><span>26</span></footer></section>
+<section class="page "><div class="topo-cartas" style="--cor:#B5651D">
+    <strong>Cartas de Conversa</strong><span>Folha 1 de 3</span>
+    <em>✂ Recorte nas linhas tracejadas</em></div><div class="grade" style="--cols:2;--rows:4;--cor:#B5651D"><div class="carta conversa"><div class="cat">🧸 Infância</div><p>Qual era sua brincadeira favorita quando criança?</p></div><div class="carta conversa"><div class="cat">🏡 Infância</div><p>Como era a casa onde você cresceu?</p></div><div class="carta conversa"><div class="cat">🍲 Sabores</div><p>Qual comida da sua mãe ou avó você nunca esqueceu?</p></div><div class="carta conversa"><div class="cat">🧰 Trabalho</div><p>Qual foi o seu primeiro trabalho? Como era?</p></div><div class="carta conversa"><div class="cat">💐 Família</div><p>Como você conheceu o seu grande amor?</p></div><div class="carta conversa"><div class="cat">🎶 Música</div><p>Qual música te dá vontade de dançar?</p></div><div class="carta conversa"><div class="cat">🎉 Festas</div><p>Como eram as festas juninas no seu tempo?</p></div><div class="carta conversa"><div class="cat">📻 Lembranças</div><p>Qual programa de rádio ou novela você não perdia?</p></div></div><footer><span>Mente Ativa · Kit de Jogos Recortáveis para Idosos</span><span>27</span></footer></section>
+<section class="page "><div class="topo-cartas" style="--cor:#B5651D">
+    <strong>Cartas de Conversa</strong><span>Folha 2 de 3</span>
+    <em>✂ Recorte nas linhas tracejadas</em></div><div class="grade" style="--cols:2;--rows:4;--cor:#B5651D"><div class="carta conversa"><div class="cat">🗺️ Viagens</div><p>Qual lugar você mais gostou de conhecer?</p></div><div class="carta conversa"><div class="cat">🌞 Lembranças</div><p>Conte um dia muito feliz da sua vida.</p></div><div class="carta conversa"><div class="cat">💬 Sabedoria</div><p>Que conselho você daria para um jovem de hoje?</p></div><div class="carta conversa"><div class="cat">📚 Escola</div><p>Você lembra o nome da sua escola ou professora?</p></div><div class="carta conversa"><div class="cat">🎄 Festas</div><p>Como era o Natal na sua família?</p></div><div class="carta conversa"><div class="cat">👗 Lembranças</div><p>Qual era a sua roupa preferida para sair?</p></div><div class="carta conversa"><div class="cat">🥘 Sabores</div><p>Que receita você sabe fazer de cabeça?</p></div><div class="carta conversa"><div class="cat">🐾 Família</div><p>Você já teve um bichinho de estimação? Qual era o nome?</p></div></div><footer><span>Mente Ativa · Kit de Jogos Recortáveis para Idosos</span><span>28</span></footer></section>
+<section class="page "><div class="topo-cartas" style="--cor:#B5651D">
+    <strong>Cartas de Conversa</strong><span>Folha 3 de 3</span>
+    <em>✂ Recorte nas linhas tracejadas</em></div><div class="grade" style="--cols:2;--rows:4;--cor:#B5651D"><div class="carta conversa"><div class="cat">🌸 Infância</div><p>Que cheiro faz você lembrar da infância?</p></div><div class="carta conversa"><div class="cat">💰 Trabalho</div><p>O que você comprou com o seu primeiro dinheiro?</p></div><div class="carta conversa"><div class="cat">🎤 Música</div><p>Qual cantor ou cantora você mais admirava?</p></div><div class="carta conversa"><div class="cat">🏘️ Lembranças</div><p>Como era a rua ou o bairro onde você morava?</p></div><div class="carta conversa"><div class="cat">⚽ Diversão</div><p>Qual é o seu time do coração? Por quê?</p></div><div class="carta conversa"><div class="cat">🧶 Habilidades</div><p>Que coisa você aprendeu a fazer e se orgulha?</p></div><div class="carta conversa"><div class="cat">👨‍👩‍👧 Família</div><p>Quem da família era o mais engraçado? Por quê?</p></div><div class="carta conversa"><div class="cat">☀️ Diversão</div><p>O que você mais gosta de fazer num domingo?</p></div></div><footer><span>Mente Ativa · Kit de Jogos Recortáveis para Idosos</span><span>29</span></footer></section>
+<section class="page ">
+  <h1 class="titulo-pag">Ficha de acompanhamento</h1>
+  <p class="lead pequeno">Nome: ________________________________________ &nbsp; Mês: ______________</p>
+  <table class="ficha">
+    <thead><tr><th>Data</th><th>Jogo</th><th>Tempo</th><th>Como foi?</th><th>O que chamou atenção</th></tr></thead>
+    <tbody><tr><td></td><td></td><td></td><td class="carinhas">😊 😐 😟</td><td></td></tr><tr><td></td><td></td><td></td><td class="carinhas">😊 😐 😟</td><td></td></tr><tr><td></td><td></td><td></td><td class="carinhas">😊 😐 😟</td><td></td></tr><tr><td></td><td></td><td></td><td class="carinhas">😊 😐 😟</td><td></td></tr><tr><td></td><td></td><td></td><td class="carinhas">😊 😐 😟</td><td></td></tr><tr><td></td><td></td><td></td><td class="carinhas">😊 😐 😟</td><td></td></tr><tr><td></td><td></td><td></td><td class="carinhas">😊 😐 😟</td><td></td></tr><tr><td></td><td></td><td></td><td class="carinhas">😊 😐 😟</td><td></td></tr><tr><td></td><td></td><td></td><td class="carinhas">😊 😐 😟</td><td></td></tr><tr><td></td><td></td><td></td><td class="carinhas">😊 😐 😟</td><td></td></tr><tr><td></td><td></td><td></td><td class="carinhas">😊 😐 😟</td><td></td></tr><tr><td></td><td></td><td></td><td class="carinhas">😊 😐 😟</td><td></td></tr><tr><td></td><td></td><td></td><td class="carinhas">😊 😐 😟</td><td></td></tr></tbody>
+  </table>
+  <p class="nota">Leve esta ficha nas consultas: ela ajuda médicos e terapeutas a entenderem a rotina e as mudanças do dia a dia.</p><footer><span>Mente Ativa · Kit de Jogos Recortáveis para Idosos</span><span>30</span></footer></section>
+<section class="page ">
+  <h1 class="titulo-pag">Respostas</h1>
+  <div class="respostas">
+    <div class="bloco" style="--cor:#4E8F4A"><h3>O que combina com o quê?</h3>
+      <ul><li>🐝 Abelha + 🍯 Mel</li><li>🐄 Vaca + 🥛 Leite</li><li>🐓 Galinha + 🥚 Ovo</li><li>🔑 Chave + 🔒 Cadeado</li><li>☕ Xícara + 🫖 Bule</li><li>🧦 Meia + 👟 Sapato</li><li>🌧️ Chuva + ☂️ Guarda-chuva</li><li>✏️ Lápis + 📒 Caderno</li><li>🎣 Vara de pescar + 🐟 Peixe</li><li>🍞 Pão + 🧈 Manteiga</li><li>🪥 Escova + 🦷 Dente</li><li>✉️ Carta + 📮 Correio</li></ul></div>
+    <div class="bloco" style="--cor:#7B4FB8"><h3>Sequências do Dia a Dia</h3>
+      <p><b>Passar um café:</b> 1. Ferver a água → 2. Pôr o pó no coador → 3. Despejar a água → 4. Servir na xícara</p><p><b>Fazer um bolo:</b> 1. Separar os ingredientes → 2. Misturar a massa → 3. Assar no forno → 4. Bolo pronto!</p><p><b>Plantar uma flor:</b> 1. Preparar o vaso → 2. Plantar a semente → 3. Regar todo dia → 4. A flor nasceu</p><p><b>Lavar a roupa:</b> 1. Juntar a roupa → 2. Lavar com sabão → 3. Secar no varal → 4. Dobrar e guardar</p></div>
+    <div class="bloco largo" style="--cor:#178C8C"><h3>Complete o Ditado</h3>
+      <ul class="cols2"><li>Quem espera sempre alcança.</li><li>Água mole em pedra dura tanto bate até que fura.</li><li>Quem não tem cão caça com gato.</li><li>Mais vale um pássaro na mão do que dois voando.</li><li>De grão em grão a galinha enche o papo.</li><li>Em casa de ferreiro o espeto é de pau.</li><li>Quem semeia vento colhe tempestade.</li><li>Cavalo dado não se olham os dentes.</li><li>Deus ajuda quem cedo madruga.</li><li>Antes tarde do que nunca.</li><li>Filho de peixe peixinho é.</li><li>A pressa é inimiga da perfeição.</li></ul></div>
+  </div>
+  <div class="fim">
+    <p>Obrigado por levar mais alegria para o dia de quem você ama. 💛</p>
+    <small>Material para uso pessoal e familiar. Imprima quantas vezes quiser. Não é permitida a revenda ou distribuição.</small>
+  </div><footer><span>Mente Ativa · Kit de Jogos Recortáveis para Idosos</span><span>31</span></footer></section></body></html>

@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mente Ativa — Jogos Recortáveis para Idosos</title>
+<meta name="description" content="8 jogos para imprimir e recortar: memória, dominó, bingo, quebra-cabeça e cartas de conversa. Feito para filhos e cuidadores de idosos.">
+<meta property="og:title" content="Mente Ativa — Kit de Jogos Recortáveis para Idosos">
+<meta property="og:description" content="Transforme o tempo junto em momentos leves, divertidos e cheios de conversa.">
+<meta property="og:image" content="img/capa.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --laranja: #E4572E; --laranja-escuro: #C2401C; --creme: #FFF7EE; --creme-2: #FFEBD6;
+    --texto: #2B2522; --suave: #6F645D; --verde: #2F9E5B; --raio: 18px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Nunito', system-ui, sans-serif; color: var(--texto); background: var(--creme); font-size: 18px; line-height: 1.55; }
+  img { max-width: 100%; display: block; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+  section { padding: 64px 0; }
+  h1, h2, h3 { line-height: 1.15; font-weight: 900; }
+  h2 { font-size: clamp(28px, 4.5vw, 40px); text-align: center; margin-bottom: 14px; }
+  .sub { text-align: center; color: var(--suave); max-width: 640px; margin: 0 auto 40px; }
+
+  .btn { display: inline-block; background: var(--verde); color: #fff; text-decoration: none; font-weight: 900; font-size: 20px;
+    padding: 18px 34px; border-radius: 999px; box-shadow: 0 6px 0 #22784A; transition: transform .15s, box-shadow .15s; text-align: center; }
+  .btn:hover { transform: translateY(2px); box-shadow: 0 4px 0 #22784A; }
+  .btn small { display: block; font-size: 13px; font-weight: 700; opacity: .9; }
+
+  /* topo */
+  .hero { background: var(--laranja); color: #fff; padding: 56px 0 72px; overflow: hidden; }
+  .hero .wrap { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center; }
+  .kicker { display: inline-block; background: rgba(255,255,255,.18); padding: 6px 14px; border-radius: 999px; font-weight: 800; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; }
+  .hero h1 { font-size: clamp(34px, 5.5vw, 56px); margin: 18px 0 16px; }
+  .hero p { font-size: 20px; opacity: .95; margin-bottom: 28px; max-width: 520px; }
+  .selos { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; font-size: 15px; font-weight: 800; }
+  .selos span { background: #fff; color: var(--laranja-escuro); padding: 6px 12px; border-radius: 999px; }
+  .mock { position: relative; height: 460px; }
+  .mock img { position: absolute; width: 62%; border-radius: 10px; box-shadow: 0 20px 40px rgba(0,0,0,.25); }
+  .mock img:nth-child(1) { left: 0; top: 40px; transform: rotate(-7deg); }
+  .mock img:nth-child(2) { right: 0; top: 60px; transform: rotate(6deg); }
+  .mock img:nth-child(3) { left: 19%; top: 0; z-index: 2; }
+
+  /* dor */
+  .dor { background: #fff; }
+  .dor-lista { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .dor-lista div { background: var(--creme); border-radius: var(--raio); padding: 24px; }
+  .dor-lista b { display: block; font-size: 20px; margin: 8px 0 4px; }
+  .emoji { font-size: 34px; }
+  .virada { text-align: center; font-size: 22px; font-weight: 800; margin-top: 36px; color: var(--laranja-escuro); }
+
+  /* jogos */
+  .jogos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .jogo { background: #fff; border-radius: var(--raio); overflow: hidden; box-shadow: 0 2px 0 #F1DCC4; }
+  .jogo img { aspect-ratio: 210 / 297; object-fit: cover; border-bottom: 1px solid #F1E4D6; }
+  .jogo div { padding: 14px 16px 18px; }
+  .jogo h3 { font-size: 18px; margin-bottom: 4px; }
+  .jogo p { font-size: 15px; color: var(--suave); line-height: 1.4; }
+
+  /* benefícios */
+  .beneficios { background: #fff; }
+  .ben { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .ben div { text-align: center; padding: 10px; }
+  .ben b { display: block; font-size: 20px; margin: 10px 0 6px; }
+  .ben p { color: var(--suave); font-size: 16px; }
+
+  /* como funciona */
+  .passos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; counter-reset: p; }
+  .passos div { background: #fff; border-radius: var(--raio); padding: 26px; position: relative; counter-increment: p; }
+  .passos div::before { content: counter(p); display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%;
+    background: var(--laranja); color: #fff; font-weight: 900; font-size: 20px; margin-bottom: 12px; }
+  .passos b { font-size: 20px; display: block; margin-bottom: 4px; }
+  .passos p { color: var(--suave); font-size: 16px; }
+
+  /* para quem */
+  .quem { background: var(--creme-2); }
+  .quem ul { list-style: none; max-width: 680px; margin: 0 auto; display: grid; gap: 12px; }
+  .quem li { background: #fff; border-radius: 14px; padding: 16px 20px 16px 54px; position: relative; font-weight: 700; }
+  .quem li::before { content: '✓'; position: absolute; left: 18px; top: 14px; width: 26px; height: 26px; border-radius: 50%; background: var(--verde);
+    color: #fff; display: grid; place-items: center; font-size: 15px; }
+
+  /* oferta */
+  .oferta-box { max-width: 560px; margin: 0 auto; background: #fff; border-radius: 26px; padding: 36px 30px; text-align: center;
+    border: 3px solid var(--laranja); box-shadow: 0 16px 40px rgba(228,87,46,.15); }
+  .oferta-box ul { list-style: none; text-align: left; margin: 22px 0; display: grid; gap: 8px; }
+  .oferta-box li::before { content: '✔ '; color: var(--verde); font-weight: 900; }
+  .de { color: var(--suave); text-decoration: line-through; font-size: 18px; }
+  .preco { font-size: 64px; font-weight: 900; color: var(--laranja-escuro); line-height: 1; margin: 6px 0; }
+  .preco small { font-size: 26px; vertical-align: top; }
+  .parcela { color: var(--suave); margin-bottom: 24px; }
+  .oferta-box .btn { width: 100%; }
+  .seguro { font-size: 14px; color: var(--suave); margin-top: 14px; }
+
+  .garantia { display: flex; gap: 22px; align-items: center; max-width: 720px; margin: 40px auto 0; background: #fff; border-radius: var(--raio); padding: 24px; }
+  .garantia .emoji { font-size: 56px; }
+  .garantia b { font-size: 20px; }
+
+  /* faq */
+  .faq { max-width: 760px; margin: 0 auto; display: grid; gap: 12px; }
+  details { background: #fff; border-radius: 14px; padding: 18px 22px; }
+  summary { font-weight: 800; cursor: pointer; list-style: none; position: relative; padding-right: 30px; }
+  summary::after { content: '+'; position: absolute; right: 0; top: -2px; font-size: 24px; color: var(--laranja); }
+  details[open] summary::after { content: '–'; }
+  details p { margin-top: 10px; color: var(--suave); }
+
+  .final { background: var(--laranja); color: #fff; text-align: center; }
+  .final p { font-size: 20px; margin: 0 auto 28px; max-width: 600px; }
+  footer { text-align: center; padding: 28px 20px 90px; font-size: 14px; color: var(--suave); }
+
+  .barra { position: fixed; left: 0; right: 0; bottom: 0; background: #fff; padding: 10px 16px; box-shadow: 0 -4px 20px rgba(0,0,0,.1); display: none; z-index: 10; }
+  .barra .btn { width: 100%; padding: 14px; font-size: 18px; }
+
+  @media (max-width: 860px) {
+    .hero .wrap { grid-template-columns: 1fr; }
+    .mock { height: 360px; max-width: 420px; margin: 0 auto; width: 100%; }
+    .jogos { grid-template-columns: repeat(2, 1fr); }
+    .dor-lista, .ben, .passos { grid-template-columns: 1fr; }
+    .barra { display: block; }
+  }
+  @media (max-width: 420px) {
+    body { font-size: 17px; }
+    section { padding: 48px 0; }
+    .jogos { gap: 12px; } .jogo div { padding: 10px 12px 14px; } .jogo h3 { font-size: 16px; } .jogo p { font-size: 14px; }
+    .garantia { flex-direction: column; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <span class="kicker">Kit para imprimir e recortar</span>
+      <h1>Momentos de alegria e conversa com quem você ama</h1>
+      <p>8 jogos recortáveis para filhos e cuidadores jogarem junto com os idosos da família. Letras grandes, figuras coloridas e instruções simples.</p>
+      <a class="btn" href="#oferta">Quero o kit Mente Ativa<small>Acesso imediato em PDF</small></a>
+      <div class="selos"><span>📄 31 páginas</span><span>🖨️ Imprima quantas vezes quiser</span><span>💛 Guia para o cuidador</span></div>
+    </div>
+    <div class="mock" aria-hidden="true">
+      <img src="img/memoria.jpg" alt="">
+      <img src="img/conversa.jpg" alt="">
+      <img src="img/capa.jpg" alt="Capa do kit Mente Ativa">
+    </div>
+  </div>
+</header>
+
+<section class="dor">
+  <div class="wrap">
+    <h2>Você já passou por isso?</h2>
+    <p class="sub">Cuidar de alguém é um ato de amor. Mas os dias podem ficar longos — para os dois lados.</p>
+    <div class="dor-lista">
+      <div><span class="emoji">📺</span><b>A TV ligada o dia inteiro</b>Ele ou ela passa horas parado, sem estímulo e sem conversa.</div>
+      <div><span class="emoji">🤔</span><b>Não saber o que fazer junto</b>A visita vira silêncio, ou só perguntas sobre remédio e comida.</div>
+      <div><span class="emoji">⏳</span><b>Sem tempo para inventar</b>Entre trabalho e cuidados, falta energia para planejar atividades.</div>
+    </div>
+    <p class="virada">O Mente Ativa resolve isso: é só imprimir, recortar e jogar. 🎲</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>O que vem no kit</h2>
+    <p class="sub">Cada jogo tem uma página de instruções com o passo a passo, sugestões para deixar mais fácil ou mais difícil e uma dica para quem cuida.</p>
+    <div class="jogos">
+      <article class="jogo"><img src="img/memoria.jpg" alt="Cartas do jogo da memória" loading="lazy"><div><h3>🃏 Jogo da Memória</h3><p>12 pares de frutas, bichos e objetos queridos.</p></div></article>
+      <article class="jogo"><img src="img/domino.jpg" alt="Peças do dominó de figuras" loading="lazy"><div><h3>🎲 Dominó de Figuras</h3><p>28 peças com figuras no lugar dos números.</p></div></article>
+      <article class="jogo"><img src="img/bingo.jpg" alt="Cartelas do bingo" loading="lazy"><div><h3>🎯 Bingo das Lembranças</h3><p>6 cartelas diferentes e 24 fichas de sorteio.</p></div></article>
+      <article class="jogo"><img src="img/pares.jpg" alt="Cartas de associação" loading="lazy"><div><h3>🔗 O que combina?</h3><p>12 pares para associar: abelha e mel, chave e cadeado…</p></div></article>
+      <article class="jogo"><img src="img/sequencias.jpg" alt="Cartas de sequência" loading="lazy"><div><h3>🔢 Sequências do Dia a Dia</h3><p>4 histórias da rotina para colocar em ordem.</p></div></article>
+      <article class="jogo"><img src="img/ditados.jpg" alt="Cartas de ditados populares" loading="lazy"><div><h3>💬 Complete o Ditado</h3><p>12 ditados populares para completar de memória.</p></div></article>
+      <article class="jogo"><img src="img/quebra.jpg" alt="Quebra-cabeça Dia de Praia" loading="lazy"><div><h3>🧩 Quebra-cabeças</h3><p>2 ilustrações: 6 e 12 peças grandes.</p></div></article>
+      <article class="jogo"><img src="img/conversa.jpg" alt="Cartas de conversa" loading="lazy"><div><h3>☕ Cartas de Conversa</h3><p>24 perguntas que despertam boas histórias.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="beneficios">
+  <div class="wrap">
+    <h2>Mais do que passar o tempo</h2>
+    <p class="sub">Atividades simples que estimulam a mente e aproximam a família.</p>
+    <div class="ben">
+      <div><span class="emoji">🧠</span><b>Estímulo para a mente</b><p>Memória, atenção, linguagem e raciocínio trabalhados de forma leve.</p></div>
+      <div><span class="emoji">✋</span><b>Mãos em movimento</b><p>Recortar, encaixar e montar ajudam na coordenação fina.</p></div>
+      <div><span class="emoji">💛</span><b>Conversa e vínculo</b><p>Lembranças, risadas e histórias que você vai querer guardar.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Como funciona</h2>
+    <p class="sub">Você recebe tudo em minutos, direto no seu e-mail.</p>
+    <div class="passos">
+      <div><b>Compre com segurança</b><p>Pagamento por Pix ou cartão. O acesso chega no seu e-mail logo após a confirmação.</p></div>
+      <div><b>Imprima em casa</b><p>Em papel A4 comum ou mais grosso. Também dá para imprimir na papelaria.</p></div>
+      <div><b>Recorte e jogue</b><p>Siga as instruções de cada jogo. Recortar junto já faz parte da diversão.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="quem">
+  <div class="wrap">
+    <h2>Para quem é o kit</h2>
+    <p class="sub">Feito para quem quer cuidar com mais leveza.</p>
+    <ul>
+      <li>Filhos e netos que querem aproveitar melhor as visitas</li>
+      <li>Cuidadores que buscam atividades prontas para a rotina</li>
+      <li>Casas de repouso e centros-dia que fazem atividades em grupo</li>
+      <li>Idosos que moram sozinhos e recebem visitas da família</li>
+      <li>Quem quer trocar a TV por momentos de conversa</li>
+    </ul>
+  </div>
+</section>
+
+<section id="oferta">
+  <div class="wrap">
+    <h2>Leve o kit completo hoje</h2>
+    <p class="sub">Imprima quantas vezes quiser, para usar com a família.</p>
+    <div class="oferta-box">
+      <span class="de">De R$ 47,00</span>
+      <div class="preco"><small>R$</small>19,90</div>
+      <div class="parcela">pagamento único · acesso imediato</div>
+      <a class="btn" href="#CHECKOUT">Quero o kit Mente Ativa</a>
+      <ul>
+        <li>8 jogos completos para imprimir e recortar</li>
+        <li>31 páginas com letras e figuras grandes</li>
+        <li>Guia de boas-vindas com dicas para o cuidador</li>
+        <li>Ficha de acompanhamento para anotar o dia a dia</li>
+        <li>Gabarito com todas as respostas</li>
+      </ul>
+      <p class="seguro">🔒 Compra segura · PDF enviado por e-mail</p>
+    </div>
+    <div class="garantia">
+      <span class="emoji">🛡️</span>
+      <div><b>Garantia de 7 dias</b><p>Se o kit não for o que você esperava, peça o reembolso em até 7 dias e devolvemos 100% do valor. Sem perguntas.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Perguntas frequentes</h2>
+    <div class="faq">
+      <details><summary>Vou receber algo pelo correio?</summary><p>Não. O kit é um arquivo PDF digital. Você recebe o link por e-mail e imprime em casa ou numa papelaria.</p></details>
+      <details><summary>Que papel devo usar?</summary><p>Funciona em papel A4 comum, mas recomendamos papel 180g ou mais, ou colar as folhas em cartolina. Plastificar ou passar plástico adesivo faz as cartas durarem muito mais.</p></details>
+      <details><summary>Posso imprimir mais de uma vez?</summary><p>Sim! Imprima quantas vezes quiser para uso pessoal e familiar.</p></details>
+      <details><summary>Serve para idosos com demência ou Alzheimer?</summary><p>Muitos jogos têm versões mais fáceis e podem ser usados em diferentes fases. Cada jogo traz sugestões para adaptar o nível. O kit é um material de lazer e estímulo e não substitui o acompanhamento de profissionais de saúde — converse com a equipe que acompanha a pessoa sobre as atividades mais indicadas.</p></details>
+      <details><summary>Preciso de impressora colorida?</summary><p>É o ideal, porque as cores ajudam a reconhecer as figuras. Mas o kit também funciona em preto e branco.</p></details>
+      <details><summary>Posso usar numa casa de repouso ou com meus clientes?</summary><p>Sim, você pode imprimir e usar nas suas atividades. Só não é permitido revender ou distribuir o arquivo.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <div class="wrap">
+    <h2>O melhor presente é o seu tempo</h2>
+    <p>Com o Mente Ativa, esse tempo vira risada, lembrança e conversa.</p>
+    <a class="btn" href="#oferta">Quero meu kit agora</a>
+  </div>
+</section>
+
+<footer>
+  Mente Ativa · Kit de Jogos Recortáveis para Idosos<br>
+  Material de lazer e estímulo. Não substitui acompanhamento médico ou terapêutico.
+</footer>
+
+<div class="barra"><a class="btn" href="#oferta">Quero o kit por R$ 19,90</a></div>
+</body>
+</html>
