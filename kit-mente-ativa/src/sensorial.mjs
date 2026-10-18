@@ -2,7 +2,7 @@
 // Uso: npm run build:sensorial
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
-import { paleta, vinheta, flor } from './flores.mjs';
+import { paleta, vinheta, enfeite } from './flores.mjs';
 import { molduraPagina, gerarPDF } from './layout.mjs';
 import { livro, lista, capa, cssExtra } from './livro.mjs';
 import { vasoDeFlores, borboletas } from './desenhos.mjs';
@@ -15,12 +15,12 @@ const raiz = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dist = path.join(raiz, 'dist');
 
 const cores = {
-  geral: { cor: '#4E7D5B', tint: '#E7F1E8', medio: '#B7D3BC', flores: [paleta.amarelo, paleta.rosa, paleta.lavanda] },
-  dobra: { cor: '#A84B60', tint: '#F8E6EA', medio: '#E8B4C0', flores: [paleta.rosa, paleta.pessego, paleta.amarelo] },
-  molde: { cor: '#B0643A', tint: '#FBEADF', medio: '#EDC0A2', flores: [paleta.pessego, paleta.amarelo, paleta.rosa] },
-  papel: { cor: '#6B5B95', tint: '#EEE9F6', medio: '#C9BCE3', flores: [paleta.lavanda, paleta.rosa, paleta.amarelo] },
-  pintura: { cor: '#3A6F6B', tint: '#E3F0EE', medio: '#A9CEC9', flores: [paleta.lavanda, paleta.pessego, paleta.rosa] },
-  costura: { cor: '#9C6A1F', tint: '#FAF0DC', medio: '#E8CD92', flores: [paleta.rosa, paleta.amarelo, paleta.lavanda] },
+  geral: { cor: '#4F8A6B', tint: '#F2EDE4', medio: '#DCD3C5', flores: [paleta.amarelo, paleta.rosa, paleta.lavanda] },
+  dobra: { cor: '#D9654B', tint: '#F2EDE4', medio: '#DCD3C5', flores: [paleta.rosa, paleta.pessego, paleta.amarelo] },
+  molde: { cor: '#D88A2D', tint: '#F2EDE4', medio: '#DCD3C5', flores: [paleta.pessego, paleta.amarelo, paleta.rosa] },
+  papel: { cor: '#3D5A80', tint: '#F2EDE4', medio: '#DCD3C5', flores: [paleta.lavanda, paleta.rosa, paleta.amarelo] },
+  pintura: { cor: '#2E7D86', tint: '#F2EDE4', medio: '#DCD3C5', flores: [paleta.lavanda, paleta.pessego, paleta.rosa] },
+  costura: { cor: '#B9862A', tint: '#F2EDE4', medio: '#DCD3C5', flores: [paleta.rosa, paleta.amarelo, paleta.lavanda] },
 };
 
 const L = livro('Mente Ativa · Mãos à Obra', 'fazer com as mãos é cuidar');
@@ -84,7 +84,7 @@ L.pagina(`<h2 class="titulo-jogo">Flores de papel em camadas</h2>
     'Recorte folhas verdes e cole no caule. Junte várias flores num copinho ou vaso e pronto: um buquê!',
   ])}
   <div class="flores-ex">${['margarida', 'redonda', 'estrela'].map((t, i) => `<svg viewBox="0 0 100 100">
-    <g opacity="1">${moldeFlor(t, 46).replace(/fill="#FFFFFF"/g, `fill="${['#F2B8C6', '#C9BCE3', '#F5D98C'][i]}"`).replace(/stroke-dasharray="[^"]*"/g, '')}</g>
+    <g opacity="1">${moldeFlor(t, 46).replace(/fill="#FFFFFF"/g, `fill="${['#F2B8C6', '#DCD3C5', '#F5D98C'][i]}"`).replace(/stroke-dasharray="[^"]*"/g, '')}</g>
     <g transform="translate(50 50) scale(.7) translate(-50 -50)">${moldeFlor(t, 46).replace(/fill="#FFFFFF"/g, `fill="${['#E8A0B4', '#A99BC9', '#F4B88A'][i]}"`).replace(/stroke-dasharray="[^"]*"/g, '')}</g>
     <circle cx="50" cy="50" r="7" fill="#C98A3C"/></svg>`).join('')}</div>`,
 { est: cores.molde, rotulo: 'Moldes', titulo: 'Flores de papel' });
@@ -96,7 +96,7 @@ L.pagina(`<h2 class="titulo-jogo">Moldes das flores</h2>
 
 // ---------- caixinha ----------
 const cxBase = caixa(56, 26), cxTampa = caixa(59, 16);
-const fundoCaixa = '#FBEADF';
+const fundoCaixa = '#F2EDE4';
 L.pagina(`<h2 class="titulo-jogo">Caixinha de presente · base</h2>
   <p class="instrucao">Imprima em papel-cartão. Recorte no tracejado, vinque com a régua nas linhas pontilhadas, dobre as laterais para cima e cole as abas por dentro.
   Decore com lápis de cor, as flores de papel ou as bandeirinhas antes de montar.</p>
@@ -104,12 +104,12 @@ L.pagina(`<h2 class="titulo-jogo">Caixinha de presente · base</h2>
 { est: cores.molde, rotulo: 'Moldes', titulo: 'Caixinha de presente' });
 L.pagina(`<h2 class="titulo-jogo">Caixinha de presente · tampa</h2>
   <p class="instrucao">A tampa é um pouco maior que a base, para encaixar por cima. Monte do mesmo jeito. Dentro cabem bombons, sementes, bilhetes ou uma flor de papel.</p>
-  <div class="caixa-area"><svg viewBox="0 0 ${cxTampa.largura} ${cxTampa.altura}" style="width:${cxTampa.largura}mm">${cxTampa.svg('#F8E6EA')}
-    <g transform="translate(${cxTampa.largura / 2} ${cxTampa.altura / 2})">${flor(0, 0, 14, '#D98C9A')}</g></svg></div>${avisoCorte}`,
+  <div class="caixa-area"><svg viewBox="0 0 ${cxTampa.largura} ${cxTampa.altura}" style="width:${cxTampa.largura}mm">${cxTampa.svg('#F2EDE4')}
+    <g transform="translate(${cxTampa.largura / 2} ${cxTampa.altura / 2})">${enfeite(0, 0, 12, '#E07A5F', { tipo: 'coracao' })}</g></svg></div>${avisoCorte}`,
 { est: cores.molde, rotulo: 'Moldes', titulo: 'Caixinha de presente' });
 
 // ---------- bandeirinhas ----------
-const coresBand = ['#E8A0B4', '#F5D98C', '#9CC89A', '#A9CEC9', '#C9BCE3', '#F4B88A', '#E8A0B4', '#F5D98C', '#9CC89A'];
+const coresBand = ['#E8A0B4', '#F5D98C', '#9CC89A', '#DCD3C5', '#DCD3C5', '#F4B88A', '#E8A0B4', '#F5D98C', '#9CC89A'];
 L.pagina(`<h2 class="titulo-jogo">Bandeirinhas de festa</h2>
   <p class="instrucao">Para enfeitar a festa junina, o aniversário ou a janela da sala. Recorte, dobre a faixa de cima sobre um barbante e cole.
   Imprima esta página quantas vezes quiser para fazer um varal comprido.</p>
@@ -209,12 +209,12 @@ L.paginas[SUM] = molduraPagina(`<h1 class="titulo">Mãos à obra!</h1>${vinheta(
 
 const cssSensorial = `
 .cuidados { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5mm 5mm; }
-.cuidados div { background: #fff; border: 1px solid #F0E2D8; border-radius: 4mm; padding: 3mm 4mm; }
+.cuidados div { background: #fff; border: 1px solid #E7DFD3; border-radius: 4mm; padding: 3mm 4mm; }
 .cuidados h3 { font-size: 12.5pt; color: var(--cor); margin-bottom: 1mm; }
 .cuidados p { font-size: 10.5pt; line-height: 1.45; }
 .materiais { font-size: 11pt; line-height: 1.6; background: #fff; border-radius: 4mm; padding: 3mm 5mm; border: 1px dashed var(--medio); }
 .passos-dobra { flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; align-content: start; }
-.passos-dobra figure { background: #fff; border: 1px solid #F0E2D8; border-radius: 4mm; padding: 3mm; position: relative; }
+.passos-dobra figure { background: #fff; border: 1px solid #E7DFD3; border-radius: 4mm; padding: 3mm; position: relative; }
 .passos-dobra svg { width: 100%; height: 40mm; }
 .passos-dobra figcaption { font-size: 10pt; line-height: 1.4; margin-top: 1.5mm; }
 .pd-n { position: absolute; top: 2mm; left: 2mm; width: 7mm; height: 7mm; border-radius: 50%; background: var(--cor); color: #fff; font-weight: 800; display: grid; place-items: center; font-size: 10pt; }
@@ -229,30 +229,30 @@ const cssSensorial = `
 .flores-ex svg { width: 42mm; height: 42mm; }
 .moldes-flor { flex: 1; display: flex; flex-direction: column; justify-content: space-around; }
 .mf-linha { display: flex; align-items: center; gap: 6mm; }
-.mf-linha b { width: 32mm; font-family: 'Lora'; font-size: 12pt; color: var(--cor); }
+.mf-linha b { width: 32mm; font-family: 'Fredoka'; font-size: 12pt; color: var(--cor); }
 .caixa-area { flex: 1; display: flex; align-items: center; justify-content: center; min-height: 0; }
 .caixa-area svg { max-width: 100%; max-height: 100%; }
-.cx-txt { font-family: 'Lora'; font-size: 5px; fill: #B9AE9E; }
+.cx-txt { font-family: 'Fredoka'; font-size: 5px; fill: #B9AE9E; }
 .cx-aba { font-size: 2.6px; fill: #8A7F78; }
 .bandeiras { flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); gap: 5mm; justify-items: center; align-content: center; }
 .bandeiras svg { width: 44mm; height: 58mm; }
 .cartoes { flex: 1; display: flex; flex-direction: column; justify-content: space-around; align-items: center; }
 .cartoes svg { width: 158mm; }
-.ct-txt { font-family: 'Dancing Script'; font-size: 11px; fill: #8A7F78; }
+.ct-txt { font-family: 'Fredoka'; font-size: 11px; fill: #8A7F78; }
 .marcadores-pag { flex: 1; display: flex; justify-content: space-between; align-items: center; min-height: 0; }
 .marcadores-pag svg { width: 32mm; height: 128mm; }
-.mp-txt { font-family: 'Dancing Script'; font-size: 13px; fill: #FFFFFF; stroke: #2B2B2B; stroke-width: .6; }
+.mp-txt { font-family: 'Fredoka'; font-size: 13px; fill: #FFFFFF; stroke: #2B2B2B; stroke-width: .6; }
 .desenho-grande { flex: 1; display: flex; justify-content: center; align-items: center; min-height: 0; background: #fff; }
 .desenho-grande svg { width: 100%; height: 100%; }
-.legenda-colorir { text-align: center; font-family: 'Dancing Script'; font-size: 16pt; color: var(--cor); margin-top: 2mm; }
+.legenda-colorir { text-align: center; font-family: 'Fredoka'; font-weight: 500; font-size: 12.5pt; color: var(--cor); margin-top: 2mm; }
 .carimbos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3mm; margin-bottom: 4mm; }
-.carimbos div { background: #fff; border-radius: 4mm; padding: 3mm; border-top: 4px solid var(--cor); box-shadow: 0 0 0 1px #F0E2D8; }
-.carimbos b { font-family: 'Lora'; font-size: 12pt; color: var(--cor); }
+.carimbos div { background: #fff; border-radius: 4mm; padding: 3mm; border-top: 4px solid var(--cor); box-shadow: 0 0 0 1px #E7DFD3; }
+.carimbos b { font-family: 'Fredoka'; font-size: 12pt; color: var(--cor); }
 .carimbos p { font-size: 9.8pt; line-height: 1.4; }
 .alinhavos { flex: 1; display: flex; flex-direction: column; justify-content: space-around; align-items: center; }
 .alinhavos figure { text-align: center; }
 .alinhavos svg { width: 108mm; height: 108mm; }
-.alinhavos figcaption { font-family: 'Dancing Script'; font-size: 15pt; color: var(--cor); margin-top: -3mm; }
+.alinhavos figcaption { font-family: 'Fredoka'; font-weight: 500; font-size: 12pt; color: var(--cor); margin-top: -3mm; }
 .al-txt { font-size: 6px; font-weight: 700; fill: #C0392B; }
 .placar { width: 100%; border-collapse: collapse; }
 .placar th { background: var(--cor); color: #fff; padding: 2.5mm; font-size: 10.5pt; }

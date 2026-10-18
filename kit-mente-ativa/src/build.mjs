@@ -7,7 +7,7 @@ import * as c from './conteudo.mjs';
 import * as g from './geradores.mjs';
 import { serra, azulejos, casario } from './cenas.mjs';
 import { pecasQuadrado, figuras as tangramFiguras, silhuetaSVG, solucaoSVG } from './tangram.mjs';
-import { paleta, vinheta, guirlanda, buque, flor } from './flores.mjs';
+import { paleta, vinheta, guirlanda, buque, enfeite } from './flores.mjs';
 import { molduraPagina, gerarPDF } from './layout.mjs';
 import { glifo, tabuleiro, traduzir } from './livro.mjs';
 
@@ -15,12 +15,12 @@ const raiz = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dist = path.join(raiz, 'dist');
 
 const partes = {
-  I: { nome: 'Raciocínio', cor: '#6B5B95', tint: '#EEE9F6', medio: '#C9BCE3', flores: [paleta.lavanda, paleta.rosa, paleta.amarelo] },
-  II: { nome: 'Palavras', cor: '#4E7D5B', tint: '#E7F1E8', medio: '#B7D3BC', flores: [paleta.amarelo, paleta.pessego, paleta.lavanda] },
-  III: { nome: 'Quebra-cabeças', cor: '#A84B60', tint: '#F8E6EA', medio: '#E8B4C0', flores: [paleta.rosa, paleta.pessego, paleta.amarelo] },
-  IV: { nome: 'Desafios', cor: '#B0643A', tint: '#FBEADF', medio: '#EDC0A2', flores: [paleta.pessego, paleta.amarelo, paleta.rosa] },
-  V: { nome: 'Jogos de Tabuleiro', cor: '#3A6F6B', tint: '#E3F0EE', medio: '#A9CEC9', flores: [paleta.lavanda, paleta.pessego, paleta.rosa] },
-  VI: { nome: 'Para Jogar Juntos', cor: '#9C6A1F', tint: '#FAF0DC', medio: '#E8CD92', flores: [paleta.rosa, paleta.amarelo, paleta.lavanda] },
+  I: { nome: 'Raciocínio', cor: '#3D5A80', tint: '#F2EDE4', medio: '#DCD3C5', flores: [paleta.lavanda, paleta.rosa, paleta.amarelo] },
+  II: { nome: 'Palavras', cor: '#4F8A6B', tint: '#F2EDE4', medio: '#DCD3C5', flores: [paleta.amarelo, paleta.pessego, paleta.lavanda] },
+  III: { nome: 'Quebra-cabeças', cor: '#D9654B', tint: '#F2EDE4', medio: '#DCD3C5', flores: [paleta.rosa, paleta.pessego, paleta.amarelo] },
+  IV: { nome: 'Desafios', cor: '#D88A2D', tint: '#F2EDE4', medio: '#DCD3C5', flores: [paleta.pessego, paleta.amarelo, paleta.rosa] },
+  V: { nome: 'Jogos de Tabuleiro', cor: '#2E7D86', tint: '#F2EDE4', medio: '#DCD3C5', flores: [paleta.lavanda, paleta.pessego, paleta.rosa] },
+  VI: { nome: 'Para Jogar Juntos', cor: '#B9862A', tint: '#F2EDE4', medio: '#DCD3C5', flores: [paleta.rosa, paleta.amarelo, paleta.lavanda] },
 };
 const floresPadrao = [paleta.rosa, paleta.amarelo, paleta.lavanda];
 
@@ -29,7 +29,7 @@ const paginas = [];
 const sumarioPaginas = {};
 let num = 0;
 
-const estiloGeral = { cor: '#A84B60', tint: '#F8E6EA', medio: '#E8B4C0', flores: floresPadrao };
+const estiloGeral = { cor: '#D9654B', tint: '#F2EDE4', medio: '#DCD3C5', flores: floresPadrao };
 
 const moldura = (corpo, opcoes) => molduraPagina(corpo, { ...opcoes, numero: num, marca: c.marca.nome });
 
@@ -223,7 +223,7 @@ for (const q of quebras) {
 divisoria('IV', ['Tangram — 7 peças e 6 figuras', 'Torre de Hanói', 'Desafios com palitos'],
   'Quebra-cabeças de lógica e geometria que atravessam gerações.');
 
-const tonsTangram = ['#7A2E3A', '#34557A', '#9A7440', '#4F6E5E', '#B5654A', '#5D5A7A', '#2D4739'];
+const tonsTangram = ['#7A2E3A', '#34557A', '#9A7440', '#4F6E5E', '#B5654A', '#5D5A7A', '#3B4A42'];
 pagina(`
   <h2 class="titulo-jogo">Tangram</h2>
   ${regras({ objetivo: 'Usar as 7 peças para formar as figuras da página seguinte.', jogadores: '1 ou 2', material: 'As 7 peças abaixo, recortadas.' })}
@@ -419,11 +419,11 @@ pagina(`
   ])}
   <svg class="trilha" viewBox="0 0 170 170">
     <rect width="170" height="170" rx="4" fill="#F1EADB"/>
-    <g fill="none" stroke="#2D4739" stroke-width="1.4">
+    <g fill="none" stroke="#3B4A42" stroke-width="1.4">
       <rect x="10" y="10" width="150" height="150"/><rect x="35" y="35" width="100" height="100"/><rect x="60" y="60" width="50" height="50"/>
       <line x1="85" y1="10" x2="85" y2="60"/><line x1="85" y1="110" x2="85" y2="160"/><line x1="10" y1="85" x2="60" y2="85"/><line x1="110" y1="85" x2="160" y2="85"/>
     </g>
-    ${pontosTrilha.map(([x, y]) => `<circle cx="${x}" cy="${y}" r="3.6" fill="#2D4739"/>`).join('')}
+    ${pontosTrilha.map(([x, y]) => `<circle cx="${x}" cy="${y}" r="3.6" fill="#3B4A42"/>`).join('')}
   </svg>`, { parte: 'V', titulo: 'Trilha' });
 
 // ---------- Parte VI: Para jogar juntos ----------
@@ -432,7 +432,7 @@ divisoria('VI', ['Bingo das Canções', 'Quiz de Antigamente', 'Mímica', 'Adedo
 
 const cartas = (itens, cols, rows, classe = '') =>
   `<div class="cartas ${classe}" style="--cols:${cols};--rows:${rows}">${itens.map((i) => `<div class="carta">${i}</div>`).join('')}</div>`;
-const florzinha = (cor) => `<svg viewBox="-10 -10 20 20" class="florzinha">${flor(0, 0, 9, cor)}</svg>`;
+const florzinha = (cor) => `<svg viewBox="-10 -10 20 20" class="florzinha">${enfeite(0, 0, 8, cor, { tipo: 'estrela' })}</svg>`;
 
 // Bingo das Canções
 pagina(`

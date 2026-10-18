@@ -16,13 +16,13 @@ export function livro(marca, frase) {
 }
 
 export const cores = {
-  sudoku: { cor: '#6B5B95', tint: '#EEE9F6', medio: '#C9BCE3', flores: [paleta.lavanda, paleta.rosa, paleta.amarelo] },
-  caca: { cor: '#4E7D5B', tint: '#E7F1E8', medio: '#B7D3BC', flores: [paleta.amarelo, paleta.pessego, paleta.lavanda] },
-  cruz: { cor: '#3A6F6B', tint: '#E3F0EE', medio: '#A9CEC9', flores: [paleta.lavanda, paleta.pessego, paleta.rosa] },
-  lab: { cor: '#B0643A', tint: '#FBEADF', medio: '#EDC0A2', flores: [paleta.pessego, paleta.amarelo, paleta.rosa] },
-  dif: { cor: '#A84B60', tint: '#F8E6EA', medio: '#E8B4C0', flores: [paleta.rosa, paleta.pessego, paleta.amarelo] },
-  geral: { cor: '#9C6A1F', tint: '#FAF0DC', medio: '#E8CD92', flores: [paleta.rosa, paleta.amarelo, paleta.lavanda] },
-  colorir: { cor: '#7B4FB8', tint: '#F1EAF8', medio: '#D3C0EA', flores: [paleta.lavanda, paleta.rosa, paleta.pessego] },
+  sudoku: { cor: '#3D5A80', tint: '#F2EDE4', medio: '#DCD3C5', flores: [paleta.lavanda, paleta.rosa, paleta.amarelo] },
+  caca: { cor: '#4F8A6B', tint: '#F2EDE4', medio: '#DCD3C5', flores: [paleta.amarelo, paleta.pessego, paleta.lavanda] },
+  cruz: { cor: '#2E7D86', tint: '#F2EDE4', medio: '#DCD3C5', flores: [paleta.lavanda, paleta.pessego, paleta.rosa] },
+  lab: { cor: '#D88A2D', tint: '#F2EDE4', medio: '#DCD3C5', flores: [paleta.pessego, paleta.amarelo, paleta.rosa] },
+  dif: { cor: '#D9654B', tint: '#F2EDE4', medio: '#DCD3C5', flores: [paleta.rosa, paleta.pessego, paleta.amarelo] },
+  geral: { cor: '#B9862A', tint: '#F2EDE4', medio: '#DCD3C5', flores: [paleta.rosa, paleta.amarelo, paleta.lavanda] },
+  colorir: { cor: '#5868A8', tint: '#F2EDE4', medio: '#DCD3C5', flores: [paleta.lavanda, paleta.rosa, paleta.pessego] },
 };
 
 export const lista = (itens) => `<ol class="passos">${itens.map((i) => `<li>${i}</li>`).join('')}</ol>`;
@@ -33,7 +33,7 @@ export function capa({ est, numeroBonus, kicker = `bônus ${numeroBonus}`, titul
     ${guirlanda([paleta.rosa, paleta.amarelo, paleta.lavanda, paleta.pessego], 11 + (numeroBonus ?? 7))}
     <div class="capa-centro">
       <p class="capa-kicker">${kicker}</p>
-      <h1 style="font-size:40pt">${titulo}</h1>
+      <h1 style="font-size:32pt">${titulo}</h1>
       <p class="capa-sub">${sub}</p>
     </div>
   </div>
@@ -66,7 +66,7 @@ export function gradeCruz(cz, { solucao = false, tam = 10 } = {}) {
   return `<svg class="cruz" viewBox="-1 -1 ${cols * 10 + 2} ${linhas * 10 + 2}" style="width:${(cols * tam).toFixed(2)}mm">${q.join('')}</svg>`;
 }
 
-export function desenhoLabirinto(m, { solucao = false, cor = '#B0643A' } = {}) {
+export function desenhoLabirinto(m, { solucao = false, cor = '#D88A2D' } = {}) {
   const s = 10, linhas = [];
   m.paredes.forEach((linha, l) => linha.forEach((p, c) => {
     const x = c * s, y = l * s;
@@ -99,7 +99,7 @@ export const cssExtra = `
 .dicas-cruz small { color: #8A7F78; }
 .lab-area { flex: 1; display: flex; justify-content: center; align-items: center; min-height: 0; }
 .labirinto { height: 100%; max-width: 100%; }
-.lab-txt { font-family: 'Lora'; font-size: 6px; font-weight: 700; fill: var(--cor); }
+.lab-txt { font-family: 'Fredoka'; font-size: 6px; font-weight: 700; fill: var(--cor); }
 .dif { flex: 1; display: flex; flex-direction: column; gap: 6mm; align-items: center; justify-content: center; min-height: 0; }
 .dif svg { height: calc(50% - 3mm); width: auto; max-width: 100%; border-radius: 3mm; box-shadow: 0 0 0 1px #D8CFBE; }
 .resp-sudokus.b { grid-template-columns: repeat(4, 1fr); gap: 3mm; }
@@ -114,10 +114,10 @@ export const cssExtra = `
 .resp-dif p { font-size: 9pt; color: #7A746A; }
 .colorir { flex: 1; display: flex; justify-content: center; align-items: center; min-height: 0; background: #FFFFFF; }
 .colorir svg { width: 100%; height: 100%; }
-.legenda-colorir { text-align: center; font-family: 'Dancing Script'; font-size: 16pt; color: var(--cor); margin-top: 2mm; }
+.legenda-colorir { text-align: center; font-family: 'Fredoka'; font-weight: 500; font-size: 12.5pt; color: var(--cor); margin-top: 2mm; }
 .paletas { display: grid; grid-template-columns: 1fr 1fr; gap: 4mm 8mm; }
-.paletas div { background: #FFFFFF; border: 1px solid #EFE0D6; border-radius: 4mm; padding: 3mm 4mm; }
-.paletas b { display: block; font-family: 'Lora'; font-size: 12pt; margin-bottom: 2mm; }
+.paletas div { background: #FFFFFF; border: 1px solid #E7DFD3; border-radius: 4mm; padding: 3mm 4mm; }
+.paletas b { display: block; font-family: 'Fredoka'; font-size: 12pt; margin-bottom: 2mm; }
 .paletas span { display: flex; gap: 2mm; }
 .paletas i { width: 12mm; height: 12mm; border-radius: 50%; box-shadow: 0 0 0 1px #00000022; }
 `;

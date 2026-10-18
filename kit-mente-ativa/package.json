@@ -12,8 +12,7 @@
     "build:sensorial": "node src/sensorial.mjs"
   },
   "devDependencies": {
-    "@fontsource/dancing-script": "^5.2.6",
-    "@fontsource/lora": "^5.2.6",
+    "@fontsource/fredoka": "^5.2.8",
     "chess.js": "^1.4.0",
     "playwright": "1.56.1",
     "polygon-clipping": "^0.15.7"

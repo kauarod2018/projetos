@@ -8,17 +8,18 @@
 <meta property="og:title" content="Mente Ativa · Jogos e desafios para imprimir e jogar junto">
 <meta property="og:description" content="24 jogos e desafios com letra grande, para filhos, netos e cuidadores jogarem com quem amam. + 2 bônus.">
 <meta property="og:image" content="img/kit-capa.jpg">
-<meta name="theme-color" content="#A84B60">
+<meta name="theme-color" content="#D9654B">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Inter:wght@400;500;600;700;800;900&family=Lora:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   :root {
-    --rosa: #A84B60; --rosa-escuro: #8A3A4D; --rosa-claro: #F8E6EA; --rosa-medio: #E8B4C0;
-    --lavanda: #6B5B95; --lavanda-claro: #EEE9F6; --salvia: #4E7D5B; --salvia-claro: #E7F1E8;
-    --creme: #FDF8F2; --creme-2: #FBEFE6; --texto: #2F2A28; --suave: #6E625C;
-    --verde: #22A55A; --verde-escuro: #178246; --amarelo: #F5C451;
-    --raio: 22px; --sombra: 0 10px 30px rgba(120, 50, 70, .10);
+    --rosa: #E07A5F; --rosa-escuro: #C25B42; --rosa-claro: #F3EEE6; --rosa-medio: #DCD3C5;
+    --lavanda: #3D5A80; --lavanda-claro: #EEF1EF; --salvia: #4F8A6B; --salvia-claro: #F2EDE4;
+    --mostarda: #F2C14E; --grafite: #33302E;
+    --creme: #FAF7F2; --creme-2: #F2EDE4; --texto: #33302E; --suave: #6B645E;
+    --verde: #22A55A; --verde-escuro: #178246; --amarelo: #F2C14E;
+    --raio: 22px; --sombra: 0 8px 24px rgba(51, 48, 46, .08);
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
@@ -27,18 +28,16 @@
   .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
   .estreito { max-width: 780px; margin: 0 auto; }
   section { padding: 76px 0; position: relative; }
-  h1, h2, h3 { font-family: 'Lora', Georgia, serif; line-height: 1.18; color: var(--texto); }
+  h1, h2, h3 { font-family: 'Fredoka', system-ui, sans-serif; font-weight: 600; line-height: 1.15; color: var(--texto); }
   h2 { font-size: clamp(28px, 4.4vw, 42px); text-align: center; margin-bottom: 14px; }
   h2 em { font-style: normal; color: var(--rosa); }
-  .script { font-family: 'Dancing Script', cursive; color: var(--rosa); font-size: 1.15em; font-weight: 700; }
-  .kicker { display: block; text-align: center; font-family: 'Dancing Script', cursive; font-size: 28px; color: var(--rosa); margin-bottom: 4px; }
+  .script { font-family: 'Fredoka', sans-serif; color: var(--rosa); font-weight: 700; background: linear-gradient(transparent 62%, rgba(242, 193, 78, .55) 62%); padding: 0 .1em; }
+  .kicker { display: block; text-align: center; font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 15px; letter-spacing: .18em; text-transform: uppercase; color: var(--rosa); margin-bottom: 8px; }
   .sub { text-align: center; color: var(--suave); max-width: 680px; margin: 0 auto 44px; font-size: 19px; }
 
-  /* fundo com florzinhas */
-  .floral { background-color: var(--rosa-claro);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44'%3E%3Cg fill='%23E8B4C0' opacity='.7'%3E%3Cellipse cx='12' cy='7' rx='3' ry='4.5'/%3E%3Cellipse cx='12' cy='17' rx='3' ry='4.5'/%3E%3Cellipse cx='7' cy='12' rx='4.5' ry='3'/%3E%3Cellipse cx='17' cy='12' rx='4.5' ry='3'/%3E%3C/g%3E%3Ccircle cx='12' cy='12' r='2.4' fill='%23fff'/%3E%3Ccircle cx='34' cy='34' r='2.6' fill='%23E8B4C0' opacity='.7'/%3E%3C/svg%3E"); }
-  .floral-lavanda { background-color: var(--lavanda-claro);
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44'%3E%3Cg fill='%23D3C0EA' opacity='.7'%3E%3Cellipse cx='12' cy='7' rx='3' ry='4.5'/%3E%3Cellipse cx='12' cy='17' rx='3' ry='4.5'/%3E%3Cellipse cx='7' cy='12' rx='4.5' ry='3'/%3E%3Cellipse cx='17' cy='12' rx='4.5' ry='3'/%3E%3C/g%3E%3Ccircle cx='12' cy='12' r='2.4' fill='%23fff'/%3E%3Ccircle cx='34' cy='34' r='2.6' fill='%23D3C0EA' opacity='.7'/%3E%3C/svg%3E"); }
+  /* fundo com confete de jogo */
+  .floral { background-color: #F3EEE6; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='68' height='68'%3E%3Cg opacity='.45'%3E%3Crect x='8' y='6' width='5' height='13' rx='2.5' fill='%23E07A5F' transform='rotate(35 10 12)'/%3E%3Ccircle cx='46' cy='16' r='4' fill='none' stroke='%23F2C14E' stroke-width='3'/%3E%3Cpath d='M30 40l2.4 4.8 5.3.8-3.8 3.7.9 5.3-4.8-2.5-4.8 2.5.9-5.3-3.8-3.7 5.3-.8z' fill='%2381B29A'/%3E%3Crect x='56' y='48' width='5' height='13' rx='2.5' fill='%233D5A80' transform='rotate(-40 58 54)'/%3E%3C/g%3E%3Ccircle cx='34' cy='30' r='1.3' fill='%23B9AE9E'/%3E%3Ccircle cx='6' cy='60' r='1.3' fill='%23B9AE9E'/%3E%3C/svg%3E"); }
+  .floral-lavanda { background-color: #EEF1EF; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='68' height='68'%3E%3Cg opacity='.45'%3E%3Crect x='8' y='6' width='5' height='13' rx='2.5' fill='%23E07A5F' transform='rotate(35 10 12)'/%3E%3Ccircle cx='46' cy='16' r='4' fill='none' stroke='%23F2C14E' stroke-width='3'/%3E%3Cpath d='M30 40l2.4 4.8 5.3.8-3.8 3.7.9 5.3-4.8-2.5-4.8 2.5.9-5.3-3.8-3.7 5.3-.8z' fill='%2381B29A'/%3E%3Crect x='56' y='48' width='5' height='13' rx='2.5' fill='%233D5A80' transform='rotate(-40 58 54)'/%3E%3C/g%3E%3Ccircle cx='34' cy='30' r='1.3' fill='%23B9AE9E'/%3E%3Ccircle cx='6' cy='60' r='1.3' fill='%23B9AE9E'/%3E%3C/svg%3E"); }
 
   /* botão de compra */
   .btn { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: linear-gradient(180deg, #2BB866, var(--verde));
@@ -52,8 +51,16 @@
   .seguranca { display: flex; flex-wrap: wrap; gap: 6px 16px; justify-content: center; margin-top: 16px; font-size: 14px; color: var(--suave); font-weight: 600; }
   .seguranca span { display: inline-flex; align-items: center; gap: 6px; }
 
+  /* cartões com borda grafite e sombra colorida, como nos PDFs */
+  .dor, .parte, .passo, .beneficio, .bonus, .oferta, .garantia { border: 2px solid var(--grafite); }
+  .dor, .beneficio, .passo { box-shadow: 5px 5px 0 var(--mostarda); }
+  .parte { box-shadow: 6px 6px 0 var(--t, var(--rosa)); }
+  .bonus { box-shadow: 7px 7px 0 var(--salvia); }
+  .oferta { box-shadow: 9px 9px 0 var(--rosa) !important; }
+  .garantia { box-shadow: 6px 6px 0 var(--lavanda); }
+
   /* faixa do topo */
-  .aviso { background: var(--rosa); color: #fff; text-align: center; font-size: 14px; font-weight: 600; padding: 9px 16px; letter-spacing: .02em; }
+  .aviso { background: var(--grafite); color: #fff; text-align: center; font-size: 14px; font-weight: 600; padding: 9px 16px; letter-spacing: .02em; }
 
   /* hero */
   .hero { padding: 54px 0 70px; overflow: hidden; }
@@ -69,12 +76,13 @@
     background: var(--salvia) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat; }
   .hero-img { position: relative; }
   .hero-img::before { content: ''; position: absolute; inset: 6% 4%; border-radius: 50%; background: radial-gradient(circle, #fff 0, #fff0 70%); }
-  .hero-img img { position: relative; filter: drop-shadow(0 18px 30px rgba(120, 50, 70, .16)); }
+  .hero-img img { position: relative; filter: drop-shadow(0 18px 30px rgba(51, 48, 46, .14)); }
 
   /* números */
-  .numeros { background: #fff; border-top: 1px solid #F1E2D8; border-bottom: 1px solid #F1E2D8; padding: 26px 0; }
+  .numeros { background: #fff; border-top: 1px solid #E7DFD3; border-bottom: 1px solid #E7DFD3; padding: 26px 0; }
   .numeros .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; text-align: center; }
-  .numeros b { display: block; font-family: 'Lora'; font-size: 38px; color: var(--rosa); line-height: 1.1; }
+  .numeros b { display: block; font-family: 'Fredoka'; font-size: 38px; color: var(--rosa); line-height: 1.1; }
+  .numeros div:nth-child(2) b { color: var(--lavanda); } .numeros div:nth-child(3) b { color: var(--salvia); } .numeros div:nth-child(4) b { color: #C9932B; }
   .numeros span { font-size: 15px; color: var(--suave); font-weight: 600; }
 
   /* dores */
@@ -84,7 +92,7 @@
   .dor b { display: block; font-size: 19px; margin-bottom: 4px; }
   .dor p { color: var(--suave); font-size: 16px; }
   .virada { margin: 46px auto 0; max-width: 760px; text-align: center; background: #fff; border-radius: var(--raio); padding: 28px; box-shadow: var(--sombra); border: 2px dashed var(--rosa-medio); }
-  .virada p { font-family: 'Lora'; font-size: 22px; font-weight: 600; }
+  .virada p { font-family: 'Fredoka'; font-size: 22px; font-weight: 600; }
 
   /* apresentação */
   .apresenta { display: grid; grid-template-columns: .9fr 1.1fr; gap: 40px; align-items: center; }
@@ -100,13 +108,13 @@
   .parte .tag { font-size: 12px; text-transform: uppercase; letter-spacing: .12em; font-weight: 800; color: var(--t, var(--rosa)); }
   .parte h3 { font-size: 22px; margin: 4px 0 8px; }
   .parte ul { list-style: none; font-size: 15.5px; color: var(--suave); display: grid; gap: 3px; }
-  .parte li::before { content: '✿ '; color: var(--t, var(--rosa)); }
+  .parte li::before { content: '★ '; color: var(--t, var(--rosa)); }
 
   /* galeria */
   .galeria { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
   .galeria button { border: 0; padding: 0; background: #fff; border-radius: 14px; overflow: hidden; cursor: zoom-in; box-shadow: var(--sombra);
     transition: transform .2s, box-shadow .2s; }
-  .galeria button:hover { transform: translateY(-4px) rotate(-.6deg); box-shadow: 0 16px 34px rgba(120, 50, 70, .18); }
+  .galeria button:hover { transform: translateY(-4px) rotate(-.6deg); box-shadow: 0 16px 34px rgba(51, 48, 46, .16); }
   .galeria img { aspect-ratio: 210 / 297; object-fit: cover; width: 100%; }
   .galeria span { display: block; font-size: 14px; font-weight: 700; padding: 10px 8px; color: var(--texto); }
   dialog { border: 0; border-radius: 16px; padding: 0; max-width: min(92vw, 640px); background: transparent; }
@@ -118,7 +126,7 @@
   .beneficios { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
   .beneficio { background: #fff; border-radius: var(--raio); padding: 28px 24px; text-align: center; box-shadow: var(--sombra); }
   .beneficio .ico { width: 66px; height: 66px; margin: 0 auto 12px; border-radius: 50%; display: grid; place-items: center; background: var(--c); }
-  .beneficio b { display: block; font-family: 'Lora'; font-size: 20px; margin-bottom: 6px; }
+  .beneficio b { display: block; font-family: 'Fredoka'; font-size: 20px; margin-bottom: 6px; }
   .beneficio p { font-size: 16px; color: var(--suave); }
 
   /* passos */
@@ -126,7 +134,7 @@
   .passo { background: #fff; border-radius: var(--raio); padding: 30px 26px; box-shadow: var(--sombra); counter-increment: p; position: relative; }
   .passo::before { content: counter(p); position: absolute; top: -18px; left: 24px; width: 44px; height: 44px; border-radius: 50%; background: var(--rosa); color: #fff;
     font: 800 20px/44px 'Inter'; text-align: center; box-shadow: 0 0 0 5px var(--creme); }
-  .passo b { display: block; font-family: 'Lora'; font-size: 21px; margin: 8px 0 6px; }
+  .passo b { display: block; font-family: 'Fredoka'; font-size: 21px; margin: 8px 0 6px; }
   .passo p { color: var(--suave); font-size: 16px; }
 
   /* para quem */
@@ -151,11 +159,11 @@
 
   /* oferta */
   .oferta { max-width: 620px; margin: 0 auto; background: #fff; border-radius: 30px; padding: 30px 30px 34px; text-align: center;
-    box-shadow: 0 24px 60px rgba(120, 50, 70, .18); border: 3px solid var(--rosa); position: relative; }
+    box-shadow: 0 24px 60px rgba(51, 48, 46, .16); border: 3px solid var(--rosa); position: relative; }
   .oferta .topo { position: absolute; top: -18px; left: 50%; transform: translateX(-50%); background: var(--rosa); color: #fff; font-weight: 800; font-size: 14px;
     letter-spacing: .1em; padding: 8px 20px; border-radius: 999px; white-space: nowrap; }
-  .itens { list-style: none; text-align: left; margin: 18px 0 20px; border-top: 1px dashed #EAD7CB; }
-  .itens li { display: flex; justify-content: space-between; gap: 12px; padding: 11px 2px; border-bottom: 1px dashed #EAD7CB; font-size: 16.5px; }
+  .itens { list-style: none; text-align: left; margin: 18px 0 20px; border-top: 1px dashed #E2D9CC; }
+  .itens li { display: flex; justify-content: space-between; gap: 12px; padding: 11px 2px; border-bottom: 1px dashed #E2D9CC; font-size: 16.5px; }
   .itens li span::before { content: '✔ '; color: var(--salvia); font-weight: 900; }
   .itens li em { font-style: normal; color: #A39089; white-space: nowrap; }
   .itens li.total { font-weight: 800; }
@@ -186,7 +194,7 @@
   .final h2 { margin-bottom: 10px; }
   .final p { color: #4C423E; max-width: 620px; margin: 0 auto 30px; font-size: 19px; }
   footer { background: #2F2A28; color: #CFC4BE; text-align: center; padding: 38px 20px 110px; font-size: 14px; line-height: 1.7; }
-  footer b { color: #fff; font-family: 'Dancing Script'; font-size: 26px; display: block; margin-bottom: 6px; }
+  footer b { color: #fff; font-family: 'Fredoka'; font-size: 26px; display: block; margin-bottom: 6px; }
 
   /* barra fixa no celular */
   .barra { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; background: rgba(255, 255, 255, .96); backdrop-filter: blur(6px);
@@ -229,7 +237,7 @@
 </head>
 <body>
 
-<div class="aviso">🌸 Material digital em PDF · Acesso imediato no seu e-mail · Imprima quantas vezes quiser</div>
+<div class="aviso">🎲 Material digital em PDF · Acesso imediato no seu e-mail · Imprima quantas vezes quiser</div>
 
 <header class="hero floral">
   <div class="wrap">
@@ -264,16 +272,16 @@
     <h2>Cuidar é amor, mas <em>os dias podem ficar longos</em></h2>
     <p class="sub">Quem cuida de pai, mãe ou avós conhece bem essas situações:</p>
     <div class="dores">
-      <div class="dor aparecer"><div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#A84B60" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+      <div class="dor aparecer"><div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D9654B" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
         <div><b>A TV ligada o dia inteiro</b><p>Horas na frente da televisão, sem estímulo e sem conversa de verdade.</p></div></div>
-      <div class="dor aparecer"><div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#A84B60" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9 10h.01M15 10h.01M9 16c1.5-1.2 4.5-1.2 6 0"/></svg></div>
+      <div class="dor aparecer"><div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D9654B" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9 10h.01M15 10h.01M9 16c1.5-1.2 4.5-1.2 6 0"/></svg></div>
         <div><b>A visita vira silêncio</b><p>Você chega, pergunta do remédio e da comida… e o assunto acaba.</p></div></div>
-      <div class="dor aparecer"><div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#A84B60" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+      <div class="dor aparecer"><div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D9654B" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
         <div><b>Falta tempo para inventar atividades</b><p>Entre trabalho, casa e cuidados, não sobra energia para planejar o que fazer.</p></div></div>
-      <div class="dor aparecer"><div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#A84B60" stroke-width="2" stroke-linecap="round"><path d="M4 4h16v12H8l-4 4z"/><path d="M9 9h.01M12 9h.01M15 9h.01"/></svg></div>
+      <div class="dor aparecer"><div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#D9654B" stroke-width="2" stroke-linecap="round"><path d="M4 4h16v12H8l-4 4z"/><path d="M9 9h.01M12 9h.01M15 9h.01"/></svg></div>
         <div><b>Atividades infantis demais</b><p>A maioria dos materiais parece feita para criança, e ninguém gosta de ser tratado assim.</p></div></div>
     </div>
-    <div class="virada aparecer"><p>O Mente Ativa resolve isso: é só <span class="script">imprimir, recortar e jogar junto</span>. 🌷</p></div>
+    <div class="virada aparecer"><p>O Mente Ativa resolve isso: é só <span class="script">imprimir, recortar e jogar junto</span>. 🎉</p></div>
   </div>
 </section>
 
@@ -296,17 +304,17 @@
     <h2>6 partes, <em>24 jogos e desafios</em></h2>
     <p class="sub">Do raciocínio individual aos jogos para rir em família. Cada jogo tem uma página com as regras completas.</p>
     <div class="partes">
-      <article class="parte aparecer" style="--c:#EEE9F6;--t:#6B5B95"><div class="foto"><img src="img/kit-sudoku.jpg" alt="Página de sudoku" loading="lazy"></div>
+      <article class="parte aparecer" style="--c:#F2EDE4;--t:#3D5A80"><div class="foto"><img src="img/kit-sudoku.jpg" alt="Página de sudoku" loading="lazy"></div>
         <div class="txt"><span class="tag">Parte I</span><h3>Raciocínio</h3><ul><li>6 sudokus em 3 níveis</li><li>16 sequências lógicas</li><li>Pirâmides de soma</li><li>10 enigmas</li></ul></div></article>
-      <article class="parte aparecer" style="--c:#E7F1E8;--t:#4E7D5B"><div class="foto"><img src="img/kit-caca.jpg" alt="Página de caça-palavras" loading="lazy"></div>
+      <article class="parte aparecer" style="--c:#F2EDE4;--t:#4F8A6B"><div class="foto"><img src="img/kit-caca.jpg" alt="Página de caça-palavras" loading="lazy"></div>
         <div class="txt"><span class="tag">Parte II</span><h3>Palavras</h3><ul><li>4 caça-palavras temáticos</li><li>20 anagramas</li><li>15 ditados para completar</li></ul></div></article>
-      <article class="parte aparecer" style="--c:#F8E6EA;--t:#A84B60"><div class="foto"><img src="img/kit-quebra-casario.jpg" alt="Quebra-cabeça Casario Colonial" loading="lazy"></div>
+      <article class="parte aparecer" style="--c:#F2EDE4;--t:#D9654B"><div class="foto"><img src="img/kit-quebra-casario.jpg" alt="Quebra-cabeça Casario Colonial" loading="lazy"></div>
         <div class="txt"><span class="tag">Parte III</span><h3>Quebra-cabeças</h3><ul><li>3 ilustrações com encaixes</li><li>De 12 a 30 peças</li><li>Para recortar e montar</li></ul></div></article>
-      <article class="parte aparecer" style="--c:#FBEADF;--t:#B0643A"><div class="foto"><img src="img/kit-tangram.jpg" alt="Figuras do tangram" loading="lazy"></div>
+      <article class="parte aparecer" style="--c:#F2EDE4;--t:#D88A2D"><div class="foto"><img src="img/kit-tangram.jpg" alt="Figuras do tangram" loading="lazy"></div>
         <div class="txt"><span class="tag">Parte IV</span><h3>Desafios</h3><ul><li>Tangram com 6 figuras</li><li>Torre de Hanói</li><li>Desafios com palitos</li></ul></div></article>
-      <article class="parte aparecer" style="--c:#E3F0EE;--t:#3A6F6B"><div class="foto"><img src="img/kit-xadrez-pecas.jpg" alt="Peças de xadrez para recortar" loading="lazy"></div>
+      <article class="parte aparecer" style="--c:#F2EDE4;--t:#2E7D86"><div class="foto"><img src="img/kit-xadrez-pecas.jpg" alt="Peças de xadrez para recortar" loading="lazy"></div>
         <div class="txt"><span class="tag">Parte V</span><h3>Jogos de Tabuleiro</h3><ul><li>Dominó com 28 peças</li><li>Xadrez completo + problemas</li><li>Damas brasileiras e trilha</li></ul></div></article>
-      <article class="parte aparecer" style="--c:#FAF0DC;--t:#9C6A1F"><div class="foto"><img src="img/kit-bingo.jpg" alt="Cartelas do Bingo das Canções" loading="lazy"></div>
+      <article class="parte aparecer" style="--c:#F2EDE4;--t:#B9862A"><div class="foto"><img src="img/kit-bingo.jpg" alt="Cartelas do Bingo das Canções" loading="lazy"></div>
         <div class="txt"><span class="tag">Parte VI</span><h3>Para Jogar Juntos</h3><ul><li>Bingo das Canções</li><li>Quiz de Antigamente e Mímica</li><li>Batalha Naval, Adedonha e mais</li></ul></div></article>
     </div>
   </div>
@@ -337,17 +345,17 @@
     <h2>Mais do que passar o tempo</h2>
     <p class="sub">Atividades simples, feitas para estimular a mente e aproximar a família.</p>
     <div class="beneficios">
-      <div class="beneficio aparecer"><div class="ico" style="--c:#EEE9F6"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#6B5B95" stroke-width="2" stroke-linecap="round"><path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 6 1V5a3 3 0 0 0-3-1zM15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-6 1"/></svg></div>
+      <div class="beneficio aparecer"><div class="ico" style="--c:#F2EDE4"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#3D5A80" stroke-width="2" stroke-linecap="round"><path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 6 1V5a3 3 0 0 0-3-1zM15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-6 1"/></svg></div>
         <b>Mente em movimento</b><p>Memória, atenção, linguagem e raciocínio exercitados de forma leve e divertida.</p></div>
-      <div class="beneficio aparecer"><div class="ico" style="--c:#F8E6EA"><svg width="32" height="32" viewBox="0 0 24 24" fill="#A84B60"><path d="M12 21s-7-4.5-9.3-9A5.2 5.2 0 0 1 12 6.4 5.2 5.2 0 0 1 21.3 12C19 16.5 12 21 12 21z"/></svg></div>
+      <div class="beneficio aparecer"><div class="ico" style="--c:#F2EDE4"><svg width="32" height="32" viewBox="0 0 24 24" fill="#D9654B"><path d="M12 21s-7-4.5-9.3-9A5.2 5.2 0 0 1 12 6.4 5.2 5.2 0 0 1 21.3 12C19 16.5 12 21 12 21z"/></svg></div>
         <b>Conversa e vínculo</b><p>Jogos que puxam histórias, risadas e lembranças que você vai querer guardar.</p></div>
-      <div class="beneficio aparecer"><div class="ico" style="--c:#E7F1E8"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4E7D5B" stroke-width="2" stroke-linecap="round"><path d="M7 11V6a2 2 0 0 1 4 0v5M11 10V4a2 2 0 0 1 4 0v6M15 10V6a2 2 0 0 1 4 0v8a7 7 0 0 1-14 0v-3a2 2 0 0 1 4 0"/></svg></div>
+      <div class="beneficio aparecer"><div class="ico" style="--c:#F2EDE4"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4F8A6B" stroke-width="2" stroke-linecap="round"><path d="M7 11V6a2 2 0 0 1 4 0v5M11 10V4a2 2 0 0 1 4 0v6M15 10V6a2 2 0 0 1 4 0v8a7 7 0 0 1-14 0v-3a2 2 0 0 1 4 0"/></svg></div>
         <b>Mãos ocupadas</b><p>Recortar, encaixar e montar ajudam na coordenação e trazem uma sensação boa de conquista.</p></div>
-      <div class="beneficio aparecer"><div class="ico" style="--c:#FBEADF"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#B0643A" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div>
+      <div class="beneficio aparecer"><div class="ico" style="--c:#F2EDE4"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D88A2D" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div>
         <b>Letra grande</b><p>Tudo pensado para leitura confortável, com regras claras e sem pressa.</p></div>
-      <div class="beneficio aparecer"><div class="ico" style="--c:#E3F0EE"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#3A6F6B" stroke-width="2" stroke-linecap="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></div>
-        <b>Visual adulto</b><p>Bonito, florido e respeitoso. Nada de desenhos infantis.</p></div>
-      <div class="beneficio aparecer"><div class="ico" style="--c:#FAF0DC"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#9C6A1F" stroke-width="2" stroke-linecap="round"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="7"/></svg></div>
+      <div class="beneficio aparecer"><div class="ico" style="--c:#F2EDE4"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2E7D86" stroke-width="2" stroke-linecap="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></div>
+        <b>Visual adulto</b><p>Bonito, alegre e respeitoso. Nada de desenhos infantis.</p></div>
+      <div class="beneficio aparecer"><div class="ico" style="--c:#F2EDE4"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#B9862A" stroke-width="2" stroke-linecap="round"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="7"/></svg></div>
         <b>Imprima à vontade</b><p>Acabaram as folhas? É só imprimir de novo, quantas vezes quiser.</p></div>
     </div>
   </div>
@@ -388,7 +396,7 @@
     <h2>Comprando hoje, você <em>ainda leva 2 bônus</em></h2>
     <p class="sub">Dois materiais completos, com o mesmo cuidado e visual do kit.</p>
     <div class="bonus-grid">
-      <article class="bonus aparecer" style="--c:#FAF0DC">
+      <article class="bonus aparecer" style="--c:#F2EDE4">
         <span class="faixa">BÔNUS 1</span>
         <div class="foto"><img src="img/b1-pilha.webp" alt="Caderno Extra de Passatempos" width="800" height="820" loading="lazy"></div>
         <div class="txt">
@@ -398,7 +406,7 @@
           <div class="valor"><s>R$ 7,99</s><b>GRÁTIS HOJE</b></div>
         </div>
       </article>
-      <article class="bonus aparecer" style="--c:#F1EAF8">
+      <article class="bonus aparecer" style="--c:#F2EDE4">
         <span class="faixa">BÔNUS 2</span>
         <div class="foto"><img src="img/b2-pilha.webp" alt="Colorir para Relaxar" width="800" height="820" loading="lazy"></div>
         <div class="txt">
@@ -418,7 +426,7 @@
     <h2>Leve tudo hoje por um <em>preço de cafezinho</em></h2>
     <p class="sub">Pagamento único. Sem mensalidade. Seu para sempre.</p>
     <div class="oferta">
-      <span class="topo">🌸 KIT COMPLETO + 2 BÔNUS</span>
+      <span class="topo">🎲 KIT COMPLETO + 2 BÔNUS</span>
       <img src="img/oferta.webp" alt="Kit Mente Ativa e os dois bônus" width="1000" height="760" loading="lazy">
       <ul class="itens">
         <li><span>Kit Mente Ativa · 63 páginas, 24 jogos</span><em>R$ 47,00</em></li>
@@ -440,7 +448,7 @@
     <div class="garantia aparecer">
       <svg width="170" height="170" viewBox="0 0 170 170" aria-hidden="true">
         <g transform="translate(85 85)">
-          <circle r="80" fill="#A84B60"/>
+          <circle r="80" fill="#D9654B"/>
           <circle r="70" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="4 4"/>
           <text y="-14" text-anchor="middle" fill="#fff" font-family="Inter" font-weight="900" font-size="54">7</text>
           <text y="12" text-anchor="middle" fill="#fff" font-family="Inter" font-weight="800" font-size="17" letter-spacing="2">DIAS DE</text>

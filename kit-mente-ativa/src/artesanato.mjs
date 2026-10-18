@@ -105,8 +105,8 @@ export const dobraduras = [
 
 // ---------- papéis estampados para dobrar (viewBox 100 x 100) ----------
 const estampas = [
-  ['#F2B8C6', '#FFFFFF', 'flor'], ['#B8D8C2', '#FFFFFF', 'bolinha'], ['#F5D98C', '#FFFFFF', 'flor'], ['#C9BCE3', '#FFFFFF', 'xadrez'],
-  ['#F4B88A', '#FFFFFF', 'bolinha'], ['#A9CEC9', '#FFFFFF', 'flor'], ['#E8A0B4', '#FFFFFF', 'xadrez'], ['#D3E3A8', '#FFFFFF', 'flor'],
+  ['#F2B8C6', '#FFFFFF', 'flor'], ['#B8D8C2', '#FFFFFF', 'bolinha'], ['#F5D98C', '#FFFFFF', 'flor'], ['#DCD3C5', '#FFFFFF', 'xadrez'],
+  ['#F4B88A', '#FFFFFF', 'bolinha'], ['#DCD3C5', '#FFFFFF', 'flor'], ['#E8A0B4', '#FFFFFF', 'xadrez'], ['#D3E3A8', '#FFFFFF', 'flor'],
 ];
 export function papelEstampado(i) {
   const [fundo, motivo, tipo] = estampas[i % estampas.length];

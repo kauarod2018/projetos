@@ -1,6 +1,6 @@
 # Mente Ativa — Coleção de Jogos e Desafios para Imprimir
 
-Produto digital low ticket para filhos e cuidadores de idosos: um PDF de 63 páginas, com visual florido e acolhedor, dividido em 6 partes.
+Produto digital low ticket para filhos e cuidadores de idosos: um PDF de 63 páginas, com visual neutro e divertido (enfeites de jogo), dividido em 6 partes.
 
 | Caminho | O quê |
 |---|---|
@@ -10,9 +10,9 @@ Produto digital low ticket para filhos e cuidadores de idosos: um PDF de 63 pág
 | `src/geradores.mjs` | Sudoku (solução única), caça-palavras, pirâmides e cortes de encaixe |
 | `src/tangram.mjs` | Peças e figuras do tangram, com validação geométrica |
 | `src/cenas.mjs` | Ilustrações dos quebra-cabeças |
-| `src/flores.mjs` | Ornamentos florais (guirlanda, buquês, cantos e vinhetas) |
+| `src/flores.mjs` | Paleta e enfeites (dados, peças, peões, estrelas, confete), além das flores usadas nos desenhos |
 | `src/build.mjs` | Conteúdo e páginas do kit principal |
-| `src/layout.mjs` | Moldura florida, estilo e geração de PDF com revisão de layout (usado pelo kit e pelos bônus) |
+| `src/layout.mjs` | Moldura das páginas, estilo e geração de PDF com revisão de layout (usado pelo kit e pelos bônus) |
 | `src/bonus.mjs` | Gera os dois PDFs bônus |
 | `src/desenhos.mjs` | Cenas de "encontre as diferenças" e desenhos para colorir |
 | `dist/Bonus-1-Caderno-Extra-de-Passatempos.pdf` | Bônus 1 (32 páginas) |

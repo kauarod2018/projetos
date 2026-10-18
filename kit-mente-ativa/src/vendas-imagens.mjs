@@ -41,14 +41,14 @@ const folha = (src, w, x, y, giro, z = 0) => `<img src="${src}" style="position:
   box-shadow:0 16px 34px rgba(60,20,30,.28);border-radius:6px;z-index:${z}">`;
 const selo = (txt, x, y, cor, tam = 150) => `<div style="position:absolute;left:${x}px;top:${y}px;width:${tam}px;height:${tam}px;border-radius:50%;background:${cor};color:#fff;
   display:grid;place-items:center;text-align:center;font:800 ${tam * 0.2}px/1.05 Inter,sans-serif;transform:rotate(-10deg);z-index:9;
-  box-shadow:0 0 0 7px #fff, 0 0 0 10px #E8B4C0, 0 14px 30px rgba(0,0,0,.22)">${txt}</div>`;
+  box-shadow:0 0 0 7px #fff, 0 0 0 10px #DCD3C5, 0 14px 30px rgba(0,0,0,.22)">${txt}</div>`;
 
 const mockups = {
   'hero.png': [1000, 900, `
     ${folha(img('b1-capa'), 360, 20, 210, -11)}
     ${folha(img('b2-capa'), 360, 620, 210, 11)}
     <div style="position:absolute;left:250px;top:40px;z-index:5">${tablet(img('kit-capa'), 500)}</div>
-    ${selo('+2<br><span style="font-size:22px">BÔNUS</span>', 790, 640, '#A84B60', 160)}`],
+    ${selo('+2<br><span style="font-size:22px">BÔNUS</span>', 790, 640, '#D9654B', 160)}`],
   'kit-pilha.png': [900, 900, `
     ${folha(img('kit-quebra-casario'), 400, 40, 120, -9)}
     ${folha(img('kit-xadrez-pecas'), 400, 460, 110, 8)}

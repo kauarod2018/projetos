@@ -43,8 +43,8 @@ export const diferencas = [
       ${d.cereja ? '' : '<circle cx="227" cy="112" r="4.5" fill="#C0392B"/>'}
       <!-- vaso -->
       <path d="M150 104 h18 l-3 22 h-12z" fill="#D2557A"/>
-      <line x1="159" y1="104" x2="152" y2="80" stroke="#4E7D5B" stroke-width="2"/><line x1="159" y1="104" x2="166" y2="78" stroke="#4E7D5B" stroke-width="2"/>
-      ${d.flor ? '' : '<line x1="159" y1="104" x2="159" y2="74" stroke="#4E7D5B" stroke-width="2"/>'}
+      <line x1="159" y1="104" x2="152" y2="80" stroke="#4F8A6B" stroke-width="2"/><line x1="159" y1="104" x2="166" y2="78" stroke="#4F8A6B" stroke-width="2"/>
+      ${d.flor ? '' : '<line x1="159" y1="104" x2="159" y2="74" stroke="#4F8A6B" stroke-width="2"/>'}
       ${petala(152, 80, 7, '#F0B48A')}${petala(166, 78, 7, '#A99BC9')}${d.flor ? '' : petala(159, 72, 7, '#D98C9A')}
       <!-- gato -->
       <ellipse cx="150" cy="190" rx="26" ry="13" fill="#9A9A9A"/>
@@ -72,13 +72,13 @@ export const diferencas = [
       </g>
       ${d.passaro ? '' : '<g transform="translate(150 98)"><ellipse rx="9" ry="6" fill="#3D6FB6"/><circle cx="7" cy="-5" r="4.5" fill="#3D6FB6"/><path d="M11 -5 l5 1 l-5 2z" fill="#F2A541"/><circle cx="8" cy="-6" r="1" fill="#fff"/></g>'}
       <!-- regador -->
-      <g transform="translate(70 170)"><rect x="-14" y="-14" width="28" height="22" rx="3" fill="${d.regador ? '#D2557A' : '#3A6F6B'}"/>
-        <path d="M14 -8 l16 -12" stroke="${d.regador ? '#D2557A' : '#3A6F6B'}" stroke-width="4"/><path d="M-6 -14 q6 -12 12 0" fill="none" stroke="#333" stroke-width="2"/></g>
+      <g transform="translate(70 170)"><rect x="-14" y="-14" width="28" height="22" rx="3" fill="${d.regador ? '#D2557A' : '#2E7D86'}"/>
+        <path d="M14 -8 l16 -12" stroke="${d.regador ? '#D2557A' : '#2E7D86'}" stroke-width="4"/><path d="M-6 -14 q6 -12 12 0" fill="none" stroke="#333" stroke-width="2"/></g>
       <!-- flores -->
       ${[[130, 170, '#D98C9A'], [165, 178, '#F0B48A'], [200, 168, d.florCor ? '#A99BC9' : '#F5D76E'], [235, 176, '#D98C9A']].map(([x, y, cor]) =>
         `<line x1="${x}" y1="${y}" x2="${x}" y2="${y + 22}" stroke="#2D6A2F" stroke-width="2"/>${petala(x, y, 9, cor)}`).join('')}
       <!-- borboleta -->
-      <g transform="translate(110 70)"><ellipse cx="-6" cy="-3" rx="7" ry="9" fill="${d.borboleta ? '#7B4FB8' : '#F2A541'}"/><ellipse cx="6" cy="-3" rx="7" ry="9" fill="${d.borboleta ? '#7B4FB8' : '#F2A541'}"/>
+      <g transform="translate(110 70)"><ellipse cx="-6" cy="-3" rx="7" ry="9" fill="${d.borboleta ? '#5868A8' : '#F2A541'}"/><ellipse cx="6" cy="-3" rx="7" ry="9" fill="${d.borboleta ? '#5868A8' : '#F2A541'}"/>
         <rect x="-1" y="-8" width="2" height="14" fill="#333"/></g>`,
     marcas: { sol: [262, 34, 24], nuvem: [176, 48, 26], macas: [62, 88, 10], cerca: [205, 125, 16], passaro: [152, 96, 16], regador: [80, 162, 26], florCor: [200, 170, 14], borboleta: [110, 68, 15] },
   },
@@ -90,11 +90,11 @@ export const diferencas = [
       <!-- estante -->
       <rect x="18" y="40" width="72" height="125" fill="#9C6B43"/>
       <rect x="24" y="78" width="60" height="4" fill="#7A4B27"/><rect x="24" y="118" width="60" height="4" fill="#7A4B27"/>
-      ${[['#D2557A', 26], ['#3D6FB6', 36], ['#E9A03B', 46], ['#4E7D5B', 56], ['#7B4FB8', 66]].filter(([, x]) => !(d.livro && x === 46)).map(([cor, x]) => `<rect x="${x}" y="52" width="8" height="26" fill="${cor}"/>`).join('')}
-      ${[['#4E7D5B', 28], ['#D2557A', 40], ['#3D6FB6', 52]].map(([cor, x]) => `<rect x="${x}" y="92" width="10" height="26" fill="${cor}"/>`).join('')}
+      ${[['#D2557A', 26], ['#3D6FB6', 36], ['#E9A03B', 46], ['#4F8A6B', 56], ['#5868A8', 66]].filter(([, x]) => !(d.livro && x === 46)).map(([cor, x]) => `<rect x="${x}" y="52" width="8" height="26" fill="${cor}"/>`).join('')}
+      ${[['#4F8A6B', 28], ['#D2557A', 40], ['#3D6FB6', 52]].map(([cor, x]) => `<rect x="${x}" y="92" width="10" height="26" fill="${cor}"/>`).join('')}
       <!-- quadro -->
       <rect x="125" y="28" width="62" height="46" fill="#FFF8EC" stroke="#B5813F" stroke-width="4"/>
-      <path d="M129 70 L148 48 L160 60 L170 50 L183 70Z" fill="${d.quadro ? '#7B4FB8' : '#4E7D5B'}"/>
+      <path d="M129 70 L148 48 L160 60 L170 50 L183 70Z" fill="${d.quadro ? '#5868A8' : '#4F8A6B'}"/>
       <!-- abajur -->
       <rect x="250" y="70" width="4" height="95" fill="#5A4636"/>
       <path d="M232 70 h40 l-8 -26 h-24z" fill="${d.abajur ? '#5E8C61' : '#F2C14E'}"/>
@@ -108,7 +108,7 @@ export const diferencas = [
       <path d="M100 165 h18 l-3 -22 h-12z" fill="#D2557A"/>
       ${[[-30, 109], [0, 109], [30, 109], ...(d.folha ? [] : [[60, 109]])].map(([a]) => `<ellipse cx="109" cy="128" rx="5" ry="14" transform="rotate(${a - 15} 109 143)" fill="#4E8F4A"/>`).join('')}
       <!-- tapete e gato -->
-      <ellipse cx="170" cy="190" rx="70" ry="12" fill="${d.tapete ? '#7B4FB8' : '#3A6F6B'}"/>
+      <ellipse cx="170" cy="190" rx="70" ry="12" fill="${d.tapete ? '#5868A8' : '#2E7D86'}"/>
       <ellipse cx="200" cy="184" rx="16" ry="9" fill="#2B2B2B"/><circle cx="186" cy="178" r="7" fill="#2B2B2B"/>
       <path d="M181 173 l1 -7 l4 5z M187 171 l4 -5 l1 7z" fill="#2B2B2B"/>
       ${d.gato ? '' : '<circle cx="184" cy="177" r="1.4" fill="#F2C14E"/><circle cx="189" cy="177" r="1.4" fill="#F2C14E"/>'}`,
@@ -267,7 +267,7 @@ export function guirlandaFrase(frase) {
   return `<svg viewBox="0 0 320 400">
     <circle cx="160" cy="200" r="125" fill="none" stroke="#2B2B2B" stroke-width="1.4"/>
     ${itens.join('')}
-    ${linhas.map((l, i) => `<text x="160" y="${200 - (linhas.length - 1) * 22 + i * 44}" text-anchor="middle" font-family="Lora" font-weight="700" font-size="34" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="1.4">${l}</text>`).join('')}
+    ${linhas.map((l, i) => `<text x="160" y="${200 - (linhas.length - 1) * 22 + i * 44}" text-anchor="middle" font-family="Fredoka" font-weight="700" font-size="34" fill="#FFFFFF" stroke="#2B2B2B" stroke-width="1.4">${l}</text>`).join('')}
   </svg>`;
 }
 

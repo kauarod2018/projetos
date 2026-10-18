@@ -9,7 +9,7 @@ const pasta = path.join(path.dirname(fileURLToPath(import.meta.url)), 'imagens')
 const img = (n) => pathToFileURL(path.join(pasta, n)).href;
 
 const madeira = `background: repeating-linear-gradient(92deg, #8A5A36 0 14px, #94633D 14px 30px, #7E5131 30px 41px, #9A6A43 41px 60px);`;
-const fundoQuente = `background: radial-gradient(circle at 30% 20%, #FBE3D6 0, transparent 40%), radial-gradient(circle at 80% 75%, #F3D9E4 0, transparent 45%), #F7EBDD;`;
+const fundoQuente = `background: radial-gradient(circle at 30% 20%, #F6E7D3 0, transparent 40%), radial-gradient(circle at 80% 75%, #E3ECE6 0, transparent 45%), #F3EEE6;`;
 
 const tablet = (src, w) => `<div style="width:${w}px;padding:${w * 0.045}px;background:#1E1E22;border-radius:${w * 0.07}px;
   box-shadow:0 40px 80px rgba(0,0,0,.35), inset 0 0 0 3px #3A3A40"><img src="${src}" style="width:100%;display:block;border-radius:${w * 0.02}px"></div>`;
@@ -36,9 +36,9 @@ const cenas = {
     ${folha(img('07-domino-pecas.png'), 330, 150, 520, 9)}
     ${folha(img('05-quebra-cabeca.png'), 330, 40, 560, -7)}
     <div style="position:absolute;left:40px;top:640px">${tablet(img('01-capa.png'), 440)}</div>
-    <div style="position:absolute;left:300px;top:1340px;width:210px;height:210px;border-radius:50%;background:#A84B60;color:#fff;
+    <div style="position:absolute;left:300px;top:1340px;width:210px;height:210px;border-radius:50%;background:#D9654B;color:#fff;
       display:grid;place-items:center;text-align:center;font:800 40px/1.05 Inter,sans-serif;transform:rotate(-10deg);
-      box-shadow:0 0 0 10px #fff, 0 0 0 14px #E8B4C0, 0 20px 40px rgba(0,0,0,.25)">+ BÔNUS<br><span style="font-size:22px;font-weight:600">especiais</span></div>
+      box-shadow:0 0 0 10px #fff, 0 0 0 14px #DCD3C5, 0 20px 40px rgba(0,0,0,.25)">+ BÔNUS<br><span style="font-size:22px;font-weight:600">especiais</span></div>
   </div>` },
 };
 

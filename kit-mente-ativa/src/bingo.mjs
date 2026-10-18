@@ -3,7 +3,7 @@
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import * as g from './geradores.mjs';
-import { paleta, vinheta, flor } from './flores.mjs';
+import { paleta, vinheta, enfeite } from './flores.mjs';
 import { molduraPagina, gerarPDF } from './layout.mjs';
 import { livro, lista, capa, cssExtra } from './livro.mjs';
 import { cancoesGrupo, lembrancas, variacoesBingo } from './conteudo-extras.mjs';
@@ -12,15 +12,15 @@ const raiz = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dist = path.join(raiz, 'dist');
 
 const cores = {
-  geral: { cor: '#A84B60', tint: '#F8E6EA', medio: '#E8B4C0', flores: [paleta.rosa, paleta.amarelo, paleta.lavanda] },
-  numeros: { cor: '#3A6F6B', tint: '#E3F0EE', medio: '#A9CEC9', flores: [paleta.lavanda, paleta.pessego, paleta.rosa] },
-  cancoes: { cor: '#9C6A1F', tint: '#FAF0DC', medio: '#E8CD92', flores: [paleta.rosa, paleta.amarelo, paleta.lavanda] },
-  lembrancas: { cor: '#6B5B95', tint: '#EEE9F6', medio: '#C9BCE3', flores: [paleta.lavanda, paleta.rosa, paleta.amarelo] },
-  festa: { cor: '#B0643A', tint: '#FBEADF', medio: '#EDC0A2', flores: [paleta.pessego, paleta.amarelo, paleta.rosa] },
+  geral: { cor: '#D9654B', tint: '#F2EDE4', medio: '#DCD3C5', flores: [paleta.rosa, paleta.amarelo, paleta.lavanda] },
+  numeros: { cor: '#2E7D86', tint: '#F2EDE4', medio: '#DCD3C5', flores: [paleta.lavanda, paleta.pessego, paleta.rosa] },
+  cancoes: { cor: '#B9862A', tint: '#F2EDE4', medio: '#DCD3C5', flores: [paleta.rosa, paleta.amarelo, paleta.lavanda] },
+  lembrancas: { cor: '#3D5A80', tint: '#F2EDE4', medio: '#DCD3C5', flores: [paleta.lavanda, paleta.rosa, paleta.amarelo] },
+  festa: { cor: '#D88A2D', tint: '#F2EDE4', medio: '#DCD3C5', flores: [paleta.pessego, paleta.amarelo, paleta.rosa] },
 };
 
 const L = livro('Mente Ativa · Kit Bingo', 'jogar junto é cuidar');
-const fz = (cor, tam = 4.5) => `<svg viewBox="-10 -10 20 20" style="width:${tam}mm;height:${tam}mm;vertical-align:-1mm">${flor(0, 0, 9, cor)}</svg>`;
+const fz = (cor, tam = 4.5) => `<svg viewBox="-10 -10 20 20" style="width:${tam}mm;height:${tam}mm;vertical-align:-1mm">${enfeite(0, 0, 8, cor, { tipo: 'estrela' })}</svg>`;
 const avisoCorte = '<p class="aviso-corte">✂ Recorte nas linhas tracejadas. Para durar mais, cole em papel-cartão ou plastifique.</p>';
 
 // ---------- cartelas ----------
@@ -100,9 +100,9 @@ L.pagina(`<h1 class="titulo">Variações para cada rodada</h1>
   <div class="variacoes">${variacoesBingo.map(([t, d], i) => `<div><b>${i + 1}. ${t}</b><p>${d}</p></div>`).join('')}</div>
   <h2 class="sub">As três modalidades deste kit</h2>
   <div class="modalidades">
-    <div style="--c:#3A6F6B"><b>Números</b><p>O bingo clássico de 75 bolas. Cartelas 5×5 com o centro livre. Bom para grupos grandes e para quem já conhece o jogo.</p></div>
-    <div style="--c:#9C6A1F"><b>Canções</b><p>Quem canta cantarola um trechinho; os jogadores adivinham a música. Puro clima de baile.</p></div>
-    <div style="--c:#6B5B95"><b>Lembranças</b><p>Objetos e costumes de antigamente. Cada ficha traz uma pergunta para puxar conversa.</p></div>
+    <div style="--c:#2E7D86"><b>Números</b><p>O bingo clássico de 75 bolas. Cartelas 5×5 com o centro livre. Bom para grupos grandes e para quem já conhece o jogo.</p></div>
+    <div style="--c:#B9862A"><b>Canções</b><p>Quem canta cantarola um trechinho; os jogadores adivinham a música. Puro clima de baile.</p></div>
+    <div style="--c:#3D5A80"><b>Lembranças</b><p>Objetos e costumes de antigamente. Cada ficha traz uma pergunta para puxar conversa.</p></div>
   </div>`, { est: cores.geral, titulo: 'Variações' });
 
 // Números
@@ -152,7 +152,7 @@ L.pagina(`<h2 class="titulo-jogo">Folha de controle · lembranças</h2>
 { est: cores.lembrancas, rotulo: 'Bingo das lembranças', titulo: 'Folha de controle' });
 
 // Festa
-const coresMarcador = ['#A84B60', '#3A6F6B', '#9C6A1F', '#6B5B95', '#B0643A'];
+const coresMarcador = ['#D9654B', '#2E7D86', '#B9862A', '#3D5A80', '#D88A2D'];
 L.pagina(`<h2 class="titulo-jogo">Marcadores</h2>
   <p class="instrucao">Para quem não quiser usar feijão ou botões. Recorte os círculos, de preferência colados em papel-cartão.</p>
   <div class="marcadores">${Array.from({ length: 80 }, (_, i) => `<span style="background:${coresMarcador[i % 5]}">${fz('#FFFFFF', 7)}</span>`).join('')}</div>`,
@@ -193,17 +193,17 @@ const cssBingo = `
 .roteiro h3 { font-size: 14pt; color: var(--cor); margin-bottom: 2mm; }
 .roteiro .passos li { font-size: 10.8pt; }
 .variacoes { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm 5mm; }
-.variacoes div { background: #fff; border: 1px solid #F0E2D8; border-radius: 4mm; padding: 3mm 4mm; }
-.variacoes b { font-family: 'Lora'; font-size: 12.5pt; color: var(--cor); }
+.variacoes div { background: #fff; border: 1px solid #E7DFD3; border-radius: 4mm; padding: 3mm 4mm; }
+.variacoes b { font-family: 'Fredoka'; font-size: 12.5pt; color: var(--cor); }
 .variacoes p { font-size: 10.5pt; line-height: 1.4; }
 .modalidades { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4mm; }
-.modalidades div { border-radius: 5mm; padding: 4mm 5mm; background: #fff; border-top: 5px solid var(--c); box-shadow: 0 0 0 1px #F0E2D8; }
-.modalidades b { font-family: 'Lora'; font-size: 14pt; color: var(--c); }
+.modalidades div { border-radius: 5mm; padding: 4mm 5mm; background: #fff; border-top: 5px solid var(--c); box-shadow: 0 0 0 1px #E7DFD3; }
+.modalidades b { font-family: 'Fredoka'; font-size: 14pt; color: var(--c); }
 .modalidades p { font-size: 10.5pt; line-height: 1.45; margin-top: 1mm; }
 .cartelas-g { flex: 1; display: grid; grid-template-rows: 1fr 1fr; gap: 8mm; min-height: 0; }
 .cartela-g { background: #fff; border: 2.5px solid var(--cor); border-radius: 5mm; outline: 1px dashed #8F8680; outline-offset: 2.5mm; display: flex; flex-direction: column; overflow: hidden; min-height: 0; }
 .cg-topo { display: flex; align-items: baseline; justify-content: space-between; padding: 1.5mm 5mm; background: var(--tint); }
-.cg-topo span { font-family: 'Dancing Script'; font-size: 21pt; color: var(--cor); }
+.cg-topo span { font-family: 'Fredoka'; font-weight: 600; font-size: 15pt; color: var(--cor); }
 .cg-topo small { font-size: 9pt; text-transform: uppercase; letter-spacing: .1em; color: #7A6F68; }
 .cg-letras { display: grid; grid-template-columns: repeat(5, 1fr); background: var(--cor); }
 .cg-letras b { color: #fff; text-align: center; font-size: 17pt; font-weight: 900; padding: .8mm 0; }
@@ -215,14 +215,14 @@ const cssBingo = `
 .cartela-g.num .cg-grade div { font-size: 20pt; font-weight: 800; }
 .cartela-g.num .cg-grade div.livre { display: flex; flex-direction: column; justify-content: center; background: var(--tint); }
 .livre small { font-size: 7pt; text-transform: uppercase; letter-spacing: .1em; color: var(--cor); font-weight: 700; }
-.cartela-g.txt .cg-grade div { font-family: 'Lora'; font-weight: 600; font-size: 12pt; line-height: 1.2; padding: 1.5mm 2mm; }
+.cartela-g.txt .cg-grade div { font-family: 'Fredoka'; font-weight: 600; font-size: 12pt; line-height: 1.2; padding: 1.5mm 2mm; }
 .fichas-num { flex: 1; display: grid; grid-template-columns: repeat(5, 1fr); grid-auto-rows: 1fr; }
 .fichas-num div { outline: 1px dashed #8F8680; outline-offset: -.5px; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #fff; }
 .fichas-num small { font-size: 9pt; font-weight: 800; color: var(--cor); letter-spacing: .1em; }
 .fichas-num b { font-size: 22pt; font-weight: 900; line-height: 1; }
 .fichas-txt { flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 1fr; }
 .fichas-txt div { outline: 1px dashed #8F8680; outline-offset: -.5px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2mm 3mm; background: #fff; gap: 1mm; }
-.fichas-txt b { font-family: 'Lora'; font-size: 12.5pt; line-height: 1.2; color: var(--cor); }
+.fichas-txt b { font-family: 'Fredoka'; font-size: 12.5pt; line-height: 1.2; color: var(--cor); }
 .fichas-txt small { font-size: 8.5pt; color: #6E625C; line-height: 1.3; }
 .controle-num { flex: 1; display: grid; grid-template-columns: repeat(5, 1fr); gap: 3mm; min-height: 0; }
 .cn-col { display: flex; flex-direction: column; gap: 1.2mm; }
@@ -241,14 +241,14 @@ const cssBingo = `
 .convite { background: #fff; border-radius: 6mm; outline: 1px dashed #8F8680; outline-offset: 2.5mm; border: 2px solid var(--medio); text-align: center; padding: 6mm 10mm;
   display: flex; flex-direction: column; justify-content: center; }
 .cv-flores { display: flex; justify-content: center; gap: 2mm; }
-.cv-k { font-family: 'Lora'; font-style: italic; color: #6E625C; margin-top: 2mm; }
-.convite h3 { font-family: 'Dancing Script'; font-size: 40pt; color: var(--cor); line-height: 1.1; margin-bottom: 4mm; }
+.cv-k { font-family: 'Fredoka'; font-style: italic; color: #6E625C; margin-top: 2mm; }
+.convite h3 { font-family: 'Fredoka'; font-weight: 700; font-size: 30pt; color: var(--cor); line-height: 1.1; margin-bottom: 4mm; }
 .cv-linhas p { font-size: 12pt; margin-bottom: 3mm; }
-.cv-f { font-family: 'Lora'; font-style: italic; color: var(--cor); margin-top: 2mm; }
+.cv-f { font-family: 'Fredoka'; font-style: italic; color: var(--cor); margin-top: 2mm; }
 .certificado { background: #fff; border-radius: 4mm; outline: 1px dashed #8F8680; outline-offset: 2.5mm; padding: 4mm; }
 .ct-borda { height: 100%; border: 3px double var(--cor); border-radius: 3mm; text-align: center; display: flex; flex-direction: column; justify-content: center; padding: 4mm 10mm; }
-.ct-k { font-family: 'Lora'; font-style: italic; color: #6E625C; font-size: 13pt; }
-.certificado h3 { font-family: 'Dancing Script'; font-size: 38pt; color: var(--cor); margin-bottom: 4mm; }
+.ct-k { font-family: 'Fredoka'; font-style: italic; color: #6E625C; font-size: 13pt; }
+.certificado h3 { font-family: 'Fredoka'; font-weight: 700; font-size: 27pt; color: var(--cor); margin-bottom: 4mm; }
 .certificado p { font-size: 12pt; margin-bottom: 3mm; }
 .ct-linha { display: inline-block; width: 90mm; border-bottom: 1px solid #2B2B2B; }
 .ct-linha.curta { width: 40mm; }

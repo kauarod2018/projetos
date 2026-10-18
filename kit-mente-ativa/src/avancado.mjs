@@ -12,13 +12,13 @@ const raiz = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dist = path.join(raiz, 'dist');
 
 const cores = {
-  geral: { cor: '#4A3F7A', tint: '#ECE8F6', medio: '#C4BAE3', flores: [paleta.lavanda, paleta.rosa, paleta.amarelo] },
-  sudoku: { cor: '#6B5B95', tint: '#EEE9F6', medio: '#C9BCE3', flores: [paleta.lavanda, paleta.rosa, paleta.amarelo] },
-  logica: { cor: '#3A6F6B', tint: '#E3F0EE', medio: '#A9CEC9', flores: [paleta.lavanda, paleta.pessego, paleta.rosa] },
-  xadrez: { cor: '#2D4739', tint: '#E4EEE7', medio: '#A8C6B1', flores: [paleta.amarelo, paleta.rosa, paleta.lavanda] },
-  cripto: { cor: '#A84B60', tint: '#F8E6EA', medio: '#E8B4C0', flores: [paleta.rosa, paleta.pessego, paleta.amarelo] },
-  cruz: { cor: '#B0643A', tint: '#FBEADF', medio: '#EDC0A2', flores: [paleta.pessego, paleta.amarelo, paleta.rosa] },
-  magico: { cor: '#9C6A1F', tint: '#FAF0DC', medio: '#E8CD92', flores: [paleta.amarelo, paleta.rosa, paleta.lavanda] },
+  geral: { cor: '#34495E', tint: '#F2EDE4', medio: '#DCD3C5', flores: [paleta.lavanda, paleta.rosa, paleta.amarelo] },
+  sudoku: { cor: '#3D5A80', tint: '#F2EDE4', medio: '#DCD3C5', flores: [paleta.lavanda, paleta.rosa, paleta.amarelo] },
+  logica: { cor: '#2E7D86', tint: '#F2EDE4', medio: '#DCD3C5', flores: [paleta.lavanda, paleta.pessego, paleta.rosa] },
+  xadrez: { cor: '#3B4A42', tint: '#F2EDE4', medio: '#DCD3C5', flores: [paleta.amarelo, paleta.rosa, paleta.lavanda] },
+  cripto: { cor: '#D9654B', tint: '#F2EDE4', medio: '#DCD3C5', flores: [paleta.rosa, paleta.pessego, paleta.amarelo] },
+  cruz: { cor: '#D88A2D', tint: '#F2EDE4', medio: '#DCD3C5', flores: [paleta.pessego, paleta.amarelo, paleta.rosa] },
+  magico: { cor: '#B9862A', tint: '#F2EDE4', medio: '#DCD3C5', flores: [paleta.amarelo, paleta.rosa, paleta.lavanda] },
 };
 
 const L = livro('Mente Ativa · Nível Avançado', 'desafio também é cuidado');
@@ -134,7 +134,7 @@ for (let i = 0; i < 3; i++) {
 cruzadas.forEach((t, i) => {
   L.pagina(`<h2 class="titulo-jogo">Palavras cruzadas · ${t.tema}</h2>
     ${i === 0 ? '<p class="instrucao">Responda às dicas começando pelo número indicado. Acentos, “ç” e hífens foram retirados.</p>' : ''}
-    <div class="cruz-area">${gradeCruz(t, { tam: Math.min(9, 168 / t.grade[0].length, 128 / t.grade.length) })}</div>
+    <div class="cruz-area">${gradeCruz(t, { tam: Math.min(8.5, 160 / t.grade[0].length, 112 / t.grade.length) })}</div>
     <div class="dicas-cruz">
       <div><h3>Horizontais →</h3><ol>${t.horizontais.map((w) => `<li value="${w.n}">${w.dica} <small>(${w.palavra.length})</small></li>`).join('')}</ol></div>
       <div><h3>Verticais ↓</h3><ol>${t.verticais.map((w) => `<li value="${w.n}">${w.dica} <small>(${w.palavra.length})</small></li>`).join('')}</ol></div>
@@ -183,7 +183,7 @@ const cssAvancado = `
 .sudoku.x tr:nth-child(7) td:nth-child(7), .sudoku.x tr:nth-child(8) td:nth-child(8), .sudoku.x tr:nth-child(9) td:nth-child(9),
 .sudoku.x tr:nth-child(1) td:nth-child(9), .sudoku.x tr:nth-child(2) td:nth-child(8), .sudoku.x tr:nth-child(3) td:nth-child(7),
 .sudoku.x tr:nth-child(4) td:nth-child(6), .sudoku.x tr:nth-child(6) td:nth-child(4),
-.sudoku.x tr:nth-child(7) td:nth-child(3), .sudoku.x tr:nth-child(8) td:nth-child(2), .sudoku.x tr:nth-child(9) td:nth-child(1) { background: #E6DFF3; }
+.sudoku.x tr:nth-child(7) td:nth-child(3), .sudoku.x tr:nth-child(8) td:nth-child(2), .sudoku.x tr:nth-child(9) td:nth-child(1) { background: #F5E9CC; }
 .pistas { padding-left: 8mm; margin-bottom: 5mm; }
 .pistas li { font-size: 12pt; line-height: 1.5; margin-bottom: 1.2mm; }
 .pistas li::marker { font-weight: 700; color: var(--cor); }
@@ -196,7 +196,7 @@ const cssAvancado = `
 .tabela-logica.mini tbody th { width: 26mm; }
 .opcoes { font-size: 9.5pt; color: #6E625C; margin-top: 2.5mm; line-height: 1.5; }
 .mates2 { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 6mm; align-content: center; justify-items: center; }
-.mates2 figcaption { font-family: 'Lora'; font-weight: 600; text-align: center; margin-top: 1.5mm; }
+.mates2 figcaption { font-family: 'Fredoka'; font-weight: 600; text-align: center; margin-top: 1.5mm; }
 .cripto-bloco { margin-bottom: 10mm; }
 .cripto-bloco h3 { font-size: 13pt; color: var(--cor); margin-bottom: 2mm; }
 .cripto { display: flex; flex-wrap: wrap; gap: 6mm 8mm; }
@@ -211,10 +211,10 @@ const cssAvancado = `
 .apoio span { border: 1px solid #C9BFB2; height: 11mm; background: #fff; position: relative; }
 .apoio span i { position: absolute; left: .8mm; top: .3mm; font-style: normal; font-size: 7pt; color: #6E625C; }
 .magicos { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 10mm; align-content: center; justify-items: center; }
-.magicos figcaption { text-align: center; font-family: 'Lora'; font-weight: 600; margin-top: 2mm; }
+.magicos figcaption { text-align: center; font-family: 'Fredoka'; font-weight: 600; margin-top: 2mm; }
 .magico { border-collapse: collapse; border: 2.5px solid #2B2B2B; }
 .magico td { width: 22mm; height: 22mm; border: 1.2px solid #2B2B2B; text-align: center; font-size: 22pt; font-weight: 700; background: #fff; }
-.magico td.dado { background: #FAF0DC; color: var(--cor); }
+.magico td.dado { background: #F2EDE4; color: var(--cor); }
 .magicos.mini { flex: none; grid-template-columns: repeat(4, 1fr); gap: 4mm; }
 .magicos.mini .magico td { width: 8mm; height: 8mm; font-size: 9pt; }
 .magicos.mini figcaption { font-size: 9pt; }

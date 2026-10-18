@@ -3,64 +3,66 @@ import { chromium } from 'playwright';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import path from 'node:path';
-import { canto, flor } from './flores.mjs';
+import { canto, enfeite, paleta } from './flores.mjs';
 
 const raiz = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const fonte = (pacote, arq) => pathToFileURL(path.join(raiz, 'node_modules/@fontsource', pacote, 'files', arq)).href;
 
 // Fundo estampado com florzinhas na cor da parte.
-export function estampa(id, tint, medio) {
-  return `<svg class="estampa" preserveAspectRatio="none"><defs><pattern id="e${id}" width="22" height="22" patternUnits="userSpaceOnUse">
-    <g opacity=".75">${flor(6, 6, 5, medio, { miolo: '#FFFFFF' })}</g><circle cx="17" cy="17" r="1.6" fill="${medio}"/>
-    <circle cx="17" cy="5" r=".9" fill="${medio}"/><circle cx="5" cy="17" r=".9" fill="${medio}"/></pattern></defs>
-    <rect width="100%" height="100%" fill="${tint}"/><rect width="100%" height="100%" fill="url(#e${id})"/></svg>`;
+export function estampa(id) {
+  // Confete discreto nas cores da paleta, sobre fundo areia.
+  const c = [paleta.coral, paleta.mostarda, paleta.salvia, paleta.azul];
+  return `<svg class="estampa" preserveAspectRatio="none"><defs><pattern id="e${id}" width="34" height="34" patternUnits="userSpaceOnUse">
+    <g opacity=".42">${enfeite(6, 7, 2.6, c[0], { tipo: 'confete', giro: 35 })}${enfeite(23, 9, 2.2, c[1], { tipo: 'anel' })}
+    ${enfeite(15, 24, 2.6, c[2], { tipo: 'estrela', giro: 10 })}${enfeite(30, 27, 2.4, c[3], { tipo: 'confete', giro: -40 })}</g>
+    <circle cx="17" cy="16" r=".9" fill="#B9AE9E"/><circle cx="3" cy="30" r=".9" fill="#B9AE9E"/></pattern></defs>
+    <rect width="100%" height="100%" fill="#F3EEE6"/><rect width="100%" height="100%" fill="url(#e${id})"/></svg>`;
 }
 
-// Selo com o número da página dentro de uma flor.
-export function selo(n, cor, medio) {
-  const petalas = Array.from({ length: 8 }, (_, i) => `<ellipse cx="0" cy="-10" rx="6" ry="8" transform="rotate(${i * 45})" fill="${medio}"/>`).join('');
-  return `<svg viewBox="-20 -20 40 40" class="selo">${petalas}<circle r="11" fill="${cor}"/><circle r="11" fill="none" stroke="#FFFFFF" stroke-width="1.2" stroke-dasharray="1.6 1.4"/>
-    <text y="4" text-anchor="middle">${n}</text></svg>`;
+// Número da página dentro de um dado.
+export function selo(n, cor) {
+  return `<svg viewBox="-20 -20 40 40" class="selo"><rect x="-15" y="-15" width="30" height="30" rx="7" fill="${cor}" transform="rotate(-6)"/>
+    <rect x="-15" y="-15" width="30" height="30" rx="7" fill="none" stroke="#33302E" stroke-width="1.6" transform="rotate(-6)"/>
+    <text y="4.5" text-anchor="middle">${n}</text></svg>`;
 }
 
 // Moldura comum a todas as páginas: fundo estampado, cartão central, cantos floridos e rodapé.
 export function molduraPagina(corpo, { est, numero: num, marca, frase = 'jogar junto é cuidar', classe = '', rotulo = '', titulo = '', rodape = true }) {
   const fita = rotulo ? `<div class="fita"><span>${rotulo}</span>${titulo ? `<em>${titulo}</em>` : ''}</div>` : '';
   return `<section class="page ${classe}" style="--cor:${est.cor};--tint:${est.tint};--medio:${est.medio}">
-    ${estampa(num, est.tint, est.medio)}
+    ${estampa(num)}
     <div class="cartao">${fita}<div class="miolo">${corpo}</div></div>
-    <div class="canto-se">${canto(est.flores, num * 3)}</div><div class="canto-id">${canto([est.flores[1], est.flores[2], est.flores[0]], num * 3 + 1)}</div>
-    <div class="canto-sd">${canto([est.flores[2], est.flores[0], est.flores[1]], num * 3 + 2)}</div><div class="canto-ie">${canto(est.flores, num * 3 + 5)}</div>
-    ${rodape ? `<footer><span class="marca">${marca}</span>${selo(num, est.cor, est.medio)}<span class="frase">${frase}</span></footer>` : ''}
+    <div class="canto-se">${canto([est.cor, paleta.mostarda, paleta.salvia], num * 3)}</div><div class="canto-id">${canto([paleta.coral, est.cor, paleta.mostarda], num * 3 + 1)}</div>
+    <div class="canto-sd">${canto([paleta.salvia, paleta.coral, est.cor], num * 3 + 2)}</div><div class="canto-ie">${canto([paleta.mostarda, est.cor, paleta.coral], num * 3 + 5)}</div>
+    ${rodape ? `<footer><span class="marca">${marca}</span>${selo(num, est.cor)}<span class="frase">${frase}</span></footer>` : ''}
   </section>`;
 }
 
 export const css = `
-@font-face { font-family: 'Lora'; font-weight: 400; src: url('${fonte('lora', 'lora-latin-400-normal.woff2')}'); }
-@font-face { font-family: 'Lora'; font-weight: 400; font-style: italic; src: url('${fonte('lora', 'lora-latin-400-italic.woff2')}'); }
-@font-face { font-family: 'Lora'; font-weight: 600; src: url('${fonte('lora', 'lora-latin-600-normal.woff2')}'); }
-@font-face { font-family: 'Lora'; font-weight: 700; src: url('${fonte('lora', 'lora-latin-700-normal.woff2')}'); }
-@font-face { font-family: 'Dancing Script'; font-weight: 600; src: url('${fonte('dancing-script', 'dancing-script-latin-600-normal.woff2')}'); }
+@font-face { font-family: 'Fredoka'; font-weight: 400; src: url('${fonte('fredoka', 'fredoka-latin-400-normal.woff2')}'); }
+@font-face { font-family: 'Fredoka'; font-weight: 500; src: url('${fonte('fredoka', 'fredoka-latin-500-normal.woff2')}'); }
+@font-face { font-family: 'Fredoka'; font-weight: 600; src: url('${fonte('fredoka', 'fredoka-latin-600-normal.woff2')}'); }
+@font-face { font-family: 'Fredoka'; font-weight: 700; src: url('${fonte('fredoka', 'fredoka-latin-700-normal.woff2')}'); }
 @page { size: A4; margin: 0; }
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; font-synthesis: none; }
 html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 body { font-family: 'Inter', sans-serif; color: #1E2633; font-size: 12.5pt; }
 .miolo { flex: 1; display: flex; flex-direction: column; min-height: 0; }
-h1, h2, h3 { font-family: 'Lora', serif; font-weight: 700; }
+h1, h2, h3 { font-family: 'Fredoka', sans-serif; font-weight: 600; }
 .titulo { font-size: 30pt; margin-bottom: 2mm; color: var(--cor); }
 .titulo-jogo { font-size: 23pt; margin-bottom: 2mm; color: var(--cor); }
 .sub { font-size: 14pt; margin: 5mm 0 2.5mm; color: var(--cor, #1E2633); }
-.lead { font-family: 'Lora'; font-size: 13pt; line-height: 1.45; margin-bottom: 3mm; }
+.lead { font-family: 'Fredoka'; font-size: 13pt; line-height: 1.45; margin-bottom: 3mm; }
 .lead.pequeno { font-family: 'Inter'; font-size: 11.5pt; margin-bottom: 5mm; }
 .miolo > p { line-height: 1.55; }
 .instrucao { font-size: 12pt; line-height: 1.5; margin-bottom: 5mm; color: #3A4250; }
 .passos { list-style: none; counter-reset: p; }
 .passos li { counter-increment: p; position: relative; padding-left: 10mm; margin-bottom: 2.6mm; line-height: 1.45; font-size: 12pt; }
-.passos li::before { content: counter(p); position: absolute; left: 0; top: .2mm; font-family: 'Lora'; font-weight: 700; color: var(--cor, #7A2E3A); font-size: 13pt; }
+.passos li::before { content: counter(p); position: absolute; left: 0; top: .2mm; font-family: 'Fredoka'; font-weight: 700; color: var(--cor, #7A2E3A); font-size: 13pt; }
 .dicas { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm 6mm; }
-.dicas div { font-size: 10.5pt; line-height: 1.4; background: #FFFFFF; border: 1px solid #F0E2D8; border-radius: 4mm; padding: 3mm 4mm; }
+.dicas div { font-size: 10.5pt; line-height: 1.4; background: #FFFFFF; border: 1px solid #E7DFD3; border-radius: 4mm; padding: 3mm 4mm; }
 .nota-saude { margin-top: auto; font-size: 9.5pt !important; color: #7A746A; border-top: 1px solid #E2DACB; padding-top: 3mm; }
-.ficha-jogo { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2mm 6mm; background: #FBEFE8; border-radius: 5mm; padding: 4mm 6mm; margin: 2mm 0 4mm; }
+.ficha-jogo { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2mm 6mm; background: #F2EDE4; border-radius: 5mm; padding: 4mm 6mm; margin: 2mm 0 4mm; }
 .ficha-jogo dt { font-size: 8pt; text-transform: uppercase; letter-spacing: .1em; color: var(--cor); font-weight: 700; }
 .ficha-jogo dd { font-size: 11pt; line-height: 1.4; }
 .dica-box { margin-top: auto; background: #FFF4DE; border-radius: 5mm; padding: 4mm 6mm; font-size: 11pt; line-height: 1.5; }
@@ -68,13 +70,13 @@ h1, h2, h3 { font-family: 'Lora', serif; font-weight: 700; }
 
 .page { width: 210mm; height: 297mm; position: relative; overflow: hidden; page-break-after: always; background: var(--tint); }
 .estampa { position: absolute; inset: 0; width: 100%; height: 100%; }
-.cartao { position: absolute; top: 11mm; left: 11mm; right: 11mm; bottom: 17mm; background: #FFFDF9; border-radius: 7mm;
-  box-shadow: 0 0 0 .7mm var(--cor), 0 0 0 2.2mm #FFFFFF, 0 0 0 2.7mm var(--medio), 0 1.5mm 4mm 2.5mm rgba(0,0,0,.08);
+.cartao { position: absolute; top: 11mm; left: 11mm; right: 13mm; bottom: 19mm; background: #FFFDF9; border-radius: 6mm;
+  border: .55mm solid #33302E; box-shadow: 2.2mm 2.2mm 0 var(--cor);
   padding: 0 8mm 7mm; display: flex; flex-direction: column; z-index: 1; }
 .fita { align-self: flex-start; margin: 0 0 5mm -8mm; display: flex; align-items: center; gap: 4mm; }
 .fita span { background: var(--cor); color: #FFFFFF; font-size: 8.5pt; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
   padding: 2.4mm 7mm 2.4mm 8mm; border-radius: 7mm 0 4mm 0; }
-.fita em { font-family: 'Dancing Script'; font-style: normal; font-size: 15pt; color: var(--cor); }
+.fita em { font-family: 'Fredoka'; font-style: normal; font-weight: 500; font-size: 11.5pt; color: var(--cor); }
 .cartao > .miolo { padding-top: 0; }
 .cartao:not(:has(.fita)) { padding-top: 7mm; }
 .canto-se, .canto-id, .canto-sd, .canto-ie { position: absolute; width: 46mm; height: 46mm; z-index: 0; pointer-events: none; }
@@ -85,19 +87,19 @@ h1, h2, h3 { font-family: 'Lora', serif; font-weight: 700; }
 .canto-id { left: -3mm; top: -3mm; transform: rotate(180deg); }
 .canto-se svg, .canto-id svg { width: 100%; height: 100%; }
 footer { position: absolute; left: 14mm; right: 14mm; bottom: 2mm; height: 13mm; display: flex; align-items: center; justify-content: center; gap: 8mm; z-index: 3; }
-footer .marca, footer .frase { font-family: 'Dancing Script'; font-size: 14pt; color: var(--cor); width: 55mm; }
+footer .marca, footer .frase { font-family: 'Fredoka'; font-weight: 500; font-size: 10.5pt; color: var(--cor); width: 55mm; }
 footer .marca { text-align: right; } footer .frase { text-align: left; }
-.selo { width: 13mm; height: 13mm; }
-.selo text { font-family: 'Inter'; font-weight: 700; font-size: 10px; fill: #FFFFFF; }
+.selo { width: 12mm; height: 12mm; }
+.selo text { font-family: 'Fredoka'; font-weight: 700; font-size: 13px; fill: #FFFFFF; }
 
 /* capa */
 .capa .cartao { top: 14mm; left: 14mm; right: 14mm; bottom: 14mm; align-items: center; text-align: center; padding: 8mm 10mm; }
 .capa .miolo { align-items: center; }
 .capa .canto-se, .capa .canto-id { width: 70mm; height: 70mm; }
 .capa .canto-se { right: -4mm; bottom: -4mm; } .capa .canto-id { left: -4mm; top: -4mm; }
-.capa-assinatura { margin-top: auto; font-family: 'Dancing Script'; font-size: 20pt; color: #4E7D5B; }
-.capa-selo { display: inline-block; margin-top: 7mm; background: #A84B60; color: #FFFFFF; font-weight: 700; font-size: 11pt; letter-spacing: .06em;
-  padding: 3mm 7mm; border-radius: 99px; box-shadow: 0 0 0 1.2mm #FFFFFF, 0 0 0 1.7mm #E8B4C0; }
+.capa-assinatura { margin-top: auto; font-family: 'Fredoka'; font-weight: 500; font-size: 13pt; color: #4F8A6B; }
+.capa-selo { display: inline-block; margin-top: 7mm; background: #D9654B; color: #FFFFFF; font-weight: 700; font-size: 11pt; letter-spacing: .06em;
+  padding: 3mm 7mm; border-radius: 99px; box-shadow: 0 0 0 1.2mm #FFFFFF, 0 0 0 1.7mm #DCD3C5; }
 
 /* divisórias */
 .divisoria .page, .divisoria { }
@@ -107,24 +109,24 @@ footer .marca { text-align: right; } footer .frase { text-align: left; }
 .capa-guirlanda { position: relative; width: 150mm; height: 150mm; margin-top: 4mm; }
 .capa-guirlanda .guirlanda { width: 100%; height: 100%; }
 .capa-centro { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-.capa-kicker { font-family: 'Lora'; font-style: italic; font-size: 14pt; color: #8A7A6E; letter-spacing: .2em; }
-.capa h1 { font-family: 'Dancing Script'; font-weight: 600; font-size: 50pt; color: #A84B60; line-height: 1; margin: 2mm 0 4mm; }
-.capa-sub { font-family: 'Lora'; font-size: 13.5pt; color: #4A4038; max-width: 80mm; line-height: 1.35; font-weight: 600; }
-.capa-chamada { font-family: 'Lora'; font-style: italic; font-size: 13.5pt; color: #5E544C; max-width: 150mm; margin: 6mm auto 0; line-height: 1.5; }
+.capa-kicker { font-family: 'Fredoka'; font-weight: 600; text-transform: uppercase; font-size: 11pt; color: #8A7A6E; letter-spacing: .2em; }
+.capa h1 { font-family: 'Fredoka'; font-weight: 700; font-size: 40pt; color: #D9654B; line-height: 1; margin: 2mm 0 4mm; }
+.capa-sub { font-family: 'Fredoka'; font-size: 13.5pt; color: #4A4038; max-width: 80mm; line-height: 1.35; font-weight: 600; }
+.capa-chamada { font-family: 'Fredoka'; font-style: italic; font-size: 13.5pt; color: #5E544C; max-width: 150mm; margin: 6mm auto 0; line-height: 1.5; }
 .capa-partes { display: flex; justify-content: center; gap: 2.5mm; margin-top: 9mm; flex-wrap: wrap; max-width: 175mm; }
-.capa-partes span { background: #FFFFFF; border: 1px solid #EBD9CF; border-radius: 99px; padding: 2mm 4.5mm; font-size: 10pt; color: #4A4038; }
-.capa-partes b { color: var(--cor); margin-right: 2mm; font-family: 'Lora'; }
+.capa-partes span { background: #FFFFFF; border: 1px solid #E2D9CC; border-radius: 99px; padding: 2mm 4.5mm; font-size: 10pt; color: #4A4038; }
+.capa-partes b { color: var(--cor); margin-right: 2mm; font-family: 'Fredoka'; }
 
 /* divisórias */
 .div-buque { width: 95mm; margin: 0 auto 4mm; }
 .div-buque svg { width: 100%; display: block; }
-.div-num { font-family: 'Dancing Script'; font-size: 26pt; color: var(--cor); text-align: center; }
+.div-num { font-family: 'Fredoka'; font-weight: 600; font-size: 13pt; text-transform: uppercase; letter-spacing: .2em; color: var(--cor); text-align: center; }
 .divisoria h1 { font-size: 40pt; line-height: 1.05; margin: 1mm 0 5mm; color: var(--cor); text-align: center; }
-.div-frase { font-family: 'Lora'; font-style: italic; font-size: 14pt; line-height: 1.5; max-width: 140mm; margin: 0 auto 8mm; color: #5E544C; text-align: center; }
-.div-lista { list-style: none; counter-reset: d; background: #FFFFFF; border-radius: 6mm; padding: 4mm 9mm; box-shadow: 0 0 0 1px #EFE0D6; }
-.div-lista li { counter-increment: d; font-size: 13pt; padding: 2.6mm 0; border-bottom: 1px dashed #EAD7CB; }
+.div-frase { font-family: 'Fredoka'; font-style: italic; font-size: 14pt; line-height: 1.5; max-width: 140mm; margin: 0 auto 8mm; color: #5E544C; text-align: center; }
+.div-lista { list-style: none; counter-reset: d; background: #FFFFFF; border-radius: 6mm; padding: 4mm 9mm; box-shadow: 0 0 0 1px #E7DFD3; }
+.div-lista li { counter-increment: d; font-size: 13pt; padding: 2.6mm 0; border-bottom: 1px dashed #E2D9CC; }
 .div-lista li:last-child { border-bottom: 0; }
-.div-lista li::before { content: counter(d, decimal-leading-zero); font-family: 'Lora'; font-weight: 700; margin-right: 6mm; color: var(--cor); }
+.div-lista li::before { content: counter(d, decimal-leading-zero); font-family: 'Fredoka'; font-weight: 700; margin-right: 6mm; color: var(--cor); }
 
 /* ornamentos */
 .vinheta { display: block; width: 34mm; height: 4mm; margin: -1.5mm 0 4mm; }
@@ -135,7 +137,7 @@ footer .marca { text-align: right; } footer .frase { text-align: left; }
 .sumario { display: flex; flex-direction: column; gap: 2.6mm; }
 .sum-linha, .sumario li { display: flex; align-items: baseline; gap: 3mm; }
 .sum-linha i, .sumario li i { flex: 1; border-bottom: 1px dotted #B5AC9C; }
-.sum-linha { font-family: 'Lora'; font-size: 15pt; font-weight: 600; }
+.sum-linha { font-family: 'Fredoka'; font-size: 15pt; font-weight: 600; }
 .sum-item.parte .sum-linha { color: var(--cor); }
 .sumario ul { list-style: none; margin: 1.5mm 0 0 8mm; }
 .sumario li { font-size: 11pt; padding: .4mm 0; color: #3A4250; }
@@ -152,7 +154,7 @@ footer .marca { text-align: right; } footer .frase { text-align: left; }
 
 /* sequências, pirâmides, enigmas */
 .seq { columns: 2; column-gap: 10mm; list-style: none; counter-reset: s; }
-.seq li { counter-increment: s; break-inside: avoid; font-family: 'Lora'; font-size: 16pt; padding: 4.2mm 0; border-bottom: 1px solid #E2DACB; }
+.seq li { counter-increment: s; break-inside: avoid; font-family: 'Fredoka'; font-size: 16pt; padding: 4.2mm 0; border-bottom: 1px solid #E2DACB; }
 .seq li::before { content: counter(s) '.'; font-family: 'Inter'; font-size: 10pt; color: var(--cor); font-weight: 700; display: inline-block; width: 9mm; }
 .piramides { display: grid; grid-template-columns: 1fr 1fr; gap: 12mm 6mm; margin-top: 4mm; }
 .piramide { display: flex; flex-direction: column; align-items: center; gap: 1.2mm; }
@@ -164,7 +166,7 @@ footer .marca { text-align: right; } footer .frase { text-align: left; }
 .piramides.mini .pir-linha { gap: .6mm; } .piramides.mini .piramide { gap: .6mm; }
 .enigmas { list-style: none; counter-reset: e; }
 .enigmas li { counter-increment: e; position: relative; padding: 3.2mm 0 3.2mm 12mm; border-bottom: 1px solid #E2DACB; font-size: 12.5pt; line-height: 1.5; }
-.enigmas li::before { content: counter(e); position: absolute; left: 0; top: 2.6mm; font-family: 'Lora'; font-size: 17pt; font-weight: 700; color: var(--cor); }
+.enigmas li::before { content: counter(e); position: absolute; left: 0; top: 2.6mm; font-family: 'Fredoka'; font-size: 17pt; font-weight: 700; color: var(--cor); }
 
 /* palavras */
 .caca { border-collapse: collapse; margin: 2mm auto 6mm; background: #fff; border: 1.5px solid #1E2633; }
@@ -178,18 +180,18 @@ footer .marca { text-align: right; } footer .frase { text-align: left; }
 .anagramas h3 { font-size: 14pt; color: var(--cor); margin-bottom: 2mm; }
 .anagramas ol { list-style: none; }
 .anagramas li { display: flex; align-items: flex-end; gap: 4mm; padding: 3.5mm 0; }
-.mist { font-family: 'Lora'; font-size: 15pt; font-weight: 600; letter-spacing: .18em; min-width: 42mm; }
+.mist { font-family: 'Fredoka'; font-size: 15pt; font-weight: 600; letter-spacing: .18em; min-width: 42mm; }
 .linha { flex: 1; border-bottom: 1px solid #9D978C; height: 6mm; min-width: 30mm; }
 .ditados { list-style: none; counter-reset: dt; }
 .ditados li { counter-increment: dt; display: flex; align-items: flex-end; gap: 3mm; padding: 4mm 0 2mm; font-size: 13pt; }
 .ditados li::before { content: counter(dt) '.'; color: var(--cor); font-weight: 700; width: 7mm; font-size: 10pt; }
-.ditados b { font-family: 'Lora'; font-weight: 600; white-space: nowrap; }
+.ditados b { font-family: 'Fredoka'; font-weight: 600; white-space: nowrap; }
 
 /* quebra-cabeças */
 .refs { display: flex; gap: 6mm; justify-content: center; margin-top: auto; }
 .refs figure { width: 52mm; text-align: center; }
 .refs svg { width: 100%; display: block; box-shadow: 0 0 0 1px #D8CFBE; }
-.refs figcaption { font-family: 'Lora'; font-size: 11pt; font-weight: 600; margin-top: 2mm; }
+.refs figcaption { font-family: 'Fredoka'; font-size: 11pt; font-weight: 600; margin-top: 2mm; }
 .refs small { display: block; font-family: 'Inter'; font-weight: 400; font-size: 9pt; color: #7A746A; }
 .quebra { flex: 1; display: flex; justify-content: center; min-height: 0; }
 .quebra svg { height: 100%; max-width: 100%; }
@@ -201,13 +203,13 @@ footer .marca { text-align: right; } footer .frase { text-align: left; }
 .silhuetas { display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; flex: 1; }
 .silhuetas figure, .resp-tangram figure { display: flex; flex-direction: column; align-items: center; justify-content: center; }
 .silhuetas svg { width: 70mm; height: 58mm; }
-.silhuetas figcaption, .resp-tangram figcaption { font-family: 'Lora'; font-size: 12pt; font-weight: 600; margin-top: 2mm; }
-.hanoi { width: 180mm; margin: 4mm auto 0; display: block; }
-.hanoi-letra { font-family: 'Lora'; font-size: 7px; font-weight: 700; fill: #9A7440; }
+.silhuetas figcaption, .resp-tangram figcaption { font-family: 'Fredoka'; font-size: 12pt; font-weight: 600; margin-top: 2mm; }
+.hanoi { width: 160mm; margin: 4mm auto 0; display: block; }
+.hanoi-letra { font-family: 'Fredoka'; font-size: 7px; font-weight: 700; fill: #9A7440; }
 .hanoi-num { font-size: 5.5px; font-weight: 700; fill: #FFFFFF; }
 .palitos { list-style: none; counter-reset: pl; display: flex; flex-direction: column; gap: 8mm; margin-top: 2mm; }
 .palitos li { counter-increment: pl; display: flex; align-items: center; gap: 8mm; }
-.palitos li::before { content: counter(pl); font-family: 'Lora'; font-size: 22pt; font-weight: 700; color: var(--cor); width: 10mm; }
+.palitos li::before { content: counter(pl); font-family: 'Fredoka'; font-size: 22pt; font-weight: 700; color: var(--cor); width: 10mm; }
 .eq { height: 46mm; }
 
 /* tabuleiros */
@@ -240,14 +242,14 @@ footer .marca { text-align: right; } footer .frase { text-align: left; }
 .ficha.fb.dama i { border: 1.2px solid #B49A6C; box-shadow: 0 0 0 2.2mm #F3EBDA, 0 0 0 2.6mm #B49A6C; }
 .ficha.fp.dama i { border: 1.2px solid #6E5E4E; box-shadow: 0 0 0 2.2mm #2A2522, 0 0 0 2.6mm #6E5E4E; }
 .mates { display: grid; grid-template-columns: repeat(2, 1fr); gap: 7mm 8mm; justify-items: center; }
-.mates figcaption { font-family: 'Lora'; font-size: 11.5pt; margin-top: 1.5mm; }
+.mates figcaption { font-family: 'Fredoka'; font-size: 11.5pt; margin-top: 1.5mm; }
 .dominos { flex: 1; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(7, auto); align-content: space-evenly; justify-items: center; gap: 2mm 4mm; }
 .domino svg { width: 70mm; display: block; }
 .trilha { width: 125mm; margin: 4mm auto 0; display: block; }
 
 /* registro e respostas */
 .registro { width: 100%; border-collapse: collapse; font-size: 10.5pt; }
-.registro th { background: #A84B60; color: #FFFFFF; padding: 2.5mm; text-align: left; font-weight: 600; }
+.registro th { background: #D9654B; color: #FFFFFF; padding: 2.5mm; text-align: left; font-weight: 600; }
 .registro td { border: 1px solid #D8CFBE; height: 13mm; background: #fff; }
 .registro th:nth-child(1), .registro th:nth-child(3), .registro th:nth-child(4) { width: 20mm; }
 .resp-tit { font-size: 14pt; color: #7A2E3A; margin: 2mm 0 3mm; padding-bottom: 1.5mm; border-bottom: 1px solid #E2DACB; }
@@ -268,36 +270,36 @@ footer .marca { text-align: right; } footer .frase { text-align: left; }
 .resp-palitos p { color: #3A4250; }
 .resp-txt { font-size: 10.5pt; line-height: 1.6; margin-bottom: 3mm; }
 .fim { margin-top: auto; text-align: center; border-top: 1px solid #E2DACB; padding-top: 4mm; }
-.fim p { font-family: 'Lora'; font-style: italic; font-size: 14pt; margin-bottom: 1.5mm; }
+.fim p { font-family: 'Fredoka'; font-style: italic; font-size: 14pt; margin-bottom: 1.5mm; }
 .fim small { font-size: 8.5pt; color: #7A746A; }
 /* Parte VI */
 .cartas { flex: 1; display: grid; grid-template-columns: repeat(var(--cols), 1fr); grid-template-rows: repeat(var(--rows), 1fr); }
 .cartas .carta { outline: 1px dashed #8F8680; outline-offset: -.5px; background: #FFFFFF; padding: 5mm; display: flex; flex-direction: column; position: relative; }
 .cartas .carta::before { content: ''; position: absolute; inset: 2.5mm; border: 1.2px solid var(--cor); border-radius: 4mm; opacity: .35; pointer-events: none; }
 .fichas-bingo .carta { align-items: center; justify-content: center; text-align: center; gap: 1.5mm; padding: 3mm; }
-.fichas-bingo b { font-family: 'Lora'; font-size: 12pt; line-height: 1.2; }
+.fichas-bingo b { font-family: 'Fredoka'; font-size: 12pt; line-height: 1.2; }
 .fichas-bingo small { font-size: 7.5pt; color: #7A6F68; line-height: 1.3; }
 .cartelas { flex: 1; display: grid; grid-template-rows: 1fr 1fr; gap: 7mm; }
 .cartela { outline: 1px dashed #8F8680; outline-offset: 2mm; background: #FFFFFF; border-radius: 4mm; display: flex; flex-direction: column; overflow: hidden; border: 2px solid var(--cor); }
-.cartela-topo { background: #FBEFE8; display: flex; align-items: center; justify-content: center; gap: 3mm; padding: 2.5mm; }
-.cartela-topo span { font-family: 'Dancing Script'; font-size: 22pt; color: var(--cor); }
+.cartela-topo { background: #F2EDE4; display: flex; align-items: center; justify-content: center; gap: 3mm; padding: 2.5mm; }
+.cartela-topo span { font-family: 'Fredoka'; font-weight: 600; font-size: 16pt; color: var(--cor); }
 .cartela-topo small { font-size: 9pt; color: #7A6F68; text-transform: uppercase; letter-spacing: .08em; }
 .cartela-grade { flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr); }
-.cartela-grade div { border-top: 1px solid #EAD7CB; border-left: 1px solid #EAD7CB; display: grid; place-items: center; text-align: center;
-  font-family: 'Lora'; font-weight: 600; font-size: 14pt; padding: 3mm; line-height: 1.25; }
+.cartela-grade div { border-top: 1px solid #E2D9CC; border-left: 1px solid #E2D9CC; display: grid; place-items: center; text-align: center;
+  font-family: 'Fredoka'; font-weight: 600; font-size: 14pt; padding: 3mm; line-height: 1.25; }
 .cartela-grade div:nth-child(3n+1) { border-left: 0; }
 .quiz .carta { padding: 6mm 7mm; }
 .quiz-n { font-size: 8.5pt; text-transform: uppercase; letter-spacing: .1em; color: var(--cor); font-weight: 700; margin-bottom: 2mm; }
-.quiz-p { font-family: 'Lora'; font-weight: 600; font-size: 13pt; line-height: 1.35; margin-bottom: 3mm; }
+.quiz-p { font-family: 'Fredoka'; font-weight: 600; font-size: 13pt; line-height: 1.35; margin-bottom: 3mm; }
 .quiz-op { list-style: none; font-size: 11.5pt; line-height: 1.7; }
-.quiz-op b { display: inline-grid; place-items: center; width: 5.5mm; height: 5.5mm; border-radius: 50%; background: #FBEFE8; color: var(--cor); font-size: 9pt; margin-right: 2mm; }
+.quiz-op b { display: inline-grid; place-items: center; width: 5.5mm; height: 5.5mm; border-radius: 50%; background: #F2EDE4; color: var(--cor); font-size: 9pt; margin-right: 2mm; }
 .quiz-r { margin-top: auto; transform: rotate(180deg); font-size: 8.5pt; color: #8A7F78; text-align: center; border-top: 1px dashed #E2D5C6; padding-top: 1.5mm; }
 .quiz3 .quiz-p { font-size: 11.5pt; } .quiz3 .quiz-op { font-size: 10pt; } .quiz3 .carta { padding: 5mm; }
 .mimica .carta { align-items: center; justify-content: center; text-align: center; gap: 2mm; }
-.mimica b { font-family: 'Lora'; font-size: 14.5pt; }
+.mimica b { font-family: 'Fredoka'; font-size: 14.5pt; }
 .mimica .florzinha { width: 6mm; height: 6mm; }
 .letras { display: grid; grid-template-columns: repeat(5, 26mm); justify-content: center; margin-top: 5mm; }
-.letras div { height: 26mm; outline: 1px dashed #8F8680; outline-offset: -.5px; display: grid; place-items: center; font-family: 'Lora'; font-size: 30pt; font-weight: 700; color: var(--cor); background: #FFFFFF; }
+.letras div { height: 26mm; outline: 1px dashed #8F8680; outline-offset: -.5px; display: grid; place-items: center; font-family: 'Fredoka'; font-size: 30pt; font-weight: 700; color: var(--cor); background: #FFFFFF; }
 .adedonha { width: 100%; border-collapse: collapse; font-size: 10pt; flex: 1; }
 .adedonha th { background: var(--cor); color: #FFFFFF; padding: 2mm 1mm; font-weight: 600; font-size: 9pt; }
 .adedonha td { border: 1px solid #E2D5C6; background: #FFFFFF; height: 15mm; }
@@ -315,7 +317,7 @@ footer .marca { text-align: right; } footer .frase { text-align: left; }
 .pontinhos { width: 150mm; margin: 2mm auto 0; display: block; }
 .conversa .carta { padding: 7mm 8mm; }
 .conv-cat { font-size: 9pt; text-transform: uppercase; letter-spacing: .1em; color: var(--cor); font-weight: 700; margin-bottom: 3mm; }
-.conversa p { font-family: 'Lora'; font-weight: 600; font-size: 15pt; line-height: 1.35; }
+.conversa p { font-family: 'Fredoka'; font-weight: 600; font-size: 15pt; line-height: 1.35; }
 .conv3 p { font-size: 13pt; } .conv3 .carta { padding: 6mm; }
 `;
 
