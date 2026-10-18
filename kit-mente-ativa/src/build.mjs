@@ -16,12 +16,12 @@ const dist = path.join(raiz, 'dist');
 const fonte = (pacote, arq) => pathToFileURL(path.join(raiz, 'node_modules/@fontsource', pacote, 'files', arq)).href;
 
 const partes = {
-  I: { nome: 'Raciocínio', cor: '#6B5B95', flores: [paleta.lavanda, paleta.rosa, paleta.amarelo] },
-  II: { nome: 'Palavras', cor: '#4E7D5B', flores: [paleta.amarelo, paleta.pessego, paleta.lavanda] },
-  III: { nome: 'Quebra-cabeças', cor: '#A84B60', flores: [paleta.rosa, paleta.pessego, paleta.amarelo] },
-  IV: { nome: 'Desafios', cor: '#B0643A', flores: [paleta.pessego, paleta.amarelo, paleta.rosa] },
-  V: { nome: 'Jogos de Tabuleiro', cor: '#3A6F6B', flores: [paleta.lavanda, paleta.pessego, paleta.rosa] },
-  VI: { nome: 'Para Jogar Juntos', cor: '#9C6A1F', flores: [paleta.rosa, paleta.amarelo, paleta.lavanda] },
+  I: { nome: 'Raciocínio', cor: '#6B5B95', tint: '#EEE9F6', medio: '#C9BCE3', flores: [paleta.lavanda, paleta.rosa, paleta.amarelo] },
+  II: { nome: 'Palavras', cor: '#4E7D5B', tint: '#E7F1E8', medio: '#B7D3BC', flores: [paleta.amarelo, paleta.pessego, paleta.lavanda] },
+  III: { nome: 'Quebra-cabeças', cor: '#A84B60', tint: '#F8E6EA', medio: '#E8B4C0', flores: [paleta.rosa, paleta.pessego, paleta.amarelo] },
+  IV: { nome: 'Desafios', cor: '#B0643A', tint: '#FBEADF', medio: '#EDC0A2', flores: [paleta.pessego, paleta.amarelo, paleta.rosa] },
+  V: { nome: 'Jogos de Tabuleiro', cor: '#3A6F6B', tint: '#E3F0EE', medio: '#A9CEC9', flores: [paleta.lavanda, paleta.pessego, paleta.rosa] },
+  VI: { nome: 'Para Jogar Juntos', cor: '#9C6A1F', tint: '#FAF0DC', medio: '#E8CD92', flores: [paleta.rosa, paleta.amarelo, paleta.lavanda] },
 };
 const floresPadrao = [paleta.rosa, paleta.amarelo, paleta.lavanda];
 
@@ -30,31 +30,53 @@ const paginas = [];
 const sumarioPaginas = {};
 let num = 0;
 
-// limpa: páginas de recorte e grades grandes ficam sem o canto florido.
-function pagina(conteudo, { parte, titulo, classe = '', rodape = true, limpa = false } = {}) {
+const estiloGeral = { cor: '#A84B60', tint: '#F8E6EA', medio: '#E8B4C0', flores: floresPadrao };
+
+// Fundo estampado com florzinhas na cor da parte.
+function estampa(id, tint, medio) {
+  return `<svg class="estampa" preserveAspectRatio="none"><defs><pattern id="e${id}" width="22" height="22" patternUnits="userSpaceOnUse">
+    <g opacity=".75">${flor(6, 6, 5, medio, { miolo: '#FFFFFF' })}</g><circle cx="17" cy="17" r="1.6" fill="${medio}"/>
+    <circle cx="17" cy="5" r=".9" fill="${medio}"/><circle cx="5" cy="17" r=".9" fill="${medio}"/></pattern></defs>
+    <rect width="100%" height="100%" fill="${tint}"/><rect width="100%" height="100%" fill="url(#e${id})"/></svg>`;
+}
+
+// Selo com o número da página dentro de uma flor.
+function selo(n, cor, medio) {
+  const petalas = Array.from({ length: 8 }, (_, i) => `<ellipse cx="0" cy="-10" rx="6" ry="8" transform="rotate(${i * 45})" fill="${medio}"/>`).join('');
+  return `<svg viewBox="-20 -20 40 40" class="selo">${petalas}<circle r="11" fill="${cor}"/><circle r="11" fill="none" stroke="#FFFFFF" stroke-width="1.2" stroke-dasharray="1.6 1.4"/>
+    <text y="4" text-anchor="middle">${n}</text></svg>`;
+}
+
+// Moldura comum a todas as páginas: fundo estampado, cartão central, cantos floridos e rodapé.
+function moldura(corpo, { est, classe = '', rotulo = '', titulo = '', rodape = true }) {
+  const fita = rotulo ? `<div class="fita"><span>${rotulo}</span>${titulo ? `<em>${titulo}</em>` : ''}</div>` : '';
+  return `<section class="page ${classe}" style="--cor:${est.cor};--tint:${est.tint};--medio:${est.medio}">
+    ${estampa(num, est.tint, est.medio)}
+    <div class="cartao">${fita}<div class="miolo">${corpo}</div></div>
+    <div class="canto-se">${canto(est.flores, num * 3)}</div><div class="canto-id">${canto([est.flores[1], est.flores[2], est.flores[0]], num * 3 + 1)}</div>
+    <div class="canto-sd">${canto([est.flores[2], est.flores[0], est.flores[1]], num * 3 + 2)}</div><div class="canto-ie">${canto(est.flores, num * 3 + 5)}</div>
+    ${rodape ? `<footer><span class="marca">${c.marca.nome}</span>${selo(num, est.cor, est.medio)}<span class="frase">jogar junto é cuidar</span></footer>` : ''}
+  </section>`;
+}
+
+function pagina(conteudo, { parte, titulo, classe = '', rodape = true } = {}) {
   num++;
   if (titulo && !sumarioPaginas[titulo]) sumarioPaginas[titulo] = num;
-  const p = parte ? partes[parte] : null;
-  const cor = p?.cor ?? '#A84B60';
-  const icone = `<svg viewBox="-10 -10 20 20" class="icone-flor">${flor(0, 0, 9, (p?.flores ?? floresPadrao)[0])}</svg>`;
-  const topo = p ? `<div class="cabecalho" style="--cor:${p.cor}"><span>${icone}Parte ${parte} · ${p.nome}</span><span>${titulo ?? ''}</span></div>` : '';
-  const corpo = conteudo.replace(/(<h[12] class="(?:titulo-jogo|titulo)">[\s\S]*?<\/h[12]>)/, `$1${vinheta(cor)}`);
-  paginas.push(`<section class="page ${classe}" style="--cor:${cor}">${topo}<div class="miolo">${corpo}</div>${
-    limpa || !rodape ? '' : canto(p?.flores ?? floresPadrao, num)}${
-    rodape ? `<footer><span>${c.marca.nome}</span><span>${num}</span></footer>` : ''}</section>`);
+  const est = parte ? partes[parte] : estiloGeral;
+  const corpo = conteudo.replace(/(<h[12] class="(?:titulo-jogo|titulo)">[\s\S]*?<\/h[12]>)/, `$1${vinheta(est.cor)}`);
+  paginas.push(moldura(corpo, { est, classe, rodape, rotulo: parte ? `Parte ${parte} · ${partes[parte].nome}` : '', titulo: parte ? titulo : '' }));
 }
 
 function divisoria(parte, itens, frase) {
   const p = partes[parte];
   num++;
   sumarioPaginas[`Parte ${parte}`] = num;
-  paginas.push(`<section class="page divisoria" style="--cor:${p.cor}">
+  paginas.push(moldura(`
     <div class="div-buque">${buque(p.flores, num)}</div>
     <div class="div-num">Parte ${parte}</div>
     <h1>${p.nome}</h1>
     <p class="div-frase">${frase}</p>
-    <ol class="div-lista">${itens.map((i) => `<li>${i}</li>`).join('')}</ol>
-    <footer><span>${c.marca.nome}</span><span>${num}</span></footer></section>`);
+    <ol class="div-lista">${itens.map((i) => `<li>${i}</li>`).join('')}</ol>`, { est: p, classe: 'divisoria' }));
 }
 
 const regras = ({ objetivo, material, jogadores, tempo }) => `
@@ -80,6 +102,7 @@ pagina(`
   </div>
   <p class="capa-chamada">${c.marca.chamada}</p>
   <div class="capa-partes">${Object.entries(partes).map(([k, p]) => `<span style="--cor:${p.cor}"><b>${k}</b>${p.nome}</span>`).join('')}</div>
+  <div class="capa-selo">24 jogos e desafios · 6 partes · __TOTAL__ páginas</div>
   <p class="capa-assinatura">Feito com carinho para jogar junto de quem a gente ama</p>`, { classe: 'capa', rodape: false });
 
 pagina(`
@@ -169,7 +192,7 @@ cacas.forEach((caca, i) => {
     <h2 class="titulo-jogo">${caca.tema}</h2>
     ${i === 0 ? '<p class="instrucao">Encontre as palavras na horizontal, na vertical e na diagonal. Acentos foram retirados.</p>' : ''}
     ${gradeCaca(caca)}
-    <ul class="palavras">${[...caca.palavras].sort().map((p) => `<li>${p}</li>`).join('')}</ul>`, { parte: 'II', titulo: 'Caça-palavras', limpa: true });
+    <ul class="palavras">${[...caca.palavras].sort().map((p) => `<li>${p}</li>`).join('')}</ul>`, { parte: 'II', titulo: 'Caça-palavras' });
 });
 
 const rAna = g.aleatorio(77);
@@ -219,7 +242,7 @@ for (const q of quebras) {
         ${cortes.map((d) => `<path d="${d}" stroke="#1E2633" stroke-width=".6" stroke-dasharray="2.5 1.8"/>`).join('')}
         <rect x="0" y="0" width="300" height="400" stroke="#1E2633" stroke-width=".6" stroke-dasharray="2.5 1.8"/>
       </g></svg></div>
-    <p class="legenda-quebra">${q.nome} · ${q.cols * q.rows} peças</p>`, { parte: 'III', titulo: q.nome, limpa: true });
+    <p class="legenda-quebra">${q.nome} · ${q.cols * q.rows} peças</p>`, { parte: 'III', titulo: q.nome });
 }
 
 // ---------- Parte IV: Desafios ----------
@@ -239,13 +262,13 @@ pagina(`
     ${Object.values(pecasQuadrado).map((p, i) => `<polygon points="${p.map(([x, y]) => `${x},${y}`).join(' ')}" fill="${tonsTangram[i]}" stroke="#FBF8F2" stroke-width=".012"/>`).join('')}
     ${Object.values(pecasQuadrado).map((p) => `<polygon points="${p.map(([x, y]) => `${x},${y}`).join(' ')}" fill="none" stroke="#1E2633" stroke-width=".012" stroke-dasharray=".05 .035"/>`).join('')}
   </svg></div>
-  ${avisoCorte}`, { parte: 'IV', titulo: 'Tangram', limpa: true });
+  ${avisoCorte}`, { parte: 'IV', titulo: 'Tangram' });
 
 pagina(`
   <h2 class="titulo-jogo">Tangram — figuras para montar</h2>
   <p class="instrucao">Monte cada figura usando as 7 peças. As soluções estão nas respostas.</p>
   <div class="silhuetas">${tangramFiguras.map((f) => `<figure>${silhuetaSVG(f, '#1E2633')}<figcaption>${f.nome}</figcaption></figure>`).join('')}</div>`,
-{ parte: 'IV', titulo: 'Tangram', limpa: true });
+{ parte: 'IV', titulo: 'Tangram' });
 
 const coresDiscos = ['#7A2E3A', '#9A7440', '#4F6E5E', '#34557A', '#5D5A7A'];
 pagina(`
@@ -263,7 +286,7 @@ pagina(`
     ${[100, 84, 68, 52, 36].map((w, i) => `<g transform="translate(${90 - w / 2} ${48 + i * 13})"><rect width="${w}" height="10" rx="2" fill="${coresDiscos[i]}"/><rect width="${w}" height="10" rx="2" fill="none" stroke="#1E2633" stroke-width=".4" stroke-dasharray="2 1.4"/><text x="${w / 2}" y="7" text-anchor="middle" class="hanoi-num">${5 - i}</text></g>`).join('')}
   </svg>
   <p class="aviso-corte">✂ Recorte a base (A, B, C) e os 5 discos. Os discos são empilhados sobre as marcas dos pinos.</p>`,
-{ parte: 'IV', titulo: 'Torre de Hanói', limpa: true });
+{ parte: 'IV', titulo: 'Torre de Hanói' });
 
 const SEG = { 0: 'abcdef', 1: 'bc', 2: 'abged', 3: 'abgcd', 4: 'fgbc', 5: 'afgcd', 6: 'afgedc', 7: 'abc', 8: 'abcdefg', 9: 'abcdfg' };
 function palito(x1, y1, x2, y2) {
@@ -294,7 +317,7 @@ pagina(`
   <h2 class="titulo-jogo">Desafios com palitos</h2>
   <p class="instrucao">Cada conta está errada. Mova <b>apenas um palito</b> para que ela fique certa.
   Se quiser, monte com palitos de fósforo usados ou palitos de dente sobre a mesa.</p>
-  <ol class="palitos">${c.palitos.map((p) => `<li>${equacao(p.conta)}</li>`).join('')}</ol>`, { parte: 'IV', titulo: 'Desafios com palitos', limpa: true });
+  <ol class="palitos">${c.palitos.map((p) => `<li>${equacao(p.conta)}</li>`).join('')}</ol>`, { parte: 'IV', titulo: 'Desafios com palitos' });
 
 // ---------- Parte V: Jogos de tabuleiro ----------
 divisoria('V', ['Dominó', 'Xadrez — regras, tabuleiro, peças e problemas', 'Damas brasileiras', 'Trilha (moinho)'],
@@ -324,7 +347,7 @@ pagina(`
   Quando a soma der um múltiplo de 5 (5, 10, 15…), o jogador marca esses pontos. Ganha quem chegar primeiro a 100.</div>`,
 { parte: 'V', titulo: 'Dominó' });
 for (let i = 0; i < 2; i++) {
-  pagina(`<div class="dominos">${pecasDomino.slice(i * 14, i * 14 + 14).join('')}</div>${avisoCorte}`, { parte: 'V', titulo: `Dominó — peças ${i + 1}/2`, limpa: true });
+  pagina(`<div class="dominos">${pecasDomino.slice(i * 14, i * 14 + 14).join('')}</div>${avisoCorte}`, { parte: 'V', titulo: `Dominó — peças ${i + 1}/2` });
 }
 
 // Xadrez
@@ -382,12 +405,12 @@ pagina(`
 
 pagina(`<div class="tab-pagina">${tabuleiro('8/8/8/8/8/8/8/8 w - - 0 1', { tam: 21 })}</div>
   <p class="aviso-corte">Tabuleiro de xadrez e damas. Cole em papelão para ficar firme. A casa clara fica no canto inferior direito de cada jogador.</p>`,
-{ parte: 'V', titulo: 'Tabuleiro (xadrez e damas)', limpa: true });
+{ parte: 'V', titulo: 'Tabuleiro (xadrez e damas)' });
 
 const fichasXadrez = [...'RNBQKBNRPPPPPPPP', ...'rnbqkbnrpppppppp'];
 pagina(`<div class="fichas">${fichasXadrez.map((p) => `<div class="ficha ${p === p.toUpperCase() ? 'fb' : 'fp'}"><span>${glifo(p)}</span></div>`).join('')}</div>
   <p class="aviso-corte">✂ 32 peças de xadrez: 16 claras e 16 escuras. Cole em papelão e recorte os círculos. Uma tampinha de garrafa colada embaixo deixa as peças fáceis de pegar.</p>`,
-{ parte: 'V', titulo: 'Xadrez — peças', limpa: true });
+{ parte: 'V', titulo: 'Xadrez — peças' });
 
 const traduzir = (san) => san.replace(/^K/, 'R').replace(/^Q/, 'D').replace(/^R/, 'T').replace(/^N/, 'C');
 const mates = c.mates.map((m) => {
@@ -400,7 +423,7 @@ pagina(`
   <h2 class="titulo-jogo">Xadrez — problemas de mate em 1</h2>
   <p class="instrucao">Em todas as posições, as <b>brancas jogam e dão xeque-mate em um lance</b>. Monte no tabuleiro se preferir.</p>
   <div class="mates">${mates.map((m, i) => `<figure>${tabuleiro(m.fen, { tam: 7.2 })}<figcaption><b>${i + 1}.</b> ${m.nome}</figcaption></figure>`).join('')}</div>`,
-{ parte: 'V', titulo: 'Problemas de xadrez', limpa: true });
+{ parte: 'V', titulo: 'Problemas de xadrez' });
 
 // Damas
 pagina(`
@@ -421,7 +444,7 @@ pagina(`
 const fichasDamas = [...Array(16).fill('c'), ...Array(16).fill('e')];
 pagina(`<div class="fichas">${fichasDamas.map((t) => `<div class="ficha ${t === 'c' ? 'fb' : 'fp'} dama"><i></i></div>`).join('')}</div>
   <p class="aviso-corte">✂ 32 peças: 16 claras e 16 escuras. Servem para as damas (12 de cada cor e 4 extras para marcar as damas) e para a trilha (9 de cada cor).</p>`,
-{ parte: 'V', titulo: 'Peças de damas e trilha', limpa: true });
+{ parte: 'V', titulo: 'Peças de damas e trilha' });
 
 // Trilha
 const pontosTrilha = [];
@@ -475,10 +498,10 @@ for (let i = 0; i < 3; i++) {
   pagina(`<div class="cartelas">${cartelasBingo.slice(i * 2, i * 2 + 2).map((cart, k) => `
     <div class="cartela"><div class="cartela-topo">${florzinha(paleta.rosa)}<span>Bingo das Canções</span><small>Cartela ${i * 2 + k + 1}</small>${florzinha(paleta.amarelo)}</div>
     <div class="cartela-grade">${cart.map(([t]) => `<div>${t}</div>`).join('')}</div></div>`).join('')}</div>${avisoCorte}`,
-  { parte: 'VI', titulo: 'Bingo das Canções — cartelas', limpa: true });
+  { parte: 'VI', titulo: 'Bingo das Canções — cartelas' });
 }
 pagina(`${cartas(c.cancoes.map(([t, a]) => `<b>${t}</b><small>${a}</small>`), 4, 6, 'fichas-bingo')}${avisoCorte}`,
-  { parte: 'VI', titulo: 'Bingo das Canções — fichas de sorteio', limpa: true });
+  { parte: 'VI', titulo: 'Bingo das Canções — fichas de sorteio' });
 
 // Quiz de Antigamente
 const rQuiz = g.aleatorio(321);
@@ -493,9 +516,9 @@ pagina(`
   <h2 class="titulo-jogo">Quiz de Antigamente</h2>
   <p class="instrucao">Uma pessoa lê a pergunta e as três opções; a outra responde. A resposta está de cabeça para baixo
   no pé de cada carta. Vale contar o que lembra sobre cada assunto. Quem acertar fica com a carta.</p>
-  ${cartas(cartasQuiz.slice(0, 6), 2, 3, 'quiz')}`, { parte: 'VI', titulo: 'Quiz de Antigamente', limpa: true });
+  ${cartas(cartasQuiz.slice(0, 6), 2, 3, 'quiz')}`, { parte: 'VI', titulo: 'Quiz de Antigamente' });
 for (let i = 0; i < 2; i++) {
-  pagina(cartas(cartasQuiz.slice(6 + i * 9, 15 + i * 9), 3, 3, 'quiz quiz3'), { parte: 'VI', titulo: 'Quiz de Antigamente', limpa: true });
+  pagina(cartas(cartasQuiz.slice(6 + i * 9, 15 + i * 9), 3, 3, 'quiz quiz3'), { parte: 'VI', titulo: 'Quiz de Antigamente' });
 }
 
 // Mímica
@@ -504,7 +527,7 @@ pagina(`
   <p class="instrucao">Sorteie uma carta e faça a mímica, sem falar nada. Quem adivinhar primeiro ganha a carta.
   Pode ser jogado em dupla ou em dois times. Depois, conte: você já fez isso muitas vezes?</p>
   ${cartas(c.mimica.map((m) => `${florzinha(paleta.lavanda)}<b>${m}</b>`), 3, 6, 'mimica')}`,
-{ parte: 'VI', titulo: 'Mímica', limpa: true });
+{ parte: 'VI', titulo: 'Mímica' });
 
 // Adedonha
 const letras = 'ABCDEFGHIJLMNOPRSTUV'.split('');
@@ -518,14 +541,14 @@ pagina(`
     'Para jogar com mais calma, combinem um tempo (por exemplo, 2 minutos) em vez do “Stop”.',
   ])}
   <div class="letras">${letras.map((l) => `<div>${l}</div>`).join('')}</div>${avisoCorte}`,
-{ parte: 'VI', titulo: 'Adedonha (Stop)', limpa: true });
+{ parte: 'VI', titulo: 'Adedonha (Stop)' });
 pagina(`
   <h2 class="titulo-jogo">Adedonha — folha de respostas</h2>
   <p class="lead pequeno">Jogador(a): __________________________________________</p>
   <table class="adedonha"><thead><tr><th>Letra</th>${c.adedonha.map((k) => `<th>${k}</th>`).join('')}<th>Pontos</th></tr></thead>
   <tbody>${`<tr><td></td>${c.adedonha.map(() => '<td></td>').join('')}<td></td></tr>`.repeat(12)}</tbody>
   <tfoot><tr><td colspan="${c.adedonha.length + 1}">Total</td><td></td></tr></tfoot></table>`,
-{ parte: 'VI', titulo: 'Adedonha (Stop)', limpa: true });
+{ parte: 'VI', titulo: 'Adedonha (Stop)' });
 
 // Batalha Naval
 const gradeNaval = (titulo) => `<div class="naval"><h3>${titulo}</h3><table>
@@ -547,7 +570,7 @@ pagina(`
 pagina(`<p class="lead pequeno">Jogador(a): __________________________________________</p>
   <div class="navais">${gradeNaval('Minha frota')}${gradeNaval('Mar do adversário')}</div>
   <div class="frota-check">${frota.map(([n, t, q]) => Array.from({ length: q }, () => `<span>☐ ${n} <i>${'■'.repeat(t)}</i></span>`).join('')).join('')}</div>
-  <p class="aviso-corte">Imprima uma folha para cada jogador.</p>`, { parte: 'VI', titulo: 'Batalha Naval — folha de jogo', limpa: true });
+  <p class="aviso-corte">Imprima uma folha para cada jogador.</p>`, { parte: 'VI', titulo: 'Batalha Naval — folha de jogo' });
 
 // Pontinhos
 const pontos = [];
@@ -557,7 +580,7 @@ pagina(`
   <p class="instrucao">Cada jogador, na sua vez, liga dois pontos vizinhos com um traço (na horizontal ou na vertical).
   Quem fechar um quadradinho escreve sua inicial dentro dele e joga de novo. Quando não houver mais traços, vence quem tiver mais quadradinhos.
   Use uma caneta de cor diferente para cada jogador.</p>
-  <svg class="pontinhos" viewBox="0 0 180 220">${pontos.join('')}</svg>`, { parte: 'VI', titulo: 'Jogo dos Pontinhos', limpa: true });
+  <svg class="pontinhos" viewBox="0 0 180 220">${pontos.join('')}</svg>`, { parte: 'VI', titulo: 'Jogo dos Pontinhos' });
 
 // Cartas de Conversa
 const cartasConversa = c.conversa.map(([cat, q]) => `<div class="conv-cat">${florzinha(paleta.amarelo)} ${cat}</div><p>${q}</p>`);
@@ -566,9 +589,9 @@ pagina(`
   <p class="instrucao">Embaralhe as cartas e deixe o monte virado para baixo. Cada pessoa tira uma carta, lê em voz alta e responde.
   Os outros podem fazer perguntas sobre a história. Vale trocar de carta se a pergunta não agradar. Algumas lembranças trazem
   saudade: escute com calma e acolha.</p>
-  ${cartas(cartasConversa.slice(0, 6), 2, 3, 'conversa')}`, { parte: 'VI', titulo: 'Cartas de Conversa', limpa: true });
+  ${cartas(cartasConversa.slice(0, 6), 2, 3, 'conversa')}`, { parte: 'VI', titulo: 'Cartas de Conversa' });
 for (let i = 0; i < 2; i++) {
-  pagina(cartas(cartasConversa.slice(6 + i * 9, 15 + i * 9), 3, 3, 'conversa conv3'), { parte: 'VI', titulo: 'Cartas de Conversa', limpa: true });
+  pagina(cartas(cartasConversa.slice(6 + i * 9, 15 + i * 9), 3, 3, 'conversa conv3'), { parte: 'VI', titulo: 'Cartas de Conversa' });
 }
 
 // ---------- registro e respostas ----------
@@ -580,7 +603,7 @@ pagina(`
     <tbody>${'<tr><td></td><td></td><td></td><td></td><td></td></tr>'.repeat(14)}</tbody>
   </table>
   <p class="nota-saude">Leve este registro às consultas: ele ajuda profissionais de saúde a conhecer a rotina e perceber mudanças.</p>`,
-{ titulo: 'Registro de atividades', limpa: true });
+{ titulo: 'Registro de atividades' });
 
 const titR = (t) => `<h3 class="resp-tit">${t}</h3>`;
 pagina(`
@@ -614,7 +637,8 @@ pagina(`
   <ol class="resp-palitos">${c.palitos.map((p) => `<li><div class="eqs">${equacao(p.resposta)}</div><p>${p.dica}</p></li>`).join('')}</ol>
   ${titR('Torre de Hanói')}
   <p class="resp-txt">O menor número de movimentos é 2<sup>n</sup> − 1: 7 lances com 3 discos, 15 com 4 e 31 com 5.
-  Uma dica que sempre funciona: mova o menor disco a cada dois lances, sempre girando no mesmo sentido (A → B → C → A).
+  Uma dica que sempre funciona: mova o menor disco a cada dois lances, sempre girando no mesmo sentido.
+  Com número ímpar de discos (3 ou 5), o sentido é A → C → B → A; com número par (4), é A → B → C → A.
   No lance entre eles, faça o único movimento possível sem usar o menor disco.</p>
   ${titR('Xadrez — mate em 1')}
   <ol class="resp-mates">${mates.map((m) => `<li><b>${m.nome}:</b> ${m.lances[0]}${m.lances.length > 1 ? ` <small>(também valem: ${m.lances.slice(1).join(', ')})</small>` : ''}</li>`).join('')}</ol>
@@ -634,14 +658,17 @@ const itensSumario = [
   ['Respostas', 'Respostas'],
 ];
 sumarioPaginas['Apresentação'] = 2;
-paginas[SUMARIO_IDX] = `<section class="page"><div class="miolo">
-  <h1 class="titulo">Sumário</h1>
+const totalPaginas = num;
+num = 3;
+paginas[SUMARIO_IDX] = moldura(`
+  <h1 class="titulo">Sumário</h1>${vinheta(estiloGeral.cor)}
   <div class="sumario">${itensSumario.map(([chave, rotulo, filhos]) => `
     <div class="sum-item ${filhos ? 'parte' : ''}" ${filhos ? `style="--cor:${partes[chave.split(' ')[1]].cor}"` : ''}>
       <div class="sum-linha"><span>${rotulo}</span><i></i><b>${sumarioPaginas[chave]}</b></div>
       ${filhos ? `<ul>${filhos.map((f) => `<li><span>${f}</span><i></i><b>${sumarioPaginas[f]}</b></li>`).join('')}</ul>` : ''}
     </div>`).join('')}</div>
-  </div><footer><span>${c.marca.nome}</span><span>3</span></footer></section>`;
+  `, { est: estiloGeral });
+num = totalPaginas;
 
 // ---------- estilo ----------
 const css = `
@@ -654,18 +681,12 @@ const css = `
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 body { font-family: 'Inter', sans-serif; color: #1E2633; font-size: 12.5pt; }
-.page { width: 210mm; height: 297mm; padding: 12mm 12mm 14mm; position: relative; overflow: hidden; page-break-after: always;
-  display: flex; flex-direction: column; background: #FDF9F4; }
 .miolo { flex: 1; display: flex; flex-direction: column; min-height: 0; }
-footer { position: absolute; left: 12mm; right: 12mm; bottom: 6.5mm; display: flex; justify-content: space-between;
-  font-size: 8.5pt; color: #8B8478; letter-spacing: .08em; text-transform: uppercase; }
-.cabecalho { display: flex; justify-content: space-between; font-size: 8.5pt; letter-spacing: .12em; text-transform: uppercase;
-  color: var(--cor); border-bottom: 1px dashed var(--cor); padding-bottom: 2mm; margin-bottom: 6mm; font-weight: 600; }
 h1, h2, h3 { font-family: 'Lora', serif; font-weight: 700; }
 .titulo { font-size: 30pt; margin-bottom: 2mm; color: var(--cor); }
 .titulo-jogo { font-size: 23pt; margin-bottom: 2mm; color: var(--cor); }
-.sub { font-size: 14pt; margin: 6mm 0 3mm; color: var(--cor, #1E2633); }
-.lead { font-family: 'Lora'; font-size: 14pt; line-height: 1.5; margin-bottom: 3mm; }
+.sub { font-size: 14pt; margin: 5mm 0 2.5mm; color: var(--cor, #1E2633); }
+.lead { font-family: 'Lora'; font-size: 13pt; line-height: 1.45; margin-bottom: 3mm; }
 .lead.pequeno { font-family: 'Inter'; font-size: 11.5pt; margin-bottom: 5mm; }
 .miolo > p { line-height: 1.55; }
 .instrucao { font-size: 12pt; line-height: 1.5; margin-bottom: 5mm; color: #3A4250; }
@@ -673,17 +694,52 @@ h1, h2, h3 { font-family: 'Lora', serif; font-weight: 700; }
 .passos li { counter-increment: p; position: relative; padding-left: 10mm; margin-bottom: 2.6mm; line-height: 1.45; font-size: 12pt; }
 .passos li::before { content: counter(p); position: absolute; left: 0; top: .2mm; font-family: 'Lora'; font-weight: 700; color: var(--cor, #7A2E3A); font-size: 13pt; }
 .dicas { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm 6mm; }
-.dicas div { font-size: 11pt; line-height: 1.45; background: #FFFFFF; border: 1px solid #F0E2D8; border-radius: 4mm; padding: 3mm 4mm; }
-.nota-saude { margin-top: auto; font-size: 9.5pt !important; color: #7A746A; border-top: 1px solid #E2DACB; padding-top: 3mm; margin-right: 28mm; }
+.dicas div { font-size: 10.5pt; line-height: 1.4; background: #FFFFFF; border: 1px solid #F0E2D8; border-radius: 4mm; padding: 3mm 4mm; }
+.nota-saude { margin-top: auto; font-size: 9.5pt !important; color: #7A746A; border-top: 1px solid #E2DACB; padding-top: 3mm; }
 .ficha-jogo { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2mm 6mm; background: #FBEFE8; border-radius: 5mm; padding: 4mm 6mm; margin: 2mm 0 4mm; }
 .ficha-jogo dt { font-size: 8pt; text-transform: uppercase; letter-spacing: .1em; color: var(--cor); font-weight: 700; }
 .ficha-jogo dd { font-size: 11pt; line-height: 1.4; }
-.dica-box { margin-top: auto; background: #FFF4DE; border-radius: 5mm; padding: 4mm 6mm; margin-right: 26mm; font-size: 11pt; line-height: 1.5; }
+.dica-box { margin-top: auto; background: #FFF4DE; border-radius: 5mm; padding: 4mm 6mm; font-size: 11pt; line-height: 1.5; }
 .aviso-corte { margin-top: auto; font-size: 9.5pt; color: #6B655B; padding-top: 3mm; }
 
+.page { width: 210mm; height: 297mm; position: relative; overflow: hidden; page-break-after: always; background: var(--tint); }
+.estampa { position: absolute; inset: 0; width: 100%; height: 100%; }
+.cartao { position: absolute; top: 11mm; left: 11mm; right: 11mm; bottom: 17mm; background: #FFFDF9; border-radius: 7mm;
+  box-shadow: 0 0 0 .7mm var(--cor), 0 0 0 2.2mm #FFFFFF, 0 0 0 2.7mm var(--medio), 0 1.5mm 4mm 2.5mm rgba(0,0,0,.08);
+  padding: 0 8mm 7mm; display: flex; flex-direction: column; z-index: 1; }
+.fita { align-self: flex-start; margin: 0 0 5mm -8mm; display: flex; align-items: center; gap: 4mm; }
+.fita span { background: var(--cor); color: #FFFFFF; font-size: 8.5pt; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  padding: 2.4mm 7mm 2.4mm 8mm; border-radius: 7mm 0 4mm 0; }
+.fita em { font-family: 'Dancing Script'; font-style: normal; font-size: 15pt; color: var(--cor); }
+.cartao > .miolo { padding-top: 0; }
+.cartao:not(:has(.fita)) { padding-top: 7mm; }
+.canto-se, .canto-id, .canto-sd, .canto-ie { position: absolute; width: 46mm; height: 46mm; z-index: 0; pointer-events: none; }
+.canto-sd svg, .canto-ie svg { width: 100%; height: 100%; }
+.canto-sd { right: -3mm; top: -3mm; transform: scaleY(-1); width: 34mm; height: 34mm; }
+.canto-ie { left: -3mm; bottom: 5mm; transform: scaleX(-1); width: 34mm; height: 34mm; }
+.canto-se { right: -3mm; bottom: 4mm; }
+.canto-id { left: -3mm; top: -3mm; transform: rotate(180deg); }
+.canto-se svg, .canto-id svg { width: 100%; height: 100%; }
+footer { position: absolute; left: 14mm; right: 14mm; bottom: 2mm; height: 13mm; display: flex; align-items: center; justify-content: center; gap: 8mm; z-index: 3; }
+footer .marca, footer .frase { font-family: 'Dancing Script'; font-size: 14pt; color: var(--cor); width: 55mm; }
+footer .marca { text-align: right; } footer .frase { text-align: left; }
+.selo { width: 13mm; height: 13mm; }
+.selo text { font-family: 'Inter'; font-weight: 700; font-size: 10px; fill: #FFFFFF; }
+
 /* capa */
-.capa { background: #FCF4EE; padding: 16mm 16mm; align-items: center; text-align: center; }
+.capa .cartao { top: 14mm; left: 14mm; right: 14mm; bottom: 14mm; align-items: center; text-align: center; padding: 8mm 10mm; }
 .capa .miolo { align-items: center; }
+.capa .canto-se, .capa .canto-id { width: 70mm; height: 70mm; }
+.capa .canto-se { right: -4mm; bottom: -4mm; } .capa .canto-id { left: -4mm; top: -4mm; }
+.capa-assinatura { margin-top: auto; font-family: 'Dancing Script'; font-size: 20pt; color: #4E7D5B; }
+.capa-selo { display: inline-block; margin-top: 7mm; background: #A84B60; color: #FFFFFF; font-weight: 700; font-size: 11pt; letter-spacing: .06em;
+  padding: 3mm 7mm; border-radius: 99px; box-shadow: 0 0 0 1.2mm #FFFFFF, 0 0 0 1.7mm #E8B4C0; }
+
+/* divisórias */
+.divisoria .page, .divisoria { }
+.divisoria .cartao { top: 16mm; left: 16mm; right: 16mm; bottom: 22mm; padding: 6mm 14mm 10mm; }
+.divisoria .canto-se, .divisoria .canto-id { width: 62mm; height: 62mm; }
+
 .capa-guirlanda { position: relative; width: 150mm; height: 150mm; margin-top: 4mm; }
 .capa-guirlanda .guirlanda { width: 100%; height: 100%; }
 .capa-centro { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
@@ -694,10 +750,8 @@ h1, h2, h3 { font-family: 'Lora', serif; font-weight: 700; }
 .capa-partes { display: flex; justify-content: center; gap: 2.5mm; margin-top: 9mm; flex-wrap: wrap; max-width: 175mm; }
 .capa-partes span { background: #FFFFFF; border: 1px solid #EBD9CF; border-radius: 99px; padding: 2mm 4.5mm; font-size: 10pt; color: #4A4038; }
 .capa-partes b { color: var(--cor); margin-right: 2mm; font-family: 'Lora'; }
-.capa-assinatura { margin-top: auto; font-family: 'Dancing Script'; font-size: 20pt; color: #7E9F78; }
 
 /* divisórias */
-.divisoria { background: #FCF4EE; padding: 16mm 22mm 20mm; }
 .div-buque { width: 95mm; margin: 0 auto 4mm; }
 .div-buque svg { width: 100%; display: block; }
 .div-num { font-family: 'Dancing Script'; font-size: 26pt; color: var(--cor); text-align: center; }
@@ -709,8 +763,6 @@ h1, h2, h3 { font-family: 'Lora', serif; font-weight: 700; }
 .div-lista li::before { content: counter(d, decimal-leading-zero); font-family: 'Lora'; font-weight: 700; margin-right: 6mm; color: var(--cor); }
 
 /* ornamentos */
-.canto { position: absolute; right: 3mm; bottom: 3mm; width: 34mm; height: 34mm; opacity: .9; z-index: 0; pointer-events: none; }
-.miolo, .cabecalho { position: relative; z-index: 1; }
 .vinheta { display: block; width: 34mm; height: 4mm; margin: -1.5mm 0 4mm; }
 .icone-flor { width: 3.6mm; height: 3.6mm; vertical-align: -0.8mm; margin-right: 1.8mm; }
 .florzinha { width: 4.5mm; height: 4.5mm; vertical-align: -1mm; }
@@ -744,7 +796,7 @@ h1, h2, h3 { font-family: 'Lora', serif; font-weight: 700; }
 .pir-linha span { width: 16mm; height: 12mm; border: 1.2px solid #1E2633; background: #fff; display: grid; place-items: center; font-size: 14pt; font-weight: 600; }
 .pir-linha span.dado { background: #E6EDF4; }
 .piramides.mini { grid-template-columns: repeat(4, 1fr); gap: 4mm; margin-bottom: 4mm; }
-.piramides.mini .pir-linha span { width: 8mm; height: 6.5mm; font-size: 8.5pt; border-width: .8px; }
+.piramides.mini .pir-linha span { width: 6.8mm; height: 6mm; font-size: 8.5pt; border-width: .8px; }
 .piramides.mini .pir-linha { gap: .6mm; } .piramides.mini .piramide { gap: .6mm; }
 .enigmas { list-style: none; counter-reset: e; }
 .enigmas li { counter-increment: e; position: relative; padding: 3.2mm 0 3.2mm 12mm; border-bottom: 1px solid #E2DACB; font-size: 12.5pt; line-height: 1.5; }
@@ -890,9 +942,10 @@ h1, h2, h3 { font-family: 'Lora', serif; font-weight: 700; }
 .frota { font-size: 11pt; line-height: 1.5; margin-top: 3mm; }
 .navais { display: flex; flex-direction: column; align-items: center; gap: 6mm; }
 .naval h3 { font-size: 13pt; color: var(--cor); margin-bottom: 1.5mm; }
-.naval table { border-collapse: collapse; }
-.naval th { width: 9.5mm; height: 9.5mm; font-size: 9.5pt; color: #6B655B; font-weight: 600; }
-.naval td { width: 9.5mm; height: 9.5mm; border: 1px solid #B9AE9E; background: #FFFFFF; }
+.naval table { border-collapse: collapse; margin: 0 auto; }
+.naval { width: 100%; text-align: center; }
+.naval th { width: 8.6mm; height: 8.6mm; font-size: 9.5pt; color: #6B655B; font-weight: 600; }
+.naval td { width: 8.6mm; height: 8.6mm; border: 1px solid #B9AE9E; background: #FFFFFF; }
 .frota-check { display: flex; flex-wrap: wrap; gap: 2mm 6mm; justify-content: center; margin-top: 4mm; font-size: 10.5pt; }
 .frota-check i { font-style: normal; color: var(--cor); letter-spacing: 1px; margin-left: 1mm; }
 .pontinhos { width: 150mm; margin: 2mm auto 0; display: block; }
@@ -904,7 +957,7 @@ h1, h2, h3 { font-family: 'Lora', serif; font-weight: 700; }
 
 const html = `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">
 <title>${c.marca.nome} – ${c.marca.subtitulo}</title><style>${css}</style></head>
-<body>${paginas.join('\n')}</body></html>`;
+<body>${paginas.join('\n').replace('__TOTAL__', paginas.length)}</body></html>`;
 
 await mkdir(dist, { recursive: true });
 const arquivoHtml = path.join(dist, 'kit-mente-ativa.html');
@@ -914,6 +967,30 @@ const navegador = await chromium.launch();
 const aba = await navegador.newPage();
 await aba.goto(pathToFileURL(arquivoHtml).href);
 await aba.evaluate(() => document.fonts.ready);
+
+// Revisão automática: nenhum conteúdo pode sair do cartão da página.
+const problemas = await aba.evaluate(() => {
+  const erros = [];
+  document.querySelectorAll('section.page').forEach((sec, i) => {
+    const cartao = sec.querySelector('.cartao');
+    if (!cartao) return;
+    const lim = cartao.getBoundingClientRect();
+    for (const el of cartao.querySelectorAll('.miolo *')) {
+      const r = el.getBoundingClientRect();
+      if (!r.width || !r.height) continue;
+      if (el.ownerSVGElement) continue; // o desenho interno do SVG é recortado pelo próprio SVG
+      if (r.bottom > lim.bottom + 0.5 || r.right > lim.right + 0.5 || r.left < lim.left - 0.5 || r.top < lim.top - 0.5) {
+        erros.push(`pág. ${i + 1}: <${el.tagName.toLowerCase()} class="${el.className.baseVal ?? el.className}"> sai do cartão`);
+        break;
+      }
+    }
+  });
+  return erros;
+});
+if (problemas.length) {
+  console.error('Problemas de layout:\n' + problemas.join('\n'));
+  process.exitCode = 1;
+}
 await aba.pdf({ path: path.join(dist, 'Kit-Mente-Ativa.pdf'), format: 'A4', printBackground: true, preferCSSPageSize: true });
 await navegador.close();
 console.log(`OK: ${paginas.length} páginas geradas em dist/`);

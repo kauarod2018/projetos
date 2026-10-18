@@ -99,7 +99,7 @@ export const cancoes = [
   ['Mamãe Eu Quero', 'Jararaca e Vicente Paiva'],
   ['Cidade Maravilhosa', 'André Filho'],
   ['Ó Abre Alas', 'Chiquinha Gonzaga'],
-  ['Luar do Sertão', 'Catulo da Paixão Cearense'],
+  ['Luar do Sertão', 'Catulo da Paixão Cearense e João Pernambuco'],
   ['Tico-Tico no Fubá', 'Zequinha de Abreu'],
   ['Saudosa Maloca', 'Adoniran Barbosa'],
   ['As Rosas Não Falam', 'Cartola'],
