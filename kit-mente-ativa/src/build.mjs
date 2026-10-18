@@ -9,6 +9,7 @@ import { serra, azulejos, casario } from './cenas.mjs';
 import { pecasQuadrado, figuras as tangramFiguras, silhuetaSVG, solucaoSVG } from './tangram.mjs';
 import { paleta, vinheta, guirlanda, buque, flor } from './flores.mjs';
 import { molduraPagina, gerarPDF } from './layout.mjs';
+import { glifo, tabuleiro, traduzir } from './livro.mjs';
 
 const raiz = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dist = path.join(raiz, 'dist');
@@ -324,23 +325,6 @@ for (let i = 0; i < 2; i++) {
 }
 
 // Xadrez
-const GLIFO = { K: '♔', Q: '♕', R: '♖', B: '♗', N: '♘', P: '♙', k: '♚', q: '♛', r: '♜', b: '♝', n: '♞', p: '♟' };
-const glifo = (ch) => `${GLIFO[ch]}&#xFE0E;`;
-function tabuleiro(fen, { tam = 22, coords = true, classe = '' } = {}) {
-  const linhas = fen.split(' ')[0].split('/');
-  const casas = [];
-  linhas.forEach((linha, l) => {
-    let k = 0;
-    for (const ch of linha) {
-      if (/\d/.test(ch)) { for (let n = 0; n < +ch; n++) casas.push({ l, k: k++, p: '' }); } else casas.push({ l, k: k++, p: ch });
-    }
-  });
-  return `<div class="tab ${classe}" style="--c:${tam}mm">
-    ${coords ? `<div class="tab-num">${[8, 7, 6, 5, 4, 3, 2, 1].map((n) => `<span>${n}</span>`).join('')}</div>` : ''}
-    <div class="tab-grade">${casas.map(({ l, k, p }) => `<div class="casa ${(l + k) % 2 ? 'escura' : 'clara'}">${p ? `<span class="pc ${p === p.toUpperCase() ? 'b' : 'p'}">${glifo(p)}</span>` : ''}</div>`).join('')}</div>
-    ${coords ? `<div class="tab-letras">${'abcdefgh'.split('').map((a) => `<span>${a}</span>`).join('')}</div>` : ''}
-  </div>`;
-}
 const INICIAL = 'rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1';
 
 pagina(`
@@ -385,7 +369,6 @@ pagina(`<div class="fichas">${fichasXadrez.map((p) => `<div class="ficha ${p ===
   <p class="aviso-corte">✂ 32 peças de xadrez: 16 claras e 16 escuras. Cole em papelão e recorte os círculos. Uma tampinha de garrafa colada embaixo deixa as peças fáceis de pegar.</p>`,
 { parte: 'V', titulo: 'Xadrez — peças' });
 
-const traduzir = (san) => san.replace(/^K/, 'R').replace(/^Q/, 'D').replace(/^R/, 'T').replace(/^N/, 'C');
 const mates = c.mates.map((m) => {
   const jogo = new Chess(m.fen);
   const lances = jogo.moves().filter((mv) => { jogo.move(mv); const ok = jogo.isCheckmate(); jogo.undo(); return ok; });

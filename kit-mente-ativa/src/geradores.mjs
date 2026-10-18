@@ -21,8 +21,10 @@ export function embaralhar(lista, r) {
 }
 
 // ---------- Sudoku ----------
-function podeColocar(g, i, n) {
+function podeColocar(g, i, n, diag = false) {
   const l = Math.floor(i / 9), c = i % 9;
+  if (diag && l === c) for (let k = 0; k < 9; k++) if (g[k * 10] === n) return false;
+  if (diag && l + c === 8) for (let k = 0; k < 9; k++) if (g[k * 8 + 8] === n) return false;
   for (let k = 0; k < 9; k++) {
     if (g[l * 9 + k] === n || g[k * 9 + c] === n) return false;
   }
@@ -31,44 +33,45 @@ function podeColocar(g, i, n) {
   return true;
 }
 
-function preencher(g, r) {
+function preencher(g, r, diag = false) {
   const i = g.indexOf(0);
   if (i < 0) return true;
   for (const n of embaralhar([1, 2, 3, 4, 5, 6, 7, 8, 9], r)) {
-    if (podeColocar(g, i, n)) {
+    if (podeColocar(g, i, n, diag)) {
       g[i] = n;
-      if (preencher(g, r)) return true;
+      if (preencher(g, r, diag)) return true;
       g[i] = 0;
     }
   }
   return false;
 }
 
-function contarSolucoes(g, limite = 2) {
+function contarSolucoes(g, limite = 2, diag = false) {
   const i = g.indexOf(0);
   if (i < 0) return 1;
   let total = 0;
   for (let n = 1; n <= 9 && total < limite; n++) {
-    if (podeColocar(g, i, n)) {
+    if (podeColocar(g, i, n, diag)) {
       g[i] = n;
-      total += contarSolucoes(g, limite - total);
+      total += contarSolucoes(g, limite - total, diag);
       g[i] = 0;
     }
   }
   return total;
 }
 
-export function sudoku(semente, pistas) {
+// diag: Sudoku X, em que as duas diagonais também têm os números de 1 a 9.
+export function sudoku(semente, pistas, { diag = false } = {}) {
   const r = aleatorio(semente);
   const solucao = new Array(81).fill(0);
-  preencher(solucao, r);
+  preencher(solucao, r, diag);
   const jogo = [...solucao];
   let restantes = 81;
   for (const i of embaralhar([...Array(81).keys()], r)) {
     if (restantes <= pistas) break;
     const v = jogo[i];
     jogo[i] = 0;
-    if (contarSolucoes([...jogo]) !== 1) jogo[i] = v;
+    if (contarSolucoes([...jogo], 2, diag) !== 1) jogo[i] = v;
     else restantes--;
   }
   return { jogo, solucao, pistas: restantes };

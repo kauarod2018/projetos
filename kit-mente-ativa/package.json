@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "node src/build.mjs && node src/bonus.mjs",
+    "build": "node src/build.mjs && node src/bonus.mjs && node src/avancado.mjs",
     "build:kit": "node src/build.mjs",
     "build:bonus": "node src/bonus.mjs",
-    "imagens:vendas": "node src/vendas-imagens.mjs"
+    "imagens:vendas": "node src/vendas-imagens.mjs",
+    "build:avancado": "node src/avancado.mjs"
   },
   "devDependencies": {
     "@fontsource/dancing-script": "^5.2.6",

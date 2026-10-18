@@ -17,6 +17,10 @@ Produto digital low ticket para filhos e cuidadores de idosos: um PDF de 63 pág
 | `src/desenhos.mjs` | Cenas de "encontre as diferenças" e desenhos para colorir |
 | `dist/Bonus-1-Caderno-Extra-de-Passatempos.pdf` | Bônus 1 (32 páginas) |
 | `dist/Bonus-2-Colorir-para-Relaxar.pdf` | Bônus 2 (15 páginas) |
+| `src/avancado.mjs` | Gera o order bump Nível Avançado |
+| `src/desafios.mjs` | Geradores de lógica, criptograma, quadrado mágico e verificação de mate em 2 |
+| `src/livro.mjs` | Peças comuns dos materiais extras (livro, capa, grades, tabuleiro) |
+| `dist/Order-Bump-Mente-Ativa-Nivel-Avancado.pdf` | Order bump Nível Avançado (23 páginas) |
 | `anuncio/` | Roteiro do vídeo para o Google Flow e imagens de apoio |
 
 ## Conteúdo
@@ -36,6 +40,10 @@ Os problemas de xadrez e o tangram são conferidos automaticamente no build (o b
 - **Bônus 1 · Caderno Extra de Passatempos:** 12 sudokus, 6 caça-palavras, 6 cruzadinhas com dicas, 4 labirintos, 3 jogos de encontrar as diferenças e respostas
 - **Bônus 2 · Colorir para Relaxar:** 13 desenhos de traço firme (mandalas, azulejos, flores, paisagens) e página de dicas com sugestões de cores
 
+## Order bumps
+
+- **Mente Ativa Nível Avançado:** 4 sudokus difíceis, 4 Sudoku X, 4 problemas de lógica (solução única conferida), 8 problemas de xadrez de mate em 2 (conferidos com chess.js), 6 criptogramas, 4 palavras cruzadas grandes, 4 quadrados mágicos e respostas
+
 ## Como editar e gerar de novo
 
 ```bash
@@ -43,6 +51,7 @@ npm install
 npm run build        # kit + bônus
 npm run build:kit    # só o kit
 npm run build:bonus  # só os bônus
+npm run build:avancado  # só o order bump Nível Avançado
 ```
 
 Edite `src/conteudo.mjs` para trocar figuras ou textos. O build recria o PDF em `dist/`.
