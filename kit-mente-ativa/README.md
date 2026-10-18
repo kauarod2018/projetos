@@ -11,7 +11,13 @@ Produto digital low ticket para filhos e cuidadores de idosos: um PDF de 63 pág
 | `src/tangram.mjs` | Peças e figuras do tangram, com validação geométrica |
 | `src/cenas.mjs` | Ilustrações dos quebra-cabeças |
 | `src/flores.mjs` | Ornamentos florais (guirlanda, buquês, cantos e vinhetas) |
-| `src/build.mjs` | Layout e geração do PDF |
+| `src/build.mjs` | Conteúdo e páginas do kit principal |
+| `src/layout.mjs` | Moldura florida, estilo e geração de PDF com revisão de layout (usado pelo kit e pelos bônus) |
+| `src/bonus.mjs` | Gera os dois PDFs bônus |
+| `src/desenhos.mjs` | Cenas de "encontre as diferenças" e desenhos para colorir |
+| `dist/Bonus-1-Caderno-Extra-de-Passatempos.pdf` | Bônus 1 (32 páginas) |
+| `dist/Bonus-2-Colorir-para-Relaxar.pdf` | Bônus 2 (15 páginas) |
+| `anuncio/` | Roteiro do vídeo para o Google Flow e imagens de apoio |
 
 ## Conteúdo
 
@@ -25,11 +31,18 @@ Produto digital low ticket para filhos e cuidadores de idosos: um PDF de 63 pág
 Além disso: apresentação com guia para quem acompanha, sumário, registro de atividades e respostas de tudo.
 Os problemas de xadrez e o tangram são conferidos automaticamente no build (o build falha se algum estiver errado).
 
+## Bônus
+
+- **Bônus 1 · Caderno Extra de Passatempos:** 12 sudokus, 6 caça-palavras, 6 cruzadinhas com dicas, 4 labirintos, 3 jogos de encontrar as diferenças e respostas
+- **Bônus 2 · Colorir para Relaxar:** 13 desenhos de traço firme (mandalas, azulejos, flores, paisagens) e página de dicas com sugestões de cores
+
 ## Como editar e gerar de novo
 
 ```bash
 npm install
-npm run build
+npm run build        # kit + bônus
+npm run build:kit    # só o kit
+npm run build:bonus  # só os bônus
 ```
 
 Edite `src/conteudo.mjs` para trocar figuras ou textos. O build recria o PDF em `dist/`.

@@ -162,3 +162,127 @@ export function cortesEncaixe(largura, altura, cols, rows, semente) {
   }
   return caminhos;
 }
+
+// ---------- Cruzadinha ----------
+// Encaixa as palavras cruzando letras iguais, sem encostar palavras lado a lado.
+export function cruzadinha(itens, semente, tentativas = 60) {
+  let melhor = null;
+  for (let t = 0; t < tentativas; t++) {
+    const r = aleatorio(semente + t * 7919);
+    const ordem = [itens[0], ...embaralhar(itens.slice(1), r)].sort((a, b) => b[0].length - a[0].length);
+    const res = montarCruzadinha(ordem, r);
+    if (!melhor || res.colocadas.length > melhor.colocadas.length
+      || (res.colocadas.length === melhor.colocadas.length && res.area < melhor.area)) melhor = res;
+    if (melhor.colocadas.length === itens.length && t > 20) break;
+  }
+  return numerar(melhor);
+}
+
+function montarCruzadinha(itens, r) {
+  const cel = new Map();
+  const chave = (l, c) => `${l},${c}`;
+  const colocadas = [];
+  const pode = (p, l, c, dl, dc) => {
+    let cruza = 0;
+    if (cel.has(chave(l - dl, c - dc)) || cel.has(chave(l + dl * p.length, c + dc * p.length))) return -1;
+    for (let i = 0; i < p.length; i++) {
+      const L = l + dl * i, C = c + dc * i, v = cel.get(chave(L, C));
+      if (v) { if (v !== p[i]) return -1; cruza++; continue; }
+      if (cel.has(chave(L + dc, C + dl)) || cel.has(chave(L - dc, C - dl))) return -1;
+    }
+    return cruza;
+  };
+  const por = (p, l, c, dl, dc, dica) => {
+    for (let i = 0; i < p.length; i++) cel.set(chave(l + dl * i, c + dc * i), p[i]);
+    colocadas.push({ palavra: p, l, c, dl, dc, dica });
+  };
+  const [p0, d0] = itens[0];
+  por(p0, 0, 0, 0, 1, d0);
+  for (const [p, dica] of itens.slice(1)) {
+    const opcoes = [];
+    for (const [k, v] of cel) {
+      const [L, C] = k.split(',').map(Number);
+      for (let i = 0; i < p.length; i++) {
+        if (p[i] !== v) continue;
+        for (const [dl, dc] of [[0, 1], [1, 0]]) {
+          const n = pode(p, L - dl * i, C - dc * i, dl, dc);
+          if (n > 0) opcoes.push([n + r() * 0.5, L - dl * i, C - dc * i, dl, dc]);
+        }
+      }
+    }
+    if (!opcoes.length) continue;
+    opcoes.sort((a, b) => b[0] - a[0]);
+    const [, l, c, dl, dc] = opcoes[Math.floor(r() * Math.min(3, opcoes.length))];
+    por(p, l, c, dl, dc, dica);
+  }
+  const ls = [...cel.keys()].map((k) => +k.split(',')[0]), cs = [...cel.keys()].map((k) => +k.split(',')[1]);
+  const minL = Math.min(...ls), minC = Math.min(...cs);
+  const altura = Math.max(...ls) - minL + 1, largura = Math.max(...cs) - minC + 1;
+  return {
+    colocadas: colocadas.map((w) => ({ ...w, l: w.l - minL, c: w.c - minC })),
+    altura, largura, area: altura * largura * (Math.abs(altura - largura) + 4),
+  };
+}
+
+function numerar(res) {
+  const inicios = [...new Set(res.colocadas.map((w) => `${w.l},${w.c}`))]
+    .map((k) => k.split(',').map(Number)).sort((a, b) => a[0] - b[0] || a[1] - b[1]);
+  const numeroDe = new Map(inicios.map(([l, c], i) => [`${l},${c}`, i + 1]));
+  const grade = Array.from({ length: res.altura }, () => new Array(res.largura).fill(''));
+  for (const w of res.colocadas) for (let i = 0; i < w.palavra.length; i++) grade[w.l + w.dl * i][w.c + w.dc * i] = w.palavra[i];
+  const pistas = res.colocadas.map((w) => ({ ...w, n: numeroDe.get(`${w.l},${w.c}`) })).sort((a, b) => a.n - b.n);
+  // Toda sequência de 2 ou mais letras precisa ser uma palavra colocada.
+  const validas = new Set(res.colocadas.map((w) => (w.dc ? 'H' : 'V') + w.palavra));
+  const conferir = (get, A, B, tipo) => {
+    for (let a = 0; a < A; a++) {
+      let s = '';
+      for (let b = 0; b <= B; b++) {
+        const ch = b < B ? get(a, b) : '';
+        if (ch) { s += ch; continue; }
+        if (s.length > 1 && !validas.has(tipo + s)) throw new Error(`Cruzadinha com sequência inválida: ${s}`);
+        s = '';
+      }
+    }
+  };
+  conferir((a, b) => grade[a][b], res.altura, res.largura, 'H');
+  conferir((a, b) => grade[b][a], res.largura, res.altura, 'V');
+  return { grade, numeros: numeroDe, horizontais: pistas.filter((w) => w.dc), verticais: pistas.filter((w) => w.dl), total: res.colocadas.length };
+}
+
+// ---------- Labirinto ----------
+// Labirinto perfeito (um único caminho entre quaisquer duas casas), gerado por busca em profundidade.
+export function labirinto(cols, rows, semente) {
+  const r = aleatorio(semente);
+  const paredes = Array.from({ length: rows }, () => Array.from({ length: cols }, () => ({ n: true, s: true, l: true, o: true })));
+  const visto = Array.from({ length: rows }, () => new Array(cols).fill(false));
+  const pilha = [[0, 0]];
+  visto[0][0] = true;
+  const dirs = [[-1, 0, 'n', 's'], [1, 0, 's', 'n'], [0, 1, 'l', 'o'], [0, -1, 'o', 'l']];
+  while (pilha.length) {
+    const [l, c] = pilha[pilha.length - 1];
+    const viz = embaralhar(dirs, r).filter(([dl, dc]) => {
+      const L = l + dl, C = c + dc;
+      return L >= 0 && L < rows && C >= 0 && C < cols && !visto[L][C];
+    });
+    if (!viz.length) { pilha.pop(); continue; }
+    const [dl, dc, a, b] = viz[0];
+    paredes[l][c][a] = false;
+    paredes[l + dl][c + dc][b] = false;
+    visto[l + dl][c + dc] = true;
+    pilha.push([l + dl, c + dc]);
+  }
+  // caminho da entrada (0,0) até a saída (rows-1, cols-1)
+  const anterior = new Map([['0,0', null]]);
+  const fila = [[0, 0]];
+  while (fila.length) {
+    const [l, c] = fila.shift();
+    for (const [dl, dc, a] of dirs) {
+      if (paredes[l][c][a]) continue;
+      const k = `${l + dl},${c + dc}`;
+      if (!anterior.has(k)) { anterior.set(k, `${l},${c}`); fila.push([l + dl, c + dc]); }
+    }
+  }
+  const caminho = [];
+  for (let k = `${rows - 1},${cols - 1}`; k; k = anterior.get(k)) caminho.unshift(k.split(',').map(Number));
+  return { paredes, caminho, cols, rows };
+}
