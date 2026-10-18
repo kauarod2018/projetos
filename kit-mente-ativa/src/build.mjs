@@ -9,30 +9,38 @@ import * as c from './conteudo.mjs';
 import * as g from './geradores.mjs';
 import { serra, azulejos, casario } from './cenas.mjs';
 import { pecasQuadrado, figuras as tangramFiguras, silhuetaSVG, solucaoSVG } from './tangram.mjs';
+import { paleta, canto, vinheta, guirlanda, buque, flor } from './flores.mjs';
 
 const raiz = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dist = path.join(raiz, 'dist');
-const fonte = (arq) => pathToFileURL(path.join(raiz, 'node_modules/@fontsource/lora/files', arq)).href;
+const fonte = (pacote, arq) => pathToFileURL(path.join(raiz, 'node_modules/@fontsource', pacote, 'files', arq)).href;
 
 const partes = {
-  I: { nome: 'Raciocínio', cor: '#34557A' },
-  II: { nome: 'Palavras', cor: '#4F6E5E' },
-  III: { nome: 'Quebra-cabeças', cor: '#7A2E3A' },
-  IV: { nome: 'Desafios', cor: '#9A7440' },
-  V: { nome: 'Jogos de Tabuleiro', cor: '#2D4739' },
+  I: { nome: 'Raciocínio', cor: '#6B5B95', flores: [paleta.lavanda, paleta.rosa, paleta.amarelo] },
+  II: { nome: 'Palavras', cor: '#4E7D5B', flores: [paleta.amarelo, paleta.pessego, paleta.lavanda] },
+  III: { nome: 'Quebra-cabeças', cor: '#A84B60', flores: [paleta.rosa, paleta.pessego, paleta.amarelo] },
+  IV: { nome: 'Desafios', cor: '#B0643A', flores: [paleta.pessego, paleta.amarelo, paleta.rosa] },
+  V: { nome: 'Jogos de Tabuleiro', cor: '#3A6F6B', flores: [paleta.lavanda, paleta.pessego, paleta.rosa] },
+  VI: { nome: 'Para Jogar Juntos', cor: '#9C6A1F', flores: [paleta.rosa, paleta.amarelo, paleta.lavanda] },
 };
+const floresPadrao = [paleta.rosa, paleta.amarelo, paleta.lavanda];
 
 // ---------- estrutura de páginas ----------
 const paginas = [];
 const sumarioPaginas = {};
 let num = 0;
 
-function pagina(conteudo, { parte, titulo, classe = '', rodape = true } = {}) {
+// limpa: páginas de recorte e grades grandes ficam sem o canto florido.
+function pagina(conteudo, { parte, titulo, classe = '', rodape = true, limpa = false } = {}) {
   num++;
   if (titulo && !sumarioPaginas[titulo]) sumarioPaginas[titulo] = num;
   const p = parte ? partes[parte] : null;
-  const topo = p ? `<div class="cabecalho" style="--cor:${p.cor}"><span>Parte ${parte} · ${p.nome}</span><span>${titulo ?? ''}</span></div>` : '';
-  paginas.push(`<section class="page ${classe}" ${p ? `style="--cor:${p.cor}"` : ''}>${topo}<div class="miolo">${conteudo}</div>${
+  const cor = p?.cor ?? '#A84B60';
+  const icone = `<svg viewBox="-10 -10 20 20" class="icone-flor">${flor(0, 0, 9, (p?.flores ?? floresPadrao)[0])}</svg>`;
+  const topo = p ? `<div class="cabecalho" style="--cor:${p.cor}"><span>${icone}Parte ${parte} · ${p.nome}</span><span>${titulo ?? ''}</span></div>` : '';
+  const corpo = conteudo.replace(/(<h[12] class="(?:titulo-jogo|titulo)">[\s\S]*?<\/h[12]>)/, `$1${vinheta(cor)}`);
+  paginas.push(`<section class="page ${classe}" style="--cor:${cor}">${topo}<div class="miolo">${corpo}</div>${
+    limpa || !rodape ? '' : canto(p?.flores ?? floresPadrao, num)}${
     rodape ? `<footer><span>${c.marca.nome}</span><span>${num}</span></footer>` : ''}</section>`);
 }
 
@@ -41,6 +49,7 @@ function divisoria(parte, itens, frase) {
   num++;
   sumarioPaginas[`Parte ${parte}`] = num;
   paginas.push(`<section class="page divisoria" style="--cor:${p.cor}">
+    <div class="div-buque">${buque(p.flores, num)}</div>
     <div class="div-num">Parte ${parte}</div>
     <h1>${p.nome}</h1>
     <p class="div-frase">${frase}</p>
@@ -60,33 +69,30 @@ const lista = (itens, classe = 'passos') => `<ol class="${classe}">${itens.map((
 const avisoCorte = '<p class="aviso-corte">✂ Cole a folha em papel-cartão ou papelão fino e recorte nas linhas tracejadas.</p>';
 
 // ---------- capa, apresentação, sumário ----------
-const capaArte = `<svg viewBox="0 0 400 400" class="capa-arte">
-  <g fill="none" stroke="#C9A96E" stroke-width="1.2" opacity=".9">
-    ${Array.from({ length: 9 }, (_, i) => `<line x1="${40 + i * 40}" y1="40" x2="${40 + i * 40}" y2="360"/><line x1="40" y1="${40 + i * 40}" x2="360" y2="${40 + i * 40}"/>`).join('')}
-  </g>
-  ${Array.from({ length: 64 }, (_, i) => ((Math.floor(i / 8) + i) % 2 ? `<rect x="${40 + (i % 8) * 40}" y="${40 + Math.floor(i / 8) * 40}" width="40" height="40" fill="#C9A96E" opacity=".16"/>` : '')).join('')}
-  <text x="200" y="250" text-anchor="middle" class="capa-peca">♞&#xFE0E;</text>
-</svg>`;
+pagina(`
+  <div class="capa-guirlanda">
+    ${guirlanda([paleta.rosa, paleta.amarelo, paleta.lavanda, paleta.pessego])}
+    <div class="capa-centro">
+      <p class="capa-kicker">coleção</p>
+      <h1>${c.marca.nome}</h1>
+      <p class="capa-sub">${c.marca.subtitulo}</p>
+    </div>
+  </div>
+  <p class="capa-chamada">${c.marca.chamada}</p>
+  <div class="capa-partes">${Object.entries(partes).map(([k, p]) => `<span style="--cor:${p.cor}"><b>${k}</b>${p.nome}</span>`).join('')}</div>
+  <p class="capa-assinatura">Feito com carinho para jogar junto de quem a gente ama</p>`, { classe: 'capa', rodape: false });
 
 pagina(`
-  <div class="capa-topo">${c.marca.nome.toUpperCase()}</div>
-  ${capaArte}
-  <div class="capa-texto">
-    <h1>${c.marca.subtitulo}</h1>
-    <p>${c.marca.chamada}</p>
-    <div class="capa-partes">${Object.entries(partes).map(([k, p]) => `<span><b>${k}</b>${p.nome}</span>`).join('')}</div>
-  </div>`, { classe: 'capa', rodape: false });
-
-pagina(`
-  <h1 class="titulo">Apresentação</h1>
+  <h1 class="titulo">Seja bem-vindo(a)</h1>
   <p class="lead">Esta coleção reúne jogos clássicos e desafios para manter a mente em movimento, com a calma e o prazer de
-  uma boa conversa à mesa. Foi pensada para ser jogada a dois ou em família: filhos, netos, amigos e cuidadores.</p>
-  <p>Os jogos estão organizados em cinco partes, do exercício individual de raciocínio aos grandes clássicos de tabuleiro.
-  Cada um traz as regras completas e, quando é o caso, as respostas no final do material.</p>
+  uma boa conversa à mesa. Foi feita para ser jogada junto: filhos, netos, amigos e cuidadores ao lado de quem tem
+  muita história para contar.</p>
+  <p>Os jogos estão em seis partes: do exercício individual de raciocínio aos grandes clássicos de tabuleiro, terminando com
+  jogos feitos para rir e conversar em dupla ou em família. Cada um traz as regras completas e, quando é o caso, as respostas no final.</p>
   <h2 class="sub">Como imprimir e montar</h2>
   ${lista([
     '<b>Folhas de atividades</b> (sudoku, caça-palavras, enigmas): papel A4 comum. Imprima quantas vezes quiser.',
-    '<b>Peças e tabuleiros</b>: use papel mais grosso (180 g ou mais) ou cole a folha em papel-cartão ou papelão fino antes de recortar.',
+    '<b>Peças, cartas e tabuleiros</b>: use papel mais grosso (180 g ou mais) ou cole a folha em papel-cartão antes de recortar.',
     '<b>Durabilidade</b>: plastificar ou cobrir com plástico adesivo deixa as peças firmes e fáceis de pegar.',
     '<b>Organização</b>: guarde cada jogo num envelope identificado. As peças de damas também servem para a trilha.',
   ])}
@@ -163,7 +169,7 @@ cacas.forEach((caca, i) => {
     <h2 class="titulo-jogo">${caca.tema}</h2>
     ${i === 0 ? '<p class="instrucao">Encontre as palavras na horizontal, na vertical e na diagonal. Acentos foram retirados.</p>' : ''}
     ${gradeCaca(caca)}
-    <ul class="palavras">${[...caca.palavras].sort().map((p) => `<li>${p}</li>`).join('')}</ul>`, { parte: 'II', titulo: 'Caça-palavras' });
+    <ul class="palavras">${[...caca.palavras].sort().map((p) => `<li>${p}</li>`).join('')}</ul>`, { parte: 'II', titulo: 'Caça-palavras', limpa: true });
 });
 
 const rAna = g.aleatorio(77);
@@ -213,7 +219,7 @@ for (const q of quebras) {
         ${cortes.map((d) => `<path d="${d}" stroke="#1E2633" stroke-width=".6" stroke-dasharray="2.5 1.8"/>`).join('')}
         <rect x="0" y="0" width="300" height="400" stroke="#1E2633" stroke-width=".6" stroke-dasharray="2.5 1.8"/>
       </g></svg></div>
-    <p class="legenda-quebra">${q.nome} · ${q.cols * q.rows} peças</p>`, { parte: 'III', titulo: q.nome });
+    <p class="legenda-quebra">${q.nome} · ${q.cols * q.rows} peças</p>`, { parte: 'III', titulo: q.nome, limpa: true });
 }
 
 // ---------- Parte IV: Desafios ----------
@@ -233,13 +239,13 @@ pagina(`
     ${Object.values(pecasQuadrado).map((p, i) => `<polygon points="${p.map(([x, y]) => `${x},${y}`).join(' ')}" fill="${tonsTangram[i]}" stroke="#FBF8F2" stroke-width=".012"/>`).join('')}
     ${Object.values(pecasQuadrado).map((p) => `<polygon points="${p.map(([x, y]) => `${x},${y}`).join(' ')}" fill="none" stroke="#1E2633" stroke-width=".012" stroke-dasharray=".05 .035"/>`).join('')}
   </svg></div>
-  ${avisoCorte}`, { parte: 'IV', titulo: 'Tangram' });
+  ${avisoCorte}`, { parte: 'IV', titulo: 'Tangram', limpa: true });
 
 pagina(`
   <h2 class="titulo-jogo">Tangram — figuras para montar</h2>
   <p class="instrucao">Monte cada figura usando as 7 peças. As soluções estão nas respostas.</p>
   <div class="silhuetas">${tangramFiguras.map((f) => `<figure>${silhuetaSVG(f, '#1E2633')}<figcaption>${f.nome}</figcaption></figure>`).join('')}</div>`,
-{ parte: 'IV', titulo: 'Tangram' });
+{ parte: 'IV', titulo: 'Tangram', limpa: true });
 
 const coresDiscos = ['#7A2E3A', '#9A7440', '#4F6E5E', '#34557A', '#5D5A7A'];
 pagina(`
@@ -257,7 +263,7 @@ pagina(`
     ${[100, 84, 68, 52, 36].map((w, i) => `<g transform="translate(${90 - w / 2} ${48 + i * 13})"><rect width="${w}" height="10" rx="2" fill="${coresDiscos[i]}"/><rect width="${w}" height="10" rx="2" fill="none" stroke="#1E2633" stroke-width=".4" stroke-dasharray="2 1.4"/><text x="${w / 2}" y="7" text-anchor="middle" class="hanoi-num">${5 - i}</text></g>`).join('')}
   </svg>
   <p class="aviso-corte">✂ Recorte a base (A, B, C) e os 5 discos. Os discos são empilhados sobre as marcas dos pinos.</p>`,
-{ parte: 'IV', titulo: 'Torre de Hanói' });
+{ parte: 'IV', titulo: 'Torre de Hanói', limpa: true });
 
 const SEG = { 0: 'abcdef', 1: 'bc', 2: 'abged', 3: 'abgcd', 4: 'fgbc', 5: 'afgcd', 6: 'afgedc', 7: 'abc', 8: 'abcdefg', 9: 'abcdfg' };
 function palito(x1, y1, x2, y2) {
@@ -288,7 +294,7 @@ pagina(`
   <h2 class="titulo-jogo">Desafios com palitos</h2>
   <p class="instrucao">Cada conta está errada. Mova <b>apenas um palito</b> para que ela fique certa.
   Se quiser, monte com palitos de fósforo usados ou palitos de dente sobre a mesa.</p>
-  <ol class="palitos">${c.palitos.map((p) => `<li>${equacao(p.conta)}</li>`).join('')}</ol>`, { parte: 'IV', titulo: 'Desafios com palitos' });
+  <ol class="palitos">${c.palitos.map((p) => `<li>${equacao(p.conta)}</li>`).join('')}</ol>`, { parte: 'IV', titulo: 'Desafios com palitos', limpa: true });
 
 // ---------- Parte V: Jogos de tabuleiro ----------
 divisoria('V', ['Dominó', 'Xadrez — regras, tabuleiro, peças e problemas', 'Damas brasileiras', 'Trilha (moinho)'],
@@ -318,7 +324,7 @@ pagina(`
   Quando a soma der um múltiplo de 5 (5, 10, 15…), o jogador marca esses pontos. Ganha quem chegar primeiro a 100.</div>`,
 { parte: 'V', titulo: 'Dominó' });
 for (let i = 0; i < 2; i++) {
-  pagina(`<div class="dominos">${pecasDomino.slice(i * 14, i * 14 + 14).join('')}</div>${avisoCorte}`, { parte: 'V', titulo: `Dominó — peças ${i + 1}/2` });
+  pagina(`<div class="dominos">${pecasDomino.slice(i * 14, i * 14 + 14).join('')}</div>${avisoCorte}`, { parte: 'V', titulo: `Dominó — peças ${i + 1}/2`, limpa: true });
 }
 
 // Xadrez
@@ -376,12 +382,12 @@ pagina(`
 
 pagina(`<div class="tab-pagina">${tabuleiro('8/8/8/8/8/8/8/8 w - - 0 1', { tam: 21 })}</div>
   <p class="aviso-corte">Tabuleiro de xadrez e damas. Cole em papelão para ficar firme. A casa clara fica no canto inferior direito de cada jogador.</p>`,
-{ parte: 'V', titulo: 'Tabuleiro (xadrez e damas)' });
+{ parte: 'V', titulo: 'Tabuleiro (xadrez e damas)', limpa: true });
 
 const fichasXadrez = [...'RNBQKBNRPPPPPPPP', ...'rnbqkbnrpppppppp'];
 pagina(`<div class="fichas">${fichasXadrez.map((p) => `<div class="ficha ${p === p.toUpperCase() ? 'fb' : 'fp'}"><span>${glifo(p)}</span></div>`).join('')}</div>
   <p class="aviso-corte">✂ 32 peças de xadrez: 16 claras e 16 escuras. Cole em papelão e recorte os círculos. Uma tampinha de garrafa colada embaixo deixa as peças fáceis de pegar.</p>`,
-{ parte: 'V', titulo: 'Xadrez — peças' });
+{ parte: 'V', titulo: 'Xadrez — peças', limpa: true });
 
 const traduzir = (san) => san.replace(/^K/, 'R').replace(/^Q/, 'D').replace(/^R/, 'T').replace(/^N/, 'C');
 const mates = c.mates.map((m) => {
@@ -394,7 +400,7 @@ pagina(`
   <h2 class="titulo-jogo">Xadrez — problemas de mate em 1</h2>
   <p class="instrucao">Em todas as posições, as <b>brancas jogam e dão xeque-mate em um lance</b>. Monte no tabuleiro se preferir.</p>
   <div class="mates">${mates.map((m, i) => `<figure>${tabuleiro(m.fen, { tam: 7.2 })}<figcaption><b>${i + 1}.</b> ${m.nome}</figcaption></figure>`).join('')}</div>`,
-{ parte: 'V', titulo: 'Problemas de xadrez' });
+{ parte: 'V', titulo: 'Problemas de xadrez', limpa: true });
 
 // Damas
 pagina(`
@@ -415,7 +421,7 @@ pagina(`
 const fichasDamas = [...Array(16).fill('c'), ...Array(16).fill('e')];
 pagina(`<div class="fichas">${fichasDamas.map((t) => `<div class="ficha ${t === 'c' ? 'fb' : 'fp'} dama"><i></i></div>`).join('')}</div>
   <p class="aviso-corte">✂ 32 peças: 16 claras e 16 escuras. Servem para as damas (12 de cada cor e 4 extras para marcar as damas) e para a trilha (9 de cada cor).</p>`,
-{ parte: 'V', titulo: 'Peças de damas e trilha' });
+{ parte: 'V', titulo: 'Peças de damas e trilha', limpa: true });
 
 // Trilha
 const pontosTrilha = [];
@@ -441,6 +447,130 @@ pagina(`
     ${pontosTrilha.map(([x, y]) => `<circle cx="${x}" cy="${y}" r="3.6" fill="#2D4739"/>`).join('')}
   </svg>`, { parte: 'V', titulo: 'Trilha' });
 
+// ---------- Parte VI: Para jogar juntos ----------
+divisoria('VI', ['Bingo das Canções', 'Quiz de Antigamente', 'Mímica', 'Adedonha (Stop)', 'Batalha Naval', 'Jogo dos Pontinhos', 'Cartas de Conversa'],
+  'Jogos para rir, cantar e conversar. Feitos para filhos, netos e cuidadores jogarem lado a lado.');
+
+const cartas = (itens, cols, rows, classe = '') =>
+  `<div class="cartas ${classe}" style="--cols:${cols};--rows:${rows}">${itens.map((i) => `<div class="carta">${i}</div>`).join('')}</div>`;
+const florzinha = (cor) => `<svg viewBox="-10 -10 20 20" class="florzinha">${flor(0, 0, 9, cor)}</svg>`;
+
+// Bingo das Canções
+pagina(`
+  <h2 class="titulo-jogo">Bingo das Canções</h2>
+  ${regras({ objetivo: 'Completar a cartela marcando as canções sorteadas.', jogadores: '2 a 7 (um deles é o “cantor”)', tempo: '20 a 40 minutos', material: '6 cartelas, 24 fichas de sorteio e grãos de feijão ou botões para marcar.' })}
+  ${lista([
+    'Cada jogador recebe uma cartela. Quem não joga fica com as fichas e vira o <b>cantor</b>.',
+    'O cantor sorteia uma ficha e <b>cantarola um trechinho</b> da música, sem dizer o nome.',
+    'Quem reconhecer a canção diz o nome. Se ela estiver na sua cartela, marque com um feijão.',
+    'Se ninguém reconhecer, o cantor lê o título e os compositores em voz alta.',
+    'Vence quem completar uma linha (ou a cartela inteira, no jogo mais longo) e gritar “Bingo!”.',
+  ])}
+  <div class="dica-box"><b>Para quem acompanha:</b> a música é uma das lembranças mais duradouras. Vale cantar junto,
+  bater palmas e perguntar onde a pessoa ouvia essa canção. Se tiver celular por perto, toque a música depois de cada rodada.</div>`,
+{ parte: 'VI', titulo: 'Bingo das Canções' });
+
+const cartelasBingo = Array.from({ length: 6 }, (_, k) => g.embaralhar(c.cancoes, g.aleatorio(900 + k)).slice(0, 9));
+for (let i = 0; i < 3; i++) {
+  pagina(`<div class="cartelas">${cartelasBingo.slice(i * 2, i * 2 + 2).map((cart, k) => `
+    <div class="cartela"><div class="cartela-topo">${florzinha(paleta.rosa)}<span>Bingo das Canções</span><small>Cartela ${i * 2 + k + 1}</small>${florzinha(paleta.amarelo)}</div>
+    <div class="cartela-grade">${cart.map(([t]) => `<div>${t}</div>`).join('')}</div></div>`).join('')}</div>${avisoCorte}`,
+  { parte: 'VI', titulo: 'Bingo das Canções — cartelas', limpa: true });
+}
+pagina(`${cartas(c.cancoes.map(([t, a]) => `<b>${t}</b><small>${a}</small>`), 4, 6, 'fichas-bingo')}${avisoCorte}`,
+  { parte: 'VI', titulo: 'Bingo das Canções — fichas de sorteio', limpa: true });
+
+// Quiz de Antigamente
+const rQuiz = g.aleatorio(321);
+const cartasQuiz = c.quiz.map(([perg, opcoes], i) => {
+  const ordem = g.embaralhar([0, 1, 2], rQuiz);
+  const letra = 'ABC'[ordem.indexOf(0)];
+  return `<div class="quiz-n">${florzinha(paleta.rosa)} Pergunta ${i + 1}</div><p class="quiz-p">${perg}</p>
+    <ol class="quiz-op">${ordem.map((o, k) => `<li><b>${'ABC'[k]}</b> ${opcoes[o]}</li>`).join('')}</ol>
+    <div class="quiz-r">Resposta: ${letra} — ${opcoes[0]}</div>`;
+});
+pagina(`
+  <h2 class="titulo-jogo">Quiz de Antigamente</h2>
+  <p class="instrucao">Uma pessoa lê a pergunta e as três opções; a outra responde. A resposta está de cabeça para baixo
+  no pé de cada carta. Vale contar o que lembra sobre cada assunto. Quem acertar fica com a carta.</p>
+  ${cartas(cartasQuiz.slice(0, 6), 2, 3, 'quiz')}`, { parte: 'VI', titulo: 'Quiz de Antigamente', limpa: true });
+for (let i = 0; i < 2; i++) {
+  pagina(cartas(cartasQuiz.slice(6 + i * 9, 15 + i * 9), 3, 3, 'quiz quiz3'), { parte: 'VI', titulo: 'Quiz de Antigamente', limpa: true });
+}
+
+// Mímica
+pagina(`
+  <h2 class="titulo-jogo">Mímica</h2>
+  <p class="instrucao">Sorteie uma carta e faça a mímica, sem falar nada. Quem adivinhar primeiro ganha a carta.
+  Pode ser jogado em dupla ou em dois times. Depois, conte: você já fez isso muitas vezes?</p>
+  ${cartas(c.mimica.map((m) => `${florzinha(paleta.lavanda)}<b>${m}</b>`), 3, 6, 'mimica')}`,
+{ parte: 'VI', titulo: 'Mímica', limpa: true });
+
+// Adedonha
+const letras = 'ABCDEFGHIJLMNOPRSTUV'.split('');
+pagina(`
+  <h2 class="titulo-jogo">Adedonha (Stop)</h2>
+  ${regras({ objetivo: 'Escrever uma palavra de cada categoria começando com a letra sorteada.', jogadores: '2 a 6', tempo: '15 a 30 minutos', material: 'As letras abaixo, recortadas, e uma folha de respostas por jogador.' })}
+  ${lista([
+    'Sorteie uma letra. Todos preenchem a linha da rodada: um nome, uma cidade, uma comida e assim por diante.',
+    'Quem completar tudo primeiro diz “Stop!” e todos param de escrever.',
+    'Cada resposta vale 10 pontos, ou 5 se outra pessoa escreveu a mesma palavra. Em branco vale 0.',
+    'Para jogar com mais calma, combinem um tempo (por exemplo, 2 minutos) em vez do “Stop”.',
+  ])}
+  <div class="letras">${letras.map((l) => `<div>${l}</div>`).join('')}</div>${avisoCorte}`,
+{ parte: 'VI', titulo: 'Adedonha (Stop)', limpa: true });
+pagina(`
+  <h2 class="titulo-jogo">Adedonha — folha de respostas</h2>
+  <p class="lead pequeno">Jogador(a): __________________________________________</p>
+  <table class="adedonha"><thead><tr><th>Letra</th>${c.adedonha.map((k) => `<th>${k}</th>`).join('')}<th>Pontos</th></tr></thead>
+  <tbody>${`<tr><td></td>${c.adedonha.map(() => '<td></td>').join('')}<td></td></tr>`.repeat(12)}</tbody>
+  <tfoot><tr><td colspan="${c.adedonha.length + 1}">Total</td><td></td></tr></tfoot></table>`,
+{ parte: 'VI', titulo: 'Adedonha (Stop)', limpa: true });
+
+// Batalha Naval
+const gradeNaval = (titulo) => `<div class="naval"><h3>${titulo}</h3><table>
+  <tr><th></th>${Array.from({ length: 10 }, (_, i) => `<th>${i + 1}</th>`).join('')}</tr>
+  ${'ABCDEFGHIJ'.split('').map((l) => `<tr><th>${l}</th>${'<td></td>'.repeat(10)}</tr>`).join('')}</table></div>`;
+const frota = [['Porta-aviões', 5, 1], ['Encouraçado', 4, 1], ['Cruzador', 3, 2], ['Submarino', 2, 2]];
+pagina(`
+  <h2 class="titulo-jogo">Batalha Naval</h2>
+  ${regras({ objetivo: 'Afundar todos os navios do adversário antes que ele afunde os seus.', jogadores: '2', tempo: '20 a 40 minutos', material: 'Uma folha de jogo para cada jogador e um lápis.' })}
+  ${lista([
+    'Sem mostrar ao adversário, cada um desenha sua frota na grade “Minha frota”: os navios ficam na horizontal ou na vertical e não podem se encostar.',
+    'Na sua vez, diga uma casa, como “C7”. O adversário responde “água” ou “acertou” e, se o navio todo foi atingido, “afundou”.',
+    'Anote seus tiros na grade “Mar do adversário”: um ponto para água e um X para acerto.',
+    'Quem acerta joga de novo. Vence quem afundar a frota inteira primeiro.',
+  ])}
+  <div class="frota"><b>Frota de cada jogador:</b> 1 porta-aviões (5 casas) · 1 encouraçado (4 casas) · 2 cruzadores (3 casas) · 2 submarinos (2 casas)</div>
+  <div class="dica-box"><b>Para facilitar:</b> joguem com as duas folhas lado a lado, ajudando a localizar as casas pela letra e pelo número.</div>`,
+{ parte: 'VI', titulo: 'Batalha Naval' });
+pagina(`<p class="lead pequeno">Jogador(a): __________________________________________</p>
+  <div class="navais">${gradeNaval('Minha frota')}${gradeNaval('Mar do adversário')}</div>
+  <div class="frota-check">${frota.map(([n, t, q]) => Array.from({ length: q }, () => `<span>☐ ${n} <i>${'■'.repeat(t)}</i></span>`).join('')).join('')}</div>
+  <p class="aviso-corte">Imprima uma folha para cada jogador.</p>`, { parte: 'VI', titulo: 'Batalha Naval — folha de jogo', limpa: true });
+
+// Pontinhos
+const pontos = [];
+for (let l = 0; l < 11; l++) for (let k = 0; k < 9; k++) pontos.push(`<circle cx="${10 + k * 20}" cy="${10 + l * 20}" r="2.2" fill="#3A3A3A"/>`);
+pagina(`
+  <h2 class="titulo-jogo">Jogo dos Pontinhos</h2>
+  <p class="instrucao">Cada jogador, na sua vez, liga dois pontos vizinhos com um traço (na horizontal ou na vertical).
+  Quem fechar um quadradinho escreve sua inicial dentro dele e joga de novo. Quando não houver mais traços, vence quem tiver mais quadradinhos.
+  Use uma caneta de cor diferente para cada jogador.</p>
+  <svg class="pontinhos" viewBox="0 0 180 220">${pontos.join('')}</svg>`, { parte: 'VI', titulo: 'Jogo dos Pontinhos', limpa: true });
+
+// Cartas de Conversa
+const cartasConversa = c.conversa.map(([cat, q]) => `<div class="conv-cat">${florzinha(paleta.amarelo)} ${cat}</div><p>${q}</p>`);
+pagina(`
+  <h2 class="titulo-jogo">Cartas de Conversa</h2>
+  <p class="instrucao">Embaralhe as cartas e deixe o monte virado para baixo. Cada pessoa tira uma carta, lê em voz alta e responde.
+  Os outros podem fazer perguntas sobre a história. Vale trocar de carta se a pergunta não agradar. Algumas lembranças trazem
+  saudade: escute com calma e acolha.</p>
+  ${cartas(cartasConversa.slice(0, 6), 2, 3, 'conversa')}`, { parte: 'VI', titulo: 'Cartas de Conversa', limpa: true });
+for (let i = 0; i < 2; i++) {
+  pagina(cartas(cartasConversa.slice(6 + i * 9, 15 + i * 9), 3, 3, 'conversa conv3'), { parte: 'VI', titulo: 'Cartas de Conversa', limpa: true });
+}
+
 // ---------- registro e respostas ----------
 pagina(`
   <h1 class="titulo">Registro de atividades</h1>
@@ -450,7 +580,7 @@ pagina(`
     <tbody>${'<tr><td></td><td></td><td></td><td></td><td></td></tr>'.repeat(14)}</tbody>
   </table>
   <p class="nota-saude">Leve este registro às consultas: ele ajuda profissionais de saúde a conhecer a rotina e perceber mudanças.</p>`,
-{ titulo: 'Registro de atividades' });
+{ titulo: 'Registro de atividades', limpa: true });
 
 const titR = (t) => `<h3 class="resp-tit">${t}</h3>`;
 pagina(`
@@ -499,6 +629,7 @@ const itensSumario = [
   ['Parte III', 'Parte III · Quebra-cabeças', ['Entardecer na Serra', 'Azulejos', 'Casario Colonial']],
   ['Parte IV', 'Parte IV · Desafios', ['Tangram', 'Torre de Hanói', 'Desafios com palitos']],
   ['Parte V', 'Parte V · Jogos de Tabuleiro', ['Dominó', 'Xadrez', 'Damas brasileiras', 'Trilha']],
+  ['Parte VI', 'Parte VI · Para Jogar Juntos', ['Bingo das Canções', 'Quiz de Antigamente', 'Mímica', 'Adedonha (Stop)', 'Batalha Naval', 'Jogo dos Pontinhos', 'Cartas de Conversa']],
   ['Registro de atividades', 'Registro de atividades'],
   ['Respostas', 'Respostas'],
 ];
@@ -514,24 +645,25 @@ paginas[SUMARIO_IDX] = `<section class="page"><div class="miolo">
 
 // ---------- estilo ----------
 const css = `
-@font-face { font-family: 'Lora'; font-weight: 400; src: url('${fonte('lora-latin-400-normal.woff2')}'); }
-@font-face { font-family: 'Lora'; font-weight: 400; font-style: italic; src: url('${fonte('lora-latin-400-italic.woff2')}'); }
-@font-face { font-family: 'Lora'; font-weight: 600; src: url('${fonte('lora-latin-600-normal.woff2')}'); }
-@font-face { font-family: 'Lora'; font-weight: 700; src: url('${fonte('lora-latin-700-normal.woff2')}'); }
+@font-face { font-family: 'Lora'; font-weight: 400; src: url('${fonte('lora', 'lora-latin-400-normal.woff2')}'); }
+@font-face { font-family: 'Lora'; font-weight: 400; font-style: italic; src: url('${fonte('lora', 'lora-latin-400-italic.woff2')}'); }
+@font-face { font-family: 'Lora'; font-weight: 600; src: url('${fonte('lora', 'lora-latin-600-normal.woff2')}'); }
+@font-face { font-family: 'Lora'; font-weight: 700; src: url('${fonte('lora', 'lora-latin-700-normal.woff2')}'); }
+@font-face { font-family: 'Dancing Script'; font-weight: 600; src: url('${fonte('dancing-script', 'dancing-script-latin-600-normal.woff2')}'); }
 @page { size: A4; margin: 0; }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 body { font-family: 'Inter', sans-serif; color: #1E2633; font-size: 12.5pt; }
 .page { width: 210mm; height: 297mm; padding: 12mm 12mm 14mm; position: relative; overflow: hidden; page-break-after: always;
-  display: flex; flex-direction: column; background: #FBF8F2; }
+  display: flex; flex-direction: column; background: #FDF9F4; }
 .miolo { flex: 1; display: flex; flex-direction: column; min-height: 0; }
 footer { position: absolute; left: 12mm; right: 12mm; bottom: 6.5mm; display: flex; justify-content: space-between;
   font-size: 8.5pt; color: #8B8478; letter-spacing: .08em; text-transform: uppercase; }
 .cabecalho { display: flex; justify-content: space-between; font-size: 8.5pt; letter-spacing: .12em; text-transform: uppercase;
-  color: var(--cor); border-bottom: 1.5px solid var(--cor); padding-bottom: 2mm; margin-bottom: 6mm; font-weight: 600; }
+  color: var(--cor); border-bottom: 1px dashed var(--cor); padding-bottom: 2mm; margin-bottom: 6mm; font-weight: 600; }
 h1, h2, h3 { font-family: 'Lora', serif; font-weight: 700; }
-.titulo { font-size: 30pt; margin-bottom: 6mm; color: #1E2633; }
-.titulo-jogo { font-size: 23pt; margin-bottom: 3mm; color: var(--cor); }
+.titulo { font-size: 30pt; margin-bottom: 2mm; color: var(--cor); }
+.titulo-jogo { font-size: 23pt; margin-bottom: 2mm; color: var(--cor); }
 .sub { font-size: 14pt; margin: 6mm 0 3mm; color: var(--cor, #1E2633); }
 .lead { font-family: 'Lora'; font-size: 14pt; line-height: 1.5; margin-bottom: 3mm; }
 .lead.pequeno { font-family: 'Inter'; font-size: 11.5pt; margin-bottom: 5mm; }
@@ -541,44 +673,56 @@ h1, h2, h3 { font-family: 'Lora', serif; font-weight: 700; }
 .passos li { counter-increment: p; position: relative; padding-left: 10mm; margin-bottom: 2.6mm; line-height: 1.45; font-size: 12pt; }
 .passos li::before { content: counter(p); position: absolute; left: 0; top: .2mm; font-family: 'Lora'; font-weight: 700; color: var(--cor, #7A2E3A); font-size: 13pt; }
 .dicas { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm 6mm; }
-.dicas div { font-size: 11pt; line-height: 1.45; border-left: 2px solid #C9A96E; padding: 1mm 0 1mm 4mm; }
-.nota-saude { margin-top: auto; font-size: 9.5pt !important; color: #7A746A; border-top: 1px solid #E2DACB; padding-top: 3mm; }
-.ficha-jogo { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2mm 6mm; background: #F1EADB; border-radius: 3mm; padding: 4mm 5mm; margin: 2mm 0 4mm; }
+.dicas div { font-size: 11pt; line-height: 1.45; background: #FFFFFF; border: 1px solid #F0E2D8; border-radius: 4mm; padding: 3mm 4mm; }
+.nota-saude { margin-top: auto; font-size: 9.5pt !important; color: #7A746A; border-top: 1px solid #E2DACB; padding-top: 3mm; margin-right: 28mm; }
+.ficha-jogo { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2mm 6mm; background: #FBEFE8; border-radius: 5mm; padding: 4mm 6mm; margin: 2mm 0 4mm; }
 .ficha-jogo dt { font-size: 8pt; text-transform: uppercase; letter-spacing: .1em; color: var(--cor); font-weight: 700; }
 .ficha-jogo dd { font-size: 11pt; line-height: 1.4; }
-.dica-box { margin-top: auto; background: #F1EADB; border-left: 3px solid var(--cor); padding: 4mm 5mm; font-size: 11pt; line-height: 1.5; }
+.dica-box { margin-top: auto; background: #FFF4DE; border-radius: 5mm; padding: 4mm 6mm; margin-right: 26mm; font-size: 11pt; line-height: 1.5; }
 .aviso-corte { margin-top: auto; font-size: 9.5pt; color: #6B655B; padding-top: 3mm; }
 
 /* capa */
-.capa { background: #1E2633; color: #F3ECDD; padding: 18mm 18mm; }
-.capa-topo { font-family: 'Lora'; letter-spacing: .5em; font-size: 13pt; color: #C9A96E; text-align: center; }
-.capa-arte { width: 120mm; margin: 10mm auto 6mm; display: block; }
-.capa-peca { font-family: 'FreeSerif'; font-size: 230px; fill: #F3ECDD; }
-.capa-texto { text-align: center; }
-.capa h1 { font-size: 30pt; line-height: 1.2; color: #F3ECDD; font-weight: 600; margin-bottom: 5mm; }
-.capa p { font-family: 'Lora'; font-style: italic; font-size: 13.5pt; color: #D9CFBC; max-width: 140mm; margin: 0 auto; line-height: 1.5; }
-.capa-partes { display: flex; justify-content: center; gap: 3mm; margin-top: 12mm; flex-wrap: wrap; }
-.capa-partes span { border: 1px solid #C9A96E55; padding: 2mm 4mm; font-size: 9.5pt; letter-spacing: .06em; color: #E8DFCD; }
-.capa-partes b { color: #C9A96E; margin-right: 2mm; font-family: 'Lora'; }
+.capa { background: #FCF4EE; padding: 16mm 16mm; align-items: center; text-align: center; }
+.capa .miolo { align-items: center; }
+.capa-guirlanda { position: relative; width: 150mm; height: 150mm; margin-top: 4mm; }
+.capa-guirlanda .guirlanda { width: 100%; height: 100%; }
+.capa-centro { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.capa-kicker { font-family: 'Lora'; font-style: italic; font-size: 14pt; color: #8A7A6E; letter-spacing: .2em; }
+.capa h1 { font-family: 'Dancing Script'; font-weight: 600; font-size: 50pt; color: #A84B60; line-height: 1; margin: 2mm 0 4mm; }
+.capa-sub { font-family: 'Lora'; font-size: 13.5pt; color: #4A4038; max-width: 80mm; line-height: 1.35; font-weight: 600; }
+.capa-chamada { font-family: 'Lora'; font-style: italic; font-size: 13.5pt; color: #5E544C; max-width: 150mm; margin: 6mm auto 0; line-height: 1.5; }
+.capa-partes { display: flex; justify-content: center; gap: 2.5mm; margin-top: 9mm; flex-wrap: wrap; max-width: 175mm; }
+.capa-partes span { background: #FFFFFF; border: 1px solid #EBD9CF; border-radius: 99px; padding: 2mm 4.5mm; font-size: 10pt; color: #4A4038; }
+.capa-partes b { color: var(--cor); margin-right: 2mm; font-family: 'Lora'; }
+.capa-assinatura { margin-top: auto; font-family: 'Dancing Script'; font-size: 20pt; color: #7E9F78; }
 
 /* divisórias */
-.divisoria { background: var(--cor); color: #F6F1E6; padding: 40mm 22mm; }
-.div-num { font-family: 'Lora'; font-style: italic; font-size: 18pt; color: #F6F1E6cc; }
-.divisoria h1 { font-size: 48pt; line-height: 1.05; margin: 3mm 0 8mm; color: #FFFFFF; }
-.div-frase { font-family: 'Lora'; font-size: 15pt; line-height: 1.5; max-width: 140mm; color: #F6F1E6e6; padding-bottom: 12mm; border-bottom: 1px solid #FFFFFF55; margin-bottom: 10mm; }
-.div-lista { list-style: none; counter-reset: d; }
-.div-lista li { counter-increment: d; font-size: 14pt; padding: 3mm 0; border-bottom: 1px solid #FFFFFF22; }
-.div-lista li::before { content: counter(d, decimal-leading-zero); font-family: 'Lora'; margin-right: 6mm; color: #FFFFFFaa; }
-.divisoria footer { color: #FFFFFF99; }
+.divisoria { background: #FCF4EE; padding: 16mm 22mm 20mm; }
+.div-buque { width: 95mm; margin: 0 auto 4mm; }
+.div-buque svg { width: 100%; display: block; }
+.div-num { font-family: 'Dancing Script'; font-size: 26pt; color: var(--cor); text-align: center; }
+.divisoria h1 { font-size: 40pt; line-height: 1.05; margin: 1mm 0 5mm; color: var(--cor); text-align: center; }
+.div-frase { font-family: 'Lora'; font-style: italic; font-size: 14pt; line-height: 1.5; max-width: 140mm; margin: 0 auto 8mm; color: #5E544C; text-align: center; }
+.div-lista { list-style: none; counter-reset: d; background: #FFFFFF; border-radius: 6mm; padding: 4mm 9mm; box-shadow: 0 0 0 1px #EFE0D6; }
+.div-lista li { counter-increment: d; font-size: 13pt; padding: 2.6mm 0; border-bottom: 1px dashed #EAD7CB; }
+.div-lista li:last-child { border-bottom: 0; }
+.div-lista li::before { content: counter(d, decimal-leading-zero); font-family: 'Lora'; font-weight: 700; margin-right: 6mm; color: var(--cor); }
+
+/* ornamentos */
+.canto { position: absolute; right: 3mm; bottom: 3mm; width: 34mm; height: 34mm; opacity: .9; z-index: 0; pointer-events: none; }
+.miolo, .cabecalho { position: relative; z-index: 1; }
+.vinheta { display: block; width: 34mm; height: 4mm; margin: -1.5mm 0 4mm; }
+.icone-flor { width: 3.6mm; height: 3.6mm; vertical-align: -0.8mm; margin-right: 1.8mm; }
+.florzinha { width: 4.5mm; height: 4.5mm; vertical-align: -1mm; }
 
 /* sumário */
-.sumario { display: flex; flex-direction: column; gap: 4mm; }
+.sumario { display: flex; flex-direction: column; gap: 2.6mm; }
 .sum-linha, .sumario li { display: flex; align-items: baseline; gap: 3mm; }
 .sum-linha i, .sumario li i { flex: 1; border-bottom: 1px dotted #B5AC9C; }
 .sum-linha { font-family: 'Lora'; font-size: 15pt; font-weight: 600; }
 .sum-item.parte .sum-linha { color: var(--cor); }
 .sumario ul { list-style: none; margin: 1.5mm 0 0 8mm; }
-.sumario li { font-size: 11.5pt; padding: .8mm 0; color: #3A4250; }
+.sumario li { font-size: 11pt; padding: .4mm 0; color: #3A4250; }
 
 /* sudoku */
 .sudokus { flex: 1; display: flex; flex-direction: column; justify-content: space-around; align-items: center; }
@@ -687,7 +831,7 @@ h1, h2, h3 { font-family: 'Lora', serif; font-weight: 700; }
 
 /* registro e respostas */
 .registro { width: 100%; border-collapse: collapse; font-size: 10.5pt; }
-.registro th { background: #1E2633; color: #F3ECDD; padding: 2.5mm; text-align: left; font-weight: 600; }
+.registro th { background: #A84B60; color: #FFFFFF; padding: 2.5mm; text-align: left; font-weight: 600; }
 .registro td { border: 1px solid #D8CFBE; height: 13mm; background: #fff; }
 .registro th:nth-child(1), .registro th:nth-child(3), .registro th:nth-child(4) { width: 20mm; }
 .resp-tit { font-size: 14pt; color: #7A2E3A; margin: 2mm 0 3mm; padding-bottom: 1.5mm; border-bottom: 1px solid #E2DACB; }
@@ -710,6 +854,52 @@ h1, h2, h3 { font-family: 'Lora', serif; font-weight: 700; }
 .fim { margin-top: auto; text-align: center; border-top: 1px solid #E2DACB; padding-top: 4mm; }
 .fim p { font-family: 'Lora'; font-style: italic; font-size: 14pt; margin-bottom: 1.5mm; }
 .fim small { font-size: 8.5pt; color: #7A746A; }
+/* Parte VI */
+.cartas { flex: 1; display: grid; grid-template-columns: repeat(var(--cols), 1fr); grid-template-rows: repeat(var(--rows), 1fr); }
+.cartas .carta { outline: 1px dashed #8F8680; outline-offset: -.5px; background: #FFFFFF; padding: 5mm; display: flex; flex-direction: column; position: relative; }
+.cartas .carta::before { content: ''; position: absolute; inset: 2.5mm; border: 1.2px solid var(--cor); border-radius: 4mm; opacity: .35; pointer-events: none; }
+.fichas-bingo .carta { align-items: center; justify-content: center; text-align: center; gap: 1.5mm; padding: 3mm; }
+.fichas-bingo b { font-family: 'Lora'; font-size: 12pt; line-height: 1.2; }
+.fichas-bingo small { font-size: 7.5pt; color: #7A6F68; line-height: 1.3; }
+.cartelas { flex: 1; display: grid; grid-template-rows: 1fr 1fr; gap: 7mm; }
+.cartela { outline: 1px dashed #8F8680; outline-offset: 2mm; background: #FFFFFF; border-radius: 4mm; display: flex; flex-direction: column; overflow: hidden; border: 2px solid var(--cor); }
+.cartela-topo { background: #FBEFE8; display: flex; align-items: center; justify-content: center; gap: 3mm; padding: 2.5mm; }
+.cartela-topo span { font-family: 'Dancing Script'; font-size: 22pt; color: var(--cor); }
+.cartela-topo small { font-size: 9pt; color: #7A6F68; text-transform: uppercase; letter-spacing: .08em; }
+.cartela-grade { flex: 1; display: grid; grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr); }
+.cartela-grade div { border-top: 1px solid #EAD7CB; border-left: 1px solid #EAD7CB; display: grid; place-items: center; text-align: center;
+  font-family: 'Lora'; font-weight: 600; font-size: 14pt; padding: 3mm; line-height: 1.25; }
+.cartela-grade div:nth-child(3n+1) { border-left: 0; }
+.quiz .carta { padding: 6mm 7mm; }
+.quiz-n { font-size: 8.5pt; text-transform: uppercase; letter-spacing: .1em; color: var(--cor); font-weight: 700; margin-bottom: 2mm; }
+.quiz-p { font-family: 'Lora'; font-weight: 600; font-size: 13pt; line-height: 1.35; margin-bottom: 3mm; }
+.quiz-op { list-style: none; font-size: 11.5pt; line-height: 1.7; }
+.quiz-op b { display: inline-grid; place-items: center; width: 5.5mm; height: 5.5mm; border-radius: 50%; background: #FBEFE8; color: var(--cor); font-size: 9pt; margin-right: 2mm; }
+.quiz-r { margin-top: auto; transform: rotate(180deg); font-size: 8.5pt; color: #8A7F78; text-align: center; border-top: 1px dashed #E2D5C6; padding-top: 1.5mm; }
+.quiz3 .quiz-p { font-size: 11.5pt; } .quiz3 .quiz-op { font-size: 10pt; } .quiz3 .carta { padding: 5mm; }
+.mimica .carta { align-items: center; justify-content: center; text-align: center; gap: 2mm; }
+.mimica b { font-family: 'Lora'; font-size: 14.5pt; }
+.mimica .florzinha { width: 6mm; height: 6mm; }
+.letras { display: grid; grid-template-columns: repeat(5, 26mm); justify-content: center; margin-top: 5mm; }
+.letras div { height: 26mm; outline: 1px dashed #8F8680; outline-offset: -.5px; display: grid; place-items: center; font-family: 'Lora'; font-size: 30pt; font-weight: 700; color: var(--cor); background: #FFFFFF; }
+.adedonha { width: 100%; border-collapse: collapse; font-size: 10pt; flex: 1; }
+.adedonha th { background: var(--cor); color: #FFFFFF; padding: 2mm 1mm; font-weight: 600; font-size: 9pt; }
+.adedonha td { border: 1px solid #E2D5C6; background: #FFFFFF; height: 15mm; }
+.adedonha th:first-child { width: 13mm; } .adedonha th:last-child { width: 15mm; }
+.adedonha tfoot td { height: 10mm; text-align: right; padding-right: 3mm; font-weight: 700; }
+.frota { font-size: 11pt; line-height: 1.5; margin-top: 3mm; }
+.navais { display: flex; flex-direction: column; align-items: center; gap: 6mm; }
+.naval h3 { font-size: 13pt; color: var(--cor); margin-bottom: 1.5mm; }
+.naval table { border-collapse: collapse; }
+.naval th { width: 9.5mm; height: 9.5mm; font-size: 9.5pt; color: #6B655B; font-weight: 600; }
+.naval td { width: 9.5mm; height: 9.5mm; border: 1px solid #B9AE9E; background: #FFFFFF; }
+.frota-check { display: flex; flex-wrap: wrap; gap: 2mm 6mm; justify-content: center; margin-top: 4mm; font-size: 10.5pt; }
+.frota-check i { font-style: normal; color: var(--cor); letter-spacing: 1px; margin-left: 1mm; }
+.pontinhos { width: 150mm; margin: 2mm auto 0; display: block; }
+.conversa .carta { padding: 7mm 8mm; }
+.conv-cat { font-size: 9pt; text-transform: uppercase; letter-spacing: .1em; color: var(--cor); font-weight: 700; margin-bottom: 3mm; }
+.conversa p { font-family: 'Lora'; font-weight: 600; font-size: 15pt; line-height: 1.35; }
+.conv3 p { font-size: 13pt; } .conv3 .carta { padding: 6mm; }
 `;
 
 const html = `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">
