@@ -1,0 +1,70 @@
+// Conteúdo dos order bumps Kit Bingo para Grupos e Atividades Sensoriais e de Mãos.
+import { cancoes as cancoesKit } from './conteudo.mjs';
+
+// 36 canções: as 24 do kit e mais 12. Título e autoria.
+export const cancoesGrupo = [
+  ...cancoesKit,
+  ['Ai que Saudade da Amélia', 'Ataulfo Alves e Mário Lago'],
+  ['Chiclete com Banana', 'Gordurinha e Almira Castilho'],
+  ['Alegria, Alegria', 'Caetano Veloso'],
+  ['Tristeza do Jeca', 'Angelino de Oliveira'],
+  ['Chalana', 'Mário Zan e Arlindo Pinto'],
+  ['Menino da Porteira', 'Teddy Vieira e Luizinho'],
+  ['Pelo Telefone', 'Donga e Mauro de Almeida'],
+  ['Mas Que Nada', 'Jorge Ben'],
+  ['País Tropical', 'Jorge Ben'],
+  ['A Banda', 'Chico Buarque'],
+  ['A Jardineira', 'Benedito Lacerda e Humberto Porto'],
+  ['Se Essa Rua Fosse Minha', 'Cantiga popular'],
+];
+
+// 36 lembranças de antigamente, cada uma com uma pergunta para puxar conversa.
+export const lembrancas = [
+  ['Vitrola', 'Que discos tocavam na sua casa?'],
+  ['Fusca', 'Alguém da família teve um? Para onde vocês iam?'],
+  ['Rádio de pilha', 'Que programa você ouvia no rádio?'],
+  ['Telefone de disco', 'Lembra do seu primeiro número de telefone?'],
+  ['Máquina de escrever', 'Você sabia datilografar?'],
+  ['Ferro a brasa', 'Quem passava a roupa na sua casa?'],
+  ['Lampião', 'Já viveu algum tempo sem luz elétrica?'],
+  ['Lambreta', 'Já andou de lambreta ou de garupa?'],
+  ['Bonde', 'Já andou de bonde? Em que cidade?'],
+  ['Telegrama', 'Já recebeu um telegrama? Que notícia era?'],
+  ['Disco de vinil', 'Qual disco você mais ouviu?'],
+  ['Fita cassete', 'Já gravou música do rádio numa fita?'],
+  ['Fogão a lenha', 'Que comida ficava mais gostosa no fogão a lenha?'],
+  ['Filtro de barro', 'Ainda tem um em casa?'],
+  ['Penteadeira', 'O que ficava em cima da penteadeira?'],
+  ['Máquina de costura', 'Quem costurava na família?'],
+  ['Quermesse', 'Qual era a sua barraca preferida?'],
+  ['Matinê', 'Qual foi o primeiro filme que você viu no cinema?'],
+  ['Brilhantina', 'Quem usava brilhantina no cabelo?'],
+  ['Anágua', 'Como eram as roupas de festa?'],
+  ['Sabão de pedra', 'Como se lavava roupa antigamente?'],
+  ['Lamparina', 'Já estudou ou leu à luz de lamparina?'],
+  ['Moringa', 'Lembra do gosto da água da moringa?'],
+  ['Caderneta do armazém', 'Como era o armazém do seu bairro?'],
+  ['Bala de coco', 'Qual doce você mais gostava?'],
+  ['Gibi', 'Qual era o seu personagem preferido?'],
+  ['Pião', 'Você sabia rodar pião?'],
+  ['Bolinha de gude', 'Era bom de jogar bolinha de gude?'],
+  ['Chapéu de feltro', 'Quem usava chapéu para sair?'],
+  ['Lenço de bolso', 'Ganhou algum lenço bordado?'],
+  ['Álbum de figurinhas', 'Já completou algum álbum?'],
+  ['Calhambeque', 'Qual foi o primeiro carro da família?'],
+  ['Retrato na parede', 'Que retratos ficavam na sala?'],
+  ['Novela de rádio', 'Qual novela você acompanhava?'],
+  ['Cinema de rua', 'Como era o cinema da sua cidade?'],
+  ['Carta de amor', 'Já escreveu ou recebeu uma carta de amor?'],
+];
+
+export const variacoesBingo = [
+  ['Linha', 'Complete uma linha inteira, na horizontal.'],
+  ['Coluna', 'Complete uma coluna inteira, na vertical.'],
+  ['Diagonal', 'Complete uma das duas diagonais.'],
+  ['Quatro cantos', 'Marque as quatro casas dos cantos da cartela.'],
+  ['Letra X', 'Complete as duas diagonais ao mesmo tempo.'],
+  ['Moldura', 'Marque todas as casas da borda da cartela.'],
+  ['Cartela cheia', 'Marque todas as casas. É a rodada mais longa e emocionante.'],
+  ['Bingo cantado', 'Na modalidade de canções, quem marcar uma casa canta um trechinho da música.'],
+];

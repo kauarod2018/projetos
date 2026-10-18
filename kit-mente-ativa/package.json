@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "node src/build.mjs && node src/bonus.mjs && node src/avancado.mjs",
+    "build": "node src/build.mjs && node src/bonus.mjs && node src/avancado.mjs && node src/bingo.mjs && node src/sensorial.mjs",
     "build:kit": "node src/build.mjs",
     "build:bonus": "node src/bonus.mjs",
     "imagens:vendas": "node src/vendas-imagens.mjs",
-    "build:avancado": "node src/avancado.mjs"
+    "build:avancado": "node src/avancado.mjs",
+    "build:bingo": "node src/bingo.mjs",
+    "build:sensorial": "node src/sensorial.mjs"
   },
   "devDependencies": {
     "@fontsource/dancing-script": "^5.2.6",

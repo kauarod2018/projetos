@@ -117,11 +117,11 @@ export const diferencas = [
 ];
 
 // ---------- Desenhos para colorir (traço preto, sem preenchimento) ----------
-const T = 'fill="#FFFFFF" stroke="#2B2B2B" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"';
+export const T = 'fill="#FFFFFF" stroke="#2B2B2B" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"';
 
-const petalaPonta = (comp, larg) => `M0 0 C${larg} ${-comp * 0.3} ${larg * 0.6} ${-comp * 0.85} 0 ${-comp} C${-larg * 0.6} ${-comp * 0.85} ${-larg} ${-comp * 0.3} 0 0Z`;
+export const petalaPonta = (comp, larg) => `M0 0 C${larg} ${-comp * 0.3} ${larg * 0.6} ${-comp * 0.85} 0 ${-comp} C${-larg * 0.6} ${-comp * 0.85} ${-larg} ${-comp * 0.3} 0 0Z`;
 
-function anel(n, desenho, giro = 0) {
+export function anel(n, desenho, giro = 0) {
   return Array.from({ length: n }, (_, i) => `<g transform="rotate(${giro + (360 / n) * i})">${desenho}</g>`).join('');
 }
 
@@ -172,7 +172,7 @@ export function azulejo(semente) {
   return `<svg viewBox="-4 -4 308 408">${t.join('')}<rect x="0" y="0" width="300" height="400" fill="none" stroke="#2B2B2B" stroke-width="3"/></svg>`;
 }
 
-function florTraco(x, y, s, tipo = 0) {
+export function florTraco(x, y, s, tipo = 0) {
   if (tipo === 1) {
     return `<g transform="translate(${x} ${y}) scale(${s})">${anel(8, `<ellipse cy="-14" rx="6" ry="14" ${T}/>`)}<circle r="9" ${T}/>${anel(6, `<circle cy="-4.5" r="1.6" ${T}/>`)}</g>`;
   }
@@ -181,7 +181,7 @@ function florTraco(x, y, s, tipo = 0) {
   }
   return `<g transform="translate(${x} ${y}) scale(${s})">${anel(5, `<path d="${petalaPonta(24, 14)}" ${T}/>`)}<circle r="7" ${T}/></g>`;
 }
-const folhaTraco = (x, y, ang, s = 1) => `<g transform="translate(${x} ${y}) rotate(${ang}) scale(${s})"><path d="M0 0 Q16 -12 34 0 Q16 12 0 0Z" ${T}/><path d="M2 0 L30 0" fill="none" stroke="#2B2B2B" stroke-width="1"/></g>`;
+export const folhaTraco = (x, y, ang, s = 1) => `<g transform="translate(${x} ${y}) rotate(${ang}) scale(${s})"><path d="M0 0 Q16 -12 34 0 Q16 12 0 0Z" ${T}/><path d="M2 0 L30 0" fill="none" stroke="#2B2B2B" stroke-width="1"/></g>`;
 
 export function vasoDeFlores(semente) {
   const r = aleatorio(semente);

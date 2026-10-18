@@ -21,6 +21,11 @@ Produto digital low ticket para filhos e cuidadores de idosos: um PDF de 63 pág
 | `src/desafios.mjs` | Geradores de lógica, criptograma, quadrado mágico e verificação de mate em 2 |
 | `src/livro.mjs` | Peças comuns dos materiais extras (livro, capa, grades, tabuleiro) |
 | `dist/Order-Bump-Mente-Ativa-Nivel-Avancado.pdf` | Order bump Nível Avançado (23 páginas) |
+| `src/bingo.mjs` | Gera o order bump Kit Bingo para Grupos |
+| `src/sensorial.mjs`, `src/artesanato.mjs` | Gera o order bump Mãos à Obra (desenhos em artesanato.mjs) |
+| `src/conteudo-extras.mjs` | Canções e lembranças do Kit Bingo |
+| `dist/Order-Bump-Kit-Bingo-para-Grupos.pdf` | Order bump Kit Bingo (32 páginas) |
+| `dist/Order-Bump-Maos-a-Obra-Atividades-Sensoriais.pdf` | Order bump Mãos à Obra (31 páginas) |
 | `anuncio/` | Roteiro do vídeo para o Google Flow e imagens de apoio |
 
 ## Conteúdo
@@ -44,6 +49,9 @@ Os problemas de xadrez e o tangram são conferidos automaticamente no build (o b
 
 - **Mente Ativa Nível Avançado:** 4 sudokus difíceis, 4 Sudoku X, 4 problemas de lógica (solução única conferida), 8 problemas de xadrez de mate em 2 (conferidos com chess.js), 6 criptogramas, 4 palavras cruzadas grandes, 4 quadrados mágicos e respostas
 
+- **Kit Bingo para Grupos:** roteiro da tarde, 8 variações, 12 cartelas de números (75 bolas), 10 de canções (36 músicas), 8 de lembranças (36 itens), fichas de sorteio, folhas de controle, 80 marcadores, convites, certificados e placar
+- **Mãos à Obra:** cuidados e material, 5 dobraduras com passo a passo ilustrado, 8 papéis estampados, flores de papel com moldes, caixinha de presente (base e tampa), bandeirinhas, 4 cartões postais, 5 marcadores de página, mosaico, pintura com carimbo (3 desenhos), 6 moldes de alinhavo e galeria de trabalhos
+
 ## Como editar e gerar de novo
 
 ```bash
@@ -52,6 +60,8 @@ npm run build        # kit + bônus
 npm run build:kit    # só o kit
 npm run build:bonus  # só os bônus
 npm run build:avancado  # só o order bump Nível Avançado
+npm run build:bingo     # só o Kit Bingo
+npm run build:sensorial # só o Mãos à Obra
 ```
 
 Edite `src/conteudo.mjs` para trocar figuras ou textos. O build recria o PDF em `dist/`.
