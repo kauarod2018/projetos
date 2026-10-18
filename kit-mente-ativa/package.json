@@ -5,7 +5,8 @@
   "scripts": {
     "build": "node src/build.mjs && node src/bonus.mjs",
     "build:kit": "node src/build.mjs",
-    "build:bonus": "node src/bonus.mjs"
+    "build:bonus": "node src/bonus.mjs",
+    "imagens:vendas": "node src/vendas-imagens.mjs"
   },
   "devDependencies": {
     "@fontsource/dancing-script": "^5.2.6",

@@ -3,271 +3,532 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Mente Ativa — Jogos Recortáveis para Idosos</title>
-<meta name="description" content="8 jogos para imprimir e recortar: memória, dominó, bingo, quebra-cabeça e cartas de conversa. Feito para filhos e cuidadores de idosos.">
-<meta property="og:title" content="Mente Ativa — Kit de Jogos Recortáveis para Idosos">
-<meta property="og:description" content="Transforme o tempo junto em momentos leves, divertidos e cheios de conversa.">
-<meta property="og:image" content="img/capa.jpg">
+<title>Mente Ativa · 24 jogos e desafios para imprimir e jogar junto</title>
+<meta name="description" content="Sudoku, caça-palavras, quebra-cabeças, dominó, xadrez, bingo das canções e muito mais. 63 páginas com letra grande para imprimir e jogar com quem você ama. Acesso imediato + 2 bônus.">
+<meta property="og:title" content="Mente Ativa · Jogos e desafios para imprimir e jogar junto">
+<meta property="og:description" content="24 jogos e desafios com letra grande, para filhos, netos e cuidadores jogarem com quem amam. + 2 bônus.">
+<meta property="og:image" content="img/kit-capa.jpg">
+<meta name="theme-color" content="#A84B60">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Inter:wght@400;500;600;700;800;900&family=Lora:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --laranja: #E4572E; --laranja-escuro: #C2401C; --creme: #FFF7EE; --creme-2: #FFEBD6;
-    --texto: #2B2522; --suave: #6F645D; --verde: #2F9E5B; --raio: 18px;
+    --rosa: #A84B60; --rosa-escuro: #8A3A4D; --rosa-claro: #F8E6EA; --rosa-medio: #E8B4C0;
+    --lavanda: #6B5B95; --lavanda-claro: #EEE9F6; --salvia: #4E7D5B; --salvia-claro: #E7F1E8;
+    --creme: #FDF8F2; --creme-2: #FBEFE6; --texto: #2F2A28; --suave: #6E625C;
+    --verde: #22A55A; --verde-escuro: #178246; --amarelo: #F5C451;
+    --raio: 22px; --sombra: 0 10px 30px rgba(120, 50, 70, .10);
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
-  body { font-family: 'Nunito', system-ui, sans-serif; color: var(--texto); background: var(--creme); font-size: 18px; line-height: 1.55; }
+  body { font-family: 'Inter', system-ui, sans-serif; color: var(--texto); background: var(--creme); font-size: 18px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
   img { max-width: 100%; display: block; }
-  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
-  section { padding: 64px 0; }
-  h1, h2, h3 { line-height: 1.15; font-weight: 900; }
-  h2 { font-size: clamp(28px, 4.5vw, 40px); text-align: center; margin-bottom: 14px; }
-  .sub { text-align: center; color: var(--suave); max-width: 640px; margin: 0 auto 40px; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+  .estreito { max-width: 780px; margin: 0 auto; }
+  section { padding: 76px 0; position: relative; }
+  h1, h2, h3 { font-family: 'Lora', Georgia, serif; line-height: 1.18; color: var(--texto); }
+  h2 { font-size: clamp(28px, 4.4vw, 42px); text-align: center; margin-bottom: 14px; }
+  h2 em { font-style: normal; color: var(--rosa); }
+  .script { font-family: 'Dancing Script', cursive; color: var(--rosa); font-size: 1.15em; font-weight: 700; }
+  .kicker { display: block; text-align: center; font-family: 'Dancing Script', cursive; font-size: 28px; color: var(--rosa); margin-bottom: 4px; }
+  .sub { text-align: center; color: var(--suave); max-width: 680px; margin: 0 auto 44px; font-size: 19px; }
 
-  .btn { display: inline-block; background: var(--verde); color: #fff; text-decoration: none; font-weight: 900; font-size: 20px;
-    padding: 18px 34px; border-radius: 999px; box-shadow: 0 6px 0 #22784A; transition: transform .15s, box-shadow .15s; text-align: center; }
-  .btn:hover { transform: translateY(2px); box-shadow: 0 4px 0 #22784A; }
-  .btn small { display: block; font-size: 13px; font-weight: 700; opacity: .9; }
+  /* fundo com florzinhas */
+  .floral { background-color: var(--rosa-claro);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44'%3E%3Cg fill='%23E8B4C0' opacity='.7'%3E%3Cellipse cx='12' cy='7' rx='3' ry='4.5'/%3E%3Cellipse cx='12' cy='17' rx='3' ry='4.5'/%3E%3Cellipse cx='7' cy='12' rx='4.5' ry='3'/%3E%3Cellipse cx='17' cy='12' rx='4.5' ry='3'/%3E%3C/g%3E%3Ccircle cx='12' cy='12' r='2.4' fill='%23fff'/%3E%3Ccircle cx='34' cy='34' r='2.6' fill='%23E8B4C0' opacity='.7'/%3E%3C/svg%3E"); }
+  .floral-lavanda { background-color: var(--lavanda-claro);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='44'%3E%3Cg fill='%23D3C0EA' opacity='.7'%3E%3Cellipse cx='12' cy='7' rx='3' ry='4.5'/%3E%3Cellipse cx='12' cy='17' rx='3' ry='4.5'/%3E%3Cellipse cx='7' cy='12' rx='4.5' ry='3'/%3E%3Cellipse cx='17' cy='12' rx='4.5' ry='3'/%3E%3C/g%3E%3Ccircle cx='12' cy='12' r='2.4' fill='%23fff'/%3E%3Ccircle cx='34' cy='34' r='2.6' fill='%23D3C0EA' opacity='.7'/%3E%3C/svg%3E"); }
 
-  /* topo */
-  .hero { background: var(--laranja); color: #fff; padding: 56px 0 72px; overflow: hidden; }
-  .hero .wrap { display: grid; grid-template-columns: 1.1fr .9fr; gap: 40px; align-items: center; }
-  .kicker { display: inline-block; background: rgba(255,255,255,.18); padding: 6px 14px; border-radius: 999px; font-weight: 800; font-size: 14px; letter-spacing: .06em; text-transform: uppercase; }
-  .hero h1 { font-size: clamp(34px, 5.5vw, 56px); margin: 18px 0 16px; }
-  .hero p { font-size: 20px; opacity: .95; margin-bottom: 28px; max-width: 520px; }
-  .selos { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; font-size: 15px; font-weight: 800; }
-  .selos span { background: #fff; color: var(--laranja-escuro); padding: 6px 12px; border-radius: 999px; }
-  .mock { position: relative; height: 460px; }
-  .mock img { position: absolute; width: 62%; border-radius: 10px; box-shadow: 0 20px 40px rgba(0,0,0,.25); }
-  .mock img:nth-child(1) { left: 0; top: 40px; transform: rotate(-7deg); }
-  .mock img:nth-child(2) { right: 0; top: 60px; transform: rotate(6deg); }
-  .mock img:nth-child(3) { left: 19%; top: 0; z-index: 2; }
+  /* botão de compra */
+  .btn { display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; background: linear-gradient(180deg, #2BB866, var(--verde));
+    color: #fff; text-decoration: none; font-weight: 900; font-size: 20px; letter-spacing: .02em; text-transform: uppercase;
+    padding: 20px 38px; border-radius: 999px; box-shadow: 0 7px 0 var(--verde-escuro), 0 14px 28px rgba(34, 165, 90, .35);
+    transition: transform .15s, box-shadow .15s; text-align: center; animation: pulso 2.4s ease-in-out infinite; }
+  .btn:hover { transform: translateY(3px); box-shadow: 0 4px 0 var(--verde-escuro), 0 10px 20px rgba(34, 165, 90, .3); }
+  .btn small { font-size: 13px; font-weight: 600; text-transform: none; letter-spacing: 0; opacity: .92; }
+  @keyframes pulso { 0%, 100% { scale: 1; } 50% { scale: 1.035; } }
+  @media (prefers-reduced-motion: reduce) { .btn { animation: none; } html { scroll-behavior: auto; } }
+  .seguranca { display: flex; flex-wrap: wrap; gap: 6px 16px; justify-content: center; margin-top: 16px; font-size: 14px; color: var(--suave); font-weight: 600; }
+  .seguranca span { display: inline-flex; align-items: center; gap: 6px; }
 
-  /* dor */
-  .dor { background: #fff; }
-  .dor-lista { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-  .dor-lista div { background: var(--creme); border-radius: var(--raio); padding: 24px; }
-  .dor-lista b { display: block; font-size: 20px; margin: 8px 0 4px; }
-  .emoji { font-size: 34px; }
-  .virada { text-align: center; font-size: 22px; font-weight: 800; margin-top: 36px; color: var(--laranja-escuro); }
+  /* faixa do topo */
+  .aviso { background: var(--rosa); color: #fff; text-align: center; font-size: 14px; font-weight: 600; padding: 9px 16px; letter-spacing: .02em; }
 
-  /* jogos */
-  .jogos { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
-  .jogo { background: #fff; border-radius: var(--raio); overflow: hidden; box-shadow: 0 2px 0 #F1DCC4; }
-  .jogo img { aspect-ratio: 210 / 297; object-fit: cover; border-bottom: 1px solid #F1E4D6; }
-  .jogo div { padding: 14px 16px 18px; }
-  .jogo h3 { font-size: 18px; margin-bottom: 4px; }
-  .jogo p { font-size: 15px; color: var(--suave); line-height: 1.4; }
+  /* hero */
+  .hero { padding: 54px 0 70px; overflow: hidden; }
+  .hero .wrap { display: grid; grid-template-columns: 1.05fr .95fr; gap: 36px; align-items: center; }
+  .pill { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: var(--rosa); border: 1.5px solid var(--rosa-medio);
+    padding: 7px 16px; border-radius: 999px; font-weight: 700; font-size: 14px; }
+  .hero h1 { font-size: clamp(34px, 5vw, 54px); margin: 18px 0 16px; }
+  .hero h1 .script { font-size: 1.12em; display: inline-block; }
+  .hero p.lead { font-size: 20px; color: #4C423E; margin-bottom: 22px; }
+  .check { list-style: none; display: grid; gap: 10px; margin-bottom: 28px; }
+  .check li { position: relative; padding-left: 36px; font-weight: 600; }
+  .check li::before { content: ''; position: absolute; left: 0; top: 3px; width: 24px; height: 24px; border-radius: 50%;
+    background: var(--salvia) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat; }
+  .hero-img { position: relative; }
+  .hero-img::before { content: ''; position: absolute; inset: 6% 4%; border-radius: 50%; background: radial-gradient(circle, #fff 0, #fff0 70%); }
+  .hero-img img { position: relative; filter: drop-shadow(0 18px 30px rgba(120, 50, 70, .16)); }
+
+  /* números */
+  .numeros { background: #fff; border-top: 1px solid #F1E2D8; border-bottom: 1px solid #F1E2D8; padding: 26px 0; }
+  .numeros .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; text-align: center; }
+  .numeros b { display: block; font-family: 'Lora'; font-size: 38px; color: var(--rosa); line-height: 1.1; }
+  .numeros span { font-size: 15px; color: var(--suave); font-weight: 600; }
+
+  /* dores */
+  .dores { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .dor { background: #fff; border-radius: var(--raio); padding: 26px 26px 24px; box-shadow: var(--sombra); display: flex; gap: 18px; align-items: flex-start; }
+  .dor .ico { flex: none; width: 52px; height: 52px; border-radius: 16px; background: var(--rosa-claro); display: grid; place-items: center; }
+  .dor b { display: block; font-size: 19px; margin-bottom: 4px; }
+  .dor p { color: var(--suave); font-size: 16px; }
+  .virada { margin: 46px auto 0; max-width: 760px; text-align: center; background: #fff; border-radius: var(--raio); padding: 28px; box-shadow: var(--sombra); border: 2px dashed var(--rosa-medio); }
+  .virada p { font-family: 'Lora'; font-size: 22px; font-weight: 600; }
+
+  /* apresentação */
+  .apresenta { display: grid; grid-template-columns: .9fr 1.1fr; gap: 40px; align-items: center; }
+  .apresenta h2 { text-align: left; }
+  .apresenta p { color: #4C423E; margin-bottom: 16px; }
+
+  /* partes */
+  .partes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .parte { background: #fff; border-radius: var(--raio); overflow: hidden; box-shadow: var(--sombra); display: flex; flex-direction: column; }
+  .parte .foto { background: var(--c, var(--rosa-claro)); padding: 22px 34px 0; height: 230px; overflow: hidden; }
+  .parte .foto img { border-radius: 10px 10px 0 0; box-shadow: 0 8px 20px rgba(0,0,0,.12); }
+  .parte .txt { padding: 20px 22px 24px; }
+  .parte .tag { font-size: 12px; text-transform: uppercase; letter-spacing: .12em; font-weight: 800; color: var(--t, var(--rosa)); }
+  .parte h3 { font-size: 22px; margin: 4px 0 8px; }
+  .parte ul { list-style: none; font-size: 15.5px; color: var(--suave); display: grid; gap: 3px; }
+  .parte li::before { content: '✿ '; color: var(--t, var(--rosa)); }
+
+  /* galeria */
+  .galeria { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .galeria button { border: 0; padding: 0; background: #fff; border-radius: 14px; overflow: hidden; cursor: zoom-in; box-shadow: var(--sombra);
+    transition: transform .2s, box-shadow .2s; }
+  .galeria button:hover { transform: translateY(-4px) rotate(-.6deg); box-shadow: 0 16px 34px rgba(120, 50, 70, .18); }
+  .galeria img { aspect-ratio: 210 / 297; object-fit: cover; width: 100%; }
+  .galeria span { display: block; font-size: 14px; font-weight: 700; padding: 10px 8px; color: var(--texto); }
+  dialog { border: 0; border-radius: 16px; padding: 0; max-width: min(92vw, 640px); background: transparent; }
+  dialog::backdrop { background: rgba(40, 20, 25, .75); }
+  dialog img { width: 100%; max-height: 88vh; object-fit: contain; border-radius: 12px; }
+  dialog button { position: absolute; top: 8px; right: 8px; width: 42px; height: 42px; border-radius: 50%; border: 0; background: #fff; font-size: 22px; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,.2); }
 
   /* benefícios */
-  .beneficios { background: #fff; }
-  .ben { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-  .ben div { text-align: center; padding: 10px; }
-  .ben b { display: block; font-size: 20px; margin: 10px 0 6px; }
-  .ben p { color: var(--suave); font-size: 16px; }
+  .beneficios { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+  .beneficio { background: #fff; border-radius: var(--raio); padding: 28px 24px; text-align: center; box-shadow: var(--sombra); }
+  .beneficio .ico { width: 66px; height: 66px; margin: 0 auto 12px; border-radius: 50%; display: grid; place-items: center; background: var(--c); }
+  .beneficio b { display: block; font-family: 'Lora'; font-size: 20px; margin-bottom: 6px; }
+  .beneficio p { font-size: 16px; color: var(--suave); }
 
-  /* como funciona */
-  .passos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; counter-reset: p; }
-  .passos div { background: #fff; border-radius: var(--raio); padding: 26px; position: relative; counter-increment: p; }
-  .passos div::before { content: counter(p); display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%;
-    background: var(--laranja); color: #fff; font-weight: 900; font-size: 20px; margin-bottom: 12px; }
-  .passos b { font-size: 20px; display: block; margin-bottom: 4px; }
-  .passos p { color: var(--suave); font-size: 16px; }
+  /* passos */
+  .passos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; counter-reset: p; }
+  .passo { background: #fff; border-radius: var(--raio); padding: 30px 26px; box-shadow: var(--sombra); counter-increment: p; position: relative; }
+  .passo::before { content: counter(p); position: absolute; top: -18px; left: 24px; width: 44px; height: 44px; border-radius: 50%; background: var(--rosa); color: #fff;
+    font: 800 20px/44px 'Inter'; text-align: center; box-shadow: 0 0 0 5px var(--creme); }
+  .passo b { display: block; font-family: 'Lora'; font-size: 21px; margin: 8px 0 6px; }
+  .passo p { color: var(--suave); font-size: 16px; }
 
   /* para quem */
-  .quem { background: var(--creme-2); }
-  .quem ul { list-style: none; max-width: 680px; margin: 0 auto; display: grid; gap: 12px; }
-  .quem li { background: #fff; border-radius: 14px; padding: 16px 20px 16px 54px; position: relative; font-weight: 700; }
-  .quem li::before { content: '✓'; position: absolute; left: 18px; top: 14px; width: 26px; height: 26px; border-radius: 50%; background: var(--verde);
-    color: #fff; display: grid; place-items: center; font-size: 15px; }
+  .quem { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .quem div { background: #fff; border-radius: 16px; padding: 18px 20px 18px 56px; position: relative; font-weight: 600; box-shadow: var(--sombra); }
+  .quem div::before { content: '♥'; position: absolute; left: 20px; top: 16px; color: var(--rosa); font-size: 22px; }
+
+  /* bônus */
+  .bonus-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+  .bonus { background: #fff; border-radius: 26px; overflow: hidden; box-shadow: var(--sombra); border: 2px solid var(--rosa-medio); position: relative; }
+  .bonus .faixa { position: absolute; top: 18px; left: -6px; background: var(--amarelo); color: #4A3510; font-weight: 900; font-size: 14px; padding: 6px 16px 6px 20px;
+    border-radius: 0 999px 999px 0; letter-spacing: .06em; box-shadow: 0 4px 10px rgba(0,0,0,.12); z-index: 2; }
+  .bonus .foto { background: var(--c); padding: 20px 20px 0; }
+  .bonus .txt { padding: 22px 26px 26px; }
+  .bonus h3 { font-size: 24px; margin-bottom: 8px; }
+  .bonus p { color: var(--suave); font-size: 16px; margin-bottom: 12px; }
+  .bonus ul { list-style: none; display: grid; gap: 4px; font-size: 15.5px; margin-bottom: 16px; }
+  .bonus li::before { content: '✔ '; color: var(--salvia); font-weight: 900; }
+  .bonus .valor { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; font-weight: 700; }
+  .bonus .valor s { color: #A39089; }
+  .bonus .valor b { background: var(--salvia); color: #fff; border-radius: 999px; padding: 4px 14px; font-size: 15px; letter-spacing: .05em; }
 
   /* oferta */
-  .oferta-box { max-width: 560px; margin: 0 auto; background: #fff; border-radius: 26px; padding: 36px 30px; text-align: center;
-    border: 3px solid var(--laranja); box-shadow: 0 16px 40px rgba(228,87,46,.15); }
-  .oferta-box ul { list-style: none; text-align: left; margin: 22px 0; display: grid; gap: 8px; }
-  .oferta-box li::before { content: '✔ '; color: var(--verde); font-weight: 900; }
-  .de { color: var(--suave); text-decoration: line-through; font-size: 18px; }
-  .preco { font-size: 64px; font-weight: 900; color: var(--laranja-escuro); line-height: 1; margin: 6px 0; }
-  .preco small { font-size: 26px; vertical-align: top; }
-  .parcela { color: var(--suave); margin-bottom: 24px; }
-  .oferta-box .btn { width: 100%; }
-  .seguro { font-size: 14px; color: var(--suave); margin-top: 14px; }
+  .oferta { max-width: 620px; margin: 0 auto; background: #fff; border-radius: 30px; padding: 30px 30px 34px; text-align: center;
+    box-shadow: 0 24px 60px rgba(120, 50, 70, .18); border: 3px solid var(--rosa); position: relative; }
+  .oferta .topo { position: absolute; top: -18px; left: 50%; transform: translateX(-50%); background: var(--rosa); color: #fff; font-weight: 800; font-size: 14px;
+    letter-spacing: .1em; padding: 8px 20px; border-radius: 999px; white-space: nowrap; }
+  .itens { list-style: none; text-align: left; margin: 18px 0 20px; border-top: 1px dashed #EAD7CB; }
+  .itens li { display: flex; justify-content: space-between; gap: 12px; padding: 11px 2px; border-bottom: 1px dashed #EAD7CB; font-size: 16.5px; }
+  .itens li span::before { content: '✔ '; color: var(--salvia); font-weight: 900; }
+  .itens li em { font-style: normal; color: #A39089; white-space: nowrap; }
+  .itens li.total { font-weight: 800; }
+  .itens li.total em { text-decoration: line-through; }
+  .preco-de { color: var(--suave); font-size: 18px; }
+  .preco { font-family: 'Inter'; font-size: 74px; font-weight: 900; color: var(--rosa); line-height: 1; margin: 6px 0 4px; letter-spacing: -.02em; }
+  .preco small { font-size: 28px; vertical-align: 30px; margin-right: 4px; }
+  .preco-obs { color: var(--suave); font-size: 15px; margin-bottom: 22px; }
+  .oferta .btn { width: 100%; }
 
-  .garantia { display: flex; gap: 22px; align-items: center; max-width: 720px; margin: 40px auto 0; background: #fff; border-radius: var(--raio); padding: 24px; }
-  .garantia .emoji { font-size: 56px; }
-  .garantia b { font-size: 20px; }
+  /* garantia */
+  .garantia { display: grid; grid-template-columns: 170px 1fr; gap: 30px; align-items: center; background: #fff; border-radius: 26px; padding: 34px; box-shadow: var(--sombra); }
+  .garantia h3 { font-size: 26px; margin-bottom: 8px; }
+  .garantia p { color: var(--suave); }
 
   /* faq */
-  .faq { max-width: 760px; margin: 0 auto; display: grid; gap: 12px; }
-  details { background: #fff; border-radius: 14px; padding: 18px 22px; }
-  summary { font-weight: 800; cursor: pointer; list-style: none; position: relative; padding-right: 30px; }
-  summary::after { content: '+'; position: absolute; right: 0; top: -2px; font-size: 24px; color: var(--laranja); }
+  .faq { display: grid; gap: 12px; }
+  details { background: #fff; border-radius: 16px; padding: 0 22px; box-shadow: var(--sombra); }
+  summary { font-weight: 700; cursor: pointer; list-style: none; padding: 20px 34px 20px 0; position: relative; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: '+'; position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 28px; height: 28px; border-radius: 50%;
+    background: var(--rosa-claro); color: var(--rosa); display: grid; place-items: center; font-size: 20px; }
   details[open] summary::after { content: '–'; }
-  details p { margin-top: 10px; color: var(--suave); }
+  details p { padding-bottom: 20px; color: var(--suave); font-size: 16.5px; }
 
-  .final { background: var(--laranja); color: #fff; text-align: center; }
-  .final p { font-size: 20px; margin: 0 auto 28px; max-width: 600px; }
-  footer { text-align: center; padding: 28px 20px 90px; font-size: 14px; color: var(--suave); }
+  /* final */
+  .final { text-align: center; }
+  .final h2 { margin-bottom: 10px; }
+  .final p { color: #4C423E; max-width: 620px; margin: 0 auto 30px; font-size: 19px; }
+  footer { background: #2F2A28; color: #CFC4BE; text-align: center; padding: 38px 20px 110px; font-size: 14px; line-height: 1.7; }
+  footer b { color: #fff; font-family: 'Dancing Script'; font-size: 26px; display: block; margin-bottom: 6px; }
 
-  .barra { position: fixed; left: 0; right: 0; bottom: 0; background: #fff; padding: 10px 16px; box-shadow: 0 -4px 20px rgba(0,0,0,.1); display: none; z-index: 10; }
-  .barra .btn { width: 100%; padding: 14px; font-size: 18px; }
+  /* barra fixa no celular */
+  .barra { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; background: rgba(255, 255, 255, .96); backdrop-filter: blur(6px);
+    padding: 10px 14px calc(10px + env(safe-area-inset-bottom)); box-shadow: 0 -6px 20px rgba(0,0,0,.08); display: none; align-items: center; gap: 12px;
+    transform: translateY(110%); transition: transform .3s; }
+  .barra.ativa { transform: none; }
+  .barra .p { line-height: 1.1; font-size: 13px; color: var(--suave); white-space: nowrap; }
+  .barra .p b { display: block; font-size: 22px; color: var(--rosa); font-weight: 900; }
+  .barra .btn { flex: 1; padding: 14px 10px; font-size: 16px; animation: none; box-shadow: 0 4px 0 var(--verde-escuro); }
 
-  @media (max-width: 860px) {
-    .hero .wrap { grid-template-columns: 1fr; }
-    .mock { height: 360px; max-width: 420px; margin: 0 auto; width: 100%; }
-    .jogos { grid-template-columns: repeat(2, 1fr); }
-    .dor-lista, .ben, .passos { grid-template-columns: 1fr; }
-    .barra { display: block; }
+  .aparecer { opacity: 0; transform: translateY(18px); transition: opacity .6s, transform .6s; }
+  .aparecer.visivel { opacity: 1; transform: none; }
+
+  @media (max-width: 900px) {
+    .hero .wrap, .apresenta { grid-template-columns: 1fr; }
+    .hero { padding-top: 34px; text-align: center; }
+    .check { justify-items: center; text-align: left; }
+    .hero-img { max-width: 520px; margin: 0 auto; order: -1; }
+    .apresenta h2 { text-align: center; }
+    .partes, .beneficios, .passos { grid-template-columns: 1fr 1fr; }
+    .galeria { grid-template-columns: repeat(3, 1fr); }
+    .bonus-grid { grid-template-columns: 1fr; max-width: 560px; margin: 0 auto; }
+    .barra { display: flex; }
   }
-  @media (max-width: 420px) {
+  @media (max-width: 620px) {
     body { font-size: 17px; }
-    section { padding: 48px 0; }
-    .jogos { gap: 12px; } .jogo div { padding: 10px 12px 14px; } .jogo h3 { font-size: 16px; } .jogo p { font-size: 14px; }
-    .garantia { flex-direction: column; text-align: center; }
+    section { padding: 56px 0; }
+    .numeros .wrap { grid-template-columns: repeat(2, 1fr); row-gap: 18px; }
+    .dores, .quem, .partes, .beneficios, .passos { grid-template-columns: 1fr; }
+    .passos { gap: 34px; }
+    .galeria { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .garantia { grid-template-columns: 1fr; text-align: center; padding: 26px 22px; }
+    .garantia svg { margin: 0 auto; }
+    .btn { width: 100%; padding: 18px 20px; font-size: 18px; }
+    .oferta { padding: 30px 18px 26px; }
+    .preco { font-size: 62px; }
+    .itens li { font-size: 15px; }
   }
 </style>
 </head>
 <body>
 
-<header class="hero">
+<div class="aviso">🌸 Material digital em PDF · Acesso imediato no seu e-mail · Imprima quantas vezes quiser</div>
+
+<header class="hero floral">
   <div class="wrap">
     <div>
-      <span class="kicker">Kit para imprimir e recortar</span>
-      <h1>Momentos de alegria e conversa com quem você ama</h1>
-      <p>8 jogos recortáveis para filhos e cuidadores jogarem junto com os idosos da família. Letras grandes, figuras coloridas e instruções simples.</p>
-      <a class="btn" href="#oferta">Quero o kit Mente Ativa<small>Acesso imediato em PDF</small></a>
-      <div class="selos"><span>📄 31 páginas</span><span>🖨️ Imprima quantas vezes quiser</span><span>💛 Guia para o cuidador</span></div>
+      <span class="pill">♥ Para filhos, netos e cuidadores</span>
+      <h1>Tardes cheias de <span class="script">alegria e conversa</span> com quem você ama</h1>
+      <p class="lead">24 jogos e desafios com letra grande para imprimir e jogar junto: sudoku, caça-palavras, quebra-cabeças, dominó, xadrez, bingo das canções e muito mais.</p>
+      <ul class="check">
+        <li>63 páginas prontas para imprimir em casa</li>
+        <li>Regras simples e respostas de tudo no final</li>
+        <li>Peças, cartas e tabuleiros para recortar</li>
+      </ul>
+      <a class="btn" href="#oferta">Quero o Mente Ativa<small>com 2 bônus exclusivos</small></a>
+      <div class="seguranca"><span>🔒 Compra segura</span><span>⚡ Acesso imediato</span><span>🛡️ Garantia de 7 dias</span></div>
     </div>
-    <div class="mock" aria-hidden="true">
-      <img src="img/memoria.jpg" alt="">
-      <img src="img/conversa.jpg" alt="">
-      <img src="img/capa.jpg" alt="Capa do kit Mente Ativa">
-    </div>
+    <div class="hero-img"><img src="img/hero.webp" alt="Kit Mente Ativa no tablet e os dois bônus impressos" width="1000" height="900" fetchpriority="high"></div>
   </div>
 </header>
 
-<section class="dor">
+<div class="numeros">
   <div class="wrap">
-    <h2>Você já passou por isso?</h2>
-    <p class="sub">Cuidar de alguém é um ato de amor. Mas os dias podem ficar longos — para os dois lados.</p>
-    <div class="dor-lista">
-      <div><span class="emoji">📺</span><b>A TV ligada o dia inteiro</b>Ele ou ela passa horas parado, sem estímulo e sem conversa.</div>
-      <div><span class="emoji">🤔</span><b>Não saber o que fazer junto</b>A visita vira silêncio, ou só perguntas sobre remédio e comida.</div>
-      <div><span class="emoji">⏳</span><b>Sem tempo para inventar</b>Entre trabalho e cuidados, falta energia para planejar atividades.</div>
+    <div><b>63</b><span>páginas</span></div>
+    <div><b>24</b><span>jogos e desafios</span></div>
+    <div><b>6</b><span>partes temáticas</span></div>
+    <div><b>+2</b><span>bônus de presente</span></div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <span class="kicker">você se identifica?</span>
+    <h2>Cuidar é amor, mas <em>os dias podem ficar longos</em></h2>
+    <p class="sub">Quem cuida de pai, mãe ou avós conhece bem essas situações:</p>
+    <div class="dores">
+      <div class="dor aparecer"><div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#A84B60" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+        <div><b>A TV ligada o dia inteiro</b><p>Horas na frente da televisão, sem estímulo e sem conversa de verdade.</p></div></div>
+      <div class="dor aparecer"><div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#A84B60" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9 10h.01M15 10h.01M9 16c1.5-1.2 4.5-1.2 6 0"/></svg></div>
+        <div><b>A visita vira silêncio</b><p>Você chega, pergunta do remédio e da comida… e o assunto acaba.</p></div></div>
+      <div class="dor aparecer"><div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#A84B60" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <div><b>Falta tempo para inventar atividades</b><p>Entre trabalho, casa e cuidados, não sobra energia para planejar o que fazer.</p></div></div>
+      <div class="dor aparecer"><div class="ico"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#A84B60" stroke-width="2" stroke-linecap="round"><path d="M4 4h16v12H8l-4 4z"/><path d="M9 9h.01M12 9h.01M15 9h.01"/></svg></div>
+        <div><b>Atividades infantis demais</b><p>A maioria dos materiais parece feita para criança, e ninguém gosta de ser tratado assim.</p></div></div>
     </div>
-    <p class="virada">O Mente Ativa resolve isso: é só imprimir, recortar e jogar. 🎲</p>
+    <div class="virada aparecer"><p>O Mente Ativa resolve isso: é só <span class="script">imprimir, recortar e jogar junto</span>. 🌷</p></div>
+  </div>
+</section>
+
+<section class="floral-lavanda">
+  <div class="wrap apresenta">
+    <img src="img/kit-pilha.webp" alt="Páginas do kit Mente Ativa" width="900" height="900" loading="lazy">
+    <div>
+      <span class="kicker" style="text-align:left">prazer, este é o</span>
+      <h2>Mente Ativa: <em>Coleção de Jogos e Desafios para Imprimir</em></h2>
+      <p>Um material completo, bonito e com visual adulto, feito para quem quer transformar o tempo junto em <b>momentos leves, divertidos e cheios de conversa</b>.</p>
+      <p>São jogos clássicos que fazem parte da memória de quem joga (dominó, xadrez, damas, bingo) ao lado de desafios para a mente, como sudoku, enigmas e quebra-cabeças. Tudo com <b>letra grande, regras explicadas passo a passo e respostas no final</b>.</p>
+      <a class="btn" href="#oferta">Quero conhecer o kit<small>acesso imediato</small></a>
+    </div>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <h2>O que vem no kit</h2>
-    <p class="sub">Cada jogo tem uma página de instruções com o passo a passo, sugestões para deixar mais fácil ou mais difícil e uma dica para quem cuida.</p>
-    <div class="jogos">
-      <article class="jogo"><img src="img/memoria.jpg" alt="Cartas do jogo da memória" loading="lazy"><div><h3>🃏 Jogo da Memória</h3><p>12 pares de frutas, bichos e objetos queridos.</p></div></article>
-      <article class="jogo"><img src="img/domino.jpg" alt="Peças do dominó de figuras" loading="lazy"><div><h3>🎲 Dominó de Figuras</h3><p>28 peças com figuras no lugar dos números.</p></div></article>
-      <article class="jogo"><img src="img/bingo.jpg" alt="Cartelas do bingo" loading="lazy"><div><h3>🎯 Bingo das Lembranças</h3><p>6 cartelas diferentes e 24 fichas de sorteio.</p></div></article>
-      <article class="jogo"><img src="img/pares.jpg" alt="Cartas de associação" loading="lazy"><div><h3>🔗 O que combina?</h3><p>12 pares para associar: abelha e mel, chave e cadeado…</p></div></article>
-      <article class="jogo"><img src="img/sequencias.jpg" alt="Cartas de sequência" loading="lazy"><div><h3>🔢 Sequências do Dia a Dia</h3><p>4 histórias da rotina para colocar em ordem.</p></div></article>
-      <article class="jogo"><img src="img/ditados.jpg" alt="Cartas de ditados populares" loading="lazy"><div><h3>💬 Complete o Ditado</h3><p>12 ditados populares para completar de memória.</p></div></article>
-      <article class="jogo"><img src="img/quebra.jpg" alt="Quebra-cabeça Dia de Praia" loading="lazy"><div><h3>🧩 Quebra-cabeças</h3><p>2 ilustrações: 6 e 12 peças grandes.</p></div></article>
-      <article class="jogo"><img src="img/conversa.jpg" alt="Cartas de conversa" loading="lazy"><div><h3>☕ Cartas de Conversa</h3><p>24 perguntas que despertam boas histórias.</p></div></article>
+    <span class="kicker">o que vem no kit</span>
+    <h2>6 partes, <em>24 jogos e desafios</em></h2>
+    <p class="sub">Do raciocínio individual aos jogos para rir em família. Cada jogo tem uma página com as regras completas.</p>
+    <div class="partes">
+      <article class="parte aparecer" style="--c:#EEE9F6;--t:#6B5B95"><div class="foto"><img src="img/kit-sudoku.jpg" alt="Página de sudoku" loading="lazy"></div>
+        <div class="txt"><span class="tag">Parte I</span><h3>Raciocínio</h3><ul><li>6 sudokus em 3 níveis</li><li>16 sequências lógicas</li><li>Pirâmides de soma</li><li>10 enigmas</li></ul></div></article>
+      <article class="parte aparecer" style="--c:#E7F1E8;--t:#4E7D5B"><div class="foto"><img src="img/kit-caca.jpg" alt="Página de caça-palavras" loading="lazy"></div>
+        <div class="txt"><span class="tag">Parte II</span><h3>Palavras</h3><ul><li>4 caça-palavras temáticos</li><li>20 anagramas</li><li>15 ditados para completar</li></ul></div></article>
+      <article class="parte aparecer" style="--c:#F8E6EA;--t:#A84B60"><div class="foto"><img src="img/kit-quebra-casario.jpg" alt="Quebra-cabeça Casario Colonial" loading="lazy"></div>
+        <div class="txt"><span class="tag">Parte III</span><h3>Quebra-cabeças</h3><ul><li>3 ilustrações com encaixes</li><li>De 12 a 30 peças</li><li>Para recortar e montar</li></ul></div></article>
+      <article class="parte aparecer" style="--c:#FBEADF;--t:#B0643A"><div class="foto"><img src="img/kit-tangram.jpg" alt="Figuras do tangram" loading="lazy"></div>
+        <div class="txt"><span class="tag">Parte IV</span><h3>Desafios</h3><ul><li>Tangram com 6 figuras</li><li>Torre de Hanói</li><li>Desafios com palitos</li></ul></div></article>
+      <article class="parte aparecer" style="--c:#E3F0EE;--t:#3A6F6B"><div class="foto"><img src="img/kit-xadrez-pecas.jpg" alt="Peças de xadrez para recortar" loading="lazy"></div>
+        <div class="txt"><span class="tag">Parte V</span><h3>Jogos de Tabuleiro</h3><ul><li>Dominó com 28 peças</li><li>Xadrez completo + problemas</li><li>Damas brasileiras e trilha</li></ul></div></article>
+      <article class="parte aparecer" style="--c:#FAF0DC;--t:#9C6A1F"><div class="foto"><img src="img/kit-bingo.jpg" alt="Cartelas do Bingo das Canções" loading="lazy"></div>
+        <div class="txt"><span class="tag">Parte VI</span><h3>Para Jogar Juntos</h3><ul><li>Bingo das Canções</li><li>Quiz de Antigamente e Mímica</li><li>Batalha Naval, Adedonha e mais</li></ul></div></article>
     </div>
   </div>
 </section>
 
-<section class="beneficios">
+<section class="floral">
   <div class="wrap">
+    <span class="kicker">espie por dentro</span>
+    <h2>Veja algumas <em>páginas reais</em> do material</h2>
+    <p class="sub">Toque em uma página para ver maior.</p>
+    <div class="galeria" id="galeria">
+      <button type="button"><img src="img/kit-sumario.jpg" alt="Sumário" loading="lazy"><span>Sumário</span></button>
+      <button type="button"><img src="img/kit-sequencias.jpg" alt="Sequências lógicas" loading="lazy"><span>Sequências lógicas</span></button>
+      <button type="button"><img src="img/kit-quebra-serra.jpg" alt="Quebra-cabeça Entardecer na Serra" loading="lazy"><span>Quebra-cabeça</span></button>
+      <button type="button"><img src="img/kit-palitos.jpg" alt="Desafios com palitos" loading="lazy"><span>Desafios com palitos</span></button>
+      <button type="button"><img src="img/kit-domino.jpg" alt="Peças de dominó" loading="lazy"><span>Dominó para recortar</span></button>
+      <button type="button"><img src="img/kit-xadrez.jpg" alt="Regras do xadrez" loading="lazy"><span>Regras do xadrez</span></button>
+      <button type="button"><img src="img/kit-mates.jpg" alt="Problemas de xadrez" loading="lazy"><span>Problemas de xadrez</span></button>
+      <button type="button"><img src="img/kit-quiz.jpg" alt="Quiz de Antigamente" loading="lazy"><span>Quiz de Antigamente</span></button>
+    </div>
+  </div>
+</section>
+<dialog id="zoom"><button type="button" aria-label="Fechar">×</button><img alt=""></dialog>
+
+<section>
+  <div class="wrap">
+    <span class="kicker">por que funciona</span>
     <h2>Mais do que passar o tempo</h2>
-    <p class="sub">Atividades simples que estimulam a mente e aproximam a família.</p>
-    <div class="ben">
-      <div><span class="emoji">🧠</span><b>Estímulo para a mente</b><p>Memória, atenção, linguagem e raciocínio trabalhados de forma leve.</p></div>
-      <div><span class="emoji">✋</span><b>Mãos em movimento</b><p>Recortar, encaixar e montar ajudam na coordenação fina.</p></div>
-      <div><span class="emoji">💛</span><b>Conversa e vínculo</b><p>Lembranças, risadas e histórias que você vai querer guardar.</p></div>
+    <p class="sub">Atividades simples, feitas para estimular a mente e aproximar a família.</p>
+    <div class="beneficios">
+      <div class="beneficio aparecer"><div class="ico" style="--c:#EEE9F6"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#6B5B95" stroke-width="2" stroke-linecap="round"><path d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 2 5 3 3 0 0 0 6 1V5a3 3 0 0 0-3-1zM15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-2 5 3 3 0 0 1-6 1"/></svg></div>
+        <b>Mente em movimento</b><p>Memória, atenção, linguagem e raciocínio exercitados de forma leve e divertida.</p></div>
+      <div class="beneficio aparecer"><div class="ico" style="--c:#F8E6EA"><svg width="32" height="32" viewBox="0 0 24 24" fill="#A84B60"><path d="M12 21s-7-4.5-9.3-9A5.2 5.2 0 0 1 12 6.4 5.2 5.2 0 0 1 21.3 12C19 16.5 12 21 12 21z"/></svg></div>
+        <b>Conversa e vínculo</b><p>Jogos que puxam histórias, risadas e lembranças que você vai querer guardar.</p></div>
+      <div class="beneficio aparecer"><div class="ico" style="--c:#E7F1E8"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4E7D5B" stroke-width="2" stroke-linecap="round"><path d="M7 11V6a2 2 0 0 1 4 0v5M11 10V4a2 2 0 0 1 4 0v6M15 10V6a2 2 0 0 1 4 0v8a7 7 0 0 1-14 0v-3a2 2 0 0 1 4 0"/></svg></div>
+        <b>Mãos ocupadas</b><p>Recortar, encaixar e montar ajudam na coordenação e trazem uma sensação boa de conquista.</p></div>
+      <div class="beneficio aparecer"><div class="ico" style="--c:#FBEADF"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#B0643A" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div>
+        <b>Letra grande</b><p>Tudo pensado para leitura confortável, com regras claras e sem pressa.</p></div>
+      <div class="beneficio aparecer"><div class="ico" style="--c:#E3F0EE"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#3A6F6B" stroke-width="2" stroke-linecap="round"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg></div>
+        <b>Visual adulto</b><p>Bonito, florido e respeitoso. Nada de desenhos infantis.</p></div>
+      <div class="beneficio aparecer"><div class="ico" style="--c:#FAF0DC"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#9C6A1F" stroke-width="2" stroke-linecap="round"><path d="M6 9V3h12v6M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="7"/></svg></div>
+        <b>Imprima à vontade</b><p>Acabaram as folhas? É só imprimir de novo, quantas vezes quiser.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="floral-lavanda">
+  <div class="wrap">
+    <span class="kicker">simples assim</span>
+    <h2>Como funciona</h2>
+    <p class="sub">Você recebe tudo em minutos, sem esperar entrega.</p>
+    <div class="passos">
+      <div class="passo aparecer"><b>Garanta o seu</b><p>Pagamento por Pix ou cartão, em ambiente seguro. O acesso chega no seu e-mail logo após a confirmação.</p></div>
+      <div class="passo aparecer"><b>Imprima em casa</b><p>Em papel A4 comum ou mais grosso. Também dá para imprimir em qualquer papelaria.</p></div>
+      <div class="passo aparecer"><b>Recorte e jogue junto</b><p>Siga as regras de cada jogo. Recortar as peças junto já faz parte da diversão.</p></div>
     </div>
   </div>
 </section>
 
 <section>
-  <div class="wrap">
-    <h2>Como funciona</h2>
-    <p class="sub">Você recebe tudo em minutos, direto no seu e-mail.</p>
-    <div class="passos">
-      <div><b>Compre com segurança</b><p>Pagamento por Pix ou cartão. O acesso chega no seu e-mail logo após a confirmação.</p></div>
-      <div><b>Imprima em casa</b><p>Em papel A4 comum ou mais grosso. Também dá para imprimir na papelaria.</p></div>
-      <div><b>Recorte e jogue</b><p>Siga as instruções de cada jogo. Recortar junto já faz parte da diversão.</p></div>
+  <div class="wrap estreito">
+    <span class="kicker">feito para você</span>
+    <h2>Para quem é o Mente Ativa</h2>
+    <p class="sub">Para quem quer cuidar com mais leveza e presença.</p>
+    <div class="quem">
+      <div class="aparecer">Filhos e netos que querem aproveitar melhor as visitas</div>
+      <div class="aparecer">Cuidadores que buscam atividades prontas para a rotina</div>
+      <div class="aparecer">Casas de repouso e centros-dia com atividades em grupo</div>
+      <div class="aparecer">Idosos que gostam de passatempos e jogos clássicos</div>
+      <div class="aparecer">Famílias que querem trocar a TV por conversa</div>
+      <div class="aparecer">Quem procura um presente diferente e cheio de carinho</div>
     </div>
   </div>
 </section>
 
-<section class="quem">
+<section class="floral">
   <div class="wrap">
-    <h2>Para quem é o kit</h2>
-    <p class="sub">Feito para quem quer cuidar com mais leveza.</p>
-    <ul>
-      <li>Filhos e netos que querem aproveitar melhor as visitas</li>
-      <li>Cuidadores que buscam atividades prontas para a rotina</li>
-      <li>Casas de repouso e centros-dia que fazem atividades em grupo</li>
-      <li>Idosos que moram sozinhos e recebem visitas da família</li>
-      <li>Quem quer trocar a TV por momentos de conversa</li>
-    </ul>
+    <span class="kicker">presentes para você</span>
+    <h2>Comprando hoje, você <em>ainda leva 2 bônus</em></h2>
+    <p class="sub">Dois materiais completos, com o mesmo cuidado e visual do kit.</p>
+    <div class="bonus-grid">
+      <article class="bonus aparecer" style="--c:#FAF0DC">
+        <span class="faixa">BÔNUS 1</span>
+        <div class="foto"><img src="img/b1-pilha.webp" alt="Caderno Extra de Passatempos" width="800" height="820" loading="lazy"></div>
+        <div class="txt">
+          <h3>Caderno Extra de Passatempos</h3>
+          <p>Mais 32 páginas para quando as folhas do kit acabarem.</p>
+          <ul><li>12 sudokus em 3 níveis</li><li>6 caça-palavras com temas novos</li><li>6 cruzadinhas com dicas</li><li>4 labirintos e 3 jogos de encontrar as diferenças</li></ul>
+          <div class="valor"><s>R$ 27,00</s><b>GRÁTIS HOJE</b></div>
+        </div>
+      </article>
+      <article class="bonus aparecer" style="--c:#F1EAF8">
+        <span class="faixa">BÔNUS 2</span>
+        <div class="foto"><img src="img/b2-pilha.webp" alt="Colorir para Relaxar" width="800" height="820" loading="lazy"></div>
+        <div class="txt">
+          <h3>Colorir para Relaxar</h3>
+          <p>13 desenhos de traço firme e áreas grandes, feitos para adultos.</p>
+          <ul><li>Mandalas florais</li><li>Azulejos portugueses</li><li>Flores, paisagens e casinha no campo</li><li>Dicas e sugestões de cores</li></ul>
+          <div class="valor"><s>R$ 19,00</s><b>GRÁTIS HOJE</b></div>
+        </div>
+      </article>
+    </div>
   </div>
 </section>
 
 <section id="oferta">
   <div class="wrap">
-    <h2>Leve o kit completo hoje</h2>
-    <p class="sub">Imprima quantas vezes quiser, para usar com a família.</p>
-    <div class="oferta-box">
-      <span class="de">De R$ 47,00</span>
-      <div class="preco"><small>R$</small>19,90</div>
-      <div class="parcela">pagamento único · acesso imediato</div>
-      <a class="btn" href="#CHECKOUT">Quero o kit Mente Ativa</a>
-      <ul>
-        <li>8 jogos completos para imprimir e recortar</li>
-        <li>31 páginas com letras e figuras grandes</li>
-        <li>Guia de boas-vindas com dicas para o cuidador</li>
-        <li>Ficha de acompanhamento para anotar o dia a dia</li>
-        <li>Gabarito com todas as respostas</li>
+    <span class="kicker">oferta especial</span>
+    <h2>Leve tudo hoje por um <em>preço de cafezinho</em></h2>
+    <p class="sub">Pagamento único. Sem mensalidade. Seu para sempre.</p>
+    <div class="oferta">
+      <span class="topo">🌸 KIT COMPLETO + 2 BÔNUS</span>
+      <img src="img/oferta.webp" alt="Kit Mente Ativa e os dois bônus" width="1000" height="760" loading="lazy">
+      <ul class="itens">
+        <li><span>Kit Mente Ativa · 63 páginas, 24 jogos</span><em>R$ 47,00</em></li>
+        <li><span>Bônus 1 · Caderno Extra de Passatempos</span><em>R$ 27,00</em></li>
+        <li><span>Bônus 2 · Colorir para Relaxar</span><em>R$ 19,00</em></li>
+        <li class="total"><span>Valor total</span><em>R$ 93,00</em></li>
       </ul>
-      <p class="seguro">🔒 Compra segura · PDF enviado por e-mail</p>
+      <div class="preco-de">Hoje, tudo isso por apenas</div>
+      <div class="preco"><small>R$</small>19,90</div>
+      <div class="preco-obs">pagamento único · acesso imediato no e-mail</div>
+      <a class="btn" href="#" data-checkout>Quero o Mente Ativa agora<small>+ 2 bônus de presente</small></a>
+      <div class="seguranca"><span>💳 Pix ou cartão</span><span>🔒 Compra 100% segura</span><span>🛡️ Garantia de 7 dias</span></div>
     </div>
-    <div class="garantia">
-      <span class="emoji">🛡️</span>
-      <div><b>Garantia de 7 dias</b><p>Se o kit não for o que você esperava, peça o reembolso em até 7 dias e devolvemos 100% do valor. Sem perguntas.</p></div>
+  </div>
+</section>
+
+<section class="floral-lavanda">
+  <div class="wrap estreito">
+    <div class="garantia aparecer">
+      <svg width="170" height="170" viewBox="0 0 170 170" aria-hidden="true">
+        <g transform="translate(85 85)">
+          <circle r="80" fill="#A84B60"/>
+          <circle r="70" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="4 4"/>
+          <text y="-14" text-anchor="middle" fill="#fff" font-family="Inter" font-weight="900" font-size="54">7</text>
+          <text y="12" text-anchor="middle" fill="#fff" font-family="Inter" font-weight="800" font-size="17" letter-spacing="2">DIAS DE</text>
+          <text y="34" text-anchor="middle" fill="#fff" font-family="Inter" font-weight="800" font-size="17" letter-spacing="2">GARANTIA</text>
+        </g>
+      </svg>
+      <div>
+        <h3>Risco zero para você</h3>
+        <p>Você tem <b>7 dias de garantia incondicional</b>. Se por qualquer motivo achar que o Mente Ativa não é para você,
+        é só pedir o reembolso dentro desse prazo e devolvemos 100% do valor. Sem perguntas e sem burocracia.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <section>
-  <div class="wrap">
+  <div class="wrap estreito">
+    <span class="kicker">ficou alguma dúvida?</span>
     <h2>Perguntas frequentes</h2>
+    
     <div class="faq">
-      <details><summary>Vou receber algo pelo correio?</summary><p>Não. O kit é um arquivo PDF digital. Você recebe o link por e-mail e imprime em casa ou numa papelaria.</p></details>
-      <details><summary>Que papel devo usar?</summary><p>Funciona em papel A4 comum, mas recomendamos papel 180g ou mais, ou colar as folhas em cartolina. Plastificar ou passar plástico adesivo faz as cartas durarem muito mais.</p></details>
-      <details><summary>Posso imprimir mais de uma vez?</summary><p>Sim! Imprima quantas vezes quiser para uso pessoal e familiar.</p></details>
-      <details><summary>Serve para idosos com demência ou Alzheimer?</summary><p>Muitos jogos têm versões mais fáceis e podem ser usados em diferentes fases. Cada jogo traz sugestões para adaptar o nível. O kit é um material de lazer e estímulo e não substitui o acompanhamento de profissionais de saúde — converse com a equipe que acompanha a pessoa sobre as atividades mais indicadas.</p></details>
-      <details><summary>Preciso de impressora colorida?</summary><p>É o ideal, porque as cores ajudam a reconhecer as figuras. Mas o kit também funciona em preto e branco.</p></details>
-      <details><summary>Posso usar numa casa de repouso ou com meus clientes?</summary><p>Sim, você pode imprimir e usar nas suas atividades. Só não é permitido revender ou distribuir o arquivo.</p></details>
+      <details><summary>Vou receber algo pelo correio?</summary><p>Não. O Mente Ativa é um material digital em PDF. Você recebe o acesso por e-mail logo após a confirmação do pagamento e imprime em casa ou numa papelaria.</p></details>
+      <details><summary>Como recebo os bônus?</summary><p>Os dois bônus chegam junto com o kit, no mesmo e-mail de acesso. Não é preciso fazer mais nada.</p></details>
+      <details><summary>Posso imprimir mais de uma vez?</summary><p>Sim! Imprima quantas vezes quiser para uso pessoal e familiar. Acabou o sudoku? Imprima de novo.</p></details>
+      <details><summary>Que papel devo usar?</summary><p>As folhas de atividades funcionam em papel A4 comum. Para peças, cartas e tabuleiros, recomendamos papel mais grosso (180 g ou mais) ou colar a folha em papel-cartão antes de recortar.</p></details>
+      <details><summary>Preciso de impressora colorida?</summary><p>É o ideal, porque as cores deixam tudo mais bonito e fácil de reconhecer. Mas o material também funciona em preto e branco.</p></details>
+      <details><summary>Serve para quem tem Alzheimer ou demência?</summary><p>Muitos jogos têm versões mais fáceis e podem ser adaptados. O Mente Ativa é um material de lazer e estímulo e não substitui o acompanhamento de profissionais de saúde. Converse com a equipe que acompanha a pessoa sobre as atividades mais indicadas.</p></details>
+      <details><summary>Posso usar em casa de repouso ou com meus pacientes?</summary><p>Sim, você pode imprimir e usar nas suas atividades. Só não é permitido revender ou distribuir os arquivos.</p></details>
+      <details><summary>E se eu não gostar?</summary><p>Você tem 7 dias de garantia. Se não ficar satisfeito, devolvemos 100% do valor pago.</p></details>
     </div>
   </div>
 </section>
 
-<section class="final">
+<section class="final floral">
   <div class="wrap">
-    <h2>O melhor presente é o seu tempo</h2>
-    <p>Com o Mente Ativa, esse tempo vira risada, lembrança e conversa.</p>
-    <a class="btn" href="#oferta">Quero meu kit agora</a>
+    <span class="kicker">o melhor presente é o seu tempo</span>
+    <h2>Jogar junto também é <em>cuidar</em></h2>
+    <p>Com o Mente Ativa, esse tempo vira risada, lembrança e conversa. Comece hoje mesmo.</p>
+    <a class="btn" href="#oferta">Quero o Mente Ativa<small>por apenas R$ 19,90</small></a>
+    <div class="seguranca"><span>⚡ Acesso imediato</span><span>🎁 + 2 bônus</span><span>🛡️ Garantia de 7 dias</span></div>
   </div>
 </section>
 
 <footer>
-  Mente Ativa · Kit de Jogos Recortáveis para Idosos<br>
-  Material de lazer e estímulo. Não substitui acompanhamento médico ou terapêutico.
+  <b>Mente Ativa</b>
+  Coleção de Jogos e Desafios para Imprimir<br>
+  Material digital de lazer e estímulo. Não substitui avaliação ou acompanhamento de profissionais de saúde.<br>
+  Este site não é afiliado ao Facebook, Instagram ou Google.<br>
+  © <span id="ano"></span> Mente Ativa · Todos os direitos reservados
 </footer>
 
-<div class="barra"><a class="btn" href="#oferta">Quero o kit por R$ 19,90</a></div>
+<div class="barra" id="barra">
+  <div class="p">Kit + 2 bônus<b>R$ 19,90</b></div>
+  <a class="btn" href="#oferta">Quero o meu</a>
+</div>
+
+<script>
+  // Link de pagamento (Hotmart, Kiwify, Eduzz...). Troque aqui e todos os botões de compra passam a usá-lo.
+  const LINK_CHECKOUT = '';
+
+  document.querySelectorAll('[data-checkout]').forEach((a) => { a.href = LINK_CHECKOUT || '#oferta'; });
+  document.getElementById('ano').textContent = new Date().getFullYear();
+
+  // Galeria com zoom
+  const zoom = document.getElementById('zoom');
+  document.querySelectorAll('#galeria button').forEach((b) => b.addEventListener('click', () => {
+    const img = b.querySelector('img');
+    zoom.querySelector('img').src = img.src;
+    zoom.querySelector('img').alt = img.alt;
+    zoom.showModal();
+  }));
+  zoom.addEventListener('click', () => zoom.close());
+
+  // Barra fixa aparece depois do topo da página
+  const barra = document.getElementById('barra');
+  const oferta = document.getElementById('oferta');
+  const atualizar = () => {
+    const r = oferta.getBoundingClientRect();
+    const naOferta = r.top < innerHeight && r.bottom > 0;
+    barra.classList.toggle('ativa', scrollY > 600 && !naOferta);
+  };
+  addEventListener('scroll', atualizar, { passive: true });
+
+  // Entrada suave dos blocos ao rolar
+  const io = 'IntersectionObserver' in window ? new IntersectionObserver((es) => es.forEach((e) => {
+    if (e.isIntersecting) { e.target.classList.add('visivel'); io.unobserve(e.target); }
+  }), { threshold: 0.12 }) : null;
+  document.querySelectorAll('.aparecer').forEach((el) => (io ? io.observe(el) : el.classList.add('visivel')));
+</script>
 </body>
 </html>
