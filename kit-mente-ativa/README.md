@@ -81,3 +81,14 @@ Edite `src/conteudo.mjs` para trocar figuras ou textos. O build recria o PDF em 
 - **Upsell:** Livro de Memórias da Família (preenchido a partir das Cartas de Conversa)
 
 > Material de lazer e estímulo. Não fazer promessas de prevenção ou tratamento de doenças nos anúncios.
+
+## Anúncio UGC (vídeo vertical)
+
+`anuncio/ugc/anuncio-ugc-mente-ativa.mp4`: 29 s, 1080×1920, 30 fps, narração feminina, legendas palavra a palavra e trilha leve.
+
+- `anuncio/ugc/falas.json`: texto da narração (uma fala por cena; mude aqui e gere de novo).
+- `anuncio/ugc/narracao.py`: voz feminina pt-BR offline (Kokoro, `pf_dora`).
+- `anuncio/ugc/musica.py`: trilha estilo ukulele sintetizada.
+- `anuncio/ugc/video.mjs`: monta as cenas, captura os quadros e mixa o áudio.
+
+Gerar: `node anuncio/ugc/video.mjs` (prévia de um quadro por cena: `--previa`, salva em `anuncio/ugc/build/`).

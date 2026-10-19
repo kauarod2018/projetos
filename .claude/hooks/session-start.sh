@@ -25,6 +25,14 @@ if ! command -v edge-tts >/dev/null 2>&1; then
   pip install --quiet edge-tts || echo "aviso: não foi possível instalar o edge-tts" >&2
 fi
 
+# Kokoro (voz feminina pt-BR "pf_dora", usada na narração do anúncio UGC); modelo baixado do GitHub releases.
+KOKORO_DIR=/opt/kokoro
+python3 -c "import kokoro_onnx, soundfile" 2>/dev/null || pip install --quiet kokoro-onnx soundfile
+mkdir -p "$KOKORO_DIR"
+for arq in kokoro-v1.0.onnx voices-v1.0.bin; do
+  [ -f "$KOKORO_DIR/$arq" ] || curl -fsSL -o "$KOKORO_DIR/$arq" "https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/$arq"
+done
+
 # Dependências npm do kit (Playwright usa o Chromium já instalado no ambiente).
 cd "$CLAUDE_PROJECT_DIR/kit-mente-ativa"
 npm install --no-audit --no-fund
