@@ -92,3 +92,15 @@ Edite `src/conteudo.mjs` para trocar figuras ou textos. O build recria o PDF em 
 - `anuncio/ugc/video.mjs`: monta as cenas, captura os quadros e mixa o áudio.
 
 Gerar: `node anuncio/ugc/video.mjs` (prévia de um quadro por cena: `--previa`, salva em `anuncio/ugc/build/`).
+
+## Comercial (vídeo vertical)
+
+`anuncio/comercial/`: comercial de cerca de 30 s com narração feminina. A estrutura:
+
+- **Abertura:** o casal de idosos jogando à direita e o produto com os bônus à esquerda.
+- **Meio:** as páginas por dentro e um "como funciona" em 3 passos.
+- **Fechamento:** a mesma composição da abertura, com o preço e a chamada.
+
+A cena do casal entra por `anuncio/comercial/midia/casal.mp4` (ou `.jpg`); `midia/LEIA-ME.md` traz o prompt para gerar a cena.
+
+Gerar: `node anuncio/comercial/video.mjs`, ou com `--previa` para ver um quadro por cena.
