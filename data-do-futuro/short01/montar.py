@@ -8,17 +8,17 @@ os.makedirs('tmp', exist_ok=True)
 
 # Segmentos: (palavra que abre o trecho, selo do topo, clipes)
 SEG = [
-    ('Coisas', 'ATÉ 2045', ['hook1', 'hook2']),
-    ('Em 2026', '2026 – Chance alta', ['rob1', 'rob2']),
-    ('Em 2028', '2028 – Chance alta', ['voa1', 'voa2']),
-    ('No', '2028 – Chance média', ['vac1', 'vac2']),
-    ('Em 2030', '2030 – Chance média', ['bat1', 'bat2']),
-    ('Em 2032', '2032 – Chance média', ['ocu1', 'ocu2']),
-    ('Em 2033', '2033 – Chance média', ['car1', 'car2']),
-    ('Em 2035', '2035 – Chance média', ['tax1', 'tax2']),
-    ('Em 2040', '2040 – Chance baixa', ['chi1', 'chi2']),
-    ('E', '2045 – Chance baixa', ['fus1', 'fus2']),
-    ('Qual', 'COMENTA O ANO!', ['cta1', 'hook1']),
+    ('Coisas', 'ATÉ 2045', []),
+    ('Em 2028', '2028 – Chance alta', []),
+    ('Em 2030', '2030 – Chance média', []),
+    ('Em 2032', '2032 – Chance média', []),
+    ('Em 2035', '2035 – Chance média', []),
+    ('Em 2038', '2038 – Chance baixa', []),
+    ('Em 2040', '2040 – Chance baixa', []),
+    ('No', '2040 – Chance baixa', []),
+    ('Em 2042', '2042 – Chance baixa', []),
+    ('E', '2045 – Chance baixa', []),
+    ('Qual', 'COMENTA O ANO!', []),
 ]
 
 words = json.load(open(VOZ + '.json'))
@@ -38,19 +38,19 @@ bounds = [s[1] for s in starts] + [total]
 
 # 1) Planos: um corte para cada assunto citado na fala (palavra-âncora -> vídeo)
 SHOTS = [
-    ('Coisas', 'hook1'), ('criadas', 'cta1'),
-    ('Em 2026', 'rob1'), ('arrumam', 'rob2'), ('dobram', 'roupa'), ('20 mil', 'dolar'),
-    ('Em 2028', 'voa2'), ('levando', 'aero'), ('Brasil', 'brasil'), ('fugindo', 'transito'),
-    ('No', 'lab'), ('vacina', 'vac1'), ('câncer', 'medico'), ('sob', 'vac2'), ('tumor', 'car2'),
-    ('Em 2030', 'bateria'), ('carregam', 'bat1'), ('elétrico', 'bat2'), ('10 minutos', 'relogio'),
-    ('Em 2032', 'ocu1'), ('tela', 'ocu2'), ('substituir', 'celular'),
-    ('Em 2033', 'car2'), ('laboratório', 'lab'), ('preço', 'car1'),
-    ('Em 2035', 'tax1'), ('Brasil', 'sp'), ('Estados', 'eua'), ('500 mil', 'corridas'), ('semana', 'tax2'),
-    ('Em 2040', 'chi1'), ('cérebro', 'chi2'), ('mandar', 'mensagem'), ('pensamento', 'pensar'),
-    ('E', 'energia'), ('estrela', 'fus1'), ('fusão', 'fus2'),
+    ('Coisas', 'hook1'), ('mas', 'quant'), ('criadas', 'cta1'),
+    ('Em 2028', 'heli'), ('levando', 'voa2'), ('trânsito', 'transito'), ('São', 'sp'),
+    ('Em 2030', 'olho'), ('implante', 'chi1'), ('visão', 'olho3d'), ('pessoas', 'escuro'),
+    ('Em 2032', 'lua'), ('casas', 'lua2'), ('astronautas', 'astro'),
+    ('Em 2035', 'quant2'), ('descobrindo', 'lab'), ('remédios', 'remedio'), ('horas', 'quant'),
+    ('Em 2038', 'coracao'), ('impresso', 'imp3d'), ('células', 'car2'),
+    ('Em 2040', 'foguete'), ('humanos', 'astro'), ('Marte', 'marte'),
+    ('No', 'chi2'), ('chip', 'chi1'), ('mandar', 'mensagem'), ('pensamento', 'pensar'),
+    ('Em 2042', 'satelite'), ('solares', 'solar'), ('energia', 'energia'), ('Terra', 'lua'),
+    ('E', 'fus2'), ('estrela', 'fus1'), ('fusão', 'fus2'),
     ('Qual', 'MONTAGEM'), ('Comenta', 'hook1'),
 ]
-MONTAGEM = ['rob1', 'voa2', 'vac1', 'bat1', 'ocu1', 'car1', 'tax1', 'chi1', 'fus1']
+MONTAGEM = ['heli', 'olho', 'lua', 'quant2', 'coracao', 'marte', 'chi1', 'solar', 'fus1']
 cuts, i = [], 0
 for key, clip in SHOTS:
     while i < len(words) and words[i]['w'] != key:
@@ -100,10 +100,10 @@ WrapStyle: 0
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Selo,Anton,104,&H0015CCFA,&H00FFFFFF,&H00000000,&H00000000,0,-1,0,0,100,100,1,0,1,7,3,8,40,40,170,1
-Style: Credito,Anton,34,&H0015CCFA,&H00FFFFFF,&H00000000,&H00000000,0,-1,0,0,100,100,1,0,1,3,0,8,40,40,95,1
-Style: Leg,Anton,112,&H0015CCFA,&H00FFFFFF,&H00000000,&HE6000000,0,0,0,0,100,100,1,0,3,14,0,5,80,80,0,1
-Style: LegB,Anton,112,&H00FFFFFF,&H00FFFFFF,&H00000000,&HE6000000,0,0,0,0,100,100,1,0,3,14,0,5,80,80,0,1
+Style: Selo,Anton,104,&H0015CCFA,&H00FFFFFF,&H00000000,&H00000000,0,-1,0,0,100,100,1,0,1,7,3,8,60,170,250,1
+Style: Credito,Anton,34,&H0015CCFA,&H00FFFFFF,&H00000000,&H00000000,0,-1,0,0,100,100,1,0,1,3,0,8,60,170,380,1
+Style: Leg,Anton,112,&H0015CCFA,&H00FFFFFF,&H00000000,&HE6000000,0,0,0,0,100,100,1,0,3,14,0,5,60,170,0,1
+Style: LegB,Anton,112,&H00FFFFFF,&H00FFFFFF,&H00000000,&HE6000000,0,0,0,0,100,100,1,0,3,14,0,5,60,170,0,1
 
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
@@ -137,7 +137,7 @@ for n, b in enumerate(blocks):
 open('tmp/legendas.ass', 'w').write(ass)
 
 # 3) Junta vídeo + legendas + voz
-saida = f'coisas_criadas_ate_2045_{VOZ.split("_")[-1]}.mp4'
+saida = f'coisas_que_ainda_nao_existem_2045_{VOZ.split("_")[-1]}.mp4'
 subprocess.run(['ffmpeg', '-y', '-v', 'error', '-i', 'tmp/base.mp4', '-i', VOZ + '.mp3',
                 '-vf', "ass=tmp/legendas.ass:fontsdir=.",
                 '-map', '0:v', '-map', '1:a', '-c:v', 'libx264', '-preset', 'medium', '-crf', '20',
