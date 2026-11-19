@@ -1,0 +1,459 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+html,body{margin:0;padding:0;background:#000;overflow:hidden}
+svg{display:block}
+text{font-family:'Inter','DejaVu Sans',sans-serif}
+</style></head>
+<body><div id="root"></div>
+<script>
+const W=1920,H=1080,FPS=30;
+const OL='#141428';           // contorno
+const clamp=(x,a=0,b=1)=>Math.max(a,Math.min(b,x));
+const lerp=(a,b,t)=>a+(b-a)*t;
+const seg=(t,a,b)=>clamp((t-a)/(b-a));
+const eOut=t=>1-Math.pow(1-t,3);
+const eIn=t=>t*t*t;
+const eInOut=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+const eExpo=t=>t>=1?1:1-Math.pow(2,-10*t);
+const eBack=t=>{const c1=1.70158,c3=c1+1;return 1+c3*Math.pow(t-1,3)+c1*Math.pow(t-1,2)};
+const eElastic=t=>t<=0?0:t>=1?1:Math.pow(2,-10*t)*Math.sin((t*10-.75)*(2*Math.PI)/3)+1;
+function rng(seed){return function(){seed|=0;seed=seed+0x6D2B79F5|0;let t=Math.imul(seed^seed>>>15,1|seed);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+function hex2rgb(h){h=h.replace('#','');return[parseInt(h.substr(0,2),16),parseInt(h.substr(2,2),16),parseInt(h.substr(4,2),16)]}
+function mix(a,b,t){const A=hex2rgb(a),B=hex2rgb(b);return'rgb('+A.map((v,i)=>Math.round(lerp(v,B[i],t))).join(',')+')'}
+function keyColor(stops,p){ // stops: [[p,color]...]
+  for(let i=0;i<stops.length-1;i++){const[a,ca]=stops[i],[b,cb]=stops[i+1];if(p<=b)return mix(ca,cb,clamp((p-a)/(b-a)))}
+  return stops[stops.length-1][1]}
+function shake(t,amt,seed=1){return[Math.sin(t*91+seed)*amt+Math.sin(t*57+seed*3)*amt*.6,Math.cos(t*83+seed)*amt+Math.sin(t*41)*amt*.5]}
+const fmtR=v=>'R$ '+v.toFixed(2).replace('.',',').replace(/\B(?=(\d{3})+(?!\d))/g,'.');
+const fmtInt=v=>'R$ '+Math.round(v).toString().replace(/\B(?=(\d{3})+(?!\d))/g,'.');
+
+/* ---------- elementos reutilizáveis ---------- */
+function wheel(cx,cy,r,ang){
+  let s=`<g transform="translate(${cx} ${cy})"><circle r="${r}" fill="#22222e" stroke="${OL}" stroke-width="6"/>`+
+  `<circle r="${r*.58}" fill="#9aa3b5" stroke="${OL}" stroke-width="5"/><g transform="rotate(${ang})">`;
+  for(let i=0;i<5;i++)s+=`<line x1="0" y1="0" x2="0" y2="${-r*.55}" stroke="${OL}" stroke-width="5" transform="rotate(${i*72})"/>`;
+  return s+`</g><circle r="${r*.16}" fill="${OL}"/></g>`}
+
+function motoBody(wa){ // moto de trabalho, vista lateral, virada para a direita; chão em y=0
+  return `
+  <rect x="-215" y="-205" width="92" height="74" rx="12" fill="#2a2a38" stroke="${OL}" stroke-width="6"/>
+  <rect x="-205" y="-196" width="72" height="12" rx="5" fill="#3d3d50"/>
+  <rect x="-150" y="-84" width="96" height="16" rx="8" fill="#b9c0cc" stroke="${OL}" stroke-width="5"/>
+  ${wheel(-120,-55,55,wa)}${wheel(132,-55,55,wa)}
+  <path d="M60 -110 Q132 -150 190 -100" fill="none" stroke="${OL}" stroke-width="16" stroke-linecap="round"/>
+  <path d="M60 -110 Q132 -150 190 -100" fill="none" stroke="#e63946" stroke-width="8" stroke-linecap="round"/>
+  <rect x="-52" y="-98" width="84" height="48" rx="9" fill="#5b6070" stroke="${OL}" stroke-width="5"/>
+  <line x1="-40" y1="-84" x2="20" y2="-84" stroke="#3b3f4c" stroke-width="5"/><line x1="-40" y1="-70" x2="20" y2="-70" stroke="#3b3f4c" stroke-width="5"/>
+  <path d="M-175 -112 L-45 -122 L35 -156 L96 -158 L122 -118 L62 -100 L-62 -94 Z" fill="#e63946" stroke="${OL}" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M10 -150 L80 -152 L92 -134 L30 -128 Z" fill="#ff6b74" opacity=".8"/>
+  <path d="M-150 -126 Q-70 -150 18 -140 L20 -124 L-150 -114 Z" fill="#23232d" stroke="${OL}" stroke-width="5" stroke-linejoin="round"/>
+  <line x1="98" y1="-152" x2="132" y2="-55" stroke="${OL}" stroke-width="16" stroke-linecap="round"/>
+  <line x1="98" y1="-152" x2="132" y2="-55" stroke="#aab2c0" stroke-width="8" stroke-linecap="round"/>
+  <line x1="96" y1="-156" x2="84" y2="-196" stroke="${OL}" stroke-width="10" stroke-linecap="round"/>
+  <line x1="70" y1="-198" x2="104" y2="-192" stroke="${OL}" stroke-width="12" stroke-linecap="round"/>
+  <rect x="96" y="-214" width="22" height="34" rx="5" fill="#1d1d26" stroke="${OL}" stroke-width="4"/>
+  <circle cx="128" cy="-142" r="20" fill="#ffe066" stroke="${OL}" stroke-width="6"/>
+  <circle cx="132" cy="-146" r="7" fill="#fff8c7"/>`}
+
+function rider(lean=0,headBob=0){ // piloto sentado, capacete fechado
+  return `<g transform="rotate(${lean} -40 -140)">
+  <path d="M-55 -138 L28 -128 L18 -66" fill="none" stroke="${OL}" stroke-width="46" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M-55 -138 L28 -128 L18 -66" fill="none" stroke="#3a6ea5" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M2 -70 L44 -70 Q50 -56 40 -52 L0 -52 Z" fill="#1b1b22" stroke="${OL}" stroke-width="5"/>
+  <rect x="-140" y="-292" width="92" height="104" rx="14" fill="#ffc93c" stroke="${OL}" stroke-width="6"/>
+  <rect x="-140" y="-262" width="92" height="14" fill="#f2a900"/>
+  <path d="M-72 -138 Q-80 -210 -40 -262 L4 -262 Q24 -200 -8 -134 Z" fill="#262635" stroke="${OL}" stroke-width="6" stroke-linejoin="round"/>
+  <path d="M-58 -150 Q-62 -205 -32 -248" fill="none" stroke="#c8ccd6" stroke-width="7"/>
+  <path d="M-14 -246 L44 -204 L86 -196" fill="none" stroke="${OL}" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M-14 -246 L44 -204 L86 -196" fill="none" stroke="#262635" stroke-width="25" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M10 -228 L44 -204" stroke="#c8ccd6" stroke-width="5"/>
+  <circle cx="88" cy="-196" r="14" fill="#1b1b22" stroke="${OL}" stroke-width="4"/>
+  <g transform="translate(0 ${headBob})">
+   <circle cx="-8" cy="-305" r="47" fill="#1f1f2b" stroke="${OL}" stroke-width="6"/>
+   <path d="M4 -330 Q44 -322 40 -290 L6 -286 Q-2 -312 4 -330 Z" fill="#56688f" stroke="${OL}" stroke-width="5"/>
+   <path d="M12 -322 Q30 -318 32 -306" fill="none" stroke="#a9c1ff" stroke-width="5" stroke-linecap="round"/>
+   <polygon points="-40,-318 -36,-308 -26,-308 -34,-301 -31,-291 -40,-297 -49,-291 -46,-301 -54,-308 -44,-308" fill="#fff"/>
+  </g></g>`}
+
+function motoRider(x,y,s,rot,wa,lean,bob){
+  return `<g transform="translate(${x} ${y}) rotate(${rot}) scale(${s})">${motoBody(wa)}${rider(lean,bob)}</g>`}
+
+function face(expr,blink=0,mouthOpen=0){ // cabeça centrada em 0,0 raio ~70
+  const eyeH=Math.max(2,26*(1-blink));
+  let mouth='';
+  if(expr==='yawn')mouth=`<ellipse cx="8" cy="40" rx="${12+mouthOpen*8}" ry="${6+mouthOpen*22}" fill="#5a1f1f" stroke="${OL}" stroke-width="5"/>`;
+  else if(expr==='sad')mouth=`<path d="M-12 46 Q8 32 28 46" fill="none" stroke="${OL}" stroke-width="6" stroke-linecap="round"/>`;
+  else mouth=`<path d="M-8 42 L24 42" stroke="${OL}" stroke-width="6" stroke-linecap="round"/>`;
+  const brow=expr==='sad'?[`M-44 -32 L-10 -24`,`M14 -24 L46 -34`]:[`M-44 -28 L-10 -30`,`M14 -30 L46 -28`];
+  return `
+  <ellipse cx="-66" cy="6" rx="14" ry="20" fill="#9c6a45" stroke="${OL}" stroke-width="5"/>
+  <circle r="70" fill="#b07a52" stroke="${OL}" stroke-width="6"/>
+  <path d="M-72 -6 Q-78 -78 0 -84 Q70 -84 72 -18 Q60 -54 26 -58 Q-30 -62 -50 -30 Q-58 -14 -72 -6 Z" fill="#17171f" stroke="${OL}" stroke-width="5"/>
+  <path d="M-46 28 Q-40 66 8 70 Q54 66 60 28" fill="none" stroke="#7d5235" stroke-width="10" stroke-dasharray="2 9" stroke-linecap="round"/>
+  <ellipse cx="-26" cy="0" rx="17" ry="${eyeH/2+4}" fill="#fff" stroke="${OL}" stroke-width="4"/>
+  <ellipse cx="30" cy="0" rx="17" ry="${eyeH/2+4}" fill="#fff" stroke="${OL}" stroke-width="4"/>
+  ${blink<.7?`<circle cx="-22" cy="${expr==='sad'?4:2}" r="8" fill="#3b2314"/><circle cx="34" cy="${expr==='sad'?4:2}" r="8" fill="#3b2314"/>
+  <circle cx="-19" cy="-1" r="3" fill="#fff"/><circle cx="37" cy="-1" r="3" fill="#fff"/>`:''}
+  <path d="M-40 18 Q-26 26 -12 18 M16 18 Q30 26 44 18" fill="none" stroke="#6e4428" stroke-width="4" stroke-linecap="round"/>
+  <path d="${brow[0]}" stroke="${OL}" stroke-width="11" stroke-linecap="round"/>
+  <path d="${brow[1]}" stroke="${OL}" stroke-width="11" stroke-linecap="round"/>
+  <path d="M4 10 Q14 26 2 28" fill="none" stroke="#7d5235" stroke-width="5" stroke-linecap="round"/>
+  ${mouth}`}
+
+function rain(t,dens,seed,col='#9fb4ff',op=.55,speed=2600,len=46){
+  const r=rng(seed);let s=`<g stroke="${col}" stroke-width="3" opacity="${op}" stroke-linecap="round">`;
+  for(let i=0;i<dens;i++){const x0=r()*(W+400)-200,y0=r()*H,sp=speed*(.7+r()*.6);
+    const y=((y0+t*sp)%(H+100))-50,x=x0-(y*0.18);
+    s+=`<line x1="${x}" y1="${y}" x2="${x-len*.18}" y2="${y+len}"/>`}
+  return s+'</g>'}
+
+function speedLines(t,col='#ffffff',op=.35,seed=7,n=14){
+  const r=rng(seed);let s=`<g stroke="${col}" opacity="${op}" stroke-linecap="round">`;
+  for(let i=0;i<n;i++){const y=r()*H*.85+40,l=200+r()*400,sp=2200+r()*1800;const x=W-((r()*W*2+t*sp)%(W+l*2));
+    s+=`<line x1="${x}" y1="${y}" x2="${x+l}" y2="${y}" stroke-width="${2+r()*4}"/>`}
+  return s+'</g>'}
+
+function skyline(t,speed,seed,col,baseY,hMin,hMax,winCol,winOp){
+  const r=rng(seed);const blds=[];let x=0;
+  while(x<2600){const w=90+r()*140,h=hMin+r()*(hMax-hMin);blds.push([x,w,h]);x+=w+r()*14}
+  const off=(t*speed)%2600;let s='';
+  for(const[bx,w,h]of blds){for(const k of[0,2600]){const X=bx-off+k;if(X>W||X+w<0)continue;
+    s+=`<rect x="${X}" y="${baseY-h}" width="${w}" height="${h+4}" fill="${col}" stroke="${OL}" stroke-width="4"/>`;
+    if(winOp>0){const rr=rng(Math.floor(bx));for(let wy=baseY-h+22;wy<baseY-30;wy+=38)for(let wx=X+16;wx<X+w-26;wx+=34)
+      if(rr()<.55)s+=`<rect x="${wx}" y="${wy}" width="16" height="20" fill="${winCol}" opacity="${winOp}"/>`}}}
+  return s}
+
+function poles(t,speed,baseY,col='#2b2b3a'){
+  let s='';const sp=520,off=(t*speed)%sp;
+  for(let i=-1;i<6;i++){const x=i*sp-off;
+    s+=`<rect x="${x}" y="${baseY-520}" width="18" height="520" fill="${col}" stroke="${OL}" stroke-width="4"/>`+
+       `<rect x="${x-40}" y="${baseY-500}" width="98" height="12" fill="${col}" stroke="${OL}" stroke-width="3"/>`;
+    s+=`<path d="M${x+9} ${baseY-494} Q${x+sp/2+9} ${baseY-420} ${x+sp+9} ${baseY-494}" fill="none" stroke="${OL}" stroke-width="4"/>`+
+       `<path d="M${x+9} ${baseY-480} Q${x+sp/2+9} ${baseY-390} ${x+sp+9} ${baseY-480}" fill="none" stroke="${OL}" stroke-width="3"/>`}
+  return s}
+
+function road(t,speed,y,col='#3a3d4f',dash='#f4f1de'){
+  const off=(t*speed)%260;let s=`<rect x="0" y="${y}" width="${W}" height="${H-y}" fill="${col}"/>`+
+  `<rect x="0" y="${y}" width="${W}" height="14" fill="#8d90a3" stroke="${OL}" stroke-width="4"/>`;
+  for(let i=-1;i<10;i++)s+=`<rect x="${i*260-off}" y="${y+120}" width="140" height="16" rx="8" fill="${dash}" opacity=".85"/>`;
+  return s}
+
+function txt(x,y,str,size,col,opt={}){
+  const {w=900,anchor='middle',op=1,rot=0,sc=1,stroke=null,sw=0,ls=0}=opt;
+  return `<g transform="translate(${x} ${y}) rotate(${rot}) scale(${sc})" opacity="${op}"><text text-anchor="${anchor}" font-size="${size}" font-weight="${w}" fill="${col}" letter-spacing="${ls}" ${stroke?`stroke="${stroke}" stroke-width="${sw}" paint-order="stroke" stroke-linejoin="round"`:''}>${str}</text></g>`}
+
+const _cv=document.createElement('canvas').getContext('2d');
+function measure(w,size){_cv.font=`900 ${size}px Inter, DejaVu Sans, sans-serif`;return _cv.measureText(w).width}
+// texto que entra palavra por palavra
+function kinetic(t,t0,x,y,words,size,col,opt={}){
+  const gap=opt.gap||0.09;let s='';
+  const ws=words.map(w=>measure(w,size));const sp=size*.3;
+  const total=ws.reduce((a,b)=>a+b,0)+sp*(words.length-1);
+  let cx=x-total/2;const cw=sp;
+  words.forEach((wd,i)=>{const p=eBack(seg(t,t0+i*gap,t0+i*gap+.35));const ww=ws[i];
+    const c=Array.isArray(col)?col[i]:col;
+    s+=`<g opacity="${clamp(p*2)}" transform="translate(${cx+ww/2} ${y+(1-p)*60}) scale(${.6+.4*p})"><text text-anchor="middle" font-size="${size}" font-weight="900" fill="${c}" stroke="${OL}" stroke-width="${size*.14}" paint-order="stroke" stroke-linejoin="round">${wd}</text></g>`;
+    cx+=ww+cw});
+  return s}
+
+function pill(x,y,label,icon,col,bg,sc=1,op=1){
+  return `<g transform="translate(${x} ${y}) scale(${sc})" opacity="${op}">
+   <rect x="0" y="-42" width="${label.length*30+100}" height="84" rx="42" fill="${bg}" stroke="${OL}" stroke-width="6"/>
+   ${icon}
+   <text x="86" y="17" font-size="50" font-weight="900" fill="${col}" font-family="DejaVu Sans Mono, monospace">${label}</text></g>`}
+const clockIcon=`<circle cx="44" cy="0" r="24" fill="#fff" stroke="${OL}" stroke-width="5"/><path d="M44 -14 L44 0 L56 8" stroke="${OL}" stroke-width="5" fill="none" stroke-linecap="round"/>`;
+const coinIcon=`<circle cx="44" cy="0" r="25" fill="#ffd23f" stroke="${OL}" stroke-width="5"/><text x="44" y="12" text-anchor="middle" font-size="32" font-weight="900" fill="${OL}">$</text>`;
+
+function popup(t,t0,x,y,str,col){
+  const p=seg(t,t0,t0+1.3);if(p<=0||p>=1)return'';
+  const sc=eBack(seg(t,t0,t0+.25));const op=1-seg(t,t0+.9,t0+1.3);
+  return txt(x,y-eOut(p)*140,str,64,col,{sc,op,stroke:OL,sw:12})}
+
+/* ---------- CENA A: gancho (0 – 4.4) ---------- */
+function sceneA(t){
+  const crash=2.25;const sk=t>crash&&t<3.1?shake(t,22*(1-seg(t,crash,3.1))):[0,0];
+  const slow=t<crash?1:t<2.9?lerp(1,.15,seg(t,crash,2.9)):.15;
+  const tt=t<crash?t:crash+(t-crash)*.35;
+  let s=`<defs><linearGradient id="skyA" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d1030"/><stop offset="1" stop-color="#3b2a6b"/></linearGradient></defs>`+
+  `<g transform="translate(${sk[0]} ${sk[1]})"><rect width="${W}" height="${H}" fill="url(#skyA)"/>`;
+  s+=`<circle cx="1560" cy="190" r="70" fill="#fff4c4" opacity=".9"/><circle cx="1590" cy="175" r="62" fill="#1a1a45"/>`;
+  s+=skyline(tt,120,3,'#1c1f45',700,180,420,'#ffd36b',.5);
+  s+=skyline(tt,300,9,'#272a5a',760,120,300,'#ffe08a',.75);
+  s+=poles(tt,700,780,'#22223a');
+  s+=road(tt,1500,780,'#2b2d40','#d9d6c3');
+  // reflexos no asfalto
+  for(let i=0;i<8;i++){const x=(i*280-(tt*1500)%280);s+=`<rect x="${x}" y="830" width="22" height="200" fill="#ffd36b" opacity=".12"/>`}
+  // carro freando à frente
+  const carIn=eOut(seg(t,1.3,2.2));const carX=lerp(2200,1500,carIn);
+  const brake=t>2.0?1:0;
+  s+=`<g transform="translate(${carX} 930)">
+   <path d="M-260 0 L-250 -90 Q-180 -170 -40 -170 Q60 -170 120 -100 L240 -90 Q270 -60 260 0 Z" fill="#4b5a8a" stroke="${OL}" stroke-width="6"/>
+   <path d="M-200 -100 Q-150 -150 -60 -150 L-50 -100 Z M-30 -150 Q50 -150 90 -100 L-30 -100 Z" fill="#9ec9ff" stroke="${OL}" stroke-width="5"/>
+   ${wheel(-150,0,48,-tt*900)}${wheel(150,0,48,-tt*900)}
+   <rect x="-268" y="-80" width="26" height="34" rx="6" fill="${brake?'#ff2d2d':'#7a1c1c'}" stroke="${OL}" stroke-width="4"/>
+   ${brake?`<ellipse cx="-300" cy="-62" rx="90" ry="40" fill="#ff2d2d" opacity=".35"/>`:''}</g>`;
+  // moto
+  let rot=0,mx=lerp(-200,620,eOut(seg(t,0,1.4))),my=930,bob=Math.sin(t*30)*3;
+  if(t>crash){const p=seg(t,crash,2.85);rot=lerp(0,80,eIn(p));mx+=lerp(0,320,eOut(p));my+=lerp(0,-60,p)}
+  s+=motoRider(mx,my,1.15,rot,tt*1400,0,bob);
+  if(t>2.0&&t<2.9){ // faíscas
+    const r=rng(Math.floor(t*30));for(let i=0;i<14;i++){const a=r()*Math.PI-Math.PI,l=40+r()*90;s+=`<line x1="${mx+120}" y1="${my-10}" x2="${mx+120+Math.cos(a)*l}" y2="${my-10+Math.sin(a)*l}" stroke="#ffd23f" stroke-width="5" stroke-linecap="round"/>`}}
+  s+=rain(t,140,11,'#a9bcff',.5);
+  s+=speedLines(t*slow,'#c9d4ff',t<crash?.25:0);
+  s+=`</g>`;
+  // flash e congelamento
+  const fl=1-seg(t,2.85,3.15);if(t>2.85)s+=`<rect width="${W}" height="${H}" fill="#fff" opacity="${fl*.9}"/>`;
+  if(t>2.9){s+=`<rect width="${W}" height="${H}" fill="#000" opacity="${.35*seg(t,2.9,3.2)}"/>`;
+    const p=eElastic(seg(t,2.95,3.6));
+    s+=txt(W/2,470,'19:42',260,'#ff3b3b',{sc:p,stroke:OL,sw:30,rot:-4});
+    s+=kinetic(t,3.25,W/2,640,['Você','vai','estar','caído','aqui.'],78,'#ffffff');}
+  // rebobinar
+  if(t>3.95){const p=seg(t,3.95,4.4);for(let i=0;i<12;i++){const y=(i*97+t*2400)%H;s+=`<rect x="0" y="${y}" width="${W}" height="${6+i%3*6}" fill="#fff" opacity="${.25*p}"/>`}
+    s+=txt(W/2,860,'◀◀  CEDO DEMAIS',58,'#ffffff',{op:p,stroke:OL,sw:10,ls:6})}
+  return s}
+
+/* ---------- CENA B: despertar (4.4 – 9) ---------- */
+function sceneB(t){
+  const lt=t-4.4;const zoom=1+lt*.012;
+  let s=`<g transform="translate(${W/2} ${H/2}) scale(${zoom}) translate(${-W/2} ${-H/2})">`;
+  s+=`<rect width="${W}" height="${H}" fill="#26315f"/>`;
+  s+=`<rect x="0" y="760" width="${W}" height="320" fill="#1a2247"/>`;
+  // janela
+  s+=`<rect x="220" y="170" width="380" height="330" rx="10" fill="#0e1433" stroke="${OL}" stroke-width="8"/>
+   <circle cx="470" cy="270" r="48" fill="#fff4c4"/><circle cx="492" cy="258" r="44" fill="#0e1433"/>
+   ${[[290,240],[350,330],[540,420],[300,430],[420,200]].map(([x,y],i)=>`<circle cx="${x}" cy="${y}" r="${4+Math.sin(t*4+i)*2}" fill="#fff"/>`).join('')}
+   <line x1="410" y1="170" x2="410" y2="500" stroke="${OL}" stroke-width="8"/><line x1="220" y1="335" x2="600" y2="335" stroke="${OL}" stroke-width="8"/>`;
+  // porta com capacete
+  s+=`<rect x="1560" y="140" width="250" height="640" fill="#33407a" stroke="${OL}" stroke-width="8"/>
+   <circle cx="1600" cy="480" r="12" fill="#e9c46a" stroke="${OL}" stroke-width="4"/>
+   <g transform="translate(1600 ${540+Math.sin(t*2)*4})"><circle r="46" fill="#1f1f2b" stroke="${OL}" stroke-width="6"/><path d="M10 -26 Q46 -18 42 14 L10 18 Q2 -6 10 -26 Z" fill="#56688f" stroke="${OL}" stroke-width="5"/>
+   <polygon points="-24,-12 -20,-2 -10,-2 -18,5 -15,15 -24,9 -33,15 -30,5 -38,-2 -28,-2" fill="#fff"/></g>`;
+  // criado-mudo + celular
+  const buzz=lt<1.4?Math.sin(t*90)*7:0;
+  s+=`<rect x="120" y="640" width="230" height="200" rx="10" fill="#6b4f3a" stroke="${OL}" stroke-width="7"/><line x1="140" y1="720" x2="330" y2="720" stroke="${OL}" stroke-width="5"/>
+   <g transform="translate(${235+buzz} 615) rotate(${buzz})"><rect x="-55" y="-22" width="110" height="34" rx="8" fill="#15151c" stroke="${OL}" stroke-width="5"/><rect x="-46" y="-16" width="92" height="22" rx="4" fill="${lt<1.4?'#bfe3ff':'#2a3150'}"/></g>`;
+  if(lt<1.4){for(let i=0;i<3;i++){const o=(t*3+i/3)%1;s+=`<path d="M${300+o*40} ${585-o*20} q16 20 0 40" fill="none" stroke="#fff" stroke-width="5" opacity="${1-o}"/><path d="M${170-o*40} ${585-o*20} q-16 20 0 40" fill="none" stroke="#fff" stroke-width="5" opacity="${1-o}"/>`}}
+  // cama
+  s+=`<rect x="400" y="700" width="1100" height="150" rx="20" fill="#7a5a42" stroke="${OL}" stroke-width="8"/>
+   <rect x="400" y="560" width="60" height="290" rx="14" fill="#7a5a42" stroke="${OL}" stroke-width="8"/>
+   <rect x="480" y="600" width="230" height="90" rx="40" fill="#e8ecf5" stroke="${OL}" stroke-width="7"/>
+   <rect x="1170" y="600" width="230" height="90" rx="40" fill="#e8ecf5" stroke="${OL}" stroke-width="7"/>`;
+  // Tainá dormindo (direita)
+  s+=`<g transform="translate(1270 ${640+Math.sin(t*2.2)*3})">${[[-30,-10],[0,-30],[30,-12],[-10,10],[22,12],[-38,16]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="26" fill="#2a1a12" stroke="${OL}" stroke-width="5"/>`).join('')}
+   <circle cx="0" cy="-58" r="20" fill="#2a1a12" stroke="${OL}" stroke-width="5"/></g>`;
+  // personagem: deitado -> sentado
+  const up=eBack(seg(lt,1.4,2.0));const ang=lerp(-82,0,up);
+  s+=`<g transform="translate(820 700) rotate(${ang})">
+    <path d="M-70 0 Q-80 -150 -50 -200 L60 -200 Q86 -150 70 0 Z" fill="#f3f3f3" stroke="${OL}" stroke-width="7" stroke-linejoin="round"/>
+    <g transform="translate(6 -270)">${face(lt>1.9&&lt<3.2?'yawn':'tired',lt<1.4?1:(Math.abs(lt-3.6)<.08?1:0),Math.sin(clamp((lt-1.9)/1.3)*Math.PI))}</g></g>`;
+  // cobertor por cima
+  s+=`<path d="M560 700 Q900 650 1180 690 Q1400 690 1490 700 L1490 850 L560 850 Z" fill="#4a5fa8" stroke="${OL}" stroke-width="8" stroke-linejoin="round"/>
+   <path d="M620 760 Q900 730 1200 750" fill="none" stroke="#3a4c8c" stroke-width="8"/>`;
+  if(lt>1.9&&lt<3.2){const o=seg(lt,1.9,3.2);s+=txt(1010,330-o*60,'Z z z...',54,'#ffffff',{op:1-o,w:800})}
+  s+=`</g>`;
+  // título cinético
+  if(lt>2.0){
+    const p=eExpo(seg(lt,2.0,2.5));
+    s+=`<rect x="0" y="${H-380}" width="${W}" height="380" fill="url(#fadeB)"/>`;
+    s+=`<defs><linearGradient id="fadeB" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".75"/></linearGradient></defs>`;
+    s+=`<rect x="${W/2-560*p}" y="790" width="${1120*p}" height="10" fill="#ffc93c"/>`;
+    s+=kinetic(lt,2.1,W/2,760,['UM','DIA','NA','VIDA','DE','UM'],58,'#ffffff',{gap:.06});
+    s+=kinetic(lt,2.55,W/2,920,['MOTOBOY','DE','APP'],128,['#ffc93c','#ffffff','#ffc93c'],{gap:.12});
+    const p2=eBack(seg(lt,3.1,3.5));
+    s+=`<g transform="translate(${W/2} 1010) scale(${p2})"><rect x="-150" y="-36" width="300" height="56" rx="28" fill="#e63946" stroke="${OL}" stroke-width="5"/>
+      <text text-anchor="middle" y="6" font-size="34" font-weight="900" fill="#fff" letter-spacing="3">SÃO PAULO</text></g>`;}
+  return s}
+
+/* ---------- CENA C: o número (9 – 13.6) ---------- */
+function sceneC(t){
+  const lt=t-9;let s=`<rect width="${W}" height="${H}" fill="#ffc93c"/>`;
+  s+=`<g transform="translate(${W/2} ${H/2}) rotate(${lt*12})">`;
+  for(let i=0;i<18;i++)s+=`<path d="M0 0 L${Math.cos(i*Math.PI/9)*1600} ${Math.sin(i*Math.PI/9)*1600} L${Math.cos((i+.5)*Math.PI/9)*1600} ${Math.sin((i+.5)*Math.PI/9)*1600} Z" fill="#ffd866"/>`;
+  s+=`</g>`;
+  s+=kinetic(lt,.15,W/2,170,['No','mês','passado','o','app','mostrou:'],64,'#ffffff');
+  const pin=eBack(seg(lt,.1,.6));const tilt=lt>2.6?Math.sin((lt-2.6)*18)*4*(1-seg(lt,2.6,3.4)):0;
+  s+=`<g transform="translate(${W/2} ${600+(1-pin)*700}) rotate(${tilt-4})">
+   <rect x="-260" y="-330" width="520" height="660" rx="60" fill="#1b1b24" stroke="${OL}" stroke-width="10"/>
+   <rect x="-225" y="-290" width="450" height="580" rx="30" fill="#ffffff"/>
+   <rect x="-225" y="-290" width="450" height="110" rx="30" fill="#e63946"/><rect x="-225" y="-210" width="450" height="30" fill="#e63946"/>
+   <text y="-222" text-anchor="middle" font-size="40" font-weight="900" fill="#fff">Ganhos do mês</text>`;
+  const cnt=eOut(seg(lt,.6,2.4))*6200;
+  s+=`<text y="10" text-anchor="middle" font-size="96" font-weight="900" fill="#1d9e4b">${fmtInt(cnt)}</text>`;
+  // mini gráfico de barras
+  for(let i=0;i<7;i++){const h=40+((i*37)%90);const g=eOut(seg(lt,.8+i*.12,1.4+i*.12));
+    s+=`<rect x="${-180+i*55}" y="${230-h*g}" width="38" height="${h*g}" rx="6" fill="#1d9e4b" opacity=".75"/>`}
+  s+=`</g>`;
+  if(lt>2.5){const p=eElastic(seg(lt,2.5,3.2));s+=txt(1460,560,'?',420,'#e63946',{sc:p,stroke:OL,sw:30,rot:12})}
+  if(lt>2.7)s+=kinetic(lt,2.7,W/2,980,['Parece','muito...'],70,'#ffffff');
+  if(lt>3.4){const p=eBack(seg(lt,3.4,3.75));
+    s+=`<g transform="translate(${W/2} 560) rotate(-8) scale(${lerp(2.4,1,p)})" opacity="${clamp(p*1.5)}">
+      <rect x="-640" y="-90" width="1280" height="150" rx="14" fill="none" stroke="#e63946" stroke-width="14"/>
+      <text text-anchor="middle" y="28" font-size="92" font-weight="900" fill="#e63946" stroke="#fff" stroke-width="10" paint-order="stroke" letter-spacing="2">ATÉ VOCÊ FAZER A CONTA</text></g>`}
+  return s}
+
+/* ---------- CENA D: o dia passando (13.6 – 20) ---------- */
+function sceneD(t){
+  const lt=t-13.6;const p=seg(lt,0,6.3);
+  const top=keyColor([[0,'#ff8a5b'],[.3,'#4fb6ec'],[.62,'#4fb6ec'],[.82,'#5a3d86'],[1,'#141a3d']],p);
+  const bot=keyColor([[0,'#ffd29a'],[.3,'#bfeaff'],[.62,'#cdeffc'],[.82,'#e08a8f'],[1,'#2d3266']],p);
+  let s=`<defs><linearGradient id="skyD" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${top}"/><stop offset="1" stop-color="${bot}"/></linearGradient></defs>`;
+  s+=`<rect width="${W}" height="${H}" fill="url(#skyD)"/>`;
+  // sol em arco
+  const sa=Math.PI*(1-clamp(p/.85));const sx=W/2+Math.cos(sa)*820,sy=760-Math.sin(sa)*560;
+  s+=`<circle cx="${sx}" cy="${sy}" r="80" fill="#ffe066" stroke="${OL}" stroke-width="6" opacity="${1-seg(p,.8,.9)}"/>`;
+  // nuvens
+  for(let i=0;i<4;i++){const x=((i*620-lt*90)%(W+500)+W+500)%(W+500)-250,y=150+i%2*90;
+    s+=`<g transform="translate(${x} ${y})" opacity="${.9-seg(p,.8,1)*.6}"><ellipse rx="110" ry="40" fill="#fff" stroke="${OL}" stroke-width="5"/><ellipse cx="-50" cy="-24" rx="60" ry="40" fill="#fff"/><ellipse cx="40" cy="-30" rx="70" ry="46" fill="#fff"/></g>`}
+  const night=seg(p,.78,1);
+  s+=skyline(lt,140,21,mix('#8fa3c9','#23264f',night),720,200,430,'#ffe08a',night*.7);
+  s+=skyline(lt,340,27,mix('#c56b5a','#30335f',night),780,140,320,'#ffe08a',night*.9);
+  s+=poles(lt,800,800,mix('#4a4a5e','#22223a',night));
+  s+=road(lt,1700,800,mix('#4a4d60','#2b2d40',night),'#f4f1de');
+  s+=motoRider(760,950,1.2,0,lt*1500,-3,Math.sin(lt*26)*3);
+  s+=speedLines(lt,'#ffffff',.3);
+  if(p>.9)s+=rain(lt,90*seg(p,.9,1),31,'#a9bcff',.5);
+  // pinos de entrega surgindo
+  [[0.5,'+R$ 8,90'],[1.6,'+R$ 12,40'],[2.6,'+R$ 7,50'],[3.5,'+R$ 15,00'],[4.4,'+R$ 9,80']].forEach(([tt,v],i)=>{s+=popup(lt,tt,1250+(i%2)*260,560,v,'#3ddc84')});
+  s+=popup(lt,1.0,500,520,'−R$ 60 gasolina','#ff4d4d');
+  // legenda cinética
+  if(lt<2.3)s+=kinetic(lt,.2,W/2,180,['1','hora','até','a','Zona','Oeste.'],64,'#ffffff');
+  else if(lt<4.3)s+=kinetic(lt,2.4,W/2,180,['Coleta.','Entrega.','Coleta.','Entrega.'],64,'#ffffff',{gap:.18});
+  else s+=kinetic(lt,4.4,W/2,180,['Almoço','às','15h,','no','meio-fio.'],64,'#ffffff');
+  return s}
+
+/* ---------- CENA E: o momento ruim (20 – 24.6) ---------- */
+function sceneE(t){
+  const lt=t-20;const sk=lt<.6?shake(t,26*(1-lt/.6)):[0,0];
+  let s=`<g transform="translate(${sk[0]} ${sk[1]})"><rect width="${W}" height="${H}" fill="#121738"/>`;
+  s+=skyline(0,0,3,'#1c1f45',700,180,420,'#ffd36b',.35);
+  s+=road(0,0,780,'#25273a','#cfcbb8');
+  // poças
+  [[500,930,220],[1200,980,300],[1650,900,160]].forEach(([x,y,r],i)=>{s+=`<ellipse cx="${x}" cy="${y}" rx="${r}" ry="${r*.12}" fill="#3a4a8a" opacity=".6"/>`;
+    const o=(lt*1.5+i*.3)%1;s+=`<ellipse cx="${x}" cy="${y}" rx="${r*o}" ry="${r*.12*o}" fill="none" stroke="#a9bcff" stroke-width="3" opacity="${1-o}"/>`});
+  // moto caída
+  s+=`<g transform="translate(1340 940) rotate(-84) scale(1.05)">${motoBody(0)}</g>`;
+  s+=`<circle cx="1120" cy="1000" r="22" fill="#cfd6e2" stroke="${OL}" stroke-width="5"/><line x1="1120" y1="978" x2="1100" y2="940" stroke="${OL}" stroke-width="6"/>`;
+  // lanche espalhado
+  const roll=lt*90;
+  s+=`<g transform="translate(880 990)"><rect x="-60" y="-50" width="120" height="70" rx="10" fill="#ffc93c" stroke="${OL}" stroke-width="5" transform="rotate(18)"/>
+    <rect x="80" y="-20" width="90" height="56" rx="8" fill="#e76f51" stroke="${OL}" stroke-width="5" transform="rotate(-10)"/></g>
+    <g transform="translate(${700-Math.min(lt,3)*40} 1015) rotate(${-roll})"><rect x="-18" y="-30" width="36" height="60" rx="8" fill="#e63946" stroke="${OL}" stroke-width="5"/></g>`;
+  // bag aberta
+  s+=`<rect x="1000" y="880" width="130" height="110" rx="12" fill="#ffc93c" stroke="${OL}" stroke-width="6" transform="rotate(-12 1065 935)"/>`;
+  // personagem sentado no chão
+  const bob=Math.sin(lt*2)*3;
+  s+=`<g transform="translate(560 ${930+bob})">
+   <path d="M-40 0 L80 10 L150 40" fill="none" stroke="${OL}" stroke-width="48" stroke-linecap="round" stroke-linejoin="round"/>
+   <path d="M-40 0 L80 10 L150 40" fill="none" stroke="#3a6ea5" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/>
+   <path d="M-90 10 Q-100 -150 -60 -210 L50 -210 Q80 -150 50 10 Z" fill="#262635" stroke="${OL}" stroke-width="7" stroke-linejoin="round"/>
+   <path d="M-70 -20 Q-80 -140 -46 -196" fill="none" stroke="#c8ccd6" stroke-width="7"/>
+   <path d="M30 -180 L110 -120 L150 -150" fill="none" stroke="${OL}" stroke-width="38" stroke-linecap="round" stroke-linejoin="round"/>
+   <path d="M30 -180 L110 -120 L150 -150" fill="none" stroke="#262635" stroke-width="27" stroke-linecap="round" stroke-linejoin="round"/>
+   <circle cx="104" cy="-124" r="14" fill="#b07a52" stroke="${OL}" stroke-width="4"/><path d="M96 -132 l14 10 M104 -118 l8 -10" stroke="#c0392b" stroke-width="4"/>
+   <rect x="138" y="-196" width="40" height="70" rx="8" fill="#15151c" stroke="${OL}" stroke-width="4" transform="rotate(20 158 -160)"/>
+   <rect x="144" y="-188" width="28" height="52" rx="4" fill="#dfe8ff" transform="rotate(20 158 -160)"/>
+   <g transform="translate(-10 -290) rotate(${8+Math.sin(lt*1.4)*2})">${face('sad',Math.abs(lt-2.2)<.07?1:0)}</g></g>`;
+  // capacete no chão
+  s+=`<g transform="translate(330 1000) rotate(-30)"><circle r="44" fill="#1f1f2b" stroke="${OL}" stroke-width="6"/><path d="M8 -24 Q42 -16 38 14 L8 18 Q0 -6 8 -24 Z" fill="#56688f" stroke="${OL}" stroke-width="5"/></g>`;
+  s+=rain(t,190,41,'#a9bcff',.55);
+  s+=`</g>`;
+  // relâmpago
+  if(lt<.25)s+=`<rect width="${W}" height="${H}" fill="#fff" opacity="${(1-lt/.25)*.9}"/>`;
+  s+=kinetic(lt,.3,W/2,170,['Tombo','na','chuva.'],84,'#ffffff');
+  s+=popup(lt,.9,1250,560,'−R$ 45 retrovisor','#ff4d4d');
+  // celular em close
+  if(lt>1.6){const p=eBack(seg(lt,1.6,2.1));const vib=lt>2.1&&lt<2.6?Math.sin(lt*120)*6:0;
+    s+=`<rect width="${W}" height="${H}" fill="#000" opacity="${.45*p}"/>`;
+    s+=`<g transform="translate(${W/2+vib} ${lerp(1600,560,p)}) rotate(-6)">
+     <rect x="-250" y="-400" width="500" height="800" rx="60" fill="#14141b" stroke="${OL}" stroke-width="10"/>
+     <rect x="-220" y="-365" width="440" height="730" rx="30" fill="#f4f6fb"/>
+     <rect x="-190" y="-90" width="380" height="190" rx="24" fill="#e63946" stroke="${OL}" stroke-width="5"/>
+     <text y="-22" text-anchor="middle" font-size="44" font-weight="900" fill="#fff">CONTA</text>
+     <text y="36" text-anchor="middle" font-size="44" font-weight="900" fill="#fff">SUSPENSA</text>
+     <text y="76" text-anchor="middle" font-size="26" font-weight="700" fill="#ffd9dc">para análise</text>
+     <path d="M-120 -365 L-60 -200 L-130 -60 L-40 80 L-90 365 M-60 -200 L60 -150 L150 -260 M-40 80 L90 140 L220 90" fill="none" stroke="#1b1b24" stroke-width="5" opacity=".8"/>
+     <circle cx="0" cy="250" r="44" fill="none" stroke="#c9ced8" stroke-width="6"/></g>`;
+    s+=kinetic(lt,2.4,W/2,1010,['E','o','app','suspendeu','sua','conta.'],62,['#ffffff','#ffffff','#ffffff','#ff4d4d','#ffffff','#ffffff'])}
+  return s}
+
+/* ---------- CENA F: a conta real + CTA (24.6 – 30) ---------- */
+function sceneF(t){
+  const lt=t-24.6;let s=`<rect width="${W}" height="${H}" fill="#11131f"/>`;
+  // grade de fundo
+  for(let i=0;i<20;i++)s+=`<line x1="${i*110-(lt*30)%110}" y1="0" x2="${i*110-(lt*30)%110}" y2="${H}" stroke="#1b1e30" stroke-width="2"/>`;
+  s+=kinetic(lt,.1,W/2,150,['A','CONTA','REAL','DO','MÊS'],76,['#fff','#ffc93c','#ffc93c','#fff','#fff']);
+  const X0=240,FW=1440,Y=540,BH=130;
+  const cuts=[['Gasolina',1500],['Moto',650],['Manutenção',350],['Comida',400],['Celular + MEI',160]];
+  const grow=eExpo(seg(lt,.3,.9));
+  let remaining=6200;const t0=1.0,step=.42;
+  let cutSvg='';
+  cuts.forEach(([nm,v],i)=>{const ts=t0+i*step;const before=remaining;remaining-=v;
+    if(lt>ts){const p=seg(lt,ts,ts+.9);const x=X0+FW*(remaining/6200),w=FW*(v/6200);
+      cutSvg+=`<g transform="translate(${x+w/2} ${Y+BH/2+eIn(p)*520}) rotate(${p*40*(i%2?1:-1)})" opacity="${1-seg(p,.7,1)}"><rect x="${-w/2}" y="${-BH/2}" width="${w}" height="${BH}" fill="#e63946" stroke="${OL}" stroke-width="5"/></g>`;
+      {const q=eBack(seg(lt,ts,ts+.3));const fo=1-seg(lt,3.0,3.25);cutSvg+=txt(X0+(1-q)*-80,Y+215+i*58,'−R$ '+v.toLocaleString('pt-BR')+'  '+nm,46,'#ff6b6b',{anchor:'start',op:clamp(q)*fo,w:800})}}});
+  let shown=6200;cuts.forEach(([nm,v],i)=>{if(lt>t0+i*step)shown-=v*eOut(seg(lt,t0+i*step,t0+i*step+.25))});
+  s+=`<rect x="${X0}" y="${Y}" width="${FW*grow*(shown/6200)}" height="${BH}" rx="14" fill="#2ecc71" stroke="${OL}" stroke-width="6"/>`;
+  s+=`<rect x="${X0}" y="${Y}" width="${FW}" height="${BH}" rx="14" fill="none" stroke="#2b2f48" stroke-width="4" stroke-dasharray="14 10"/>`;
+  s+=cutSvg;
+  s+=txt(X0+20,Y+88,fmtInt(shown),70,'#0d2a18',{anchor:'start',op:grow});
+  if(lt>3.2){const p=eBack(seg(lt,3.2,3.6));
+    s+=txt(W/2,Y+290,'SOBRA ≈ R$ 3.140',96,'#2ecc71',{sc:p,stroke:OL,sw:14});
+    s+=txt(W/2,Y+380,'sem 13º, sem férias  ·  ≈ R$ 10,80 por hora',48,'#ffffff',{op:seg(lt,3.4,3.8),w:700})}
+  // CTA
+  if(lt>4.0){const p=eExpo(seg(lt,4.0,4.4));
+    s+=`<rect x="0" y="${H-p*H}" width="${W}" height="${H}" fill="#ffc93c"/>`;
+    s+=`<g transform="translate(0 ${H-p*H})">`;
+    s+=kinetic(lt,4.2,W/2,380,['Você','trocaria','seu','CLT'],96,['#fff','#fff','#fff','#e63946']);
+    s+=kinetic(lt,4.45,W/2,510,['por','essa','vida?'],96,'#ffffff');
+    const b=eBack(seg(lt,4.7,5.0));const pulse=1+Math.sin(lt*10)*.04;
+    s+=`<g transform="translate(${W/2-260} 720) scale(${b*pulse})"><rect x="-200" y="-80" width="400" height="160" rx="80" fill="#2ecc71" stroke="${OL}" stroke-width="10"/><text text-anchor="middle" y="32" font-size="96" font-weight="900" fill="#fff" stroke="${OL}" stroke-width="10" paint-order="stroke">SIM</text></g>`;
+    s+=`<g transform="translate(${W/2+260} 720) scale(${b*(2-pulse)})"><rect x="-200" y="-80" width="400" height="160" rx="80" fill="#e63946" stroke="${OL}" stroke-width="10"/><text text-anchor="middle" y="32" font-size="96" font-weight="900" fill="#fff" stroke="${OL}" stroke-width="10" paint-order="stroke">NÃO</text></g>`;
+    s+=txt(W/2,920,'comenta aí embaixo ↓',54,OL,{op:seg(lt,5.0,5.3),w:800});
+    s+=`</g>`}
+  return s}
+
+/* ---------- HUD (relógio e contador) ---------- */
+function hud(t){
+  let s='';
+  let clock=null;
+  if(t>=4.6&&t<9)clock='04:50';
+  else if(t>=13.6&&t<20){const p=seg(t,13.6,19.9);const m=lerp(5*60+40,19*60+30,eInOut(p));clock=String(Math.floor(m/60)).padStart(2,'0')+':'+String(Math.floor(m%60)).padStart(2,'0')}
+  else if(t>=20&&t<24.6)clock='19:42';
+  if(clock){const inT=t<9?4.6:t<20?13.6:20;const p=eBack(seg(t,inT,inT+.35));s+=pill(60,90,clock,clockIcon,'#ffffff','#1b1b2b',p)}
+  if(t>=13.6&&t<24.6){const p=eBack(seg(t,13.6,13.95));
+    const v=t<20?236.4*eInOut(seg(t,14.0,19.6)):236.4;
+    s+=pill(W-460,90,fmtR(v).padStart(9),coinIcon,'#3ddc84','#1b1b2b',p)}
+  return s}
+
+/* ---------- composição + transições ---------- */
+function draw(t){
+  let s='';
+  if(t<4.4)s+=sceneA(t);
+  if(t>=4.15&&t<9.35){ // círculo abrindo sobre A
+    const r=eInOut(seg(t,4.15,4.65))*1300;
+    s+=`<defs><clipPath id="cB"><circle cx="${W/2}" cy="${H/2}" r="${r}"/></clipPath></defs>`;
+    const wp=seg(t,8.95,9.35);const off=-eIn(wp)*W*1.1;
+    s+=`<g clip-path="url(#cB)"><g transform="translate(${off} 0)" ${wp>0?'filter="url(#mblur)"':''}>${sceneB(t)}</g></g>`;}
+  if(t>=8.95&&t<13.9){const wp=seg(t,8.95,9.35);const off=(1-eOut(wp))*W*1.1;
+    const zp=seg(t,13.4,13.9);
+    s+=`<g transform="translate(${off} 0) translate(${W/2} ${H/2}) scale(${1+eIn(zp)*2.5}) translate(${-W/2} ${-H/2})" opacity="${1-zp}" ${wp>0&&wp<1?'filter="url(#mblur)"':''}>${sceneC(t)}</g>`}
+  if(t>=13.4&&t<20){const zp=seg(t,13.4,13.9);
+    s=t<13.9?sceneD(t)+`<g transform="translate(${W/2} ${H/2}) scale(${1+eIn(zp)*2.5}) translate(${-W/2} ${-H/2})" opacity="${1-zp}">${sceneC(t)}</g>`:sceneD(t)}
+  if(t>=20&&t<24.9)s=sceneE(t);
+  if(t>=24.6){ // faixa diagonal amarela
+    const wp=seg(t,24.6,25.0);
+    if(t<25.0){s=sceneE(t)+`<defs><clipPath id="cF"><polygon points="${-600+wp*3200},0 ${-200+wp*3200},0 ${-600+wp*3200-400},${H} ${-1000+wp*3200},${H}"/></clipPath></defs>`;
+      s+=`<polygon points="${-400+wp*3200},0 ${0+wp*3200},0 ${-400+wp*3200},${H} ${-800+wp*3200},${H}" fill="#ffc93c"/>`;
+      s+=`<defs><clipPath id="cF2"><rect x="0" y="0" width="${Math.max(0,wp*3200-800)}" height="${H}"/></clipPath></defs><g clip-path="url(#cF2)">${sceneF(t)}</g>`}
+    else s=sceneF(t)}
+  s+=hud(t);
+  // vinheta
+  s+=`<rect width="${W}" height="${H}" fill="url(#vig)"/>`;
+  document.getElementById('root').innerHTML=`<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
+   <defs><filter id="mblur" x="-20%" y="0" width="140%" height="100%"><feGaussianBlur stdDeviation="40 0"/></filter>
+   <radialGradient id="vig" cx=".5" cy=".5" r=".75"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".45"/></radialGradient></defs>${s}</svg>`;
+}
+window.draw=draw;
+draw(parseFloat(new URLSearchParams(location.search).get('t')||'0'));
+</script></body></html>
