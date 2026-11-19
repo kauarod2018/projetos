@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Boneco Palito 3D</title>
+<style>
+  :root { --bg:#0f1220; --panel:rgba(20,24,40,.82); --txt:#e8ecf8; --muted:#9aa3bf; --acc:#5b8cff; }
+  * { box-sizing:border-box; }
+  html,body { margin:0; height:100%; background:var(--bg); color:var(--txt);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; overflow:hidden; }
+  canvas { display:block; }
+  #ui { position:fixed; top:16px; left:16px; width:min(300px, calc(100vw - 32px));
+    background:var(--panel); backdrop-filter:blur(8px); border:1px solid rgba(255,255,255,.08);
+    border-radius:14px; padding:14px 16px; }
+  h1 { font-size:16px; margin:0 0 10px; }
+  .modes { display:grid; grid-template-columns:repeat(2,1fr); gap:6px; margin-bottom:12px; }
+  button { background:rgba(255,255,255,.06); color:var(--txt); border:1px solid rgba(255,255,255,.1);
+    border-radius:8px; padding:8px 6px; font-size:13px; cursor:pointer; transition:background .15s; }
+  button:hover { background:rgba(255,255,255,.12); }
+  button.on { background:var(--acc); border-color:var(--acc); }
+  label { display:flex; align-items:center; justify-content:space-between; gap:8px;
+    font-size:13px; color:var(--muted); margin:6px 0; }
+  input[type=range] { width:140px; accent-color:var(--acc); }
+  .hint { font-size:11px; color:var(--muted); margin-top:8px; line-height:1.4; }
+  #toggle { display:none; }
+  @media (max-width:520px){ #ui{ top:auto; bottom:16px; } }
+</style>
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<div id="ui">
+  <h1>🕴️ Boneco Palito 3D</h1>
+  <div class="modes" id="modes"></div>
+  <label>Velocidade <input id="speed" type="range" min="0.2" max="2" step="0.05" value="1"></label>
+  <label>Cor do corpo <input id="color" type="color" value="#f2f4ff"></label>
+  <label>Mostrar articulações <input id="joints" type="checkbox" checked></label>
+  <label>Câmera girando <input id="orbit" type="checkbox"></label>
+  <div class="hint">Arraste para girar · roda do mouse para zoom · teclas 1–7 trocam a animação</div>
+</div>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+
+/* =========================================================
+   1. CENA, CÂMERA, LUZES E CHÃO
+   ========================================================= */
+const renderer = new THREE.WebGLRenderer({ antialias:true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.setSize(innerWidth, innerHeight);
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+document.body.appendChild(renderer.domElement);
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x0f1220);
+scene.fog = new THREE.Fog(0x0f1220, 8, 22);
+
+const camera = new THREE.PerspectiveCamera(45, innerWidth/innerHeight, 0.1, 100);
+camera.position.set(3.2, 1.8, 3.6);
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.target.set(0, 0.95, 0);
+controls.enableDamping = true;
+controls.minDistance = 1.5; controls.maxDistance = 12;
+controls.maxPolarAngle = Math.PI * 0.49;
+
+scene.add(new THREE.HemisphereLight(0xbcc8ff, 0x20243a, 0.9));
+const sun = new THREE.DirectionalLight(0xffffff, 2.2);
+sun.position.set(3, 6, 4);
+sun.castShadow = true;
+sun.shadow.mapSize.set(2048, 2048);
+Object.assign(sun.shadow.camera, { left:-3, right:3, top:3, bottom:-3, near:1, far:20 });
+scene.add(sun);
+const rim = new THREE.DirectionalLight(0x6f8cff, 1.2);
+rim.position.set(-4, 3, -4);
+scene.add(rim);
+
+const ground = new THREE.Mesh(
+  new THREE.PlaneGeometry(60, 60),
+  new THREE.MeshStandardMaterial({ color:0x181c30, roughness:.95 })
+);
+ground.rotation.x = -Math.PI/2;
+ground.receiveShadow = true;
+scene.add(ground);
+
+// Grade que "anda" para dar a sensação de deslocamento (esteira)
+const CELL = 0.5;
+const grid = new THREE.GridHelper(40, 80, 0x5a64a0, 0x3a4170);
+grid.position.y = 0.001;
+scene.add(grid);
+
+/* =========================================================
+   2. ESQUELETO DO BONECO
+   Cada articulação é um THREE.Group. O "osso" é um cilindro
+   pendurado na articulação; a próxima articulação fica na ponta.
+   ========================================================= */
+const bodyMat  = new THREE.MeshStandardMaterial({ color:0xf2f4ff, roughness:.4, metalness:.1 });
+const jointMat = new THREE.MeshStandardMaterial({ color:0x5b8cff, roughness:.3, metalness:.2 });
+const BONE_R = 0.028, JOINT_R = 0.042;
+const jointMeshes = [];
+
+function joint(parent, x=0, y=0, z=0, showBall=true) {
+  const g = new THREE.Group();
+  g.position.set(x, y, z);
+  parent.add(g);
+  if (showBall) {
+    const s = new THREE.Mesh(new THREE.SphereGeometry(JOINT_R, 20, 14), jointMat);
+    s.castShadow = true;
+    g.add(s); jointMeshes.push(s);
+  }
+  return g;
+}
+
+// Cria um osso a partir de 'parent' na direção (dx,dy,dz) e devolve a articulação da ponta
+function bone(parent, dx, dy, dz, ball=true) {
+  const dir = new THREE.Vector3(dx, dy, dz);
+  const len = dir.length();
+  const mesh = new THREE.Mesh(new THREE.CylinderGeometry(BONE_R, BONE_R, len, 14), bodyMat);
+  mesh.position.copy(dir).multiplyScalar(0.5);
+  mesh.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0), dir.clone().normalize());
+  mesh.castShadow = true;
+  parent.add(mesh);
+  return joint(parent, dx, dy, dz, ball);
+}
+
+// Medidas (metros) — boneco de ~1,80 m
+const M = { thigh:.46, shin:.45, foot:.14, spine:.26, chest:.24, neck:.09, head:.12,
+            shoulder:.19, hipW:.10, upperArm:.30, foreArm:.28, hand:.05 };
+
+const root  = new THREE.Group();          // raiz (posição no mundo)
+scene.add(root);
+const hips  = joint(root, 0, 0, 0);       // quadril (pélvis)
+const spine = joint(hips, 0, 0, 0, false);
+const chest = bone(spine, 0, M.spine, 0); // tórax
+const neckJ = bone(chest, 0, M.chest, 0); // base do pescoço
+const headJ = bone(neckJ, 0, M.neck, 0, false);
+
+// Cabeça + olhos (para saber para onde ele olha)
+const head = new THREE.Mesh(new THREE.SphereGeometry(M.head, 32, 24), bodyMat);
+head.position.y = M.head; head.castShadow = true;
+headJ.add(head);
+const eyeMat = new THREE.MeshBasicMaterial({ color:0x0f1220 });
+for (const ex of [-0.042, 0.042]) {
+  const eye = new THREE.Mesh(new THREE.SphereGeometry(0.016, 12, 10), eyeMat);
+  eye.position.set(ex, M.head + 0.02, M.head * 0.92);
+  headJ.add(eye);
+}
+
+// Ombros (clavículas) e braços
+function makeArm(side) { // side: +1 esquerdo (x+), -1 direito
+  const clav = bone(neckJ, side*M.shoulder, -0.03, 0);
+  const shoulder = clav;                          // articulação do ombro
+  const elbow = bone(shoulder, 0, -M.upperArm, 0);
+  const wrist = bone(elbow, 0, -M.foreArm, 0);
+  const hand = new THREE.Mesh(new THREE.SphereGeometry(M.hand, 16, 12), bodyMat);
+  hand.position.y = -M.hand * .8; hand.castShadow = true;
+  wrist.add(hand);
+  return { shoulder, elbow, wrist };
+}
+// Pernas
+function makeLeg(side) {
+  const hipJ  = bone(hips, side*M.hipW, -0.04, 0);
+  const knee  = bone(hipJ, 0, -M.thigh, 0);
+  const ankle = bone(knee, 0, -M.shin, 0);
+  const toe   = bone(ankle, 0, -0.02, M.foot);
+  return { hip:hipJ, knee, ankle, toe };
+}
+const armL = makeArm(+1), armR = makeArm(-1);
+const legL = makeLeg(+1), legR = makeLeg(-1);
+
+/* =========================================================
+   3. POSES
+   Uma pose é um objeto com ângulos (radianos).
+   Convenções: valores positivos de *X* = "para frente" no braço/coxa;
+   joelho positivo = dobra para trás; cotovelo positivo = dobra para frente.
+   ========================================================= */
+const BASE = {
+  lift:0, hipsYaw:0, hipsRoll:0, lean:0, chestTwist:0, chestRoll:0, breath:0,
+  headX:0, headY:0, headZ:0,
+  shLx:0, shLz:.12, elL:.15, elLz:0,
+  shRx:0, shRz:.12, elR:.15, elRz:0,
+  hipLx:0, hipLz:.03, kneeL:.03, ankleL:0,
+  hipRx:0, hipRz:.03, kneeR:.03, ankleR:0,
+};
+const TAU = Math.PI * 2;
+const pos = (x) => Math.max(0, x);
+
+const MODES = {
+  parado(t) {
+    const b = Math.sin(t * 1.6);
+    const sway = Math.sin(t * 0.5);
+    return { ...BASE, breath:b, hipsRoll:.03*sway, chestRoll:-.03*sway,
+      headY:.25*Math.sin(t*.37), headX:.04*b,
+      shLz:.14+.02*b, shRz:.14+.02*b, kneeL:.05+.04*pos(sway), kneeR:.05+.04*pos(-sway) };
+  },
+  andar(t) {
+    const p = t * TAU * 0.95, s = Math.sin(p), c = Math.cos(p);
+    return { ...BASE, lean:.06, hipsYaw:.12*s, chestTwist:-.2*s, hipsRoll:.04*c,
+      headX:-.04,
+      hipLx: .48*s,  kneeL: .08 + 1.1*pos(Math.cos(p - .45))**2, ankleL:-.25*s,
+      hipRx:-.48*s,  kneeR: .08 + 1.1*pos(Math.cos(p + Math.PI - .45))**2, ankleR:.25*s,
+      shLx:-.45*s, elL:.35 + .2*pos(-s), shRx:.45*s, elR:.35 + .2*pos(s),
+      shLz:.1, shRz:.1 };
+  },
+  correr(t) {
+    const p = t * TAU * 1.35, s = Math.sin(p);
+    return { ...BASE, lean:.28, hipsYaw:.16*s, chestTwist:-.32*s, headX:-.22,
+      lift:.07*Math.abs(Math.cos(p)),
+      hipLx: .85*s + .25, kneeL: .3 + 1.7*pos(Math.cos(p - .3))**1.5, ankleL:-.4*s,
+      hipRx:-.85*s + .25, kneeR: .3 + 1.7*pos(Math.cos(p + Math.PI - .3))**1.5, ankleR:.4*s,
+      shLx:-.85*s, elL:1.5, shRx:.85*s, elR:1.5, shLz:.12, shRz:.12 };
+  },
+  pular(t) {
+    const u = (t / 1.5) % 1;           // 0..1 ciclo do pulo
+    let crouch = 0, lift = 0, arms = 0, tuck = 0;
+    if (u < .3)       { const k = u/.3; crouch = Math.sin(k*Math.PI*.5); arms = -k; }
+    else if (u < .38) { const k = (u-.3)/.08; crouch = 1-k; arms = -1 + 3.6*k; }
+    else if (u < .78) { const k = (u-.38)/.4; lift = .55*Math.sin(k*Math.PI); arms = 2.6; tuck = Math.sin(k*Math.PI); }
+    else              { const k = (u-.78)/.22; crouch = Math.sin((1-k)*Math.PI*.5)*.8 * (k<.3? k/.3 : 1); arms = 2.6*(1-k); }
+    const leg = crouch*.9 + tuck*.7;
+    return { ...BASE, lift, lean:.35*crouch, headX:-.3*crouch,
+      hipLx:leg, hipRx:leg, kneeL:leg*1.9, kneeR:leg*1.9, ankleL:-crouch*.7, ankleR:-crouch*.7,
+      shLx:arms, shRx:arms, elL:.2+.3*crouch, elR:.2+.3*crouch, shLz:.25, shRz:.25,
+      hipLz:.08, hipRz:.08 };
+  },
+  dançar(t) {
+    const p = t * TAU * 1.0, s = Math.sin(p), s2 = Math.sin(p*2);
+    const bounce = Math.abs(Math.sin(p*2));
+    return { ...BASE, hipsRoll:.15*s, chestRoll:-.25*s, hipsYaw:.3*Math.sin(p*.5),
+      headZ:.2*s, headX:.12*s2,
+      hipLx:.15*bounce, hipRx:.15*bounce, kneeL:.35*bounce + .2*pos(s), kneeR:.35*bounce + .2*pos(-s),
+      hipLz:.12, hipRz:.12,
+      shLz: 1.6 + 1.0*s, elL: .6 + .6*pos(s), shLx:.3,
+      shRz: 1.6 - 1.0*s, elR: .6 + .6*pos(-s), shRx:.3 };
+  },
+  acenar(t) {
+    const idle = MODES.parado(t);
+    const w = Math.sin(t * 9);
+    return { ...idle, headZ:.12, headY:-.2, chestRoll:-.05,
+      shRz: 2.55, shRx:.15, elR:.15, elRz: -.35 + .45*w,
+      shLz:.15, elL:.2 };
+  },
+  polichinelo(t) {
+    const p = t * TAU * 1.1;
+    const a = (1 - Math.cos(p)) / 2;   // 0 fechado, 1 aberto
+    return { ...BASE, lift:.12*Math.abs(Math.sin(p)),
+      shLz:.1 + 2.85*a, shRz:.1 + 2.85*a, elL:.1, elR:.1,
+      hipLz:.03 + .32*a, hipRz:.03 + .32*a,
+      kneeL:.12 + .25*Math.abs(Math.sin(p)), kneeR:.12 + .25*Math.abs(Math.sin(p)),
+      hipLx:.06, hipRx:.06, headX:.05*Math.sin(p*2) };
+  },
+};
+const GROUND_SPEED = { andar:1.25, correr:3.6 };
+const LABELS = ['parado','andar','correr','pular','dançar','acenar','polichinelo'];
+
+/* =========================================================
+   4. APLICAR A POSE NO ESQUELETO
+   ========================================================= */
+const HIP_HEIGHT = M.thigh + M.shin + 0.06;
+const tmp = new THREE.Vector3();
+
+function applyPose(P) {
+  hips.rotation.set(0, P.hipsYaw, P.hipsRoll);
+  spine.rotation.set(P.lean, 0, 0);
+  chest.rotation.set(-.02*P.breath, P.chestTwist, P.chestRoll);
+  chest.scale.setScalar(1 + .01*P.breath);
+  headJ.rotation.set(P.headX, P.headY, P.headZ);
+  // Compensa a inclinação do tronco no pescoço (cabeça olha para frente)
+  neckJ.rotation.set(-P.lean*.5, -P.chestTwist*.6, -P.chestRoll*.6);
+
+  armL.shoulder.rotation.set(-P.shLx, 0,  P.shLz);
+  armR.shoulder.rotation.set(-P.shRx, 0, -P.shRz);
+  armL.elbow.rotation.set(-P.elL, 0,  P.elLz);
+  armR.elbow.rotation.set(-P.elR, 0, -P.elRz);
+
+  // Pernas compensam a rotação do quadril para os pés não "patinarem"
+  legL.hip.rotation.set(-P.hipLx, -P.hipsYaw*.5,  P.hipLz - P.hipsRoll);
+  legR.hip.rotation.set(-P.hipRx, -P.hipsYaw*.5, -P.hipRz - P.hipsRoll);
+  legL.knee.rotation.x = P.kneeL;
+  legR.knee.rotation.x = P.kneeR;
+  // Tornozelo: mantém o pé quase paralelo ao chão + ajuste da pose
+  legL.ankle.rotation.x = -(P.kneeL - P.hipLx)*.85 + P.ankleL;
+  legR.ankle.rotation.x = -(P.kneeR - P.hipRx)*.85 + P.ankleR;
+
+  // "Aterrissagem" automática: o ponto mais baixo dos pés encosta no chão
+  root.position.y = HIP_HEIGHT;
+  root.updateMatrixWorld(true);
+  let minY = Infinity;
+  for (const j of [legL.ankle, legR.ankle, legL.toe, legR.toe])
+    minY = Math.min(minY, j.getWorldPosition(tmp).y);
+  root.position.y += (JOINT_R - minY) + P.lift;
+}
+
+/* =========================================================
+   5. INTERFACE
+   ========================================================= */
+let mode = 'andar';
+const modesEl = document.getElementById('modes');
+LABELS.forEach((name, i) => {
+  const b = document.createElement('button');
+  b.textContent = `${i+1}. ${name[0].toUpperCase() + name.slice(1)}`;
+  b.onclick = () => setMode(name);
+  b.dataset.mode = name;
+  modesEl.appendChild(b);
+});
+function setMode(m) {
+  mode = m;
+  modesEl.querySelectorAll('button').forEach(b => b.classList.toggle('on', b.dataset.mode === m));
+}
+setMode(mode);
+addEventListener('keydown', e => { const i = +e.key - 1; if (LABELS[i]) setMode(LABELS[i]); });
+
+const speedEl = document.getElementById('speed');
+document.getElementById('color').oninput = e => bodyMat.color.set(e.target.value);
+document.getElementById('joints').onchange = e => jointMeshes.forEach(m => m.visible = e.target.checked);
+const orbitEl = document.getElementById('orbit');
+orbitEl.onchange = () => controls.autoRotate = orbitEl.checked;
+controls.autoRotateSpeed = 1.2;
+
+addEventListener('resize', () => {
+  camera.aspect = innerWidth/innerHeight; camera.updateProjectionMatrix();
+  renderer.setSize(innerWidth, innerHeight);
+});
+
+/* =========================================================
+   6. LOOP DE ANIMAÇÃO
+   A pose atual se aproxima suavemente da pose-alvo do modo
+   escolhido, então a troca entre animações é sempre fluida.
+   ========================================================= */
+const clock = new THREE.Clock();
+let t = 0, groundOffset = 0, groundSpeed = 0;
+const cur = { ...BASE };
+
+function loop() {
+  const dt = Math.min(clock.getDelta(), 0.05);
+  const speed = +speedEl.value;
+  t += dt * speed;
+
+  const target = MODES[mode](t);
+  const k = 1 - Math.exp(-dt * 10);
+  for (const key in cur) cur[key] += (target[key] - cur[key]) * k;
+  applyPose(cur);
+
+  groundSpeed += ((GROUND_SPEED[mode] || 0) * speed - groundSpeed) * k;
+  groundOffset = (groundOffset + groundSpeed * dt) % CELL;
+  grid.position.z = -groundOffset;
+
+  controls.target.y += (root.position.y + 0.05 - controls.target.y) * k * .3;
+  controls.update();
+  renderer.render(scene, camera);
+  requestAnimationFrame(loop);
+}
+loop();
+</script>
+</body>
+</html>
