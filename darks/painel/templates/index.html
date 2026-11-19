@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Darks — Painel</title>
+<style>
+:root{--bg:#0d0e12;--card:#16181f;--borda:#262a35;--txt:#e7e9ee;--sub:#8b91a1;--pri:#e5484d;--ok:#30a46c;--alerta:#f5a524;--azul:#4c8dff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);font:14px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+header{display:flex;align-items:center;gap:16px;padding:14px 24px;border-bottom:1px solid var(--borda);flex-wrap:wrap}
+header h1{font-size:18px;margin:0;letter-spacing:.5px}header h1 span{color:var(--pri)}
+nav{display:flex;gap:4px}nav button{background:none;border:0;color:var(--sub);padding:8px 14px;border-radius:8px;cursor:pointer;font:inherit}
+nav button.ativo{background:var(--card);color:var(--txt)}
+#status{margin-left:auto;display:flex;gap:6px;flex-wrap:wrap}
+.chip{font-size:12px;padding:3px 9px;border-radius:99px;border:1px solid var(--borda);color:var(--sub)}
+.chip.on{border-color:#1f4d36;color:#6fd3a0}
+main{padding:20px 24px;max-width:1500px;margin:0 auto}
+.filtros{display:flex;gap:8px;flex-wrap:wrap;align-items:end;margin-bottom:16px}
+label{display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--sub)}
+input,select{background:var(--card);border:1px solid var(--borda);color:var(--txt);padding:9px 11px;border-radius:8px;font:inherit;min-width:120px}
+input.grande{min-width:320px}
+button.acao{background:var(--pri);color:#fff;border:0;padding:10px 18px;border-radius:8px;cursor:pointer;font-weight:600}
+button.sec{background:var(--card);color:var(--txt);border:1px solid var(--borda);padding:9px 14px;border-radius:8px;cursor:pointer}
+.resumo{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 16px}
+.kpi{background:var(--card);border:1px solid var(--borda);border-radius:10px;padding:10px 14px;min-width:130px}
+.kpi b{display:block;font-size:18px}.kpi small{color:var(--sub)}
+.grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--borda);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.card:hover{border-color:#3a4050}
+.thumb{position:relative;aspect-ratio:16/9;background:#000;color:#fff;text-decoration:none;display:block}.thumb img{width:100%;height:100%;object-fit:cover}
+.dur{position:absolute;right:6px;bottom:6px;background:#000c;padding:1px 6px;border-radius:4px;font-size:12px}
+.badge{position:absolute;left:6px;top:6px;padding:2px 8px;border-radius:6px;font-weight:700;font-size:12px;background:#000c}
+.b-fogo{background:var(--pri);color:#fff}.b-bom{background:var(--alerta);color:#000}
+.corpo{padding:10px 12px;display:flex;flex-direction:column;gap:6px;flex:1}
+.corpo a{color:var(--txt);text-decoration:none;font-weight:600}.corpo a:hover{text-decoration:underline}
+.canal{color:var(--sub);font-size:12px}
+.nums{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-top:auto;font-size:12px}
+.nums div{background:#0f1116;border-radius:6px;padding:5px 6px}.nums small{color:var(--sub);display:block;font-size:10px;text-transform:uppercase}
+.vazio{color:var(--sub);padding:40px;text-align:center}
+.erro{background:#3b1215;border:1px solid #6b1d22;color:#ffb3b5;padding:10px 14px;border-radius:8px;margin-bottom:12px}
+pre{background:#0f1116;border:1px solid var(--borda);border-radius:8px;padding:12px;overflow:auto;white-space:pre-wrap}
+.cmd{display:flex;gap:8px;align-items:center;background:#0f1116;border:1px dashed var(--borda);padding:10px 12px;border-radius:8px;margin:10px 0;font-family:ui-monospace,monospace;font-size:13px;flex-wrap:wrap}
+.cmd code{flex:1;word-break:break-all}
+table{width:100%;border-collapse:collapse}td,th{padding:8px;border-bottom:1px solid var(--borda);text-align:left}th{color:var(--sub);font-weight:500}
+.sec-titulo{font-size:15px;margin:22px 0 8px;color:var(--sub);text-transform:uppercase;letter-spacing:.6px}
+ul{margin:4px 0;padding-left:20px}
+.carregando{opacity:.5;pointer-events:none}
+@media(max-width:640px){main,header{padding:14px 16px}input.grande{min-width:0;width:100%}.filtros label{flex:1 1 140px}}
+</style>
+</head>
+<body>
+<header>
+  <h1><span>●</span> DARKS</h1>
+  <nav>
+    <button data-aba="busca" class="ativo">Busca</button>
+    <button data-aba="alta">Em alta</button>
+    <button data-aba="canal">Canal</button>
+    <button data-aba="modelos">Modelos</button>
+  </nav>
+  <div id="status"></div>
+</header>
+<main>
+  <section id="aba-busca">
+    <form class="filtros" id="f-busca">
+      <label>Termo / nicho<input class="grande" name="termo" required placeholder="ex.: mistérios não resolvidos"></label>
+      <label>Ordenar no YouTube<select name="ordem"><option value="viewCount">Mais vistos</option><option value="relevance">Relevância</option><option value="date">Mais recentes</option></select></label>
+      <label>Período<select name="dias"><option value="">Qualquer</option><option value="7">7 dias</option><option value="30" selected>30 dias</option><option value="90">90 dias</option><option value="365">1 ano</option></select></label>
+      <label>Duração<select name="duracao"><option value="any">Qualquer</option><option value="short">Curtos (&lt;4min)</option><option value="medium">Médios (4-20min)</option><option value="long">Longos (&gt;20min)</option></select></label>
+      <button class="acao">Buscar</button>
+    </form>
+    <div id="r-busca"></div>
+  </section>
+
+  <section id="aba-alta" hidden>
+    <form class="filtros" id="f-alta">
+      <label>País<input name="regiao" value="BR" maxlength="2" style="min-width:70px"></label>
+      <label>Categoria<select name="categoria" id="sel-cat"></select></label>
+      <button class="acao">Ver em alta</button>
+    </form>
+    <div id="r-alta"></div>
+  </section>
+
+  <section id="aba-canal" hidden>
+    <form class="filtros" id="f-canal">
+      <label>Canal (@handle, URL ou ID)<input class="grande" name="canal" required placeholder="@nomedocanal"></label>
+      <label>Vídeos recentes<select name="limite"><option>15</option><option selected>30</option><option>50</option></select></label>
+      <button class="acao">Analisar</button>
+    </form>
+    <div id="r-canal"></div>
+  </section>
+
+  <section id="aba-modelos" hidden><div id="r-modelos"></div></section>
+</main>
+
+<script>
+const $ = s => document.querySelector(s);
+const fmt = n => n == null ? '-' : n >= 1e6 ? (n/1e6).toFixed(1)+'M' : n >= 1e3 ? (n/1e3).toFixed(1)+'K' : String(Math.round(n));
+const durTxt = s => !s ? '' : s >= 3600 ? `${Math.floor(s/3600)}:${String(Math.floor(s%3600/60)).padStart(2,'0')}:${String(s%60).padStart(2,'0')}` : `${Math.floor(s/60)}:${String(s%60).padStart(2,'0')}`;
+const esc = t => String(t ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let ultimos = {};
+let STATUS = {};
+
+document.querySelectorAll('nav button').forEach(b => b.onclick = () => {
+  document.querySelectorAll('nav button').forEach(x => x.classList.toggle('ativo', x === b));
+  document.querySelectorAll('main > section').forEach(s => s.hidden = s.id !== 'aba-' + b.dataset.aba);
+  if (b.dataset.aba === 'modelos') carregarModelos();
+});
+
+async function api(url) {
+  const r = await fetch(url);
+  const d = await r.json().catch(() => ({}));
+  if (!r.ok) throw new Error(d.detail || r.statusText);
+  return d;
+}
+
+function badge(v) {
+  const o = v.outlier ?? v.outlier_canal;
+  if (o == null) return '';
+  const cls = o >= 5 ? 'b-fogo' : o >= 2 ? 'b-bom' : '';
+  return `<span class="badge ${cls}" title="views ÷ ${v.outlier != null ? 'inscritos do canal' : 'mediana do canal'}">${o}x</span>`;
+}
+
+function cartoes(videos) {
+  if (!videos.length) return '<div class="vazio">Nenhum vídeo encontrado.</div>';
+  return '<div class="grade">' + videos.map(v => `
+    <div class="card">
+      <a class="thumb" href="${esc(v.url)}" target="_blank" rel="noopener"><img loading="lazy" src="${esc(v.thumb)}" alt="">${badge(v)}<span class="dur">${durTxt(v.duracao_s)}</span></a>
+      <div class="corpo">
+        <a href="${esc(v.url)}" target="_blank" rel="noopener">${esc(v.titulo)}</a>
+        <span class="canal">${esc(v.canal)} · ${fmt(v.inscritos)} inscritos · há ${v.idade_dias ?? '?'} dias</span>
+        <div class="nums">
+          <div><small>Views</small>${fmt(v.views)}</div>
+          <div><small>Views/dia</small>${fmt(v.views_dia)}</div>
+          <div><small>Engaj.</small>${v.engajamento != null ? v.engajamento + '%' : '-'}</div>
+          <div><small>Pontuação</small>${v.pontuacao ?? '-'}</div>
+          <div><small>Formato</small>${v.formato}</div>
+          <div><small>Outlier</small>${v.outlier ?? v.outlier_canal ?? '-'}x</div>
+        </div>
+      </div>
+    </div>`).join('') + '</div>';
+}
+
+function barra(chave, resumo) {
+  return `<div class="resumo">
+    <div class="kpi"><small>Vídeos</small><b>${resumo.total ?? 0}</b></div>
+    <div class="kpi"><small>Mediana de views</small><b>${fmt(resumo.mediana_views)}</b></div>
+    <div class="kpi"><small>Duração mediana</small><b>${durTxt(resumo.mediana_duracao_s) || '-'}</b></div>
+    <div class="kpi"><small>Shorts / Longos</small><b>${resumo.shorts ?? 0} / ${resumo.longos ?? 0}</b></div>
+    <label>Ordenar por<select onchange="reordenar('${chave}', this.value)">
+      <option value="pontuacao">Oportunidade (pontuação)</option><option value="outlier">Outlier</option>
+      <option value="views_dia">Views por dia</option><option value="views">Views</option>
+      <option value="engajamento">Engajamento</option><option value="idade_dias">Mais novos</option></select></label>
+    <label>Formato<select onchange="filtrar('${chave}', this.value)"><option value="">Todos</option><option value="short">Shorts</option><option value="longo">Longos</option></select></label>
+    <label>&nbsp;<button class="sec" onclick="exportar('${chave}')">Exportar CSV</button></label>
+  </div>`;
+}
+
+function render(chave, alvo) {
+  const st = ultimos[chave];
+  let vs = st.videos.filter(v => !st.formato || v.formato === st.formato);
+  const k = st.ordem || 'pontuacao';
+  vs = [...vs].sort((a, b) => k === 'idade_dias' ? (a[k] ?? 1e9) - (b[k] ?? 1e9) : ((b[k] ?? b.outlier_canal ?? 0) - (a[k] ?? a.outlier_canal ?? 0)));
+  $(alvo + ' .lista').innerHTML = cartoes(vs);
+}
+function reordenar(chave, k) { ultimos[chave].ordem = k; render(chave, ultimos[chave].alvo); }
+function filtrar(chave, f) { ultimos[chave].formato = f; render(chave, ultimos[chave].alvo); }
+function exportar(chave) {
+  const cols = ['titulo','canal','url','views','views_dia','outlier','outlier_canal','engajamento','inscritos','duracao_s','formato','idade_dias','pontuacao'];
+  const linhas = [cols.join(';'), ...ultimos[chave].videos.map(v => cols.map(c => `"${String(v[c] ?? '').replace(/"/g,'""')}"`).join(';'))];
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(new Blob(['﻿' + linhas.join('\n')], {type: 'text/csv'}));
+  a.download = `darks-${chave}.csv`; a.click();
+}
+
+function cmdBox(txt) {
+  return `<div class="cmd"><code>${esc(txt)}</code><button class="sec" onclick="navigator.clipboard.writeText(${esc(JSON.stringify(txt))})">Copiar</button></div>`;
+}
+
+async function executar(form, alvo, chave, url, extra = () => '') {
+  const box = $(alvo);
+  form.classList.add('carregando');
+  box.innerHTML = '<div class="vazio">Buscando...</div>';
+  try {
+    const d = await api(url);
+    ultimos[chave] = {videos: d.videos, alvo};
+    box.innerHTML = extra(d) + barra(chave, d.resumo || {}) + '<div class="lista"></div>';
+    render(chave, alvo);
+  } catch (e) {
+    box.innerHTML = `<div class="erro">${esc(e.message)}</div>`;
+  } finally { form.classList.remove('carregando'); }
+}
+
+$('#f-busca').onsubmit = e => {
+  e.preventDefault();
+  const q = new URLSearchParams(new FormData(e.target));
+  const termo = q.get('termo');
+  executar(e.target, '#r-busca', 'busca', '/api/buscar?' + q, () =>
+    '<div class="canal">Gostou do nicho? Gere o modelo de criação antes de produzir:</div>' +
+    Object.keys(STATUS.tipos || {}).map(t => cmdBox(`python -m darks avaliar --tipo ${t} --nicho "${termo}"`)).join(''));
+};
+$('#f-alta').onsubmit = e => { e.preventDefault(); executar(e.target, '#r-alta', 'alta', '/api/em-alta?' + new URLSearchParams(new FormData(e.target))); };
+$('#f-canal').onsubmit = e => {
+  e.preventDefault();
+  const q = new URLSearchParams(new FormData(e.target));
+  executar(e.target, '#r-canal', 'canal', '/api/canal?' + q, d => {
+    const c = d.canal || {};
+    return `<div class="resumo">
+      <div class="kpi"><small>Canal</small><b>${esc(c.nome)}</b></div>
+      <div class="kpi"><small>Inscritos</small><b>${fmt(c.inscritos)}</b></div>
+      <div class="kpi"><small>Vídeos</small><b>${fmt(c.total_videos)}</b></div>
+      <div class="kpi"><small>Views totais</small><b>${fmt(c.total_views)}</b></div>
+      <div class="kpi"><small>Desde</small><b>${c.criado ? c.criado.slice(0,10) : '-'}</b></div></div>
+      <div class="canal">Usar este canal como referência na avaliação:</div>
+      ${cmdBox(`python -m darks avaliar --tipo narrado --nicho "NICHO" --canais "${q.get('canal')}"`)}`;
+  });
+};
+
+async function carregarModelos() {
+  const box = $('#r-modelos');
+  try {
+    const ms = await api('/api/modelos');
+    if (!ms.length) { box.innerHTML = '<div class="vazio">Nenhum modelo ainda.</div>' + cmdBox('python -m darks avaliar --tipo narrado --nicho "seu nicho"'); return; }
+    box.innerHTML = `<table><tr><th>Tipo</th><th>Nicho</th><th>Versão</th><th>Atualizado</th><th>Refs</th><th>Lições</th><th></th></tr>` +
+      ms.map(m => `<tr><td>${esc(m.tipo)}</td><td>${esc(m.nicho)}</td><td>v${m.versao}</td><td>${esc((m.atualizado||'').slice(0,10))}</td><td>${m.referencias}</td><td>${m.licoes}</td>
+        <td><button class="sec" onclick='verModelo(${JSON.stringify(m.tipo)}, ${JSON.stringify(m.nicho)})'>Ver</button></td></tr>`).join('') + '</table><div id="modelo-det"></div>';
+  } catch (e) { box.innerHTML = `<div class="erro">${esc(e.message)}</div>`; }
+}
+
+function lista(arr) { return Array.isArray(arr) && arr.length ? '<ul>' + arr.map(x => `<li>${esc(typeof x === 'object' ? JSON.stringify(x) : x)}</li>`).join('') + '</ul>' : '-'; }
+
+async function verModelo(tipo, nicho) {
+  const m = await api(`/api/modelo?tipo=${encodeURIComponent(tipo)}&nicho=${encodeURIComponent(nicho)}`);
+  const d = m.modelo || {};
+  $('#modelo-det').innerHTML = `
+    <div class="sec-titulo">${esc(tipo)} · ${esc(nicho)} · v${m.versao}</div>
+    <p><b>Promessa:</b> ${esc(d.promessa_central)}<br><b>Público:</b> ${esc(d.publico_alvo)}<br><b>Duração ideal:</b> ${durTxt(d.duracao_ideal_s)}</p>
+    <div class="sec-titulo">Títulos</div>${lista(d.titulos?.padroes)}
+    <div class="sec-titulo">Gancho</div>${lista(d.gancho?.tecnicas)}
+    <div class="sec-titulo">Estrutura</div>${lista((d.estrutura||[]).map(e => `${e.parte} (${e.proporcao_pct}%) — ${e.objetivo}`))}
+    <div class="sec-titulo">Temas que funcionam</div>${lista(d.temas_que_funcionam)}
+    <div class="sec-titulo">Oportunidades</div>${lista(d.lacunas_oportunidades)}
+    <div class="sec-titulo">Checklist de qualidade</div>${lista(d.checklist_qualidade)}
+    <div class="sec-titulo">Lições registradas</div>${lista((m.licoes||[]).map(l => l.nota + (l.video ? ` (${fmt(l.video.views)} views)` : '')))}
+    <div class="sec-titulo">Evolução</div>${lista((m.historico||[]).map(h => `v${h.versao} ${h.data.slice(0,10)}: ${h.resumo}`))}
+    <div class="sec-titulo">Próximos passos</div>
+    ${cmdBox(`python -m darks ideias --tipo ${tipo} --nicho "${nicho}"`)}
+    ${cmdBox(`python -m darks criar --tipo ${tipo} --nicho "${nicho}" --tema "TEMA"`)}
+    <details><summary class="canal">Modelo completo (JSON)</summary><pre>${esc(JSON.stringify(m, null, 2))}</pre></details>`;
+}
+
+(async () => {
+  try {
+    STATUS = await api('/api/status');
+    const nomes = {youtube_api: 'YouTube API', gemini: 'Gemini', pexels: 'Pexels', pixabay: 'Pixabay'};
+    $('#status').innerHTML = Object.entries(nomes).map(([k, n]) => `<span class="chip ${STATUS[k] ? 'on' : ''}" title="${STATUS[k] ? 'configurado' : 'falta a chave no .env'}">${STATUS[k] ? '✓' : '○'} ${n}</span>`).join('');
+    $('#sel-cat').innerHTML = Object.entries(STATUS.categorias).map(([id, n]) => `<option value="${id}">${esc(n)}</option>`).join('');
+  } catch (e) {}
+})();
+</script>
+</body>
+</html>
