@@ -1,0 +1,90 @@
+{
+  "slug": "lusofonia",
+  "titulo": ["EM QUANTOS PAÍSES", "SE FALA PORTUGUÊS?"],
+  "selo": "VEJA O MAPA",
+  "cabecalho": "PAÍSES QUE TÊM O PORTUGUÊS COMO LÍNGUA OFICIAL",
+  "contadorRotulo": "PAÍSES",
+  "cenas": [
+    {
+      "tipo": "intro",
+      "fala": "Em quantos países do mundo o português é língua oficial? Pode parecer pouco, mas eles estão espalhados por quatro continentes. Veja no mapa."
+    },
+    {
+      "tipo": "pais", "id": "076", "nome": "Brasil", "bandeira": "br",
+      "continente": "AMÉRICA DO SUL", "info": "≈ 212 milhões de habitantes",
+      "fala": "Começando pelo Brasil, o maior de todos, com mais de duzentos e dez milhões de habitantes."
+    },
+    {
+      "tipo": "pais", "id": "620", "nome": "Portugal", "bandeira": "pt",
+      "continente": "EUROPA", "info": "≈ 10,6 milhões de habitantes",
+      "camera": [-8.5, 39.8, 9],
+      "fala": "Portugal, onde tudo começou, com cerca de dez milhões de pessoas."
+    },
+    {
+      "tipo": "pais", "id": "024", "nome": "Angola", "bandeira": "ao",
+      "continente": "ÁFRICA", "info": "≈ 37 milhões de habitantes",
+      "fala": "Na África, Angola, com mais de trinta e cinco milhões."
+    },
+    {
+      "tipo": "pais", "id": "508", "nome": "Moçambique", "bandeira": "mz",
+      "continente": "ÁFRICA", "info": "≈ 34 milhões de habitantes",
+      "fala": "Moçambique, do outro lado do continente, com trinta e quatro milhões."
+    },
+    {
+      "tipo": "pais", "id": "132", "nome": "Cabo Verde", "bandeira": "cv",
+      "continente": "ÁFRICA", "info": "≈ 500 mil habitantes",
+      "camera": [-21.5, 15.5, 9],
+      "fala": "Cabo Verde, um arquipélago no meio do oceano Atlântico."
+    },
+    {
+      "tipo": "pais", "id": "624", "nome": "Guiné-Bissau", "bandeira": "gw",
+      "continente": "ÁFRICA", "info": "≈ 2,1 milhões de habitantes",
+      "camera": [-15.5, 12, 11],
+      "fala": "Guiné-Bissau, na costa oeste africana."
+    },
+    {
+      "tipo": "pais", "id": "678", "nome": "São Tomé e Príncipe", "bandeira": "st",
+      "continente": "ÁFRICA", "info": "≈ 230 mil habitantes",
+      "camera": [6.8, 0.8, 13],
+      "fala": "São Tomé e Príncipe, o menor país de língua portuguesa da África."
+    },
+    {
+      "tipo": "pais", "id": "226", "nome": "Guiné Equatorial", "bandeira": "gq",
+      "continente": "ÁFRICA", "info": "≈ 1,8 milhão de habitantes",
+      "camera": [9.5, 2.0, 10],
+      "fala": "A Guiné Equatorial, que adotou o português como uma de suas línguas oficiais."
+    },
+    {
+      "tipo": "pais", "id": "626", "nome": "Timor-Leste", "bandeira": "tl",
+      "continente": "ÁSIA", "info": "≈ 1,4 milhão de habitantes",
+      "camera": [125.8, -8.9, 10],
+      "fala": "E, do outro lado do mundo, no sudeste asiático, o Timor-Leste."
+    },
+    {
+      "tipo": "total",
+      "estatisticas": [["9", "PAÍSES"], ["4", "CONTINENTES"], ["≈ 300 mi", "HABITANTES"]],
+      "fala": "No total, são nove países, em quatro continentes, somando cerca de trezentos milhões de habitantes."
+    },
+    {
+      "tipo": "marcador", "id": "446", "nome": "Macau", "bandeira": "mo",
+      "continente": "CHINA", "info": "Região administrativa especial",
+      "camera": [113.2, 22.6, 22],
+      "fala": "E tem mais: em Macau, na China, o português também é língua oficial."
+    },
+    {
+      "tipo": "barra",
+      "titulo": "QUEM MORA NOS PAÍSES LUSÓFONOS?",
+      "destaque": "7 EM CADA 10",
+      "legenda": "SÃO BRASILEIROS",
+      "valor": 0.71,
+      "rotuloA": "BRASIL", "rotuloB": "OUTROS 8 PAÍSES",
+      "fala": "Mas o grande destaque é o Brasil: de cada dez pessoas que vivem nesses países, sete são brasileiras."
+    },
+    {
+      "tipo": "outro",
+      "texto": ["VOCÊ JÁ SABIA", "DISSO?"],
+      "botao": "INSCREVA-SE",
+      "fala": "Você já sabia disso? Comenta aqui embaixo e se inscreve no canal para ver mais mapas."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Gerador de mapas</title>
+<style>
+  @font-face { font-family: "Anton"; src: url("../node_modules/@fontsource/anton/files/anton-latin-400-normal.woff2") format("woff2"); }
+  @font-face { font-family: "Anton"; src: url("../node_modules/@fontsource/anton/files/anton-latin-ext-400-normal.woff2") format("woff2"); unicode-range: U+0100-024F, U+2248; }
+  @font-face { font-family: "Montserrat"; font-weight: 600; src: url("../node_modules/@fontsource/montserrat/files/montserrat-latin-600-normal.woff2") format("woff2"); }
+  @font-face { font-family: "Montserrat"; font-weight: 800; src: url("../node_modules/@fontsource/montserrat/files/montserrat-latin-800-normal.woff2") format("woff2"); }
+  @font-face { font-family: "Montserrat"; font-weight: 900; src: url("../node_modules/@fontsource/montserrat/files/montserrat-latin-900-normal.woff2") format("woff2"); }
+  html, body { margin: 0; padding: 0; background: #000; overflow: hidden; }
+  canvas { display: block; }
+</style>
+<script src="../node_modules/d3-array/dist/d3-array.min.js"></script>
+<script src="../node_modules/d3-geo/dist/d3-geo.min.js"></script>
+<script src="../node_modules/d3-interpolate/dist/d3-interpolate.min.js"></script>
+<script src="../node_modules/topojson-client/dist/topojson-client.min.js"></script>
+</head>
+<body>
+<canvas id="tela" width="1920" height="1080"></canvas>
+<script src="cena.js"></script>
+</body>
+</html>

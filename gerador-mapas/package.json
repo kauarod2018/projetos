@@ -1,0 +1,19 @@
+{
+  "name": "gerador-mapas",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Gera vídeos explicativos com mapa animado, narração e música a partir de um roteiro JSON.",
+  "scripts": {
+    "render": "node engine/render.js"
+  },
+  "dependencies": {
+    "@fontsource/anton": "5.0.20",
+    "@fontsource/montserrat": "5.0.19",
+    "d3-array": "3.2.4",
+    "d3-geo": "3.1.1",
+    "d3-interpolate": "3.0.1",
+    "flag-icons": "7.2.3",
+    "topojson-client": "3.1.0",
+    "world-atlas": "2.0.2"
+  }
+}
