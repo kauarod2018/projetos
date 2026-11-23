@@ -11,3 +11,6 @@ saida/
 video/out/
 
 .DS_Store
+
+# vídeos de banco baixados (recriados por ferramentas/baixar_broll.py)
+video/public/broll/

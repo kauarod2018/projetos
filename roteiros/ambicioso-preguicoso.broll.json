@@ -1,0 +1,271 @@
+{
+ "_leia": "Vídeos do Pixabay escolhidos por fala (índice no roteiro). Licença Pixabay: uso livre, inclusive comercial, sem crédito obrigatório. Baixe com: .venv/bin/python -I ferramentas/baixar_broll.py roteiros/ambicioso-preguicoso.broll.json",
+ "escolhas": {
+  "0": [
+   {
+    "id": 202987,
+    "autor": "Natures_Embrace",
+    "url": "https://cdn.pixabay.com/video/2024/03/04/202987-919379330_small.mp4",
+    "mini": "https://cdn.pixabay.com/video/2024/03/04/202987-919379330_medium.jpg",
+    "pagina": "https://pixabay.com/videos/id-202987/"
+   }
+  ],
+  "1": [
+   {
+    "id": 4952,
+    "autor": "klimkin",
+    "url": "https://cdn.pixabay.com/video/2016/09/05/4952-181538531_large.mp4",
+    "mini": "https://cdn.pixabay.com/video/2016/09/05/4952-181538531_medium.jpg",
+    "pagina": "https://pixabay.com/videos/id-4952/"
+   }
+  ],
+  "2": [
+   {
+    "id": 38084,
+    "autor": "mephala1980",
+    "url": "https://cdn.pixabay.com/video/2020/05/04/38084-416330724_large.mp4",
+    "mini": "https://cdn.pixabay.com/video/2020/05/04/38084-416330724_medium.jpg",
+    "pagina": "https://pixabay.com/videos/id-38084/"
+   }
+  ],
+  "3": [
+   {
+    "id": 729,
+    "autor": "Vimeo-Free-Videos",
+    "url": "https://cdn.pixabay.com/video/2015/09/08/729-138678099_medium.mp4",
+    "mini": "https://cdn.pixabay.com/video/2015/09/08/729-138678099_medium.jpg",
+    "pagina": "https://pixabay.com/videos/id-729/"
+   }
+  ],
+  "4": [
+   {
+    "id": 40797,
+    "autor": "yogobunny",
+    "url": "https://cdn.pixabay.com/video/2020/06/01/40797-426939500_small.mp4",
+    "mini": "https://cdn.pixabay.com/video/2020/06/01/40797-426939500_medium.jpg",
+    "pagina": "https://pixabay.com/videos/id-40797/"
+   }
+  ],
+  "7": [
+   {
+    "id": 20155,
+    "autor": "JoteF",
+    "url": "https://cdn.pixabay.com/video/2018/12/20/20155-307814489_small.mp4",
+    "mini": "https://cdn.pixabay.com/video/2018/12/20/20155-307814489_medium.jpg",
+    "pagina": "https://pixabay.com/videos/id-20155/"
+   }
+  ],
+  "8": [
+   {
+    "id": 10809,
+    "autor": "Coverr-Free-Footage",
+    "url": "https://cdn.pixabay.com/video/2017/07/23/10809-226624946_large.mp4",
+    "mini": "https://cdn.pixabay.com/video/2017/07/23/10809-226624946_medium.jpg",
+    "pagina": "https://pixabay.com/videos/id-10809/"
+   }
+  ],
+  "10": [
+   {
+    "id": 123441,
+    "autor": "olenailinska",
+    "url": "https://cdn.pixabay.com/video/2022/07/07/123441-727986669_large.mp4",
+    "mini": "https://cdn.pixabay.com/video/2022/07/07/123441-727986669_medium.jpg",
+    "pagina": "https://pixabay.com/videos/id-123441/"
+   }
+  ],
+  "12": [
+   {
+    "id": 151295,
+    "autor": "ghasoub",
+    "url": "https://cdn.pixabay.com/video/2023/02/19/151295-800360305_small.mp4",
+    "mini": "https://cdn.pixabay.com/video/2023/02/19/151295-800360305_medium.jpg",
+    "pagina": "https://pixabay.com/videos/id-151295/"
+   }
+  ],
+  "13": [
+   {
+    "id": 66810,
+    "autor": "JustYøu",
+    "url": "https://cdn.pixabay.com/video/2021/03/03/66810-520427372_small.mp4",
+    "mini": "https://cdn.pixabay.com/video/2021/03/03/66810-520427372_medium.jpg",
+    "pagina": "https://pixabay.com/videos/id-66810/"
+   }
+  ],
+  "15": [
+   {
+    "id": 9037,
+    "autor": "padrinan",
+    "url": "https://cdn.pixabay.com/video/2017/05/09/9037-217261005_large.mp4",
+    "mini": "https://cdn.pixabay.com/video/2017/05/09/9037-217261005_medium.jpg",
+    "pagina": "https://pixabay.com/videos/id-9037/"
+   }
+  ],
+  "16": [
+   {
+    "id": 8257,
+    "autor": "Coverr-Free-Footage",
+    "url": "https://cdn.pixabay.com/video/2017/03/08/8257-207598619_large.mp4",
+    "mini": "https://cdn.pixabay.com/video/2017/03/08/8257-207598619_medium.jpg",
+    "pagina": "https://pixabay.com/videos/id-8257/"
+   }
+  ],
+  "17": [
+   {
+    "id": 1058,
+    "autor": "Coverr-Free-Footage",
+    "url": "https://cdn.pixabay.com/video/2015/10/16/1058-142621439_large.mp4",
+    "mini": "https://cdn.pixabay.com/video/2015/10/16/1058-142621439_medium.jpg",
+    "pagina": "https://pixabay.com/videos/id-1058/"
+   }
+  ],
+  "18": [
+   {
+    "id": 1028,
+    "autor": "Coverr-Free-Footage",
+    "url": "https://cdn.pixabay.com/video/2015/10/16/1028-142624363_large.mp4",
+    "mini": "https://cdn.pixabay.com/video/2015/10/16/1028-142624363_medium.jpg",
+    "pagina": "https://pixabay.com/videos/id-1028/"
+   }
+  ],
+  "21": [
+   {
+    "id": 736,
+    "autor": "elchao",
+    "url": "https://cdn.pixabay.com/video/2015/09/09/736-138808023_large.mp4",
+    "mini": "https://cdn.pixabay.com/video/2015/09/09/736-138808023_medium.jpg",
+    "pagina": "https://pixabay.com/videos/id-736/"
+   }
+  ],
+  "22": [
+   {
+    "id": 8294,
+    "autor": "evagd02",
+    "url": "https://cdn.pixabay.com/video/2017/03/10/8294-208046219_large.mp4",
+    "mini": "https://cdn.pixabay.com/video/2017/03/10/8294-208046219_medium.jpg",
+    "pagina": "https://pixabay.com/videos/id-8294/"
+   }
+  ],
+  "23": [
+   {
+    "id": 44082,
+    "autor": "aghyadnajjar",
+    "url": "https://cdn.pixabay.com/video/2020/07/07/44082-438195529_large.mp4",
+    "mini": "https://cdn.pixabay.com/video/2020/07/07/44082-438195529_medium.jpg",
+    "pagina": "https://pixabay.com/videos/id-44082/"
+   }
+  ],
+  "25": [
+   {
+    "id": 89536,
+    "autor": "BlenderTimer",
+    "url": "https://cdn.pixabay.com/video/2021/09/24/89536-614024920_small.mp4",
+    "mini": "https://cdn.pixabay.com/video/2021/09/24/89536-614024920_medium.jpg",
+    "pagina": "https://pixabay.com/videos/id-89536/"
+   }
+  ],
+  "26": [
+   {
+    "id": 26771,
+    "autor": "SecretPoems",
+    "url": "https://cdn.pixabay.com/video/2019/09/11/26771-359604145_large.mp4",
+    "mini": "https://cdn.pixabay.com/video/2019/09/11/26771-359604145_medium.jpg",
+    "pagina": "https://pixabay.com/videos/id-26771/"
+   }
+  ],
+  "29": [
+   {
+    "id": 11722,
+    "autor": "Iconikmg",
+    "url": "https://cdn.pixabay.com/video/2017/08/30/11722-231759069_large.mp4",
+    "mini": "https://cdn.pixabay.com/video/2017/08/30/11722-231759069_medium.jpg",
+    "pagina": "https://pixabay.com/videos/id-11722/"
+   }
+  ],
+  "30": [
+   {
+    "id": 139365,
+    "autor": "Matthias_Groeneveld",
+    "url": "https://cdn.pixabay.com/video/2022/11/16/139365-772278357_small.mp4",
+    "mini": "https://cdn.pixabay.com/video/2022/11/16/139365-772278357_medium.jpg",
+    "pagina": "https://pixabay.com/videos/id-139365/"
+   }
+  ],
+  "31": [
+   {
+    "id": 43559,
+    "autor": "PhotoDhaba",
+    "url": "https://cdn.pixabay.com/video/2020/07/01/43559-436237492_large.mp4",
+    "mini": "https://cdn.pixabay.com/video/2020/07/01/43559-436237492_medium.jpg",
+    "pagina": "https://pixabay.com/videos/id-43559/"
+   }
+  ],
+  "32": [
+   {
+    "id": 27539,
+    "autor": "socialsudo",
+    "url": "https://cdn.pixabay.com/video/2019/10/04/27539-364430966_small.mp4",
+    "mini": "https://cdn.pixabay.com/video/2019/10/04/27539-364430966_medium.jpg",
+    "pagina": "https://pixabay.com/videos/id-27539/"
+   }
+  ],
+  "33": [
+   {
+    "id": 19454,
+    "autor": "andrepazleal",
+    "url": "https://cdn.pixabay.com/video/2018/11/21/19454-302196093_large.mp4",
+    "mini": "https://cdn.pixabay.com/video/2018/11/21/19454-302196093_medium.jpg",
+    "pagina": "https://pixabay.com/videos/id-19454/"
+   }
+  ],
+  "34": [
+   {
+    "id": 107240,
+    "autor": "mootlak",
+    "url": "https://cdn.pixabay.com/video/2022/02/09/107240-678130070_small.mp4",
+    "mini": "https://cdn.pixabay.com/video/2022/02/09/107240-678130070_medium.jpg",
+    "pagina": "https://pixabay.com/videos/id-107240/"
+   }
+  ],
+  "36": [
+   {
+    "id": 7127,
+    "autor": "Hans",
+    "url": "https://cdn.pixabay.com/video/2017/01/07/7127-336300875_small.mp4",
+    "mini": "https://cdn.pixabay.com/video/2017/01/07/7127-336300875_medium.jpg",
+    "pagina": "https://pixabay.com/videos/id-7127/"
+   }
+  ],
+  "37": [
+   {
+    "id": 29172,
+    "autor": "caelan",
+    "url": "https://cdn.pixabay.com/video/2019/11/18/29172-374013454_large.mp4",
+    "mini": "https://cdn.pixabay.com/video/2019/11/18/29172-374013454_medium.jpg",
+    "pagina": "https://pixabay.com/videos/id-29172/"
+   }
+  ],
+  "35": [
+   {
+    "id": 9037,
+    "autor": "padrinan",
+    "url": "https://cdn.pixabay.com/video/2017/05/09/9037-217261005_large.mp4",
+    "mini": "https://cdn.pixabay.com/video/2017/05/09/9037-217261005_medium.jpg",
+    "pagina": "https://pixabay.com/videos/id-9037/"
+   },
+   {
+    "id": 8257,
+    "autor": "Coverr-Free-Footage",
+    "url": "https://cdn.pixabay.com/video/2017/03/08/8257-207598619_large.mp4",
+    "mini": "https://cdn.pixabay.com/video/2017/03/08/8257-207598619_medium.jpg",
+    "pagina": "https://pixabay.com/videos/id-8257/"
+   },
+   {
+    "id": 26771,
+    "autor": "SecretPoems",
+    "url": "https://cdn.pixabay.com/video/2019/09/11/26771-359604145_large.mp4",
+    "mini": "https://cdn.pixabay.com/video/2019/09/11/26771-359604145_medium.jpg",
+    "pagina": "https://pixabay.com/videos/id-26771/"
+   }
+  ]
+ }
+}

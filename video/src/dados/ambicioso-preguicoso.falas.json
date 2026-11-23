@@ -1,0 +1,236 @@
+[
+ {
+  "fala": 0,
+  "texto": "São onze e quarenta da noite, e você acabou de decidir que amanhã a sua vida muda.",
+  "startMs": 0,
+  "endMs": 4480
+ },
+ {
+  "fala": 1,
+  "texto": "Vai acordar às seis, treinar, estudar duas horas e finalmente começar aquele projeto.",
+  "startMs": 5120,
+  "endMs": 9960
+ },
+ {
+  "fala": 2,
+  "texto": "Você até salva um vídeo sobre produtividade, para assistir depois.",
+  "startMs": 11100,
+  "endMs": 14360
+ },
+ {
+  "fala": 3,
+  "texto": "Aí o despertador toca, você aperta a soneca três vezes, e o plano vira semana que vem.",
+  "startMs": 15500,
+  "endMs": 20300
+ },
+ {
+  "fala": 4,
+  "texto": "Se isso parece familiar, presta atenção, porque o seu problema provavelmente não é preguiça.",
+  "startMs": 21280,
+  "endMs": 25700
+ },
+ {
+  "fala": 5,
+  "texto": "Ambição e preguiça parecem inimigas. Mas, muitas vezes, são a mesma coisa vista de lados diferentes.",
+  "startMs": 26600,
+  "endMs": 32680
+ },
+ {
+  "fala": 6,
+  "texto": "A ambição enxerga o topo da montanha. E é justamente por enxergar o topo que o primeiro passo parece ridículo.",
+  "startMs": 33860,
+  "endMs": 39660
+ },
+ {
+  "fala": 7,
+  "texto": "Estudar vinte minutos parece inútil quando você quer dominar um idioma inteiro.",
+  "startMs": 40800,
+  "endMs": 44380
+ },
+ {
+  "fala": 8,
+  "texto": "Correr um quilômetro parece piada quando você quer um corpo completamente diferente.",
+  "startMs": 45500,
+  "endMs": 48860
+ },
+ {
+  "fala": 9,
+  "texto": "Então o seu cérebro faz uma conta simples. Se o pequeno não resolve, é melhor não fazer nada.",
+  "startMs": 50020,
+  "endMs": 55160
+ },
+ {
+  "fala": 10,
+  "texto": "E não fazer nada tem uma vantagem enorme. Enquanto você não tenta, o seu plano continua perfeito.",
+  "startMs": 56020,
+  "endMs": 61640
+ },
+ {
+  "fala": 11,
+  "texto": "O seu eu de amanhã é sempre mais disciplinado, mais descansado e mais corajoso do que o de hoje.",
+  "startMs": 62840,
+  "endMs": 67880
+ },
+ {
+  "fala": 12,
+  "texto": "Só que o amanhã nunca chega com essa pessoa. Chega você mesmo, com o mesmo sono e as mesmas desculpas.",
+  "startMs": 68820,
+  "endMs": 74480
+ },
+ {
+  "fala": 13,
+  "texto": "Por isso, a primeira mudança não é ter mais força de vontade. É precisar de menos.",
+  "startMs": 75540,
+  "endMs": 80100
+ },
+ {
+  "fala": 14,
+  "texto": "Primeiro. Diminua a tarefa até ela ficar quase vergonhosa.",
+  "startMs": 81880,
+  "endMs": 84700
+ },
+ {
+  "fala": 15,
+  "texto": "Não é estudar inglês. É abrir o livro e ler uma página.",
+  "startMs": 85580,
+  "endMs": 89000
+ },
+ {
+  "fala": 16,
+  "texto": "Não é entrar em forma. É calçar o tênis e passar pela porta de casa.",
+  "startMs": 90160,
+  "endMs": 93820
+ },
+ {
+  "fala": 17,
+  "texto": "Parece pouco, e é de propósito. O difícil quase nunca é continuar. O difícil é começar.",
+  "startMs": 94840,
+  "endMs": 100560
+ },
+ {
+  "fala": 18,
+  "texto": "Quando você começa, alguma coisa muda. A tarefa que ficou pela metade não sai da sua cabeça.",
+  "startMs": 101620,
+  "endMs": 106540
+ },
+ {
+  "fala": 19,
+  "texto": "Na psicologia isso tem até nome, efeito Zeigarnik. A gente tende a lembrar mais do que começou e não terminou.",
+  "startMs": 107680,
+  "endMs": 113680
+ },
+ {
+  "fala": 20,
+  "texto": "Segundo. Tire as decisões do caminho.",
+  "startMs": 114740,
+  "endMs": 116880
+ },
+ {
+  "fala": 21,
+  "texto": "Cada vez que você precisa decidir se vai ou não vai, a preguiça ganha mais uma chance.",
+  "startMs": 118100,
+  "endMs": 122380
+ },
+ {
+  "fala": 22,
+  "texto": "Deixe a roupa do treino separada na noite anterior. Deixe o caderno aberto em cima da mesa.",
+  "startMs": 123680,
+  "endMs": 128479
+ },
+ {
+  "fala": 23,
+  "texto": "Deixe o celular carregando em outro cômodo. Faça o caminho certo ser o mais curto.",
+  "startMs": 129500,
+  "endMs": 133960
+ },
+ {
+  "fala": 24,
+  "texto": "Terceiro. Pare de medir resultado, e comece a medir presença.",
+  "startMs": 135080,
+  "endMs": 138560
+ },
+ {
+  "fala": 25,
+  "texto": "No começo, o resultado demora a aparecer. E é exatamente aí que o ambicioso desiste.",
+  "startMs": 139400,
+  "endMs": 144700
+ },
+ {
+  "fala": 26,
+  "texto": "Então marque um xis no calendário em cada dia que você apareceu. Só isso.",
+  "startMs": 145580,
+  "endMs": 149660
+ },
+ {
+  "fala": 27,
+  "texto": "Depois de uma semana de xis seguidos, você não vai querer quebrar a corrente.",
+  "startMs": 150560,
+  "endMs": 154100
+ },
+ {
+  "fala": 28,
+  "texto": "Quarto. Aceite que vai ter dia ruim.",
+  "startMs": 155160,
+  "endMs": 157400
+ },
+ {
+  "fala": 29,
+  "texto": "O problema nunca foi perder um dia. É usar um dia perdido como prova de que você não consegue.",
+  "startMs": 158340,
+  "endMs": 163080
+ },
+ {
+  "fala": 30,
+  "texto": "Errou hoje? Volte amanhã com a menor versão possível da tarefa. Sem drama, e sem promessa nova.",
+  "startMs": 163920,
+  "endMs": 169880
+ },
+ {
+  "fala": 31,
+  "texto": "A disciplina que você admira nos outros não é um dom. É repetição que ficou chata e virou automática.",
+  "startMs": 171040,
+  "endMs": 176700
+ },
+ {
+  "fala": 32,
+  "texto": "Ninguém acorda motivado todo dia. Quem chega longe só aprendeu a agir sem esperar a vontade.",
+  "startMs": 177640,
+  "endMs": 182600
+ },
+ {
+  "fala": 33,
+  "texto": "Então, hoje à noite, não faça um plano gigante para mudar a sua vida.",
+  "startMs": 183800,
+  "endMs": 187340
+ },
+ {
+  "fala": 34,
+  "texto": "Escolha uma única coisa pequena, e faça agora, antes de terminar este vídeo.",
+  "startMs": 188320,
+  "endMs": 192300
+ },
+ {
+  "fala": 35,
+  "texto": "Abre o livro. Calça o tênis. Escreve a primeira linha.",
+  "startMs": 193320,
+  "endMs": 197040
+ },
+ {
+  "fala": 36,
+  "texto": "Porque a pessoa que você quer ser não aparece num dia de motivação.",
+  "startMs": 198120,
+  "endMs": 200840
+ },
+ {
+  "fala": 37,
+  "texto": "Ela aparece aos poucos, em dias comuns, quando você faz o pequeno mesmo achando que não serve para nada.",
+  "startMs": 201920,
+  "endMs": 206960
+ },
+ {
+  "fala": 38,
+  "texto": "E se este vídeo te ajudou, comenta aqui embaixo qual vai ser a sua tarefa ridícula de amanhã.",
+  "startMs": 207820,
+  "endMs": 212280
+ }
+]

@@ -1,12 +1,17 @@
 import type { Caption } from "@remotion/captions";
 import React from "react";
-import { Composition } from "remotion";
+import { Composition, Still } from "remotion";
 import { Arena3D } from "./Arena3D";
 import { Batalha2D } from "./Batalha2D";
 import legendasJson from "./dados/legendas.json";
 import ferroviaFalas from "./dados/ferrovia-do-diabo.falas.json";
 import ferroviaLegendas from "./dados/ferrovia-do-diabo.json";
 import { FerroviaDoDiabo, type Fala } from "./FerroviaDoDiabo";
+import ambiciosoFalas from "./dados/ambicioso-preguicoso.falas.json";
+import ambiciosoLegendas from "./dados/ambicioso-preguicoso.json";
+import ambiciosoBroll from "../../roteiros/ambicioso-preguicoso.broll.json";
+import { AmbiciosoPreguicoso } from "./AmbiciosoPreguicoso";
+import { CapaAmbicioso } from "./ensaio/Capa";
 
 const legendas = legendasJson as Caption[];
 const FPS = 30;
@@ -59,6 +64,23 @@ export const RemotionRoot: React.FC = () => {
           audio: "ferrovia-do-diabo.wav",
         }}
       />
+      {/* Vídeo-ensaio horizontal (remodelagem de formato): duração = narração + 2 s */}
+      <Composition
+        id="AmbiciosoPreguicoso"
+        component={AmbiciosoPreguicoso}
+        durationInFrames={Math.ceil(((ambiciosoFalas[ambiciosoFalas.length - 1].endMs + 2000) / 1000) * FPS)}
+        fps={FPS}
+        width={1920}
+        height={1080}
+        defaultProps={{
+          legendas: ambiciosoLegendas as Caption[],
+          falas: ambiciosoFalas as Fala[],
+          broll: ambiciosoBroll.escolhas,
+          audio: "ambicioso-preguicoso.wav",
+          trilha: "trilha-ambicioso.mp3",
+        }}
+      />
+      <Still id="CapaAmbicioso" component={CapaAmbicioso} width={1280} height={720} defaultProps={{ frase: "Segunda eu começo" }} />
       <Composition id="Arena3D" component={Arena3D} durationInFrames={6 * FPS} fps={FPS} width={1080} height={1920} />
     </>
   );

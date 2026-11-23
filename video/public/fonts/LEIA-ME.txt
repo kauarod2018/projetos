@@ -6,3 +6,5 @@ Este arquivo contém só o subconjunto "latin" (cobre todos os acentos do portug
 Cinzel — por Natanael Gama. SIL Open Font License 1.1. https://fonts.google.com/specimen/Cinzel
 Caveat — por Impallari Type. SIL Open Font License 1.1. https://fonts.google.com/specimen/Caveat
 (subconjunto "latin", cobre os acentos do português)
+
+Cabin Sketch — por Pablo Impallari. SIL Open Font License 1.1. https://fonts.google.com/specimen/Cabin+Sketch
