@@ -1,0 +1,7 @@
+node_modules/
+build/
+saida/
+public/clipes/
+public/audio/
+blender/terra.png
+__pycache__/

@@ -1,0 +1,51 @@
+{
+  "slug": "lua-nao-cai",
+  "titulo": ["POR QUE A LUA", "NÃO CAI NA TERRA?"],
+  "cenas": [
+    {
+      "id": "gancho", "ferramenta": "blender", "clipe": "terra_lua",
+      "rotulo": "",
+      "fala": "A Lua pesa setenta e três quintilhões de toneladas. Ela não está presa em nada. E mesmo assim, nunca cai na Terra. Por quê?"
+    },
+    {
+      "id": "virada", "ferramenta": "blender", "clipe": "terra_lua",
+      "rotulo": "",
+      "fala": "A resposta é surpreendente: a Lua está caindo. O tempo todo. Ela só nunca acerta o chão."
+    },
+    {
+      "id": "canhao", "ferramenta": "blender", "clipe": "canhao",
+      "rotulo": "O CANHÃO DE NEWTON",
+      "fala": "Isaac Newton imaginou um canhão no alto de uma montanha gigante. Com pouca velocidade, a bala cai perto. Com mais velocidade, ela cai cada vez mais longe."
+    },
+    {
+      "id": "curvatura", "ferramenta": "manim", "clipe": "Curvatura",
+      "rotulo": "A CURVA DA TERRA",
+      "fala": "Mas a Terra é redonda. A cada oito quilômetros, a superfície se curva cerca de cinco metros para baixo."
+    },
+    {
+      "id": "queda", "ferramenta": "manim", "clipe": "QuedaLivre",
+      "rotulo": "QUEDA LIVRE",
+      "fala": "E qualquer objeto em queda livre cai, no primeiro segundo, quase exatamente cinco metros."
+    },
+    {
+      "id": "orbita", "ferramenta": "manim", "clipe": "Orbita",
+      "rotulo": "O SEGREDO DA ÓRBITA",
+      "fala": "Então, se a bala for lançada a oito quilômetros por segundo, ela cai cinco metros, mas o chão também se afasta cinco metros. Ela cai para sempre, sem nunca chegar. Isso é uma órbita."
+    },
+    {
+      "id": "estacao", "ferramenta": "blender", "clipe": "orbita_3d",
+      "rotulo": "ÓRBITA BAIXA",
+      "fala": "São cerca de vinte e oito mil quilômetros por hora, praticamente a velocidade da Estação Espacial Internacional."
+    },
+    {
+      "id": "lua", "ferramenta": "manim", "clipe": "Lua",
+      "rotulo": "E A LUA?",
+      "fala": "A Lua faz a mesma coisa, só que a trezentos e oitenta e quatro mil quilômetros de distância. A cada segundo, ela cai pouco mais de um milímetro em direção à Terra, e avança um quilômetro para o lado."
+    },
+    {
+      "id": "final", "ferramenta": "blender", "clipe": "terra_lua",
+      "rotulo": "",
+      "fala": "Ou seja: a Lua não cai na Terra porque está sempre caindo, e sempre errando. Se você curtiu, se inscreve no canal."
+    }
+  ]
+}

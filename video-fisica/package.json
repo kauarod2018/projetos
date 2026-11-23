@@ -1,0 +1,26 @@
+{
+  "name": "video-fisica",
+  "version": "1.0.0",
+  "description": "Vídeo de física feito com Blender, Manim, Remotion e FFmpeg",
+  "scripts": {
+    "estudio": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts LuaNaoCai build/video_mudo.mp4"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fontsource/anton": "^5.0.20",
+    "@fontsource/montserrat": "^5.0.19",
+    "@remotion/cli": "^4.0.380",
+    "@remotion/renderer": "^4.0.380",
+    "@types/react": "^19.1.0",
+    "d3-array": "^3.2.4",
+    "d3-geo": "^3.1.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "remotion": "^4.0.380",
+    "topojson-client": "^3.1.0",
+    "typescript": "^5.6.3",
+    "world-atlas": "^2.0.2"
+  }
+}

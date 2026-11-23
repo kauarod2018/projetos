@@ -1,0 +1,7 @@
+import { Config } from "@remotion/cli/config";
+
+// Usa o Chromium já instalado na máquina, em vez de baixar outro
+Config.setBrowserExecutable("/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell");
+Config.setVideoImageFormat("jpeg");
+Config.setJpegQuality(92);
+Config.setConcurrency(2);
