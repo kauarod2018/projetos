@@ -1,0 +1,29 @@
+{
+  "name": "video-kit",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Kit para fazer vídeos 2D/3D por código com Remotion",
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "remotion render",
+    "still": "remotion still"
+  },
+  "dependencies": {
+    "@react-three/fiber": "9.3.0",
+    "@remotion/captions": "4.0.545",
+    "@remotion/cli": "4.0.545",
+    "@remotion/fonts": "4.0.545",
+    "@remotion/media": "4.0.545",
+    "@remotion/shapes": "4.0.545",
+    "@remotion/three": "4.0.545",
+    "react": "19.2.0",
+    "react-dom": "19.2.0",
+    "remotion": "4.0.545",
+    "three": "0.178.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.2",
+    "@types/three": "0.178.1",
+    "typescript": "5.9.3"
+  }
+}

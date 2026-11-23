@@ -1,0 +1,6 @@
+faster-whisper==1.2.1
+av==15.1.0
+scenedetect[opencv-headless]==0.6.7
+yt-dlp==2026.10.26
+piper-tts==1.8.0
+pillow==11.3.0

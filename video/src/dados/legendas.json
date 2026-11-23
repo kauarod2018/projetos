@@ -1,0 +1,226 @@
+[
+ {
+  "text": "Você",
+  "startMs": 0,
+  "endMs": 400,
+  "timestampMs": 200,
+  "confidence": 0.47
+ },
+ {
+  "text": " acorda",
+  "startMs": 400,
+  "endMs": 800,
+  "timestampMs": 600,
+  "confidence": 0.922
+ },
+ {
+  "text": " no",
+  "startMs": 800,
+  "endMs": 880,
+  "timestampMs": 840,
+  "confidence": 0.986
+ },
+ {
+  "text": " meio",
+  "startMs": 880,
+  "endMs": 1020,
+  "timestampMs": 950,
+  "confidence": 0.999
+ },
+ {
+  "text": " de",
+  "startMs": 1020,
+  "endMs": 1140,
+  "timestampMs": 1080,
+  "confidence": 0.994
+ },
+ {
+  "text": " uma",
+  "startMs": 1140,
+  "endMs": 1260,
+  "timestampMs": 1200,
+  "confidence": 0.986
+ },
+ {
+  "text": " arena.",
+  "startMs": 1260,
+  "endMs": 1580,
+  "timestampMs": 1420,
+  "confidence": 0.966
+ },
+ {
+  "text": " Do",
+  "startMs": 2300,
+  "endMs": 2620,
+  "timestampMs": 2460,
+  "confidence": 0.839
+ },
+ {
+  "text": " outro",
+  "startMs": 2620,
+  "endMs": 2880,
+  "timestampMs": 2750,
+  "confidence": 0.998
+ },
+ {
+  "text": " lado,",
+  "startMs": 2880,
+  "endMs": 3160,
+  "timestampMs": 3020,
+  "confidence": 0.997
+ },
+ {
+  "text": " um",
+  "startMs": 3380,
+  "endMs": 3460,
+  "timestampMs": 3420,
+  "confidence": 0.986
+ },
+ {
+  "text": " lutador",
+  "startMs": 3460,
+  "endMs": 3900,
+  "timestampMs": 3680,
+  "confidence": 0.996
+ },
+ {
+  "text": " feito",
+  "startMs": 3900,
+  "endMs": 4180,
+  "timestampMs": 4040,
+  "confidence": 0.966
+ },
+ {
+  "text": " de",
+  "startMs": 4180,
+  "endMs": 4380,
+  "timestampMs": 4280,
+  "confidence": 0.998
+ },
+ {
+  "text": " fogo",
+  "startMs": 4380,
+  "endMs": 4700,
+  "timestampMs": 4540,
+  "confidence": 0.997
+ },
+ {
+  "text": " começa",
+  "startMs": 4700,
+  "endMs": 4940,
+  "timestampMs": 4820,
+  "confidence": 0.987
+ },
+ {
+  "text": " a",
+  "startMs": 4940,
+  "endMs": 5100,
+  "timestampMs": 5020,
+  "confidence": 0.995
+ },
+ {
+  "text": " brilhar.",
+  "startMs": 5100,
+  "endMs": 5520,
+  "timestampMs": 5310,
+  "confidence": 0.998
+ },
+ {
+  "text": " Ele",
+  "startMs": 5520,
+  "endMs": 6620,
+  "timestampMs": 6070,
+  "confidence": null
+ },
+ {
+  "text": " ataca",
+  "startMs": 6620,
+  "endMs": 6820,
+  "timestampMs": 6720,
+  "confidence": 0.924
+ },
+ {
+  "text": " primeiro.",
+  "startMs": 6820,
+  "endMs": 7200,
+  "timestampMs": 7010,
+  "confidence": 0.98
+ },
+ {
+  "text": " E",
+  "startMs": 7800,
+  "endMs": 7980,
+  "timestampMs": 7890,
+  "confidence": 0.876
+ },
+ {
+  "text": " você",
+  "startMs": 7980,
+  "endMs": 8160,
+  "timestampMs": 8070,
+  "confidence": 0.989
+ },
+ {
+  "text": " tem",
+  "startMs": 8160,
+  "endMs": 8340,
+  "timestampMs": 8250,
+  "confidence": 0.984
+ },
+ {
+  "text": " só",
+  "startMs": 8340,
+  "endMs": 8500,
+  "timestampMs": 8420,
+  "confidence": 0.996
+ },
+ {
+  "text": " três",
+  "startMs": 8500,
+  "endMs": 8680,
+  "timestampMs": 8590,
+  "confidence": null
+ },
+ {
+  "text": " segundos",
+  "startMs": 8680,
+  "endMs": 9060,
+  "timestampMs": 8870,
+  "confidence": 0.994
+ },
+ {
+  "text": " para",
+  "startMs": 9060,
+  "endMs": 9340,
+  "timestampMs": 9200,
+  "confidence": 0.99
+ },
+ {
+  "text": " decidir.",
+  "startMs": 9340,
+  "endMs": 10020,
+  "timestampMs": 9680,
+  "confidence": 0.996
+ },
+ {
+  "text": " Correr",
+  "startMs": 10740,
+  "endMs": 11120,
+  "timestampMs": 10930,
+  "confidence": 0.763
+ },
+ {
+  "text": " ou",
+  "startMs": 11120,
+  "endMs": 11200,
+  "timestampMs": 11160,
+  "confidence": 0.973
+ },
+ {
+  "text": " lutar?",
+  "startMs": 11200,
+  "endMs": 11500,
+  "timestampMs": 11350,
+  "confidence": 0.897
+ }
+]

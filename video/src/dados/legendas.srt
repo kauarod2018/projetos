@@ -1,0 +1,19 @@
+1
+00:00:00,000 --> 00:00:01,580
+Você acorda no meio de uma arena.
+
+2
+00:00:02,300 --> 00:00:05,520
+Do outro lado, um lutador feito de fogo começa a brilhar.
+
+3
+00:00:05,520 --> 00:00:07,200
+Ele ataca primeiro.
+
+4
+00:00:07,800 --> 00:00:10,020
+E você tem só três segundos para decidir.
+
+5
+00:00:10,740 --> 00:00:11,500
+Correr ou lutar?

@@ -1,0 +1,8 @@
+# Cena 1: arena vazia, dois lutadores se encaram
+Você acorda no meio de uma arena.
+# Cena 2: o oponente acende
+Do outro lado, um lutador feito de fogo começa a brilhar.
+# Cena 3: choque
+Ele ataca primeiro. E você tem só três segundos para decidir.
+# Cena 4: gancho final
+Correr ou lutar?

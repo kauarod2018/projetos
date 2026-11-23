@@ -1,0 +1,13 @@
+# dependências (recriadas por ferramentas/instalar.sh)
+node_modules/
+.venv/
+__pycache__/
+
+# modelos e vozes baixados
+.cache/
+
+# vídeos renderizados, quadros do "olho", transcrições e referências
+saida/
+video/out/
+
+.DS_Store

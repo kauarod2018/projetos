@@ -1,0 +1,4 @@
+Anton — por Vernon Adams. Licença SIL Open Font License 1.1 (uso livre, inclusive comercial).
+Fonte original: https://fonts.google.com/specimen/Anton
+Texto da licença: https://openfontlicense.org
+Este arquivo contém só o subconjunto "latin" (cobre todos os acentos do português).
