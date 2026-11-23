@@ -108,11 +108,11 @@ const ContaDoCerebro: React.FC<{ em: Em }> = ({ em }) => {
   const deita = spring({ frame: frame - em("nada"), fps, config: { damping: 14 } });
   return (
     <Papel>
-      <Escrita x={160} y={150} largura={1200} alinhar="left" tamanho={96} inicio={em("conta")}>
+      <Escrita x={160} y={150} largura={1200} alinhar="left" tamanho={96} inicio={FUSAO}>
         a conta do cérebro:
       </Escrita>
       <svg width={1920} height={1080} style={{ position: "absolute", inset: 0 }}>
-        <Traco d="M160 290 Q700 270 1240 292" inicio={em("conta") + 14} duracao={14} largura={6} />
+        <Traco d="M160 290 Q700 270 1240 292" inicio={FUSAO + 14} duracao={14} largura={6} />
       </svg>
       <Escrita x={200} y={360} largura={1400} alinhar="left" tamanho={104} inicio={em("pequeno")}>
         o pequeno não resolve
@@ -173,11 +173,11 @@ const Zeigarnik: React.FC<{ em: Em }> = ({ em }) => {
   const fimY = cy + r * Math.sin(ang - Math.PI / 2);
   return (
     <Papel>
-      <Escrita x={120} y={110} largura={1700} tamanho={112} inicio={z - 6}>
+      <Escrita x={120} y={110} largura={1700} tamanho={112} inicio={FUSAO}>
         efeito Zeigarnik
       </Escrita>
       <svg width={1920} height={1080} style={{ position: "absolute", inset: 0 }}>
-        <Traco d="M560 250 Q960 232 1360 252" inicio={z + 8} duracao={12} largura={6} />
+        <Traco d="M560 250 Q960 232 1360 252" inicio={FUSAO + 16} duracao={12} largura={6} />
         {/* balão de pensamento */}
         <circle cx={780} cy={560} r={14} fill="none" stroke={TINTA} strokeWidth={5} opacity={frame > z ? 1 : 0} />
         <circle cx={850} cy={500} r={22} fill="none" stroke={TINTA} strokeWidth={5} opacity={frame > z + 3 ? 1 : 0} />
