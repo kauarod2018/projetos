@@ -11,6 +11,7 @@ Gera:
              ({text, startMs, endMs, timestampMs, confidence}) — pronto para importar no vídeo
   BASE.srt   legenda comum (por frase), para YouTube ou qualquer editor
   BASE.txt   o texto corrido, para ler ou estudar roteiros de referência
+  BASE.falas.json  (só com --roteiro) início e fim de cada fala, para cortar as cenas
 
 Modelos: tiny, base, small (padrão, bom equilíbrio), medium, large-v3 (melhor, mais lento).
 """
@@ -34,7 +35,12 @@ def alinhar_ao_roteiro(palavras: list[dict], roteiro: Path) -> list[dict]:
     """Troca o texto reconhecido pelo texto do roteiro, mantendo os tempos do Whisper."""
     linhas = [l.strip() for l in roteiro.read_text(encoding="utf-8").splitlines()
               if l.strip() and not l.strip().startswith("#")]
-    certas = " ".join(linhas).split()
+    certas: list[str] = []
+    fala_de: list[int] = []  # em qual linha (fala) do roteiro cada palavra está
+    for n, linha in enumerate(linhas):
+        for w in linha.split():
+            certas.append(w)
+            fala_de.append(n)
     ouvidas = [_norm(p["text"]) for p in palavras]
     saida: list[dict] = []
     matcher = difflib.SequenceMatcher(a=ouvidas, b=[_norm(c) for c in certas], autojunk=False)
@@ -53,7 +59,8 @@ def alinhar_ao_roteiro(palavras: list[dict], roteiro: Path) -> list[dict]:
                 i, f, conf = p["startMs"], p["endMs"], p["confidence"]
             else:
                 i, f, conf = ini + k * passo, ini + (k + 1) * passo, None
-            saida.append({"text": texto, "startMs": i, "endMs": f, "timestampMs": (i + f) // 2, "confidence": conf})
+            saida.append({"text": texto, "startMs": i, "endMs": f, "timestampMs": (i + f) // 2, "confidence": conf,
+                          "_fala": fala_de[b1 + k]})
     for n, p in enumerate(saida):
         p["text"] = p["text"] if n == 0 else " " + p["text"]
     return saida
@@ -103,8 +110,17 @@ def main() -> None:
                 "confidence": round(w.probability, 3),
             })
 
+    falas: list[dict] = []
     if args.roteiro:
         palavras = alinhar_ao_roteiro(palavras, args.roteiro)
+        # BASE.falas.json: início e fim de cada linha do roteiro, para cortar as cenas no tempo certo.
+        for p in palavras:
+            n = p.pop("_fala")
+            if not falas or falas[-1]["fala"] != n:
+                falas.append({"fala": n, "texto": "", "startMs": p["startMs"], "endMs": p["endMs"]})
+            falas[-1]["texto"] = (falas[-1]["texto"] + p["text"]).strip()
+            falas[-1]["endMs"] = p["endMs"]
+        base.with_suffix(".falas.json").write_text(json.dumps(falas, ensure_ascii=False, indent=1), encoding="utf-8")
         # Refaz o SRT e o texto com as frases do roteiro (uma legenda por frase).
         blocos_srt, texto, frase = [], [], []
         for p in palavras:

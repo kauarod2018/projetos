@@ -7,6 +7,7 @@ type Props = {
   /** Junta palavras numa mesma "página" de legenda enquanto couberem nesse tempo. */
   readonly msPorPagina?: number;
   readonly fundo?: number;
+  readonly tamanho?: number;
 };
 
 type Pagina = { startMs: number; tokens: { text: string; fromMs: number; toMs: number }[] };
@@ -39,7 +40,7 @@ export const paginar = (legendas: Caption[], msPorPagina: number): Pagina[] => {
 };
 
 /** Legenda palavra por palavra: a palavra falada no momento fica amarela e cresce. */
-export const Legendas: React.FC<Props> = ({ legendas, msPorPagina = 1600, fundo = 360 }) => {
+export const Legendas: React.FC<Props> = ({ legendas, msPorPagina = 1600, fundo = 360, tamanho = 96 }) => {
   const { fps } = useVideoConfig();
   const pages = useMemo(() => paginar(legendas, msPorPagina), [legendas, msPorPagina]);
 
@@ -54,7 +55,7 @@ export const Legendas: React.FC<Props> = ({ legendas, msPorPagina = 1600, fundo 
         if (ate <= de) return null;
         return (
           <Sequence key={pagina.startMs} name={`Legenda ${i + 1}`} from={de} durationInFrames={ate - de}>
-            <PaginaLegenda tokens={pagina.tokens} inicioMs={pagina.startMs} fundo={fundo} />
+            <PaginaLegenda tokens={pagina.tokens} inicioMs={pagina.startMs} fundo={fundo} tamanho={tamanho} />
           </Sequence>
         );
       })}
@@ -66,7 +67,8 @@ const PaginaLegenda: React.FC<{
   tokens: { text: string; fromMs: number; toMs: number }[];
   inicioMs: number;
   fundo: number;
-}> = ({ tokens, inicioMs, fundo }) => {
+  tamanho: number;
+}> = ({ tokens, inicioMs, fundo, tamanho }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const agoraMs = inicioMs + (frame / fps) * 1000;
@@ -78,7 +80,7 @@ const PaginaLegenda: React.FC<{
           maxWidth: 900,
           textAlign: "center",
           fontFamily: "Anton, Impact, sans-serif",
-          fontSize: 96,
+          fontSize: tamanho,
           lineHeight: 1.1,
           textTransform: "uppercase",
           color: "white",

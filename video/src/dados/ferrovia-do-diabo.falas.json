@@ -1,0 +1,74 @@
+[
+ {
+  "fala": 0,
+  "texto": "Por que você não sobreviveria construindo a Ferrovia do Diabo.",
+  "startMs": 0,
+  "endMs": 3040
+ },
+ {
+  "fala": 1,
+  "texto": "São cinco e meia da manhã, no meio da Amazônia, em 1909.",
+  "startMs": 3160,
+  "endMs": 7020
+ },
+ {
+  "fala": 2,
+  "texto": "Você veio de longe atrás de salário, para abrir trezentos e sessenta e seis quilômetros de trilho na selva.",
+  "startMs": 7840,
+  "endMs": 13320
+ },
+ {
+  "fala": 3,
+  "texto": "Antes do café, o capataz te dá uma dose de quinino. É obrigatória.",
+  "startMs": 14060,
+  "endMs": 17860
+ },
+ {
+  "fala": 4,
+  "texto": "Ao meio-dia, o calor e a umidade não deixam a sua camisa secar nunca.",
+  "startMs": 18640,
+  "endMs": 22280
+ },
+ {
+  "fala": 5,
+  "texto": "Mas o perigo de verdade é minúsculo. O mosquito.",
+  "startMs": 23040,
+  "endMs": 25540
+ },
+ {
+  "fala": 6,
+  "texto": "Ao pôr do sol, você tem que estar debaixo do mosquiteiro. Um furo no tecido, e a febre chega.",
+  "startMs": 26420,
+  "endMs": 31320
+ },
+ {
+  "fala": 7,
+  "texto": "Em mil novecentos e onze, mais de cinco mil homens trabalhavam aqui. Quase todos pegaram malária.",
+  "startMs": 32080,
+  "endMs": 37400
+ },
+ {
+  "fala": 8,
+  "texto": "Diziam que cada dormente custou uma vida. Isso é exagero.",
+  "startMs": 38140,
+  "endMs": 41140
+ },
+ {
+  "fala": 9,
+  "texto": "Mas as estimativas falam em seis mil mortos.",
+  "startMs": 41920,
+  "endMs": 44140
+ },
+ {
+  "fala": 10,
+  "texto": "E quando o último trilho ficou pronto, em mil novecentos e doze, a borracha que ele ia carregar já estava perdendo o valor.",
+  "startMs": 44880,
+  "endMs": 50620
+ },
+ {
+  "fala": 11,
+  "texto": "Você ficava até o fim, ou pegava o primeiro barco de volta? Comenta trilho ou barco.",
+  "startMs": 51480,
+  "endMs": 55900
+ }
+]

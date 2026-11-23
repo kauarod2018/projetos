@@ -2,3 +2,7 @@ Anton — por Vernon Adams. Licença SIL Open Font License 1.1 (uso livre, inclu
 Fonte original: https://fonts.google.com/specimen/Anton
 Texto da licença: https://openfontlicense.org
 Este arquivo contém só o subconjunto "latin" (cobre todos os acentos do português).
+
+Cinzel — por Natanael Gama. SIL Open Font License 1.1. https://fonts.google.com/specimen/Cinzel
+Caveat — por Impallari Type. SIL Open Font License 1.1. https://fonts.google.com/specimen/Caveat
+(subconjunto "latin", cobre os acentos do português)

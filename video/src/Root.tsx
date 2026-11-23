@@ -4,6 +4,9 @@ import { Composition } from "remotion";
 import { Arena3D } from "./Arena3D";
 import { Batalha2D } from "./Batalha2D";
 import legendasJson from "./dados/legendas.json";
+import ferroviaFalas from "./dados/ferrovia-do-diabo.falas.json";
+import ferroviaLegendas from "./dados/ferrovia-do-diabo.json";
+import { FerroviaDoDiabo, type Fala } from "./FerroviaDoDiabo";
 
 const legendas = legendasJson as Caption[];
 const FPS = 30;
@@ -40,6 +43,20 @@ export const RemotionRoot: React.FC = () => {
             contagem: quando(["três", "3"]),
             pergunta: quando(["correr"]),
           },
+        }}
+      />
+      {/* Short do canal Você Não Sobreviveria: duração = narração + 1,5 s */}
+      <Composition
+        id="FerroviaDoDiabo"
+        component={FerroviaDoDiabo}
+        durationInFrames={Math.ceil(((ferroviaFalas[ferroviaFalas.length - 1].endMs + 1500) / 1000) * FPS)}
+        fps={FPS}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          legendas: ferroviaLegendas as Caption[],
+          falas: ferroviaFalas as Fala[],
+          audio: "ferrovia-do-diabo.wav",
         }}
       />
       <Composition id="Arena3D" component={Arena3D} durationInFrames={6 * FPS} fps={FPS} width={1080} height={1920} />
