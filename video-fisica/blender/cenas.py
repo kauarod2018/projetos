@@ -16,6 +16,7 @@ AQUI = Path(__file__).resolve().parent
 CENA, DUR, FPS, SAIDA = sys.argv[1], float(sys.argv[2]), int(sys.argv[3]), Path(sys.argv[4])
 TESTE = int(sys.argv[5]) if len(sys.argv) > 5 else None
 NQ = int(round(DUR * FPS))
+GIRO_CANHAO = -90
 
 
 def suave(u):
@@ -228,6 +229,8 @@ def cena_canhao():
     # leva o Brasil (lat -10, lon -50) para o topo, onde fica a montanha
     terra.rotation_mode = "ZXY"
     terra.rotation_euler = (math.radians(-100), 0, math.radians(-50))
+    # gira o globo no eixo vertical (o Brasil continua no topo) para a câmera ver a faixa do equador
+    pivo.rotation_euler = (0, 0, math.radians(GIRO_CANHAO))
     sol((55, 0, -35), 5.0)
     # montanha e canhão no "topo" da Terra
     bpy.ops.mesh.primitive_cone_add(vertices=64, radius1=0.16, radius2=0.004, depth=0.15, location=(0, 0, 1.055))
