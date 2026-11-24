@@ -25,7 +25,7 @@ EMOCOES = {  # cor da cabeça da Cuca (a marca do canal)
     "neutro": None, "tedio": "#9A9A9A", "desconforto": "#8E6CC9", "alivio": "#4CAF7A",
     "triste": "#4A7BD0", "raiva": "#E0533D", "energia": "#F2B33D",
 }
-CABECA_COLORIDA = True  # False = cabeça só com contorno branco
+CABECA_COLORIDA = False  # cabeça só com contorno branco (True = colorida pela emoção)
 FONTE = "Liberation Sans"
 TRACO = 9
 
