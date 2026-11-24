@@ -49,7 +49,7 @@ Serve para aprovar personagem, cores, letras, voz e gráfico antes de produzir o
 
 ---
 
-## 3) Vídeo longo (≈ 9 min, horizontal)
+## 3) Vídeo longo (≈ 10 min, horizontal)
 
 **Título:** O Gráfico do Dunning-Kruger que Você Conhece Está ERRADO
 **Alternativa:** Por que quem sabe menos se acha mais (e o que o estudo realmente mostrou)
@@ -112,7 +112,21 @@ Serve para aprovar personagem, cores, letras, voz e gráfico antes de produzir o
 
 *Na tela:* volta o gráfico; destaque no último grupo, onde a linha mostarda fica *abaixo* da cinza. Uma Cuca de cabeça azul (insegura) com um diploma, achando "ah, isso todo mundo sabe". Depois, duas Cucas olhando provas: a azul vira verde, e a mostarda continua mostarda.
 
-### Capítulo 5: O gráfico que você conhece está errado (5:40–6:50)
+### Capítulo 5: Onde ele aparece no dia a dia (5:40–6:50)
+
+> E onde isso aparece na vida real? Em todo lugar.
+>
+> No trânsito: lembra dos motoristas? Numa pesquisa clássica, noventa e três por cento dos americanos entrevistados se colocaram entre os cinquenta por cento mais habilidosos ao volante. Não tem como todo mundo estar na metade de cima.
+>
+> No trabalho: o colega que acabou de chegar e já sabe como reorganizar a empresa inteira. E, do outro lado, o funcionário experiente que acha que não sabe nada demais e nunca pede aumento.
+>
+> Na internet: quanto mais simples parece um assunto, mais fácil é ter opinião forte sobre ele. Nutrição, economia, criação de filhos. Assuntos complexos que parecem simples são o terreno perfeito para o efeito.
+>
+> E com você mesmo: sabe aquele hobby que você começou há duas semanas e já se sentia ótimo? E que, alguns meses depois, parecia muito mais difícil? Isso não quer dizer que você piorou. Muitas vezes quer dizer que você aprendeu o suficiente para ver o tamanho do assunto.
+
+*Na tela:* quatro quadrinhos que se revezam: carrinhos (contador "93%"), escritório (Cuca mostarda novata vs. Cuca azul veterana), celular com balões de comentário e Cuca tocando violão (mostarda → roxa quando enxerga a partitura gigante).
+
+### Capítulo 6: O gráfico que você conhece está errado (6:50–8:00)
 
 > Agora, aquele gráfico. Você provavelmente já viu: uma curva que sobe rápido até um pico chamado "Monte da Estupidez", despenca no "Vale do Desespero" e depois sobe devagar pela "Ladeira do Esclarecimento".
 >
@@ -122,7 +136,7 @@ Serve para aprovar personagem, cores, letras, voz e gráfico antes de produzir o
 
 *Na tela:* a curva do meme é desenhada com os rótulos em letra de mão; um carimbo vermelho "NÃO ESTÁ NO ESTUDO" e um X. Lado a lado com o gráfico real, de duas linhas.
 
-### Capítulo 6: A polêmica: e se for só estatística? (6:50–8:00)
+### Capítulo 7: A polêmica: e se for só estatística? (8:00–9:10)
 
 > E tem mais. A partir de 2016, alguns pesquisadores fizeram um teste curioso: geraram notas e autoavaliações completamente aleatórias, sem nenhuma psicologia envolvida. E, mesmo assim, apareceu um gráfico parecido com o de Dunning e Kruger.
 >
@@ -132,7 +146,7 @@ Serve para aprovar personagem, cores, letras, voz e gráfico antes de produzir o
 
 *Na tela:* o momento "só dá pra fazer com código". Uma nuvem de pontos aleatórios cai na tela, os pontos se agrupam em 4 colunas e as médias desenham, sozinhas, as mesmas duas linhas do estudo. Depois, uma régua do tamanho do efeito "encolhe" de "GIGANTE" para "real, mas pequeno".
 
-### Capítulo 7: Como não cair nessa (8:00–9:00)
+### Capítulo 8: Como não cair nessa (9:10–10:10)
 
 > Então, como se proteger? Três ideias que vêm das próprias pesquisas.
 >
@@ -144,7 +158,7 @@ Serve para aprovar personagem, cores, letras, voz e gráfico antes de produzir o
 
 *Na tela:* lista numerada escrita à mão, com um item por vez. A Cuca vai mudando de mostarda para verde a cada dica.
 
-### Capítulo 8: Fechamento (9:00–9:25)
+### Capítulo 9: Fechamento (10:10–10:40)
 
 > No fim das contas, o efeito Dunning-Kruger não é sobre "pessoas burras". É sobre todos nós. Em algum assunto, todo mundo está no grupo de baixo, e não percebe.
 >
