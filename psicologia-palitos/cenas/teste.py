@@ -3,7 +3,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-from palitos.estilo import *  # noqa: E402,F403
+from palitos.estilo_papel import *  # noqa: E402,F403
 
 
 def notebook():

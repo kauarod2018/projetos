@@ -117,7 +117,22 @@ def pesado():
             + filtro(rng.standard_normal(len(u)), baixo=600) * np.exp(-u * 14) * 0.25)
 
 
-SONS = {"lapis": lapis, "risco": risco, "marca": marca, "pop": pop, "pesado": pesado}
+def corte():
+    """Corte seco: "fwip" curto."""
+    m = int(0.16 * SR)
+    u = np.arange(m) / SR
+    return filtro(rng.standard_normal(m), baixo=4500, alto=900) * np.sin(np.pi * u / 0.16) ** 2 * 0.16
+
+
+def carimbo():
+    """Batida de carimbo: grave seco + estalo."""
+    u = np.arange(int(0.35 * SR)) / SR
+    grave = np.sin(2 * np.pi * (70 + 120 * np.exp(-u * 35)) * u) * np.exp(-u * 14) * 0.7
+    estalo = filtro(rng.standard_normal(len(u)), baixo=6000, alto=1500) * np.exp(-u * 60) * 0.5
+    return grave + estalo
+
+
+SONS = {"lapis": lapis, "risco": risco, "marca": marca, "pop": pop, "pesado": pesado, "corte": corte, "carimbo": carimbo}
 
 
 def colocar(dest, som, t, g=1.0):
