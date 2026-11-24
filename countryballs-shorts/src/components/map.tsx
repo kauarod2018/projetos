@@ -6,7 +6,7 @@ import { Easing, interpolate, spring, useCurrentFrame, useVideoConfig } from "re
 import world from "world-atlas/countries-50m.json";
 import regionsData from "../geo/regions.json";
 import { FLAGS, FlagName } from "../flags";
-import { CountryBall, Expression } from "./CountryBall";
+import { CountryBall } from "./CountryBall";
 import { FONT } from "./ui";
 
 // Dados: Natural Earth (domínio público), via world-atlas.
@@ -50,7 +50,8 @@ const useMap = () => {
   return c;
 };
 
-export type CountryStyle = { flag?: FlagName; fill?: string; dim?: number };
+// flagBox: [lonMin, latMin, lonMax, latMax] faz vários países dividirem a MESMA bandeira contínua
+export type CountryStyle = { flag?: FlagName; fill?: string; dim?: number; flagBox?: [number, number, number, number] };
 export type RegionOverlay = {
   id?: RegionId; // estado/província
   countryName?: string; // ou um país inteiro (ex.: "Paraguay")
@@ -62,18 +63,33 @@ export type RegionOverlay = {
   pulse?: boolean;
 };
 
-const FlagFill: React.FC<{ d: string; bounds: [[number, number], [number, number]]; flag: FlagName; id: string; plain?: boolean }> = ({
-  d,
-  bounds,
-  flag,
-  id,
-  plain,
-}) => {
+const FlagFill: React.FC<{
+  d: string;
+  bounds: [[number, number], [number, number]];
+  flag: FlagName;
+  id: string;
+  plain?: boolean;
+  stretch?: boolean;
+}> = ({ d, bounds, flag, id, plain, stretch }) => {
   const Flag = FLAGS[flag];
   const [[x0, y0], [x1, y1]] = bounds;
   const s = Math.max(x1 - x0, y1 - y0) / 200;
   const cx = (x0 + x1) / 2;
   const cy = (y0 + y1) / 2;
+  if (stretch) {
+    return (
+      <>
+        <clipPath id={id}>
+          <path d={d} />
+        </clipPath>
+        <g clipPath={`url(#${id})`}>
+          <g transform={`translate(${x0}, ${y0}) scale(${(x1 - x0) / 200}, ${(y1 - y0) / 200})`}>
+            <Flag plain={plain} />
+          </g>
+        </g>
+      </>
+    );
+  }
   return (
     <>
       <clipPath id={id}>
@@ -115,10 +131,16 @@ export const WorldMap: React.FC<{
   );
   const path = useMemo(() => geoPath(projection), [projection]);
   // limites sem recorte da tela: a bandeira fica "presa" ao país quando a câmera anda
-  const fullPath = useMemo(
-    () => geoPath(geoMercator().center([camera.lon, camera.lat]).scale(scale).translate([540, cy]).precision(1)),
+  const fullProj = useMemo(
+    () => geoMercator().center([camera.lon, camera.lat]).scale(scale).translate([540, cy]).precision(1),
     [camera.lon, camera.lat, scale, cy],
   );
+  const fullPath = useMemo(() => geoPath(fullProj), [fullProj]);
+  const boxBounds = (b: [number, number, number, number]): [[number, number], [number, number]] => {
+    const p0 = fullProj([b[0], b[3]]) ?? [0, 0];
+    const p1 = fullProj([b[2], b[1]]) ?? [0, 0];
+    return [p0, p1];
+  };
   const visible = (p: LonLat) => {
     const q = projection(p);
     return !!q && q[0] > -200 && q[0] < 1280 && q[1] > -200 && q[1] < 2120;
@@ -165,7 +187,14 @@ export const WorldMap: React.FC<{
           if (!d) return null;
           return (
             <g key={`f${i}`} opacity={st.dim ?? 1}>
-              <FlagFill d={d} bounds={fullPath.bounds(c) as [[number, number], [number, number]]} flag={st.flag} id={`cf${uid}${i}`} plain={camera.zoom > 8} />
+              <FlagFill
+                d={d}
+                bounds={st.flagBox ? boxBounds(st.flagBox) : (fullPath.bounds(c) as [[number, number], [number, number]])}
+                flag={st.flag}
+                id={`cf${uid}${i}`}
+                plain={camera.zoom > 8}
+                stretch={!!st.flagBox}
+              />
               <path d={d} fill="none" stroke="#111" strokeWidth={borderW} strokeLinejoin="round" />
             </g>
           );
@@ -208,20 +237,8 @@ export const WorldMap: React.FC<{
 };
 
 // Countryball posicionado no mapa por longitude/latitude.
-export const MapBall: React.FC<{
-  flag: FlagName;
-  at: LonLat;
-  size?: number;
-  expression?: Expression;
-  look?: number;
-  hop?: number;
-  squash?: number;
-  damage?: number;
-  bandage?: boolean;
-  opacity?: number;
-  blinkSeed?: number;
-  rotate?: number;
-}> = ({ at, hop = 0, ...rest }) => {
+type BallProps = Omit<React.ComponentProps<typeof CountryBall>, "x" | "y">;
+export const MapBall: React.FC<BallProps & { at: LonLat; hop?: number }> = ({ at, hop = 0, ...rest }) => {
   const { projection, visible } = useMap();
   if (!visible(at)) return null;
   const p = projection(at);
@@ -377,4 +394,75 @@ export const MapLabel: React.FC<{ at: LonLat; text: string; size?: number; from?
       {text}
     </div>
   );
+};
+
+// Exército em formação marchando ao longo de um caminho (lista de pontos).
+// `progress` 0..1 ao longo do caminho; `count` soldados visíveis.
+export const MapArmy: React.FC<{
+  flag: FlagName;
+  path: LonLat[];
+  progress: number;
+  count: number;
+  size?: number;
+  spacing?: number; // em px
+  expression?: React.ComponentProps<typeof CountryBall>["expression"];
+  frozen?: number;
+  seed?: number;
+}> = ({ flag, path, progress, count, size = 56, spacing = 50, expression = "determined", frozen = 0, seed = 0 }) => {
+  const { projection } = useMap();
+  const frame = useCurrentFrame();
+  const pts = path.map((p) => projection(p) ?? [0, 0]);
+  const lens = pts.slice(1).map((p, i) => Math.hypot(p[0] - pts[i][0], p[1] - pts[i][1]));
+  const total = lens.reduce((a, b) => a + b, 0);
+  const at = (d: number): { x: number; y: number; ang: number } => {
+    let rem = Math.max(0, Math.min(total, d));
+    for (let i = 0; i < lens.length; i++) {
+      if (rem <= lens[i] || i === lens.length - 1) {
+        const t = lens[i] === 0 ? 0 : rem / lens[i];
+        const a = pts[i];
+        const b = pts[i + 1];
+        return { x: a[0] + (b[0] - a[0]) * t, y: a[1] + (b[1] - a[1]) * t, ang: Math.atan2(b[1] - a[1], b[0] - a[0]) };
+      }
+      rem -= lens[i];
+    }
+    return { x: pts[0][0], y: pts[0][1], ang: 0 };
+  };
+  const lead = total * progress;
+  const cols = 3;
+  return (
+    <>
+      {Array.from({ length: count }).map((_, i) => {
+        const row = Math.floor(i / cols);
+        const col = (i % cols) - 1;
+        const p = at(lead - row * spacing);
+        const nx = -Math.sin(p.ang);
+        const ny = Math.cos(p.ang);
+        const x = p.x + nx * col * spacing * 0.9;
+        const y = p.y + ny * col * spacing * 0.9 - Math.abs(Math.sin(frame * 0.5 + i * 0.7 + seed)) * 10;
+        return (
+          <CountryBall
+            key={i}
+            flag={flag}
+            x={x}
+            y={y + size / 2}
+            size={size}
+            expression={expression}
+            look={Math.cos(p.ang) > 0 ? 1 : -1}
+            frozen={frozen}
+            shadow={false}
+            blinkSeed={i}
+          />
+        );
+      })}
+    </>
+  );
+};
+
+// Posiciona qualquer conteúdo num ponto do mapa (o conteúdo é desenhado a partir do ponto).
+export const MapAt: React.FC<{ at: LonLat; children: React.ReactNode }> = ({ at, children }) => {
+  const { projection, visible } = useMap();
+  if (!visible(at)) return null;
+  const p = projection(at);
+  if (!p) return null;
+  return <div style={{ position: "absolute", left: p[0], top: p[1], width: 0, height: 0 }}>{children}</div>;
 };

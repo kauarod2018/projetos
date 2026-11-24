@@ -107,7 +107,45 @@ export const ImperioDoBrasil: React.FC<{ plain?: boolean }> = ({ plain }) => (
   </g>
 );
 
+export const Franca: React.FC<{ plain?: boolean }> = () => (
+  <g>
+    <rect x={0} y={0} width={67} height={200} fill="#0055A4" />
+    <rect x={66.5} y={0} width={67} height={200} fill="#FFFFFF" />
+    <rect x={133} y={0} width={67} height={200} fill="#EF4135" />
+  </g>
+);
+
+export const Russia: React.FC<{ plain?: boolean }> = () => (
+  <g>
+    <rect x={0} y={0} width={200} height={67} fill="#FFFFFF" />
+    <rect x={0} y={66.5} width={200} height={67} fill="#0039A6" />
+    <rect x={0} y={133} width={200} height={67} fill="#D52B1E" />
+  </g>
+);
+
+// "General Inverno": gelo e flocos de neve.
+export const Inverno: React.FC<{ plain?: boolean }> = () => (
+  <g>
+    <rect x={0} y={0} width={200} height={200} fill="#dff3ff" />
+    <rect x={0} y={120} width={200} height={80} fill="#b9e2fa" />
+    {[
+      [40, 50],
+      [150, 40],
+      [100, 150],
+      [30, 140],
+      [170, 130],
+    ].map(([x, y], i) => (
+      <g key={i} stroke="#7cc4ef" strokeWidth={3} strokeLinecap="round">
+        <path d={`M ${x - 10} ${y} L ${x + 10} ${y} M ${x} ${y - 10} L ${x} ${y + 10} M ${x - 7} ${y - 7} L ${x + 7} ${y + 7} M ${x + 7} ${y - 7} L ${x - 7} ${y + 7}`} />
+      </g>
+    ))}
+  </g>
+);
+
 export const FLAGS = {
+  franca: Franca,
+  russia: Russia,
+  inverno: Inverno,
   argentina: Argentina,
   uruguai: Uruguai,
   paraguai: Paraguai,

@@ -2,6 +2,8 @@ import React, { useId } from "react";
 import { useCurrentFrame } from "remotion";
 import { FLAGS, FlagName } from "../flags";
 
+export type Hat = "bicorne" | "crown" | "ushanka" | "kutuzov" | "papakha";
+
 export type Expression = "neutral" | "happy" | "angry" | "surprised" | "sad" | "determined" | "dead";
 
 type Props = {
@@ -18,6 +20,65 @@ type Props = {
   opacity?: number;
   blinkSeed?: number;
   shadow?: boolean;
+  hat?: Hat;
+  eyepatch?: boolean;
+  frozen?: number; // 0..1 congelando
+  shiver?: boolean;
+};
+
+// Chapéus e acessórios (coordenadas do viewBox 0..200, bola com raio 92 em 100,100).
+const HatSvg: React.FC<{ hat: Hat }> = ({ hat }) => {
+  const k = { stroke: "#111", strokeWidth: 5, strokeLinejoin: "round" as const };
+  switch (hat) {
+    case "bicorne": // Napoleão: bicorne de lado
+      return (
+        <g>
+          <path d="M 4 50 Q 30 -30 100 -38 Q 170 -30 196 50 Q 150 22 100 22 Q 50 22 4 50 Z" fill="#161616" {...k} />
+          <path d="M 14 44 Q 60 16 100 16 Q 140 16 186 44" fill="none" stroke="#d4a017" strokeWidth={5} />
+          <circle cx={62} cy={4} r={14} fill="#0055A4" stroke="#111" strokeWidth={3} />
+          <circle cx={62} cy={4} r={9} fill="#fff" />
+          <circle cx={62} cy={4} r={4.5} fill="#EF4135" />
+        </g>
+      );
+    case "crown":
+      return (
+        <g>
+          <path d="M 52 30 L 46 -18 L 74 4 L 100 -30 L 126 4 L 154 -18 L 148 30 Z" fill="#f5c518" {...k} />
+          <rect x={50} y={20} width={100} height={14} fill="#e0a800" {...k} />
+          <circle cx={100} cy={-30} r={7} fill="#e63946" stroke="#111" strokeWidth={3} />
+          <circle cx={75} cy={27} r={4} fill="#2a9d8f" />
+          <circle cx={100} cy={27} r={4} fill="#e63946" />
+          <circle cx={125} cy={27} r={4} fill="#2a9d8f" />
+        </g>
+      );
+    case "ushanka":
+      return (
+        <g>
+          <path d="M 22 60 Q 18 100 30 112 L 50 108 Q 44 80 48 56 Z" fill="#8a6a4a" {...k} />
+          <path d="M 178 60 Q 182 100 170 112 L 150 108 Q 156 80 152 56 Z" fill="#8a6a4a" {...k} />
+          <path d="M 24 46 Q 30 -14 100 -16 Q 170 -14 176 46 Z" fill="#6b4f35" {...k} />
+          <path d="M 18 44 Q 100 20 182 44 L 182 62 Q 100 40 18 62 Z" fill="#8a6a4a" {...k} />
+          <polygon points="100,-2 105,10 118,10 108,18 112,30 100,22 88,30 92,18 82,10 95,10" fill="#e63946" stroke="#111" strokeWidth={2} />
+        </g>
+      );
+    case "kutuzov": // quepe branco de general russo
+      return (
+        <g>
+          <path d="M 30 40 Q 34 -6 100 -10 Q 166 -6 170 40 Z" fill="#f2f2f2" {...k} />
+          <rect x={30} y={28} width={140} height={16} fill="#c62828" {...k} />
+          <path d="M 40 44 Q 100 70 168 44 L 172 50 Q 100 82 36 50 Z" fill="#111" />
+          <circle cx={100} cy={36} r={6} fill="#f5c518" stroke="#111" strokeWidth={2} />
+        </g>
+      );
+    case "papakha": // cossaco
+      return (
+        <g>
+          <path d="M 40 40 L 44 -40 Q 100 -56 156 -40 L 160 40 Q 100 26 40 40 Z" fill="#222" {...k} />
+          <path d="M 48 -20 L 152 -20 M 46 0 L 154 0 M 44 20 L 156 20" stroke="#444" strokeWidth={4} />
+          <path d="M 60 -44 Q 100 -30 140 -44 L 140 -34 Q 100 -20 60 -34 Z" fill="#c62828" />
+        </g>
+      );
+  }
 };
 
 const Eye: React.FC<{ expression: Expression; side: -1 | 1; blink: boolean }> = ({ expression, side, blink }) => {
@@ -63,12 +124,17 @@ export const CountryBall: React.FC<Props> = ({
   opacity = 1,
   blinkSeed = 0,
   shadow = true,
+  hat,
+  eyepatch = false,
+  frozen = 0,
+  shiver = false,
 }) => {
   const frame = useCurrentFrame();
   const id = useId().replace(/[^a-zA-Z0-9]/g, "");
   const Flag = FLAGS[flag];
   const cycle = (frame + blinkSeed * 37) % 110;
   const blink = cycle > 104;
+  const shake = shiver ? Math.sin(frame * 2.9) * 4 : 0;
   const sx = 1 + squash * 0.25;
   const sy = 1 - squash * 0.25;
 
@@ -76,7 +142,7 @@ export const CountryBall: React.FC<Props> = ({
     <div
       style={{
         position: "absolute",
-        left: x - size / 2,
+        left: x - size / 2 + shake,
         top: y - size,
         width: size,
         height: size,
@@ -137,6 +203,21 @@ export const CountryBall: React.FC<Props> = ({
             <Eye expression={expression} side={1} blink={blink} />
           </g>
         </g>
+        {eyepatch && (
+          <g>
+            <path d="M 12 52 L 180 120" stroke="#111" strokeWidth={5} />
+            <ellipse cx={70} cy={84} rx={21} ry={24} fill="#111" />
+          </g>
+        )}
+        {frozen > 0 && (
+          <g opacity={Math.min(1, frozen)}>
+            <circle cx={100} cy={100} r={92} fill="#9fdcff" opacity={0.45} />
+            <path d="M 30 150 L 38 186 L 46 156 L 58 196 L 68 162 L 82 192 L 92 168" fill="#e8f7ff" stroke="#111" strokeWidth={3} strokeLinejoin="round" />
+            <path d="M 112 170 L 122 198 L 130 168 L 144 190 L 152 158 L 164 182 L 170 150" fill="#e8f7ff" stroke="#111" strokeWidth={3} strokeLinejoin="round" />
+            <path d="M 36 40 Q 100 -6 164 40 Q 140 30 120 38 Q 100 26 80 38 Q 60 30 36 40 Z" fill="#fff" stroke="#111" strokeWidth={3} />
+          </g>
+        )}
+        {hat && <HatSvg hat={hat} />}
         {bandage && (
           <g>
             <g transform="rotate(-28 60 150)">
