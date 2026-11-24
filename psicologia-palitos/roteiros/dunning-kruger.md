@@ -49,7 +49,9 @@ Serve para aprovar personagem, cores, letras, voz e gráfico antes de produzir o
 
 ---
 
-## 3) Vídeo longo (≈ 10 min, horizontal)
+## 3) Vídeo longo (≈ 8 a 9 min, horizontal)
+
+*Os tempos dos capítulos são estimativas; a duração final segue a narração.*
 
 **Título:** O Gráfico do Dunning-Kruger que Você Conhece Está ERRADO
 **Alternativa:** Por que quem sabe menos se acha mais (e o que o estudo realmente mostrou)
