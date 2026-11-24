@@ -4,6 +4,7 @@ import { CountryBall } from "../components/CountryBall";
 import { Caption, YearTag, Bubble, SceneIn, Shake, Footnote } from "../components/ui";
 import { Sky, Rays, Hills, Water, Smoke, Parchment, Ship } from "../components/scenery";
 import { Explosion, Cannonball, SpeedLines } from "../components/fx";
+import { MapIntro, MapUruguai, MapInvasao, MapFim, MapFinal, makeMapPinScene, P } from "./paraguaiMapas";
 
 // ---------- helpers de movimento ----------
 const ease = Easing.inOut(Easing.cubic);
@@ -381,17 +382,24 @@ const Final: React.FC = () => {
 };
 
 // Duração de cada cena em frames (30 fps).
+// Duração de cada cena em frames (30 fps). Mapas + cenas em desenho.
+// (Hook, Uruguai, Invasao, Fim e Final antigas continuam no arquivo como alternativa sem mapa.)
 export const SCENES: { component: React.FC; frames: number }[] = [
-  { component: Hook, frames: 120 },
-  { component: Uruguai, frames: 180 },
-  { component: Invasao, frames: 210 },
+  { component: MapIntro, frames: 150 },
+  { component: MapUruguai, frames: 180 },
+  { component: MapInvasao, frames: 240 },
   { component: Alianca, frames: 180 },
+  { component: makeMapPinScene(P.riachuelo, "Riachuelo"), frames: 60 },
   { component: Riachuelo, frames: 240 },
+  { component: makeMapPinScene(P.tuyuti, "Tuyutí"), frames: 60 },
   { component: Tuyuti, frames: 180 },
+  { component: makeMapPinScene(P.curupayty, "Curupayty"), frames: 60 },
   { component: Curupayty, frames: 180 },
-  { component: Fim, frames: 240 },
-  { component: Final, frames: 150 },
+  { component: MapFim, frames: 280 },
+  { component: MapFinal, frames: 260 },
 ];
+
+export const SEM_MAPA = { Hook, Uruguai, Invasao, Fim, Final };
 
 export const TOTAL_FRAMES = SCENES.reduce((a, s) => a + s.frames, 0);
 

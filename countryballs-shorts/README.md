@@ -21,7 +21,12 @@ npm run render   # gera out/guerra-do-paraguai.mp4
   transição de cena, tremor de câmera, nota de rodapé
 - `src/components/scenery.tsx` – céu, raios, morros, água, fumaça, pergaminho, navio
 - `src/components/fx.tsx` – explosão, bala de canhão, linhas de velocidade
-- `src/videos/GuerraDoParaguai.tsx` – o Short, dividido em cenas com duração em frames
+- `src/components/map.tsx` – mapa aberto (Mercator) com câmera animada (`cameraAt`), países pintados
+  com a bandeira, regiões ocupadas (`regions`: revelação circular + listras), setas (`MapArrow`),
+  marcadores (`MapPin`), nomes (`MapLabel`) e countryballs no mapa (`MapBall`, por longitude/latitude)
+- `src/geo/regions.json` – estados/províncias usados (Natural Earth, domínio público). Países vêm do pacote `world-atlas`
+- `src/videos/paraguaiMapas.tsx` – cenas em mapa da Guerra do Paraguai
+- `src/videos/GuerraDoParaguai.tsx` – cenas em desenho e a ordem final do Short (`SCENES`)
 
 ## Novo vídeo
 

@@ -56,15 +56,15 @@ const Star: React.FC<{ cx: number; cy: number; r: number; fill: string }> = ({ c
   return <polygon points={pts.join(" ")} fill={fill} />;
 };
 
-export const Argentina: React.FC = () => (
+export const Argentina: React.FC<{ plain?: boolean }> = ({ plain }) => (
   <g>
     <rect x={0} y={0} width={200} height={200} fill="#74ACDF" />
     <rect x={0} y={66.7} width={200} height={66.6} fill="#FFFFFF" />
-    <Sun cx={100} cy={100} r={13} />
+    {!plain && <Sun cx={100} cy={100} r={13} />}
   </g>
 );
 
-export const Uruguai: React.FC = () => {
+export const Uruguai: React.FC<{ plain?: boolean }> = ({ plain }) => {
   const h = 200 / 9;
   return (
     <g>
@@ -72,12 +72,12 @@ export const Uruguai: React.FC = () => {
         <rect key={i} x={0} y={i * h} width={200} height={h + 0.5} fill={i % 2 === 0 ? "#FFFFFF" : "#0038A8"} />
       ))}
       <rect x={0} y={0} width={95} height={h * 5} fill="#FFFFFF" />
-      <Sun cx={52} cy={58} r={14} rays={16} />
+      {!plain && <Sun cx={52} cy={58} r={14} rays={16} />}
     </g>
   );
 };
 
-export const Paraguai: React.FC = () => (
+export const Paraguai: React.FC<{ plain?: boolean }> = () => (
   <g>
     <rect x={0} y={0} width={200} height={200} fill="#D52B1E" />
     <rect x={0} y={66.7} width={200} height={66.6} fill="#FFFFFF" />
@@ -89,10 +89,12 @@ export const Paraguai: React.FC = () => (
 );
 
 // Bandeira do Império do Brasil (o Brasil era um império durante a guerra).
-export const ImperioDoBrasil: React.FC = () => (
+export const ImperioDoBrasil: React.FC<{ plain?: boolean }> = ({ plain }) => (
   <g>
     <rect x={0} y={0} width={200} height={200} fill="#00923F" />
     <polygon points="100,22 186,100 100,178 14,100" fill="#FFDF00" />
+    {!plain && (
+      <g>
     {/* brasão simplificado */}
     <path d="M 82 82 L 118 82 L 118 108 Q 118 124 100 130 Q 82 124 82 108 Z" fill="#00923F" stroke="#5a3d00" strokeWidth={1.5} />
     <circle cx={100} cy={104} r={11} fill="none" stroke="#FFDF00" strokeWidth={2.5} />
@@ -100,6 +102,8 @@ export const ImperioDoBrasil: React.FC = () => (
     {/* coroa */}
     <path d="M 86 80 L 86 68 L 92 74 L 100 64 L 108 74 L 114 68 L 114 80 Z" fill="#FFDF00" stroke="#5a3d00" strokeWidth={1.5} />
     <circle cx={100} cy={62} r={2.6} fill="#c0392b" />
+      </g>
+    )}
   </g>
 );
 
