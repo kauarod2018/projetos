@@ -13,7 +13,7 @@
 **Visual:** fundo preto, boneco de palito todo branco, fotos recortadas, emojis 3D, vídeos curtos como GIF e cortes secos a cada 1–3 s.
 **Voz:** Gemini (Google AI Studio), alegre e com ritmo.
 
-**Tamanho:** ~1.650 palavras de narração, umas **10 a 12 minutos**.
+**Tamanho:** ~1.400 palavras de narração, umas **9 a 10 minutos** (a duração final depende do ritmo da voz).
 
 ---
 
