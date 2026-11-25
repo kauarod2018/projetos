@@ -1,0 +1,20 @@
+{
+  "fps": 30,
+  "scenes": [
+    { "id": "hook", "frames": 110, "music": 1.0, "cues": [[0, "impact"], [6, "thunder"], [8, "boom"], [40, "whoosh"], [60, "thunder"]] },
+    { "id": "elba", "frames": 180, "music": 0.35, "ambient": "sea", "cues": [[0, "whoosh"], [12, "pop"], [92, "impact"], [96, "whoosh"]] },
+    { "id": "laffrey", "frames": 240, "music": 0.45, "cues": [[0, "whoosh"], [60, "pop"], [115, "pop"], [152, "pop"], [188, "impact"], [190, "cheer"], [192, "sparkle"], [196, "pop"]] },
+    { "id": "paris", "frames": 180, "music": 0.7, "cues": [[0, "whoosh"], [92, "pop"], [108, "whoosh"], [150, "sparkle"]] },
+    { "id": "coalizao", "frames": 150, "music": 0.9, "cues": [[0, "whoosh"], [20, "impact"], [22, "pop"], [30, "pop"], [38, "pop"], [46, "pop"], [100, "pop"]] },
+    { "id": "belgica", "frames": 210, "music": 0.75, "cues": [[0, "whoosh"], [20, "whoosh"], [80, "whoosh"], [84, "whoosh"]] },
+    { "id": "ligny", "frames": 180, "music": 1.0, "cues": [[0, "whoosh"], [40, "boom"], [62, "explosion"], [70, "boom"], [82, "explosion"], [84, "impact"], [124, "pop"], [130, "pop"]] },
+    { "id": "grouchy", "frames": 150, "music": 0.55, "cues": [[0, "whoosh"], [10, "pop"], [48, "whoosh"], [62, "gallop", 70]] },
+    { "id": "chuva", "frames": 120, "music": 0.25, "ambient": "rain", "cues": [[18, "thunder"], [78, "thunder"]] },
+    { "id": "waterloo", "frames": 270, "music": 1.0, "cues": [[0, "whoosh"], [30, "boom"], [52, "explosion"], [60, "boom"], [82, "explosion"], [90, "boom"], [112, "explosion"], [118, "gallop", 55], [165, "volley"], [168, "impact"], [188, "gallop", 50], [235, "volley"], [238, "impact"]] },
+    { "id": "prussianos", "frames": 180, "music": 1.0, "cues": [[0, "whoosh"], [10, "pop"], [68, "gallop", 60], [75, "impact"], [78, "cheer"]] },
+    { "id": "guarda", "frames": 210, "music": 1.0, "cues": [[0, "whoosh"], [118, "impact"], [120, "volley"], [135, "volley"], [165, "impact"], [168, "sad"]] },
+    { "id": "resultado", "frames": 150, "music": 0.3, "cues": [[0, "whoosh"], [8, "sad"], [62, "pop"]] },
+    { "id": "helena", "frames": 210, "music": 0.3, "ambient": "sea", "cues": [[0, "whoosh"], [60, "whoosh"], [130, "whoosh"], [150, "pop"]] },
+    { "id": "final", "frames": 150, "music": 0.4, "ambient": "sea", "cues": [[0, "sad"], [80, "sparkle"]] }
+  ]
+}

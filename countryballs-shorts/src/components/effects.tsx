@@ -341,3 +341,107 @@ export const CalendarPages: React.FC<{ from: number; count?: number }> = ({ from
     </>
   );
 };
+
+// ---------- Chuva ----------
+export const Rain: React.FC<{ intensity?: number; seed?: string }> = ({ intensity = 1, seed = "rain" }) => {
+  const frame = useCurrentFrame();
+  const n = Math.round(140 * intensity);
+  return (
+    <AbsoluteFill style={{ pointerEvents: "none" }}>
+      <svg viewBox="0 0 1080 1920" width={1080} height={1920}>
+        {Array.from({ length: n }).map((_, i) => {
+          const depth = 0.4 + random(`${seed}d${i}`) * 0.8;
+          const speed = 40 + depth * 40;
+          const x0 = random(`${seed}x${i}`) * 1300 - 110;
+          const y0 = random(`${seed}y${i}`) * 2000;
+          const y = ((y0 + frame * speed) % 2000) - 80;
+          const x = x0 - (y + 80) * 0.18;
+          const len = 40 + depth * 50;
+          return (
+            <line
+              key={i}
+              x1={x}
+              y1={y}
+              x2={x - len * 0.18}
+              y2={y + len}
+              stroke="#cfe3ff"
+              strokeWidth={1.5 + depth * 2}
+              opacity={0.35 + depth * 0.4}
+              strokeLinecap="round"
+            />
+          );
+        })}
+      </svg>
+      <AbsoluteFill style={{ background: "rgba(20,30,50,0.25)" }} />
+    </AbsoluteFill>
+  );
+};
+
+// ---------- Confete / brilhos (comemoração) ----------
+export const Confetti: React.FC<{ from: number; count?: number; colors?: string[]; x?: number; y?: number }> = ({
+  from,
+  count = 60,
+  colors = ["#0055A4", "#ffffff", "#EF4135", "#FFD23F"],
+  x = 540,
+  y = 1100,
+}) => {
+  const frame = useCurrentFrame();
+  const t = frame - from;
+  if (t < 0 || t > 90) return null;
+  return (
+    <AbsoluteFill style={{ pointerEvents: "none" }}>
+      {Array.from({ length: count }).map((_, i) => {
+        const a = random(`cf${i}`) * Math.PI * 2;
+        const v = 18 + random(`cv${i}`) * 26;
+        const px = x + Math.cos(a) * v * t * 0.9;
+        const py = y + Math.sin(a) * v * t * 0.6 - 10 * t + 0.6 * t * t;
+        const rot = t * (10 + random(`cr${i}`) * 20);
+        const o = interpolate(t, [60, 90], [1, 0], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+        return (
+          <div
+            key={i}
+            style={{
+              position: "absolute",
+              left: px,
+              top: py,
+              width: 18,
+              height: 30,
+              background: colors[i % colors.length],
+              border: "2px solid #111",
+              transform: `rotate(${rot}deg)`,
+              opacity: o,
+            }}
+          />
+        );
+      })}
+    </AbsoluteFill>
+  );
+};
+
+// ---------- Saraivada de mosquetes (fileira de clarões + fumaça) ----------
+export const Volley: React.FC<{ at: number; xs: number[]; y: number; dir?: 1 | -1 }> = ({ at, xs, y, dir = 1 }) => {
+  const frame = useCurrentFrame();
+  const t = frame - at;
+  if (t < 0 || t > 40) return null;
+  return (
+    <>
+      {xs.map((x, i) => (
+        <React.Fragment key={i}>
+          <MuzzleFlash x={x + dir * 50} y={y} at={at + (i % 3)} dir={dir} size={110} />
+          <div
+            style={{
+              position: "absolute",
+              left: x + dir * (60 + t * 2) - 40 - t,
+              top: y - 40 - t * 1.2,
+              width: 80 + t * 2,
+              height: 80 + t * 2,
+              borderRadius: "50%",
+              background: "rgba(235,235,235,0.75)",
+              opacity: interpolate(t, [0, 6, 40], [0, 0.9, 0]),
+            }}
+          />
+        </React.Fragment>
+      ))}
+    </>
+  );
+};

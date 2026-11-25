@@ -10,6 +10,11 @@ npm install
 npm run studio   # abre o editor no navegador para ver e ajustar
 npm run render   # gera out/guerra-do-paraguai.mp4
 npx remotion render NapoleaoRussia out/napoleao-russia-1812.mp4
+
+# Waterloo (com áudio): gere a trilha antes de renderizar
+python3 scripts/gerar_audio.py src/videos/waterlooTimeline.json public/audio/waterloo.wav
+npx remotion render Waterloo1815 out/waterloo-1815.mp4
+npx remotion still WaterlooCapa out/waterloo-capa.png
 ```
 
 ## Estrutura
@@ -34,6 +39,10 @@ npx remotion render NapoleaoRussia out/napoleao-russia-1812.mp4
 - `src/videos/paraguaiMapas.tsx` – cenas em mapa da Guerra do Paraguai
 - `src/videos/GuerraDoParaguai.tsx` – cenas em desenho e a ordem final do Short (`SCENES`)
 - `src/videos/Napoleao.tsx` – "O maior erro de Napoleão" (Rússia, 1812)
+- `src/videos/Waterloo.tsx` – "Parte 2: Waterloo" (1815) + capa `WaterlooCapa`
+- `src/videos/waterlooTimeline.json` – cenas, durações, intensidade da música e efeitos sonoros (fonte única para vídeo e áudio)
+- `scripts/gerar_audio.py` – sintetiza música e efeitos (canhão, explosão, trovão, chuva, mar, galope, saraivada, multidão...) com numpy, sem samples externos
+- `posts/` – título, descrição, hashtags e conferência de fatos de cada vídeo
 
 ## Novo vídeo
 

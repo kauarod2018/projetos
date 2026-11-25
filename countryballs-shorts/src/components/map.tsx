@@ -60,6 +60,7 @@ export type RegionOverlay = {
   progress?: number; // 0..1 (revelação circular a partir de `origin`)
   origin?: LonLat;
   hatch?: boolean; // listras de "ocupado"
+  flagBox?: [number, number, number, number]; // ancora a bandeira numa área (lon/lat)
   pulse?: boolean;
 };
 
@@ -220,7 +221,14 @@ export const WorldMap: React.FC<{
               </clipPath>
               <g clipPath={`url(#rv${uid}${i})`} opacity={pulse}>
                 {r.flag ? (
-                  <FlagFill d={d} bounds={b} flag={r.flag} id={`rf${uid}${i}`} plain={camera.zoom > 8} />
+                  <FlagFill
+                    d={d}
+                    bounds={r.flagBox ? boxBounds(r.flagBox) : b}
+                    flag={r.flag}
+                    id={`rf${uid}${i}`}
+                    plain={camera.zoom > 8}
+                    stretch={!!r.flagBox}
+                  />
                 ) : (
                   <path d={d} fill={r.fill ?? "#ffd23f"} />
                 )}

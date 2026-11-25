@@ -2,7 +2,7 @@ import React, { useId } from "react";
 import { useCurrentFrame } from "remotion";
 import { FLAGS, FlagName } from "../flags";
 
-export type Hat = "bicorne" | "crown" | "ushanka" | "kutuzov" | "papakha";
+export type Hat = "bicorne" | "crown" | "ushanka" | "kutuzov" | "papakha" | "wellington" | "shako" | "bearskin" | "blucher";
 
 export type Expression = "neutral" | "happy" | "angry" | "surprised" | "sad" | "determined" | "dead";
 
@@ -24,6 +24,7 @@ type Props = {
   eyepatch?: boolean;
   frozen?: number; // 0..1 congelando
   shiver?: boolean;
+  mustache?: string; // cor do bigode (ex.: "#eee" para Blücher)
 };
 
 // Chapéus e acessórios (coordenadas do viewBox 0..200, bola com raio 92 em 100,100).
@@ -68,6 +69,41 @@ const HatSvg: React.FC<{ hat: Hat }> = ({ hat }) => {
           <rect x={30} y={28} width={140} height={16} fill="#c62828" {...k} />
           <path d="M 40 44 Q 100 70 168 44 L 172 50 Q 100 82 36 50 Z" fill="#111" />
           <circle cx={100} cy={36} r={6} fill="#f5c518" stroke="#111" strokeWidth={2} />
+        </g>
+      );
+    case "wellington": // bicorne usado de frente para trás (visto de frente: estreito e alto)
+      return (
+        <g>
+          <path d="M 52 40 Q 56 -62 100 -70 Q 144 -62 148 40 Q 100 26 52 40 Z" fill="#161616" {...k} />
+          <path d="M 64 32 Q 100 20 136 32" fill="none" stroke="#3a3a3a" strokeWidth={5} />
+          <circle cx={100} cy={-20} r={11} fill="#111" stroke="#555" strokeWidth={3} />
+        </g>
+      );
+    case "shako": // soldado de infantaria
+      return (
+        <g>
+          <path d="M 56 40 L 62 -26 L 138 -26 L 144 40 Z" fill="#1b1b1b" {...k} />
+          <path d="M 48 40 Q 100 58 152 40 L 150 50 Q 100 70 50 50 Z" fill="#111" />
+          <path d="M 86 2 L 100 -12 L 114 2 L 100 18 Z" fill="#d4a017" stroke="#111" strokeWidth={3} />
+          <ellipse cx={100} cy={-40} rx={10} ry={16} fill="#e63946" stroke="#111" strokeWidth={3} />
+        </g>
+      );
+    case "bearskin": // Guarda Imperial
+      return (
+        <g>
+          <path d="M 40 42 Q 26 -40 64 -90 Q 100 -112 136 -90 Q 174 -40 160 42 Q 100 28 40 42 Z" fill="#141414" {...k} />
+          <path d="M 60 -60 Q 70 -20 62 20 M 100 -90 Q 104 -40 100 20 M 140 -60 Q 130 -20 138 20" stroke="#2c2c2c" strokeWidth={5} fill="none" />
+          <path d="M 150 -40 Q 176 -70 160 -100 Q 150 -70 140 -50 Z" fill="#c62828" stroke="#111" strokeWidth={3} />
+          <path d="M 44 36 Q 100 24 156 36" stroke="#d4a017" strokeWidth={4} fill="none" />
+        </g>
+      );
+    case "blucher": // quepe prussiano
+      return (
+        <g>
+          <path d="M 30 40 Q 34 -6 100 -10 Q 166 -6 170 40 Z" fill="#1f2a44" {...k} />
+          <rect x={30} y={28} width={140} height={16} fill="#c62828" {...k} />
+          <path d="M 40 44 Q 100 70 168 44 L 172 50 Q 100 82 36 50 Z" fill="#111" />
+          <circle cx={100} cy={36} r={6} fill="#ddd" stroke="#111" strokeWidth={2} />
         </g>
       );
     case "papakha": // cossaco
@@ -128,6 +164,7 @@ export const CountryBall: React.FC<Props> = ({
   eyepatch = false,
   frozen = 0,
   shiver = false,
+  mustache,
 }) => {
   const frame = useCurrentFrame();
   const id = useId().replace(/[^a-zA-Z0-9]/g, "");
@@ -216,6 +253,15 @@ export const CountryBall: React.FC<Props> = ({
             <path d="M 112 170 L 122 198 L 130 168 L 144 190 L 152 158 L 164 182 L 170 150" fill="#e8f7ff" stroke="#111" strokeWidth={3} strokeLinejoin="round" />
             <path d="M 36 40 Q 100 -6 164 40 Q 140 30 120 38 Q 100 26 80 38 Q 60 30 36 40 Z" fill="#fff" stroke="#111" strokeWidth={3} />
           </g>
+        )}
+        {mustache && (
+          <path
+            d="M 100 118 Q 80 104 58 112 Q 40 120 34 136 Q 56 126 72 132 Q 90 136 100 126 Q 110 136 128 132 Q 144 126 166 136 Q 160 120 142 112 Q 120 104 100 118 Z"
+            fill={mustache}
+            stroke="#111"
+            strokeWidth={4}
+            strokeLinejoin="round"
+          />
         )}
         {hat && <HatSvg hat={hat} />}
         {bandage && (

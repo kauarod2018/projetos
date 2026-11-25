@@ -142,7 +142,51 @@ export const Inverno: React.FC<{ plain?: boolean }> = () => (
   </g>
 );
 
+export const ReinoUnido: React.FC<{ plain?: boolean }> = () => (
+  <g>
+    <rect x={0} y={0} width={200} height={200} fill="#012169" />
+    <path d="M 0 0 L 200 200 M 200 0 L 0 200" stroke="#FFFFFF" strokeWidth={40} />
+    <path d="M 0 0 L 200 200 M 200 0 L 0 200" stroke="#C8102E" strokeWidth={14} />
+    <path d="M 100 0 L 100 200 M 0 100 L 200 100" stroke="#FFFFFF" strokeWidth={56} />
+    <path d="M 100 0 L 100 200 M 0 100 L 200 100" stroke="#C8102E" strokeWidth={32} />
+  </g>
+);
+
+export const Prussia: React.FC<{ plain?: boolean }> = () => (
+  <g>
+    <rect x={0} y={0} width={200} height={100} fill="#111111" />
+    <rect x={0} y={100} width={200} height={100} fill="#FFFFFF" />
+  </g>
+);
+
+export const Austria: React.FC<{ plain?: boolean }> = () => (
+  <g>
+    <rect x={0} y={0} width={200} height={200} fill="#ED2939" />
+    <rect x={0} y={66.7} width={200} height={66.6} fill="#FFFFFF" />
+  </g>
+);
+
+// França dos Bourbon (rei Luís XVIII): branca com flor-de-lis dourada.
+export const Bourbon: React.FC<{ plain?: boolean }> = ({ plain }) => (
+  <g>
+    <rect x={0} y={0} width={200} height={200} fill="#F7F4EA" />
+    {!plain && (
+      <g transform="translate(100 128) scale(1.15)" fill="#D4A017" stroke="#7a5a00" strokeWidth={1.5}>
+        <path d="M 0 -48 Q 14 -30 8 -10 Q 4 2 0 8 Q -4 2 -8 -10 Q -14 -30 0 -48 Z" />
+        <path d="M 6 -6 Q 26 -26 38 -12 Q 44 2 30 4 Q 22 -6 12 2 Z" />
+        <path d="M -6 -6 Q -26 -26 -38 -12 Q -44 2 -30 4 Q -22 -6 -12 2 Z" />
+        <rect x={-18} y={4} width={36} height={8} rx={2} />
+        <path d="M -4 12 L 4 12 L 2 26 L -2 26 Z" />
+      </g>
+    )}
+  </g>
+);
+
 export const FLAGS = {
+  reinoUnido: ReinoUnido,
+  prussia: Prussia,
+  austria: Austria,
+  bourbon: Bourbon,
   franca: Franca,
   russia: Russia,
   inverno: Inverno,
