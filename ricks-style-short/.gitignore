@@ -10,3 +10,7 @@ build/r*.log
 build/parts.txt
 build/thanksgiving/part*.mp4
 build/thanksgiving/r*.log
+build/thanksgiving/*.mp4
+build/thanksgiving/*.jpg
+build/thanksgiving/parts.txt
+build/thanksgiving/r*.log

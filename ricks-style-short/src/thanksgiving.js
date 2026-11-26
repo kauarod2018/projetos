@@ -251,8 +251,8 @@ const O = {};
   const wain = box(14, 1.0, 0.08, stdT(repTex(TEX.planks, 4, 0.4), '#e8e0d0', { roughness: 0.6 })); wain.position.set(0, 0.5, -2.76); S.add(wain);
   const crown = box(14, 0.2, 0.2, std('#f6f0e6')); crown.position.set(0, 4.5, -2.7); S.add(crown);
   // janelas altas atrás da mesa
-  for (const x of [-1.2, 1.2]) { const w = mesh(new THREE.PlaneGeometry(0.9, 2.2), new THREE.MeshBasicMaterial({ color: new THREE.Color('#dce8f6').multiplyScalar(1.8) })); w.position.set(x, 2.3, -2.78); S.add(w); for (const s of [-1, 1]) { const cg = new THREE.PlaneGeometry(0.45, 2.9, 8, 1); const p = cg.attributes.position; for (let i = 0; i < p.count; i++) p.setZ(i, Math.sin(p.getX(i) * 20) * 0.03); cg.computeVertexNormals(); const cu = mesh(cg, std('#c9a24a', { side: THREE.DoubleSide, roughness: 0.8 })); cu.position.set(x + s * 0.6, 2.4, -2.7); S.add(cu); } const sh = L.lightShaft(5, 0.4, 0.9, '#fff4d8', 0.12); F.orientShaft(sh, new THREE.Vector3(x, 2.6, -2.7), new THREE.Vector3(x * 0.5, 0, 0.5)); S.add(sh); }
-  const sun = new THREE.SpotLight('#fff4e0', 40, 14, 0.6, 0.6, 1.2); sun.position.set(0, 3.2, -2.6); sun.target.position.set(0.3, 0, 1); sun.castShadow = true; sun.shadow.mapSize.set(2048, 2048); sun.shadow.bias = -0.0005; sun.shadow.radius = 4; S.add(sun); S.add(sun.target);
+  for (const x of [-1.2, 1.2]) { const w = mesh(new THREE.PlaneGeometry(0.9, 2.2), new THREE.MeshBasicMaterial({ color: new THREE.Color('#dce8f6').multiplyScalar(1.8) })); w.position.set(x, 2.3, -2.78); S.add(w); for (const s of [-1, 1]) { const cg = new THREE.PlaneGeometry(0.45, 2.9, 8, 1); const p = cg.attributes.position; for (let i = 0; i < p.count; i++) p.setZ(i, Math.sin(p.getX(i) * 20) * 0.03); cg.computeVertexNormals(); const cu = mesh(cg, std('#c9a24a', { side: THREE.DoubleSide, roughness: 0.8 })); cu.position.set(x + s * 0.6, 2.4, -2.7); S.add(cu); } const sh = L.lightShaft(4, 0.4, 0.9, '#fff4d8', 0.06); F.orientShaft(sh, new THREE.Vector3(x, 2.6, -2.7), new THREE.Vector3(x * 1.3, 0, -0.6)); S.add(sh); }
+  const sun = new THREE.SpotLight('#fff4e0', 22, 14, 0.6, 0.6, 1.2); sun.position.set(0, 3.2, -2.6); sun.target.position.set(0.3, 0, 1); sun.castShadow = true; sun.shadow.mapSize.set(2048, 2048); sun.shadow.bias = -0.0005; sun.shadow.radius = 4; S.add(sun); S.add(sun.target);
   // bandeiras
   const mkFlag = (tex, x) => { const g = new THREE.Group(); g.position.set(x, 0, -2.2); S.add(g); const pole = mesh(new THREE.CylinderGeometry(0.03, 0.03, 2.8, 10), std('#c9a227', { metalness: 0.9, roughness: 0.3 })); pole.position.y = 1.4; g.add(pole); const tip = mesh(new THREE.SphereGeometry(0.07, 10, 8), std('#c9a227', { metalness: 0.9, roughness: 0.3 })); tip.position.y = 2.85; g.add(tip); const fg = new THREE.PlaneGeometry(0.8, 1.3, 10, 10); const p = fg.attributes.position; for (let i = 0; i < p.count; i++) { p.setZ(i, Math.sin(p.getY(i) * 6) * 0.06); p.setX(i, p.getX(i) * (1 - (0.65 - p.getY(i)) * 0.15)); } fg.computeVertexNormals(); const fl = mesh(fg, std('#ffffff', { map: tex, side: THREE.DoubleSide, roughness: 0.8 })); fl.position.set(0.4 * Math.sign(x) * -1 + 0, 1.9, 0); fl.rotation.y = Math.PI / 2 * Math.sign(x) * -0.3; g.add(fl); };
   mkFlag(T2.flag, -2.1); mkFlag(T2.presFlag, 2.1);
@@ -442,8 +442,8 @@ const IN = {};
 {
   const S = newScene('stamp');
   S.background = new THREE.Color('#1a1410');
-  S.add(new THREE.HemisphereLight('#fff6ea', '#4a3020', 1.0));
-  const key = new THREE.SpotLight('#fff0d8', 30, 8, 0.7, 0.5, 1.2); key.position.set(0.8, 3, 1.2); key.castShadow = true; key.shadow.mapSize.set(2048, 2048); key.shadow.radius = 4; S.add(key);
+  S.add(new THREE.HemisphereLight('#fff6ea', '#4a3020', 0.55));
+  const key = new THREE.SpotLight('#fff0d8', 9, 8, 0.7, 0.5, 1.2); key.position.set(0.8, 3, 1.2); key.castShadow = true; key.shadow.mapSize.set(2048, 2048); key.shadow.radius = 4; S.add(key);
   const desk = mesh(new THREE.PlaneGeometry(6, 6), stdT(repTex(TEX.planks, 2, 2), '#7a4a24', { roughness: 0.4 })); desk.rotation.x = -Math.PI / 2; S.add(desk);
   const cal = makeCalendar({ title: 'NOVEMBER', year: 'EVERY YEAR', start: 6 }); cal.mesh.rotation.x = -Math.PI / 2; cal.mesh.position.y = 0.005; S.add(cal.mesh);
   const stamp = new THREE.Group(); const sh = mesh(new THREE.CylinderGeometry(0.06, 0.08, 0.3, 14), std('#5a3418', { roughness: 0.4 })); sh.position.y = 0.3; stamp.add(sh); const knob = mesh(new THREE.SphereGeometry(0.09, 14, 10), std('#5a3418')); knob.position.y = 0.48; stamp.add(knob); const bs = box(0.6, 0.08, 0.2, std('#3a2a1a')); bs.position.y = 0.12; stamp.add(bs); const pad = box(0.58, 0.04, 0.18, std('#a01015')); pad.position.y = 0.06; stamp.add(pad); S.add(stamp);
@@ -535,8 +535,8 @@ shot('store', 13.9, LS(3), { from: [[2.3, 1.75, 4.6], [-0.3, 1.25, -0.8]], to: [
 // ---- 6. Roosevelt muda a data ----
 const tMoved = wordT(3, 'moved');
 shot('office', LS(3), LS(4), { from: [[0.0, 1.75, 4.7], [1.05, 1.45, 0.2]], to: [[0.2, 1.72, 4.1], [1.1, 1.5, 0.2]], fov: 44 }, (t) => {
-  const f = O.fdr; place(f, 0.7, 0, 0.75, 0.55);
-  f.apply(kf(t, [[LS(3), P({ armR: { out: 0.2, fwd: 0.2, elbow: -0.3 }, armL: { out: 0.25, fwd: 0.1 } })], [tMoved - 0.35, P({ armR: { out: 0.9, fwd: 1.4, elbow: -0.5 }, armL: { out: 0.25, fwd: 0.1 }, twist: 0.3, headY: 0.5 })], [tMoved + 0.6, P({ armR: { out: 0.95, fwd: 1.45, elbow: -0.45 }, armL: { out: 0.25, fwd: 0.1 }, twist: 0.3, headY: 0.5 })], [tMoved + 1.2, P({ armR: { out: 0.4, fwd: 0.9, elbow: -1.8, twist: 0.4 }, armL: { out: 0.25, fwd: 0.1 }, headY: 0.1 })]]), t);
+  const f = O.fdr; place(f, 0.55, 0, 0.75, -0.15);
+  f.apply(kf(t, [[LS(3), P({ armR: { out: 0.2, fwd: 0.2, elbow: -0.3 }, armL: { out: 0.25, fwd: 0.1 }, headY: 0.1 })], [tMoved - 0.35, P({ armR: { out: 1.35, fwd: 0.55, elbow: -0.35 }, armL: { out: 0.25, fwd: 0.1 }, headY: 0.55, sway: 0.08 })], [tMoved + 0.6, P({ armR: { out: 1.4, fwd: 0.5, elbow: -0.3 }, armL: { out: 0.25, fwd: 0.1 }, headY: 0.55, sway: 0.08 })], [tMoved + 1.2, P({ armR: { out: 0.4, fwd: 0.9, elbow: -1.8, twist: 0.4 }, armL: { out: 0.25, fwd: 0.1 }, headY: 0.05 })]]), t);
   exprKeys(f, t, [[-1, 'smug'], [tMoved + 1.0, 'wink']]); look(f, t < tMoved + 0.9 ? [0.8, -0.2] : [0, 0]);
   const k = sstep((t - tMoved) / 0.6);
   O.cal.draw({ thuBold: true, circles: [{ d: 30, col: '#bbb' }, { d: 23, col: '#1c9a3a', k: clamp((t - tMoved - 0.5) / 0.3) }] });
@@ -614,7 +614,7 @@ shot('chamber', LS(6), 36.4, { from: [[1.2, 3.2, 3.9], [0, 2.35, -2.6]], to: [[0
 const tFourth = wordT(6, 'fourth'), tForever = wordT(6, 'forever');
 const stampAt = (t, t0) => { const dt = t - t0; if (dt < -0.35 || dt > 0.45) return -1; return dt < 0 ? 1 - sstep((dt + 0.35) / 0.35) : sstep(dt / 0.35); };
 shot('stamp', 36.4, LS(7), { from: [[0.15, 2.05, 0.75], [0, 0, -0.02]], to: [[0.1, 1.75, 0.6], [0, 0, 0]], fov: 46, kick: (t) => spring(t - tFourth, 30, 9) + spring(t - tForever, 30, 9) }, (t) => {
-  IN.cal.draw({ thuBold: true, thuCol: clamp((t - 36.5) / 0.4), circles: [{ d: 24, col: '#1c9a3a', k: clamp((t - tFourth) / 0.25) }], stamps: [{ txt: '4TH THURSDAY', y: 470, rot: -0.12, k: t >= tFourth ? 1 : 0 }, { txt: 'FOREVER', y: 760, rot: 0.08, k: t >= tForever ? 1 : 0 }] });
+  IN.cal.draw({ thuBold: true, thuCol: clamp((t - 36.5) / 0.4), circles: [{ d: 27, col: '#1c9a3a', k: clamp((t - tFourth) / 0.25) }], stamps: [{ txt: '4TH THURSDAY', y: 470, rot: -0.12, k: t >= tFourth ? 1 : 0 }, { txt: 'FOREVER', y: 760, rot: 0.08, k: t >= tForever ? 1 : 0 }] });
   const s1 = stampAt(t, tFourth), s2 = stampAt(t, tForever);
   const st = IN.stamp;
   if (s1 >= 0 && t < tFourth + 0.5) { st.visible = true; st.position.set(0.0, s1 * 0.9, -0.08); st.rotation.set(0, -0.12, 0); }
