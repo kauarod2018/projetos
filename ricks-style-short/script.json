@@ -1,0 +1,15 @@
+{
+ "title": "Why Bakers Gave You 13 Loaves",
+ "voice": "am_michael",
+ "speed": 1.12,
+ "lines": [
+  {"scene": "bakery", "text": "In medieval England, selling a light loaf of bread could ruin your whole life."},
+  {"scene": "king", "text": "In 1266, the king passed a law fixing exactly how much bread a penny had to buy."},
+  {"scene": "inspector", "text": "Inspectors went from shop to shop with scales, weighing every single loaf."},
+  {"scene": "pillory", "text": "Come up short, and you could be fined, whipped, or locked in the pillory while the whole town threw garbage at you.", "pause": 0.2},
+  {"scene": "oven", "text": "The problem? Dough shrinks in the oven, and no baker could make every loaf perfect."},
+  {"scene": "counter", "text": "So bakers started throwing in one extra loaf with every twelve."},
+  {"scene": "wink", "text": "Just to be safe.", "pause": 0.25},
+  {"scene": "ending", "text": "And that's why thirteen is still called a baker's dozen."}
+ ]
+}

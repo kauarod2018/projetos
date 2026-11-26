@@ -1,0 +1,489 @@
+{
+ "duration": 36.517,
+ "lines": [
+  {
+   "i": 0,
+   "start": 0.35,
+   "end": 4.822,
+   "text": "In medieval England, selling a light loaf of bread could ruin your whole life.",
+   "words": [
+    {
+     "w": "In",
+     "t": 0.35
+    },
+    {
+     "w": "medieval",
+     "t": 0.534
+    },
+    {
+     "w": "England,",
+     "t": 0.995
+    },
+    {
+     "w": "selling",
+     "t": 1.549
+    },
+    {
+     "w": "a",
+     "t": 1.964
+    },
+    {
+     "w": "light",
+     "t": 2.102
+    },
+    {
+     "w": "loaf",
+     "t": 2.425
+    },
+    {
+     "w": "of",
+     "t": 2.701
+    },
+    {
+     "w": "bread",
+     "t": 2.886
+    },
+    {
+     "w": "could",
+     "t": 3.208
+    },
+    {
+     "w": "ruin",
+     "t": 3.531
+    },
+    {
+     "w": "your",
+     "t": 3.808
+    },
+    {
+     "w": "whole",
+     "t": 4.084
+    },
+    {
+     "w": "life.",
+     "t": 4.407
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "start": 4.942,
+   "end": 11.857,
+   "text": "In 1266, the king passed a law fixing exactly how much bread a penny had to buy.",
+   "words": [
+    {
+     "w": "In",
+     "t": 4.942
+    },
+    {
+     "w": "1266,",
+     "t": 5.213
+    },
+    {
+     "w": "the",
+     "t": 5.823
+    },
+    {
+     "w": "king",
+     "t": 6.162
+    },
+    {
+     "w": "passed",
+     "t": 6.569
+    },
+    {
+     "w": "a",
+     "t": 7.111
+    },
+    {
+     "w": "law",
+     "t": 7.315
+    },
+    {
+     "w": "fixing",
+     "t": 7.654
+    },
+    {
+     "w": "exactly",
+     "t": 8.196
+    },
+    {
+     "w": "how",
+     "t": 8.806
+    },
+    {
+     "w": "much",
+     "t": 9.145
+    },
+    {
+     "w": "bread",
+     "t": 9.552
+    },
+    {
+     "w": "a",
+     "t": 10.027
+    },
+    {
+     "w": "penny",
+     "t": 10.23
+    },
+    {
+     "w": "had",
+     "t": 10.705
+    },
+    {
+     "w": "to",
+     "t": 11.044
+    },
+    {
+     "w": "buy.",
+     "t": 11.315
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "start": 11.977,
+   "end": 16.391,
+   "text": "Inspectors went from shop to shop with scales, weighing every single loaf.",
+   "words": [
+    {
+     "w": "Inspectors",
+     "t": 11.977
+    },
+    {
+     "w": "went",
+     "t": 12.559
+    },
+    {
+     "w": "from",
+     "t": 12.85
+    },
+    {
+     "w": "shop",
+     "t": 13.141
+    },
+    {
+     "w": "to",
+     "t": 13.432
+    },
+    {
+     "w": "shop",
+     "t": 13.626
+    },
+    {
+     "w": "with",
+     "t": 13.917
+    },
+    {
+     "w": "scales,",
+     "t": 14.208
+    },
+    {
+     "w": "weighing",
+     "t": 14.742
+    },
+    {
+     "w": "every",
+     "t": 15.227
+    },
+    {
+     "w": "single",
+     "t": 15.566
+    },
+    {
+     "w": "loaf.",
+     "t": 15.954
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "start": 16.511,
+   "end": 22.55,
+   "text": "Come up short, and you could be fined, whipped, or locked in the pillory while the whole town threw garbage at you.",
+   "words": [
+    {
+     "w": "Come",
+     "t": 16.511
+    },
+    {
+     "w": "up",
+     "t": 16.759
+    },
+    {
+     "w": "short,",
+     "t": 16.924
+    },
+    {
+     "w": "and",
+     "t": 17.338
+    },
+    {
+     "w": "you",
+     "t": 17.545
+    },
+    {
+     "w": "could",
+     "t": 17.752
+    },
+    {
+     "w": "be",
+     "t": 18.041
+    },
+    {
+     "w": "fined,",
+     "t": 18.207
+    },
+    {
+     "w": "whipped,",
+     "t": 18.62
+    },
+    {
+     "w": "or",
+     "t": 19.117
+    },
+    {
+     "w": "locked",
+     "t": 19.282
+    },
+    {
+     "w": "in",
+     "t": 19.613
+    },
+    {
+     "w": "the",
+     "t": 19.778
+    },
+    {
+     "w": "pillory",
+     "t": 19.985
+    },
+    {
+     "w": "while",
+     "t": 20.358
+    },
+    {
+     "w": "the",
+     "t": 20.647
+    },
+    {
+     "w": "whole",
+     "t": 20.854
+    },
+    {
+     "w": "town",
+     "t": 21.143
+    },
+    {
+     "w": "threw",
+     "t": 21.392
+    },
+    {
+     "w": "garbage",
+     "t": 21.681
+    },
+    {
+     "w": "at",
+     "t": 22.053
+    },
+    {
+     "w": "you.",
+     "t": 22.219
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "start": 22.75,
+   "end": 27.484,
+   "text": "The problem? Dough shrinks in the oven, and no baker could make every loaf perfect.",
+   "words": [
+    {
+     "w": "The",
+     "t": 22.75
+    },
+    {
+     "w": "problem?",
+     "t": 22.975
+    },
+    {
+     "w": "Dough",
+     "t": 23.516
+    },
+    {
+     "w": "shrinks",
+     "t": 23.832
+    },
+    {
+     "w": "in",
+     "t": 24.238
+    },
+    {
+     "w": "the",
+     "t": 24.418
+    },
+    {
+     "w": "oven,",
+     "t": 24.643
+    },
+    {
+     "w": "and",
+     "t": 25.049
+    },
+    {
+     "w": "no",
+     "t": 25.275
+    },
+    {
+     "w": "baker",
+     "t": 25.455
+    },
+    {
+     "w": "could",
+     "t": 25.771
+    },
+    {
+     "w": "make",
+     "t": 26.086
+    },
+    {
+     "w": "every",
+     "t": 26.357
+    },
+    {
+     "w": "loaf",
+     "t": 26.672
+    },
+    {
+     "w": "perfect.",
+     "t": 26.943
+    }
+   ]
+  },
+  {
+   "i": 5,
+   "start": 27.604,
+   "end": 31.312,
+   "text": "So bakers started throwing in one extra loaf with every twelve.",
+   "words": [
+    {
+     "w": "So",
+     "t": 27.604
+    },
+    {
+     "w": "bakers",
+     "t": 27.797
+    },
+    {
+     "w": "started",
+     "t": 28.182
+    },
+    {
+     "w": "throwing",
+     "t": 28.615
+    },
+    {
+     "w": "in",
+     "t": 29.097
+    },
+    {
+     "w": "one",
+     "t": 29.289
+    },
+    {
+     "w": "extra",
+     "t": 29.53
+    },
+    {
+     "w": "loaf",
+     "t": 29.867
+    },
+    {
+     "w": "with",
+     "t": 30.156
+    },
+    {
+     "w": "every",
+     "t": 30.445
+    },
+    {
+     "w": "twelve.",
+     "t": 30.782
+    }
+   ]
+  },
+  {
+   "i": 6,
+   "start": 31.432,
+   "end": 32.471,
+   "text": "Just to be safe.",
+   "words": [
+    {
+     "w": "Just",
+     "t": 31.432
+    },
+    {
+     "w": "to",
+     "t": 31.703
+    },
+    {
+     "w": "be",
+     "t": 31.883
+    },
+    {
+     "w": "safe.",
+     "t": 32.064
+    }
+   ]
+  },
+  {
+   "i": 7,
+   "start": 32.721,
+   "end": 35.797,
+   "text": "And that's why thirteen is still called a baker's dozen.",
+   "words": [
+    {
+     "w": "And",
+     "t": 32.721
+    },
+    {
+     "w": "that's",
+     "t": 32.95
+    },
+    {
+     "w": "why",
+     "t": 33.271
+    },
+    {
+     "w": "thirteen",
+     "t": 33.501
+    },
+    {
+     "w": "is",
+     "t": 33.96
+    },
+    {
+     "w": "still",
+     "t": 34.144
+    },
+    {
+     "w": "called",
+     "t": 34.465
+    },
+    {
+     "w": "a",
+     "t": 34.832
+    },
+    {
+     "w": "baker's",
+     "t": 34.97
+    },
+    {
+     "w": "dozen.",
+     "t": 35.337
+    }
+   ]
+  }
+ ]
+}

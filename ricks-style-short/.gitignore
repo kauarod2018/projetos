@@ -1,0 +1,7 @@
+node_modules/
+tts/kokoro.onnx
+tts/voices.bin
+build/preview/
+build/*.jpg
+build/render.log
+build/video_noaudio.mp4
