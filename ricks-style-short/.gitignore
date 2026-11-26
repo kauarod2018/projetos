@@ -8,3 +8,5 @@ build/video_noaudio.mp4
 build/part*.mp4
 build/r*.log
 build/parts.txt
+build/thanksgiving/part*.mp4
+build/thanksgiving/r*.log

@@ -294,6 +294,7 @@ function drawFace(c, expr, o) {
   }
   if (o.mustache) mustache();
   if (expr === 'worried' || o.sweat) { c.fillStyle = '#8fd0ff'; c.strokeStyle = ink; c.lineWidth = 5; const x = cx + 170, y = 140 + (o.sweatY || 0); c.beginPath(); c.moveTo(x, y); c.quadraticCurveTo(x + 22, y + 40, x, y + 52); c.quadraticCurveTo(x - 22, y + 40, x, y); c.fill(); c.stroke(); c.fillStyle = '#fff'; c.beginPath(); c.arc(x - 5, y + 34, 5, 0, 7); c.fill(); }
+  if (o.glasses) { c.strokeStyle = '#222'; c.lineWidth = 7; [-1, 1].forEach(sx => { c.beginPath(); c.arc(cx + sx * dx, ey, 44, 0, 7); c.stroke(); }); c.beginPath(); c.moveTo(cx - dx + 44, ey - 4); c.quadraticCurveTo(cx, ey - 16, cx + dx - 44, ey - 4); c.stroke(); c.fillStyle = 'rgba(255,255,255,0.18)'; [-1, 1].forEach(sx => { c.beginPath(); c.ellipse(cx + sx * dx - 14, ey - 16, 12, 7, -0.5, 0, 7); c.fill(); }); }
   if (o.monocle) { c.strokeStyle = '#c9a227'; c.lineWidth = 8; c.beginPath(); c.arc(cx + dx, ey, 46, 0, 7); c.stroke(); c.beginPath(); c.moveTo(cx + dx + 40, ey + 24); c.quadraticCurveTo(cx + dx + 80, ey + 120, cx + dx + 60, 470); c.stroke(); }
 }
 
@@ -386,6 +387,9 @@ export function makeChar(o = {}) {
   if (Pp.collar) { const cl = withOutline(mesh(new THREE.TorusGeometry(bR * 0.75, 0.09, 10, 32), toon(Pp.collar)), 0.015); cl.rotation.x = Math.PI / 2; cl.position.y = Pp.bodyLen / 2 + bR * 0.55; torsoInner.add(cl); if (Pp.ermine) for (let i = 0; i < 12; i++) { const d = mesh(new THREE.SphereGeometry(0.018, 6, 4), BLACK); const a = i / 12 * Math.PI * 2; d.position.set(Math.cos(a) * bR * 0.75, Pp.bodyLen / 2 + bR * 0.55 + 0.06, Math.sin(a) * bR * 0.75); torsoInner.add(d); } }
   if (Pp.cape) { const cp = mesh(new THREE.CylinderGeometry(bR * 1.06, bR * 1.4, Pp.bodyLen + bR * 1.5, 28, 1, true, Math.PI * 0.6, Math.PI * 0.8), toon(Pp.cape, { side: THREE.DoubleSide })); cp.position.y = -0.15; torsoInner.add(cp); }
   if (Pp.vest) { const v = mesh(new THREE.CylinderGeometry(bR * 1.02, bR * 1.04, Pp.bodyLen + bR * 0.6, 28, 1, true, -0.6, 1.2), toon(Pp.vest, { side: THREE.DoubleSide })); v.scale.z = 0.9; torsoInner.add(v); }
+  if (Pp.lapels) { for (const sd of [-1, 1]) { const lp = mesh(new THREE.CylinderGeometry(bR * 1.03, bR * 1.05, Pp.bodyLen + bR * 0.5, 16, 1, true, sd > 0 ? 0.12 : -0.62, 0.5), toon(Pp.lapels, { side: THREE.DoubleSide })); lp.position.y = 0.06; lp.scale.z = 0.9; torsoInner.add(lp); } const sh = mesh(new THREE.CylinderGeometry(bR * 1.01, bR * 1.02, Pp.bodyLen * 0.9, 12, 1, true, -0.12, 0.24), toon('#f4f2ea', { side: THREE.DoubleSide })); sh.position.y = 0.1; sh.scale.z = 0.9; torsoInner.add(sh); }
+  if (Pp.tie) { const tg = new THREE.Group(); tg.position.set(0, Pp.bodyLen / 2 + 0.05, bR * 0.9 + 0.02); torsoInner.add(tg); const knot = mesh(new THREE.SphereGeometry(0.04, 10, 8), toon(Pp.tie)); tg.add(knot); const bl = mesh(new THREE.ConeGeometry(0.055, 0.34, 4), toon(Pp.tie)); bl.rotation.x = Math.PI; bl.position.y = -0.2; bl.scale.z = 0.3; tg.add(bl); }
+  if (Pp.bowtie) { const bg = new THREE.Group(); bg.position.set(0, Pp.bodyLen / 2 + 0.07, bR * 0.85 + 0.03); torsoInner.add(bg); for (const sd of [-1, 1]) { const w = mesh(new THREE.ConeGeometry(0.05, 0.1, 4), toon(Pp.bowtie)); w.rotation.z = sd * Math.PI / 2; w.position.x = sd * 0.05; w.scale.z = 0.4; bg.add(w); } bg.add(mesh(new THREE.SphereGeometry(0.025, 8, 6), toon(Pp.bowtie))); }
   // braços
   const arms = [];
   const shoulderY = Pp.bodyLen / 2 + 0.1;
@@ -412,6 +416,7 @@ export function makeChar(o = {}) {
   face.scale.copy(skull.scale); face.renderOrder = 2; head.add(face);
   if (Pp.hairCap) { const hc = withOutline(mesh(new THREE.SphereGeometry(Pp.headR * 1.025, 36, 18, 0, Math.PI * 2, 0, 1.1), toon(Pp.hair)), 0.02); hc.rotation.x = -0.55; head.add(hc); }
   for (const s of [-1, 1]) { const e = withOutline(mesh(new THREE.SphereGeometry(0.07, 12, 8), skinMat), 0.014); e.scale.set(0.5, 1, 0.8); e.position.set(s * Pp.headR * 1.02, -0.02, 0); head.add(e); }
+  if (Pp.bun) { const bn = withOutline(mesh(new THREE.SphereGeometry(0.17, 16, 12), toon(Pp.hair)), 0.015); bn.position.set(0, Pp.headR * 0.75, -Pp.headR * 0.45); head.add(bn); }
   const hat = new THREE.Group(); hat.position.y = Pp.headR * 0.62; head.add(hat);
   buildHat(hat, Pp);
   const ch = { root, rig, torso, torsoInner, body, head, neck, arms, legs, blob, P: Pp, face: { canvas: faceCanvas, tex: faceTex, key: '' }, expr: Pp.expr, look: [0, 0], blinkSeed: R() * 10, hat, idleAmt: 1, popT: -99 };
@@ -422,7 +427,7 @@ export function makeChar(o = {}) {
     const key = ch.expr + (blink ? 'b' : '') + ch.look.map(v => v.toFixed(2)).join(',') + (ch.sweat ? 's' + sy : '');
     if (key === ch.face.key) return;
     ch.face.key = key;
-    drawFace(ch.face.canvas.getContext('2d'), ch.expr, { blink, look: ch.look, mustache: Pp.mustache, beard: Pp.beard, hairColor: Pp.hairColor, monocle: Pp.monocle, sweat: ch.sweat, sweatY: sy, cheeks: Pp.cheeks });
+    drawFace(ch.face.canvas.getContext('2d'), ch.expr, { blink, look: ch.look, mustache: Pp.mustache, beard: Pp.beard, hairColor: Pp.hairColor, monocle: Pp.monocle, glasses: Pp.glasses, sweat: ch.sweat, sweatY: sy, cheeks: Pp.cheeks });
     ch.face.tex.needsUpdate = true;
   };
   // aplica pose + camada procedural (respiração, balanço do peso, "take" ao trocar expressão)
@@ -487,6 +492,20 @@ function buildHat(hat, Pp) {
       const brim = mesh(new THREE.CylinderGeometry(0.62, 0.55, 0.05, 40), m); brim.position.y = -0.06; hat.add(brim);
       const ridge = mesh(new THREE.TorusGeometry(0.4, 0.02, 6, 32, Math.PI), m); ridge.rotation.y = Math.PI / 2; ridge.position.y = -0.06; hat.add(ridge);
       break;
+    }
+    case 'fedora': {
+      const m = toon(Pp.hatColor || '#4a4038');
+      const brim = o(mesh(new THREE.CylinderGeometry(0.56, 0.58, 0.035, 40), m)); brim.scale.z = 0.9; hat.add(brim);
+      const crown = o(mesh(new THREE.CylinderGeometry(0.3, 0.34, 0.32, 32), m)); crown.position.y = 0.16; crown.scale.z = 0.9; hat.add(crown);
+      const dent = mesh(new THREE.BoxGeometry(0.05, 0.05, 0.5), toon('#2a2420')); dent.position.y = 0.32; hat.add(dent);
+      const band = mesh(new THREE.CylinderGeometry(0.343, 0.343, 0.07, 32), toon(Pp.bandColor || '#1a1a1a')); band.position.y = 0.05; band.scale.z = 0.9; hat.add(band);
+      hat.rotation.set(-0.06, 0, 0.06); break;
+    }
+    case 'leather': {
+      const m = toon('#7a4a24');
+      const dome = o(mesh(new THREE.SphereGeometry(0.5, 32, 18, 0, Math.PI * 2, 0, Math.PI * 0.62), m)); dome.position.y = -0.22; hat.add(dome);
+      for (const sd of [-1, 1]) { const flap = o(mesh(new THREE.SphereGeometry(0.16, 12, 10), m)); flap.scale.set(0.4, 1, 1); flap.position.set(sd * 0.47, -0.4, 0); hat.add(flap); }
+      const stripe = mesh(new THREE.BoxGeometry(0.08, 0.02, 0.9), toon('#5a3418')); stripe.position.y = 0.27; stripe.rotation.x = 0; hat.add(stripe); break;
     }
     case 'beret': { const b = o(mesh(new THREE.SphereGeometry(0.42, 28, 14), toon(Pp.hatColor || '#2d4f8a'))); b.scale.set(1.05, 0.35, 1.05); b.position.set(0.05, 0.02, -0.03); b.rotation.z = -0.25; hat.add(b); break; }
     case 'bonnet': { const b = o(mesh(new THREE.SphereGeometry(0.5, 32, 18, 0, Math.PI * 2, 0, 1.6), toon(Pp.hatColor || '#f2efe6'))); b.rotation.x = -0.6; b.position.set(0, -0.2, -0.05); hat.add(b); break; }
@@ -593,12 +612,12 @@ export function house(w, h, d, base, seed) {
   const lintel = box(1.15, 0.14, 0.16, std('#4a2c14')); lintel.position.set(doorX, 1.75, d / 2 + 0.08); g.add(lintel);
   return g;
 }
-export function tree(seed) {
+export function tree(seed, autumn = false) {
   const r = rng(seed); const g = new THREE.Group();
   const trunk = mesh(new THREE.CylinderGeometry(0.14, 0.26, 2.4, 10), std('#5a3a1e', { roughness: 1 })); trunk.position.y = 1.2; g.add(trunk);
   for (let i = 0; i < 3; i++) { const br = mesh(new THREE.CylinderGeometry(0.04, 0.08, 1, 6), std('#5a3a1e')); br.position.set((r() - .5) * 0.5, 2.2, (r() - .5) * 0.5); br.rotation.set((r() - .5) * 1.2, 0, (r() - .5) * 1.2); g.add(br); }
   const leaves = new THREE.Group(); g.add(leaves); g.userData.leaves = leaves;
-  for (let i = 0; i < 10; i++) { const lm = toon(hsl(90 + r() * 30, 40 + r() * 15, 26 + r() * 12)); const l = mesh(new THREE.IcosahedronGeometry(0.7 + r() * 0.5, 1), lm); l.position.set((r() - .5) * 1.8, 2.4 + r() * 1.5, (r() - .5) * 1.8); l.rotation.set(r() * 3, r() * 3, 0); leaves.add(l); }
+  for (let i = 0; i < 10; i++) { const lm = toon(autumn ? hsl(15 + r() * 30, 65 + r() * 20, 38 + r() * 12) : hsl(90 + r() * 30, 40 + r() * 15, 26 + r() * 12)); const l = mesh(new THREE.IcosahedronGeometry(0.7 + r() * 0.5, 1), lm); l.position.set((r() - .5) * 1.8, 2.4 + r() * 1.5, (r() - .5) * 1.8); l.rotation.set(r() * 3, r() * 3, 0); leaves.add(l); }
   return g;
 }
 export function lantern() {

@@ -1,0 +1,473 @@
+{
+ "duration": 42.411,
+ "lines": [
+  {
+   "i": 0,
+   "start": 0.35,
+   "end": 5.317,
+   "text": "In 1939, America accidentally ended up with two Thanksgivings.",
+   "words": [
+    {
+     "w": "In",
+     "t": 0.35
+    },
+    {
+     "w": "1939,",
+     "t": 0.611
+    },
+    {
+     "w": "America",
+     "t": 1.2
+    },
+    {
+     "w": "accidentally",
+     "t": 1.788
+    },
+    {
+     "w": "ended",
+     "t": 2.703
+    },
+    {
+     "w": "up",
+     "t": 3.16
+    },
+    {
+     "w": "with",
+     "t": 3.422
+    },
+    {
+     "w": "two",
+     "t": 3.814
+    },
+    {
+     "w": "Thanksgivings.",
+     "t": 4.141
+    }
+   ]
+  },
+  {
+   "i": 1,
+   "start": 5.437,
+   "end": 10.99,
+   "text": "November had five Thursdays that year, so the holiday landed on the very last day of the month.",
+   "words": [
+    {
+     "w": "November",
+     "t": 5.437
+    },
+    {
+     "w": "had",
+     "t": 5.908
+    },
+    {
+     "w": "five",
+     "t": 6.143
+    },
+    {
+     "w": "Thursdays",
+     "t": 6.426
+    },
+    {
+     "w": "that",
+     "t": 6.943
+    },
+    {
+     "w": "year,",
+     "t": 7.226
+    },
+    {
+     "w": "so",
+     "t": 7.649
+    },
+    {
+     "w": "the",
+     "t": 7.837
+    },
+    {
+     "w": "holiday",
+     "t": 8.073
+    },
+    {
+     "w": "landed",
+     "t": 8.496
+    },
+    {
+     "w": "on",
+     "t": 8.873
+    },
+    {
+     "w": "the",
+     "t": 9.061
+    },
+    {
+     "w": "very",
+     "t": 9.296
+    },
+    {
+     "w": "last",
+     "t": 9.578
+    },
+    {
+     "w": "day",
+     "t": 9.861
+    },
+    {
+     "w": "of",
+     "t": 10.096
+    },
+    {
+     "w": "the",
+     "t": 10.284
+    },
+    {
+     "w": "month.",
+     "t": 10.52
+    }
+   ]
+  },
+  {
+   "i": 2,
+   "start": 11.11,
+   "end": 16.781,
+   "text": "Store owners panicked. Back then, nobody started Christmas shopping until Thanksgiving was over.",
+   "words": [
+    {
+     "w": "Store",
+     "t": 11.11
+    },
+    {
+     "w": "owners",
+     "t": 11.452
+    },
+    {
+     "w": "panicked.",
+     "t": 11.843
+    },
+    {
+     "w": "Back",
+     "t": 12.479
+    },
+    {
+     "w": "then,",
+     "t": 12.772
+    },
+    {
+     "w": "nobody",
+     "t": 13.212
+    },
+    {
+     "w": "started",
+     "t": 13.603
+    },
+    {
+     "w": "Christmas",
+     "t": 14.043
+    },
+    {
+     "w": "shopping",
+     "t": 14.581
+    },
+    {
+     "w": "until",
+     "t": 15.07
+    },
+    {
+     "w": "Thanksgiving",
+     "t": 15.412
+    },
+    {
+     "w": "was",
+     "t": 16.096
+    },
+    {
+     "w": "over.",
+     "t": 16.341
+    }
+   ]
+  },
+  {
+   "i": 3,
+   "start": 16.901,
+   "end": 20.68,
+   "text": "So President Roosevelt simply moved Thanksgiving one week earlier.",
+   "words": [
+    {
+     "w": "So",
+     "t": 16.901
+    },
+    {
+     "w": "President",
+     "t": 17.094
+    },
+    {
+     "w": "Roosevelt",
+     "t": 17.627
+    },
+    {
+     "w": "simply",
+     "t": 18.161
+    },
+    {
+     "w": "moved",
+     "t": 18.548
+    },
+    {
+     "w": "Thanksgiving",
+     "t": 18.887
+    },
+    {
+     "w": "one",
+     "t": 19.566
+    },
+    {
+     "w": "week",
+     "t": 19.808
+    },
+    {
+     "w": "earlier.",
+     "t": 20.099
+    }
+   ]
+  },
+  {
+   "i": 4,
+   "start": 20.8,
+   "end": 27.44,
+   "text": "The country lost its mind. Calendars were wrong, football games had to be moved, and critics called it Franksgiving.",
+   "words": [
+    {
+     "w": "The",
+     "t": 20.8
+    },
+    {
+     "w": "country",
+     "t": 21.031
+    },
+    {
+     "w": "lost",
+     "t": 21.446
+    },
+    {
+     "w": "its",
+     "t": 21.723
+    },
+    {
+     "w": "mind.",
+     "t": 21.953
+    },
+    {
+     "w": "Calendars",
+     "t": 22.368
+    },
+    {
+     "w": "were",
+     "t": 22.875
+    },
+    {
+     "w": "wrong,",
+     "t": 23.152
+    },
+    {
+     "w": "football",
+     "t": 23.613
+    },
+    {
+     "w": "games",
+     "t": 24.074
+    },
+    {
+     "w": "had",
+     "t": 24.397
+    },
+    {
+     "w": "to",
+     "t": 24.627
+    },
+    {
+     "w": "be",
+     "t": 24.812
+    },
+    {
+     "w": "moved,",
+     "t": 24.996
+    },
+    {
+     "w": "and",
+     "t": 25.457
+    },
+    {
+     "w": "critics",
+     "t": 25.688
+    },
+    {
+     "w": "called",
+     "t": 26.103
+    },
+    {
+     "w": "it",
+     "t": 26.472
+    },
+    {
+     "w": "Franksgiving.",
+     "t": 26.656
+    }
+   ]
+  },
+  {
+   "i": 5,
+   "start": 27.64,
+   "end": 33.555,
+   "text": "About half the states followed the president. The rest refused, so some families ate turkey twice.",
+   "words": [
+    {
+     "w": "About",
+     "t": 27.64
+    },
+    {
+     "w": "half",
+     "t": 27.982
+    },
+    {
+     "w": "the",
+     "t": 28.276
+    },
+    {
+     "w": "states",
+     "t": 28.52
+    },
+    {
+     "w": "followed",
+     "t": 28.911
+    },
+    {
+     "w": "the",
+     "t": 29.4
+    },
+    {
+     "w": "president.",
+     "t": 29.644
+    },
+    {
+     "w": "The",
+     "t": 30.329
+    },
+    {
+     "w": "rest",
+     "t": 30.573
+    },
+    {
+     "w": "refused,",
+     "t": 30.866
+    },
+    {
+     "w": "so",
+     "t": 31.453
+    },
+    {
+     "w": "some",
+     "t": 31.648
+    },
+    {
+     "w": "families",
+     "t": 31.942
+    },
+    {
+     "w": "ate",
+     "t": 32.43
+    },
+    {
+     "w": "turkey",
+     "t": 32.675
+    },
+    {
+     "w": "twice.",
+     "t": 33.066
+    }
+   ]
+  },
+  {
+   "i": 6,
+   "start": 33.675,
+   "end": 39.428,
+   "text": "In 1941, Congress finally settled it. The fourth Thursday of November, forever.",
+   "words": [
+    {
+     "w": "In",
+     "t": 33.675
+    },
+    {
+     "w": "1941,",
+     "t": 33.905
+    },
+    {
+     "w": "Congress",
+     "t": 34.423
+    },
+    {
+     "w": "finally",
+     "t": 34.998
+    },
+    {
+     "w": "settled",
+     "t": 35.516
+    },
+    {
+     "w": "it.",
+     "t": 36.033
+    },
+    {
+     "w": "The",
+     "t": 36.436
+    },
+    {
+     "w": "fourth",
+     "t": 36.724
+    },
+    {
+     "w": "Thursday",
+     "t": 37.184
+    },
+    {
+     "w": "of",
+     "t": 37.759
+    },
+    {
+     "w": "November,",
+     "t": 37.99
+    },
+    {
+     "w": "forever.",
+     "t": 38.737
+    }
+   ]
+  },
+  {
+   "i": 7,
+   "start": 39.548,
+   "end": 41.511,
+   "text": "Happy Thanksgiving. Both of them.",
+   "words": [
+    {
+     "w": "Happy",
+     "t": 39.548
+    },
+    {
+     "w": "Thanksgiving.",
+     "t": 39.867
+    },
+    {
+     "w": "Both",
+     "t": 40.644
+    },
+    {
+     "w": "of",
+     "t": 40.918
+    },
+    {
+     "w": "them.",
+     "t": 41.1
+    }
+   ]
+  }
+ ]
+}

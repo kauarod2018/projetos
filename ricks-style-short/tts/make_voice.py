@@ -3,7 +3,9 @@ import json, re, sys, numpy as np, soundfile as sf
 from kokoro_onnx import Kokoro
 
 HERE = __file__.rsplit('/', 1)[0]
-script = json.load(open(f"{HERE}/../script.json"))
+SCRIPT = sys.argv[1] if len(sys.argv) > 1 else f"{HERE}/../script.json"
+OUT = sys.argv[2] if len(sys.argv) > 2 else f"{HERE}/../build"
+script = json.load(open(SCRIPT))
 voice = script.get("voice", "am_michael"); speed = script.get("speed", 1.15)
 k = Kokoro(f"{HERE}/kokoro.onnx", f"{HERE}/voices.bin")
 SR = 24000
@@ -35,6 +37,6 @@ for i, line in enumerate(script["lines"]):
 audio.append(np.zeros(int(SR * 0.6), np.float32)); t += 0.6
 a = np.concatenate(audio)
 a = a / max(1e-6, np.abs(a).max()) * 0.9
-sf.write(f"{HERE}/../build/voice.wav", a, SR)
-json.dump({"duration": round(t, 3), "lines": out}, open(f"{HERE}/../build/timing.json", "w"), indent=1)
+sf.write(f"{OUT}/voice.wav", a, SR)
+json.dump({"duration": round(t, 3), "lines": out}, open(f"{OUT}/timing.json", "w"), indent=1)
 print("duration", t)

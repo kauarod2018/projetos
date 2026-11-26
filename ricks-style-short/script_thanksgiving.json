@@ -1,0 +1,15 @@
+{
+ "title": "The Year America Had Two Thanksgivings",
+ "voice": "am_michael",
+ "speed": 1.12,
+ "lines": [
+  {"text": "In 1939, America accidentally ended up with two Thanksgivings."},
+  {"text": "November had five Thursdays that year, so the holiday landed on the very last day of the month."},
+  {"text": "Store owners panicked. Back then, nobody started Christmas shopping until Thanksgiving was over."},
+  {"text": "So President Roosevelt simply moved Thanksgiving one week earlier."},
+  {"text": "The country lost its mind. Calendars were wrong, football games had to be moved, and critics called it Franksgiving.", "pause": 0.2},
+  {"text": "About half the states followed the president. The rest refused, so some families ate turkey twice."},
+  {"text": "In 1941, Congress finally settled it. The fourth Thursday of November, forever."},
+  {"text": "Happy Thanksgiving. Both of them.", "pause": 0.3}
+ ]
+}

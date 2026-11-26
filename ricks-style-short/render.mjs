@@ -11,7 +11,7 @@ const b = await chromium.launch({ args: ['--use-gl=angle', '--use-angle=swiftsha
 const p = await b.newPage({ viewport: { width: 540, height: 960 } });
 p.on('console', m => { if (m.type() === 'error' || m.type() === 'warning') console.log('[page]', m.text().slice(0, 3000)); });
 p.on('pageerror', e => console.log('[pageerror]', e.message));
-await p.goto(`http://localhost:${port}/index.html?t=0`);
+await p.goto(`http://localhost:${port}/${process.env.PAGE || 'index.html'}?t=0`);
 await p.waitForFunction(() => window.READY === true, null, { timeout: 120000 });
 const save = async (file, t) => { const d = await p.evaluate((t) => { window.renderAt(t); return window.frameData(0.9); }, t); fs.writeFileSync(file, Buffer.from(d.split(',')[1], 'base64')); };
 fs.mkdirSync(path.join(root, 'build/preview'), { recursive: true });
