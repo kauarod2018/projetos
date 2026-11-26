@@ -21,12 +21,13 @@ if (mode === 'preview') { for (const f of fs.readdirSync(path.join(root, 'build/
   for (const t of ts) { const s = Date.now(); await save(path.join(root, `build/preview/t${t.toFixed(2)}.jpg`), t); console.log('t', t, Date.now() - s, 'ms'); }
 } else {
   const fps = +(process.argv[3] || 30); const dur = await p.evaluate(() => window.DURATION); const n = Math.ceil(dur * fps);
-  const ff = spawn('ffmpeg', ['-y', '-loglevel', 'error', '-f', 'image2pipe', '-framerate', String(fps), '-c:v', 'mjpeg', '-i', '-', '-c:v', 'libx264', '-preset', 'medium', '-crf', '18', '-pix_fmt', 'yuv420p', path.join(root, 'build/video_noaudio.mp4')], { stdio: ['pipe', 'inherit', 'inherit'] });
+  const f0 = +(process.argv[4] || 0), f1 = Math.min(n, +(process.argv[5] || n)); const outName = process.argv[6] || 'build/video_noaudio.mp4';
+  const ff = spawn('ffmpeg', ['-y', '-loglevel', 'error', '-f', 'image2pipe', '-framerate', String(fps), '-c:v', 'mjpeg', '-i', '-', '-c:v', 'libx264', '-preset', 'medium', '-crf', '18', '-pix_fmt', 'yuv420p', path.join(root, outName)], { stdio: ['pipe', 'inherit', 'inherit'] });
   const st = Date.now();
-  for (let i = 0; i < n; i++) {
+  for (let i = f0; i < f1; i++) {
     const d = await p.evaluate((t) => { window.renderAt(t); return window.frameData(0.95); }, i / fps);
     if (!ff.stdin.write(Buffer.from(d.split(',')[1], 'base64'))) await new Promise(r => ff.stdin.once('drain', r));
-    if (i % 30 === 0) console.log(`frame ${i}/${n}  ${((Date.now() - st) / 1000).toFixed(0)}s`);
+    if (i % 30 === 0) console.log(`frame ${i}/${f1}  ${((Date.now() - st) / 1000).toFixed(0)}s`);
   }
   ff.stdin.end(); await new Promise(r => ff.on('close', r));
 }
