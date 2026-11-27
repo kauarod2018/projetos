@@ -7,6 +7,8 @@ from mathutils import Vector
 argv = sys.argv[sys.argv.index('--') + 1:] if '--' in sys.argv else []
 OUT_BLEND = argv[0] if argv else 'avatar.blend'
 OUT_GLB = argv[1] if len(argv) > 1 else 'avatar.glb'
+# 'classico' = boneco padrão de blocos: sem cabelo, sem tênis, sem detalhes, braços na cor da pele, quinas retas
+CLASSIC = len(argv) > 2 and argv[2] == 'classico'
 
 S = 0.65            # 1 "stud" em metros -> altura total ~3.4 (igual ao kit)
 FPS = 30
@@ -23,6 +25,13 @@ COL = {
     'chao':   (0.42, 0.45, 0.48),
     'linha':  (0.33, 0.36, 0.39),
 }
+if CLASSIC:
+    COL.update({
+        'pele':   (0.96, 0.80, 0.27),   # cabeça e braços
+        'camisa': (0.05, 0.41, 0.67),   # tronco
+        'calca':  (0.40, 0.70, 0.27),   # pernas
+    })
+BV = 0.025 if CLASSIC else None     # quina bem mais reta no clássico
 
 # ---------------- cena limpa ----------------
 bpy.ops.wm.read_factory_settings(use_empty=True)
@@ -46,6 +55,7 @@ def mat(name, rough=0.55):
     return m
 
 def block(name, size, loc, material, bevel=0.06, segs=3):
+    if BV is not None and bevel: bevel = min(bevel, BV)
     bpy.ops.mesh.primitive_cube_add(size=1, location=loc)
     o = bpy.context.object
     o.name = name
@@ -68,6 +78,9 @@ parts = {}
 # ---------------- corpo ----------------
 # pernas: x = ±0.5 stud, z 0..2
 for side, sx in (('L', 1), ('R', -1)):
+    if CLASSIC:
+        leg = block(f'Perna.{side}', (1.0 * S, 1.0 * S, 2.0 * S), (sx * 0.5 * S, 0, 1.0 * S), 'calca')
+        apply_mods(leg); parts[f'Perna.{side}'] = leg; continue
     leg = block(f'Perna.{side}', (0.98 * S, 0.98 * S, 1.72 * S), (sx * 0.5 * S, 0, 0.28 * S + 0.86 * S), 'calca')
     shoe = block(f'Tenis.{side}', (1.0 * S, 1.08 * S, 0.30 * S), (sx * 0.5 * S, 0.04 * S, 0.15 * S), 'tenis', bevel=0.05)
     apply_mods(leg); apply_mods(shoe)
@@ -77,16 +90,22 @@ for side, sx in (('L', 1), ('R', -1)):
 
 # tronco 2x2x1, z 2..4
 torso = block('Tronco', (2 * S, 1 * S, 2 * S), (0, 0, 3 * S), 'camisa', bevel=0.07)
-pocket = block('Bolso', (1.2 * S, 0.06 * S, 0.5 * S), (0, -0.5 * S, 2.45 * S), 'bolso', bevel=0.02)
-hood = block('Capuz', (1.6 * S, 0.55 * S, 0.32 * S), (0, 0.28 * S, 4.05 * S), 'camisa', bevel=0.06)
-for o in (torso, pocket, hood): apply_mods(o)
+extras = []
+if not CLASSIC:
+  pocket = block('Bolso', (1.2 * S, 0.06 * S, 0.5 * S), (0, -0.5 * S, 2.45 * S), 'bolso', bevel=0.02)
+  hood = block('Capuz', (1.6 * S, 0.55 * S, 0.32 * S), (0, 0.28 * S, 4.05 * S), 'camisa', bevel=0.06)
+  extras = [pocket, hood]
+for o in (torso, *extras): apply_mods(o)
 bpy.ops.object.select_all(action='DESELECT')
-for o in (torso, pocket, hood): o.select_set(True)
+for o in (torso, *extras): o.select_set(True)
 bpy.context.view_layer.objects.active = torso; bpy.ops.object.join()
 parts['Tronco'] = torso
 
 # braços 1x2x1, x = ±1.5 (manga + mão em cor de pele)
 for side, sx in (('L', 1), ('R', -1)):
+    if CLASSIC:
+        arm = block(f'Braco.{side}', (1.0 * S, 1.0 * S, 2.0 * S), (sx * 1.5 * S, 0, 3.0 * S), 'pele')
+        apply_mods(arm); parts[f'Braco.{side}'] = arm; continue
     arm = block(f'Braco.{side}', (0.98 * S, 0.98 * S, 1.45 * S), (sx * 1.5 * S, 0, 3.27 * S), 'camisa')
     hand = block(f'Mao.{side}', (0.94 * S, 0.94 * S, 0.55 * S), (sx * 1.5 * S, 0, 2.28 * S), 'pele')
     apply_mods(arm); apply_mods(hand)
@@ -95,9 +114,10 @@ for side, sx in (('L', 1), ('R', -1)):
     parts[f'Braco.{side}'] = arm
 
 # cabeça cilíndrica (marca registrada do estilo), z 4..5.2
-bpy.ops.mesh.primitive_cylinder_add(vertices=48, radius=0.66 * S, depth=1.2 * S, location=(0, 0, 4.62 * S))
+HR = 0.6 if CLASSIC else 0.66
+bpy.ops.mesh.primitive_cylinder_add(vertices=48, radius=HR * S, depth=1.2 * S, location=(0, 0, 4.62 * S))
 head = bpy.context.object; head.name = 'Cabeca'
-md = head.modifiers.new('Bevel', 'BEVEL'); md.width = 0.2 * S; md.segments = 6; md.limit_method = 'ANGLE'
+md = head.modifiers.new('Bevel', 'BEVEL'); md.width = (0.14 if CLASSIC else 0.2) * S; md.segments = 6; md.limit_method = 'ANGLE'
 head.data.materials.append(mat('pele'))
 bpy.ops.object.shade_smooth(); head.data.use_auto_smooth = True; head.data.auto_smooth_angle = math.radians(50)
 apply_mods(head)
@@ -118,9 +138,11 @@ bpy.ops.object.select_all(action='DESELECT')
 for p in hair_pieces: p.select_set(True)
 bpy.context.view_layer.objects.active = hair_pieces[0]; bpy.ops.object.join()
 hair = hair_pieces[0]; hair.name = 'Cabelo'
+if CLASSIC:
+    bpy.data.objects.remove(hair); hair = None
 
 # ---------------- rosto (geometria) ----------------
-FACE_Y = -0.66 * S - 0.004   # frente da cabeça (-Y é a frente no Blender)
+FACE_Y = -HR * S - 0.004   # frente da cabeça (-Y é a frente no Blender)
 def eye(name, x):
     bpy.ops.mesh.primitive_cylinder_add(vertices=24, radius=0.085 * S, depth=0.02, location=(x, FACE_Y, 4.72 * S), rotation=(math.pi / 2, 0, 0))
     e = bpy.context.object; e.name = name; e.scale = (1, 1.55, 1)  # oval vertical
@@ -205,7 +227,9 @@ def bind(obj, bone_name):
     obj.matrix_world = mw
 
 bind(parts['Tronco'], 'Tronco')
-bind(neck, 'Cabeca'); bind(head, 'Cabeca'); bind(hair, 'Cabeca'); bind(eyes, 'Cabeca'); bind(arc, 'Boca' if False else 'Cabeca')
+bind(neck, 'Cabeca')
+if hair: bind(hair, 'Cabeca')
+bind(head, 'Cabeca'); bind(eyes, 'Cabeca'); bind(arc, 'Boca' if False else 'Cabeca')
 for s in 'LR':
     bind(parts[f'Braco.{s}'], f'Braco.{s}')
     bind(parts[f'Perna.{s}'], f'Perna.{s}')
